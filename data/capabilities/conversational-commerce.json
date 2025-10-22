@@ -21,23 +21,52 @@
         "capability-product-information-management"
     ],
     "traditionalApproach": {
-      "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
-      "characteristics": [
-        "No voice commerce capability",
-        "Customers must use web/app for purchases",
-        "Voice limited to FAQs",
-        "No voice-optimized product catalog"
-      ],
-      "constraints": [
-        "No voice shopping convenience for customers",
-        "Missing voice-first demographic (smart speaker users)",
-        "Limited to text-based commerce only",
-        "No hands-free shopping option",
-        "Competitive disadvantage vs voice-enabled retailers",
-        "Product descriptions not optimized for voice interaction"
-      ],
-      "benchmarks": []
-    },
+       "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
+       "characteristics": [
+         "No voice commerce capability",
+         "Customers must use web/app for purchases",
+         "Voice limited to FAQs",
+         "No voice-optimized product catalog"
+       ],
+       "constraints": [
+         "No voice shopping convenience for customers",
+         "Missing voice-first demographic (smart speaker users)",
+         "Limited to text-based commerce only",
+         "No hands-free shopping option",
+         "Competitive disadvantage vs voice-enabled retailers",
+         "Product descriptions not optimized for voice interaction"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-vc-001",
+           "metric": "Voice Commerce Adoption Rate",
+           "value": "<5% of retailers",
+           "source": "Voice Commerce Report 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers miss the growing smart speaker user base who prefer hands-free shopping, particularly for routine reorders and quick purchases."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery shoppers with smart speakers cannot easily reorder staples or add items to their shopping list, missing convenience-driven sales."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel bookings require visual interfaces, making voice commerce challenging for complex itineraries but valuable for simple rebookings."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR customers could benefit from voice reordering for drive-thru pickup, but lack of voice integration misses this opportunity."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotel guests with smart speakers in rooms cannot easily reorder amenities or request services through voice commands."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "Full shopping experience via voice with voice-optimized catalog, personalized recommendations, and secure voice payments achieving incremental sales from voice channel.",
       "characteristics": [

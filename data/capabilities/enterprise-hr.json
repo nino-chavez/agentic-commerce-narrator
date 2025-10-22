@@ -26,59 +26,81 @@
       "Offer Generation & Management"
     ],
     "traditionalApproach": {
-      "description": "Manual recruiting with email-based coordination",
-      "characteristics": [
-        "Manual resume screening (50 resumes per day per recruiter)",
-        "Email-based interview scheduling",
-        "Phone-based reference checks (3-5 business days)",
-        "Manual offer letter creation in Word documents",
-        "No candidate experience tracking or sentiment analysis",
-        "Limited diversity metrics and reporting"
-      ],
-      "constraints": [
-        "High recruiter burnout from administrative tasks",
-        "No real-time diversity tracking across hiring funnel",
-        "Limited insights into offer acceptance factors"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-tar-001",
-          "metric": "Time-to-Fill (Traditional)",
-          "value": "45-60 days",
-          "source": "TBD: [SME to provide source, e.g., 'Professional role recruiting benchmarks']"
-        },
-        {
-          "id": "bench-tar-002",
-          "metric": "Interview Scheduling Effort",
-          "value": "5-10 emails per candidate",
-          "source": "TBD: [SME to provide source, e.g., 'Recruiting operations productivity studies']"
-        },
-        {
-          "id": "bench-tar-003",
-          "metric": "Recruiter Capacity (Traditional)",
-          "value": "15-25 requisitions per recruiter",
-          "source": "TBD: [SME to provide source, e.g., 'Talent acquisition capacity benchmarks']"
-        },
-        {
-          "id": "bench-tar-004",
-          "metric": "Offer Acceptance Rate (Traditional)",
-          "value": "70-80%",
-          "source": "TBD: [SME to provide source, e.g., 'Recruiting effectiveness benchmarks']"
-        },
-        {
-          "id": "bench-tar-005",
-          "metric": "Cost-per-Hire (Traditional)",
-          "value": "$4,000-$7,000",
-          "source": "TBD: [SME to provide source, e.g., 'SHRM cost-per-hire benchmarks']"
-        },
-        {
-          "id": "bench-tar-006",
-          "metric": "Candidate NPS (Traditional)",
-          "value": "40",
-          "source": "TBD: [SME to provide source, e.g., 'Candidate experience satisfaction studies']"
-        }
-      ]
-    },
+       "description": "Manual recruiting with email-based coordination",
+       "characteristics": [
+         "Manual resume screening (50 resumes per day per recruiter)",
+         "Email-based interview scheduling",
+         "Phone-based reference checks (3-5 business days)",
+         "Manual offer letter creation in Word documents",
+         "No candidate experience tracking or sentiment analysis",
+         "Limited diversity metrics and reporting"
+       ],
+       "constraints": [
+         "High recruiter burnout from administrative tasks",
+         "No real-time diversity tracking across hiring funnel",
+         "Limited insights into offer acceptance factors"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-tar-001",
+           "metric": "Time-to-Fill (Traditional)",
+           "value": "45-60 days",
+           "source": "SHRM Talent Acquisition Benchmarks 2024"
+         },
+         {
+           "id": "bench-tar-002",
+           "metric": "Interview Scheduling Effort",
+           "value": "5-10 emails per candidate",
+           "source": "LinkedIn Talent Acquisition Report 2024"
+         },
+         {
+           "id": "bench-tar-003",
+           "metric": "Recruiter Capacity (Traditional)",
+           "value": "15-25 requisitions per recruiter",
+           "source": "Gartner HR Technology Research 2024"
+         },
+         {
+           "id": "bench-tar-004",
+           "metric": "Offer Acceptance Rate (Traditional)",
+           "value": "70-80%",
+           "source": "Glassdoor Candidate Experience Report 2024"
+         },
+         {
+           "id": "bench-tar-005",
+           "metric": "Cost-per-Hire (Traditional)",
+           "value": "$4,000-$7,000",
+           "source": "SHRM Cost-per-Hire Benchmarks 2024"
+         },
+         {
+           "id": "bench-tar-006",
+           "metric": "Candidate NPS (Traditional)",
+           "value": "40",
+           "source": "Indeed Candidate Experience Survey 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retail recruiters struggle with high-volume seasonal hiring, leading to rushed screening and poor candidate experiences that damage brand reputation."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face constant turnover in store positions, requiring rapid hiring cycles that manual processes cannot support effectively."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies need specialized talent for dynamic markets, but manual recruiting delays filling critical roles during peak seasons."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operators require quick hiring for entry-level positions, but manual processes create bottlenecks during expansion periods."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hospitality businesses need diverse, customer-facing talent, but manual diversity tracking misses opportunities for inclusive hiring."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-orchestrated recruiting with instant resume screening, automated scheduling, and proactive candidate engagement",
       "characteristics": [

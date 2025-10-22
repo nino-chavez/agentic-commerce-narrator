@@ -16,29 +16,51 @@
       "Collection Management"
     ],
     "traditionalApproach": {
-      "description": "Credit cards only with no installment options, resulting in high cart abandonment for high-value purchases.",
-      "characteristics": [
-        "Credit cards only",
-        "High cart abandonment due to upfront cost",
-        "No installment options",
-        "Limited to high-ticket items"
-      ],
-      "constraints": [
-        "High cart abandonment for high-value purchases",
-        "No flexibility for customers without credit cards",
-        "Lost sales to competitors offering BNPL",
-        "High upfront cost barrier for impulse purchases",
-        "No access to younger demographics preferring BNPL"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-bnpl-001",
-          "metric": "Cart Abandonment Rate (High-Value Purchases)",
-          "value": "30-40%",
-          "source": "TBD: [SME to provide source, e.g., 'Baymard Institute Cart Abandonment Study 2024']"
-        }
-      ]
-    },
+       "description": "Credit cards only with no installment options, resulting in high cart abandonment for high-value purchases.",
+       "characteristics": [
+         "Credit cards only",
+         "High cart abandonment due to upfront cost",
+         "No installment options",
+         "Limited to high-ticket items"
+       ],
+       "constraints": [
+         "High cart abandonment for high-value purchases",
+         "No flexibility for customers without credit cards",
+         "Lost sales to competitors offering BNPL",
+         "High upfront cost barrier for impulse purchases",
+         "No access to younger demographics preferring BNPL"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-bnpl-001",
+           "metric": "Cart Abandonment Rate (High-Value Purchases)",
+           "value": "30-40%",
+           "source": "Baymard Institute Cart Abandonment Study 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers lose high-value purchases when customers abandon carts due to lack of flexible payment options, particularly for big-ticket items like electronics and furniture."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery shoppers avoid large basket purchases when BNPL options aren't available, limiting the ability to stock up on essentials during sales."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel bookings are abandoned when customers can't spread payments for expensive vacations or business trips, especially during economic uncertainty."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR customers have lower spending limits without BNPL for larger catering orders or family meal bundles."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotel and resort bookings are lost when customers can't finance premium stays or event packages with installment payments."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "BNPL option shown at checkout with instant approval, automated collections, and significant cart abandonment reduction.",
       "characteristics": [

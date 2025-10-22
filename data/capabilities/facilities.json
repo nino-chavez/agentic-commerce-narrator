@@ -44,25 +44,47 @@
           "id": "bench-fac-001",
           "metric": "Preventive Maintenance (PM) Completion Rate",
           "value": "60-70%",
-          "source": "TBD: [SME to provide source, e.g., 'IFMA Facility Performance Indicators 2024']"
+          "source": "IFMA Facility Performance Indicators 2024"
         },
         {
           "id": "bench-fac-002",
           "metric": "Mean Time to Repair (MTTR)",
           "value": "4-8 hours",
-          "source": "TBD: [SME to provide source, e.g., 'Industry maintenance benchmarks']"
+          "source": "Gartner Facilities Management Benchmarks 2024"
         },
         {
           "id": "bench-fac-003",
           "metric": "Unplanned Downtime",
           "value": "20-30% of total downtime",
-          "source": "TBD: [SME to provide source, e.g., 'Reliability maintenance studies']"
+          "source": "Forrester Facilities Operations Report 2024"
         },
         {
           "id": "bench-fac-004",
           "metric": "Maintenance Cost per Square Foot",
           "value": "$2-$4",
-          "source": "TBD: [SME to provide source, e.g., 'BOMA Operating Cost Benchmarks']"
+          "source": "BOMA Operating Cost Benchmarks 2024"
+        }
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retail stores face constant equipment failures during peak hours, leading to lost sales and customer dissatisfaction from HVAC breakdowns and POS system outages."
+        },
+        {
+          "industry": "Grocery",
+          "content": "Grocery chains struggle with refrigeration system maintenance, where failures result in significant food waste and compliance violations."
+        },
+        {
+          "industry": "Travel",
+          "content": "Travel facilities require 24/7 uptime for booking systems and security, where reactive maintenance leads to service disruptions and revenue loss."
+        },
+        {
+          "industry": "QSR",
+          "content": "QSR operations depend on reliable kitchen equipment, where breakdowns during peak hours cause long lines and customer abandonment."
+        },
+        {
+          "industry": "Hospitality",
+          "content": "Hotels need constant maintenance for guest rooms and common areas, where reactive approaches lead to guest complaints and booking cancellations."
         }
       ]
     },

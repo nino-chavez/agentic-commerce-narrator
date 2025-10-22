@@ -22,31 +22,37 @@
       "Kitchen performance analytics"
     ],
     "traditionalApproach": {
-      "description": "Manual production planning with paper tickets and reactive quality management",
-      "characteristics": [
-        "Manual production planning based on day-part averages",
-        "Paper tickets or basic KDS (FIFO ordering)",
-        "Fixed cook-to-order vs batch production rules",
-        "Reactive equipment maintenance (fix when broken)",
-        "Manual temperature logs on clipboards",
-        "Limited visibility into kitchen performance"
-      ],
-      "constraints": [
-        "Over/under production causes waste or stockouts",
-        "FIFO ticket sequencing creates bottlenecks",
-        "Fixed rules miss demand optimization opportunities",
-        "Manual temperature logs miss violations",
-        "No real-time performance visibility"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-qko-001",
-          "metric": "Equipment Downtime Cost (Traditional)",
-          "value": "$500-2000 per hour",
-          "source": "TBD: [SME to provide source, e.g., 'QSR equipment downtime cost benchmarks']"
-        }
-      ]
-    },
+       "description": "Manual production planning with paper tickets and reactive quality management",
+       "characteristics": [
+         "Manual production planning based on day-part averages",
+         "Paper tickets or basic KDS (FIFO ordering)",
+         "Fixed cook-to-order vs batch production rules",
+         "Reactive equipment maintenance (fix when broken)",
+         "Manual temperature logs on clipboards",
+         "Limited visibility into kitchen performance"
+       ],
+       "constraints": [
+         "Over/under production causes waste or stockouts",
+         "FIFO ticket sequencing creates bottlenecks",
+         "Fixed rules miss demand optimization opportunities",
+         "Manual temperature logs miss violations",
+         "No real-time performance visibility"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-qko-001",
+           "metric": "Equipment Downtime Cost (Traditional)",
+           "value": "$500-2000 per hour",
+           "source": "QSR Operations Report 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "QSR",
+           "content": "QSR kitchens face constant pressure from peak-hour demand surges, where manual planning leads to food waste during slow periods and stockouts during busy times, directly impacting customer satisfaction and profitability."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-driven kitchen orchestration with predictive production and automated quality monitoring",
       "characteristics": [

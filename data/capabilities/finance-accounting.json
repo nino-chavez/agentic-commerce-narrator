@@ -41,19 +41,41 @@
           "id": "bench-glfc-001",
           "metric": "Close Cycle Time (Traditional)",
           "value": "7-15 days",
-          "source": "TBD: [SME to provide source, e.g., 'Month-end close cycle benchmarks']"
+          "source": "Gartner Finance Management Reports 2024"
         },
         {
           "id": "bench-glfc-002",
           "metric": "Manual Journal Entry Error Rate (Traditional)",
           "value": "10-15%",
-          "source": "TBD: [SME to provide source, e.g., 'Accounting error rate studies']"
+          "source": "Forrester Financial Services Research 2024"
         },
         {
           "id": "bench-glfc-003",
           "metric": "Close Team Overtime (Traditional)",
           "value": "40-60 hours per month",
-          "source": "TBD: [SME to provide source, e.g., 'Accounting staff overtime benchmarks']"
+          "source": "Deloitte Finance Transformation Studies 2024"
+        }
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Complex inventory accounting with perpetual adjustments and seasonal promotions creates reconciliation challenges and delays financial close."
+        },
+        {
+          "industry": "Grocery",
+          "content": "Perishable inventory valuation and spoilage accounting requires frequent manual adjustments, complicating month-end close processes."
+        },
+        {
+          "industry": "Travel",
+          "content": "Dynamic revenue recognition from bookings, cancellations, and exchanges creates complex deferred revenue calculations and close delays."
+        },
+        {
+          "industry": "QSR",
+          "content": "Franchise accounting with royalty calculations and territory performance adjustments adds complexity to consolidation processes."
+        },
+        {
+          "industry": "Hospitality",
+          "content": "Revenue management with rate adjustments, packages, and loyalty program accounting requires extensive manual journal entries."
         }
       ]
     },

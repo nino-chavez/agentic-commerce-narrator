@@ -15,24 +15,58 @@
       "Voice Personalization",
       "Voice Transaction Management"
     ],
+    "relatedCapabilities": [
+        "capability-conversational-ai-chatbot",
+        "capability-ai-shopping-assistant",
+        "capability-product-information-management"
+    ],
     "traditionalApproach": {
-      "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
-      "characteristics": [
-        "No voice commerce capability",
-        "Customers must use web/app for purchases",
-        "Voice limited to FAQs",
-        "No voice-optimized product catalog"
-      ],
-      "constraints": [
-        "No voice shopping convenience for customers",
-        "Missing voice-first demographic (smart speaker users)",
-        "Limited to text-based commerce only",
-        "No hands-free shopping option",
-        "Competitive disadvantage vs voice-enabled retailers",
-        "Product descriptions not optimized for voice interaction"
-      ],
-      "benchmarks": []
-    },
+       "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
+       "characteristics": [
+         "No voice commerce capability",
+         "Customers must use web/app for purchases",
+         "Voice limited to FAQs",
+         "No voice-optimized product catalog"
+       ],
+       "constraints": [
+         "No voice shopping convenience for customers",
+         "Missing voice-first demographic (smart speaker users)",
+         "Limited to text-based commerce only",
+         "No hands-free shopping option",
+         "Competitive disadvantage vs voice-enabled retailers",
+         "Product descriptions not optimized for voice interaction"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-vc-001",
+           "metric": "Voice Commerce Adoption Rate",
+           "value": "<5% of retailers",
+           "source": "Voice Commerce Report 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers miss the growing smart speaker user base who prefer hands-free shopping, particularly for routine reorders and quick purchases."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery shoppers with smart speakers cannot easily reorder staples or add items to their shopping list, missing convenience-driven sales."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel bookings require visual interfaces, making voice commerce challenging for complex itineraries but valuable for simple rebookings."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR customers could benefit from voice reordering for drive-thru pickup, but lack of voice integration misses this opportunity."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotel guests with smart speakers in rooms cannot easily reorder amenities or request services through voice commands."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "Full shopping experience via voice with voice-optimized catalog, personalized recommendations, and secure voice payments achieving incremental sales from voice channel.",
       "characteristics": [
@@ -109,6 +143,11 @@
       "Slot Filling",
       "Action Execution",
       "Human Handoff"
+    ],
+    "relatedCapabilities": [
+        "capability-ai-shopping-assistant",
+        "capability-customer-service-support",
+        "capability-ai-powered-knowledge-management"
     ],
     "traditionalApproach": {
       "description": "Rule-based chatbots with keyword matching and frequent human handoffs resulting in moderate containment rate and poor customer experience.",
@@ -220,6 +259,11 @@
       "Style Matching",
       "Product Comparison"
     ],
+    "relatedCapabilities": [
+        "capability-conversational-ai-chatbot",
+        "capability-search-experience-optimization",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Keyword search only with generic recommendations and manual filtering resulting in high browse-to-purchase drop-off.",
       "characteristics": [
@@ -320,6 +364,11 @@
       "Channel Selection",
       "Frequency Capping"
     ],
+    "relatedCapabilities": [
+        "capability-customer-journey-orchestration",
+        "capability-churn-prediction-prevention",
+        "capability-marketing-automation"
+    ],
     "traditionalApproach": {
       "description": "Batch campaign notifications with high opt-out rates and no personalization resulting in poor response rates.",
       "characteristics": [
@@ -412,7 +461,7 @@
     "version": "2.0.0"
   },
   {
-    "id": "capability-ai-knowledge-management",
+    "id": "capability-ai-powered-knowledge-management",
     "type": "capability",
     "level": 3,
     "label": "AI-Powered Knowledge Management",
@@ -426,6 +475,11 @@
       "Answer Generation",
       "Knowledge Gap Detection",
       "Auto-Update"
+    ],
+    "relatedCapabilities": [
+        "capability-customer-service-support",
+        "capability-conversational-ai-chatbot",
+        "capability-it-service-management"
     ],
     "traditionalApproach": {
       "description": "Static FAQ pages with keyword search and manual updates resulting in poor self-service experience.",

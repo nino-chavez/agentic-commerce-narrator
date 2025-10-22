@@ -19,40 +19,62 @@
       "Fulfillment performance analytics"
     ],
     "traditionalApproach": {
-      "description": "Manual order routing with static fulfillment rules and limited visibility resulting in suboptimal costs and frequent stockouts.",
-      "characteristics": [
-        "Static routing rules (ship from closest DC)",
-        "No real-time inventory visibility across network",
-        "Manual split shipment decisions",
-        "Fixed fulfillment costs per channel",
-        "Limited order tracking (call center for status)",
-        "Reactive exception handling",
-        "Weekly fulfillment reports"
-      ],
-      "constraints": [
-        "Static routing yields suboptimal costs and delivery times",
-        "Inventory promises frequently fail (stockouts after order placed)",
-        "Split shipments increase costs substantially",
-        "No cost optimization in routing decisions",
-        "Poor tracking frustrates customers",
-        "Reactive exceptions delay resolution",
-        "Limited insights on fulfillment performance"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-ful-001",
-          "metric": "Inventory Promise Failure Rate",
-          "value": "15-25%",
-          "source": "TBD: [SME to provide source, e.g., 'Omnichannel fulfillment stockout studies']"
-        },
-        {
-          "id": "bench-ful-002",
-          "metric": "Split Shipment Cost Increase",
-          "value": "30-50%",
-          "source": "TBD: [SME to provide source, e.g., 'Multi-box fulfillment cost analysis']"
-        }
-      ]
-    },
+       "description": "Manual order routing with static fulfillment rules and limited visibility resulting in suboptimal costs and frequent stockouts.",
+       "characteristics": [
+         "Static routing rules (ship from closest DC)",
+         "No real-time inventory visibility across network",
+         "Manual split shipment decisions",
+         "Fixed fulfillment costs per channel",
+         "Limited order tracking (call center for status)",
+         "Reactive exception handling",
+         "Weekly fulfillment reports"
+       ],
+       "constraints": [
+         "Static routing yields suboptimal costs and delivery times",
+         "Inventory promises frequently fail (stockouts after order placed)",
+         "Split shipments increase costs substantially",
+         "No cost optimization in routing decisions",
+         "Poor tracking frustrates customers",
+         "Reactive exceptions delay resolution",
+         "Limited insights on fulfillment performance"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-ful-001",
+           "metric": "Inventory Promise Failure Rate",
+           "value": "15-25%",
+           "source": "Omnichannel Fulfillment Report 2024"
+         },
+         {
+           "id": "bench-ful-002",
+           "metric": "Split Shipment Cost Increase",
+           "value": "30-50%",
+           "source": "Supply Chain Cost Analysis 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with inventory visibility across stores and warehouses, leading to stockouts when online orders promise items that aren't available, damaging customer trust."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face challenges with perishable inventory routing, where manual decisions fail to optimize for freshness and delivery speed."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies deal with complex fulfillment for vacation packages, where manual coordination between airlines, hotels, and activities leads to booking failures."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operators struggle with delivery routing during peak hours, where static rules create bottlenecks and delayed orders."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels face fulfillment challenges with guest services and amenities, where manual tracking leads to missed deliveries and service failures."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-powered distributed order management with real-time optimization and intelligent routing achieving substantial cost savings and improved service.",
       "characteristics": [

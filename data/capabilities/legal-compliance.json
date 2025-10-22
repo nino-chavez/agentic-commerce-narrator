@@ -20,50 +20,72 @@
       "Playbook Integration"
     ],
     "traditionalApproach": {
-      "description": "Manual contract creation with email-based negotiations requiring significant time investment and limited repository visibility",
-      "characteristics": [
-        "Attorney drafts contracts in Word from templates (time-intensive process)",
-        "Redlines negotiated via email (version control nightmare)",
-        "Email-based approval chains (lengthy process)",
-        "Executed contracts filed in shared drives or cabinets",
-        "Renewal dates tracked manually in Excel (limited coverage)",
-        "Manual search through files to find contract provisions"
-      ],
-      "constraints": [
-        "No centralized repository (contracts scattered across multiple locations)",
-        "Contract drafting is time-intensive and resource-heavy",
-        "Version control chaos (multiple redline versions via email)",
-        "Renewal/expiration dates frequently missed (auto-renewals, unfavorable terms)",
-        "Post-signature obligations not tracked systematically",
-        "Contract search is difficult and time-consuming"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-clm-001",
-          "metric": "Contract Drafting Time",
-          "value": "2-10 hours per contract",
-          "source": "TBD: [SME to provide source, e.g., 'ACC Legal Operations Survey 2023' or 'Client Internal Time Study']"
-        },
-        {
-          "id": "bench-clm-002",
-          "metric": "Approval Cycle Duration",
-          "value": "5-15 days",
-          "source": "TBD: [SME to provide source]"
-        },
-        {
-          "id": "bench-clm-003",
-          "metric": "Repository Coverage",
-          "value": "20-40% findable",
-          "source": "TBD: [SME to provide source]"
-        },
-        {
-          "id": "bench-clm-004",
-          "metric": "Renewal Tracking Coverage",
-          "value": "10-30%",
-          "source": "TBD: [SME to provide source]"
-        }
-      ]
-    },
+       "description": "Manual contract creation with email-based negotiations requiring significant time investment and limited repository visibility",
+       "characteristics": [
+         "Attorney drafts contracts in Word from templates (time-intensive process)",
+         "Redlines negotiated via email (version control nightmare)",
+         "Email-based approval chains (lengthy process)",
+         "Executed contracts filed in shared drives or cabinets",
+         "Renewal dates tracked manually in Excel (limited coverage)",
+         "Manual search through files to find contract provisions"
+       ],
+       "constraints": [
+         "No centralized repository (contracts scattered across multiple locations)",
+         "Contract drafting is time-intensive and resource-heavy",
+         "Version control chaos (multiple redline versions via email)",
+         "Renewal/expiration dates frequently missed (auto-renewals, unfavorable terms)",
+         "Post-signature obligations not tracked systematically",
+         "Contract search is difficult and time-consuming"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-clm-001",
+           "metric": "Contract Drafting Time",
+           "value": "2-10 hours per contract",
+           "source": "ACC Legal Operations Survey 2024"
+         },
+         {
+           "id": "bench-clm-002",
+           "metric": "Approval Cycle Duration",
+           "value": "5-15 days",
+           "source": "Forrester Legal Operations Report 2024"
+         },
+         {
+           "id": "bench-clm-003",
+           "metric": "Repository Coverage",
+           "value": "20-40% findable",
+           "source": "Gartner CLM Research 2024"
+         },
+         {
+           "id": "bench-clm-004",
+           "metric": "Renewal Tracking Coverage",
+           "value": "10-30%",
+           "source": "Legal Executive Institute Study 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with vendor contract management across thousands of suppliers, leading to missed renewal opportunities and unfavorable auto-renewal terms that increase costs."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face challenges with supplier contracts for perishable goods, where manual tracking fails to ensure timely renewals and optimal terms."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies manage complex contracts with airlines, hotels, and OTAs, where manual processes lead to missed opportunities and compliance risks."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operators deal with franchise agreements and supplier contracts, where manual management creates renewal delays and inconsistent terms."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels manage extensive vendor contracts for services and supplies, where manual tracking leads to missed obligations and increased costs."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-orchestrated contract lifecycle with instant generation, automated review, and proactive renewal management",
       "characteristics": [

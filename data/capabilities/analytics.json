@@ -15,14 +15,20 @@
       "Prediction Serving",
       "Model Monitoring & Retraining"
     ],
+    "relatedCapabilities": [
+      "capability-demand-forecasting-sensing",
+      "capability-churn-prediction-prevention",
+      "capability-marketing-attribution-modeling"
+    ],
     "traditionalApproach": {
       "description": "Manual model building by data scientists with sporadic deployment and no monitoring resulting in long time-to-value and degrading accuracy.",
-      "characteristics": [
-        "Descriptive analytics only (what happened)",
-        "Data scientists build models manually",
-        "Models deployed sporadically",
-        "Limited to batch predictions",
-        "Model performance not monitored"
+      "painPoints": [
+        "Weeks to months for model development",
+        "Sporadic deployment creates long time-to-value",
+        "Batch predictions limit real-time use cases",
+        "Model drift not detected, degrading accuracy over time",
+        "Limited data science capacity constrains ML adoption",
+        "No systematic model lifecycle management"
       ],
       "constraints": [
         "Manual model building takes weeks to months",
@@ -32,18 +38,28 @@
         "Limited data science capacity constrains ML adoption",
         "No systematic model lifecycle management"
       ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers struggle with sudden demand surges during flash sales or viral social media trends, leading to stock-outs of trending items while overstocking slow-moving inventory. (Source: McKinsey Retail Report 2023)"
+        },
+        {
+          "industry": "Travel",
+          "content": "Manual price optimization models take months to build, missing dynamic competitor pricing and revenue management opportunities."
+        },
+        {
+          "industry": "Grocery",
+          "content": "Grocery retailers struggle with forecasting demand for perishable items, leading to 20-30% waste of fresh produce and dairy products due to inaccurate shelf-life predictions. (Source: USDA Economic Research Report)"
+        },
+        {
+          "industry": "QSR",
+          "content": "QSR operators cannot monitor real-time drive-thru wait times across locations, leading to customer abandonment and reduced throughput during peak hours. (Source: QSR Magazine Operations Report)"
+        }
+      ],
       "benchmarks": []
     },
     "agenticApproach": {
       "description": "Models built dramatically faster, deployed continuously, real-time predictions, auto-retraining when drift detected enabling ML at scale.",
-      "characteristics": [
-        "AutoML automates feature engineering, model selection, hyperparameter tuning",
-        "Model deployment with versioning and A/B testing",
-        "Real-time and batch prediction serving at scale",
-        "Model monitoring tracks performance, detects drift, triggers retraining",
-        "Self-service ML for business analysts",
-        "MLOps platform for end-to-end lifecycle"
-      ],
       "benefits": [
         "Dramatically faster model development vs manual",
         "Continuous deployment vs sporadic manual releases",
@@ -51,6 +67,42 @@
         "Auto-retraining maintains accuracy over time",
         "Significant increase in models in production",
         "Democratized ML beyond data science team"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Retail",
+          "content": "Real-time demand forecasting enables just-in-time inventory, reducing stock-outs by 40% and overstock by 30% during seasonal peaks."
+        },
+        {
+          "industry": "Travel",
+          "content": "Airlines and hotels can adjust pricing in real-time based on demand patterns, competitor actions, and external factors like weather or events, increasing revenue by 3-8% through optimal yield management. (Source: IATA Aviation Economics Report)"
+        },
+        {
+          "industry": "Hospitality",
+          "content": "Hotels can monitor real-time booking patterns and adjust pricing dynamically, maximizing revenue per available room (RevPAR) through last-minute rate optimization. (Source: STR Global Hospitality Report)"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Model Development Speed",
+          "value": "10x faster"
+        },
+        {
+          "label": "Models in Production Increase",
+          "value": "3-5x"
+        }
+      ],
+      "contextualMetrics": [
+        {
+          "industry": "Retail",
+          "label": "Demand Forecast Accuracy",
+          "value": "85-95% (vs 60-70%)"
+        },
+        {
+          "industry": "Travel",
+          "label": "Revenue Optimization",
+          "value": "15-25% uplift"
+        }
       ],
       "projections": [
         {
@@ -92,6 +144,123 @@
         "Model serving infrastructure (SageMaker, Vertex AI, or Seldon)",
         "Monitoring platform for model performance tracking",
         "Clean training data with defined prediction targets"
+      ],
+      "implementationPathways": [
+        {
+          "phase": "Crawl",
+          "duration": "3-6 months",
+          "activities": [
+            "Select and deploy AutoML platform (DataRobot, H2O.ai, or SageMaker)",
+            "Identify 2-3 high-impact use cases (churn prediction, demand forecasting)",
+            "Build initial ML models using AutoML with data science team oversight",
+            "Establish model monitoring for accuracy and drift detection",
+            "Create basic model deployment pipeline for batch predictions"
+          ],
+          "outcomes": [
+            "2-3 production ML models deployed with monitoring",
+            "20-40% improvement in prediction accuracy vs manual models",
+            "Established ML governance and deployment processes",
+            "Data science team trained on AutoML platform",
+            "Initial ROI demonstrated for executive buy-in"
+          ],
+          "prerequisites": [
+            "Clean, labeled training data available",
+            "Data science team with basic ML knowledge",
+            "Cloud infrastructure for model training and serving",
+            "Executive sponsorship for ML initiative"
+          ]
+        },
+        {
+          "phase": "Walk",
+          "duration": "6-12 months",
+          "activities": [
+            "Expand to 10+ ML models across multiple business domains",
+            "Implement real-time prediction serving infrastructure",
+            "Develop automated model retraining pipelines",
+            "Create self-service ML capabilities for business analysts",
+            "Establish ML model catalog and governance framework",
+            "Integrate ML predictions into operational workflows"
+          ],
+          "outcomes": [
+            "10+ ML models in production with automated lifecycle management",
+            "Real-time predictions integrated into customer-facing applications",
+            "50-70% reduction in time from idea to production model",
+            "Business analysts can build simple models independently",
+            "ML becomes core competency with dedicated team and processes",
+            "Measurable business impact across multiple KPIs"
+          ],
+          "prerequisites": [
+            "Successful pilot models from Crawl phase",
+            "Expanded data science team or ML engineering resources",
+            "Real-time data pipelines and serving infrastructure",
+            "Integration capabilities with existing business systems"
+          ]
+        },
+        {
+          "phase": "Run",
+          "duration": "12-24 months",
+          "activities": [
+            "Scale to 50+ ML models across enterprise",
+            "Implement advanced ML techniques (deep learning, ensemble methods)",
+            "Create ML platform for citizen data scientists",
+            "Establish continuous learning from all data sources",
+            "Integrate AI agents for autonomous model optimization",
+            "Develop predictive analytics for strategic decision-making"
+          ],
+          "outcomes": [
+            "50+ ML models driving autonomous business decisions",
+            "AI agents continuously optimizing model performance",
+            "Predictive analytics embedded in all major business processes",
+            "80-90% of analytical needs met through self-service ML",
+            "ML innovation lab driving next-generation capabilities",
+            "Industry-leading AI maturity with competitive advantage"
+          ],
+          "prerequisites": [
+            "Mature ML platform and processes from Walk phase",
+            "Advanced data science and ML engineering team",
+            "Enterprise-wide data strategy and governance",
+            "Executive commitment to AI transformation",
+            "Integration with strategic planning and innovation processes"
+          ]
+        }
+      ],
+      "keyTechnologyPartners": [
+        {
+          "name": "DataRobot",
+          "category": "AutoML Platform",
+          "useCase": "End-to-end ML lifecycle management from data prep to model deployment",
+          "phase": "Crawl"
+        },
+        {
+          "name": "H2O.ai",
+          "category": "AutoML Platform",
+          "useCase": "Open-source AutoML for scalable model development and deployment",
+          "phase": "Crawl"
+        },
+        {
+          "name": "AWS SageMaker",
+          "category": "ML Platform",
+          "useCase": "Cloud-native ML development, training, and real-time inference",
+          "phase": "Walk"
+        },
+        {
+          "name": "Databricks",
+          "category": "Data & ML Platform",
+          "useCase": "Unified analytics platform with MLflow for model lifecycle management",
+          "phase": "Walk"
+        },
+        {
+          "name": "Dataiku",
+          "category": "Data Science Platform",
+          "useCase": "Collaborative data science platform enabling citizen data scientists",
+          "phase": "Run"
+        },
+        {
+          "name": "Domino Data Lab",
+          "category": "ML Platform",
+          "useCase": "Enterprise ML platform for model development, deployment, and monitoring",
+          "phase": "Run"
+        }
       ]
     },
     "icon": "chart-bar",
@@ -116,6 +285,11 @@
       "Budget Allocation Optimization",
       "Attribution Reporting"
     ],
+    "relatedCapabilities": [
+        "capability-marketing-mix-modeling-mmm",
+        "capability-paid-advertising-management",
+        "capability-email-marketing"
+    ],
     "traditionalApproach": {
       "description": "Last-click attribution only with duplicate credit claims and disputed ROI resulting in suboptimal budget allocation.",
       "characteristics": [
@@ -132,6 +306,12 @@
         "Budget allocation based on disputed metrics",
         "Manual analysis takes weeks per campaign",
         "No true incrementality measurement"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers cannot accurately measure the impact of social media ads, email campaigns, and in-store experiences on final purchases, leading to inefficient budget allocation across marketing channels. (Source: Gartner Retail Marketing Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -152,6 +332,12 @@
         "Undisputed metrics align teams",
         "Cross-channel visibility vs siloed reporting",
         "Continuous optimization vs periodic reallocation"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can better understand the true value of different booking channels (direct vs. OTAs), optimizing commission structures and reducing dependency on high-commission third-party platforms. (Source: Phocuswright Travel Technology Report)"
+        }
       ],
       "projections": [
         {
@@ -196,7 +382,7 @@
     "version": "2.0.0"
   },
   {
-    "id": "capability-marketing-mix-modeling",
+    "id": "capability-marketing-mix-modeling-mmm",
     "type": "capability",
     "level": 3,
     "label": "Marketing Mix Modeling (MMM)",
@@ -210,6 +396,11 @@
       "Scenario Planning",
       "External Factor Integration",
       "Optimization & Recommendations"
+    ],
+    "relatedCapabilities": [
+        "capability-marketing-attribution-modeling",
+        "capability-budgeting-forecasting-fpa",
+        "capability-demand-forecasting-sensing"
     ],
     "traditionalApproach": {
       "description": "Annual econometric modeling by consultants with static recommendations becoming quickly outdated.",
@@ -227,6 +418,12 @@
         "No integration with marketing planning workflows",
         "Limited to historical macro analysis",
         "No scenario testing capability"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers cannot measure how promotions in one channel (e.g., online flash sales) impact sales in other channels (e.g., physical stores), leading to suboptimal promotional strategies. (Source: Nielsen Retail Effectiveness Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -247,6 +444,12 @@
         "Integrated planning vs disconnected tools",
         "Significant media efficiency improvement",
         "In-house capability vs consultant dependency"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can optimize marketing spend across peak and shoulder seasons, understanding how different campaign types perform during various demand periods. (Source: Skift Travel Marketing Report)"
+        }
       ],
       "projections": [
         {
@@ -306,6 +509,11 @@
       "Retention Strategy Selection",
       "Intervention Orchestration"
     ],
+    "relatedCapabilities": [
+        "capability-customer-lifetime-value-optimization",
+        "capability-proactive-customer-engagement",
+        "capability-loyalty-program-management"
+    ],
     "traditionalApproach": {
       "description": "Reactive churn analysis after customers leave with generic retention offers having low success rates.",
       "characteristics": [
@@ -321,6 +529,12 @@
         "Win-back campaigns have low success rates",
         "No understanding of churn reasons",
         "Revenue loss before intervention"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers lose customers from loyalty programs due to irrelevant offers and poor personalization, with 40% of enrolled members becoming inactive within 12 months. (Source: Bond Loyalty Report)"
+        }
       ],
       "benchmarks": [
         {
@@ -348,6 +562,12 @@
         "Reason-specific tactics improve success rates",
         "Higher ROI on retention spend vs win-back",
         "Revenue preservation through early intervention"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Airlines and hotels can identify customers likely to cancel bookings and offer proactive rebooking assistance or incentives, reducing no-show rates by 15-25%. (Source: Airlines for America Report)"
+        }
       ],
       "projections": [
         {
@@ -419,6 +639,11 @@
       "Promotional Impact Modeling",
       "Consensus Forecasting"
     ],
+    "relatedCapabilities": [
+        "capability-advanced-inventory-optimization",
+        "capability-merchandise-financial-planning",
+        "capability-assortment-planning"
+    ],
     "traditionalApproach": {
       "description": "Monthly historical forecasts with moderate accuracy causing stock-outs and overstock.",
       "characteristics": [
@@ -435,6 +660,12 @@
         "Moderate accuracy causes stock-outs and overstock",
         "Monthly cycles too slow for dynamic demand",
         "Judgmental overrides not systematic"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Grocery",
+          "content": "Grocery retailers struggle with forecasting demand for perishable items, leading to 20-30% waste of fresh produce and dairy products due to inaccurate shelf-life predictions. (Source: USDA Economic Research Report)"
+        }
       ],
       "benchmarks": [
         {
@@ -462,6 +693,12 @@
         "Consensus achieved faster with systematic combination",
         "Significant reduction in forecast error",
         "Substantial inventory carrying cost reduction"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can predict demand spikes from major events, conferences, or holidays, enabling proactive capacity adjustments and dynamic pricing. (Source: World Travel & Tourism Council Report)"
+        }
       ],
       "projections": [
         {
@@ -533,6 +770,11 @@
       "Root Cause Analysis",
       "Smart Alerting"
     ],
+    "relatedCapabilities": [
+        "capability-supply-chain-control-tower",
+        "capability-infrastructure-operations-aiops",
+        "capability-store-operations-execution"
+    ],
     "traditionalApproach": {
       "description": "Static dashboards refreshed nightly with simple threshold alerts and manual analysis resulting in delayed issue detection and alert fatigue.",
       "characteristics": [
@@ -549,6 +791,12 @@
         "Dashboard sprawl reduces usability",
         "Manual drill-down takes hours to days",
         "Reactive vs proactive issue detection"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "QSR",
+          "content": "QSR operators cannot monitor real-time drive-thru wait times across locations, leading to customer abandonment and reduced throughput during peak hours. (Source: QSR Magazine Operations Report)"
+        }
       ],
       "benchmarks": []
     },

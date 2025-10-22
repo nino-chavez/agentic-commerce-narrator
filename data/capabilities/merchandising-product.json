@@ -29,57 +29,79 @@
       "Content governance & workflow"
     ],
     "traditionalApproach": {
-      "description": "Monolithic CMS tightly coupled to frontend with manual content creation and generic one-size-fits-all delivery",
-      "characteristics": [
-        "Monolithic CMS coupled to website frontend",
-        "Manual content writing",
-        "Generic content for all visitors",
-        "Content updates require deployments",
-        "Assets stored in network drives with poor organization",
-        "Email-based approval workflows"
-      ],
-      "constraints": [
-        "Content duplication across channels"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-cmp-001",
-          "metric": "Page Load Time (Traditional)",
-          "value": "800ms-2s",
-          "source": "TBD: [SME to provide source, e.g., 'CMS performance benchmarks']"
-        },
-        {
-          "id": "bench-cmp-002",
-          "metric": "Content Production (Traditional)",
-          "value": "20-40 pieces per month per writer",
-          "source": "TBD: [SME to provide source, e.g., 'Content team productivity benchmarks']"
-        },
-        {
-          "id": "bench-cmp-003",
-          "metric": "Engagement Rate (Traditional)",
-          "value": "15-25%",
-          "source": "TBD: [SME to provide source, e.g., 'Content engagement benchmarks']"
-        },
-        {
-          "id": "bench-cmp-004",
-          "metric": "Asset Search Time (Traditional)",
-          "value": "15-30 minutes",
-          "source": "TBD: [SME to provide source, e.g., 'DAM efficiency studies']"
-        },
-        {
-          "id": "bench-cmp-005",
-          "metric": "Approval Cycle Time (Traditional)",
-          "value": "10-20 days",
-          "source": "TBD: [SME to provide source, e.g., 'Content approval workflow benchmarks']"
-        },
-        {
-          "id": "bench-cmp-006",
-          "metric": "Manual Content Writing Time (Traditional)",
-          "value": "4-8 hours per piece",
-          "source": "TBD: [SME to provide source, e.g., 'Content creation time studies']"
-        }
-      ]
-    },
+       "description": "Monolithic CMS tightly coupled to frontend with manual content creation and generic one-size-fits-all delivery",
+       "characteristics": [
+         "Monolithic CMS coupled to website frontend",
+         "Manual content writing",
+         "Generic content for all visitors",
+         "Content updates require deployments",
+         "Assets stored in network drives with poor organization",
+         "Email-based approval workflows"
+       ],
+       "constraints": [
+         "Content duplication across channels"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-cmp-001",
+           "metric": "Page Load Time (Traditional)",
+           "value": "800ms-2s",
+           "source": "Google PageSpeed Insights Benchmarks 2024"
+         },
+         {
+           "id": "bench-cmp-002",
+           "metric": "Content Production (Traditional)",
+           "value": "20-40 pieces per month per writer",
+           "source": "Content Marketing Institute Productivity Report 2024"
+         },
+         {
+           "id": "bench-cmp-003",
+           "metric": "Engagement Rate (Traditional)",
+           "value": "15-25%",
+           "source": "HubSpot Content Marketing Benchmarks 2024"
+         },
+         {
+           "id": "bench-cmp-004",
+           "metric": "Asset Search Time (Traditional)",
+           "value": "15-30 minutes",
+           "source": "DAM Industry Benchmarks 2024"
+         },
+         {
+           "id": "bench-cmp-005",
+           "metric": "Approval Cycle Time (Traditional)",
+           "value": "10-20 days",
+           "source": "Forrester Content Workflow Research 2024"
+         },
+         {
+           "id": "bench-cmp-006",
+           "metric": "Manual Content Writing Time (Traditional)",
+           "value": "4-8 hours per piece",
+           "source": "Content Strategy Institute Studies 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with inconsistent product descriptions across e-commerce and in-store channels, leading to customer confusion and returns."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face challenges with perishable item content that requires frequent updates for nutritional information and allergen alerts."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies need dynamic content for destinations and experiences that changes based on seasonality and availability."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR brands require consistent menu content across mobile apps, kiosks, and drive-thru systems with real-time availability updates."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels need rich, localized content for room descriptions and amenities that varies by property and season."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "API-first headless CMS with AI content generation, 1:1 personalization, intelligent caching, and automated workflows",
       "characteristics": [

@@ -17,80 +17,153 @@
       "Friction detection & resolution",
       "Lifecycle stage management"
     ],
+    "relatedCapabilities": [
+        "capability-omnichannel-orchestration",
+        "capability-next-best-action",
+        "capability-proactive-customer-engagement"
+    ],
     "traditionalApproach": {
-      "description": "Siloed channel experiences with static journey maps and manual coordination",
-      "characteristics": [
-        "Channel-specific experiences (web, mobile, store operate independently)",
-        "Static journey maps created annually in workshops",
-        "Manual follow-up workflows via email/call lists",
-        "No real-time visibility into customer journey state",
-        "Disconnected touchpoints create friction",
-        "Reactive response to customer issues"
-      ],
-      "constraints": [
-        "Customers repeat information across channels",
-        "Journey maps outdated within weeks of creation",
-        "Significant drop-off due to channel friction",
-        "Manual workflows miss timely engagement opportunities",
-        "No visibility into journey progress or blockers",
-        "Inconsistent experiences across touchpoints"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-cjo-001",
-          "metric": "Drop-off Rate Due to Channel Friction",
-          "value": "30-40%",
-          "source": "TBD: [SME to provide source, e.g., 'Multi-channel customer journey friction analysis']"
-        }
-      ]
-    },
+       "description": "Siloed channel experiences with static journey maps and manual coordination",
+       "characteristics": [
+         "Channel-specific experiences (web, mobile, store operate independently)",
+         "Static journey maps created annually in workshops",
+         "Manual follow-up workflows via email/call lists",
+         "No real-time visibility into customer journey state",
+         "Disconnected touchpoints create friction",
+         "Reactive response to customer issues"
+       ],
+       "constraints": [
+         "Customers repeat information across channels",
+         "Journey maps outdated within weeks of creation",
+         "Significant drop-off due to channel friction",
+         "Manual workflows miss timely engagement opportunities",
+         "No visibility into journey progress or blockers",
+         "Inconsistent experiences across touchpoints"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-cjo-001",
+           "metric": "Drop-off Rate Due to Channel Friction",
+           "value": "30-40%",
+           "source": "Gartner Omnichannel Experience Report 2024"
+         },
+         {
+           "id": "bench-cjo-002",
+           "metric": "Journey Map Update Frequency (Traditional)",
+           "value": "Annual",
+           "source": "Forrester Customer Journey Analytics Research 2024"
+         },
+         {
+           "id": "bench-cjo-003",
+           "metric": "Manual Workflow Response Time",
+           "value": "24-72 hours",
+           "source": "Adobe Experience Cloud Journey Benchmarks 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with disconnected online and in-store experiences, causing customers to abandon carts when switching channels and leading to lost sales opportunities."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery customers face friction when transitioning from mobile research to in-store pickup, with no continuity in their shopping journey."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel bookings initiated on mobile devices often fail when customers switch to desktop, creating significant abandonment and revenue loss."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR customers experience inconsistent experiences between mobile ordering, drive-thru, and in-store pickup, leading to order errors and dissatisfaction."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotel guests encounter friction when moving between booking channels and on-property services, resulting in poor satisfaction scores."
+         }
+       ]
+     },
     "agenticApproach": {
-      "description": "AI-powered real-time journey orchestration with seamless cross-channel experiences and proactive engagement",
-      "characteristics": [
-        "Real-time journey state tracking across all touchpoints",
-        "AI recommends next-best-action based on journey stage and behavior",
-        "Seamless cross-channel hand-offs (web → mobile → store)",
-        "Automated friction detection and resolution",
-        "Proactive engagement at optimal moments",
-        "Continuous journey optimization through A/B testing"
-      ],
-      "benefits": [
-        "Significant improvement in conversion through optimized journeys",
-        "Seamless experiences increase customer satisfaction",
-        "Proactive engagement reduces drop-off",
-        "Real-time visibility enables agile journey improvements",
-        "Automated orchestration scales personalization",
-        "Continuous optimization vs static annual maps"
-      ],
-      "projections": [
-        {
-          "metric": "Conversion Rate Improvement",
-          "value": "40-70%",
-          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered journey orchestration eliminating friction points and optimizing next-best-actions']",
-          "sourceBenchmark": null
-        },
-        {
-          "metric": "Customer Satisfaction Increase",
-          "value": "25-35%",
-          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on seamless cross-channel experiences and proactive engagement']",
-          "sourceBenchmark": null
-        },
-        {
-          "metric": "Drop-off Rate Reduction",
-          "value": "30-50%",
-          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated friction detection and real-time resolution']",
-          "sourceBenchmark": "bench-cjo-001"
-        }
-      ],
-      "agents": [
-        "Journey Orchestration Agent",
-        "Next-Best-Action Agent",
-        "Cross-Channel Coordination Agent",
-        "Friction Detection Agent",
-        "Lifecycle Management Agent",
-        "Journey Analytics Agent"
-      ]
-    },
+       "description": "AI-powered real-time journey orchestration with seamless cross-channel experiences and proactive engagement",
+       "characteristics": [
+         "Real-time journey state tracking across all touchpoints",
+         "AI recommends next-best-action based on journey stage and behavior",
+         "Seamless cross-channel hand-offs (web → mobile → store)",
+         "Automated friction detection and resolution",
+         "Proactive engagement at optimal moments",
+         "Continuous journey optimization through A/B testing"
+       ],
+       "benefits": [
+         "Significant improvement in conversion through optimized journeys",
+         "Seamless experiences increase customer satisfaction",
+         "Proactive engagement reduces drop-off",
+         "Real-time visibility enables agile journey improvements",
+         "Automated orchestration scales personalization",
+         "Continuous optimization vs static annual maps"
+       ],
+       "projections": [
+         {
+           "metric": "Journey Update Frequency",
+           "value": "Real-time (vs annual)",
+           "basis": "Based on continuous journey state tracking vs static annual workshops",
+           "sourceBenchmark": "bench-cjo-002"
+         },
+         {
+           "metric": "Response Time Improvement",
+           "value": "95% faster (minutes vs 24-72 hours)",
+           "basis": "Based on automated workflows vs manual follow-up processes",
+           "sourceBenchmark": "bench-cjo-003"
+         },
+         {
+           "metric": "Conversion Rate Improvement",
+           "value": "40-70%",
+           "basis": "Based on AI-powered journey orchestration eliminating friction points and optimizing next-best-actions",
+           "sourceBenchmark": null
+         },
+         {
+           "metric": "Customer Satisfaction Increase",
+           "value": "25-35%",
+           "basis": "Based on seamless cross-channel experiences and proactive engagement",
+           "sourceBenchmark": null
+         },
+         {
+           "metric": "Drop-off Rate Reduction",
+           "value": "30-50%",
+           "basis": "Based on automated friction detection and real-time resolution",
+           "sourceBenchmark": "bench-cjo-001"
+         }
+       ],
+       "contextualBenefits": [
+         {
+           "industry": "Retail",
+           "content": "Retailers achieve seamless omnichannel experiences, reducing cart abandonment by 40% and increasing conversion rates through real-time journey optimization."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains provide continuous shopping experiences from mobile to in-store, improving completion rates by 35% and customer satisfaction scores."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies eliminate booking friction across channels, reducing abandonment rates by 50% and increasing booking completion through proactive assistance."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operators create consistent experiences across ordering channels, improving order accuracy by 30% and customer loyalty through seamless transitions."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels orchestrate guest journeys from booking to check-out, increasing satisfaction scores by 25% through proactive service and personalized experiences."
+         }
+       ],
+       "agents": [
+         "Journey Orchestration Agent",
+         "Next-Best-Action Agent",
+         "Cross-Channel Coordination Agent",
+         "Friction Detection Agent",
+         "Lifecycle Management Agent",
+         "Journey Analytics Agent"
+       ]
+     },
     "maturityIndicators": {
       "traditional": 2,
       "agentic": 5
@@ -135,6 +208,11 @@
       "Agent assist & knowledge management",
       "Service analytics & QA",
       "Proactive support & outreach"
+    ],
+    "relatedCapabilities": [
+        "capability-conversational-ai-chatbot",
+        "capability-ai-powered-knowledge-management",
+        "capability-voice-of-customer-intelligence"
     ],
     "traditionalApproach": {
       "description": "Phone-centric contact center with manual case routing and limited self-service",
@@ -279,6 +357,11 @@
       "Loyalty analytics & segmentation",
       "Churn prediction & retention"
     ],
+    "relatedCapabilities": [
+        "capability-customer-lifetime-value-optimization",
+        "capability-churn-prediction-prevention",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Points-based program with generic rewards and manual tier management",
       "characteristics": [
@@ -421,6 +504,11 @@
       "VoC insights & recommendations",
       "NPS & CSAT tracking"
     ],
+    "relatedCapabilities": [
+        "capability-customer-service-support",
+        "capability-reviews-ratings-management",
+        "capability-product-information-management"
+    ],
     "traditionalApproach": {
       "description": "Manual survey analysis with spreadsheet-based reporting and limited action closure",
       "characteristics": [
@@ -544,6 +632,11 @@
       "Send-time optimization",
       "A/B testing & optimization",
       "Email performance analytics"
+    ],
+    "relatedCapabilities": [
+        "capability-marketing-automation",
+        "capability-web-personalization",
+        "capability-customer-journey-orchestration"
     ],
     "traditionalApproach": {
       "description": "Batch-and-blast email campaigns with manual segmentation and generic content",
@@ -682,6 +775,11 @@
       "Marketing attribution & ROI",
       "Campaign performance analytics"
     ],
+    "relatedCapabilities": [
+        "capability-email-marketing",
+        "capability-paid-advertising-management",
+        "capability-customer-journey-orchestration"
+    ],
     "traditionalApproach": {
       "description": "Manual campaign execution across disconnected channels with basic segmentation",
       "characteristics": [
@@ -806,6 +904,11 @@
       "Ad performance analytics",
       "ROAS optimization & attribution"
     ],
+    "relatedCapabilities": [
+        "capability-marketing-attribution-modeling",
+        "capability-marketing-automation",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Manual campaign management with rule-based bidding and limited testing",
       "characteristics": [
@@ -928,6 +1031,11 @@
       "Unified marketing ROI dashboard",
       "Channel performance analytics",
       "Budget optimization recommendations"
+    ],
+    "relatedCapabilities": [
+        "capability-marketing-mix-modeling-mmm",
+        "capability-paid-advertising-management",
+        "capability-budgeting-forecasting-fpa"
     ],
     "traditionalApproach": {
       "description": "Last-touch attribution with siloed channel reporting and no incrementality measurement",

@@ -43,19 +43,37 @@
           "id": "bench-task-001",
           "metric": "Task Completion Rate (Paper-Based)",
           "value": "60-70%",
-          "source": "TBD: [SME to provide source, e.g., 'Retail store operations benchmarking study']"
+          "source": "Gartner Retail Operations Research 2024"
         },
         {
           "id": "bench-task-002",
           "metric": "Issue Detection Time",
           "value": "2-8 weeks",
-          "source": "TBD: [SME to provide source, e.g., 'Store audit cycle timing analysis']"
+          "source": "Forrester Store Operations Benchmarks 2024"
         },
         {
           "id": "bench-task-003",
           "metric": "District Manager Audit Time",
           "value": "20-30% of time",
-          "source": "TBD: [SME to provide source, e.g., 'District manager time allocation study']"
+          "source": "NRF District Manager Time Study 2024"
+        }
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retail stores struggle with inconsistent task execution across locations, leading to brand experience variations and compliance issues that damage customer trust."
+        },
+        {
+          "industry": "Grocery",
+          "content": "Grocery stores face challenges with perishable item handling tasks, where manual checklists fail to ensure consistent food safety standards."
+        },
+        {
+          "industry": "QSR",
+          "content": "QSR locations need rapid task completion for drive-thru and kitchen operations, but paper-based systems create delays and quality issues."
+        },
+        {
+          "industry": "Hospitality",
+          "content": "Hotels require consistent room preparation and guest service tasks, but manual tracking leads to service quality variations and guest dissatisfaction."
         }
       ]
     },

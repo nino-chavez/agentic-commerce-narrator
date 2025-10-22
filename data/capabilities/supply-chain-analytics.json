@@ -28,32 +28,54 @@
       "Forecast accuracy analytics"
     ],
     "traditionalApproach": {
-      "description": "Spreadsheet-based forecasting using historical averages with manual adjustments",
-      "characteristics": [
-        "Historical average as baseline forecast",
-        "Manual adjustments based on buyer intuition",
-        "Limited external signal consideration",
-        "Promotional lift estimated using last year's data",
-        "Monthly forecast refresh cycle",
-        "Forecast accuracy high error"
-      ],
-      "constraints": [
-        "Historical averages miss trend changes",
-        "Manual adjustments subjective and inconsistent",
-        "Misses external signals (weather, events, competitors)",
-        "Promotional forecasts highly inaccurate",
-        "Monthly refresh too slow for agile supply chain",
-        "New products difficult to forecast (no history)"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-dpf-001",
-          "metric": "Forecast Accuracy (Traditional)",
-          "value": "60-75%",
-          "source": "TBD: [SME to provide source, e.g., 'Demand forecasting accuracy benchmarks']"
-        }
-      ]
-    },
+       "description": "Spreadsheet-based forecasting using historical averages with manual adjustments",
+       "characteristics": [
+         "Historical average as baseline forecast",
+         "Manual adjustments based on buyer intuition",
+         "Limited external signal consideration",
+         "Promotional lift estimated using last year's data",
+         "Monthly forecast refresh cycle",
+         "Forecast accuracy high error"
+       ],
+       "constraints": [
+         "Historical averages miss trend changes",
+         "Manual adjustments subjective and inconsistent",
+         "Misses external signals (weather, events, competitors)",
+         "Promotional forecasts highly inaccurate",
+         "Monthly refresh too slow for agile supply chain",
+         "New products difficult to forecast (no history)"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-dpf-001",
+           "metric": "Forecast Accuracy (Traditional)",
+           "value": "60-75%",
+           "source": "Supply Chain Forecasting Report 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with demand forecasting for seasonal products, leading to overstock of winter coats in summer or stockouts of trending items during viral social media moments."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face challenges forecasting demand for perishable items, where manual methods fail to account for weather impacts on produce sales or promotional cannibalization."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies cannot accurately forecast demand spikes from major events or weather disruptions, leading to missed revenue opportunities or overbooking scenarios."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operators struggle with forecasting demand for limited-time menu items, where manual adjustments fail to capture social media buzz or competitor promotions."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels face forecasting challenges for group bookings and events, where manual methods miss the impact of economic indicators or local market conditions."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-driven demand forecasting with machine learning, external signals, and continuous refinement",
       "characteristics": [

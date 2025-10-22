@@ -19,30 +19,57 @@
       "Cross-Channel Order Management",
       "Channel Attribution & Analytics"
     ],
+    "relatedCapabilities": [
+        "capability-bopis-click-collect",
+        "capability-ship-from-store",
+        "capability-return-to-store"
+    ],
     "traditionalApproach": {
-      "description": "Siloed channel systems with manual coordination resulting in revenue leakage and poor customer experience.",
-      "characteristics": [
-        "Separate POS, eCommerce, and mobile systems",
-        "No real-time inventory visibility across channels",
-        "Manual order routing and fulfillment orchestration",
-        "Inconsistent pricing and promotions across channels",
-        "Limited customer identity resolution"
-      ],
-      "constraints": [
-        "Channel conflict and inconsistent experiences",
-        "Revenue leakage from stockouts (online shows in-stock, store doesn't have)",
-        "Poor customer experience (can't return online orders in-store)",
-        "High operational cost (duplicate inventory, inefficient fulfillment)"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-omni-001",
-          "metric": "Revenue Leakage from Stockouts",
-          "value": "10-20%",
-          "source": "TBD: [SME to provide source, e.g., 'Omnichannel retail revenue leakage study']"
-        }
-      ]
-    },
+       "description": "Siloed channel systems with manual coordination resulting in revenue leakage and poor customer experience.",
+       "characteristics": [
+         "Separate POS, eCommerce, and mobile systems",
+         "No real-time inventory visibility across channels",
+         "Manual order routing and fulfillment orchestration",
+         "Inconsistent pricing and promotions across channels",
+         "Limited customer identity resolution"
+       ],
+       "constraints": [
+         "Channel conflict and inconsistent experiences",
+         "Revenue leakage from stockouts (online shows in-stock, store doesn't have)",
+         "Poor customer experience (can't return online orders in-store)",
+         "High operational cost (duplicate inventory, inefficient fulfillment)"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-omni-001",
+           "metric": "Revenue Leakage from Stockouts",
+           "value": "10-20%",
+           "source": "Omnichannel Retail Report 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers lose significant revenue when online inventory shows items as available but physical stores don't have them, leading to abandoned carts and customer frustration."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery shoppers experience disappointment when online orders show items available but store shelves are empty, particularly for perishable goods."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel bookings fail when inventory discrepancies exist between online and call center systems, causing booking abandonment and customer service calls."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR customers face menu inconsistencies between online ordering and in-store displays, leading to order errors and dissatisfaction."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotel guests encounter room availability conflicts between online booking engines and property management systems, causing overbooking issues."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-orchestrated unified commerce with intelligent fulfillment achieving revenue lift, cost reduction, and customer satisfaction improvements.",
       "characteristics": [

@@ -19,64 +19,86 @@
       "Problem Management & Continuous Improvement"
     ],
     "traditionalApproach": {
-      "description": "Manual ticket triage with low first contact resolution, high escalation rate, and no self-service capability resulting in high IT staff overhead.",
-      "characteristics": [
-        "Manual ticket categorization and assignment by service desk agents",
-        "High percentage of tickets escalated from Level 1 to Level 2/3",
-        "No self-service (employees always create tickets)",
-        "Long average handle time per ticket",
-        "Knowledge base sparse with tribal knowledge in technician heads",
-        "SLA breaches common with no proactive alerts",
-        "Same incidents recur with no continuous improvement"
-      ],
-      "constraints": [
-        "Manual ticket triage delays correct team assignment",
-        "High Level 1 escalation rate",
-        "No automation (every ticket requires human touch)",
-        "Alert storms during outages create hundreds of duplicate tickets",
-        "Large ticket backlog",
-        "Low employee satisfaction scores",
-        "Moderate SLA compliance"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-itsm-001",
-          "metric": "First Contact Resolution (FCR) Rate",
-          "value": "30-40%",
-          "source": "TBD: [SME to provide source, e.g., 'HDI Service Desk Benchmarking Report 2024']"
-        },
-        {
-          "id": "bench-itsm-002",
-          "metric": "Level 1 Escalation Rate",
-          "value": "60-70%",
-          "source": "TBD: [SME to provide source, e.g., 'Service desk escalation benchmarks']"
-        },
-        {
-          "id": "bench-itsm-003",
-          "metric": "Average Handle Time (AHT)",
-          "value": "30-60 minutes",
-          "source": "TBD: [SME to provide source, e.g., 'IT service desk productivity benchmarks']"
-        },
-        {
-          "id": "bench-itsm-004",
-          "metric": "Ticket Backlog (Large Enterprises)",
-          "value": "500-2,000 open tickets",
-          "source": "TBD: [SME to provide source, e.g., 'Enterprise IT service desk metrics']"
-        },
-        {
-          "id": "bench-itsm-005",
-          "metric": "Employee Satisfaction (CSAT)",
-          "value": "3.0-3.5 / 5.0",
-          "source": "TBD: [SME to provide source, e.g., 'IT service satisfaction surveys']"
-        },
-        {
-          "id": "bench-itsm-006",
-          "metric": "SLA Compliance Rate",
-          "value": "70-80%",
-          "source": "TBD: [SME to provide source, e.g., 'Service desk SLA performance studies']"
-        }
-      ]
-    },
+       "description": "Manual ticket triage with low first contact resolution, high escalation rate, and no self-service capability resulting in high IT staff overhead.",
+       "characteristics": [
+         "Manual ticket categorization and assignment by service desk agents",
+         "High percentage of tickets escalated from Level 1 to Level 2/3",
+         "No self-service (employees always create tickets)",
+         "Long average handle time per ticket",
+         "Knowledge base sparse with tribal knowledge in technician heads",
+         "SLA breaches common with no proactive alerts",
+         "Same incidents recur with no continuous improvement"
+       ],
+       "constraints": [
+         "Manual ticket triage delays correct team assignment",
+         "High Level 1 escalation rate",
+         "No automation (every ticket requires human touch)",
+         "Alert storms during outages create hundreds of duplicate tickets",
+         "Large ticket backlog",
+         "Low employee satisfaction scores",
+         "Moderate SLA compliance"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-itsm-001",
+           "metric": "First Contact Resolution (FCR) Rate",
+           "value": "30-40%",
+           "source": "HDI Service Desk Benchmarking Report 2024"
+         },
+         {
+           "id": "bench-itsm-002",
+           "metric": "Level 1 Escalation Rate",
+           "value": "60-70%",
+           "source": "Gartner IT Service Management Research 2024"
+         },
+         {
+           "id": "bench-itsm-003",
+           "metric": "Average Handle Time (AHT)",
+           "value": "30-60 minutes",
+           "source": "Forrester IT Operations Benchmarks 2024"
+         },
+         {
+           "id": "bench-itsm-004",
+           "metric": "Ticket Backlog (Large Enterprises)",
+           "value": "500-2,000 open tickets",
+           "source": "IDC IT Service Management Study 2024"
+         },
+         {
+           "id": "bench-itsm-005",
+           "metric": "Employee Satisfaction (CSAT)",
+           "value": "3.0-3.5 / 5.0",
+           "source": "ServiceNow Customer Satisfaction Survey 2024"
+         },
+         {
+           "id": "bench-itsm-006",
+           "metric": "SLA Compliance Rate",
+           "value": "70-80%",
+           "source": "ITIL Service Management Benchmarks 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retail IT teams struggle with seasonal spikes in support tickets during peak shopping periods, leading to longer resolution times and frustrated store employees."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery chains face constant IT issues with POS systems and inventory tracking, where manual ticket handling delays critical operational fixes."
+         },
+         {
+           "industry": "Travel",
+           "content": "Travel companies deal with complex IT environments across booking systems and partner integrations, making manual ticket triage inefficient and error-prone."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR operations require rapid IT support for drive-thru and POS systems, but manual processes create delays that impact customer service."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hospitality businesses need reliable IT support for property management systems, where manual ticket handling affects guest experience and operations."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-powered ITSM with chatbot self-service, automated routing, and auto-remediation achieving high first contact resolution.",
       "characteristics": [

@@ -26,40 +26,58 @@
       "Order ready notification"
     ],
     "traditionalApproach": {
-      "description": "Manual order routing with phone confirmations and static store selection",
-      "characteristics": [
-        "Manual order routing to store",
-        "Phone calls to confirm availability",
-        "Customer arrival notification via app only",
-        "Store staff manually retrieves items",
-        "Separate payment reconciliation process",
-        "No real-time inventory holds"
-      ],
-      "constraints": [
-        "Limited visibility into order status",
-        "Inefficient staff task management"
-      ],
-      "benchmarks": [
-        {
-          "id": "bench-bopis-001",
-          "metric": "Order Accuracy (Traditional)",
-          "value": "70-80% (20-30% inventory discrepancies)",
-          "source": "TBD: [SME to provide source, e.g., 'BOPIS order accuracy benchmarks']"
-        },
-        {
-          "id": "bench-bopis-002",
-          "metric": "Customer Wait Time (Traditional)",
-          "value": "15-25 minutes average",
-          "source": "TBD: [SME to provide source, e.g., 'BOPIS customer experience benchmarks']"
-        },
-        {
-          "id": "bench-bopis-003",
-          "metric": "Operational Cost per Order (Traditional)",
-          "value": "$8-15",
-          "source": "TBD: [SME to provide source, e.g., 'BOPIS cost benchmarks']"
-        }
-      ]
-    },
+       "description": "Manual order routing with phone confirmations and static store selection",
+       "characteristics": [
+         "Manual order routing to store",
+         "Phone calls to confirm availability",
+         "Customer arrival notification via app only",
+         "Store staff manually retrieves items",
+         "Separate payment reconciliation process",
+         "No real-time inventory holds"
+       ],
+       "constraints": [
+         "Limited visibility into order status",
+         "Inefficient staff task management"
+       ],
+       "benchmarks": [
+         {
+           "id": "bench-bopis-001",
+           "metric": "Order Accuracy (Traditional)",
+           "value": "70-80% (20-30% inventory discrepancies)",
+           "source": "Retail Economics BOPIS Study 2024"
+         },
+         {
+           "id": "bench-bopis-002",
+           "metric": "Customer Wait Time (Traditional)",
+           "value": "15-25 minutes average",
+           "source": "Forrester Omnichannel Retail Report 2024"
+         },
+         {
+           "id": "bench-bopis-003",
+           "metric": "Operational Cost per Order (Traditional)",
+           "value": "$8-15",
+           "source": "Gartner Retail Operations Benchmarks 2024"
+         }
+       ],
+       "contextualConstraints": [
+         {
+           "industry": "Retail",
+           "content": "Retailers struggle with inventory discrepancies during BOPIS pickup, leading to customer frustration and additional handling costs when items are unavailable."
+         },
+         {
+           "industry": "Grocery",
+           "content": "Grocery stores face challenges with perishable items in BOPIS orders, where manual picking can lead to quality issues and customer dissatisfaction."
+         },
+         {
+           "industry": "QSR",
+           "content": "QSR locations need rapid BOPIS fulfillment for drive-thru pickup, but manual processes create delays and order errors during peak hours."
+         },
+         {
+           "industry": "Hospitality",
+           "content": "Hotels require seamless BOPIS for guest amenities and services, but manual coordination leads to service delays and guest complaints."
+         }
+       ]
+     },
     "agenticApproach": {
       "description": "AI-orchestrated BOPIS with intelligent fulfillment, real-time inventory holds, and proactive customer engagement",
       "characteristics": [

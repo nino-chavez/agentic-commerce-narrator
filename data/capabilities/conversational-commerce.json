@@ -15,6 +15,11 @@
       "Voice Personalization",
       "Voice Transaction Management"
     ],
+    "relatedCapabilities": [
+        "capability-conversational-ai-chatbot",
+        "capability-ai-shopping-assistant",
+        "capability-product-information-management"
+    ],
     "traditionalApproach": {
       "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
       "characteristics": [
@@ -109,6 +114,11 @@
       "Slot Filling",
       "Action Execution",
       "Human Handoff"
+    ],
+    "relatedCapabilities": [
+        "capability-ai-shopping-assistant",
+        "capability-customer-service-support",
+        "capability-ai-powered-knowledge-management"
     ],
     "traditionalApproach": {
       "description": "Rule-based chatbots with keyword matching and frequent human handoffs resulting in moderate containment rate and poor customer experience.",
@@ -220,6 +230,11 @@
       "Style Matching",
       "Product Comparison"
     ],
+    "relatedCapabilities": [
+        "capability-conversational-ai-chatbot",
+        "capability-search-experience-optimization",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Keyword search only with generic recommendations and manual filtering resulting in high browse-to-purchase drop-off.",
       "characteristics": [
@@ -320,6 +335,11 @@
       "Channel Selection",
       "Frequency Capping"
     ],
+    "relatedCapabilities": [
+        "capability-customer-journey-orchestration",
+        "capability-churn-prediction-prevention",
+        "capability-marketing-automation"
+    ],
     "traditionalApproach": {
       "description": "Batch campaign notifications with high opt-out rates and no personalization resulting in poor response rates.",
       "characteristics": [
@@ -412,7 +432,7 @@
     "version": "2.0.0"
   },
   {
-    "id": "capability-ai-knowledge-management",
+    "id": "capability-ai-powered-knowledge-management",
     "type": "capability",
     "level": 3,
     "label": "AI-Powered Knowledge Management",
@@ -426,6 +446,11 @@
       "Answer Generation",
       "Knowledge Gap Detection",
       "Auto-Update"
+    ],
+    "relatedCapabilities": [
+        "capability-customer-service-support",
+        "capability-conversational-ai-chatbot",
+        "capability-it-service-management"
     ],
     "traditionalApproach": {
       "description": "Static FAQ pages with keyword search and manual updates resulting in poor self-service experience.",

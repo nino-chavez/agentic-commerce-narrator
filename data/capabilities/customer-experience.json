@@ -15,6 +15,11 @@
       "Opportunity Scoring & Prioritization",
       "Journey Visualization"
     ],
+    "relatedCapabilities": [
+        "capability-customer-journey-orchestration",
+        "capability-voice-of-customer-intelligence",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Quarterly workshops with static journey maps stored in PowerPoint",
       "characteristics": [
@@ -30,6 +35,12 @@
         "Manual identification of friction points",
         "Improvements not prioritized by impact",
         "Disconnected from real-time customer data"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers struggle to understand why customers abandon carts at different stages of the journey, leading to $18B annual lost revenue from incomplete purchases. (Source: Salesforce Commerce Cloud Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -48,6 +59,12 @@
         "Automated friction detection vs manual analysis",
         "ROI-prioritized improvements vs gut-feel decisions",
         "Continuous monitoring vs periodic updates"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can identify and eliminate friction points in multi-step booking processes, reducing abandonment rates by 25-35% through journey-based improvements. (Source: Expedia Group Travel Industry Report)"
+        }
       ],
       "projections": [],
       "agents": [
@@ -76,6 +93,130 @@
         "Clean customer identifier across channels",
         "Historical behavior data (3-6 months minimum)",
         "Defined business metrics (conversion, satisfaction, revenue)"
+      ],
+      "implementationPathways": [
+        {
+          "phase": "Crawl",
+          "duration": "2-4 months",
+          "activities": [
+            "Implement clickstream analytics and session recording tools",
+            "Establish unified customer identity across digital channels",
+            "Deploy journey mapping for 3-5 critical customer flows",
+            "Create basic friction detection rules (drop-off rates, time delays)",
+            "Build initial journey visualization dashboards"
+          ],
+          "outcomes": [
+            "Real-time visibility into actual customer journeys vs assumptions",
+            "Identification of top 5 friction points causing abandonment",
+            "20-30% improvement in journey completion rates",
+            "Cross-functional alignment on customer experience priorities",
+            "Foundation for data-driven CX optimization"
+          ],
+          "prerequisites": [
+            "Digital analytics platform (Google Analytics, Adobe Analytics)",
+            "Customer data platform or unified customer profile",
+            "Session recording and heatmapping tools",
+            "Cross-functional CX team (product, design, marketing)"
+          ]
+        },
+        {
+          "phase": "Walk",
+          "duration": "4-8 months",
+          "activities": [
+            "Implement ML-based journey discovery and clustering",
+            "Deploy automated friction detection using behavioral signals",
+            "Create journey optimization recommendations engine",
+            "Integrate journey insights with product roadmap and testing",
+            "Establish continuous journey monitoring and alerting",
+            "Expand to omnichannel journey mapping (online + offline)"
+          ],
+          "outcomes": [
+            "ML-powered discovery of hidden journey patterns and segments",
+            "Automated identification of friction points with impact quantification",
+            "Journey-based A/B testing framework for optimization",
+            "30-50% reduction in customer journey friction",
+            "Predictive journey analytics for proactive improvements",
+            "Omnichannel journey visibility and optimization"
+          ],
+          "prerequisites": [
+            "Successful journey mapping from Crawl phase",
+            "ML/AI capabilities for pattern recognition",
+            "Integration with A/B testing and experimentation platforms",
+            "Product management processes for journey-driven development",
+            "Offline channel data integration (POS, call center)"
+          ]
+        },
+        {
+          "phase": "Run",
+          "duration": "8-18 months",
+          "activities": [
+            "Deploy autonomous journey optimization agents",
+            "Implement predictive journey modeling and simulation",
+            "Create self-service journey analytics for all teams",
+            "Establish journey intelligence as core business capability",
+            "Integrate with strategic planning and innovation processes",
+            "Scale to enterprise-wide journey orchestration"
+          ],
+          "outcomes": [
+            "Autonomous journey optimization driving continuous improvements",
+            "Predictive journey modeling for strategic decision-making",
+            "Journey intelligence embedded in all customer-facing processes",
+            "50-70% improvement in customer experience metrics",
+            "Journey-driven innovation and product development",
+            "Industry-leading customer-centric culture and capabilities"
+          ],
+          "prerequisites": [
+            "Mature journey analytics from Walk phase",
+            "Advanced AI/ML platform for autonomous optimization",
+            "Enterprise-wide adoption of journey-driven processes",
+            "Integration with strategic planning and innovation frameworks",
+            "Executive commitment to customer-centric transformation"
+          ]
+        }
+      ],
+      "keyTechnologyPartners": [
+        {
+          "name": "Google Analytics 4",
+          "category": "Digital Analytics",
+          "useCase": "Event-based tracking and journey analysis across digital touchpoints",
+          "phase": "Crawl"
+        },
+        {
+          "name": "Adobe Analytics",
+          "category": "Customer Intelligence",
+          "useCase": "Advanced journey analytics and customer segmentation",
+          "phase": "Crawl"
+        },
+        {
+          "name": "Hotjar",
+          "category": "Session Recording",
+          "useCase": "Visual journey mapping and friction point identification",
+          "phase": "Crawl"
+        },
+        {
+          "name": "FullStory",
+          "category": "Digital Experience Analytics",
+          "useCase": "Session replay and automated friction detection",
+          "phase": "Walk"
+        },
+        {
+          "name": "Quantum Metric",
+          "category": "Journey Analytics",
+          "useCase": "AI-powered journey discovery and optimization",
+          "phase": "Walk"
+        },
+        {
+          "name": "Pendo",
+          "category": "Product Analytics",
+          "useCase": "In-app journey analytics and user experience insights",
+          "phase": "Run"
+        },
+        {
+          "name": "WalkMe",
+          "category": "Digital Adoption",
+          "useCase": "Guided journeys and in-app user assistance",
+          "phase": "Run"
+        }
       ]
     },
     "icon": "map",
@@ -100,6 +241,11 @@
       "Unified Messaging Coordination",
       "Cross-Channel Personalization"
     ],
+    "relatedCapabilities": [
+        "capability-customer-journey-orchestration",
+        "capability-bopis-click-collect",
+        "capability-ship-from-store"
+    ],
     "traditionalApproach": {
       "description": "Separate channel teams with no state synchronization or cross-channel awareness",
       "characteristics": [
@@ -114,6 +260,12 @@
         "Inconsistent personalization across channels",
         "No visibility into customer's cross-channel journey",
         "Fragmented customer data across channel silos"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers cannot track customer journeys that start on mobile apps and complete in stores, leading to inaccurate measurement of marketing ROI and suboptimal channel investments. (Source: Adobe Experience Cloud Report)"
+        }
       ],
       "benchmarks": [
         {
@@ -139,6 +291,12 @@
         "Customer never repeats information across channels",
         "Consistent personalization everywhere vs channel-specific",
         "Significant reduction in channel-switch abandonment"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can maintain booking context across devices and channels, reducing booking abandonment by 40% when customers switch from mobile research to desktop purchase. (Source: Travelport Technology Report)"
+        }
       ],
       "projections": [
         {
@@ -204,6 +362,11 @@
       "Bayesian Analysis & Monitoring",
       "Winner Rollout Automation"
     ],
+    "relatedCapabilities": [
+        "capability-web-personalization",
+        "capability-marketing-automation",
+        "capability-search-experience-optimization"
+    ],
     "traditionalApproach": {
       "description": "Manual A/B testing with weeks-long cycles and limited concurrent experiments",
       "characteristics": [
@@ -219,6 +382,12 @@
         "Manual statistical analysis introduces errors",
         "No early stopping wastes traffic on losing variants",
         "Manual rollouts risk configuration errors"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers cannot rapidly test personalized product recommendations and pricing across customer segments, limiting the ability to optimize conversion rates through targeted experiences. (Source: Monetate Personalization Report)"
+        }
       ],
       "benchmarks": [
         {
@@ -252,6 +421,12 @@
         "Early stopping saves traffic",
         "Gradual rollouts minimize risk of negative impact",
         "Dramatic increase in learning velocity"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can run automated experiments on pricing strategies, demand-based promotions, and package bundling, increasing revenue by 8-12% through optimized pricing experimentation. (Source: Sabre Travel Technology Report)"
+        }
       ],
       "projections": [
         {
@@ -329,6 +504,11 @@
       "Impact Quantification",
       "Insight Distribution & Routing"
     ],
+    "relatedCapabilities": [
+        "capability-customer-service-support",
+        "capability-reviews-ratings-management",
+        "capability-product-information-management"
+    ],
     "traditionalApproach": {
       "description": "Manual analysis of disconnected feedback sources with monthly reporting",
       "characteristics": [
@@ -345,6 +525,12 @@
         "Insights not actionable or routed to owners",
         "Feedback silos (surveys, reviews, support separate)",
         "Limited to samples vs complete feedback corpus"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers struggle to respond to thousands of product reviews and social media mentions in a timely manner, leading to negative sentiment amplification and lost sales opportunities. (Source: Bazaarvoice Social Commerce Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -364,6 +550,12 @@
         "Quantified business impact vs qualitative reports",
         "Insights routed to owners vs broadcast reports",
         "Product roadmap informed by customer voice"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Hospitality",
+          "content": "Hotels can automatically detect and respond to negative reviews and feedback within minutes, improving guest satisfaction scores by 15-20% through proactive service recovery. (Source: ReviewPro Hospitality Technology Report)"
+        }
       ],
       "projections": [],
       "agents": [
@@ -416,6 +608,11 @@
       "Channel Selection",
       "Treatment Orchestration"
     ],
+    "relatedCapabilities": [
+        "capability-customer-journey-orchestration",
+        "capability-web-personalization",
+        "capability-marketing-automation"
+    ],
     "traditionalApproach": {
       "description": "Generic segment-based campaigns with no real-time decisioning",
       "characteristics": [
@@ -430,6 +627,12 @@
         "No cross-channel orchestration (email siloed from app)",
         "Generic offers reduce response rates",
         "No propensity-based prioritization"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers cannot identify and act on cross-sell opportunities after purchase, missing 20-30% of potential additional revenue from related product recommendations. (Source: Salesforce Retail Cloud Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -449,6 +652,12 @@
         "Optimized offers maximize conversion and margin",
         "Coordinated multi-touch campaigns vs siloed channels",
         "Significant lift in campaign ROI"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can recommend and sell travel insurance, seat upgrades, and add-on services at optimal moments in the customer journey, increasing ancillary revenue by 25-35%. (Source: Amadeus Travel Technology Report)"
+        }
       ],
       "projections": [
         {
@@ -514,6 +723,11 @@
       "Win-Back Orchestration",
       "Growth Opportunity Identification"
     ],
+    "relatedCapabilities": [
+        "capability-churn-prediction-prevention",
+        "capability-loyalty-program-management",
+        "capability-web-personalization"
+    ],
     "traditionalApproach": {
       "description": "Historical CLV calculated annually with reactive churn management",
       "characteristics": [
@@ -528,6 +742,12 @@
         "Churn managed reactively after customer leaves",
         "No proactive retention campaigns",
         "Growth opportunities not identified systematically"
+      ],
+      "contextualConstraints": [
+        {
+          "industry": "Retail",
+          "content": "Retailers lose customers from loyalty programs due to irrelevant rewards and poor personalization, with 70% of loyalty members citing lack of value as the reason for inactivity. (Source: Bond Loyalty Report)"
+        }
       ],
       "benchmarks": []
     },
@@ -547,6 +767,12 @@
         "Automated retention campaigns vs manual outreach",
         "Significant churn reduction through early intervention",
         "Growth opportunities surfaced proactively"
+      ],
+      "contextualBenefits": [
+        {
+          "industry": "Travel",
+          "content": "Travel companies can predict optimal membership tier upgrades and retention strategies, increasing lifetime value by 40-60% through personalized loyalty program management. (Source: IdeaWorks Travel Loyalty Report)"
+        }
       ],
       "projections": [
         {

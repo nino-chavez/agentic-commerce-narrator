@@ -12,13 +12,13 @@ To transform the application's data from siloed lists into an interconnected sys
 
 **Objective:** To establish explicit relationships between capabilities across different domains, allowing for "system-thinking" navigation and narrative pivoting.
 
-### Step 1: Update TypeScript Data Schema
+### Step 1: Update TypeScript Data Schema ✅
 
-Modify the `Capability` interface in `data/types/graph.ts` to include a new optional field `relatedCapabilities`.
+Modified the `Capability` interface in `data/types/graph.ts` to include a new optional field `relatedCapabilities`.
 
 **File:** `/Users/nino/Workspace/02-local-dev/sites/agentic-commerce-narrator/data/types/graph.ts`
 
-**Change:** Add the following to the `Capability` interface:
+**Change:** Added the following to the `Capability` interface:
 
 ```typescript
 export interface Capability {
@@ -27,7 +27,7 @@ export interface Capability {
 }
 ```
 
-### Step 2: Identify and Map Cross-Domain Relationships
+### Step 2: Identify and Map Cross-Domain Relationships ✅
 
 This step requires domain expertise and will be performed by the user.
 
@@ -39,9 +39,9 @@ This step requires domain expertise and will be performed by the user.
 **Example:**
 *   `capability-fraud-chargeback-management` (from `b2b-commerce.json`) is related to `capability-real-time-analytics-bi` (from `analytics.json`).
 
-### Step 3: Enrich Domain-Specific JSON Data Files
+### Step 3: Enrich Domain-Specific JSON Data Files ✅
 
-Add the `relatedCapabilities` array to the relevant capability objects in the domain-specific JSON files.
+Added the `relatedCapabilities` array to the relevant capability objects in the domain-specific JSON files.
 
 **Files:** All `*.json` files within `/Users/nino/Workspace/02-local-dev/sites/agentic-commerce-narrator/data/capabilities/` that contain capability definitions.
 
@@ -60,13 +60,13 @@ Add the `relatedCapabilities` array to the relevant capability objects in the do
 }
 ```
 
-### Step 4: Review `graphDataLoader.ts` for Compatibility
+### Step 4: Review `graphDataLoader.ts` for Compatibility ✅
 
-Examine `data/utils/graphDataLoader.ts` to ensure it can correctly load and process the new `relatedCapabilities` field without errors. No explicit changes are anticipated unless the loader has strict schema validation that needs updating.
+Examined `data/utils/graphDataLoader.ts` to ensure it can correctly load and process the new `relatedCapabilities` field without errors. No explicit changes are anticipated unless the loader has strict schema validation that needs updating.
 
 **File:** `/Users/nino/Workspace/02-local-dev/sites/agentic-commerce-narrator/data/utils/graphDataLoader.ts`
 
-**Action:** Read and verify.
+**Action:** Read and verified.
 
 ### Step 5: (Future UI Enhancement) Display Related Capabilities
 
@@ -82,13 +82,13 @@ Once the data is enriched, UI components can be updated to leverage this new con
 
 **Objective:** To make capability content (constraints, benefits, metrics) dynamic and specific to the active industry filter, significantly enhancing the "Industry" filter's power.
 
-### Step 1: Update TypeScript Data Schema for Contextual Content
+### Step 1: Update TypeScript Data Schema for Contextual Content ✅
 
-Modify the `traditionalApproach` and `agenticApproach` interfaces in `data/types/graph.ts` to support contextual content. This involves replacing single string/array fields with arrays of objects that include an `industry` field.
+Modified the `traditionalApproach` and `agenticApproach` interfaces in `data/types/graph.ts` to support contextual content. This involves replacing single string/array fields with arrays of objects that include an `industry` field.
 
 **File:** `/Users/nino/Workspace/02-local-dev/sites/agentic-commerce-narrator/data/types/graph.ts`
 
-**Change:** Introduce new interfaces for contextual content and update `traditionalApproach` and `agenticApproach`.
+**Change:** Introduced new interfaces for contextual content and updated `traditionalApproach` and `agenticApproach`.
 
 ```typescript
 export interface ContextualContent {
@@ -126,7 +126,7 @@ export interface Capability {
 }
 ```
 
-### Step 2: Enrich Domain-Specific JSON Data Files with Contextual Content
+### Step 2: Enrich Domain-Specific JSON Data Files with Contextual Content ✅
 
 This step involves a significant data entry effort by the user to define industry-specific content.
 
@@ -191,15 +191,15 @@ This step involves a significant data entry effort by the user to define industr
 }
 ```
 
-### Step 3: Update `applyFilters.ts` to Select Contextual Content
+### Step 3: Update `applyFilters.ts` to Select Contextual Content ✅
 
-Modify the `applyFilters.ts` utility to dynamically select and prioritize contextual content based on the active `industry` filter. If no specific contextual content is found for the active industry, it should fall back to the generic content.
+Modified the `applyFilters.ts` utility to dynamically select and prioritize contextual content based on the active `industry` filter. If no specific contextual content is found for the active industry, it should fall back to the generic content.
 
 **File:** `/Users/nino/Workspace/02-local-dev/sites/agentic-commerce-narrator/data/utils/applyFilters.ts`
 
 **Action:**
 1.  Read the `applyFilters.ts` file to understand its current logic.
-2.  Implement logic to check for `contextualDescriptions`, `contextualPainPoints`, `contextualBenefits`, `contextualMetrics`, etc.
+2.  Implemented logic to check for `contextualDescriptions`, `contextualPainPoints`, `contextualBenefits`, `contextualMetrics`, etc.
 3.  If an `industry` filter is active, iterate through the contextual arrays and return the `content` or `label`/`value` that matches the active `industry`.
 4.  If no match is found for the active `industry`, or if no `industry` filter is active, fall back to the generic `description`, `painPoints`, `benefits`, or `metrics` fields.
 

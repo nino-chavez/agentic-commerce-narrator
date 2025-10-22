@@ -19,6 +19,11 @@
       "Cross-Channel Order Management",
       "Channel Attribution & Analytics"
     ],
+    "relatedCapabilities": [
+        "capability-bopis-click-collect",
+        "capability-ship-from-store",
+        "capability-return-to-store"
+    ],
     "traditionalApproach": {
       "description": "Siloed channel systems with manual coordination resulting in revenue leakage and poor customer experience.",
       "characteristics": [

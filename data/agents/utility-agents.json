@@ -1,0 +1,3412 @@
+[
+  {
+    "id": "agent-utility-s-op-platform-forecasting-models-optimization-engine-collaboration-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "S&OP Platform, Forecasting Models, Optimization Engine, Collaboration Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-visibility-platform-edi-api-integration-alert-system-collaboration-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Visibility Platform, EDI/API Integration, Alert System, Collaboration Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-network-design-tool-optimization-solver-gis-mapping-cost-database",
+    "type": "agent",
+    "level": 6,
+    "label": "Network Design Tool, Optimization Solver, GIS Mapping, Cost Database",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "optimization"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-replenishment-platform-demand-forecasting-optimization-engine-inventory-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Replenishment Platform, Demand Forecasting, Optimization Engine, Inventory System",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-supplier-portal-edi-api-performance-dashboard-collaboration-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier Portal, EDI/API, Performance Dashboard, Collaboration Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-wms-yard-management-system-transportation-management",
+    "type": "agent",
+    "level": 6,
+    "label": "WMS, Yard Management System, Transportation Management",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-bnpl-provider-apis-payment-gateway-crm-collections-platform",
+    "type": "agent",
+    "level": 6,
+    "label": "BNPL Provider APIs, Payment Gateway, CRM, Collections Platform",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-crypto-payment-processor-wallet-apis-fx-rate-api-hedging-platform",
+    "type": "agent",
+    "level": 6,
+    "label": "Crypto Payment Processor, Wallet APIs, FX Rate API, Hedging Platform",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-multiple-payment-gateways-routing-engine-cost-analytics-retry-logic",
+    "type": "agent",
+    "level": 6,
+    "label": "Multiple Payment Gateways, Routing Engine, Cost Analytics, Retry Logic",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "optimization"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-billing-platform-payment-gateway-crm-usage-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Billing Platform, Payment Gateway, CRM, Usage Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-revenue-recognition-platform-erp-bi-tool-audit-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Revenue Recognition Platform, ERP, BI Tool, Audit System",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PMS Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-housekeeping-operations-optimization",
+      "capability-pharmacy-operations-management",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 4 capabilities."
+  },
+  {
+    "id": "agent-utility-channel-manager",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Manager",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-competitive-intelligence",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitive Intelligence",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-booking-pace",
+    "type": "agent",
+    "level": 6,
+    "label": "Booking Pace",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-market-event-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Market Event Calendar",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-loyalty-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-f-b-reservation",
+    "type": "agent",
+    "level": 6,
+    "label": "F&B Reservation",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-web-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Web Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-cancellation-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "Cancellation Prediction",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-rm-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "RM Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-loyalty-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty System",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-mobile-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Mobile App",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-guest-experience-personalization-crm",
+      "capability-housekeeping-operations-optimization",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 5 capabilities."
+  },
+  {
+    "id": "agent-utility-spa-reservation",
+    "type": "agent",
+    "level": 6,
+    "label": "Spa Reservation",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-review-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Review Monitoring",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-social-media",
+    "type": "agent",
+    "level": 6,
+    "label": "Social Media",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling",
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-email-sms",
+    "type": "agent",
+    "level": 6,
+    "label": "Email/SMS",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-survey",
+    "type": "agent",
+    "level": 6,
+    "label": "Survey",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-personalization-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Personalization Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-camera-vision",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera/Vision",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-labor-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Management",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-inventory",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-iot-sensor",
+    "type": "agent",
+    "level": 6,
+    "label": "IoT Sensor",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-housekeeping-operations-optimization",
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 3 capabilities."
+  },
+  {
+    "id": "agent-utility-maintenance-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Maintenance Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-guest-complaint",
+    "type": "agent",
+    "level": 6,
+    "label": "Guest Complaint",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-quality-checklist",
+    "type": "agent",
+    "level": 6,
+    "label": "Quality Checklist",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-housekeeping-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Housekeeping Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pss-pms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PSS/PMS Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-gds-connection",
+    "type": "agent",
+    "level": 6,
+    "label": "GDS Connection",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-ota-api",
+    "type": "agent",
+    "level": 6,
+    "label": "OTA API",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management",
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-search-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Search Data",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-event-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Event Data",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-weather-api",
+    "type": "agent",
+    "level": 6,
+    "label": "Weather API",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 4 capabilities."
+  },
+  {
+    "id": "agent-utility-economic-indicators",
+    "type": "agent",
+    "level": 6,
+    "label": "Economic Indicators",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-competitor-scraping",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitor Scraping",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-regulatory-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Regulatory Compliance",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-gds-api",
+    "type": "agent",
+    "level": 6,
+    "label": "GDS API",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-metasearch-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Metasearch Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-website-mobile-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Website/Mobile App",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-rate-parity-scraping",
+    "type": "agent",
+    "level": 6,
+    "label": "Rate Parity Scraping",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Attribution",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-payment-gateway",
+    "type": "agent",
+    "level": 6,
+    "label": "Payment Gateway",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-channel-cost",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Cost",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-channel-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-loyalty-platform-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Platform Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-reservation-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Reservation System",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-credit-card-partner",
+    "type": "agent",
+    "level": 6,
+    "label": "Credit Card Partner",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-partner-api",
+    "type": "agent",
+    "level": 6,
+    "label": "Partner API",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-push-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Push Notification",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-liability-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Liability Tracking",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-fraud-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Fraud Detection",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-member-portal",
+    "type": "agent",
+    "level": 6,
+    "label": "Member Portal",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-loyalty-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-flight-schedule-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Flight Schedule Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-crew-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Tracking",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-payroll-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Payroll Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines",
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-training-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Training System",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-medical-records",
+    "type": "agent",
+    "level": 6,
+    "label": "Medical Records",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-union-contract",
+    "type": "agent",
+    "level": 6,
+    "label": "Union Contract",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-reserve-callout",
+    "type": "agent",
+    "level": 6,
+    "label": "Reserve Callout",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-trip-trade",
+    "type": "agent",
+    "level": 6,
+    "label": "Trip Trade",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-fatigue-risk-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Fatigue Risk Management",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-crew-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pos-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "POS Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-automated-replenishment-center-store",
+      "capability-clienteling-personal-styling",
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-kitchen-production-management-kds",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 8 capabilities."
+  },
+  {
+    "id": "agent-utility-inventory-accuracy",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Accuracy",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-social-listening",
+    "type": "agent",
+    "level": 6,
+    "label": "Social Listening",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-plm-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PLM Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-store-clustering",
+    "type": "agent",
+    "level": 6,
+    "label": "Store Clustering",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-size-curve-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Size Curve Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-markdown-simulator",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Simulator",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-assortment-performance",
+    "type": "agent",
+    "level": 6,
+    "label": "Assortment Performance",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-planogram-software-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Planogram Software Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-camera-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pos-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "POS Attribution",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-wifi-beacon",
+    "type": "agent",
+    "level": 6,
+    "label": "WiFi/Beacon",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-space-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Space Planning",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "optimization"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-ar-vr-rendering",
+    "type": "agent",
+    "level": 6,
+    "label": "AR/VR Rendering",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-lighting-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Lighting Optimization",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "optimization"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-signage-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Signage Generation",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-merchandising-benchmark",
+    "type": "agent",
+    "level": 6,
+    "label": "Merchandising Benchmark",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-remodel-roi",
+    "type": "agent",
+    "level": 6,
+    "label": "Remodel ROI",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-crm-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "CRM Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-ecommerce-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Ecommerce Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-clienteling-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Clienteling Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-sms-email",
+    "type": "agent",
+    "level": 6,
+    "label": "SMS/Email",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Calendar",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-virtual-try-on",
+    "type": "agent",
+    "level": 6,
+    "label": "Virtual Try-On",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-inventory-locator",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Locator",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-performance-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Performance Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-oms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "OMS Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-inventory-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds",
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-shipping-carrier",
+    "type": "agent",
+    "level": 6,
+    "label": "Shipping Carrier",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-store-labor",
+    "type": "agent",
+    "level": 6,
+    "label": "Store Labor",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-rfid",
+    "type": "agent",
+    "level": 6,
+    "label": "RFID",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-customer-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Customer Notification",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-geolocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Geolocation",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-packaging",
+    "type": "agent",
+    "level": 6,
+    "label": "Packaging",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-inventory-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Tracking",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-markdown-label",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Label",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-donation-coordination",
+    "type": "agent",
+    "level": 6,
+    "label": "Donation Coordination",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-recall-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Recall Management",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-vendor-portal",
+    "type": "agent",
+    "level": 6,
+    "label": "Vendor Portal",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-quality-inspection",
+    "type": "agent",
+    "level": 6,
+    "label": "Quality Inspection",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-fresh-performance-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Fresh Performance Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-inventory-sync",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Sync",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-promotion-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Calendar",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-supplier-edi",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier EDI",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-planogram",
+    "type": "agent",
+    "level": 6,
+    "label": "Planogram",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-warehouse-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Warehouse Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pack-size",
+    "type": "agent",
+    "level": 6,
+    "label": "Pack Size",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-order-approval-workflow",
+    "type": "agent",
+    "level": 6,
+    "label": "Order Approval Workflow",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-inventory-transfer",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Transfer",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-replenishment-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Replenishment Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-surescripts",
+    "type": "agent",
+    "level": 6,
+    "label": "Surescripts",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-insurance-clearinghouse",
+    "type": "agent",
+    "level": 6,
+    "label": "Insurance Clearinghouse",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-wholesaler-edi",
+    "type": "agent",
+    "level": 6,
+    "label": "Wholesaler EDI",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-robotic-dispenser",
+    "type": "agent",
+    "level": 6,
+    "label": "Robotic Dispenser",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-patient-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Patient App",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-drug-database",
+    "type": "agent",
+    "level": 6,
+    "label": "Drug Database",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-dea-reporting",
+    "type": "agent",
+    "level": 6,
+    "label": "DEA Reporting",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pharmacy-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Pharmacy Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-competitive-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitive Data",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-promotion-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Planning",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "optimization"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-esl-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "ESL Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-loyalty-crm",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty/CRM",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-elasticity-modeling",
+    "type": "agent",
+    "level": 6,
+    "label": "Elasticity Modeling",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-margin-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Margin Monitoring",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-price-change-approval",
+    "type": "agent",
+    "level": 6,
+    "label": "Price Change Approval",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-label-printing",
+    "type": "agent",
+    "level": 6,
+    "label": "Label Printing",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-pricing-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Pricing Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-alexa-skills-kit-google-actions-voice-platform-product-catalog-api-payment-api",
+    "type": "agent",
+    "level": 6,
+    "label": "Alexa Skills Kit, Google Actions, Voice Platform, Product Catalog API, Payment API",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-dialogflow-rasa-llm-api-crm-order-management-knowledge-base",
+    "type": "agent",
+    "level": 6,
+    "label": "Dialogflow/Rasa, LLM API, CRM, Order Management, Knowledge Base",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-conversational-ai-visual-search-api-recommendation-engine-product-catalog",
+    "type": "agent",
+    "level": 6,
+    "label": "Conversational AI, Visual Search API, Recommendation Engine, Product Catalog",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-customer-data-platform-message-router-campaign-automation-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Customer Data Platform, Message Router, Campaign Automation, Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "memory": "semantic"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-vector-database-llm-knowledge-base-cms-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Vector Database, LLM, Knowledge Base CMS, Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-kds-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "KDS Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 2 capabilities."
+  },
+  {
+    "id": "agent-utility-payment-terminal",
+    "type": "agent",
+    "level": 6,
+    "label": "Payment Terminal",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-camera-sensor",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera/Sensor",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-menu-board-display",
+    "type": "agent",
+    "level": 6,
+    "label": "Menu Board Display",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-weather-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Weather Integration",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-voice-synthesis",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Synthesis",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-audio-clarity",
+    "type": "agent",
+    "level": 6,
+    "label": "Audio Clarity",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-drive-thru-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Drive-Thru Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-recipe-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Recipe Management",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-temperature-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Temperature Monitoring",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-timer",
+    "type": "agent",
+    "level": 6,
+    "label": "Timer",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-audio-alert",
+    "type": "agent",
+    "level": 6,
+    "label": "Audio Alert",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-kitchen-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Kitchen Analytics Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-time-clock",
+    "type": "agent",
+    "level": 6,
+    "label": "Time Clock",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-event-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Event Calendar",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-labor-law-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Law Compliance",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Notification",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-shift-marketplace",
+    "type": "agent",
+    "level": 6,
+    "label": "Shift Marketplace",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-labor-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Dashboard",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-clickstream-analytics-session-replay-funnel-analysis-visualization-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Clickstream Analytics, Session Replay, Funnel Analysis, Visualization Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-customer-data-platform-session-management-channel-apis-message-router",
+    "type": "agent",
+    "level": 6,
+    "label": "Customer Data Platform, Session Management, Channel APIs, Message Router",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "memory": "semantic"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-optimizely-vwo-statistical-engine-feature-flag-platform-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Optimizely/VWO, Statistical Engine, Feature Flag Platform, Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-survey-platform-review-apis-social-listening-support-ticket-system-nlp-engine",
+    "type": "agent",
+    "level": 6,
+    "label": "Survey Platform, Review APIs, Social Listening, Support Ticket System, NLP Engine",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-ml-model-platform-customer-data-platform-marketing-automation-channel-apis",
+    "type": "agent",
+    "level": 6,
+    "label": "ML Model Platform, Customer Data Platform, Marketing Automation, Channel APIs",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "memory": "semantic"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-predictive-model-platform-customer-data-platform-campaign-automation-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Model Platform, Customer Data Platform, Campaign Automation, Analytics",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "memory": "semantic"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-datarobot-h2o-mlflow-model-serving-monitoring-platform",
+    "type": "agent",
+    "level": 6,
+    "label": "DataRobot/H2O, MLflow, Model Serving, Monitoring Platform",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-attribution-platform-experimentation-framework-bi-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Attribution Platform, Experimentation Framework, BI Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-statistical-modeling-platform-data-warehouse-scenario-tool-visualization",
+    "type": "agent",
+    "level": 6,
+    "label": "Statistical Modeling Platform, Data Warehouse, Scenario Tool, Visualization",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-ml-platform-customer-data-platform-campaign-automation-crm",
+    "type": "agent",
+    "level": 6,
+    "label": "ML Platform, Customer Data Platform, Campaign Automation, CRM",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "memory": "semantic"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-forecasting-platform-external-data-apis-ml-models-collaboration-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Forecasting Platform, External Data APIs, ML Models, Collaboration Tool",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using",
+      "modelType": "simulation"
+    },
+    "description": "Provides utility for 1 capability."
+  },
+  {
+    "id": "agent-utility-bi-platform-streaming-analytics-anomaly-detection-alert-router",
+    "type": "agent",
+    "level": 6,
+    "label": "BI Platform, Streaming Analytics, Anomaly Detection, Alert Router",
+    "role": "utility",
+    "icon": "wrench",
+    "color": "#6B7280",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "tool-using"
+    },
+    "description": "Provides utility for 1 capability."
+  }
+]

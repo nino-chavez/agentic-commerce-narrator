@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-seat-selection-upsell",
+    "type": "function",
+    "level": 4,
+    "label": "Seat Selection & Upsell",
+    "description": "Dynamic seat pricing with personalized recommendations delivering 30-50% ancillary revenue increase through intelligent premium seat merchandising and willingness-to-pay optimization.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Airline charges static fees for seat selection: $15 aisle, $25 extra legroom, $50 exit row. 2. Same price for all customers regardless of route, demand, or customer value. 3. Generic seat map shown at checkout with no personalization. 4. Customer must click each seat to see price - tedious discovery. 5. 15-25% seat fee attachment rate due to poor merchandising.",
+      "constraints": [
+        "Static pricing leaves money on table (high demand routes underpriced)",
+        "No personalization - business traveler sees same options as leisure",
+        "Poor UX - customer must click 30+ seats to compare prices",
+        "15-25% attach rate due to generic merchandising",
+        "High-value customers not offered premium options proactively",
+        "No willingness-to-pay optimization"
+      ],
+      "metrics": ["Seat fee attach: 15-25%", "Revenue per passenger: $8-12", "Pricing: Static"]
+    },
+    "agentic": {
+      "workflow": "1. Dynamic Seat Pricing Agent adjusts prices by demand: exit row $50 on leisure route, $80 on business route with high load factor. 2. Personalization Engine recommends seats based on profile: tall customer gets extra legroom offer, family gets seats together, business traveler sees premium economy upgrade. 3. Visual Merchandising highlights best-value options: 'Recommended: Extra legroom for $35 (most popular for 6+ hour flights)'. 4. Willingness-to-Pay Model tests price sensitivity: show $60 to high-value customer, $40 to price-sensitive. 5. Upsell Path Agent suggests seat upgrade after bag fee purchase: 'Add extra legroom for only $20 more'.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Dynamic Seat Pricing Agent", "Personalization Engine", "Willingness-to-Pay Model", "Upsell Path Agent"],
+        "utilityAgents": ["Seat Inventory System", "Customer Profile", "Pricing Engine", "Visual Merchandising"]
+      },
+      "dataSources": [
+        "Seat inventory and availability by cabin",
+        "Historical seat purchase patterns by route",
+        "Customer profile (height, family size, tier status)",
+        "Flight characteristics (duration, time, route)",
+        "Load factor and demand signals",
+        "Competitor seat pricing",
+        "Customer price sensitivity and past purchases",
+        "A/B test results for pricing and presentation"
+      ],
+      "benefits": [
+        "30-50% ancillary revenue increase per passenger",
+        "45-65% seat fee attach vs 15-25% traditional",
+        "Dynamic pricing captures 20-30% more revenue on high-demand",
+        "Personalized recommendations drive conversion",
+        "Optimal seat-to-customer matching improves satisfaction",
+        "Upsell bundling increases average transaction 25-40%"
+      ],
+      "metrics": ["Seat fee attach: 45-65%", "Revenue per passenger: $18-28", "Pricing: Dynamic real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement route-based dynamic pricing for premium seats", "Add personalized seat recommendations at checkout"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Seat inventory management system", "Dynamic pricing engine", "Customer profile data", "A/B testing capability"]
+    },
+    "icon": "chair",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-baggage-fee-management",
+    "type": "function",
+    "level": 4,
+    "label": "Baggage Fee Management",
+    "description": "Predictive baggage needs with smart bundling increasing bag fee revenue 25-40% through pre-purchase incentives and usage prediction.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer books flight without purchasing baggage allowance. 2. Customer arrives at airport and pays bag fee at check-in ($35 for first bag). 3. Static pricing regardless of route, season, or customer. 4. Customer frustrated by unexpected fee and airport rush. 5. 40-50% of bag fees collected at airport (lower margin, worse experience).",
+      "constraints": [
+        "40-50% bag fees paid at airport (operational cost, customer friction)",
+        "Static pricing doesn't optimize revenue",
+        "No incentive for pre-purchase (same price at airport)",
+        "Customer surprised by fees at check-in (poor experience)",
+        "No predictive modeling of bag needs",
+        "Missed bundling opportunities (seat + bag discounts)"
+      ],
+      "metrics": ["Pre-purchase rate: 50-60%", "Revenue per passenger: $15-20", "Bundling: <10%"]
+    },
+    "agentic": {
+      "workflow": "1. Baggage Prediction Agent analyzes trip: 7-day vacation to Hawaii = 90% chance of checked bag, 2-day business trip = 10% chance. 2. Pre-Purchase Incentive Agent offers discount: 'Add checked bag now for $25 (save $10 vs $35 at airport)'. 3. Bundling Engine creates packages: 'Seat + Bag Bundle: Extra legroom + checked bag for $50 (save $15)'. 4. Dynamic Pricing adjusts bag fees by route demand and seasonality. 5. Reminder Agent sends pre-flight notifications: 'Flying tomorrow - add bag for $28 (airport price $35)' with one-tap purchase.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Baggage Prediction Agent", "Pre-Purchase Incentive Agent", "Bundling Engine"],
+        "utilityAgents": ["Customer Profile", "Trip Analysis", "Pricing Engine", "Notification Service"]
+      },
+      "dataSources": [
+        "Trip characteristics (duration, destination, purpose)",
+        "Customer baggage history and patterns",
+        "Route baggage statistics (leisure vs business)",
+        "Seasonal and holiday travel patterns",
+        "Pre-purchase conversion rates by offer",
+        "Dynamic pricing models and demand",
+        "Bundle performance data",
+        "Competitive baggage pricing"
+      ],
+      "benefits": [
+        "25-40% baggage revenue increase per passenger",
+        "80-90% pre-purchase rate vs 50-60% traditional",
+        "Pre-purchase saves operational costs (faster check-in)",
+        "Bundling increases average transaction 20-30%",
+        "Better customer experience (no airport surprises)",
+        "Dynamic pricing optimizes revenue by route/season"
+      ],
+      "metrics": ["Pre-purchase rate: 80-90%", "Revenue per passenger: $22-32", "Bundling: 30-40%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Offer $5-10 pre-purchase discount vs airport price", "Create seat+bag bundles at checkout"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Baggage purchase API integration", "Customer trip analysis", "Bundle pricing engine", "Pre-flight notification capability"]
+    },
+    "icon": "briefcase",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-in-flight-services-upgrades",
+    "type": "function",
+    "level": 4,
+    "label": "In-Flight Services & Upgrades",
+    "description": "Personalized in-flight merchandising with pre-order and real-time offers delivering 40-70% increase in onboard revenue through targeted food, beverage, and WiFi sales.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Flight attendant pushes cart down aisle offering snacks and drinks. 2. Limited inventory often runs out by rear of aircraft. 3. Passengers unaware of menu options before boarding. 4. Cash/credit card transactions slow down service. 5. 15-25% of passengers purchase something, avg transaction $8-12.",
+      "constraints": [
+        "Cart service slow and disruptive (interrupts work, sleep)",
+        "Inventory stockouts frustrate customers in rear cabin",
+        "No pre-order or personalization",
+        "Payment friction (credit card readers, cash handling)",
+        "15-25% attach rate due to passive merchandising",
+        "No upsell or cross-sell recommendations"
+      ],
+      "metrics": ["Attach rate: 15-25%", "Transaction value: $8-12", "Pre-order: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Pre-Order Agent sends notification 24 hours before flight: 'Pre-order lunch and WiFi for your 6pm flight - save 15% and skip the cart'. 2. Personalization Engine recommends items: vegan meal for vegetarian customer, coffee for morning flight, cocktail for evening leisure flight. 3. In-Flight Upsell Agent sends targeted offers via seatback screen: 'Upgrade to premium WiFi for $5 more (streaming video)'. 4. Digital Payment enables one-tap purchases via app (linked to booking payment). 5. Inventory Optimization ensures popular items stocked based on passenger profiles.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Pre-Order Agent", "Personalization Engine", "In-Flight Upsell Agent", "Inventory Optimization"],
+        "utilityAgents": ["Customer Profile", "Onboard Payment System", "Seatback Entertainment", "Catering System"]
+      },
+      "dataSources": [
+        "Customer dietary preferences and past purchases",
+        "Flight timing and duration (breakfast vs dinner service)",
+        "WiFi usage patterns and device types",
+        "Seat location and cabin class",
+        "Pre-order conversion rates by item",
+        "Inventory levels and stockout history",
+        "Real-time sales during flight",
+        "Menu pricing and promotion effectiveness"
+      ],
+      "benefits": [
+        "40-70% onboard revenue increase through personalization and pre-order",
+        "45-60% attach rate vs 15-25% traditional",
+        "Average transaction $18-25 vs $8-12",
+        "Pre-order reduces crew workload and speeds service",
+        "Inventory optimization eliminates stockouts",
+        "Digital payment speeds transactions 50-70%"
+      ],
+      "metrics": ["Attach rate: 45-60%", "Transaction value: $18-25", "Pre-order: 30-40%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch pre-order for food and WiFi with 15% discount", "Enable app-based ordering during flight"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Mobile app or web pre-order capability", "Digital payment integration", "Seatback or app-based ordering", "Catering system integration"]
+    },
+    "icon": "shopping-cart",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-travel-insurance-protection",
+    "type": "function",
+    "level": 4,
+    "label": "Travel Insurance & Protection",
+    "description": "Risk-based insurance recommendations with dynamic pricing increasing insurance attachment 35-60% through contextual offers and AI-driven risk assessment.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Generic insurance offer shown at checkout: '$49 trip protection for cancellations and medical'. 2. Same price and coverage for all trips regardless of risk or value. 3. Buried in checkout flow - easy to skip. 4. No risk assessment or personalized recommendation. 5. 8-12% attachment rate with minimal customer understanding of value.",
+      "constraints": [
+        "Generic offer lacks relevance (same for $200 vs $5000 trip)",
+        "Static pricing doesn't reflect risk (hurricane season, COVID)",
+        "8-12% attach rate due to poor merchandising",
+        "Customers don't understand coverage (skip by default)",
+        "No personalization by risk factors (age, destination, health)",
+        "Missed high-value opportunities (expensive trips, high-risk destinations)"
+      ],
+      "metrics": ["Insurance attach: 8-12%", "Revenue per booking: $5-7", "Personalization: None"]
+    },
+    "agentic": {
+      "workflow": "1. Risk Assessment Agent analyzes trip: $8000 safari to Kenya booked 6 months out = high cancellation risk, medical coverage critical. 2. Dynamic Pricing adjusts insurance premium based on risk factors: trip cost, destination health risk, customer age, booking lead time. 3. Personalized Recommendation highlights relevant coverage: 'Kenya requires yellow fever vaccination - medical coverage protects you up to $100K'. 4. Contextual Messaging emphasizes value: 'Protect your $8000 investment for just $185 (2.3% of trip cost)'. 5. Tiered Options present basic/standard/premium coverage for customer choice.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Risk Assessment Agent", "Dynamic Pricing", "Personalized Recommendation"],
+        "utilityAgents": ["Insurance Provider API", "Destination Risk Database", "Customer Profile", "Pricing Engine"]
+      },
+      "dataSources": [
+        "Trip value and booking details",
+        "Destination risk factors (health, weather, political)",
+        "Customer age and health profile",
+        "Booking lead time and cancellation likelihood",
+        "Historical claim data by route and season",
+        "Travel advisory levels",
+        "Seasonal risk patterns (hurricane, flu season)",
+        "Insurance conversion rates by offer type"
+      ],
+      "benefits": [
+        "35-60% increase in insurance attachment rate",
+        "20-25% attach rate vs 8-12% traditional",
+        "Dynamic pricing optimizes revenue and coverage",
+        "Risk-based recommendations increase perceived value",
+        "Higher margin on personalized vs generic policies",
+        "Better customer protection and satisfaction"
+      ],
+      "metrics": ["Insurance attach: 20-25%", "Revenue per booking: $15-22", "Personalization: Risk-based"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement trip value-based insurance pricing (2-3% of cost)", "Add destination risk messaging for high-risk locations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Insurance provider API integration", "Risk assessment models", "Dynamic pricing capability", "Destination risk database"]
+    },
+    "icon": "shield",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-destination-activities-experiences",
+    "type": "function",
+    "level": 4,
+    "label": "Destination Activities & Experiences",
+    "description": "AI-curated tour and activity recommendations with seamless booking integration delivering 15-25% ancillary revenue increase through personalized destination merchandising.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Travel booking site shows generic 'Things to do in Paris' page with top 10 tourist attractions. 2. Customer clicks through to third-party tour operator to book Eiffel Tower tickets. 3. Booking happens on external site - airline/hotel loses commission and customer relationship. 4. No personalization (family with kids sees same options as couple). 5. 5-8% of customers book activities, minimal revenue capture.",
+      "constraints": [
+        "Generic recommendations not personalized to interests",
+        "5-8% activity booking rate due to poor relevance",
+        "Leakage to third-party sites (lost commission revenue)",
+        "Activities not integrated with flight/hotel itinerary",
+        "No timing optimization (booked activity conflicts with flight)",
+        "Limited inventory (only major tourist attractions)"
+      ],
+      "metrics": ["Activity booking: 5-8%", "Revenue per trip: $3-6", "Personalization: Generic top-10"]
+    },
+    "agentic": {
+      "workflow": "1. Activity Recommendation Agent analyzes customer: family with kids gets 'Paris Kid-Friendly: Disneyland, Science Museum, Luxembourg Gardens', couple gets 'Romantic Paris: Seine dinner cruise, Louvre after-hours, cooking class'. 2. Itinerary Integration ensures activities align with flight times and hotel location. 3. Inventory Agent accesses 200+ activities via Viator, GetYourGuide APIs with real-time availability. 4. Dynamic Bundling offers packages: 'Book 3 activities and save 15%'. 5. One-Click Booking enables seamless purchase with confirmation added to trip itinerary.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Activity Recommendation Agent", "Itinerary Integration", "Inventory Agent", "Dynamic Bundling"],
+        "utilityAgents": ["Activity APIs (Viator, GetYourGuide)", "Customer Profile", "Itinerary System", "Payment Gateway"]
+      },
+      "dataSources": [
+        "Customer interests and travel preferences",
+        "Past activity bookings and reviews",
+        "Destination activity inventory (tours, tickets, experiences)",
+        "Real-time availability and pricing",
+        "Itinerary constraints (flight times, hotel location)",
+        "Weather forecasts (outdoor activities)",
+        "User-generated reviews and ratings",
+        "Seasonal events and festivals"
+      ],
+      "benefits": [
+        "15-25% ancillary revenue increase from activity bookings",
+        "18-28% booking rate vs 5-8% traditional",
+        "Personalized recommendations drive relevance",
+        "Seamless booking keeps customer in ecosystem (higher commission)",
+        "Itinerary integration prevents conflicts",
+        "Bundling increases average transaction 30-50%"
+      ],
+      "metrics": ["Activity booking: 18-28%", "Revenue per trip: $12-22", "Personalization: AI-curated 1:1"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate Viator API for top 20 destinations", "Add personalized activity recommendations on confirmation page"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Activity marketplace API integration", "Customer preference data", "Itinerary management system", "Seamless booking flow"]
+    },
+    "icon": "ticket",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-car-rental-ground-transportation",
+    "type": "function",
+    "level": 4,
+    "label": "Car Rental & Ground Transportation",
+    "description": "Integrated ground transport booking with intelligent modal recommendations delivering 20-35% attachment increase through contextual offers and multi-modal optimization.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer books flight, then separately visits Hertz.com to rent car. 2. Generic car rental offer shown: 'Rent a car from $39/day'. 3. Customer unaware of alternatives (Uber, public transit, hotel shuttle). 4. No bundling discount with flight booking. 5. 12-18% of customers book car rental, often paying higher rates than bundled offers.",
+      "constraints": [
+        "Separate booking on car rental site (no bundling discount)",
+        "Generic offer not personalized to trip (business vs leisure)",
+        "12-18% attach rate due to poor integration",
+        "No multi-modal comparison (car vs Uber vs transit)",
+        "Customer may not need car for entire trip (waste)",
+        "Missed commission revenue from external bookings"
+      ],
+      "metrics": ["Car rental attach: 12-18%", "Revenue per trip: $5-9", "Modal options: Car only"]
+    },
+    "agentic": {
+      "workflow": "1. Modal Recommendation Agent analyzes trip: Vegas strip hotel with nearby convention center = 'Public transit + Uber recommended, save $200 vs rental'. Beach resort in Maui = 'Car rental essential for exploring island'. 2. Bundling Engine offers integrated discount: 'Add car rental now for $35/day (save 15% vs booking separately)'. 3. Multi-Modal Agent presents alternatives with cost comparison: car $45/day, Uber estimate $60/day, hotel shuttle free. 4. Duration Optimizer suggests partial rental: 'Rent for days 3-7 only (sightseeing days), use hotel shuttle days 1-2'. 5. One-Click Booking adds rental to trip itinerary with pickup/return aligned to flight times.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Modal Recommendation Agent", "Bundling Engine", "Multi-Modal Agent", "Duration Optimizer"],
+        "utilityAgents": ["Car Rental APIs", "Rideshare APIs", "Transit Data", "Hotel Shuttle Info"]
+      },
+      "dataSources": [
+        "Trip destination and hotel location",
+        "Destination characteristics (urban vs resort)",
+        "Car rental inventory and pricing",
+        "Rideshare cost estimates (Uber, Lyft)",
+        "Public transit options and costs",
+        "Hotel shuttle and transfer services",
+        "Customer rental history and preferences",
+        "Bundling discount rules and margins"
+      ],
+      "benefits": [
+        "20-35% increase in ground transport attachment",
+        "25-35% attach rate vs 12-18% traditional",
+        "Multi-modal recommendations improve customer choice",
+        "Bundling discounts increase conversion 30-50%",
+        "Partial rentals optimize cost for customer",
+        "Integrated booking captures commission revenue"
+      ],
+      "metrics": ["Car rental attach: 25-35%", "Revenue per trip: $12-18", "Modal options: Car, rideshare, transit"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate car rental with 10-15% bundle discount", "Add rideshare cost estimates for comparison"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Car rental API integrations", "Rideshare cost estimation", "Transit and shuttle data", "Bundling pricing engine"]
+    },
+    "icon": "truck",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-ancillary-pricing",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Ancillary Pricing",
+    "description": "Real-time price optimization across all ancillaries with demand-based adjustments delivering 25-45% revenue increase through sophisticated yield management.",
+    "parentCapability": "capability-travel-ancillary-revenue",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Airline sets static ancillary prices annually: seat selection $25, bag fee $35, WiFi $12. 2. Same prices regardless of route, season, demand, or customer. 3. High-demand routes leave revenue on table (would pay $40 for premium seat). 4. Low-demand routes have poor attach (price too high for price-sensitive customers). 5. Quarterly pricing reviews with manual adjustments.",
+      "constraints": [
+        "Static pricing misses 20-40% revenue opportunity",
+        "Same price for Hawaii vacation (high willingness-to-pay) vs short regional flight",
+        "No real-time response to demand or competitive changes",
+        "Quarterly reviews mean stale pricing 11 months per year",
+        "Can't test price sensitivity (no A/B testing)",
+        "Leaves money on table in peak demand, loses sales in low demand"
+      ],
+      "metrics": ["Revenue optimization: 0%", "Price updates: Quarterly", "Testing: None"]
+    },
+    "agentic": {
+      "workflow": "1. Dynamic Pricing Engine adjusts ancillary prices real-time based on: route, day of week, season, load factor, days to departure, customer segment. 2. Demand Signal Agent monitors booking velocity and inventory levels to optimize pricing. 3. Willingness-to-Pay Model sets customer-specific prices: business traveler sees WiFi $18, leisure customer sees $10. 4. Competitive Monitoring tracks rival pricing and adjusts to maintain competitiveness. 5. A/B Testing Engine continuously experiments with pricing to find optimal price points by segment.",
+      "agents": {
+        "orchestrator": "Travel Ancillary Orchestration Agent",
+        "superAgents": ["Dynamic Pricing Engine", "Demand Signal Agent", "Willingness-to-Pay Model", "Competitive Monitoring", "A/B Testing Engine"],
+        "utilityAgents": ["Pricing Optimization Platform", "ML Models", "Competitive Intelligence", "Revenue Management System"]
+      },
+      "dataSources": [
+        "Real-time booking and load factor data",
+        "Historical ancillary purchase patterns by route",
+        "Customer segment and value tier",
+        "Competitor ancillary pricing",
+        "Route characteristics (length, business vs leisure)",
+        "Seasonal and holiday demand patterns",
+        "Days to departure and urgency signals",
+        "A/B test results and price elasticity models"
+      ],
+      "benefits": [
+        "25-45% ancillary revenue increase through optimization",
+        "Real-time pricing vs quarterly static updates",
+        "Personalized pricing by customer segment",
+        "Capture high willingness-to-pay in premium scenarios",
+        "Stimulate demand with lower prices in off-peak",
+        "Continuous improvement through A/B testing"
+      ],
+      "metrics": ["Revenue optimization: 25-45%", "Price updates: Real-time", "Testing: Continuous A/B"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement route-based seat pricing (leisure vs business routes)", "Add days-to-departure urgency pricing"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Revenue management system", "Dynamic pricing platform", "ML models for optimization", "A/B testing infrastructure", "Real-time data pipeline"]
+    },
+    "icon": "trending-up",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

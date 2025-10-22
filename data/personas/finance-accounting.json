@@ -1,0 +1,258 @@
+[
+  {
+    "id": "persona-cfo",
+    "type": "persona",
+    "level": 5,
+    "roleType": "finance",
+    "title": "Chief Financial Officer (CFO)",
+    "label": "Chief Financial Officer (CFO)",
+    "description": "Leads financial strategy, reporting, and operations for the enterprise, responsible for financial planning, risk management, and shareholder value creation.",
+    "responsibilities": [
+      "Set financial strategy and capital allocation",
+      "Oversee financial planning, budgeting, and forecasting",
+      "Ensure accurate and timely financial reporting",
+      "Manage treasury, tax, and risk functions",
+      "Support M&A and strategic initiatives",
+      "Report to board and investors"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Review monthly close results 7-15 days after month-end",
+      "Quarterly board presentations with manual preparation (10-20 hours)",
+      "Annual budget process takes 3-6 months of team time",
+      "Cash position reviewed daily via email from treasury",
+      "React to audit findings and compliance issues"
+    ],
+    "agenticWorkflow": [
+      "Real-time financial dashboards show position at any moment",
+      "Board packages auto-generated in 2-4 hours",
+      "Rolling forecasts updated monthly with predictive insights",
+      "Treasury dashboard shows global cash position and optimization opportunities",
+      "Proactive alerts for compliance risks and audit readiness"
+    ],
+    "painPointsAddressed": [
+      "Real-time financial visibility vs 7-15 day delays",
+      "85% faster close frees team for strategic work",
+      "Board package prep time reduced 80%",
+      "Predictive insights enable proactive decision-making"
+    ],
+    "kpis": [
+      "Days to Close",
+      "Forecast Accuracy",
+      "Cash Flow from Operations",
+      "EBITDA Margin",
+      "Return on Invested Capital (ROIC)",
+      "Audit Findings",
+      "Compliance Score"
+    ],
+    "icon": "briefcase",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-controller",
+    "type": "persona",
+    "level": 5,
+    "roleType": "finance",
+    "title": "Controller",
+    "label": "Controller",
+    "description": "Manages accounting operations including GL, AP/AR, close process, and financial reporting, ensuring accuracy and compliance.",
+    "responsibilities": [
+      "Oversee month-end and year-end close process",
+      "Manage GL, AP, AR, and close teams",
+      "Ensure GAAP/IFRS compliance",
+      "Coordinate external audits",
+      "Implement and maintain internal controls",
+      "Provide financial reports to CFO and leadership"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manage 7-15 day close with team working overtime",
+      "Manually review journal entries and reconciliations",
+      "Spend 20-40% of time on close coordination",
+      "React to reconciliation errors discovered at month-end",
+      "Prepare for annual audit with manual documentation gathering"
+    ],
+    "agenticWorkflow": [
+      "Monitor continuous close with 1-2 day cycle",
+      "Review exceptions only (automated posting and reconciliation)",
+      "Shift time to analysis and process improvement (60-70% vs 30-50%)",
+      "Real-time anomaly alerts enable same-day resolution",
+      "Audit documentation auto-maintained with complete trail"
+    ],
+    "painPointsAddressed": [
+      "Close time reduced to 1-2 days from 7-15",
+      "Team overtime eliminated (continuous close)",
+      "90% reduction in reconciliation errors",
+      "80% faster audit preparation"
+    ],
+    "kpis": [
+      "Days to Close",
+      "Close Team Overtime Hours",
+      "Reconciliation Error Rate",
+      "Financial Statement Accuracy (First Pass)",
+      "Audit Findings",
+      "Journal Entry Automation Rate"
+    ],
+    "icon": "clipboard-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-fpa-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "finance",
+    "title": "FP&A Manager",
+    "label": "FP&A Manager",
+    "description": "Leads financial planning and analysis, developing budgets, forecasts, and business insights to support strategic decision-making.",
+    "responsibilities": [
+      "Lead annual budgeting and quarterly forecasting",
+      "Provide variance analysis and business insights",
+      "Support strategic planning and scenario modeling",
+      "Manage FP&A team and department budgets",
+      "Partner with business units on financial planning",
+      "Develop KPI dashboards and executive reports"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Spend 3-6 months on annual budget cycle",
+      "Manually consolidate department budgets in Excel",
+      "Create quarterly forecasts via spreadsheet extrapolation",
+      "Spend 50-70% of time on data wrangling vs analysis",
+      "Build management reports manually in PowerPoint"
+    ],
+    "agenticWorkflow": [
+      "Complete budget cycle in 2-4 weeks with collaborative platform",
+      "Auto-consolidation with real-time validation",
+      "Continuous rolling forecasts with driver-based models",
+      "Spend 60-70% of time on strategic analysis",
+      "Self-service dashboards reduce manual report requests"
+    ],
+    "painPointsAddressed": [
+      "Budget cycle time reduced 85% (2-4 weeks vs 3-6 months)",
+      "Forecast accuracy improved to 85-95%",
+      "Instant scenario modeling vs weeks of spreadsheet work",
+      "Time shifted to value-add analysis"
+    ],
+    "kpis": [
+      "Budget Cycle Time",
+      "Forecast Accuracy",
+      "Scenarios Modeled per Year",
+      "FP&A Time on Analysis vs Data",
+      "Budget Variance",
+      "Self-Service Adoption Rate"
+    ],
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-treasury-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "finance",
+    "title": "Treasury Manager",
+    "label": "Treasury Manager",
+    "description": "Manages cash, investments, debt, and financial risk, ensuring liquidity and optimizing the enterprise's financial position.",
+    "responsibilities": [
+      "Monitor daily cash position across all bank accounts",
+      "Forecast cash flow and manage liquidity",
+      "Invest idle cash and manage debt",
+      "Execute FX hedging and manage currency risk",
+      "Coordinate with banks and manage banking relationships",
+      "Optimize payment timing and bank fees"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Download bank statements daily and update spreadsheet",
+      "Manually forecast cash flows weekly",
+      "Make investment decisions reactively",
+      "Approve wire transfers via email",
+      "Review bank fees quarterly in spreadsheets"
+    ],
+    "agenticWorkflow": [
+      "Real-time cash position dashboard across global accounts",
+      "AI predicts cash flows with 90-95% accuracy",
+      "Auto-investment of idle cash in approved instruments",
+      "Automated payment optimization maximizes cash retention",
+      "Continuous bank fee monitoring with negotiation recommendations"
+    ],
+    "painPointsAddressed": [
+      "Real-time cash visibility vs 1-day lag",
+      "Idle cash reduced to <5% (vs 10-20%)",
+      "Interest income increased 50-100%",
+      "Bank fees reduced 30-50%"
+    ],
+    "kpis": [
+      "Cash Forecast Accuracy",
+      "Idle Cash %",
+      "Interest Income",
+      "Bank Fees as % of Cash Managed",
+      "FX Losses",
+      "Fraud Losses"
+    ],
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-tax-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "finance",
+    "title": "Tax Director",
+    "label": "Tax Director",
+    "description": "Oversees tax strategy, compliance, and planning across income tax, sales tax, and international tax matters.",
+    "responsibilities": [
+      "Develop tax strategy and planning",
+      "Ensure compliance with tax regulations (federal, state, international)",
+      "Manage tax provision and return preparation",
+      "Coordinate with external tax advisors and auditors",
+      "Identify and implement tax savings opportunities",
+      "Manage tax audits and controversies"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Calculate tax provision manually in Excel",
+      "Outsource return preparation to external firms ($10K-$100K+ per entity)",
+      "React to tax audits with manual document gathering (10-20 days)",
+      "Identify tax credits opportunistically (50-70% capture rate)",
+      "Track sales tax compliance manually across 50 states"
+    ],
+    "agenticWorkflow": [
+      "Automated ASC 740 tax provision with 95-99% accuracy",
+      "Draft tax returns auto-generated from ERP data (70% time savings)",
+      "Audit responses in 2-5 days with complete automated trail",
+      "AI identifies 90%+ of available tax credits proactively",
+      "Sales tax compliance automated with real-time nexus tracking"
+    ],
+    "painPointsAddressed": [
+      "Tax provision accuracy improved to 95-99%",
+      "Return prep time reduced 70%",
+      "Audit response time reduced 70% (2-5 days vs 10-20)",
+      "Tax credits captured 90%+ vs 50-70%"
+    ],
+    "kpis": [
+      "Tax Provision Accuracy",
+      "Effective Tax Rate",
+      "Tax Credits Captured",
+      "Audit Response Time",
+      "Sales Tax Compliance Cost",
+      "Tax Planning Savings"
+    ],
+    "icon": "document-report",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

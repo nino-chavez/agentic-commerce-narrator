@@ -1,0 +1,222 @@
+[
+  {
+    "id": "domain-customer-experience",
+    "type": "domain",
+    "level": 2,
+    "label": "Customer Experience & Marketing",
+    "description": "Capabilities driving customer acquisition, engagement, personalization, and loyalty across digital and physical channels.",
+    "icon": "users",
+    "color": "#EC4899",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 8,
+    "keyMetrics": [
+      "Customer Lifetime Value (CLV)",
+      "Customer Acquisition Cost (CAC)",
+      "Net Promoter Score (NPS)",
+      "Engagement Rate",
+      "Personalization Lift"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-sales-commerce",
+    "type": "domain",
+    "level": 2,
+    "label": "Sales & Commerce",
+    "description": "Capabilities enabling omnichannel selling, quote-to-cash, pricing, promotions, and revenue optimization.",
+    "icon": "shopping-cart",
+    "color": "#F59E0B",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 9,
+    "keyMetrics": [
+      "Conversion Rate",
+      "Average Order Value (AOV)",
+      "Cart Abandonment Rate",
+      "Discount Margin Impact",
+      "Revenue Per User (RPU)"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-merchandising-product",
+    "type": "domain",
+    "level": 2,
+    "label": "Merchandising & Product",
+    "description": "Capabilities for product planning, assortment optimization, pricing strategy, and category management.",
+    "icon": "tag",
+    "color": "#8B5CF6",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 7,
+    "keyMetrics": [
+      "Gross Margin Return on Investment (GMROI)",
+      "Inventory Turnover",
+      "Sell-Through Rate",
+      "Markdown Rate",
+      "Forecast Accuracy"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-supply-chain",
+    "type": "domain",
+    "level": 2,
+    "label": "Supply Chain & Logistics",
+    "description": "Capabilities for demand forecasting, inventory optimization, fulfillment, and logistics network management.",
+    "icon": "truck",
+    "color": "#06B6D4",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 8,
+    "keyMetrics": [
+      "Perfect Order Rate",
+      "On-Time In-Full (OTIF)",
+      "Inventory Days of Supply",
+      "Fulfillment Cost per Order",
+      "Out-of-Stock Rate"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-payments-finance",
+    "type": "domain",
+    "level": 2,
+    "label": "Payments & Financial Operations",
+    "description": "Capabilities for payment processing, fraud prevention, financial planning, accounting, and revenue management.",
+    "icon": "credit-card",
+    "color": "#10B981",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 9,
+    "keyMetrics": [
+      "Payment Authorization Rate",
+      "Fraud Loss Rate",
+      "Days Sales Outstanding (DSO)",
+      "Cash Conversion Cycle",
+      "Revenue Leakage"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-data-analytics",
+    "type": "domain",
+    "level": 2,
+    "label": "Data & Analytics",
+    "description": "Capabilities for data platform engineering, advanced analytics, AI/ML operations, and insights delivery.",
+    "icon": "chart-bar",
+    "color": "#6366F1",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 6,
+    "keyMetrics": [
+      "Data Quality Score",
+      "Time to Insight",
+      "Model Accuracy",
+      "Analytics Adoption Rate",
+      "Data-Driven Decision Rate"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-technology-platform",
+    "type": "domain",
+    "level": 2,
+    "label": "Technology & Platform",
+    "description": "Capabilities for platform engineering, cloud infrastructure, integration, API management, and IT operations.",
+    "icon": "server",
+    "color": "#64748B",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 12,
+    "keyMetrics": [
+      "System Uptime",
+      "API Response Time",
+      "Deployment Frequency",
+      "Mean Time to Recovery (MTTR)",
+      "Infrastructure Cost per Transaction"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-human-capital",
+    "type": "domain",
+    "level": 2,
+    "label": "Human Capital",
+    "description": "Enterprise capabilities for talent acquisition, workforce management, learning & development, and performance management.",
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 9,
+    "keyMetrics": [
+      "Employee Turnover Rate",
+      "Time to Fill",
+      "Training Completion Rate",
+      "Employee Engagement Score",
+      "Labor Cost as % of Revenue"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-enterprise-support",
+    "type": "domain",
+    "level": 2,
+    "label": "Enterprise Support",
+    "description": "Enterprise capabilities for finance & accounting, legal & compliance, facilities management, and site operations.",
+    "icon": "building-office",
+    "color": "#F97316",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 13,
+    "keyMetrics": [
+      "Financial Close Cycle Time",
+      "Compliance Audit Pass Rate",
+      "Facility Maintenance Cost",
+      "Energy Cost per Sq Ft",
+      "Store Audit Score"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "domain-governance-risk",
+    "type": "domain",
+    "level": 2,
+    "label": "Governance, Risk & Compliance",
+    "description": "Cross-functional capabilities for risk management, regulatory compliance, cybersecurity, and ethical AI governance.",
+    "icon": "shield-check",
+    "color": "#DC2626",
+    "parentConcept": "concept-librarian",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "capabilityCount": 6,
+    "keyMetrics": [
+      "Risk Coverage Ratio",
+      "Incident Response Time",
+      "Regulatory Violation Count",
+      "Security Posture Score",
+      "AI Model Bias Metrics"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

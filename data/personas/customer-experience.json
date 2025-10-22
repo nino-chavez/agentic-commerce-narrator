@@ -1,0 +1,155 @@
+[
+  {
+    "id": "persona-digital-experience-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "customer-facing",
+    "label": "Digital Experience Manager",
+    "title": "Digital Experience Manager",
+    "description": "Owns the end-to-end digital customer experience across web, mobile, and app channels, responsible for conversion optimization, journey mapping, and experience testing.",
+    "responsibilities": [
+      "Define and optimize digital customer journeys",
+      "Lead A/B testing and personalization programs",
+      "Manage customer journey mapping and friction analysis",
+      "Coordinate cross-functional experience improvements",
+      "Track and improve conversion rates and engagement metrics",
+      "Oversee omnichannel experience consistency"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Quarterly journey mapping workshops with sticky notes",
+      "Manual A/B test setup taking 2-4 weeks",
+      "Monthly analysis of conversion funnel in spreadsheets",
+      "Email-based coordination with tech and marketing teams",
+      "Reactive fixes to customer complaints about UX"
+    ],
+    "agenticWorkflow": [
+      "Real-time journey maps auto-generated from behavioral data",
+      "AI-suggested test hypotheses launched in hours",
+      "Continuous monitoring with automated friction detection",
+      "Orchestrated experience improvements across channels",
+      "Proactive optimization based on predictive analytics"
+    ],
+    "painPointsAddressed": [
+      "Outdated journey maps disconnected from reality",
+      "Slow experimentation cycles limit learning velocity",
+      "Manual analysis delays time-to-insight",
+      "Cross-channel inconsistencies frustrate customers",
+      "Reactive approach misses optimization opportunities"
+    ],
+    "kpis": [
+      "Conversion Rate",
+      "Cart Abandonment Rate",
+      "Net Promoter Score (NPS)",
+      "Customer Effort Score",
+      "Time on Site / App Engagement"
+    ],
+    "icon": "cursor-click",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-marketing-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "customer-facing",
+    "label": "Marketing Operations Manager",
+    "title": "Marketing Operations Manager",
+    "description": "Manages marketing technology stack, campaign execution, performance measurement, and marketing analytics to drive efficient customer acquisition and engagement.",
+    "responsibilities": [
+      "Manage marketing automation and campaign platforms",
+      "Oversee marketing attribution and performance measurement",
+      "Optimize campaign workflows and processes",
+      "Track marketing KPIs and ROI across channels",
+      "Coordinate marketing technology integrations",
+      "Lead marketing analytics and reporting"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual campaign setup and execution",
+      "Last-click attribution analysis in spreadsheets",
+      "Monthly marketing performance reports",
+      "Email-based coordination across marketing teams",
+      "Reactive troubleshooting of campaign issues"
+    ],
+    "agenticWorkflow": [
+      "Automated campaign orchestration with AI optimization",
+      "Real-time multi-touch attribution dashboards",
+      "Intelligent budget allocation recommendations",
+      "Proactive campaign performance monitoring with alerts",
+      "Self-service marketing analytics for all stakeholders"
+    ],
+    "painPointsAddressed": [
+      "Manual campaign processes limit scale and speed",
+      "Last-click attribution undervalues upper-funnel efforts",
+      "Delayed reporting reduces agility",
+      "Siloed channel data prevents holistic optimization",
+      "Resource-intensive manual analysis"
+    ],
+    "kpis": [
+      "Customer Acquisition Cost (CAC)",
+      "Marketing ROI by Channel",
+      "Campaign Conversion Rate",
+      "Lead-to-Customer Rate",
+      "Marketing Qualified Leads (MQLs)"
+    ],
+    "icon": "chart-pie",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-customer-care-lead",
+    "type": "persona",
+    "level": 5,
+    "roleType": "customer-facing",
+    "label": "Customer Care Lead",
+    "title": "Customer Care Lead",
+    "description": "Manages customer service operations, chatbot performance, agent productivity, and customer satisfaction across all support channels.",
+    "responsibilities": [
+      "Oversee customer service operations and agent performance",
+      "Manage chatbot and conversational AI programs",
+      "Track customer satisfaction and resolution metrics",
+      "Optimize support workflows and knowledge base",
+      "Lead Voice of Customer (VoC) analysis",
+      "Coordinate escalation and issue resolution processes"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual ticket routing and assignment",
+      "Rule-based chatbot with frequent escalations",
+      "Quarterly VoC analysis and reporting",
+      "Spreadsheet-based agent performance tracking",
+      "Reactive issue resolution and escalation"
+    ],
+    "agenticWorkflow": [
+      "AI-powered ticket routing and prioritization",
+      "Conversational AI with 80%+ containment rate",
+      "Real-time VoC sentiment analysis and insights",
+      "Automated agent coaching based on interaction quality",
+      "Proactive issue detection and resolution"
+    ],
+    "painPointsAddressed": [
+      "Manual processes can't scale with volume",
+      "Rule-based chatbots frustrate customers",
+      "Delayed VoC insights miss opportunities",
+      "Inconsistent agent performance across team",
+      "Reactive approach increases customer effort"
+    ],
+    "kpis": [
+      "Customer Satisfaction Score (CSAT)",
+      "First Contact Resolution Rate",
+      "Average Handle Time",
+      "Chatbot Containment Rate",
+      "Net Promoter Score (NPS)"
+    ],
+    "icon": "support",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

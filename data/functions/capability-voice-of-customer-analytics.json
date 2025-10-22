@@ -1,0 +1,381 @@
+[
+  {
+    "id": "function-multi-channel-feedback-collection",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Channel Feedback Collection",
+    "description": "Omnichannel feedback collection across SMS, email, app, and web with journey-triggered surveys achieving 35-50% response rates vs 10-20% for email-only approaches.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates post-purchase email survey. 2. Survey sent to all customers 3 days after purchase. 3. Generic survey with 10-15 questions (takes 5-10 minutes). 4. 10-20% response rate due to email fatigue and survey length. 5. No feedback collected at other journey touchpoints.",
+      "constraints": [
+        "Email-only channel limits reach (50% email open rates)",
+        "Post-purchase only (missing critical touchpoints like checkout, delivery)",
+        "10-20% response rate means 80-90% of customer voice unheard",
+        "Long surveys (10-15 questions) cause abandonment",
+        "Generic timing (3 days) doesn't match customer context",
+        "No personalization of survey content or questions"
+      ],
+      "metrics": ["Response rate: 10-20%", "Channels: Email only", "Journey coverage: Post-purchase only"]
+    },
+    "agentic": {
+      "workflow": "1. Feedback Collection Agent identifies optimal feedback moments across journey: post-purchase, post-delivery, post-service, post-browse. 2. Channel Optimization Agent selects best channel per customer: SMS for mobile-first, email for desktop, in-app for app users. 3. Agent delivers micro-surveys (2-3 questions) at the moment of experience. 4. Agent personalizes questions based on customer journey path and touchpoints experienced. 5. Trigger Engine activates surveys based on journey events (delivery confirmed, support case closed).",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["Feedback Collection Agent", "Channel Optimization Agent"],
+        "utilityAgents": ["Survey Platform API", "SMS Gateway", "Mobile App", "Email Platform", "Trigger Engine"]
+      },
+      "dataSources": [
+        "Customer journey data and touchpoint history",
+        "Channel preference and engagement data",
+        "Survey response history by channel and timing",
+        "Customer contact information (email, phone, app ID)",
+        "Journey event triggers (purchase, delivery, service)",
+        "Customer segment and preference data"
+      ],
+      "benefits": [
+        "35-50% response rate vs 10-20% (15-30 pt improvement)",
+        "Omnichannel reach (SMS 90% open rate, in-app 80% engagement)",
+        "Journey-triggered surveys capture feedback at moment of experience",
+        "Micro-surveys (2-3 questions) reduce abandonment",
+        "5-10x more touchpoint coverage vs post-purchase only",
+        "Personalized questions increase relevance and completion"
+      ],
+      "metrics": ["Response rate: 35-50%", "Channels: 4+ (SMS, email, app, web)", "Journey coverage: 5-10 touchpoints"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add SMS survey channel for high-value customers", "Implement post-delivery micro-survey (2 questions)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Survey platform with multi-channel capability", "SMS gateway and mobile app integration", "Journey orchestration and trigger capability", "Customer channel preference data"]
+    },
+    "icon": "annotation",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sentiment-text-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Sentiment & Text Analytics",
+    "description": "NLP analysis of 100% of feedback vs manual review of 5-10% with 95%+ accuracy in theme extraction and sentiment classification through AI-powered text analytics.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer submits open-ended survey comments. 2. Analyst samples 5-10% of comments for manual review. 3. Analyst manually categorizes feedback into themes (slow, subjective). 4. Analyst creates summary report with top 5 themes. 5. Remaining 90-95% of comments never analyzed.",
+      "constraints": [
+        "Only 5-10% of comments manually reviewed (missing 90-95% of feedback)",
+        "Subjective categorization varies by analyst",
+        "Manual review takes weeks to produce insights",
+        "No sentiment scoring (positive vs negative unclear)",
+        "Themes based on analyst bias not objective data",
+        "Long tail issues never surface (only top 5 themes reported)"
+      ],
+      "metrics": ["Coverage: 5-10% of feedback", "Theme extraction: Manual, subjective", "Time to insights: 2-4 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Sentiment Analysis Agent processes 100% of text feedback in real-time using NLP. 2. Agent scores sentiment: positive (7-10), neutral (4-6), negative (1-3). 3. Theme Extraction Agent identifies recurring topics using topic modeling: 'shipping delays', 'product quality', 'customer service'. 4. Agent quantifies theme prevalence and sentiment: 'Shipping delays mentioned in 18% of feedback, 85% negative'. 5. Agent surfaces long-tail issues (mentioned <5% but high negative sentiment).",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["Sentiment Analysis Agent", "Theme Extraction Agent"],
+        "utilityAgents": ["NLP Engine", "Text Analytics Platform", "Sentiment Model", "Topic Modeling"]
+      },
+      "dataSources": [
+        "Survey open-ended comment data",
+        "Review and rating text",
+        "Social media mentions and comments",
+        "Support ticket descriptions",
+        "Chat and email transcripts",
+        "Voice call transcriptions"
+      ],
+      "benefits": [
+        "100% feedback coverage vs 5-10% (no blind spots)",
+        "95%+ accuracy in theme extraction through objective NLP",
+        "Real-time insights vs 2-4 week manual analysis",
+        "Sentiment scoring quantifies emotional response",
+        "Long-tail issue detection surfaces rare but critical problems",
+        "Consistent, objective theme classification (no analyst bias)"
+      ],
+      "metrics": ["Coverage: 100% of feedback", "Theme extraction: Automated, 95%+ accuracy", "Time to insights: Real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy sentiment analysis on survey comments", "Implement automated theme extraction for top issues"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Text analytics platform or NLP API", "Aggregated feedback data warehouse", "Sentiment and topic models (pre-trained or custom)", "BI dashboard for insights"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-nps-csat-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "NPS & CSAT Monitoring",
+    "description": "Continuous NPS tracking with real-time dashboards and AI-powered improvement recommendations vs quarterly surveys with 2-3 month reporting lag.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Company sends quarterly NPS survey to random customer sample. 2. Survey vendor processes responses and creates report. 3. Report delivered 2-3 months after survey close. 4. Executive team reviews report in quarterly business review. 5. No actionable insights on what to improve or how.",
+      "constraints": [
+        "Quarterly frequency means stale data (reflects 3+ months ago)",
+        "2-3 month reporting lag delays action",
+        "No segment-level visibility (overall NPS doesn't show problem areas)",
+        "No recommendations on how to improve NPS",
+        "Report is retrospective (can't course-correct in real-time)",
+        "Limited to NPS only (no CSAT, CES, or other metrics)"
+      ],
+      "metrics": ["NPS frequency: Quarterly", "Reporting lag: 2-3 months", "Actionability: Low"]
+    },
+    "agentic": {
+      "workflow": "1. NPS Monitoring Agent continuously collects NPS feedback after key journey moments. 2. Agent calculates real-time NPS by segment: channel, touchpoint, customer type, product category. 3. Improvement Recommendation Agent analyzes detractor feedback to identify improvement opportunities. 4. Agent quantifies impact: 'Improving checkout experience could lift NPS 12 points'. 5. Real-time dashboard shows NPS trends, segment breakdowns, and prioritized improvement actions.",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["NPS Monitoring Agent", "Improvement Recommendation Agent"],
+        "utilityAgents": ["Survey Platform", "Analytics Dashboard", "Recommendation Engine", "Benchmarking Data"]
+      },
+      "dataSources": [
+        "Continuous NPS and CSAT survey responses",
+        "Customer feedback and comment data",
+        "Journey touchpoint and experience data",
+        "Customer segment and demographic data",
+        "Benchmark data (industry, competitors)",
+        "Improvement initiative tracking data"
+      ],
+      "benefits": [
+        "Real-time NPS visibility vs 2-3 month lag",
+        "Continuous tracking vs quarterly snapshots",
+        "Segment-level insights identify specific problem areas",
+        "AI-powered recommendations drive targeted improvements",
+        "Quantified impact guides investment prioritization",
+        "Real-time course correction vs retrospective reporting"
+      ],
+      "metrics": ["NPS frequency: Continuous", "Reporting lag: Real-time", "Actionability: High (prioritized recommendations)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement continuous NPS collection post-key touchpoints", "Create real-time NPS dashboard by segment"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Survey platform with continuous collection", "Analytics dashboard and BI tool", "Customer segmentation data", "Text analytics for feedback analysis"]
+    },
+    "icon": "trending-up",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-customer-journey-feedback-attribution",
+    "type": "function",
+    "level": 4,
+    "label": "Customer Journey Feedback Attribution",
+    "description": "Journey-stage-specific feedback with touchpoint attribution enabling precise friction identification and targeted improvements through contextual feedback capture.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Post-purchase survey asks 'How was your experience?'. 2. Customer provides generic feedback (good, bad, okay). 3. No context on which journey stage or touchpoint caused positive/negative experience. 4. Product team can't identify where friction occurred. 5. Improvements based on guesswork not specific touchpoint data.",
+      "constraints": [
+        "Generic feedback lacks journey context",
+        "Can't pinpoint which touchpoint caused problem",
+        "Customer remembers last touchpoint not entire journey",
+        "No touchpoint-specific feedback attribution",
+        "Unclear whether issue is discovery, checkout, fulfillment, or post-purchase",
+        "Product team can't prioritize improvements without specific friction points"
+      ],
+      "metrics": ["Journey attribution: None", "Friction identification: Generic", "Improvement targeting: Broad"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Attribution Agent tracks customer through journey stages: awareness, consideration, purchase, fulfillment, post-purchase. 2. Agent triggers micro-surveys at each stage with stage-specific questions. 3. Friction Detection Agent analyzes feedback by touchpoint: website navigation (7.2/10), checkout (5.8/10), delivery (8.1/10). 4. Agent identifies precise friction: 'Checkout step 3 payment form causing abandonment'. 5. Touchpoint Mapping links feedback to specific pages, features, and processes.",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["Journey Attribution Agent", "Friction Detection Agent"],
+        "utilityAgents": ["Journey Analytics Platform", "CDP", "Feedback Platform", "Touchpoint Mapping"]
+      },
+      "dataSources": [
+        "Customer journey path and touchpoint data",
+        "Journey stage definitions and transitions",
+        "Touchpoint-specific feedback responses",
+        "Drop-off and abandonment data by touchpoint",
+        "Session replay and clickstream data",
+        "Conversion funnel metrics"
+      ],
+      "benefits": [
+        "Precise friction identification by journey stage and touchpoint",
+        "Targeted improvements based on specific problem areas",
+        "Quantified impact: 'Fixing checkout step 3 could reduce abandonment 15%'",
+        "Journey-stage context improves feedback quality",
+        "Touchpoint scoring enables prioritization (fix 5.8/10 before 7.2/10)",
+        "Product team gets actionable, specific improvement guidance"
+      ],
+      "metrics": ["Journey attribution: 100% touchpoint-level", "Friction identification: Precise", "Improvement targeting: Specific touchpoints"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement post-checkout micro-survey (checkout experience only)", "Tag feedback with journey stage metadata"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Journey analytics and tracking capability", "Customer Data Platform or journey data", "Survey platform with trigger logic", "Touchpoint mapping and taxonomy"]
+    },
+    "icon": "location-marker",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-closed-loop-feedback-resolution",
+    "type": "function",
+    "level": 4,
+    "label": "Closed-Loop Feedback & Issue Resolution",
+    "description": "Auto-routing of detractor feedback to service teams with 70-85% issue resolution and follow-up surveys achieving 50-65 pt NPS recovery through systematic closure.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer gives NPS score of 3 (detractor) and negative comment. 2. Feedback stored in survey database. 3. Quarterly report mentions 'negative feedback on shipping'. 4. No follow-up with customer to resolve issue. 5. Customer remains detractor, likely to churn. 6. 10-20% of detractor issues ever get resolved.",
+      "constraints": [
+        "No follow-up loop with detractors (missed recovery opportunity)",
+        "Feedback sits in database unread by service teams",
+        "10-20% issue resolution rate (80-90% detractors never contacted)",
+        "Customer feels feedback goes into black hole",
+        "No tracking of whether issues were resolved",
+        "Detractors become churned customers (no recovery attempt)"
+      ],
+      "metrics": ["Detractor follow-up: 10-20%", "Issue resolution: 10-20%", "NPS recovery: Minimal"]
+    },
+    "agentic": {
+      "workflow": "1. Customer submits NPS score of 0-6 (detractor) with negative feedback. 2. Closed-Loop Agent automatically creates service case and routes to appropriate team. 3. Issue Resolution Agent assigns case to agent with context and priority. 4. Agent contacts customer within 24 hours to resolve issue. 5. Agent tracks resolution outcome and sends follow-up survey. 6. Resolution Tracking measures NPS recovery (detractor to promoter).",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["Closed-Loop Agent", "Issue Resolution Agent"],
+        "utilityAgents": ["Case Management System", "CRM Integration", "Communication APIs", "Resolution Tracking"]
+      },
+      "dataSources": [
+        "NPS and CSAT survey responses with scores",
+        "Customer feedback comments and themes",
+        "Customer account and history data",
+        "Case management and resolution data",
+        "Follow-up survey responses",
+        "NPS recovery and win-back outcome data"
+      ],
+      "benefits": [
+        "70-85% issue resolution vs 10-20% (50-65 pt improvement)",
+        "100% detractor follow-up vs 10-20% (no feedback ignored)",
+        "50-65 pt NPS recovery (detractor 3 becomes promoter 8)",
+        "Customer feels heard and valued (closed loop builds trust)",
+        "Systematic resolution tracking ensures accountability",
+        "Churn prevention through proactive detractor recovery"
+      ],
+      "metrics": ["Detractor follow-up: 100%", "Issue resolution: 70-85%", "NPS recovery: +50-65 points"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Auto-create service cases for NPS 0-6 scores", "Implement 24-hour detractor response SLA"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Integration between survey platform and case management", "CRM with customer contact data", "Service team capacity for follow-up", "Follow-up survey workflow"]
+    },
+    "icon": "reply",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-predictive-voc-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Predictive VoC Analytics",
+    "description": "Predictive satisfaction models with 60-80% accuracy enabling proactive experience optimization and issue prevention through forward-looking analytics.",
+    "parentCapability": "capability-voice-of-customer-analytics",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer completes journey and submits satisfaction survey. 2. Company analyzes retrospective feedback. 3. Product team makes improvements based on past feedback. 4. Improvements deployed months after feedback received. 5. No ability to predict future satisfaction or prevent issues.",
+      "constraints": [
+        "Retrospective analysis shows what already happened (too late)",
+        "Reactive improvements deployed months after feedback",
+        "No prediction of future satisfaction trends",
+        "Can't prevent issues before they impact customers",
+        "No early warning system for satisfaction decline",
+        "Improvements always lag customer needs"
+      ],
+      "metrics": ["Predictive capability: None", "Analysis: Retrospective only", "Issue prevention: Reactive"]
+    },
+    "agentic": {
+      "workflow": "1. Predictive Analytics Agent builds satisfaction prediction models using: behavioral signals, journey patterns, historical feedback, customer attributes. 2. Agent predicts future satisfaction: 'This customer segment likely to have poor delivery experience (65% confidence)'. 3. Experience Optimization Agent recommends proactive improvements before issues occur. 4. Agent simulates impact: 'Improving delivery notifications could prevent 800 detractors this quarter'. 5. Optimization Engine prioritizes preventive actions by predicted impact.",
+      "agents": {
+        "orchestrator": "Voice of Customer Orchestration Agent",
+        "superAgents": ["Predictive Analytics Agent", "Experience Optimization Agent"],
+        "utilityAgents": ["ML Models", "Customer Analytics", "Predictive Platform", "Optimization Engine"]
+      },
+      "dataSources": [
+        "Historical satisfaction scores and feedback",
+        "Customer behavioral and journey data",
+        "Operational metrics (delivery times, response times)",
+        "Product quality and defect data",
+        "Seasonal and trend data",
+        "External factors (weather, holidays, events)"
+      ],
+      "benefits": [
+        "60-80% accuracy in predicting future satisfaction trends",
+        "Proactive optimization vs reactive improvements",
+        "Issue prevention before customers impacted",
+        "Early warning system alerts to satisfaction risks",
+        "Quantified impact of preventive actions guides investment",
+        "Continuous learning improves prediction accuracy over time"
+      ],
+      "metrics": ["Predictive capability: 60-80% accuracy", "Analysis: Predictive and prescriptive", "Issue prevention: Proactive"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build simple satisfaction prediction model for high-risk segments", "Implement early warning alerts for NPS decline"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["12-24 months historical satisfaction data", "ML modeling capability or platform", "Integrated customer and operational data", "Predictive analytics expertise"]
+    },
+    "icon": "crystal-ball",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

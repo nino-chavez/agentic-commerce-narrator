@@ -1,0 +1,46 @@
+{
+  "id": "industry-qsr",
+  "type": "industry",
+  "label": "QSR (Quick Service Restaurant)",
+  "description": "Fast-food restaurants, fast-casual concepts, coffee shops, and quick-serve chains prioritizing speed, convenience, and value, characterized by high transaction volumes, low average checks, and extreme labor turnover.",
+  "marketSize": "$330 billion (US QSR market, 2023)",
+  "growthRate": "4-6% annually (US QSR)",
+  "characteristics": [
+    "High transaction volumes (500-2,000 per day per location)",
+    "Low average checks ($7-$12) with thin unit economics (10-20% EBITDA margins)",
+    "Speed-of-service obsession (drive-thru <180 sec target, every 6 sec = 1% sales)",
+    "Extreme labor turnover (100-150% annual for hourly crew, 40-60% for managers)",
+    "Franchised operations (70-95% of locations require influencing not controlling)",
+    "Order accuracy crisis (10-15% error rate industry average)",
+    "Drive-thru dominance (60-70% of sales, $200B+ annually)"
+  ],
+  "segments": [
+    "Traditional Fast Food (McDonald's, Burger King, Wendy's) - Drive-thru heavy (70%+), value focus, limited menu",
+    "Fast Casual (Chipotle, Panera, Sweetgreen) - Higher quality, customization, $10-$15 checks, 50/50 dine-in/takeout",
+    "Coffee/Beverage (Starbucks, Dunkin', Dutch Bros) - Morning daypart focus, high customization, loyalty-driven",
+    "Pizza QSR (Domino's, Papa John's, Little Caesars) - Delivery-focused, 30-min guarantee, carryout heavy",
+    "Chicken Concepts (Chick-fil-A, Popeyes, Raising Cane's) - Limited menu focus, hospitality emphasis, high volumes",
+    "Sandwich/Sub (Subway, Jimmy John's, Jersey Mike's) - High customization, assembly-line model, lunch focus"
+  ],
+  "stats": {
+    "locations": "200,000+ (US QSR locations)",
+    "employees": "5M+ (US QSR workforce)",
+    "unitVolume": "$1M-$3M average per location",
+    "averageCheck": "$7-$12",
+    "driveThruShare": "60-70% of sales",
+    "laborCost": "25-35% of sales",
+    "crewTurnover": "100-150% annually",
+    "managerTurnover": "40-60% annually",
+    "serviceTime": "180-240 sec traditional, 120-150 sec agentic (drive-thru)",
+    "orderAccuracy": "85-90% traditional, 95-97% agentic",
+    "ticketTime": "3-5 min traditional, 2-3.5 min agentic (kitchen)",
+    "foodWaste": "8-12% traditional, 4-6% agentic"
+  },
+  "createdAt": "2025-01-09T00:00:00Z",
+  "updatedAt": "2025-01-09T00:00:00Z",
+  "version": "1.0.0",
+  "x": 600,
+  "y": 0,
+  "color": "#1E3A8A",
+  "icon": "restaurant"
+}

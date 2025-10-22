@@ -1,0 +1,464 @@
+[
+  {
+    "id": "function-real-time-dashboard-creation",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Dashboard Creation",
+    "description": "AI-assisted dashboard generation with smart layout recommendations reducing dashboard build time by 80-90% from days to hours and enabling business users to create analytics without BI expertise.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager needs weekly campaign performance dashboard, submits request to BI team. 2. BI developer meets with manager (1-2 week backlog to get on calendar), gathers requirements: metrics, dimensions, filters, visualizations. 3. Developer spends 2-3 days building dashboard: writes SQL queries, designs layout, creates 10+ charts, configures filters and drill-downs. 4. Developer shares draft, manager requests 5-7 changes: different chart types, add metrics, change colors, reorganize layout. 5. Developer makes revisions over 1-2 days, another review cycle with more changes. 6. Total time: 2-3 weeks (requirements gathering, development 3-5 days, iterations 1-2 weeks). 7. Manager dependent on BI team for any future changes (no self-service capability).",
+      "constraints": [
+        "2-3 week dashboard creation cycle (1-2 week backlog + development)",
+        "BI developer required (business users lack technical skills)",
+        "3-5 days development time per dashboard",
+        "Multiple iteration cycles (requirements unclear upfront)",
+        "No self-service (every change requires BI team)",
+        "BI team becomes bottleneck (50+ dashboard requests in queue)"
+      ],
+      "metrics": ["Dashboard build time: 2-3 weeks", "BI developer required: Yes", "Self-service capability: <10% of users", "BI team backlog: 50+ requests"]
+    },
+    "agentic": {
+      "workflow": "1. Marketing manager opens AI Dashboard Builder, describes need: 'Create campaign performance dashboard showing spend, impressions, clicks, conversions by channel and campaign for past 90 days'. 2. Dashboard Generation Agent interprets request, recommends data sources: 'Use marketing_campaigns table, google_ads_performance, facebook_ads_performance - detected 15 relevant metrics and 8 dimensions'. 3. Agent suggests smart layout: 'Top row: KPI cards (total spend, total conversions, CPA, ROAS), Middle: time-series chart showing daily trend, Bottom: bar charts by channel and campaign, Right sidebar: filters for date range and channel'. 4. Manager previews auto-generated dashboard in 2-3 minutes, says: 'Looks great, but change bar chart to pie chart and add email campaign data'. 5. Agent updates dashboard instantly: replaces bar chart, adds email data source, recalculates metrics. 6. Manager publishes dashboard, shares with team, total creation time: 15-30 minutes vs 2-3 weeks. 7. 80-90% time reduction, business users create dashboards without BI expertise, BI team backlog eliminated.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["Dashboard Generation Agent", "Smart Layout Agent", "Visualization Recommendation Agent"],
+        "utilityAgents": ["Data Source Catalog", "Semantic Layer API", "Chart Library", "Template Repository"]
+      },
+      "dataSources": [
+        "Data source catalog with metadata (tables, columns, relationships)",
+        "Semantic layer mapping business terms to technical schema",
+        "Pre-built visualization templates by use case",
+        "Best practice layout patterns (KPI cards, trend charts, dimension charts)",
+        "User access controls and data permissions",
+        "Historical dashboard usage patterns",
+        "Chart type effectiveness research (when to use bar vs pie vs line)",
+        "Color palettes and brand guidelines"
+      ],
+      "benefits": [
+        "80-90% time reduction (15-30 min vs 2-3 weeks)",
+        "Business user self-service (no BI developer required)",
+        "AI-recommended layouts and chart types (best practices built-in)",
+        "Instant iterations (change chart type, add data in seconds)",
+        "BI team backlog eliminated (50+ requests → self-service)",
+        "Consistent design quality (templates and smart defaults)"
+      ],
+      "metrics": ["Dashboard build time: 15-30 minutes", "BI developer required: No (self-service)", "Self-service capability: 70-80% of users", "BI team backlog: <10 complex requests"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI dashboard builder with natural language interface for top 10 data sources", "Implement pre-built templates for common use cases (sales, marketing, operations)", "Enable drag-and-drop interface for business user customization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Modern BI platform (Tableau, Power BI, Looker, ThoughtSpot)", "Semantic layer with business glossary", "Data source catalog with metadata", "Visualization template library", "Role-based access controls", "User training on self-service dashboard creation"]
+    },
+    "icon": "template",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-interactive-data-exploration",
+    "type": "function",
+    "level": 4,
+    "label": "Interactive Data Exploration",
+    "description": "Guided exploration with AI-suggested drill-paths and automated correlation analysis enabling users to discover insights 70-85% faster with 90%+ reduction in dead-end analysis paths.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Analyst exploring sales decline: starts with total sales dashboard showing -15% last month. 2. Analyst manually drills into product categories one-by-one: Apparel -10%, Electronics -5%, Home Goods -20% (found it!). 3. Analyst drills into Home Goods subcategories: Furniture -25%, Kitchenware -15%, Bedding -18%. 4. Analyst drills into Furniture brands: Brand A -30%, Brand B -20%, Brand C -15%. 5. Analyst drills into Brand A SKUs: discovers one SKU down -80% (major contributor). 6. Analyst investigates why that SKU declined: checks inventory (in stock), pricing (no change), promotions (none), competitor activity (manual Google search). 7. Total exploration time: 2-4 hours of trial-and-error drilling, many dead-end paths explored.",
+      "constraints": [
+        "2-4 hour exploration time (manual trial-and-error)",
+        "Many dead-end paths (drill into categories with no insight)",
+        "No guidance on where to drill next",
+        "Correlation analysis manual (check inventory, pricing, promotions separately)",
+        "Limited dimensions explored (time constraints)",
+        "Analyst intuition required (novice users struggle)"
+      ],
+      "metrics": ["Exploration time: 2-4 hours", "Dead-end paths: 60-70% of drill-downs", "Correlation analysis: Manual", "User skill required: High (analyst-level)"]
+    },
+    "agentic": {
+      "workflow": "1. User sees sales decline -15%, Interactive Exploration Agent suggests drill-paths: 'Biggest declines: Home Goods category -20%, Northeast region -18%, Online channel -22% - click to explore'. 2. User clicks Home Goods, agent highlights: 'Furniture subcategory -25% is primary driver (60% of category decline), brand Brand A -30% is key contributor'. 3. User clicks Brand A, agent shows: 'SKU ABC-123 declined -80% driving 40% of brand decline, correlated factors detected: competitor launched similar product at 20% lower price (Oct 15), your price unchanged'. 4. Agent provides correlation analysis automatically: 'Inventory: In stock (500 units), Pricing: $299 unchanged (competitor: $239), Promotions: None (competitor: 15% off), Customer reviews: Declining from 4.5 to 3.8 stars (competitor quality issues mentioned)'. 5. Agent suggests: 'Recommendation: Consider price match or promotion to compete, or differentiate on quality given competitor review issues'. 6. User discovers root cause in 10-15 minutes (vs 2-4 hours), agent guided to insight efficiently. 7. 70-85% faster exploration, 90% reduction in dead-end paths, automated correlation analysis.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["Interactive Exploration Agent", "Drill-Path Recommendation Agent", "Correlation Analysis Agent"],
+        "utilityAgents": ["OLAP Engine", "ML Pattern Detector", "External Data Integrator", "Statistical Engine"]
+      },
+      "dataSources": [
+        "Transaction data (sales, orders, products, customers)",
+        "Dimensional hierarchies (product categories, geography, channels)",
+        "Correlated data (inventory, pricing, promotions, competition)",
+        "External data (competitor pricing, market trends, reviews)",
+        "Historical patterns for anomaly detection",
+        "Statistical correlation models",
+        "User exploration history (common drill-paths)",
+        "Business rules for insight prioritization"
+      ],
+      "benefits": [
+        "70-85% faster exploration (10-15 min vs 2-4 hours)",
+        "90% reduction in dead-end drill-paths (guided suggestions)",
+        "Automated correlation analysis (inventory, pricing, competition)",
+        "Insight prioritization (biggest impact highlighted first)",
+        "External data integration (competitor data, reviews)",
+        "Novice users can explore effectively (no expert intuition required)"
+      ],
+      "metrics": ["Exploration time: 10-15 minutes", "Dead-end paths: <10% (guided drill-downs)", "Correlation analysis: Automated", "User skill required: Low (guided exploration)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy guided drill-path recommendations for top 10 KPI dashboards", "Implement automated correlation analysis for sales/revenue metrics", "Enable external data integration (pricing, competitors, reviews)"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Advanced analytics platform with ML-powered exploration", "OLAP engine for multi-dimensional analysis", "Correlated data sources (inventory, pricing, promotions)", "External data feeds (competitor pricing, market data)", "Statistical correlation models", "Historical exploration patterns for learning", "Integration with data catalog and semantic layer"]
+    },
+    "icon": "search",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-embedded-analytics-operational-apps",
+    "type": "function",
+    "level": 4,
+    "label": "Embedded Analytics in Operational Apps",
+    "description": "Contextual insights delivered within workflow applications achieving 85-95% user adoption versus 10-20% standalone BI tool usage and enabling data-driven decisions at point of action.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sales rep reviewing customer account in CRM (Salesforce), wants to see purchase history and trends. 2. Rep switches to separate BI tool (Tableau), logs in, searches for customer dashboard. 3. Rep finds generic customer analytics dashboard, manually filters to specific customer account. 4. Rep sees limited data: total revenue $500K, 20 orders, but no product-level detail or trends visible. 5. Rep switches back to CRM to continue work, can't see analytics in context. 6. Rep calls customer without insight on product preferences, upsell opportunities, or risk indicators. 7. BI tool adoption <20% (reps don't bother switching tools), decisions made without data.",
+      "constraints": [
+        "Context switching required (CRM → separate BI tool → back to CRM)",
+        "Generic dashboards (not customer-specific insights in context)",
+        "Low adoption <20% (reps skip analytics due to friction)",
+        "No actionable insights at point of decision",
+        "Manual filtering and searching required",
+        "Analytics divorced from workflow (separate tool)"
+      ],
+      "metrics": ["BI tool adoption: <20%", "Context switches: 3-5 per customer review", "Time to insight: 3-5 minutes (if used at all)", "Data-driven decisions: <30%"]
+    },
+    "agentic": {
+      "workflow": "1. Sales rep opens customer account in CRM, Embedded Analytics Agent displays contextual insights automatically: 'Customer ABC Corp: $500K lifetime value, 20 orders over 2 years, trending up 15% annually, high propensity for Product Line X (purchased 60% of orders)'. 2. Agent highlights upsell opportunity: 'Recommended next product: Product XYZ (complements past purchases), 75% likelihood to purchase based on similar customer behavior, suggested deal size $50K'. 3. Agent shows risk indicators: 'Customer health score: 85/100 (good), but invoice payment delays increased from 15 days to 35 days (monitor for credit risk)'. 4. Rep reviews insights in CRM context (no tool switching), sees product recommendations, payment trends, and comparable customer benchmarks. 5. Rep calls customer with data-driven talking points: 'I noticed you've had great success with Product Line X, I think Product XYZ would complement your setup well...'. 6. Rep takes action directly in CRM: creates upsell opportunity, sets payment follow-up task. 7. 85-95% user adoption (embedded in workflow), data-driven decisions at point of action, no context switching.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["Embedded Analytics Agent", "Contextual Insight Agent", "Recommendation Agent"],
+        "utilityAgents": ["CRM Integration API", "Real-Time Analytics Engine", "ML Models", "Customer 360 Data"]
+      },
+      "dataSources": [
+        "Customer 360 data (purchase history, revenue, interactions)",
+        "Product catalog and cross-sell/upsell patterns",
+        "Customer segmentation and propensity models",
+        "Payment and credit history",
+        "Customer health scores and risk indicators",
+        "Benchmark data (similar customers, industry averages)",
+        "Recommendation engine outputs",
+        "Real-time CRM activity and workflow context"
+      ],
+      "benefits": [
+        "85-95% user adoption (vs <20% standalone BI tool)",
+        "Zero context switching (insights embedded in CRM workflow)",
+        "Contextual insights (customer-specific recommendations at point of decision)",
+        "Actionable recommendations (upsell opportunities, risk alerts)",
+        "Data-driven conversations (reps equipped with insights)",
+        "Workflow integration (create opportunity, tasks directly from insights)"
+      ],
+      "metrics": ["BI tool adoption: 85-95%", "Context switches: 0 (embedded)", "Time to insight: <30 seconds (automatic)", "Data-driven decisions: 80%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Embed customer 360 analytics in CRM for sales reps", "Implement product recommendations and upsell suggestions in order management", "Enable inventory insights in merchandising applications"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["API integration between operational apps (CRM, ERP) and analytics platform", "Real-time data pipelines for up-to-date insights", "Customer 360 or unified data model", "Recommendation engine or propensity models", "Embedded analytics SDK or iframe integration", "User experience design for in-app analytics", "Role-based analytics content (relevant to each user role)"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-executive-scorecards-kpi-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Executive Scorecards & KPI Tracking",
+    "description": "AI-powered KPI monitoring with automated variance explanations and predictive alerts achieving 70-80% reduction in executive reporting cycles and real-time strategy tracking.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. CFO tracks 20 strategic KPIs manually: revenue, profit, cash flow, customer acquisition, NPS, employee turnover, etc. 2. Analyst compiles monthly executive scorecard: gathers data from 10+ systems (finance, CRM, HR, operations), manual Excel consolidation. 3. Analyst calculates actuals vs targets, variance %, traffic lights (red/yellow/green status indicators). 4. CFO reviews scorecard in monthly board meeting, asks questions: 'Why is customer acquisition 15% below target?'. 5. Analyst investigates after meeting, provides follow-up email 2-3 days later with explanation. 6. Scorecard updated monthly only (no real-time visibility into KPI trends). 7. Total reporting cycle: 3-5 days per month, reactive explanations, stale data for strategic decisions.",
+      "constraints": [
+        "Monthly KPI updates only (30-day stale data for decisions)",
+        "3-5 day scorecard compilation time (manual data gathering)",
+        "Reactive variance explanations (2-3 days after questions asked)",
+        "No predictive alerts (discover issues after month ends)",
+        "Manual consolidation from 10+ systems",
+        "Limited drill-down capability (static Excel scorecard)"
+      ],
+      "metrics": ["Scorecard update frequency: Monthly", "Compilation time: 3-5 days", "Variance explanation time: 2-3 days post-meeting", "Predictive alerts: None"]
+    },
+    "agentic": {
+      "workflow": "1. CFO opens Executive Scorecard Dashboard, sees real-time KPI status: revenue 98% of target (green), profit 105% (green), customer acquisition 85% (red), NPS 92% (green). 2. KPI Monitoring Agent detects customer acquisition variance, provides automated explanation: 'Customer acquisition 15% below target (-300 customers) due to: Paid search CAC increased 25% (Google Ads auction pressure), offsetting 12% increase in organic traffic conversions'. 3. Predictive Alert Agent forecasts: 'At current trend, Q4 customer acquisition will miss target by 20% unless corrective action taken - recommend increase paid search budget by $100K or launch referral program (modeled +200 customers)'. 4. CFO drills down into customer acquisition funnel: traffic, conversion, CAC by channel, sees detailed attribution. 5. CFO clicks recommendation: 'Launch referral program', views simulation: '$50K investment → estimated +200 customers at $250 CAC (vs $400 current paid search CAC)'. 6. CFO approves initiative directly from scorecard, initiative tracked in real-time against KPI target. 7. 70-80% reporting time reduction, real-time KPI visibility, proactive alerts, automated variance explanations.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["KPI Monitoring Agent", "Variance Explanation Agent", "Predictive Alert Agent"],
+        "utilityAgents": ["Data Integration Platform", "Forecasting Engine", "Scenario Simulator", "Workflow Integration"]
+      },
+      "dataSources": [
+        "Strategic KPIs from all systems (finance, CRM, HR, operations)",
+        "Targets and goals (annual, quarterly, monthly)",
+        "Historical performance data for trend analysis",
+        "Dimensional drill-down data (by product, region, channel)",
+        "Predictive models for KPI forecasting",
+        "Variance explanation rules and root cause patterns",
+        "Initiative tracking (projects, campaigns affecting KPIs)",
+        "External benchmarks (industry, competitor data)"
+      ],
+      "benefits": [
+        "70-80% reporting time reduction (real-time vs monthly 3-5 day cycle)",
+        "Automated variance explanations (instant vs 2-3 day follow-up)",
+        "Predictive alerts (forecasts Q4 miss, enables proactive action)",
+        "Real-time KPI visibility (daily updates vs monthly)",
+        "Drill-down to root cause (channel-level attribution)",
+        "Recommendation engine (referral program suggestion with ROI model)"
+      ],
+      "metrics": ["Scorecard update frequency: Real-time", "Compilation time: Automated", "Variance explanation time: Instant (automated)", "Predictive alerts: 30-90 day forecasts"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time executive scorecard for top 10 strategic KPIs", "Implement automated variance explanation for revenue and profit metrics", "Enable predictive alerts for critical KPIs at risk of missing targets"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Data integration platform connecting all KPI source systems", "Real-time data pipelines for daily KPI updates", "Targets and goals management system", "Variance explanation rules engine", "ML forecasting models for KPI prediction", "Scenario simulation capability", "Executive dashboard platform (mobile-optimized)"]
+    },
+    "icon": "chart-bar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-drill-down-slice-dice-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Drill-Down & Slice-Dice Analysis",
+    "description": "Intelligent OLAP with AI-recommended analysis paths achieving 80-90% reduction in analysis time and enabling business users to perform complex multi-dimensional analysis without SQL expertise.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Business user wants to analyze Q4 sales by product, region, and customer segment - requires multi-dimensional slice-dice. 2. User submits request to analyst: 'Need sales data by product category, region, customer segment for Q4'. 3. Analyst writes SQL query joining 5 tables, creates pivot table in Excel with 3 dimensions. 4. Analyst sends Excel file, user opens and struggles: 'How do I see Electronics sales in Northeast for Premium customers only?'. 5. User manually filters Excel rows/columns, creates nested pivot tables, gets lost in complexity. 6. User requests analyst help for each question: 'Now show me same data but for Q3', 'Now compare B2B vs B2C', 'Now show monthly trend'. 7. Total time: 1-2 hours per question (analyst dependency), user frustrated by Excel limitations.",
+      "constraints": [
+        "Analyst dependency for each multi-dimensional question",
+        "1-2 hour turnaround per question (submit request, wait, receive Excel)",
+        "Excel limitations (nested pivots hard to navigate)",
+        "No interactive exploration (static data dump)",
+        "User skill required (understand pivots, filters, slicers)",
+        "Serial questions (ask one, wait, ask next - slow iteration)"
+      ],
+      "metrics": ["Analysis time: 1-2 hours per question", "Analyst dependency: 100%", "Dimensions analyzed: 2-3 max (Excel limits)", "User self-service: <10%"]
+    },
+    "agentic": {
+      "workflow": "1. Business user opens OLAP Agent interface, selects measures (Sales, Profit) and dimensions (Product, Region, Customer Segment, Time). 2. Agent creates interactive pivot: rows=Product categories, columns=Regions, filters=Customer Segment, Time period. 3. User clicks Electronics → Northeast → Premium, sees $2.5M sales in Q4, agent suggests: 'Drill down to product subcategories or compare to Q3 trend?'. 4. User selects 'compare to Q3', agent adds time dimension: Electronics/Northeast/Premium Q4=$2.5M (vs Q3=$2.2M, +14% growth). 5. User asks natural language: 'Show me monthly trend for this combination', agent creates line chart showing Oct/Nov/Dec trend. 6. User explores: 'Which premium customer accounts in Northeast drove Electronics growth?', agent drills to customer level with top 10 contributors. 7. Total analysis: 10-15 minutes of interactive exploration vs 1-2 hours per question, no analyst dependency, unlimited dimensional combinations.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["OLAP Analysis Agent", "Drill-Path Intelligence Agent", "Dimensional Navigation Agent"],
+        "utilityAgents": ["OLAP Cube Engine", "Query Optimizer", "Visualization Engine", "Natural Language Interface"]
+      },
+      "dataSources": [
+        "OLAP cube or star schema data warehouse",
+        "Dimensional hierarchies (product, geography, customer, time)",
+        "Measures (sales, profit, quantity, margins)",
+        "Pre-aggregated rollups for query performance",
+        "User access controls and data security",
+        "Common analysis patterns and drill-paths",
+        "Natural language query understanding models",
+        "Visualization recommendations by data type"
+      ],
+      "benefits": [
+        "80-90% analysis time reduction (10-15 min vs 1-2 hours per question)",
+        "Zero analyst dependency (business user self-service)",
+        "Unlimited dimensional combinations (vs 2-3 max in Excel)",
+        "Interactive exploration (real-time slice-dice-drill)",
+        "AI-recommended drill-paths (suggests next analysis step)",
+        "Natural language queries (no SQL or pivot table expertise required)"
+      ],
+      "metrics": ["Analysis time: 10-15 minutes per exploration session", "Analyst dependency: 0%", "Dimensions analyzed: Unlimited combinations", "User self-service: 70-80%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy OLAP cube for sales and finance data with product, geography, customer, time dimensions", "Implement AI-recommended drill-paths for common analysis patterns", "Enable natural language query interface for business user access"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["OLAP platform (SSAS, Oracle Essbase, modern cloud OLAP)", "Star schema data warehouse design", "Dimensional hierarchies and conformed dimensions", "Pre-aggregated rollups for performance", "BI tool with OLAP integration (Tableau, Power BI)", "Natural language query capability", "User training on OLAP navigation and drill-down"]
+    },
+    "icon": "view-list",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-collaborative-analytics-annotations",
+    "type": "function",
+    "level": 4,
+    "label": "Collaborative Analytics & Annotations",
+    "description": "Social analytics with contextual annotations and insights sharing achieving 85-95% improvement in cross-functional alignment and 70% reduction in meeting time for data discussions.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst discovers insight in dashboard: 'Email campaign conversion dropped 20% last week'. 2. Analyst takes screenshot, pastes into email, writes explanation: 'Email conversion down 20%, need to investigate'. 3. Analyst emails 5 stakeholders (marketing manager, email specialist, product team), schedules 1-hour meeting. 4. Meeting held 2-3 days later, participants ask questions: 'Which email?', 'What segment?', 'Was it specific product?'. 5. Analyst didn't bring detailed data to meeting, promises to follow up with deeper analysis. 6. Analyst creates detailed report, sends follow-up email, schedules another meeting for 30 min discussion. 7. Total time: 1-2 weeks, 1.5 hours meetings, lost context (screenshot doesn't preserve interactive data).",
+      "constraints": [
+        "Static screenshots (lose interactivity, filters, drill-down capability)",
+        "Email-based sharing (no context preservation, cluttered inboxes)",
+        "1-2 week discussion cycles (schedule meetings, wait for follow-up)",
+        "1.5 hours meeting time for 20-minute discussion (overhead)",
+        "Lost context (what filters were applied, what drill-down path taken)",
+        "No insight versioning (can't track discussion evolution)"
+      ],
+      "metrics": ["Insight sharing time: 1-2 weeks", "Meeting time: 1.5 hours per insight", "Context preservation: 20% (screenshots only)", "Collaboration efficiency: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Marketing analyst discovers insight in dashboard, clicks 'Annotate & Share': adds comment 'Email conversion dropped 20% for Welcome campaign, affecting Premium segment primarily - recommend review email content and send time'. 2. Collaborative Analytics Agent tags relevant stakeholders (@EmailSpecialist, @ProductTeam, @MarketingManager), preserves full dashboard context (filters, drill-downs, data state). 3. Email specialist receives notification, clicks link, sees interactive dashboard with analyst's annotation pinned: drills further into email content variants, replies: 'A/B test shows Version B subject line underperforming -30%, recommend revert to Version A'. 4. Product team adds annotation: 'Premium customers receiving too many emails (4 per week vs 2 recommended), may be causing fatigue'. 5. Marketing manager sees threaded conversation on dashboard, makes decision: 'Revert subject line to Version A and reduce Premium email frequency to 2/week', creates tasks assigned to email specialist. 6. Total time: 2-3 hours async collaboration vs 1-2 week meeting cycle, zero meetings, full context preserved. 7. 70% meeting time reduction, 85-95% better cross-functional alignment through contextual collaboration.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["Collaborative Analytics Agent", "Annotation Context Agent", "Insight Distribution Agent"],
+        "utilityAgents": ["Social Platform Integration", "Notification Engine", "State Preservation Service", "Task Management API"]
+      },
+      "dataSources": [
+        "Dashboard state and context (filters, drill-downs, data snapshot)",
+        "User directory and team structure for @mentions",
+        "Annotation history and threaded conversations",
+        "Task and project management integration",
+        "Notification preferences and delivery channels",
+        "Access controls and data permissions",
+        "Insight versioning and audit trail",
+        "Related insights and cross-references"
+      ],
+      "benefits": [
+        "70% meeting time reduction (async collaboration vs scheduled meetings)",
+        "85-95% better alignment (contextual discussions vs email screenshots)",
+        "Full context preservation (interactive data vs static screenshots)",
+        "Threaded conversations (track discussion evolution)",
+        "Integrated task creation (decision → action seamlessly)",
+        "2-3 hour collaboration cycle vs 1-2 weeks"
+      ],
+      "metrics": ["Insight sharing time: 2-3 hours (async)", "Meeting time: 0 (eliminated)", "Context preservation: 100% (interactive state)", "Collaboration efficiency: High"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy annotation and sharing features in top 10 executive dashboards", "Implement @mention stakeholder notifications for insight discussions", "Enable task creation from annotations with assignment workflow"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["BI platform with collaboration features (Tableau, Power BI, Looker)", "Dashboard state preservation and sharing links", "User directory integration for @mentions", "Notification system (email, Slack, Teams)", "Task management integration (Jira, Asana, Monday)", "Access control and permission management", "Threaded conversation UI and storage"]
+    },
+    "icon": "chat-alt-2",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-data-democratization-governance",
+    "type": "function",
+    "level": 4,
+    "label": "Data Democratization & Governance",
+    "description": "Self-service analytics with automated governance controls achieving 80-90% increase in data access while maintaining 99%+ compliance and eliminating 70% of access request overhead.",
+    "parentCapability": "capability-business-intelligence-visualization",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst needs customer email addresses for campaign, submits IT ticket for database access. 2. IT security reviews request (3-5 day queue), denies due to PII policy: 'Customer emails are sensitive PII, access restricted'. 3. Analyst resubmits request with business justification, manager approval. 4. IT security approves with conditions: 'Read-only access, expire after 30 days, must sign data handling agreement'. 5. DBA creates database account, grants table permissions, 1-2 day turnaround after approval. 6. Analyst finally gets access 7-10 days later, extracts data, but can now see ALL customer data (over-provisioned access). 7. No audit trail of what analyst queried, potential compliance risk (GDPR, CCPA violations if misused).",
+      "constraints": [
+        "7-10 day access request cycle (3-5 day security review + 1-2 day provisioning)",
+        "Over-provisioned access (granted to entire table, not just needed subset)",
+        "No audit trail (can't track what data was accessed or used)",
+        "Manual approval workflows (security team bottleneck)",
+        "Compliance risk (sensitive PII accessible without proper controls)",
+        "Access expiration manual (DBA must remember to revoke after 30 days)"
+      ],
+      "metrics": ["Access request time: 7-10 days", "Access requests: 50-100/month (IT bottleneck)", "Over-provisioning: 80% (full table access)", "Compliance risks: High (manual controls)"]
+    },
+    "agentic": {
+      "workflow": "1. Marketing analyst needs customer emails, requests access via Data Governance Agent self-service portal. 2. Agent applies automated governance policies: 'Customer emails are PII, analyst role permitted for email campaigns with: automatic masking of last 4 characters, row-level security (only opted-in customers), 30-day auto-expiration, query logging enabled'. 3. Agent provisions access in 5 minutes: creates virtual view with masking rules, grants read permissions, schedules auto-revocation. 4. Analyst queries customer emails, sees masked data: 'john.doe@exam***.com', sufficient for campaign upload to email platform. 5. Agent logs all queries: audit trail shows analyst accessed 50K customer records, extracted to CSV, uploaded to Mailchimp (integrated monitoring). 6. After 30 days, agent auto-revokes access (no manual DBA intervention). 7. 80-90% more analysts have self-service data access, 99%+ compliance (automated controls), 70% reduction in IT access requests.",
+      "agents": {
+        "orchestrator": "BI Orchestration Agent",
+        "superAgents": ["Data Governance Agent", "Access Provisioning Agent", "Compliance Monitoring Agent"],
+        "utilityAgents": ["Policy Engine", "Masking Service", "Audit Logger", "Identity Management API"]
+      },
+      "dataSources": [
+        "Data catalog with sensitivity classifications (PII, financial, proprietary)",
+        "Governance policies by role and data type",
+        "User directory and role-based access controls (RBAC)",
+        "Masking and anonymization rules",
+        "Row-level and column-level security policies",
+        "Audit logs and query monitoring",
+        "Compliance frameworks (GDPR, CCPA, SOX, HIPAA)",
+        "Access expiration and review schedules"
+      ],
+      "benefits": [
+        "95% access time reduction (5 min vs 7-10 days)",
+        "80-90% increase in data access (self-service vs IT bottleneck)",
+        "99%+ compliance (automated governance controls)",
+        "70% reduction in IT access requests (50-100/month → 15-30/month)",
+        "Fine-grained access (masked data, row-level security vs full table)",
+        "Complete audit trail (query logging, data lineage, usage monitoring)"
+      ],
+      "metrics": ["Access request time: 5 minutes (self-service)", "Access requests: 15-30/month (complex cases only)", "Over-provisioning: 10% (fine-grained access)", "Compliance risks: Low (automated controls)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy data catalog with sensitivity classifications for top 20 datasets", "Implement self-service access with automated approval workflows for non-PII data", "Enable row-level security and data masking for PII/sensitive data"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Data catalog with metadata and sensitivity tags", "Data governance platform (Collibra, Alation, Informatica)", "Role-based access control (RBAC) framework", "Data masking and anonymization tools", "Row-level and column-level security in data platform", "Audit logging and query monitoring", "Integration with identity management (AD, Okta)", "Compliance policy engine (GDPR, CCPA rules)"]
+    },
+    "icon": "shield-check",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

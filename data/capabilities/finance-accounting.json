@@ -1,0 +1,1023 @@
+[
+  {
+    "id": "capability-general-ledger-financial-close",
+    "type": "capability",
+    "level": 3,
+    "label": "General Ledger & Financial Close",
+    "description": "Transforms month-end close from a 7-15 day manual process to a continuous 1-2 day automated close with real-time financial position visibility through AI-powered reconciliation, variance analysis, and consolidation.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Auto-Posting & Journal Entry Automation",
+      "Intelligent Reconciliation",
+      "Anomaly Detection & Investigation",
+      "Consolidation & Elimination",
+      "Variance Explanation",
+      "Close Checklist Management",
+      "Financial Statement Generation"
+    ],
+    "traditionalApproach": {
+      "description": "Manual month-end close process with manual journal entries, spreadsheet reconciliations, and delayed financial insights",
+      "characteristics": [
+        "Month-end close with manual reconciliations",
+        "Manual journal entries in Excel posted to ERP",
+        "Account reconciliations not complete until month-end",
+        "Variance analysis done manually comparing actuals vs budget",
+        "Consolidation across entities with manual eliminations"
+      ],
+      "constraints": [
+        "No real-time financial position visibility",
+        "Consolidation bottleneck for multi-entity organizations",
+        "Limited audit trail with Excel version control"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-glfc-001",
+          "metric": "Close Cycle Time (Traditional)",
+          "value": "7-15 days",
+          "source": "TBD: [SME to provide source, e.g., 'Month-end close cycle benchmarks']"
+        },
+        {
+          "id": "bench-glfc-002",
+          "metric": "Manual Journal Entry Error Rate (Traditional)",
+          "value": "10-15%",
+          "source": "TBD: [SME to provide source, e.g., 'Accounting error rate studies']"
+        },
+        {
+          "id": "bench-glfc-003",
+          "metric": "Close Team Overtime (Traditional)",
+          "value": "40-60 hours per month",
+          "source": "TBD: [SME to provide source, e.g., 'Accounting staff overtime benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous close with real-time financial position visibility, automated reconciliations, and shortened cycle through AI-powered automation",
+      "characteristics": [
+        "Auto-Posting Agent posts recurring journal entries automatically",
+        "Reconciliation Agent reconciles accounts daily",
+        "Anomaly Detection Agent flags unusual transactions in real-time",
+        "Accrual & Deferral Agent calculates and posts automatically",
+        "Consolidation Agent eliminates intercompany transactions continuously",
+        "Variance Analysis Agent explains variances automatically",
+        "Financial statements available within days of month-end"
+      ],
+      "benefits": [
+        "Reduced close cycle and improved accuracy",
+        "Real-time financial position visibility",
+        "Eliminated close team overtime",
+        "Enhanced financial statement quality"
+      ],
+      "agents": [
+        "Financial Close Orchestration Agent",
+        "Auto-Posting & Journal Entry Agent",
+        "Intelligent Reconciliation Agent",
+        "Anomaly Detection & Investigation Agent",
+        "Consolidation & Elimination Agent",
+        "Variance Explanation Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Close Cycle Time Reduction",
+          "value": "85% (1-2 days vs 7-15 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous reconciliation and automated journal entries']",
+          "sourceBenchmark": "bench-glfc-001"
+        },
+        {
+          "metric": "Reconciliation Error Reduction",
+          "value": "90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated matching with exception-only review']",
+          "sourceBenchmark": "bench-glfc-002"
+        },
+        {
+          "metric": "Manual Journal Entry Reduction",
+          "value": "70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated posting of recurring entries']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Close Team Overtime Elimination",
+          "value": "Eliminated (vs 40-60 hours/month)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous close vs month-end crunch']",
+          "sourceBenchmark": "bench-glfc-003"
+        },
+        {
+          "metric": "Financial Statement Accuracy (First Pass)",
+          "value": "99%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated generation with real-time data']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Auto-posting of recurring journal entries (rent, depreciation)",
+        "Bank reconciliation automation (largest volume)",
+        "Close checklist and task management"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Modern ERP (or willingness to upgrade)",
+        "Clean chart of accounts",
+        "Documented close process",
+        "Controller/CFO sponsorship",
+        "Bank integration APIs"
+      ]
+    },
+    "icon": "calculator",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-accounts-payable-receivable",
+    "type": "capability",
+    "level": 3,
+    "label": "Accounts Payable & Receivable",
+    "description": "Automates AP/AR processes from invoice capture through payment/collection with AI-powered OCR, 3-way matching, payment optimization, and intelligent collections.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 10,
+    "keyFunctions": [
+      "Invoice OCR & Data Extraction (AP)",
+      "3-Way Match & Exception Management (AP)",
+      "Payment Optimization & Execution (AP)",
+      "Invoice Generation & Delivery (AR)",
+      "Intelligent Cash Application (AR)",
+      "Collections & Credit Management (AR)",
+      "Vendor Management",
+      "Customer Payment Tracking",
+      "Duplicate Detection",
+      "Analytics & Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Manual invoice data entry and processing with email-based approvals taking days per invoice and high error rates",
+      "characteristics": [
+        "Invoices received via email, mail, fax requiring manual data entry",
+        "3-way match performed manually with exceptions",
+        "Approval routing via email with delays",
+        "Payment batch prepared weekly manually",
+        "Cash application done manually with errors",
+        "Collections calls for overdue invoices reactive"
+      ],
+      "constraints": [
+        "High FTE cost for data entry",
+        "Approval delays from email chains, managers on vacation",
+        "Payment timing not optimized (missed early discounts, late fees)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-apar-001",
+          "metric": "Invoice Data Entry Time (Traditional)",
+          "value": "3-5 minutes per invoice",
+          "source": "TBD: [SME to provide source, e.g., 'AP processing time benchmarks']"
+        },
+        {
+          "id": "bench-apar-002",
+          "metric": "Invoice Processing Time (Traditional)",
+          "value": "7-10 days",
+          "source": "TBD: [SME to provide source, e.g., 'AP cycle time benchmarks']"
+        },
+        {
+          "id": "bench-apar-003",
+          "metric": "3-Way Match Exception Rate (Traditional)",
+          "value": "15-20%",
+          "source": "TBD: [SME to provide source, e.g., 'Invoice matching accuracy studies']"
+        },
+        {
+          "id": "bench-apar-004",
+          "metric": "Days Sales Outstanding (Traditional)",
+          "value": "45-60 days",
+          "source": "TBD: [SME to provide source, e.g., 'DSO benchmarks']"
+        },
+        {
+          "id": "bench-apar-005",
+          "metric": "Invoice Processing Cost (Traditional)",
+          "value": "$10-$15 per invoice",
+          "source": "TBD: [SME to provide source, e.g., 'AP cost benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered touchless AP/AR with OCR extraction, automated matching, payment optimization, and proactive collections",
+      "characteristics": [
+        "Invoice Capture Agent receives invoices from all channels",
+        "OCR & Extraction Agent extracts invoice data automatically",
+        "3-Way Match Agent auto-matches with exception-only review",
+        "Payment Optimization Agent schedules payments to maximize cash",
+        "Cash Application Agent matches payments to invoices automatically",
+        "Collections Prioritization Agent identifies high-risk overdue accounts",
+        "Dunning Agent sends automated payment reminders"
+      ],
+      "benefits": [
+        "Reduced invoice processing cost and time",
+        "Improved 3-way match automation and discount capture",
+        "Enhanced cash application and reduced DSO",
+        "Lower collections FTE and bad debt"
+      ],
+      "agents": [
+        "AP/AR Orchestration Agent",
+        "Invoice OCR & Data Extraction Agent",
+        "3-Way Match & Exception Management Agent",
+        "Payment Optimization & Execution Agent",
+        "Intelligent Cash Application Agent",
+        "Collections & Credit Management Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Invoice Processing Cost Reduction",
+          "value": "70% ($3-$5 vs $10-$15 per invoice)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on OCR automation eliminating manual data entry']",
+          "sourceBenchmark": "bench-apar-005"
+        },
+        {
+          "metric": "Processing Time Reduction",
+          "value": "80% (1-2 days vs 7-10 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated matching and approval workflows']",
+          "sourceBenchmark": "bench-apar-002"
+        },
+        {
+          "metric": "3-Way Match Automation",
+          "value": "85% (exception-only review)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered matching with tolerance thresholds']",
+          "sourceBenchmark": "bench-apar-003"
+        },
+        {
+          "metric": "Early Payment Discount Capture",
+          "value": "95%+ (2-3% savings)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized payment timing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Cash Application Automation",
+          "value": "90%+ (exact matches)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI matching payments to invoices']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "DSO Reduction",
+          "value": "30-40% (30-40 days vs 45-60 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated dunning and collections prioritization']",
+          "sourceBenchmark": "bench-apar-004"
+        },
+        {
+          "metric": "Collections FTE Reduction",
+          "value": "50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated payment reminders and prioritization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Bad Debt Reduction",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive collections and credit risk management']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Invoice OCR and data extraction (AP)",
+        "Cash application automation for exact matches (AR)",
+        "Automated payment reminders (AR dunning)"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Modern ERP with API",
+        "Bank integration for payments",
+        "Clean vendor and customer master data",
+        "AP/AR team buy-in"
+      ]
+    },
+    "icon": "receipt-tax",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-budgeting-forecasting-fpa",
+    "type": "capability",
+    "level": 3,
+    "label": "Budgeting & Forecasting (FP&A)",
+    "description": "Replaces static annual budgets with continuous rolling forecasts and driver-based planning using AI predictions and scenario modeling.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Driver-Based Forecasting",
+      "Rolling Forecast Management",
+      "Scenario Modeling & What-If Analysis",
+      "Collaborative Planning",
+      "Automated Consolidation & Validation",
+      "Predictive Analytics & Insights",
+      "Budget vs Actual Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Annual budget cycle with spreadsheet consolidation and limited scenario modeling",
+      "characteristics": [
+        "Annual budget cycle",
+        "Budget templates sent to departments via Excel",
+        "Manual budget consolidation in spreadsheets",
+        "Budget negotiations",
+        "Quarterly forecast updates",
+        "No driver-based forecasting"
+      ],
+      "constraints": [
+        "Opportunity cost of long budget cycle",
+        "Spreadsheet consolidation error-prone",
+        "Budget disconnected from actuals (separate systems)",
+        "Limited scenario modeling capability",
+        "No real-time forecast visibility",
+        "Budget becomes stale quickly"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-fpa-001",
+          "metric": "Annual Budget Cycle Time (Traditional)",
+          "value": "3-6 months",
+          "source": "TBD: [SME to provide source, e.g., 'FP&A budget cycle benchmarks']"
+        },
+        {
+          "id": "bench-fpa-002",
+          "metric": "Forecast Accuracy (Traditional)",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Forecast accuracy studies']"
+        },
+        {
+          "id": "bench-fpa-003",
+          "metric": "FP&A Time on Analysis (Traditional)",
+          "value": "30-50%",
+          "source": "TBD: [SME to provide source, e.g., 'FP&A time allocation studies']"
+        },
+        {
+          "id": "bench-fpa-004",
+          "metric": "Scenarios Modeled per Year (Traditional)",
+          "value": "1-3",
+          "source": "TBD: [SME to provide source, e.g., 'Scenario planning benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous planning with rolling forecasts, driver-based modeling, and instant scenario analysis",
+      "characteristics": [
+        "Driver-Based Forecasting Agent models key business drivers automatically",
+        "Rolling Forecast Agent maintains forecast updated monthly",
+        "Scenario Modeling Agent creates multiple scenarios instantly",
+        "Budget Collaboration Agent enables department input via web portal",
+        "Consolidation Agent auto-aggregates and validates",
+        "Predictive Analytics Agent forecasts performance based on trends",
+        "Self-service analytics via natural language queries"
+      ],
+      "benefits": [
+        "Reduced budget cycle and improved forecast accuracy",
+        "Rolling forecast enables agility",
+        "Increased FP&A time on analysis",
+        "Enhanced scenario modeling capability",
+        "Self-service analytics and manager access"
+      ],
+      "agents": [
+        "FP&A Planning & Forecasting Orchestration Agent",
+        "Driver-Based Forecasting Agent",
+        "Rolling Forecast & Scenario Agent",
+        "Collaborative Planning Agent",
+        "Automated Consolidation & Validation Agent",
+        "Predictive Analytics & Insights Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Budget Cycle Reduction",
+          "value": "85% (2-4 weeks vs 3-6 months)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated consolidation and driver-based modeling']",
+          "sourceBenchmark": "bench-fpa-001"
+        },
+        {
+          "metric": "Forecast Accuracy Improvement",
+          "value": "85-95% (vs 70-80%, +15-25 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI predictive analytics and driver-based forecasting']",
+          "sourceBenchmark": "bench-fpa-002"
+        },
+        {
+          "metric": "FP&A Time on Analysis",
+          "value": "60-70% (vs 30-50%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation freeing time from data collection and consolidation']",
+          "sourceBenchmark": "bench-fpa-003"
+        },
+        {
+          "metric": "Scenarios Modeled per Year",
+          "value": "10-20+ (vs 1-3)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on instant scenario modeling capability']",
+          "sourceBenchmark": "bench-fpa-004"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Rolling 12-month forecast (replace annual budget)",
+        "Driver-based revenue forecast (vs spreadsheet extrapolation)",
+        "Self-service budget vs actual reporting"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Modern FP&A platform (Anaplan, Adaptive Insights)",
+        "Clean historical actuals (3+ years)",
+        "Key business drivers identified",
+        "Executive sponsorship (CFO + CEO)",
+        "Willingness to shift from annual budget to rolling forecast"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-treasury-cash-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Treasury & Cash Management",
+    "description": "Optimizes enterprise cash through real-time positioning, predictive forecasting, automated investment, and FX risk management.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Real-Time Cash Positioning",
+      "Predictive Cash Forecasting",
+      "Cash & Investment Optimization",
+      "Payment Optimization & Execution",
+      "FX Risk Management",
+      "Fraud Detection & Prevention",
+      "Bank Fee Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual daily cash review with spreadsheet forecasting and reactive investment decisions",
+      "characteristics": [
+        "Daily cash position review via manual download of bank statements",
+        "Cash forecast in spreadsheet (weekly rolling, manual updates)",
+        "Investment decisions made manually by CFO/Treasurer",
+        "Payment approvals via email",
+        "FX hedging done manually with banks",
+        "Bank fee reconciliation quarterly in spreadsheets"
+      ],
+      "constraints": [
+        "No real-time cash visibility (bank statements lag)",
+        "Manual investment decisions slow (miss opportunities)",
+        "FX risk not hedged systematically"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-tcm-001",
+          "metric": "Cash Forecast Accuracy (Traditional)",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Cash forecasting accuracy benchmarks']"
+        },
+        {
+          "id": "bench-tcm-002",
+          "metric": "Idle Cash (Traditional)",
+          "value": "10-20% of total cash not invested",
+          "source": "TBD: [SME to provide source, e.g., 'Cash utilization benchmarks']"
+        },
+        {
+          "id": "bench-tcm-003",
+          "metric": "Bank Fees (Traditional)",
+          "value": "0.1-0.3% of cash managed",
+          "source": "TBD: [SME to provide source, e.g., 'Bank fee benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Real-time cash visibility with AI forecasting, automated investment, and proactive risk management",
+      "characteristics": [
+        "Cash Positioning Agent aggregates cash across all bank accounts in real-time",
+        "Cash Forecast Agent predicts cash inflows/outflows",
+        "Cash Optimization Agent invests idle cash automatically",
+        "Payment Execution Agent initiates payments based on optimization",
+        "FX Hedging Agent monitors exposure, executes hedges automatically",
+        "Bank Fee Optimization Agent analyzes fees, negotiates with banks",
+        "Fraud Detection Agent flags suspicious payments before execution"
+      ],
+      "benefits": [
+        "Real-time cash visibility and improved forecast accuracy",
+        "Reduced idle cash and increased interest income",
+        "Lower bank fees and FX losses",
+        "Enhanced fraud prevention"
+      ],
+      "agents": [
+        "Treasury & Cash Management Orchestration Agent",
+        "Real-Time Cash Positioning Agent",
+        "Predictive Cash Forecasting Agent",
+        "Cash & Investment Optimization Agent",
+        "Payment Optimization & Execution Agent",
+        "FX Risk Management Agent",
+        "Fraud Detection & Prevention Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Cash Forecast Accuracy Improvement",
+          "value": "90-95% (vs 70-80%, +15 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI predicting AP/AR cash inflows/outflows']",
+          "sourceBenchmark": "bench-tcm-001"
+        },
+        {
+          "metric": "Idle Cash Reduction",
+          "value": "<5% (vs 10-20%, -50%+)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated investment optimization']",
+          "sourceBenchmark": "bench-tcm-002"
+        },
+        {
+          "metric": "Interest Income Increase",
+          "value": "50-100%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized cash deployment and investment']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Bank Fee Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on negotiation and optimization']",
+          "sourceBenchmark": "bench-tcm-003"
+        },
+        {
+          "metric": "FX Loss Reduction",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on systematic hedging strategy']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Fraud Loss Reduction",
+          "value": "80%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time fraud detection before payment execution']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Real-time cash positioning (bank API integration)",
+        "Cash forecast model (AP/AR-based)",
+        "Auto-investment of idle cash"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Treasury management system (Kyriba, GTreasury)",
+        "Bank APIs (not all banks have robust APIs)",
+        "Investment policy (approved investments)",
+        "FX hedging policy",
+        "Fraud controls and policies"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-tax-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Tax Management",
+    "description": "Automates tax compliance, provision calculations, and optimization across income tax, sales tax, and transfer pricing with AI-powered tax planning.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Tax Provision & Reporting",
+      "Sales & Use Tax Compliance",
+      "Tax Return Preparation",
+      "Transfer Pricing & Intercompany",
+      "Tax Audit & Controversy Management",
+      "Tax Planning & Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual tax calculations in spreadsheets with outsourced return preparation and reactive audit response",
+      "characteristics": [
+        "Tax calculations done in spreadsheets",
+        "Sales tax collected but compliance manual",
+        "Tax returns prepared by external accountants/tax firms",
+        "Transfer pricing for multi-entity orgs done annually",
+        "Tax audits managed reactively",
+        "Tax planning opportunistic"
+      ],
+      "constraints": [
+        "Sales tax compliance complex",
+        "No proactive tax optimization",
+        "Audit response disruptive",
+        "Transfer pricing not updated frequently (compliance risk)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-tm-001",
+          "metric": "Tax Provision Accuracy (Traditional)",
+          "value": "80-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Tax provision accuracy benchmarks']"
+        },
+        {
+          "id": "bench-tm-002",
+          "metric": "Tax Return Outsourcing Cost (Traditional)",
+          "value": "$10K-$100K+ per entity",
+          "source": "TBD: [SME to provide source, e.g., 'Tax preparation cost benchmarks']"
+        },
+        {
+          "id": "bench-tm-003",
+          "metric": "Tax Audit Response Time (Traditional)",
+          "value": "10-20 days",
+          "source": "TBD: [SME to provide source, e.g., 'Tax audit preparation time studies']"
+        },
+        {
+          "id": "bench-tm-004",
+          "metric": "Tax Credits Captured (Traditional)",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Tax credit capture rate benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated tax compliance with real-time provision calculations, AI-powered return preparation, and proactive tax planning",
+      "characteristics": [
+        "Tax Provision Agent calculates income tax provision automatically (ASC 740)",
+        "Sales Tax Compliance Agent tracks nexus, applies correct rates, files returns",
+        "Tax Return Automation Agent prepares draft returns from ERP data",
+        "Transfer Pricing Agent calculates arm's-length pricing continuously",
+        "Tax Audit Defense Agent maintains audit trail, responds to inquiries",
+        "Tax Planning & Optimization Agent identifies tax savings opportunities"
+      ],
+      "benefits": [
+        "Improved tax provision accuracy and compliance cost reduction",
+        "Reduced tax return prep time and enhanced credit capture",
+        "Faster audit response and proactive tax planning"
+      ],
+      "agents": [
+        "Tax Management Orchestration Agent",
+        "Tax Provision & Reporting Agent",
+        "Sales & Use Tax Compliance Agent",
+        "Tax Return Preparation Agent",
+        "Transfer Pricing & Intercompany Agent",
+        "Tax Audit & Controversy Agent",
+        "Tax Planning & Optimization Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Tax Provision Accuracy Improvement",
+          "value": "95-99% (vs 80-90%, +10 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated ASC 740 calculations']",
+          "sourceBenchmark": "bench-tm-001"
+        },
+        {
+          "metric": "Sales Tax Compliance Cost Reduction",
+          "value": "60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated nexus tracking and rate application']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Tax Return Prep Time Reduction",
+          "value": "70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on draft returns generated from ERP data']",
+          "sourceBenchmark": "bench-tm-002"
+        },
+        {
+          "metric": "Tax Credits Captured Improvement",
+          "value": "90%+ (vs 50-70%, +20-40 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI identification of R&D and other tax credits']",
+          "sourceBenchmark": "bench-tm-004"
+        },
+        {
+          "metric": "Audit Response Time Reduction",
+          "value": "70% (2-5 days vs 10-20 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated audit trail and documentation']",
+          "sourceBenchmark": "bench-tm-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Sales tax automation (Avalara, Vertex)",
+        "Tax provision software (automate ASC 740 calc)",
+        "R&D tax credit identification"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Clean GL data (chart of accounts mapped for tax)",
+        "Tax compliance platform",
+        "CPA/tax advisor partnership",
+        "Multi-state nexus analysis"
+      ]
+    },
+    "icon": "document-report",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-financial-reporting-consolidation",
+    "type": "capability",
+    "level": 3,
+    "label": "Financial Reporting & Consolidation",
+    "description": "Generates GAAP-compliant financial statements with automated consolidation, narrative insights, and self-service analytics.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Automated Financial Statement Generation",
+      "Multi-Entity Consolidation",
+      "Executive Reporting & Dashboards",
+      "Natural Language Insights",
+      "Board Reporting & Governance",
+      "Self-Service Analytics & Query"
+    ],
+    "traditionalApproach": {
+      "description": "Excel-based financial statement preparation with manual consolidation and board packages",
+      "characteristics": [
+        "Financial statements prepared in Excel",
+        "Multi-entity consolidation manual",
+        "Currency translation for international entities in spreadsheets",
+        "Management reports manually created",
+        "Board reporting packages assembled manually",
+        "Regulatory filings prepared manually"
+      ],
+      "constraints": [
+        "Excel consolidation error-prone",
+        "No real-time reporting (month-end only)",
+        "Manual report creation takes hours",
+        "Limited drill-down capability",
+        "Report distribution via email (security risk, version control)",
+        "No self-service (everyone asks finance for reports)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-frc-001",
+          "metric": "Board Package Prep Time (Traditional)",
+          "value": "10-20 hours per quarter",
+          "source": "TBD: [SME to provide source, e.g., 'Board reporting preparation time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated GAAP-compliant statement generation with real-time dashboards and natural language insights",
+      "characteristics": [
+        "Financial Statement Generation Agent creates statements automatically",
+        "Consolidation Agent aggregates multi-entity, eliminates intercompany",
+        "Management Reporting Agent generates executive dashboards and reports",
+        "Narrative Generation Agent writes variance commentary in natural language",
+        "Board Reporting Agent assembles board package automatically",
+        "Self-Service Analytics Agent enables natural language queries"
+      ],
+      "benefits": [
+        "Rapid financial statement generation and eliminated consolidation errors",
+        "Real-time reporting and reduced board package prep time",
+        "High self-service adoption and automated narrative insights"
+      ],
+      "agents": [
+        "Financial Reporting & Consolidation Orchestration Agent",
+        "Automated Financial Statement Agent",
+        "Multi-Entity Consolidation Agent",
+        "Executive Reporting & Dashboard Agent",
+        "Natural Language Insights Agent",
+        "Board Reporting & Governance Agent",
+        "Self-Service Analytics & Query Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Financial Statement Generation Time Reduction",
+          "value": "90% (minutes vs hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated generation from ERP data']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Board Package Prep Time Reduction",
+          "value": "80% (2-4 hours vs 10-20 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated assembly and real-time dashboards']",
+          "sourceBenchmark": "bench-frc-001"
+        },
+        {
+          "metric": "Self-Service Adoption",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on natural language query capability reducing finance as bottleneck']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Narrative Insights Time Savings",
+          "value": "5-10 hours per month",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-generated variance commentary']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Automated financial statement generation",
+        "Executive dashboard (real-time KPIs)",
+        "Board portal (secure distribution)"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Modern ERP with multi-entity capability",
+        "Clean chart of accounts (consistent across entities)",
+        "Consolidation platform",
+        "BI platform"
+      ]
+    },
+    "icon": "presentation-chart-line",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-revenue-recognition",
+    "type": "capability",
+    "level": 3,
+    "label": "Revenue Recognition",
+    "description": "Automates ASC 606/IFRS 15 revenue recognition with AI contract analysis, deferred revenue management, and real-time visibility.",
+    "parentDomain": "domain-payments-finance",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "All"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Contract Analysis & Allocation",
+      "Deferred Revenue Management",
+      "Revenue Reporting & Compliance",
+      "Performance Obligation Tracking",
+      "Audit Trail & Documentation"
+    ],
+    "traditionalApproach": {
+      "description": "Manual contract review with Excel-based deferred revenue schedules",
+      "characteristics": [
+        "Revenue accountant manually reviews contracts",
+        "Revenue allocation to performance obligations in spreadsheet (ASC 606)",
+        "Deferred revenue schedules maintained in Excel",
+        "Journal entries posted manually each month",
+        "Revenue reports manually created",
+        "Audit trail limited (Excel version control)"
+      ],
+      "constraints": [
+        "No real-time deferred revenue visibility",
+        "Compliance risk (ASC 606, IFRS 15)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-rr-001",
+          "metric": "Contract Review Time (Traditional)",
+          "value": "30-60 minutes per contract",
+          "source": "TBD: [SME to provide source, e.g., 'Revenue accounting contract review time benchmarks']"
+        },
+        {
+          "id": "bench-rr-002",
+          "metric": "Revenue Allocation Accuracy (Traditional)",
+          "value": "85-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Revenue allocation accuracy benchmarks']"
+        },
+        {
+          "id": "bench-rr-003",
+          "metric": "Revenue Close Cycle (Traditional)",
+          "value": "5-10 days",
+          "source": "TBD: [SME to provide source, e.g., 'Revenue close cycle benchmarks']"
+        },
+        {
+          "id": "bench-rr-004",
+          "metric": "Audit Preparation Time (Traditional)",
+          "value": "20-40 hours per year",
+          "source": "TBD: [SME to provide source, e.g., 'Revenue audit preparation time studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered contract analysis with automated deferred revenue scheduling and real-time compliance reporting",
+      "characteristics": [
+        "Contract Analysis & Allocation Agent extracts terms and allocates revenue",
+        "Deferred Revenue Management Agent automates schedules and calculations",
+        "Revenue Reporting & Compliance Agent generates ASC 606 disclosures",
+        "Real-time revenue dashboards (recognized, deferred, contracted not started)",
+        "Audit trail automated with reasoning documentation"
+      ],
+      "benefits": [
+        "Reduced contract review time and revenue close cycle",
+        "Improved deferred revenue accuracy",
+        "Real-time revenue visibility",
+        "Reduced audit preparation time"
+      ],
+      "agents": [
+        "Revenue Recognition Orchestration Agent",
+        "Contract Analysis & Allocation Agent",
+        "Deferred Revenue Management Agent",
+        "Revenue Reporting & Compliance Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Contract Review Time Reduction",
+          "value": "70% (10-20 min vs 30-60 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI extraction of terms and automated allocation']",
+          "sourceBenchmark": "bench-rr-001"
+        },
+        {
+          "metric": "Revenue Close Cycle Reduction",
+          "value": "70% (1-2 days vs 5-10 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated deferred revenue calculations']",
+          "sourceBenchmark": "bench-rr-003"
+        },
+        {
+          "metric": "Deferred Revenue Accuracy Improvement",
+          "value": "99%+ (vs 85-90%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated scheduling and calculations']",
+          "sourceBenchmark": "bench-rr-002"
+        },
+        {
+          "metric": "Audit Prep Time Reduction",
+          "value": "80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated audit trail documentation']",
+          "sourceBenchmark": "bench-rr-004"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Automate recurring revenue recognition (subscriptions)",
+        "Real-time deferred revenue dashboard",
+        "Contract repository (centralized storage)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Revenue recognition platform (Zuora RevPro, Zone)",
+        "Contract management system",
+        "Clean revenue data (historical contracts)",
+        "ASC 606 expertise"
+      ]
+    },
+    "icon": "cash",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

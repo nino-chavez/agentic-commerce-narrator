@@ -1,0 +1,118 @@
+[
+  {
+    "id": "capability-omnichannel-commerce",
+    "type": "capability",
+    "level": 3,
+    "label": "Omnichannel Commerce",
+    "description": "Unified commerce experiences across digital and physical channels with seamless customer journeys.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 8,
+    "keyFunctions": [
+      "Unified Cart & Checkout",
+      "Buy Online Pickup In-Store (BOPIS)",
+      "Buy Online Return In-Store (BORIS)",
+      "Endless Aisle / Ship-from-Store",
+      "Clienteling & Personal Shopping",
+      "Store Inventory Visibility",
+      "Cross-Channel Order Management",
+      "Channel Attribution & Analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Siloed channel systems with manual coordination resulting in revenue leakage and poor customer experience.",
+      "characteristics": [
+        "Separate POS, eCommerce, and mobile systems",
+        "No real-time inventory visibility across channels",
+        "Manual order routing and fulfillment orchestration",
+        "Inconsistent pricing and promotions across channels",
+        "Limited customer identity resolution"
+      ],
+      "constraints": [
+        "Channel conflict and inconsistent experiences",
+        "Revenue leakage from stockouts (online shows in-stock, store doesn't have)",
+        "Poor customer experience (can't return online orders in-store)",
+        "High operational cost (duplicate inventory, inefficient fulfillment)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-omni-001",
+          "metric": "Revenue Leakage from Stockouts",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source, e.g., 'Omnichannel retail revenue leakage study']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-orchestrated unified commerce with intelligent fulfillment achieving revenue lift, cost reduction, and customer satisfaction improvements.",
+      "characteristics": [
+        "Single unified commerce platform with AI orchestration",
+        "Real-time inventory positioning across all nodes",
+        "AI-driven fulfillment optimization (cost, speed, carbon)",
+        "Dynamic pricing and promotion consistency",
+        "Unified customer identity and preferences"
+      ],
+      "benefits": [
+        "Revenue lift from inventory availability",
+        "Significant reduction in fulfillment costs",
+        "Improvement in customer satisfaction (NPS)",
+        "Margin improvement from optimized fulfillment"
+      ],
+      "projections": [
+        {
+          "metric": "Revenue Lift from Inventory Availability",
+          "value": "10-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time inventory visibility eliminating online stockouts and enabling endless aisle']",
+          "sourceBenchmark": "bench-omni-001"
+        },
+        {
+          "metric": "Fulfillment Cost Reduction",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized fulfillment routing (ship-from-store, store pickup) reducing shipping costs and inventory duplication']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Satisfaction (NPS) Improvement",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on seamless cross-channel experiences (BOPIS, BORIS, unified cart) reducing friction']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Margin Improvement from Optimized Fulfillment",
+          "value": "5-10%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent fulfillment optimization balancing cost, speed, and inventory positioning']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Omnichannel Orchestrator",
+        "Inventory Positioning Agent",
+        "Fulfillment Optimization Agent",
+        "Channel Attribution Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable store inventory visibility on eCommerce",
+        "Implement BOPIS for top 20% of SKUs",
+        "Unified customer identity across channels"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Unified commerce platform",
+        "Real-time inventory system",
+        "Order management system (OMS)"
+      ]
+    },
+    "icon": "shopping-bag",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

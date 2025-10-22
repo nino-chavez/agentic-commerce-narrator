@@ -1,0 +1,45 @@
+{
+  "id": "industry-travel",
+  "type": "industry",
+  "label": "Travel",
+  "description": "Airlines, hotels, car rentals, cruise lines, OTAs, and travel companies facilitating leisure and business travel, characterized by inventory perishability, extreme price sensitivity, and complex distribution networks.",
+  "marketSize": "$1.9 trillion (global travel market, 2023)",
+  "growthRate": "8-10% annually (post-pandemic recovery, global travel)",
+  "characteristics": [
+    "Extreme inventory perishability (unsold seats/rooms = $0 revenue)",
+    "Capital-intensive operations ($80M-$450M per aircraft, $150K-$500K per hotel room)",
+    "High distribution costs (GDS fees, OTA commissions = 15-25% of revenue)",
+    "Complex revenue management (300+ fare classes, dynamic pricing)",
+    "Operational intensity (crew scheduling 15K-60K employees, maintenance requirements)",
+    "Loyalty program economics ($20B+ annual frequent flyer revenue)",
+    "Regulatory complexity (FAA, DOT, TSA, international aviation authorities)"
+  ],
+  "segments": [
+    "Legacy Airlines (American, Delta, United, British Airways) - Hub-and-spoke networks, premium cabins, global alliances",
+    "Low-Cost Carriers (Southwest, Spirit, Ryanair, EasyJet) - Point-to-point, single aircraft type, ancillary revenue focus",
+    "Regional Airlines (SkyWest, Republic, Endeavor) - Operate for mainline carriers, smaller aircraft",
+    "Full-Service Hotels (Marriott, Hilton, Hyatt, IHG) - Multiple brands, loyalty programs, franchised/managed properties",
+    "Limited-Service Hotels (Hampton, Fairfield, Holiday Inn Express) - Smaller footprint, breakfast focus",
+    "Cruise Lines (Carnival, Royal Caribbean, Norwegian) - Floating resorts, complex itineraries, onboard revenue",
+    "OTAs (Expedia, Booking.com, Airbnb) - Aggregation model, metasearch, direct booking competition"
+  ],
+  "stats": {
+    "airlineRevenue": "$700B+ (US annual)",
+    "hotelRevenue": "$200B+ (US annual)",
+    "loadFactor": "80-85% traditional, 85-92% agentic",
+    "operatingMargins": "5-10% airlines, 25-35% EBITDA hotels, 30-40% EBITDA OTAs",
+    "distributionCosts": "15-25% of revenue (GDS/OTA commissions)",
+    "crewCosts": "25-35% of operating expense",
+    "disruptionRate": "20-30% of flights affected by weather/mechanical issues",
+    "revenueCapture": "75-85% traditional, 90-98% agentic (of theoretical maximum)",
+    "directBookingShare": "30-50% traditional, 40-60% agentic",
+    "loyaltyMembers": "200M+ US frequent flyer members, 150M+ hotel members"
+  },
+  "createdAt": "2025-01-09T00:00:00Z",
+  "updatedAt": "2025-01-09T00:00:00Z",
+  "version": "1.0.0",
+  "x": 400,
+  "y": 0,
+  "color": "#1E3A8A",
+  "icon": "airplane"
+}

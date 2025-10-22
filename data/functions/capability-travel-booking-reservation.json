@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-multi-modal-trip-search-comparison",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Modal Trip Search & Comparison",
+    "description": "AI-powered search across flights, hotels, and car rentals with intelligent bundling and real-time price comparison delivering 15-25% cost savings through optimal combinations.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer searches flight on airline website, then separately searches hotels on booking site, then car rentals on third site. 2. Customer manually compares prices across 5-10 tabs in browser. 3. Customer calculates total trip cost in spreadsheet or notepad. 4. Customer books each component separately with different confirmations. 5. No bundling discounts or package optimization realized.",
+      "constraints": [
+        "Customer must search 3+ separate websites for complete trip",
+        "Manual comparison across 10-20 browser tabs is time-consuming",
+        "Missed bundling opportunities cost 15-25% in savings",
+        "No optimization for connection times or location proximity",
+        "Price changes between searches lead to abandoned bookings",
+        "90-120 minutes average time to research and book complete trip"
+      ],
+      "metrics": ["Search time: 90-120 min", "Bundle rate: 5-10%", "Price optimization: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Trip Search Agent receives customer input: destination, dates, preferences (direct flights, hotel rating, car size). 2. Multi-Modal Agent simultaneously searches flights (via NDC/GDS), hotels (via APIs), and car rentals across 50+ providers. 3. Bundling Optimization Agent identifies best combinations with connection times, hotel-airport proximity, cost savings. 4. Agent presents top 3-5 optimized packages with clear comparison (total cost, travel time, ratings). 5. Customer selects package and books all components in single transaction.",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Trip Search Agent", "Multi-Modal Agent", "Bundling Optimization Agent"],
+        "utilityAgents": ["NDC/GDS Integration", "Hotel API Aggregator", "Car Rental APIs", "Pricing Engine"]
+      },
+      "dataSources": [
+        "Flight inventory via NDC and GDS (Amadeus, Sabre)",
+        "Hotel availability APIs (Expedia, Booking.com)",
+        "Car rental inventory feeds",
+        "Real-time pricing and availability data",
+        "Customer preference profile and history",
+        "Geographic proximity data (airport-hotel distance)",
+        "Connection time and layover requirements",
+        "Package discount and bundling rules"
+      ],
+      "benefits": [
+        "15-25% cost savings through intelligent bundling vs separate bookings",
+        "90% time reduction (10-15 min vs 90-120 min)",
+        "Optimized itineraries with minimal connection times",
+        "Hotel proximity to airport/destination optimized",
+        "Single transaction vs 3+ separate bookings",
+        "Real-time price guarantees prevent cart abandonment"
+      ],
+      "metrics": ["Search time: 10-15 min", "Bundle rate: 60-75%", "Price optimization: AI-powered"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement flight+hotel bundling for top 10 routes", "Add real-time price comparison across 3 providers"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["NDC/GDS connectivity", "Hotel and car rental API integrations", "Pricing optimization engine", "Single-transaction booking platform"]
+    },
+    "icon": "search",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-packaging-bundling",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Packaging & Bundling",
+    "description": "Real-time package assembly with personalized bundling rules delivering 20-30% ancillary revenue increase through intelligent cross-sell and upsell.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates 3-5 static package deals (e.g., 'Vegas Getaway' with flight+hotel+show tickets). 2. Packages hard-coded with fixed dates, fixed hotels, fixed add-ons. 3. Customer must fit into pre-defined package or book separately. 4. No personalization based on customer preferences or past behavior. 5. Packages updated quarterly, can't respond to demand or inventory.",
+      "constraints": [
+        "3-5 static packages can't serve diverse customer needs",
+        "Fixed packages miss 80%+ of bundling opportunities",
+        "No dynamic pricing based on inventory or demand",
+        "Quarterly updates mean stale packages with poor inventory",
+        "No personalization (same package for honeymoon vs family)",
+        "15-20% ancillary attach rate due to generic bundles"
+      ],
+      "metrics": ["Package variants: 3-5 static", "Ancillary attach: 15-20%", "Personalization: None"]
+    },
+    "agentic": {
+      "workflow": "1. Dynamic Packaging Agent analyzes customer profile: travel purpose (business, leisure, family), past bookings, price sensitivity. 2. Agent assembles personalized package in real-time: base (flight+hotel) + recommended add-ons (tours, insurance, upgrades, transfers). 3. Bundling Rules Engine applies optimal discounts: 10% off hotel when bundled with flight, free breakfast for 3+ night stays. 4. Agent dynamically prices package based on inventory levels and demand forecasting. 5. Upsell Agent suggests relevant add-ons at checkout (lounge access, seat upgrade, early check-in).",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Dynamic Packaging Agent", "Bundling Rules Engine", "Upsell Agent"],
+        "utilityAgents": ["Customer Profile System", "Inventory Management", "Pricing Engine", "Offer Management"]
+      },
+      "dataSources": [
+        "Customer booking history and preferences",
+        "Real-time inventory levels (flights, hotels, activities)",
+        "Demand forecasting and pricing models",
+        "Bundling discount rules and margin targets",
+        "Ancillary product catalog (tours, insurance, transfers)",
+        "Competitive package pricing data",
+        "Customer segment and value tier",
+        "Seasonal and event-driven demand signals"
+      ],
+      "benefits": [
+        "20-30% ancillary revenue increase through intelligent bundling",
+        "Unlimited package variants vs 3-5 static packages",
+        "45-60% ancillary attach rate vs 15-20% traditional",
+        "Dynamic pricing optimizes revenue and inventory",
+        "Personalized packages improve conversion 25-40%",
+        "Real-time adaptation to inventory and demand"
+      ],
+      "metrics": ["Package variants: Unlimited (personalized)", "Ancillary attach: 45-60%", "Personalization: 1:1 individual"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement dynamic flight+hotel bundling with 10% discount", "Add personalized ancillary recommendations at checkout"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer data platform with preferences", "Dynamic pricing engine", "Ancillary product catalog", "Real-time inventory integration"]
+    },
+    "icon": "gift",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-real-time-availability-pricing",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Availability & Pricing",
+    "description": "Live inventory and dynamic pricing with sub-second updates preventing 30-50% cart abandonment from stale pricing and sold-out inventory errors.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer searches flights and sees cached prices from 15-30 minutes ago. 2. Customer selects flight and proceeds to checkout. 3. At checkout, price has changed or seat sold out - error message displayed. 4. Customer must restart search, often encountering different prices again. 5. 30-50% cart abandonment rate due to pricing errors and stale inventory.",
+      "constraints": [
+        "Cached pricing 15-30 minutes stale leads to booking errors",
+        "30-50% cart abandonment when price increases at checkout",
+        "Sold-out inventory not detected until checkout attempt",
+        "Batch inventory updates every 5-15 minutes miss rapid changes",
+        "Peak demand periods overwhelm systems with inventory conflicts",
+        "Customer frustration from repeated search-to-booking failures"
+      ],
+      "metrics": ["Price staleness: 15-30 min", "Cart abandonment: 30-50%", "Booking error rate: 15-25%"]
+    },
+    "agentic": {
+      "workflow": "1. Real-Time Inventory Agent maintains live connection to supplier systems (NDC, GDS, hotel APIs) with sub-second updates. 2. Dynamic Pricing Agent streams real-time fare changes and availability to customer search results. 3. Price Lock Agent guarantees price for 10-15 minutes once customer selects option (prevents mid-booking changes). 4. Availability Validation Agent confirms inventory immediately before payment processing. 5. Agent gracefully handles sold-out scenarios: instant alternative suggestions, waitlist options.",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Real-Time Inventory Agent", "Dynamic Pricing Agent", "Price Lock Agent", "Availability Validation Agent"],
+        "utilityAgents": ["NDC/GDS Gateway", "Cache Management", "Event Stream Processor"]
+      },
+      "dataSources": [
+        "Live NDC/GDS inventory feeds (sub-second)",
+        "Hotel real-time availability APIs",
+        "Dynamic pricing algorithms and fare rules",
+        "Demand signals and booking velocity",
+        "Competitor pricing data",
+        "Seat map and cabin availability",
+        "Fare class inventory levels",
+        "Price history and volatility patterns"
+      ],
+      "benefits": [
+        "5-10% cart abandonment vs 30-50% (70-85% reduction)",
+        "Sub-second price updates vs 15-30 min stale data",
+        "99%+ booking success rate vs 75-85% traditional",
+        "Price lock feature provides customer confidence",
+        "Instant alternative suggestions prevent lost bookings",
+        "Peak period performance maintained with real-time architecture"
+      ],
+      "metrics": ["Price staleness: <1 sec", "Cart abandonment: 5-10%", "Booking error rate: <1%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement 10-minute price lock for selected flights", "Reduce inventory cache from 15 min to 2 min"],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Real-time NDC/GDS connectivity", "Event-driven architecture", "Low-latency caching infrastructure", "High-availability distributed systems"]
+    },
+    "icon": "clock",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-booking-workflow-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Booking Workflow Automation",
+    "description": "End-to-end booking automation with intelligent form filling and passenger data management reducing booking time from 15-20 minutes to 3-5 minutes.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer manually enters passenger details: name, DOB, passport, frequent flyer numbers, TSA PreCheck. 2. Customer re-enters same payment information every booking. 3. Customer must remember and enter corporate travel policy codes. 4. Customer fills out 15-25 form fields per passenger. 5. Form errors require re-submission (incorrect date format, missing required fields).",
+      "constraints": [
+        "15-20 minutes to complete booking due to manual data entry",
+        "Customer must re-enter passenger data for every booking",
+        "Payment information not securely saved (re-entry required)",
+        "10-15% form abandonment due to tedious data entry",
+        "Corporate travelers must manually enter policy codes",
+        "Typos in passenger names cause ticketing issues"
+      ],
+      "metrics": ["Booking time: 15-20 min", "Form abandonment: 10-15%", "Auto-fill rate: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Passenger Profile Agent auto-loads traveler details from customer profile: names, DOB, passport info, Known Traveler Numbers. 2. Auto-Fill Agent populates all form fields instantly with validated data. 3. Payment Vault Agent securely retrieves saved payment methods (PCI-compliant). 4. Corporate Policy Agent auto-applies travel policy rules for business bookings (approved vendors, fare classes). 5. Validation Agent checks passenger data against airline requirements, flags issues before submission.",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Passenger Profile Agent", "Auto-Fill Agent", "Payment Vault Agent", "Corporate Policy Agent", "Validation Agent"],
+        "utilityAgents": ["Customer Data Platform", "Payment Gateway", "Identity Verification", "Policy Engine"]
+      },
+      "dataSources": [
+        "Customer profile with traveler details",
+        "Saved passenger information (family members, colleagues)",
+        "Passport and ID document data",
+        "Frequent flyer and loyalty program numbers",
+        "Securely vaulted payment methods",
+        "Corporate travel policy rules",
+        "Airline passenger data requirements",
+        "TSA PreCheck and Global Entry numbers"
+      ],
+      "benefits": [
+        "70-80% time reduction (3-5 min vs 15-20 min)",
+        "95%+ auto-fill rate eliminates manual data entry",
+        "2-3% form abandonment vs 10-15% traditional",
+        "Zero payment data re-entry (secure vault)",
+        "Corporate policy auto-compliance for business travel",
+        "Pre-validation prevents ticketing errors"
+      ],
+      "metrics": ["Booking time: 3-5 min", "Form abandonment: 2-3%", "Auto-fill rate: 95%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement passenger profile auto-fill for returning customers", "Add payment vault with tokenization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Customer data platform", "PCI-compliant payment vault", "Identity and authentication system", "Profile management capability"]
+    },
+    "icon": "document-text",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-payment-ticketing",
+    "type": "function",
+    "level": 4,
+    "label": "Payment & Ticketing",
+    "description": "Instant ticketing with multi-payment methods and automated ticket delivery reducing payment failures by 60-70% and enabling instant confirmation.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer enters credit card details manually at checkout. 2. Payment gateway processes charge, 8-12% fail due to fraud blocks, expired cards, insufficient funds. 3. Ticketing batch runs every 2-4 hours - customer waits for confirmation. 4. E-tickets emailed 30-90 minutes after payment. 5. Failed payments require customer to restart entire booking process.",
+      "constraints": [
+        "8-12% payment failure rate due to limited recovery options",
+        "Batch ticketing delays confirmation 30-90 minutes",
+        "Single payment method (credit card only in many cases)",
+        "Payment failures require full booking restart",
+        "No real-time fraud detection (manual review delays bookings)",
+        "Corporate split-payment scenarios not supported"
+      ],
+      "metrics": ["Payment failure: 8-12%", "Ticketing time: 30-90 min", "Payment methods: 1-2"]
+    },
+    "agentic": {
+      "workflow": "1. Payment Orchestration Agent offers 8-12 payment methods: credit cards, digital wallets, BNPL, rewards points, corporate cards. 2. Fraud Detection Agent performs real-time scoring, approves 95%+ legitimate transactions instantly. 3. Payment Retry Agent auto-retries failed payments with intelligent fallback (try secondary card, suggest alternative method). 4. Instant Ticketing Agent issues e-ticket within seconds of payment approval. 5. Multi-Channel Delivery Agent sends ticket via email, SMS, mobile app push, and wallet (Apple/Google).",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Payment Orchestration Agent", "Fraud Detection Agent", "Payment Retry Agent", "Instant Ticketing Agent", "Multi-Channel Delivery Agent"],
+        "utilityAgents": ["Payment Gateway", "Fraud Scoring Service", "Ticketing System", "Mobile Wallet APIs"]
+      },
+      "dataSources": [
+        "Multiple payment gateway integrations",
+        "Real-time fraud scoring models",
+        "Customer payment history and risk profile",
+        "Airline ticketing APIs (NDC/GDS)",
+        "Digital wallet integrations (Apple Pay, Google Pay)",
+        "BNPL provider APIs (Affirm, Klarna)",
+        "Corporate payment and expense systems",
+        "Loyalty points balance and redemption rules"
+      ],
+      "benefits": [
+        "3-4% payment failure vs 8-12% (60-70% reduction)",
+        "Instant ticketing (<30 sec) vs 30-90 min batch",
+        "8-12 payment methods vs 1-2 traditional",
+        "Auto-retry recovers 40-50% of failed payments",
+        "Real-time fraud detection approves 95%+ instantly",
+        "Multi-channel ticket delivery prevents lost confirmations"
+      ],
+      "metrics": ["Payment failure: 3-4%", "Ticketing time: <30 sec", "Payment methods: 8-12"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add Apple Pay and Google Pay", "Implement real-time fraud scoring for instant approvals"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-5 months",
+      "prerequisites": ["Modern payment gateway with orchestration", "Real-time fraud detection service", "NDC/GDS ticketing API integration", "Digital wallet SDK integration"]
+    },
+    "icon": "credit-card",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-booking-modification-cancellation",
+    "type": "function",
+    "level": 4,
+    "label": "Booking Modification & Cancellation",
+    "description": "Self-service change management with intelligent rebooking and automated refund processing reducing agent call volume by 50-70% and modification time from hours to minutes.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer needs to change flight date or cancel booking. 2. Customer calls contact center, waits 15-45 minutes on hold. 3. Agent manually looks up booking, checks fare rules, calculates change fees. 4. Agent processes change or cancellation manually in airline system. 5. Refund requests take 7-14 days for processing and approval.",
+      "constraints": [
+        "15-45 min hold time for changes/cancellations",
+        "100% agent-assisted modifications (no self-service)",
+        "Change fees and fare rules unclear to customers",
+        "Refunds take 7-14 days (manual approval workflow)",
+        "Peak disruption periods overwhelm call centers",
+        "Agent costs $8-15 per call for simple modifications"
+      ],
+      "metrics": ["Self-service rate: 0%", "Modification time: 15-60 min", "Refund processing: 7-14 days"]
+    },
+    "agentic": {
+      "workflow": "1. Customer accesses booking via mobile app or web using confirmation code. 2. Modification Agent displays available options: date change, passenger name correction, seat selection, cancellation. 3. Fare Rules Engine shows applicable fees, refund eligibility, alternative flights with price differences. 4. Agent processes modification instantly via NDC/GDS APIs with real-time seat availability. 5. Automated Refund Agent processes eligible refunds within 24-48 hours (auto-approval for policy-compliant requests).",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Modification Agent", "Fare Rules Engine", "Automated Refund Agent"],
+        "utilityAgents": ["NDC/GDS Integration", "Payment Gateway", "Policy Engine", "Notification Service"]
+      },
+      "dataSources": [
+        "Booking PNR and reservation data",
+        "Airline fare rules and change policies",
+        "Real-time flight availability for rebooking",
+        "Customer profile and loyalty status",
+        "Payment transaction history",
+        "Refund eligibility rules and thresholds",
+        "Schedule change and disruption data",
+        "Waiver and exception policies (weather, airline-caused delays)"
+      ],
+      "benefits": [
+        "60-80% self-service rate vs 0% traditional",
+        "50-70% call center volume reduction",
+        "5-10 min modification vs 15-60 min agent-assisted",
+        "24-48 hour refunds vs 7-14 day manual processing",
+        "Clear fare rules eliminate customer confusion",
+        "$8-12 cost savings per self-service transaction"
+      ],
+      "metrics": ["Self-service rate: 60-80%", "Modification time: 5-10 min", "Refund processing: 24-48 hours"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement self-service date change for flexible fares", "Automate refunds for cancellations >7 days before departure"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["NDC/GDS modification APIs", "Fare rules engine", "Automated refund workflow", "Authenticated self-service portal"]
+    },
+    "icon": "pencil-alt",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-group-booking-management",
+    "type": "function",
+    "level": 4,
+    "label": "Group Booking Management",
+    "description": "Automated group reservation coordination with split payments and multi-passenger management reducing group booking complexity by 70-80% through intelligent orchestration.",
+    "parentCapability": "capability-travel-booking-reservation",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Group organizer calls group desk for 10+ passenger booking. 2. Agent manually checks availability and provides quote (24-48 hour turnaround). 3. Organizer collects passenger details via email/spreadsheet from group members. 4. Organizer calls back to finalize booking, reads 10+ passenger details over phone. 5. Organizer collects individual payments manually (Venmo, checks), then pays airline in lump sum.",
+      "constraints": [
+        "100% phone-based (no online group booking)",
+        "24-48 hour quote turnaround time",
+        "Manual passenger data collection via email/spreadsheet",
+        "Organizer liability for full payment upfront",
+        "No individual payment splitting capability",
+        "Name changes and modifications require agent calls (×10+ passengers)"
+      ],
+      "metrics": ["Group booking time: 3-5 days", "Self-service: 0%", "Payment splitting: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Group Booking Agent allows organizer to create group reservation online (10+ passengers). 2. Agent provides instant group pricing with hold period (7-14 days). 3. Organizer shares unique link with group members to enter their own passenger details. 4. Split Payment Agent enables individual payment: each traveler pays their own fare, or organizer sets split rules. 5. Agent auto-consolidates passenger data, processes payments, issues tickets when threshold met (e.g., 80% paid).",
+      "agents": {
+        "orchestrator": "Travel Booking Orchestration Agent",
+        "superAgents": ["Group Booking Agent", "Split Payment Agent"],
+        "utilityAgents": ["NDC/GDS Group APIs", "Payment Gateway", "Collaboration Platform", "Notification Service"]
+      },
+      "dataSources": [
+        "Group fare and inventory rules",
+        "Airline group booking policies (minimums, deposit requirements)",
+        "Real-time flight availability for groups",
+        "Individual passenger profiles and data",
+        "Payment status by group member",
+        "Group organizer account and history",
+        "Communication templates (invites, reminders, confirmations)",
+        "Group modification and cancellation policies"
+      ],
+      "benefits": [
+        "70-80% time reduction (1 day vs 3-5 days)",
+        "100% online self-service vs phone-only",
+        "Individual payment splitting eliminates organizer liability",
+        "Auto-collection of passenger data (no spreadsheets)",
+        "Real-time payment tracking dashboard for organizer",
+        "Automated reminders to non-responsive group members"
+      ],
+      "metrics": ["Group booking time: 1 day", "Self-service: 100%", "Payment splitting: Automated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch online group booking for 10-25 passenger groups", "Implement split payment for group organizers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "5-7 months",
+      "prerequisites": ["Group booking API (NDC/GDS)", "Split payment capability", "Collaboration portal for passengers", "Group-specific fare rules engine"]
+    },
+    "icon": "user-group",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

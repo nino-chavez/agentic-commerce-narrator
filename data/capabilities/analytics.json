@@ -1,0 +1,615 @@
+[
+  {
+    "id": "capability-predictive-analytics-platform",
+    "type": "capability",
+    "level": 3,
+    "label": "Predictive Analytics Platform",
+    "description": "Accelerates model development dramatically with AutoML, continuous deployment, real-time predictions, and auto-retraining when drift detected.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "AutoML Model Development",
+      "Model Deployment & Versioning",
+      "Prediction Serving",
+      "Model Monitoring & Retraining"
+    ],
+    "traditionalApproach": {
+      "description": "Manual model building by data scientists with sporadic deployment and no monitoring resulting in long time-to-value and degrading accuracy.",
+      "characteristics": [
+        "Descriptive analytics only (what happened)",
+        "Data scientists build models manually",
+        "Models deployed sporadically",
+        "Limited to batch predictions",
+        "Model performance not monitored"
+      ],
+      "constraints": [
+        "Manual model building takes weeks to months",
+        "Sporadic deployment creates long time-to-value",
+        "Batch predictions limit real-time use cases",
+        "Model drift not detected, degrading accuracy over time",
+        "Limited data science capacity constrains ML adoption",
+        "No systematic model lifecycle management"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Models built dramatically faster, deployed continuously, real-time predictions, auto-retraining when drift detected enabling ML at scale.",
+      "characteristics": [
+        "AutoML automates feature engineering, model selection, hyperparameter tuning",
+        "Model deployment with versioning and A/B testing",
+        "Real-time and batch prediction serving at scale",
+        "Model monitoring tracks performance, detects drift, triggers retraining",
+        "Self-service ML for business analysts",
+        "MLOps platform for end-to-end lifecycle"
+      ],
+      "benefits": [
+        "Dramatically faster model development vs manual",
+        "Continuous deployment vs sporadic manual releases",
+        "Real-time predictions vs batch-only",
+        "Auto-retraining maintains accuracy over time",
+        "Significant increase in models in production",
+        "Democratized ML beyond data science team"
+      ],
+      "projections": [
+        {
+          "metric": "Model Development Speed",
+          "value": "10x faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AutoML automating feature engineering, model selection, and hyperparameter tuning']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Models in Production Increase",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service ML platform enabling business analysts and accelerated development cycles']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Predictive Analytics Orchestration Agent",
+        "Auto-ML Agent",
+        "Model Deployment Agent",
+        "Prediction Serving Agent",
+        "Model Monitoring Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AutoML platform for pilot use case (churn, demand forecast)",
+        "Implement model monitoring for top 3 production models",
+        "Enable real-time prediction serving for customer-facing use cases"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "ML platform (DataRobot, H2O.ai, Databricks AutoML, or AWS SageMaker)",
+        "MLflow or similar for model lifecycle management",
+        "Model serving infrastructure (SageMaker, Vertex AI, or Seldon)",
+        "Monitoring platform for model performance tracking",
+        "Clean training data with defined prediction targets"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-marketing-attribution-modeling",
+    "type": "capability",
+    "level": 3,
+    "label": "Marketing Attribution Modeling",
+    "description": "Provides data-driven attribution with incrementality measurement, optimized budget allocation, and undisputed ROI metrics.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Multi-Touch Attribution",
+      "Incrementality Testing",
+      "Budget Allocation Optimization",
+      "Attribution Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Last-click attribution only with duplicate credit claims and disputed ROI resulting in suboptimal budget allocation.",
+      "characteristics": [
+        "Last-click attribution only",
+        "Marketing channels claim duplicate credit",
+        "No cross-channel view",
+        "ROI calculations disputed",
+        "Manual attribution analysis"
+      ],
+      "constraints": [
+        "Last-click attribution undervalues upper-funnel channels",
+        "Channels claim duplicate credit (sum of ROI > 100%)",
+        "No cross-channel customer journey visibility",
+        "Budget allocation based on disputed metrics",
+        "Manual analysis takes weeks per campaign",
+        "No true incrementality measurement"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Data-driven attribution model with incrementality measured, budget optimized, and undisputed ROI metrics achieving improved marketing efficiency.",
+      "characteristics": [
+        "Multi-touch attribution using algorithmic models (linear, time-decay, data-driven)",
+        "Incrementality testing via geo-holdout experiments measures true lift",
+        "Budget allocation agent recommends optimal spend across channels",
+        "Attribution reporting generates channel performance dashboards",
+        "Cross-channel journey visibility",
+        "Continuous model refinement from new data"
+      ],
+      "benefits": [
+        "Data-driven attribution vs last-click simplification",
+        "Incrementality measured vs claimed attribution",
+        "Optimized budget allocation increases ROI",
+        "Undisputed metrics align teams",
+        "Cross-channel visibility vs siloed reporting",
+        "Continuous optimization vs periodic reallocation"
+      ],
+      "projections": [
+        {
+          "metric": "Marketing ROI Improvement from Budget Optimization",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on data-driven attribution reallocating spend from low-performing to high-performing channels']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Marketing Attribution Orchestration Agent",
+        "Multi-Touch Attribution Agent",
+        "Incrementality Testing Agent",
+        "Budget Allocation Agent",
+        "Attribution Reporting Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy multi-touch attribution for digital channels",
+        "Run geo-holdout test for top spending channel",
+        "Implement budget optimization for paid media mix"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Attribution platform (Rockerbox, Neustar, Google Analytics 4)",
+        "Cross-channel marketing data aggregation",
+        "Experimentation framework for incrementality tests",
+        "BI tool for attribution reporting",
+        "Defined conversion events and customer journey"
+      ]
+    },
+    "icon": "chart-pie",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-marketing-mix-modeling",
+    "type": "capability",
+    "level": 3,
+    "label": "Marketing Mix Modeling (MMM)",
+    "description": "Delivers continuous MMM refresh with instant scenario testing, automated recommendations, and integrated planning achieving significant media efficiency improvement.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Econometric Modeling",
+      "Scenario Planning",
+      "External Factor Integration",
+      "Optimization & Recommendations"
+    ],
+    "traditionalApproach": {
+      "description": "Annual econometric modeling by consultants with static recommendations becoming quickly outdated.",
+      "characteristics": [
+        "Annual econometric modeling exercise",
+        "External consultants required",
+        "Static recommendations",
+        "No integration with planning tools",
+        "Limited to macro trends"
+      ],
+      "constraints": [
+        "Annual refresh too infrequent for dynamic markets",
+        "External consultants expensive and slow",
+        "Static recommendations become outdated",
+        "No integration with marketing planning workflows",
+        "Limited to historical macro analysis",
+        "No scenario testing capability"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "MMM refreshed continuously with scenarios tested instantly, recommendations automated, and planning integrated achieving media efficiency improvement.",
+      "characteristics": [
+        "Econometric modeling builds MMM continuously (weekly/monthly refresh)",
+        "Scenario planning simulates budget scenarios and predicts outcomes",
+        "External factor agent incorporates seasonality, competitors, economy",
+        "Optimization agent recommends optimal media mix for goals",
+        "Integration with marketing planning tools",
+        "Self-service scenario testing for marketers"
+      ],
+      "benefits": [
+        "Continuous MMM refresh vs annual static model",
+        "Instant scenario testing vs weeks of consultant analysis",
+        "Automated recommendations vs manual interpretation",
+        "Integrated planning vs disconnected tools",
+        "Significant media efficiency improvement",
+        "In-house capability vs consultant dependency"
+      ],
+      "projections": [
+        {
+          "metric": "Media Efficiency Improvement",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous model refresh enabling real-time optimization and scenario-based budget allocation']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Marketing Mix Modeling Orchestrator",
+        "Econometric Modeling Agent",
+        "Scenario Planning Agent",
+        "External Factor Agent",
+        "Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy MMM platform with monthly model refresh",
+        "Implement scenario planning for annual media planning",
+        "Enable self-service scenario testing for marketing team"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Statistical modeling platform (R, Python with econometric libraries)",
+        "Data warehouse with marketing spend and sales data (24+ months)",
+        "External factor data (weather, competitors, economic indicators)",
+        "Scenario planning tool or custom build",
+        "Visualization platform for insights distribution"
+      ]
+    },
+    "icon": "trending-up",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-churn-prediction-prevention",
+    "type": "capability",
+    "level": 3,
+    "label": "Churn Prediction & Prevention",
+    "description": "Identifies at-risk customers with early warning enabling personalized interventions that significantly reduce churn.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Churn Risk Scoring",
+      "Reason Detection",
+      "Retention Strategy Selection",
+      "Intervention Orchestration"
+    ],
+    "traditionalApproach": {
+      "description": "Reactive churn analysis after customers leave with generic retention offers having low success rates.",
+      "characteristics": [
+        "Churn analyzed after it happens",
+        "Reactive win-back campaigns",
+        "Generic retention offers",
+        "No early warning system"
+      ],
+      "constraints": [
+        "Reactive approach misses prevention opportunity",
+        "No early warning of at-risk customers",
+        "Generic retention offers poorly targeted",
+        "Win-back campaigns have low success rates",
+        "No understanding of churn reasons",
+        "Revenue loss before intervention"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-churn-001",
+          "metric": "Win-Back Campaign Success Rate",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source, e.g., 'Customer retention campaign effectiveness benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "At-risk customers identified early with personalized interventions significantly reducing churn through proactive prevention.",
+      "characteristics": [
+        "Churn risk scoring predicts individual churn probability",
+        "Reason detection identifies likely churn drivers (service, price, competition)",
+        "Retention strategy agent selects optimal tactic per customer",
+        "Intervention orchestration triggers proactive outreach, offers, service recovery",
+        "Continuous monitoring and re-scoring",
+        "A/B testing of retention tactics"
+      ],
+      "benefits": [
+        "Early warning vs reactive discovery",
+        "Personalized interventions vs generic offers",
+        "Significant churn reduction through proactive retention",
+        "Reason-specific tactics improve success rates",
+        "Higher ROI on retention spend vs win-back",
+        "Revenue preservation through early intervention"
+      ],
+      "projections": [
+        {
+          "metric": "Early Warning Period",
+          "value": "30-60 days",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML model detecting behavioral signals (engagement decline, support contacts) before churn decision']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Churn Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive intervention with personalized retention tactics before customer decides to leave']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Retention ROI Improvement",
+          "value": "3-5x (vs win-back)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive prevention being more cost-effective than reactive win-back campaigns']",
+          "sourceBenchmark": "bench-churn-001"
+        }
+      ],
+      "agents": [
+        "Churn Prevention Orchestration Agent",
+        "Churn Risk Scoring Agent",
+        "Reason Detection Agent",
+        "Retention Strategy Agent",
+        "Intervention Orchestration Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy churn prediction model for subscription customers",
+        "Implement automated retention campaigns for high-risk segment",
+        "Enable reason detection from support and behavior data"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": [
+        "ML platform for churn model training and scoring",
+        "Customer Data Platform with unified profiles",
+        "Campaign automation for retention workflows",
+        "Historical churn data with customer attributes",
+        "Support, billing, and engagement data for reason detection"
+      ]
+    },
+    "icon": "user-circle",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-demand-forecasting-sensing",
+    "type": "capability",
+    "level": 3,
+    "label": "Demand Forecasting & Sensing",
+    "description": "Achieves high forecast accuracy with ML models, external signal integration, and faster consensus achieving inventory cost reduction.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Statistical Forecasting",
+      "External Signal Integration",
+      "Promotional Impact Modeling",
+      "Consensus Forecasting"
+    ],
+    "traditionalApproach": {
+      "description": "Monthly historical forecasts with moderate accuracy causing stock-outs and overstock.",
+      "characteristics": [
+        "Monthly forecast based on history",
+        "Manual adjustments for promotions",
+        "No external signal integration",
+        "Moderate forecast accuracy",
+        "Long planning cycles"
+      ],
+      "constraints": [
+        "Historical-only forecasts miss market signals",
+        "Manual promotion adjustments error-prone",
+        "No external data integration (weather, trends, social)",
+        "Moderate accuracy causes stock-outs and overstock",
+        "Monthly cycles too slow for dynamic demand",
+        "Judgmental overrides not systematic"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-fcst-001",
+          "metric": "Traditional Forecast Accuracy",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail demand forecasting accuracy benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "High forecast accuracy with external signals incorporated, promotions predicted accurately, and consensus achieved faster reducing inventory costs.",
+      "characteristics": [
+        "Statistical forecasting uses time-series models (ARIMA, Prophet, LSTM)",
+        "External signal agent integrates weather, trends, social sentiment, economics",
+        "Promotional impact agent uses ML models for promotion lift",
+        "Consensus agent combines statistical and judgmental forecasts optimally",
+        "Continuous forecast updates (daily or weekly)",
+        "Scenario-based forecasting for planning"
+      ],
+      "benefits": [
+        "High forecast accuracy vs moderate traditional",
+        "External signals improve responsiveness to market changes",
+        "Promotional lift predicted accurately (vs manual guesses)",
+        "Consensus achieved faster with systematic combination",
+        "Significant reduction in forecast error",
+        "Substantial inventory carrying cost reduction"
+      ],
+      "projections": [
+        {
+          "metric": "Forecast Accuracy Improvement",
+          "value": "80-90% (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML time-series models and external signal integration improving demand sensing']",
+          "sourceBenchmark": "bench-fcst-001"
+        },
+        {
+          "metric": "Forecast Error Reduction",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on improved accuracy reducing deviation between forecast and actual demand']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Carrying Cost Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on better forecast accuracy reducing safety stock requirements and overstock situations']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Demand Intelligence Orchestration Agent",
+        "Statistical Forecasting Agent",
+        "External Signal Agent",
+        "Promotional Impact Agent",
+        "Consensus Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy ML forecasting for top 20% of SKUs by revenue",
+        "Integrate external signals (weather, holidays) for seasonal categories",
+        "Implement promotional lift models for planned promotions"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Forecasting platform (Anaplan, o9 Solutions, Blue Yonder, or custom)",
+        "Historical sales data (24+ months) with causal factors",
+        "External data APIs (weather, economic indicators, social trends)",
+        "ML models for time-series and promotional impact",
+        "Collaboration tool for forecast consensus"
+      ]
+    },
+    "icon": "chart-line",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-real-time-dashboards-alerts",
+    "type": "capability",
+    "level": 3,
+    "label": "Real-Time Dashboards & Alerts",
+    "description": "Delivers real-time dashboards with intelligent alerts achieving dramatic noise reduction, automated root cause analysis, and actionable insights.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Metric Monitoring",
+      "Anomaly Detection",
+      "Root Cause Analysis",
+      "Smart Alerting"
+    ],
+    "traditionalApproach": {
+      "description": "Static dashboards refreshed nightly with simple threshold alerts and manual analysis resulting in delayed issue detection and alert fatigue.",
+      "characteristics": [
+        "Static dashboards refresh nightly",
+        "Alerts based on simple thresholds",
+        "No context for anomalies",
+        "Dashboard sprawl (hundreds of dashboards)",
+        "Manual drill-down analysis"
+      ],
+      "constraints": [
+        "Nightly refresh means issues discovered too late",
+        "Simple thresholds create alert fatigue (false positives)",
+        "No context for why anomalies occurred",
+        "Dashboard sprawl reduces usability",
+        "Manual drill-down takes hours to days",
+        "Reactive vs proactive issue detection"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time dashboards with intelligent alerts achieving dramatic noise reduction, root causes identified automatically, and actionable insights.",
+      "characteristics": [
+        "Metric monitoring tracks all KPIs in real-time",
+        "Anomaly detection uses ML to identify unusual patterns",
+        "Root cause analysis automatically investigates anomalies",
+        "Smart alerting reduces noise, escalates correctly, suggests actions",
+        "Unified analytics workspace vs dashboard sprawl",
+        "Natural language query interface"
+      ],
+      "benefits": [
+        "Real-time visibility vs nightly batch updates",
+        "Dramatic alert noise reduction through intelligent detection",
+        "Automated root cause analysis vs manual investigation",
+        "Actionable alerts with suggested responses",
+        "Significant time saved on manual analysis",
+        "Proactive issue detection vs reactive discovery"
+      ],
+      "projections": [
+        {
+          "metric": "Alert Noise Reduction",
+          "value": "90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML anomaly detection filtering false positives and smart alerting escalating only actionable issues']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Intelligent Dashboard Orchestration Agent",
+        "Metric Monitoring Agent",
+        "Anomaly Detection Agent",
+        "Root Cause Analysis Agent",
+        "Smart Alerting Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy anomaly detection for top 10 business KPIs",
+        "Implement smart alerting to reduce alert fatigue",
+        "Enable automated root cause analysis for critical metrics"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": [
+        "BI platform with real-time capabilities (Tableau, Looker, Power BI)",
+        "Streaming analytics for real-time data processing",
+        "Anomaly detection engine (commercial or open source)",
+        "Alert routing and escalation infrastructure",
+        "Defined KPIs and business logic for root cause analysis"
+      ]
+    },
+    "icon": "chart-square-bar",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

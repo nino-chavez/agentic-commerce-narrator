@@ -1,0 +1,464 @@
+[
+  {
+    "id": "function-multi-echelon-inventory-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Echelon Inventory Optimization (MEIO)",
+    "description": "Network-wide inventory positioning across DC-regional-store achieving 30-50% total inventory reduction while maintaining 95%+ service level through optimal stock pre-positioning.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Each location optimizes inventory independently: central DC holds 30 days stock, 5 regional DCs each hold 25 days, 100 stores each hold 15 days. 2. Total network inventory: 30 + (5×25) + (100×15) = 1,655 days equivalent across network (massive duplication). 3. Store stockout occurs: 'Store #47 out of SKU#123', requests from regional DC. Regional DC also stockout: 'We need 2 days to get from central DC'. 4. Customer lost sale due to multi-day replenishment while central DC had stock (inventory in wrong location). 5. Network holds $10M inventory but achieves only 88% service level due to poor positioning. 6. Each location holds safety stock independently (multiplicative effect, no network view).",
+      "constraints": [
+        "Location-by-location optimization (no network view)",
+        "88% service level despite $10M inventory (poor positioning)",
+        "Inventory duplication across echelons (1,655 days network-wide)",
+        "2-3 day replenishment delays between echelons",
+        "Customer stockouts while inventory exists elsewhere in network",
+        "Safety stock multiplication (each level holds redundant buffer)"
+      ],
+      "metrics": ["Total network inventory: $10M (1,655 days)", "Service level: 88%", "Inventory efficiency: Low", "Optimization: Location-by-location"]
+    },
+    "agentic": {
+      "workflow": "1. MEIO Agent analyzes entire network topology: central DC → 5 regional DCs → 100 stores, models demand variability and lead times at each echelon. 2. Agent optimizes inventory positioning: 'Consolidate safety stock at higher echelons (faster replenishment to lower levels), reduce redundant buffering at stores'. 3. Agent recommends new policy: 'Central DC: 40 days stock (increased, act as network buffer), Regional DCs: 15 days (reduced, fast replenishment from central), Stores: 7 days (reduced, daily replenishment from regional)'. 4. New network inventory: 40 + (5×15) + (100×7) = 815 days equivalent (vs 1,655 original, -51% reduction). 5. Agent enables faster replenishment: 'Regional DC replenish stores daily (vs weekly), central DC replenish regional 2x/week (vs weekly), responsive vs static'. 6. Results: $5M total inventory (vs $10M, -50% reduction), 96% service level (vs 88%, +8% improvement) through optimal network positioning.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["MEIO Agent", "Network Positioning Agent", "Replenishment Agent"],
+        "utilityAgents": ["Network Topology Modeler", "Demand Variability Analytics", "Lead Time Tracker", "Service Level Calculator"]
+      },
+      "dataSources": [
+        "Network topology (DC, regional, store locations and relationships)",
+        "Demand patterns by SKU and location",
+        "Lead times between echelons (DC→regional, regional→store)",
+        "Transportation costs and frequency options",
+        "Service level targets by SKU category",
+        "Historical stockout incidents by location",
+        "Inventory carrying costs by location type",
+        "Replenishment policies and frequencies"
+      ],
+      "benefits": [
+        "30-50% inventory reduction ($10M → $5M while improving service)",
+        "96% service level vs 88% (+8% improvement)",
+        "Network optimization vs location-by-location (eliminate duplication)",
+        "Daily replenishment enables lower store inventory (7 vs 15 days)",
+        "Safety stock consolidation at higher echelons (efficient buffering)",
+        "Working capital freed up $5M (50% reduction)"
+      ],
+      "metrics": ["Total network inventory: $5M (815 days)", "Service level: 96%", "Inventory efficiency: High", "Optimization: Network-wide MEIO"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Model current inventory positioning across 3 echelons (DC, regional, store)", "Identify safety stock duplication opportunities for top 100 SKUs", "Pilot daily store replenishment from regional DC for 10 stores"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Multi-echelon inventory optimization software (MEIO platform)", "Network topology data and lead time modeling", "Demand variability analysis by SKU and location", "Transportation capability for increased replenishment frequency", "Inventory positioning policies and approval workflow", "Change management for decentralized to centralized safety stock shift"]
+    },
+    "icon": "share",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-safety-stock-optimization-dynamic",
+    "type": "function",
+    "level": 4,
+    "label": "Safety Stock Optimization (Dynamic)",
+    "description": "ML-powered safety stock calculation with demand variability modeling achieving 20-35% safety stock reduction while maintaining 95%+ service level through dynamic buffering.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Safety stock set using simple rule of thumb: '2 weeks average demand' or '1.5x max weekly demand'. 2. Static safety stock: same buffer year-round regardless of seasonal variability, lead time changes, or demand patterns. 3. Summer months: ice cream demand highly variable (weather-dependent), 2-week buffer insufficient, stockouts 15-20% despite safety stock. 4. Winter months: ice cream demand stable and low, 2-week buffer excessive, $50K tied up in unnecessary safety stock. 5. Safety stock formula doesn't account for demand variability, lead time variability, or service level targets. 6. Over-buffered low-variability items, under-buffered high-variability items.",
+      "constraints": [
+        "Static safety stock rules (2 weeks demand, regardless of variability)",
+        "15-20% stockouts on high-variability items despite buffer",
+        "Over-buffering low-variability items (unnecessary inventory)",
+        "Seasonal variability ignored (summer vs winter)",
+        "Lead time variability not modeled",
+        "One-size-fits-all approach (no SKU-specific optimization)"
+      ],
+      "metrics": ["Safety stock efficiency: 60-70%", "Stockout rate: 15-20% (high-variability SKUs)", "Excess safety stock: 30-40% (low-variability)", "Optimization: Static rules"]
+    },
+    "agentic": {
+      "workflow": "1. Safety Stock Agent analyzes demand variability by SKU: 'Ice cream SKU#123: summer demand std dev 500 units/week (high variability), winter std dev 50 units (low variability, 10x difference)'. 2. Agent models lead time variability: 'Supplier A: 7-day lead time 90% of time, but 14 days 10% of time (variability risk), Supplier B: consistent 10 days 99% of time (predictable)'. 3. Agent calculates dynamic safety stock: 'Summer: safety stock 800 units (cover high demand variability), Winter: safety stock 120 units (low variability needs less buffer), seasonal adjustment'. 4. Agent optimizes by service level target: 'A-items (high revenue): 98% service level target requires higher safety stock, C-items (low revenue): 90% acceptable, reduces buffer 30%'. 5. Agent recalculates weekly: safety stock adjusts to changing demand patterns, seasonality, lead times (dynamic vs static). 6. 20-35% safety stock reduction overall while maintaining 95%+ service level through ML-powered variability modeling.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Safety Stock Agent", "Demand Variability Agent", "Service Level Agent"],
+        "utilityAgents": ["Statistical Analytics", "Lead Time Tracker", "ML Forecasting", "ABC Classification"]
+      },
+      "dataSources": [
+        "Historical demand patterns with variability metrics (std dev, coefficient of variation)",
+        "Lead time data with variability by supplier",
+        "Service level targets by SKU classification (A/B/C items)",
+        "Seasonal patterns and demand fluctuations",
+        "Stockout incident history and costs",
+        "Inventory carrying costs",
+        "Supplier reliability and lead time performance",
+        "Demand forecast accuracy by SKU"
+      ],
+      "benefits": [
+        "20-35% safety stock reduction while maintaining service level",
+        "95%+ service level (vs 80-85% with static rules)",
+        "Dynamic adjustment (summer 800 units, winter 120 units example)",
+        "Demand and lead time variability both modeled",
+        "SKU-specific optimization (A/B/C items differentiated)",
+        "Weekly recalculation vs annual static setting"
+      ],
+      "metrics": ["Safety stock efficiency: 85-95%", "Stockout rate: 5-8%", "Excess safety stock: 10-15%", "Optimization: ML-powered dynamic"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Calculate demand variability (std dev) for top 200 SKUs", "Implement seasonal safety stock adjustment for high-variability categories", "Deploy ABC classification with differentiated service level targets"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Historical demand data with variability analysis (12-24 months)", "Lead time tracking and variability measurement by supplier", "Service level target definition by SKU classification", "Safety stock calculation engine (statistical formulas or ML)", "Inventory planning system integration for dynamic updates", "Weekly recalculation and monitoring process"]
+    },
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-replenishment-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Replenishment Automation",
+    "description": "Auto-generated purchase orders with min-max optimization achieving 80-95% automated replenishment and 98%+ fill rate through system-driven ordering.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Buyer manually reviews 500 SKUs weekly: exports inventory report from system to Excel, sorts by stock level. 2. Manually calculates reorder quantities: 'SKU#123 current stock 50 units, sells 20/week, 2-week lead time, order 100 units'. 3. Repeats for each of 500 SKUs (8-12 hours weekly), creates purchase orders manually. 4. Errors occur: forgot to order SKU#456 (stockout next week), over-ordered SKU#789 (demand dropped, excess inventory). 5. Reactive ordering: wait until inventory low before ordering (creates last-minute urgency and expedite costs). 6. 15-20% of SKUs stockout weekly due to manual process errors and delays.",
+      "constraints": [
+        "Manual weekly replenishment review (8-12 hours buyer time)",
+        "15-20% weekly stockout rate (human error, forgot to order)",
+        "Reactive ordering (wait until low stock, creates urgency)",
+        "No optimization (gut-feel order quantities)",
+        "Buyer bandwidth limits SKU coverage (500 max)",
+        "Expedite costs from last-minute ordering"
+      ],
+      "metrics": ["Replenishment automation: 0% (manual)", "Stockout rate: 15-20%", "Buyer time: 8-12 hours/week", "Fill rate: 80-85%"]
+    },
+    "agentic": {
+      "workflow": "1. Replenishment Agent monitors all 5,000 SKUs daily (vs 500 weekly manual): calculates optimal reorder point and quantity for each. 2. Agent uses min-max policy: 'SKU#123 current stock 60 units, reorder point 50 units (trigger), max level 150 units, order 90 units to reach max'. 3. Agent auto-generates purchase order: 'PO#12345 for SKU#123, qty 90, supplier A, delivery requested in 10 days (align with lead time), send to supplier automatically'. 4. Agent optimizes order quantities: 'Consolidate 15 SKUs from supplier A into single order (reduce shipping cost, hit volume discount threshold)'. 5. Agent monitors exceptions: 'SKU#456 selling 3x forecast, increase max level from 100 to 200, expedite next order (prevent stockout)'. 6. 80-95% replenishment fully automated, 98%+ fill rate, buyer focuses on exceptions only (5-20% requiring human judgment).",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Replenishment Agent", "Order Optimization Agent", "Exception Management Agent"],
+        "utilityAgents": ["Min-Max Calculator", "Supplier Integration", "Purchase Order System", "Demand Forecasting"]
+      },
+      "dataSources": [
+        "Current inventory positions by SKU and location",
+        "Demand forecasts and actual sales by SKU",
+        "Supplier lead times and minimum order quantities",
+        "Reorder point and max level policies by SKU",
+        "Supplier pricing and volume discounts",
+        "Transportation costs and consolidation opportunities",
+        "Exception thresholds (demand spikes, forecast errors)",
+        "Buyer approval rules for high-value orders"
+      ],
+      "benefits": [
+        "80-95% replenishment automation vs 0% manual (free up buyer time)",
+        "98%+ fill rate vs 80-85% (eliminate human error stockouts)",
+        "Daily monitoring of 5,000 SKUs vs 500 weekly (complete coverage)",
+        "Optimized order quantities (consolidation, volume discounts)",
+        "Buyer time reduced 8-12 hours → 1-2 hours (exception management only)",
+        "Proactive ordering vs reactive (prevent last-minute expedites)"
+      ],
+      "metrics": ["Replenishment automation: 80-95%", "Stockout rate: 2-5%", "Buyer time: 1-2 hours/week", "Fill rate: 98%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated replenishment for top 100 A-item SKUs (80% revenue)", "Implement min-max reorder point policies with system-generated alerts", "Enable auto-PO generation for low-value routine replenishment (<$1K)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Inventory management system with min-max policy support", "Purchase order system integration for auto-generation", "Demand forecasting for reorder point calculation", "Supplier integration for electronic order transmission", "Exception rules and buyer approval thresholds", "Order consolidation and optimization logic"]
+    },
+    "icon": "refresh",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-slow-moving-obsolete-inventory-management",
+    "type": "function",
+    "level": 4,
+    "label": "Slow-Moving & Obsolete Inventory Management",
+    "description": "Predictive obsolescence detection with automated clearance strategies achieving 60-80% reduction in write-offs and 40-60% faster inventory turnover through early intervention.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Quarterly obsolete inventory review: buyer exports report of SKUs with no sales in 90+ days. 2. Discovers 150 SKUs totaling $200K sitting for 6-12 months (some approaching expiration for grocery). 3. Scramble to clear: 'Mark down 50% immediately, try to sell before it becomes complete write-off'. 4. Clearance ineffective: discounted items still don't sell (wrong product at any price), only recovers 30-40% of cost. 5. Remaining inventory written off: $120K loss (60% of $200K) donated or destroyed. 6. Reactive process: identify obsolescence 6-12 months too late, clearance strategies desperate and ineffective.",
+      "constraints": [
+        "Quarterly review finds obsolescence 6-12 months too late",
+        "60-70% write-off rate (only recover 30-40% through clearance)",
+        "$120K annual write-offs (example from $200K obsolete inventory)",
+        "Reactive clearance (desperate 50% discounts don't work)",
+        "No predictive detection (find problems after they're unfixable)",
+        "Inventory aging not monitored (slow-moving becomes obsolete)"
+      ],
+      "metrics": ["Write-off rate: 60-70%", "Obsolescence detection: 6-12 months late", "Recovery rate: 30-40%", "Inventory turns (slow-movers): 0.5-1x"]
+    },
+    "agentic": {
+      "workflow": "1. Obsolescence Prediction Agent monitors all SKUs weekly: 'SKU#456 sales declining 30% vs prior year, current stock 500 units, projected 12 months to sell at current rate (slow-moving risk)'. 2. Agent detects early warning signals: 'SKU#456 negative customer reviews (2.5 stars vs 4+ category avg), competitor launched better alternative, demand likely to decline further'. 3. Clearance Strategy Agent recommends early action: 'Start 20% discount immediately (while still has value), promote in email campaigns, allocate premium shelf space to accelerate sales'. 4. Agent monitors clearance effectiveness: '3 weeks: sold 150 units at 20% discount (recovered $12K revenue), remaining 350 units, increase discount to 35%'. 5. Agent triggers alternative channels: 'Move remaining 200 units to outlet stores or online flash sale, donate 150 units for tax benefit ($3K write-off vs $15K if destroyed)'. 6. Final results: $18K revenue recovered + $3K tax benefit = $21K (vs $12K reactive quarterly approach), 60-80% write-off reduction through early intervention.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Obsolescence Prediction Agent", "Clearance Strategy Agent", "Alternative Channel Agent"],
+        "utilityAgents": ["Sales Trend Analytics", "Customer Review Sentiment", "Pricing Optimizer", "Donation Management"]
+      },
+      "dataSources": [
+        "Sales trends by SKU (declining, stable, growing)",
+        "Inventory aging and days on hand",
+        "Customer reviews and sentiment",
+        "Competitive product launches and substitutes",
+        "Seasonal patterns and lifecycle stage",
+        "Expiration dates and shelf life (grocery)",
+        "Clearance pricing effectiveness history",
+        "Alternative sales channels (outlet, online, donation)"
+      ],
+      "benefits": [
+        "60-80% write-off reduction ($120K → $24K-$48K)",
+        "Early detection (weekly monitoring vs quarterly review)",
+        "Graduated clearance strategy (20% → 35% vs desperate 50%)",
+        "Alternative channels utilized (outlet, donation for tax benefit)",
+        "40-60% faster inventory turnover on slow-movers (12 months → 5-7 months)",
+        "Revenue recovery $21K vs $12K (75% improvement)"
+      ],
+      "metrics": ["Write-off rate: 20-40%", "Obsolescence detection: Real-time (weekly)", "Recovery rate: 60-70%", "Inventory turns (slow-movers): 2-3x"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy weekly slow-moving inventory monitoring (no sales 30+ days)", "Implement graduated markdown strategy (start at 15-20%, increase incrementally)", "Create outlet or online flash sale channel for slow-mover clearance"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Weekly sales trend monitoring by SKU", "Inventory aging tracking and alerting", "Customer review and sentiment analysis integration", "Clearance pricing and markdown management", "Alternative sales channels (outlet stores, online flash sales)", "Donation management for tax benefit optimization"]
+    },
+    "icon": "archive",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-transfer-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Transfer Optimization",
+    "description": "Inter-location balancing with AI-driven transfer recommendations achieving 30-50% stockout reduction and 20-30% excess inventory reduction through network rebalancing.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store #47 stockout on SKU#123: customer walks out empty-handed, lost sale. 2. Store manager calls 3 nearby stores manually: 'Do you have SKU#123 in stock?'. 3. Store #52 (5 miles away) has 20 units excess: 'Yes we have it, but no formal transfer process'. 4. Manager arranges informal transfer: drives to store #52, picks up 5 units in personal vehicle, brings back (not tracked in system). 5. Store #65 simultaneously has excess on different SKU that store #47 needs: unaware of each other's imbalances. 6. Network-wide: 15% stockouts in some stores while 25% excess in others (same SKUs, poor balancing).",
+      "constraints": [
+        "15% stockouts while 25% excess inventory exists in network (poor balancing)",
+        "Manual store-to-store calling (can't scale beyond 2-3 nearby stores)",
+        "Informal transfers not tracked (inventory accuracy suffers)",
+        "No systematic network view (can't see all locations simultaneously)",
+        "Transfer decisions reactive (after stockout occurs, too late)",
+        "Transportation inefficient (personal vehicle vs optimized routing)"
+      ],
+      "metrics": ["Network stockout rate: 15%", "Excess inventory: 25%", "Transfer efficiency: Low (manual, ad-hoc)", "Transfer volume: 5-10% of inventory movement"]
+    },
+    "agentic": {
+      "workflow": "1. Transfer Optimization Agent monitors all 100 stores daily: 'SKU#123 stockout risk in 3 days at Store #47 (current stock 2 units, sells 5/day), excess 20 units at Store #52 (sells 2/day, 10 days excess)'. 2. Agent recommends transfer: 'Transfer 15 units SKU#123 from Store #52 to Store #47, consolidate with 8 other SKU transfers on same route (efficient transportation)'. 3. Agent optimizes multi-SKU transfers: 'Single truck transfer 25 SKUs total from Store #52 to Store #47 (fix multiple imbalances in one trip), cost $150 vs $800 for 25 individual trips'. 4. Agent auto-generates transfer order: 'Transfer requisition #TR-12345, approved automatically (within policy thresholds), truck scheduled for next-day delivery'. 5. Agent tracks transfer execution: 'Transfer completed, Store #47 stockout prevented, Store #52 excess cleared, inventory accuracy maintained'. 6. Network-wide results: stockouts reduced 30-50% (15% → 7-10%), excess reduced 20-30% (25% → 17-20%) through systematic balancing.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Transfer Optimization Agent", "Network Balancing Agent", "Routing Agent"],
+        "utilityAgents": ["Inventory Visibility Platform", "Stockout Prediction", "Transportation Optimization", "Transfer Order System"]
+      },
+      "dataSources": [
+        "Real-time inventory positions across all locations",
+        "Demand forecasts by SKU and location",
+        "Stockout risk predictions (days until stockout)",
+        "Excess inventory identification (days of supply >threshold)",
+        "Transportation costs and routing options",
+        "Transfer policies and approval thresholds",
+        "Historical transfer effectiveness and costs",
+        "Store proximity and delivery routes"
+      ],
+      "benefits": [
+        "30-50% stockout reduction (15% → 7-10%) through network balancing",
+        "20-30% excess inventory reduction (25% → 17-20%)",
+        "Multi-SKU transfer consolidation ($150 vs $800 for 25 individual trips)",
+        "Automated transfer recommendations vs manual store calling",
+        "Proactive balancing (3 days before stockout vs after it occurs)",
+        "Systematic network view (100 stores vs 2-3 manual calls)"
+      ],
+      "metrics": ["Network stockout rate: 7-10%", "Excess inventory: 17-20%", "Transfer efficiency: High (consolidated, optimized)", "Transfer volume: 15-20% of inventory movement"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy network-wide inventory visibility for top 200 SKUs across all stores", "Implement automated transfer recommendations for stockout prevention", "Create consolidated transfer routing to reduce transportation costs"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time inventory visibility across all locations", "Stockout prediction and excess inventory identification", "Transfer order management system", "Transportation routing and consolidation optimization", "Transfer policies and auto-approval thresholds", "Inter-store logistics capability (trucks, routes, scheduling)"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-service-level-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Service Level Optimization",
+    "description": "Revenue-weighted service level targeting achieving 98%+ on A-items and optimal inventory investment through differentiated SKU treatment.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate sets blanket 95% service level target for all 5,000 SKUs (one-size-fits-all policy). 2. Inventory team tries to achieve 95% on every SKU equally: allocates inventory proportionally. 3. High-revenue SKU#123 ($500K annual revenue): achieves 94% service level (miss target, $30K lost sales from 6% stockouts). 4. Low-revenue SKU#456 ($5K annual revenue): achieves 96% service level (beat target, but holds $10K excess inventory to achieve it). 5. Misallocation: over-investing in low-revenue SKUs ($10K excess), under-investing in high-revenue SKUs ($30K lost sales). 6. One-size-fits-all approach ignores revenue contribution and customer impact of stockouts.",
+      "constraints": [
+        "Blanket 95% service level target (all SKUs treated equally)",
+        "Under-investment in high-revenue SKUs ($30K lost sales)",
+        "Over-investment in low-revenue SKUs ($10K excess inventory)",
+        "No revenue-weighting (SKU#123 $500K revenue same priority as SKU#456 $5K)",
+        "Suboptimal inventory allocation across SKU mix",
+        "Customer impact not considered (stockout on key item vs obscure item)"
+      ],
+      "metrics": ["Avg service level: 95% (all SKUs)", "A-item service level: 94%", "C-item service level: 96%", "Revenue lost to stockouts: $30K"]
+    },
+    "agentic": {
+      "workflow": "1. Service Level Agent classifies SKUs by revenue contribution: 'A-items (top 20% SKUs): 80% revenue, B-items (30% SKUs): 15% revenue, C-items (50% SKUs): 5% revenue'. 2. Agent sets differentiated targets: 'A-items: 98% service level (high investment justified by revenue), B-items: 95%, C-items: 90% (reduce investment in low-revenue SKUs)'. 3. Agent optimizes inventory allocation: 'Increase SKU#123 safety stock to achieve 98% service level (prevent $30K lost sales), reduce SKU#456 inventory to 90% target (free up $8K excess)'. 4. Agent validates customer impact: 'SKU#123 high customer loyalty item (4.8 stars, frequent repeat purchases) - stockout causes customer defection, prioritize high service level'. 5. Agent reallocates $8K from C-items to A-items: same total inventory investment, better revenue protection. 6. Results: A-item service level 98% (vs 94%), C-items 90% (vs 96%), lost revenue reduced $30K → $5K, inventory allocation optimized.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Service Level Agent", "ABC Classification Agent", "Inventory Allocation Agent"],
+        "utilityAgents": ["Revenue Analytics", "Customer Loyalty Scoring", "Lost Sales Calculator", "Inventory Optimizer"]
+      },
+      "dataSources": [
+        "SKU revenue contribution (annual sales by SKU)",
+        "ABC classification (top 20% SKUs by revenue)",
+        "Service level performance by SKU",
+        "Lost sales estimates from stockout incidents",
+        "Customer loyalty and repeat purchase rates",
+        "Inventory investment by SKU",
+        "Profitability by SKU (margin, contribution)",
+        "Substitution availability (alternatives when stockout)"
+      ],
+      "benefits": [
+        "98% A-item service level vs 94% (protect high-revenue SKUs)",
+        "83% reduction in lost revenue ($30K → $5K)",
+        "Optimal inventory allocation (invest in A-items, reduce C-items)",
+        "Same total inventory, better revenue protection",
+        "Customer impact-weighted (loyalty items prioritized)",
+        "Differentiated SKU treatment vs one-size-fits-all"
+      ],
+      "metrics": ["Avg service level: 95% (revenue-weighted)", "A-item service level: 98%", "C-item service level: 90%", "Revenue lost to stockouts: $5K"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement ABC classification for all SKUs by revenue contribution", "Set differentiated service level targets (98% A-items, 95% B, 90% C)", "Reallocate inventory from C-items to A-items (pilot with 100 SKUs)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["ABC classification by SKU revenue", "Service level tracking and measurement", "Lost sales estimation methodology", "Customer loyalty and repeat purchase analysis", "Inventory allocation optimization models", "Differentiated stocking policies by SKU class"]
+    },
+    "icon": "badge-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-health-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Health Monitoring",
+    "description": "Real-time inventory health dashboard with automated KPI tracking achieving 90%+ inventory accuracy and 60-80% reduction in aged inventory through continuous monitoring.",
+    "parentCapability": "capability-advanced-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Monthly inventory health report: warehouse team manually compiles metrics in Excel. 2. Report shows: inventory accuracy 85% (15% discrepancies between system and physical), aged inventory $500K (>90 days), turn rate 4.2x annually. 3. Issues identified 30 days too late: '$500K aged inventory discovered end of month, should have started clearance 30-60 days ago'. 4. Inventory accuracy discrepancies found during month-end physical count: 'System shows 100 units SKU#123, actual 85 units, 15% variance causes stockouts despite system showing in-stock'. 5. No real-time visibility: buyers making decisions on inaccurate data all month. 6. Reactive corrections: fix problems after monthly review, miss opportunities for proactive action.",
+      "constraints": [
+        "Monthly reporting (30-day lag on issues)",
+        "85% inventory accuracy (15% discrepancies cause stockouts)",
+        "$500K aged inventory discovered too late",
+        "Manual Excel compilation (time-consuming, error-prone)",
+        "No real-time KPI visibility (decisions on stale data)",
+        "Reactive problem-solving (after monthly review)"
+      ],
+      "metrics": ["Inventory accuracy: 85%", "Aged inventory: $500K", "Turn rate: 4.2x", "Health monitoring: Monthly (delayed)"]
+    },
+    "agentic": {
+      "workflow": "1. Inventory Health Agent monitors KPIs daily: tracks inventory accuracy, aged inventory, turn rate, stockout incidents, excess inventory across all locations. 2. Agent detects accuracy issues real-time: 'SKU#123 discrepancy detected: system 100 units, cycle count 85 units, 15% variance - investigate and correct immediately'. 3. Agent identifies aging inventory early: 'SKU#456 aging 60 days, projected to reach 90 days in 30 days, start clearance now (before it becomes write-off)'. 4. Agent monitors turn rate by category: 'Cereal category turn rate declining from 6x to 4.5x over last 60 days - investigate slow-moving SKUs and clearance opportunities'. 5. Agent generates automated alerts: 'Daily alert: 15 SKUs below accuracy threshold, 8 SKUs reaching age limits, 12 SKUs slow-turning - requires attention'. 6. Results: inventory accuracy improves to 95%+ (real-time correction), aged inventory reduced $500K → $100K (60-80% reduction through early intervention), turn rate improves 4.2x → 5.8x.",
+      "agents": {
+        "orchestrator": "Advanced Inventory Orchestration Agent",
+        "superAgents": ["Inventory Health Agent", "Accuracy Monitoring Agent", "Aging Detection Agent"],
+        "utilityAgents": ["Cycle Counting System", "Dashboard Platform", "KPI Calculator", "Alert Engine"]
+      },
+      "dataSources": [
+        "Real-time inventory positions by SKU and location",
+        "Cycle count results and accuracy measurements",
+        "Inventory aging data (receipt dates, days on hand)",
+        "Inventory turn rate by SKU, category, location",
+        "Stockout incidents and causes",
+        "Excess inventory identification",
+        "Target KPIs and thresholds",
+        "Historical inventory health trends"
+      ],
+      "benefits": [
+        "95%+ inventory accuracy vs 85% (real-time correction)",
+        "60-80% aged inventory reduction ($500K → $100K)",
+        "38% turn rate improvement (4.2x → 5.8x)",
+        "Daily KPI visibility vs monthly reporting",
+        "Automated alerts for exceptions (accuracy, aging, slow-turning)",
+        "Proactive intervention vs reactive monthly corrections"
+      ],
+      "metrics": ["Inventory accuracy: 95%+", "Aged inventory: $100K", "Turn rate: 5.8x", "Health monitoring: Real-time (daily)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy daily inventory health dashboard for key KPIs (accuracy, aging, turns)", "Implement automated accuracy variance alerts (>5% discrepancy triggers investigation)", "Create weekly aging inventory report with clearance recommendations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time inventory data integration across locations", "Cycle counting program for accuracy measurement", "Inventory aging tracking (receipt dates, days on hand)", "Dashboard and visualization platform (Power BI, Tableau)", "Alert and notification system for exception management", "KPI targets and threshold definitions"]
+    },
+    "icon": "clipboard-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "function-health-safety-compliance-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Health & Safety Compliance Monitoring",
+    "description": "IoT sensors with digital checklists achieving 95%+ compliance versus 60-80% manual monthly inspections with real-time proactive alerts preventing violations.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store manager conducts monthly health & safety inspection: walks store with paper checklist reviewing 50-100 line items (fire extinguishers, exit signs, temperature logs, spill hazards, equipment safety). 2. Manager manually checks walk-in cooler temperature log: reviews paper log showing daily temperature readings, identifies 3 days missing entries but cooler seems fine today. 3. Manager completes inspection checklist: marks items pass/fail, writes narrative notes on paper form taking 1-2 hours monthly. 4. Compliance issues discovered during inspection: exit sign burned out (fire code violation), fryer guard missing (OSHA violation), but violations existed for weeks before monthly inspection. 5. Manager submits paper checklist to corporate: mails or scans report to safety team, takes 3-7 days for corporate visibility. 6. Compliance rate 60-80%: violations exist weeks/months between monthly inspections, regulatory audit risk high. 7. Reactive violation correction: issues fixed after discovery but fines and customer safety risks already occurred.",
+      "constraints": [
+        "Monthly inspection frequency with 60-80% compliance (violations undetected 29 days)",
+        "Paper checklists taking 1-2 hours with delayed corporate visibility (3-7 days)",
+        "Temperature logs manual (missing entries, unreliable data)",
+        "Reactive violation discovery (issues exist weeks before detection)",
+        "No real-time alerts or proactive monitoring",
+        "Regulatory audit risk from undetected violations (fines, citations)"
+      ],
+      "metrics": ["Compliance rate: 60-80%", "Inspection frequency: Monthly (29-day gaps)", "Corporate visibility: 3-7 days (paper submission)", "Violation prevention: Reactive (after occurrence)"]
+    },
+    "agentic": {
+      "workflow": "1. Health & Safety Agent monitors IoT sensors continuously: walk-in cooler temperature sensor reports real-time readings every 15 minutes vs daily manual log. 2. Temperature Monitoring Agent detects temperature drift: cooler temperature climbing from 35°F to 42°F over 4 hours triggering immediate alert vs next day manual check. 3. Agent sends real-time alert to store manager mobile device: 'Walk-in cooler temperature 42°F exceeds 38°F threshold - food safety risk - investigate immediately'. 4. Manager responds to alert within 30 minutes: discovers cooler door left ajar, closes door, temperature returns to 35°F preventing food spoilage and health code violation. 5. Agent delivers digital compliance checklist: manager completes monthly inspection on mobile app with step-by-step guidance, photo verification requirements, auto-population of IoT sensor data (temperatures already logged). 6. Compliance Database stores all inspection data: real-time corporate visibility into compliance status by store, violations tracked to closure, trend analysis showing improvement. 7. 15-35 point compliance improvement (95%+ vs 60-80%) through IoT real-time monitoring, digital checklists, and proactive alert prevention vs reactive monthly inspections.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["Health & Safety Agent", "Temperature Monitoring Agent"],
+        "utilityAgents": ["IoT Sensors (Temperature, Humidity, Air Quality)", "Digital Checklist Platform", "Compliance Database", "Alert System (Mobile Push)"]
+      },
+      "dataSources": [
+        "IoT sensor data from walk-in coolers, freezers, HVAC, air quality monitors",
+        "Digital compliance checklist library (health, safety, fire, food safety)",
+        "Inspection history and violation tracking by store and category",
+        "Regulatory requirements database (local health codes, OSHA, fire codes)",
+        "Photo verification images with metadata for compliance documentation",
+        "Manager mobile devices for real-time alert delivery and digital checklists",
+        "Corporate compliance dashboards showing real-time status across stores"
+      ],
+      "benefits": [
+        "15-35 point compliance improvement (95%+ vs 60-80%)",
+        "Real-time monitoring vs monthly inspections (continuous vs 29-day gaps)",
+        "Proactive alerts prevent violations before occurrence (food spoilage, safety incidents)",
+        "Digital checklists with IoT auto-population save 30-50% inspection time",
+        "Corporate real-time visibility vs 3-7 day paper submission delays",
+        "Regulatory audit preparedness improved (documentation, trend analysis)"
+      ],
+      "metrics": ["Compliance rate: 95%+", "Inspection frequency: Continuous (IoT monitoring)", "Corporate visibility: Real-time (digital platform)", "Violation prevention: Proactive (alerts before occurrence)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy IoT temperature sensors in walk-in coolers and freezers at pilot stores", "Implement digital compliance checklists on mobile app for monthly inspections", "Enable real-time mobile alerts for temperature excursions and safety violations"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["IoT sensors for critical equipment (temperature, humidity, air quality)", "Digital checklist platform (mobile app) for inspection management", "Compliance database for violation tracking and reporting", "Store-level internet connectivity for IoT sensor data transmission", "Manager mobile devices for alert delivery and digital checklist completion", "Regulatory requirements database (local health codes, OSHA) for checklist content", "Alert system with escalation rules (manager → district manager → corporate safety)"]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-labor-law-wage-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Labor Law & Wage Compliance",
+    "description": "Auto-detection of FLSA violations achieving <2% violations versus 5-15% manual timecard audits with 80-90% violation reduction and penalty avoidance through real-time prevention.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store manager manually creates employee schedules: assigns shifts in spreadsheet with limited awareness of labor law requirements (meal breaks, minor working hours, overtime). 2. Employees clock in/out at time clock: manager reviews paper timecards weekly looking for errors and overtime approval. 3. Labor law violations frequent: minor worked past 10pm violating state law, employee worked 6-hour shift with no meal break violating FLSA, employee worked 45 hours but paid straight time (overtime miscalculation). 4. Payroll department manually audits timecards: identifies some violations during payroll processing but many missed, retroactive corrections required. 5. FLSA violations discovered during DOL audit or employee complaints: company faces penalties, back wages, legal fees after violations accumulated for months/years. 6. Violation rate 5-15%: managers unaware of complex labor laws (50-state variations, federal vs state rules) resulting in costly non-compliance. 7. Reactive penalty payment and retroactive wage adjustments costing $50,000-$200,000 per year enterprise-wide.",
+      "constraints": [
+        "5-15% labor law violation rate due to manual scheduling and timecard management",
+        "Managers unaware of 50-state labor law variations and complex FLSA rules",
+        "Violations discovered during DOL audits or employee complaints (months/years later)",
+        "Retroactive penalties, back wages, legal fees ($50,000-$200,000 annual)",
+        "Manual payroll audits catch only 40-60% of violations",
+        "No real-time prevention or manager guidance"
+      ],
+      "metrics": ["Labor law violation rate: 5-15%", "Detection timing: Months/years (audits, complaints)", "Penalty costs: $50,000-$200,000 annual", "Violation prevention: None (reactive)"]
+    },
+    "agentic": {
+      "workflow": "1. Labor Compliance Agent validates schedules in real-time: manager creates schedule assigning 16-year-old minor to 10pm-2am shift, agent blocks schedule: 'Violation: Minors cannot work past 10pm per state law'. 2. Break Violation Detection Agent monitors time clock punches: employee clocks in 8am, scheduled to work until 5pm (9-hour shift), agent schedules mandatory 30-minute meal break and alerts manager if break not taken. 3. Agent detects meal break violation in real-time: employee worked 6.5 hours with no break punch, agent sends alert to manager: 'Employee #4567 missed required meal break - investigate and document reason or adjust timecard'. 4. Agent calculates overtime compliance: employee worked 42 hours this week, agent auto-calculates overtime (2 hours at 1.5x rate), flags for payroll processing preventing miscalculation. 5. Agent maintains Labor Law Database: tracks federal FLSA rules and 50-state variations, updates automatically when regulations change providing manager guidance. 6. Alert System notifies manager of violations before payroll submission: 'Fix 3 labor law violations before payroll processing - see details', enabling same-week correction vs retroactive penalties. 7. 80-90% violation reduction (<2% vs 5-15%) through real-time detection, auto-enforcement, and manager guidance preventing DOL penalties and back wages.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["Labor Compliance Agent", "Break Violation Detection Agent"],
+        "utilityAgents": ["Time & Attendance API", "Labor Law Database (50-state + federal)", "Payroll System Integration", "Alert System (Manager Mobile)"]
+      },
+      "dataSources": [
+        "Employee schedules with shift start/end times and break assignments",
+        "Time clock punch data with clock-in/out and break punch timestamps",
+        "Labor law database (FLSA federal rules, 50-state variations, local ordinances)",
+        "Employee age data for minor working hour restrictions",
+        "Payroll system integration for overtime calculation and validation",
+        "Manager alert system for real-time violation notifications",
+        "Historical violation data and penalty costs for ROI measurement"
+      ],
+      "benefits": [
+        "80-90% violation reduction (<2% vs 5-15%) through real-time prevention",
+        "Penalty avoidance: $40,000-$180,000 annual savings (eliminated DOL fines and back wages)",
+        "Real-time detection vs months/years delay (DOL audits, employee complaints)",
+        "Manager guidance on complex 50-state labor law variations",
+        "Auto-enforcement prevents schedule/timecard violations before payroll submission",
+        "Employee satisfaction improved (compliant break policies, proper overtime pay)"
+      ],
+      "metrics": ["Labor law violation rate: <2%", "Detection timing: Real-time (same day)", "Penalty costs: <$10,000 annual (80-95% reduction)", "Violation prevention: Proactive (blocks violations)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated break violation detection for meal and rest break compliance", "Implement real-time schedule validation blocking minor working hour violations", "Enable overtime calculation auto-enforcement preventing FLSA miscalculations"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Time & attendance system with API for punch data and schedule integration", "Labor law database with 50-state rules and federal FLSA regulations", "Employee age data for minor working hour restriction enforcement", "Payroll system integration for overtime calculation validation", "Manager alert system (mobile or email) for real-time violation notifications", "Legal review of labor law compliance rules by jurisdiction", "Manager training on labor compliance agent use and exception handling"]
+    },
+    "icon": "scale",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-recall-withdrawal-management",
+    "type": "function",
+    "level": 4,
+    "label": "Product Recall & Withdrawal Management",
+    "description": "Real-time POS blocking with mobile-guided product location achieving <1 hour execution versus 4-8 hours manual with 99%+ removal rate versus 80-90% traditional.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate receives FDA/USDA product recall notice: 'Listeria contamination in Brand X deli meat, UPC 123456, recalled effective immediately'. 2. Corporate emails recall notice to all store managers: includes product description, UPC, reason for recall, instructions to remove from shelf and inventory. 3. Store manager receives email 2-4 hours after corporate notice: must find email among 50+ daily messages, print recall notice, assign associates to execute. 4. Associates manually search for recalled products: walk aisles looking for product based on description and UPC taking 2-4 hours to find all locations (shelf, backroom, end-caps). 5. Product removal incomplete: 80-90% removal rate typical due to hidden inventory, associates missing products, multiple facings across store. 6. POS continues selling recalled product: 2-8 hours after recall initiated, customers still purchasing contaminated product at checkout creating liability and customer safety risk. 7. Total execution time 4-8 hours with 10-20% of recalled product remaining on shelf creating regulatory violations and customer harm.",
+      "constraints": [
+        "4-8 hour execution time from recall notice to product removal",
+        "Email-based notice delivery delayed 2-4 hours (inbox clutter)",
+        "80-90% removal rate (10-20% recalled product remains on shelf)",
+        "Manual aisle search for products time-consuming (2-4 hours)",
+        "POS continues selling recalled product for 2-8 hours (customer safety risk)",
+        "Regulatory violations and liability from incomplete recalls"
+      ],
+      "metrics": ["Execution time: 4-8 hours", "Product removal rate: 80-90%", "POS blocking: 2-8 hours (after notice)", "Customer safety risk: High (continued sales)"]
+    },
+    "agentic": {
+      "workflow": "1. Recall Management Agent receives FDA/USDA recall notice via API integration: parses recall data (UPC, lot numbers, reason) instantly vs 2-4 hour email delay. 2. Agent blocks recalled product at POS immediately: within 15 minutes of recall notice, product UPC blocked from scanning preventing further sales vs 2-8 hour delay. 3. Product Location Agent generates mobile task for store associates: 'Urgent Recall - Brand X Deli Meat UPC 123456 - see product locations: Aisle 12 Shelf 4 (6 units), Deli Backroom Cooler (12 units), End-cap Display 3 (4 units)'. 4. Associates execute recall using mobile-guided locations: scan UPC at each location confirming removal, take photo of empty shelf for verification, complete task in <1 hour vs 4-8 hours manual search. 5. Agent tracks removal progress in real-time: corporate dashboard shows 'Store #123 recall 85% complete - pending end-cap removal' enabling corporate monitoring and follow-up. 6. Agent verifies 99%+ removal: cross-references inventory system showing recalled product inventory zero, POS blocked preventing sales, photo verification confirming shelf cleared. 7. <1 hour execution (vs 4-8 hours manual) with 99%+ removal (vs 80-90%) protecting customer safety and avoiding regulatory penalties.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["Recall Management Agent", "Product Location Agent"],
+        "utilityAgents": ["POS System API", "Inventory System API", "Mobile App for Associates", "Recall Database (FDA, USDA)"]
+      },
+      "dataSources": [
+        "FDA and USDA recall notices via API integration (real-time vs email)",
+        "Product master with UPC codes, lot numbers, product descriptions",
+        "Inventory system showing product quantities by location (shelf, backroom)",
+        "POS system for recalled product UPC blocking (prevent further sales)",
+        "Mobile task assignments for store associates with product locations",
+        "Photo verification images showing empty shelves after removal",
+        "Corporate recall dashboard tracking removal progress by store in real-time"
+      ],
+      "benefits": [
+        "90%+ faster execution (<1 hour vs 4-8 hours)",
+        "99%+ removal rate (vs 80-90%) protecting customer safety",
+        "Real-time POS blocking (15 min vs 2-8 hours) prevents continued sales",
+        "Mobile-guided product locations eliminate 2-4 hour manual aisle search",
+        "Photo verification provides audit trail for regulatory compliance",
+        "Corporate real-time visibility enables multi-store recall coordination"
+      ],
+      "metrics": ["Execution time: <1 hour", "Product removal rate: 99%+", "POS blocking: 15 min (immediate)", "Customer safety risk: Low (immediate action)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time POS blocking for recalled product UPCs within 15 minutes", "Deploy mobile recall app with product location guidance for rapid removal", "Enable photo verification for removal confirmation and regulatory audit trail"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["POS system integration for recalled UPC blocking (prevent sales)", "Inventory system API showing product locations by store area", "Mobile app for store associates with recall task delivery and photo capture", "FDA and USDA recall API integration for real-time notice delivery (or email parsing)", "Product master database with UPC codes and product descriptions", "Corporate recall dashboard for multi-store removal tracking", "Photo verification and audit trail storage for regulatory compliance"]
+    },
+    "icon": "exclamation",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-store-audit-preparation-execution",
+    "type": "function",
+    "level": 4,
+    "label": "Store Audit Preparation & Execution",
+    "description": "Auto audit prep with compliance dashboard and predictive issue identification achieving 85-95% pass rate versus 60-75% manual with 80-90% prep time reduction from 40-80 hours to <10 hours.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store receives audit notice: corporate or third-party auditor schedules audit in 2 weeks covering 200+ line items (health, safety, labor, merchandising, cash, inventory). 2. Store manager manually prepares for audit: gathers paper documentation, reviews checklists, walks store identifying potential violations taking 40-80 hours over 2 weeks. 3. Manager discovers violations during prep: exit sign burned out, fire extinguisher expired, temperature logs missing 5 days, outdated promotional signage still displayed. 4. Manager rushes to fix issues before audit: orders replacement exit sign (3-5 day delivery), services fire extinguisher, recreates missing temperature logs (compliance gap). 5. Auditor conducts on-site audit: spends 4-8 hours reviewing documentation, walking store, identifying violations missed by manager. 6. Audit results: 60-75% first-time pass rate with 10-20 critical violations found requiring corrective action plan submitted within 30 days. 7. Corrective actions tracked in spreadsheet: manager assigned to fix violations but follow-up inconsistent, some violations persist until next audit.",
+      "constraints": [
+        "Manual audit prep takes 40-80 hours over 2 weeks",
+        "60-75% first-time pass rate with 10-20 violations found per audit",
+        "Reactive issue discovery during audit prep (2-week window)",
+        "Paper documentation gathering time-consuming and error-prone",
+        "Corrective action tracking inconsistent (spreadsheet-based, no accountability)",
+        "Same violations repeat across audits due to lack of proactive monitoring"
+      ],
+      "metrics": ["Audit prep time: 40-80 hours", "First-time pass rate: 60-75%", "Violations per audit: 10-20", "Corrective action closure: 40-60% on-time"]
+    },
+    "agentic": {
+      "workflow": "1. Audit Preparation Agent receives audit notice: corporate schedules audit in 2 weeks, agent auto-generates pre-audit compliance report showing current status across all categories. 2. Issue Prediction Agent identifies violations proactively: analyzes compliance data flagging 'Exit sign #5 not inspected in 12 months (due for inspection), Fire extinguisher #3 expires in 30 days, 8 temperature log gaps past 90 days'. 3. Agent prioritizes corrective actions by audit impact: 'Critical: Order exit sign inspection (5-day lead time) - start now. Medium: Schedule fire extinguisher service. Low: Document temperature log gaps (explain equipment malfunction)'. 4. Agent creates auto-assigned corrective action tasks: assigns exit sign inspection work order to facilities, fire extinguisher service to manager, temperature log documentation to assistant manager with deadlines before audit. 5. Compliance Dashboard shows audit readiness: real-time score 'Store 87% audit-ready, 3 critical items pending, 5 days until audit' vs 40-80 hours manual prep. 6. Auditor conducts audit: pre-audit agent prep results in 85-95% pass rate (vs 60-75%) with <5 violations found (vs 10-20) due to proactive remediation. 7. 80-90% prep time reduction (<10 hours vs 40-80 hours) with 25 point pass rate improvement through predictive issue identification and automated corrective actions.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["Audit Preparation Agent", "Issue Prediction Agent"],
+        "utilityAgents": ["Compliance Management Platform", "Audit Checklist System", "Corrective Action Tracker", "BI Dashboard"]
+      },
+      "dataSources": [
+        "Compliance data from all categories (health, safety, labor, merchandising, cash)",
+        "Audit checklist templates (200+ line items) by audit type and industry",
+        "Historical audit results and violation patterns by store",
+        "Inspection schedules and expiration dates (fire extinguishers, exit signs, equipment)",
+        "Temperature logs and equipment maintenance records from IoT sensors",
+        "Corrective action tracker with task assignments and deadlines",
+        "Audit readiness dashboard showing compliance score and gap analysis"
+      ],
+      "benefits": [
+        "80-90% prep time reduction (<10 hours vs 40-80 hours)",
+        "25 point pass rate improvement (85-95% vs 60-75%)",
+        "Proactive violation detection vs 2-week reactive prep window",
+        "Predictive issue identification enables timely remediation (vs rushed fixes)",
+        "Auto-assigned corrective actions with accountability and tracking",
+        "Real-time audit readiness dashboard vs manual documentation gathering"
+      ],
+      "metrics": ["Audit prep time: <10 hours", "First-time pass rate: 85-95%", "Violations per audit: <5", "Corrective action closure: 85-95% on-time"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy compliance management platform with real-time audit readiness dashboard", "Implement predictive issue identification for proactive violation remediation", "Enable auto-assigned corrective action tracking with accountability and deadlines"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Compliance management platform for data aggregation and reporting", "Audit checklist system with 200+ line items by audit type", "Integration with IoT sensors (temperature logs, equipment inspections)", "Corrective action tracking system with task assignment and escalation", "BI dashboard for audit readiness scoring and gap analysis", "Historical audit results data for predictive modeling", "Manager training on using compliance dashboard and addressing predicted violations"]
+    },
+    "icon": "clipboard-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-license-permit-renewal-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "License & Permit Renewal Tracking",
+    "description": "Auto renewal reminders with application pre-filling and tracking dashboard achieving <2% late renewals versus 10-20% manual calendar tracking with fine avoidance and license suspension prevention.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store manager tracks license renewals manually: maintains spreadsheet or paper calendar showing business license, liquor license, food service permit expiration dates. 2. Manager sets manual reminders: attempts to remember renewal deadlines 30-60 days in advance but often forgets amid competing priorities. 3. Late renewal discovery: manager realizes liquor license expired 2 weeks ago when contacted by regulatory agency or during routine check. 4. Emergency renewal process: manager rushes to submit late renewal application, faces late fees ($200-$500), potential license suspension risk, business interruption. 5. Renewal application manual: manager manually completes forms, gathers supporting documents (certificates, inspections), submits via mail or in-person taking 4-8 hours. 6. Late renewal rate 10-20%: some stores miss deadlines due to manager turnover, forgetfulness, competing priorities resulting in fines and license suspension risk. 7. No centralized tracking: corporate unaware of store license status, discovers expired licenses during audits or regulatory violations.",
+      "constraints": [
+        "Manual spreadsheet/calendar tracking prone to human error and forgetfulness",
+        "10-20% late renewal rate resulting in fines ($200-$500 per incident)",
+        "License suspension risk from expired permits (business closure potential)",
+        "Manual renewal application process takes 4-8 hours (forms, documents, submission)",
+        "Manager turnover creates license tracking gaps",
+        "No centralized corporate visibility into store license status"
+      ],
+      "metrics": ["Late renewal rate: 10-20%", "Average late fees: $200-$500 per incident", "License suspension risk: High", "Renewal application time: 4-8 hours"]
+    },
+    "agentic": {
+      "workflow": "1. License Tracking Agent maintains centralized license database: stores all licenses by store (business, liquor, food service, health permits) with expiration dates and renewal requirements. 2. Agent generates renewal reminders automatically: 90 days before expiration, sends alert to store manager and district manager: 'Liquor license expires in 90 days - start renewal process now'. 3. Renewal Automation Agent pre-fills renewal applications: populates application forms with store data (address, EIN, prior license numbers) from database, manager reviews and submits reducing 4-8 hours to 30-60 minutes. 4. Agent tracks renewal progress: monitors application submission, agency processing status, renewal approval, new license receipt updating database in real-time. 5. Agent escalates late renewals: if manager doesn't submit application 30 days before expiration, escalates to district manager: 'Store #123 liquor license renewal pending - 25 days until expiration - immediate action required'. 6. Tracking Dashboard shows corporate visibility: real-time view of all store licenses, expiration dates, renewal status, at-risk licenses enabling proactive corporate intervention. 7. <2% late renewal rate (vs 10-20%) through automated reminders, application pre-filling, escalation, and centralized tracking eliminating $160-$400 late fees per year per store.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["License Tracking Agent", "Renewal Automation Agent"],
+        "utilityAgents": ["License Database", "Government Portal Integration (if available)", "Calendar API for Reminders", "Document Management System"]
+      },
+      "dataSources": [
+        "Centralized license database with all store licenses and expiration dates",
+        "Renewal requirements by license type and jurisdiction",
+        "Store master data (address, EIN, prior license numbers) for application pre-filling",
+        "Government portal integration for online renewal submission (where available)",
+        "Manager and district manager contact information for alert delivery",
+        "Renewal tracking status (application submitted, in-process, approved, received)",
+        "Corporate license dashboard showing at-risk licenses and compliance status"
+      ],
+      "benefits": [
+        "80-90% late renewal reduction (<2% vs 10-20%)",
+        "Fine avoidance: $160-$400 annual savings per store (eliminated late fees)",
+        "License suspension risk eliminated through proactive tracking and escalation",
+        "90% renewal time reduction (30-60 min vs 4-8 hours) via application pre-filling",
+        "Corporate visibility enables multi-store license compliance monitoring",
+        "Manager turnover impact mitigated with centralized tracking and auto-reminders"
+      ],
+      "metrics": ["Late renewal rate: <2%", "Average late fees: <$20 per store per year", "License suspension risk: Low (proactive tracking)", "Renewal application time: 30-60 min"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build centralized license database with all store licenses and expiration dates", "Implement automated 90-day and 30-day renewal reminder emails to managers", "Enable escalation alerts to district managers for at-risk licenses 30 days before expiration"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Centralized license database with all store licenses by jurisdiction", "Store master data (address, EIN, license numbers) for application pre-filling", "Calendar API or email system for automated reminder delivery", "Government portal integration for online renewal (where available)", "Document management system for license storage and retrieval", "Manager and district manager contact data for alert distribution", "Corporate license compliance dashboard for multi-store visibility"]
+    },
+    "icon": "document-text",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-corrective-action-tracking-closure",
+    "type": "function",
+    "level": 4,
+    "label": "Corrective Action Tracking & Closure",
+    "description": "Workflow-driven corrective actions with auto-escalation and photo verification achieving 85-95% on-time closure versus 40-60% spreadsheet-based with accountability and audit trail.",
+    "parentCapability": "capability-store-compliance-audits",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Audit identifies violations: auditor finds 15 violations (exit sign burned out, fire extinguisher expired, temperature log gaps, pricing errors, merchandising non-compliance). 2. Auditor creates corrective action list: writes violations in audit report, assigns to store manager to fix within 30 days. 3. Manager receives corrective action list via email: prints list, adds to to-do pile, assigns some items to associates verbally. 4. Manager tracks corrective actions in spreadsheet: creates Excel tracker with violation, assigned person, due date, status attempting to monitor progress. 5. Corrective actions slip through cracks: associates forget verbal assignments, manager distracted by daily operations, 40-60% items completed on-time. 6. District Manager follows up at 30-day deadline: discovers 8 of 15 items incomplete, requests status update, extensions granted pushing closure to 60-90 days. 7. Limited accountability: can't determine who was assigned, when, whether they attempted fix, resulting in repeat violations at next audit.",
+      "constraints": [
+        "40-60% on-time closure rate due to spreadsheet tracking and limited accountability",
+        "Email-based corrective action delivery lost in inbox clutter",
+        "Verbal assignments to associates forgotten (no documentation)",
+        "Spreadsheet tracking requires manual updates (often not done)",
+        "No automatic escalation when items overdue",
+        "No photo verification or proof of completion (claimed done but not verified)"
+      ],
+      "metrics": ["On-time closure rate: 40-60%", "Average closure time: 60-90 days (vs 30-day target)", "Accountability: Low (verbal assignments)", "Audit trail: Limited (spreadsheet)"]
+    },
+    "agentic": {
+      "workflow": "1. Corrective Action Agent receives audit violations: automatically creates workflow task for each violation with assignment, due date, verification requirements. 2. Agent assigns tasks intelligently: 'Exit sign repair → Facilities work order auto-created, Fire extinguisher service → Manager task with vendor contact, Pricing errors → Store associate task with corrective product list'. 3. Agent sends mobile task notifications: assigned person receives mobile push notification: 'Corrective action assigned - Exit sign repair - Due in 25 days - Tap to accept and start'. 4. Agent tracks completion with photo verification: associate completes exit sign repair, takes photo of working sign, uploads via mobile app with timestamp. 5. Escalation Agent monitors overdue items: task not completed within 5 days of deadline, auto-escalates to district manager: 'Store #123 fire extinguisher service overdue by 5 days - requires immediate attention'. 6. Workflow Engine ensures accountability: full audit trail showing who assigned, who accepted, when completed, photo verification creating documentation for regulatory compliance. 7. 85-95% on-time closure (vs 40-60%) with 25-55 point improvement through workflow automation, mobile notifications, photo verification, and auto-escalation ensuring compliance.",
+      "agents": {
+        "orchestrator": "Store Compliance Orchestration Agent",
+        "superAgents": ["Corrective Action Agent", "Escalation Agent"],
+        "utilityAgents": ["Workflow Engine", "Task Management System", "Photo Verification Service", "Audit System Integration"]
+      },
+      "dataSources": [
+        "Audit violations and corrective action requirements from audit reports",
+        "Task assignments with responsible person, due date, verification requirements",
+        "Mobile task notifications and acceptance timestamps",
+        "Photo verification images with metadata (task, person, location, timestamp)",
+        "Escalation rules (e.g., escalate to DM if 5 days overdue)",
+        "Workflow audit trail showing task lifecycle (created, assigned, accepted, completed)",
+        "Corrective action dashboard showing completion rates by store and category"
+      ],
+      "benefits": [
+        "25-55 point on-time closure improvement (85-95% vs 40-60%)",
+        "Accountability established through workflow assignments and acceptance tracking",
+        "Photo verification provides audit trail for regulatory compliance",
+        "Auto-escalation ensures overdue items get leadership attention",
+        "Mobile notifications replace email clutter and verbal assignments",
+        "Repeat violations reduced through systematic closure and documentation"
+      ],
+      "metrics": ["On-time closure rate: 85-95%", "Average closure time: 25-30 days (within target)", "Accountability: High (workflow-tracked)", "Audit trail: Complete (photos + timestamps)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy workflow-driven task management for corrective actions with mobile notifications", "Implement photo verification requirements for corrective action completion", "Enable auto-escalation rules for overdue items (e.g., escalate to DM after 5 days)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Workflow engine or task management system for corrective action tracking", "Mobile app for task notifications and photo capture", "Photo verification service with metadata storage (task, person, timestamp)", "Escalation rules configured (e.g., overdue thresholds, escalation recipients)", "Integration with audit system for violation import and tracking", "Manager and associate mobile devices for task delivery and photo verification", "Corrective action dashboard for completion rate monitoring by store"]
+    },
+    "icon": "check-circle",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

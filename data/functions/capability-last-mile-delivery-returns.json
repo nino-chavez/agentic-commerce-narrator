@@ -1,0 +1,516 @@
+[
+  {
+    "id": "function-lmd-delivery-window-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Delivery Window Optimization",
+    "description": "AI-powered delivery window planning and dynamic appointment scheduling to maximize route efficiency and customer convenience.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Static delivery windows offered to all customers regardless of location or route optimization opportunities (e.g., 'Deliver between 8 AM - 12 PM or 1 PM - 5 PM'). No dynamic pricing for off-peak windows. Customer selects preferred window without route context. Manual route planning attempts to honor all appointments, leading to inefficient routes with excessive drive time. Missed appointment penalties from unrealistic window promises.",
+      "constraints": [
+        "Broad 4-hour delivery windows reduce customer convenience",
+        "30-40% route inefficiency from unoptimized appointment distribution",
+        "10-15% missed delivery window rate",
+        "No incentive for customers to select off-peak times",
+        "Static windows ignore geographic clustering opportunities"
+      ],
+      "metrics": [
+        "On-time window performance: 85-90%",
+        "Average window width: 4 hours",
+        "Route efficiency: 60-70%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI delivery window optimization dynamically generates available delivery windows for each customer based on their location, existing route commitments, driver capacity, and traffic patterns. Machine learning narrows windows to 1-2 hours while maintaining high on-time performance through intelligent clustering. Dynamic pricing incentivizes customers to select off-peak or route-optimal windows (discounts for flexible delivery). Real-time route re-optimization adjusts windows as new orders arrive or conditions change. Predictive ETA continuously updated and communicated to customers. Customers can reschedule via self-service portal with AI-suggested alternatives.",
+      "agents": {
+        "orchestrator": "Delivery Window Orchestration",
+        "superAgents": [
+          "Window Generation Agent",
+          "Route Clustering Agent",
+          "Dynamic Pricing Agent",
+          "ETA Prediction Agent"
+        ],
+        "utilityAgents": [
+          "Traffic Data Agent",
+          "Customer Communication Agent",
+          "Rescheduling Agent"
+        ]
+      },
+      "dataSources": [
+        "Customer addresses and delivery preferences",
+        "Existing route commitments and driver capacity",
+        "Real-time traffic and historical patterns",
+        "Delivery time predictions by route and time-of-day",
+        "Customer willingness-to-pay for premium windows",
+        "Historical on-time performance"
+      ],
+      "benefits": [
+        "95-98% on-time window performance (vs 85-90%)",
+        "60-75% reduction in window width (1-2 hours vs 4 hours)",
+        "25-35% route efficiency improvement through clustering",
+        "15-25% increase in daily delivery capacity",
+        "10-15% revenue increase from premium window pricing"
+      ],
+      "metrics": [
+        "On-time window performance: 95-98%",
+        "Average window width: 1-2 hours",
+        "Route efficiency: 85-95%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy 2-hour dynamic windows for high-density delivery zones (30% efficiency gain)",
+        "Implement premium pricing for same-day narrow windows (10% revenue lift)",
+        "Enable customer self-service rescheduling (40% call center reduction)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Route optimization software",
+        "Customer address geocoding",
+        "Traffic data integration",
+        "Customer communication platform",
+        "Dynamic pricing capability"
+      ]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lmd-proof-of-delivery",
+    "type": "function",
+    "level": 4,
+    "label": "Digital Proof of Delivery & Customer Handoff",
+    "description": "Contactless delivery verification with photo capture, signature, and real-time notification to reduce delivery disputes and theft.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Paper-based delivery receipts with manual signatures. Limited photo documentation of deliveries. Delayed proof-of-delivery upload (end-of-day driver check-in). Frequent customer disputes about 'never received' packages. Manual investigation of delivery issues requiring driver interviews and customer calls. No real-time delivery confirmation to customers.",
+      "constraints": [
+        "Paper-based POD creates 12-24 hour visibility lag",
+        "5-10% delivery dispute rate ('never received', 'damaged')",
+        "No photo evidence for 70-80% of deliveries",
+        "Manual dispute resolution (2-5 days per case)",
+        "Package theft with no accountability documentation"
+      ],
+      "metrics": [
+        "Delivery dispute rate: 5-10%",
+        "POD documentation coverage: 20-30% (signature only)",
+        "Time to POD upload: 12-24 hours"
+      ]
+    },
+    "agentic": {
+      "workflow": "Mobile delivery app guides drivers through standardized digital proof-of-delivery workflow: GPS location capture, timestamp, photo of package at delivery location, optional customer signature (contactless via mobile device), and delivery notes. Computer vision validates photo quality and flags issues (blurry, wrong location, no package visible). Real-time POD upload with instant customer notification including delivery photo. AI analyzes delivery patterns to identify high-theft locations and recommend preventive measures (require signature, hand to resident, leave in secure location). Automated dispute resolution using POD data—90% of 'never received' claims resolved instantly by sharing delivery photo.",
+      "agents": {
+        "orchestrator": "Proof of Delivery Orchestrator",
+        "superAgents": [
+          "Photo Validation Agent",
+          "Delivery Verification Agent",
+          "Dispute Resolution Agent",
+          "Theft Pattern Detection Agent"
+        ],
+        "utilityAgents": [
+          "Mobile App Agent",
+          "GPS Geofencing Agent",
+          "Customer Notification Agent",
+          "Computer Vision Agent"
+        ]
+      },
+      "dataSources": [
+        "GPS location and timestamp",
+        "Photo capture from driver mobile device",
+        "Customer delivery preferences",
+        "Historical delivery issues and theft reports",
+        "Computer vision image analysis",
+        "Customer dispute claims"
+      ],
+      "benefits": [
+        "85-95% reduction in delivery disputes (0.5-1.5% vs 5-10%)",
+        "99%+ POD documentation coverage with photo evidence",
+        "Real-time POD visibility (vs 12-24 hour lag)",
+        "90% instant dispute resolution (vs 2-5 day manual investigation)",
+        "50-70% reduction in package theft through accountability and pattern detection"
+      ],
+      "metrics": [
+        "Delivery dispute rate: 0.5-1.5%",
+        "POD documentation coverage: 99%+ (photo + GPS + timestamp)",
+        "Time to POD upload: Real-time (seconds)"
+      ],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy mobile POD app with photo capture (70% dispute reduction)",
+        "Enable real-time customer notifications with delivery photo (80% 'WISMO' reduction)",
+        "Implement GPS geofencing for delivery verification (eliminate false 'delivered' scans)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Mobile devices for all delivery drivers",
+        "Driver mobile app with camera access",
+        "Customer notification platform (email/SMS)",
+        "GPS/geolocation capability"
+      ]
+    },
+    "icon": "camera",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lmd-failed-delivery-recovery",
+    "type": "function",
+    "level": 4,
+    "label": "Failed Delivery Recovery & Re-Attempt Optimization",
+    "description": "Automated recovery workflows for failed deliveries with intelligent re-attempt scheduling and customer self-service options.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Manual processing of failed delivery exceptions (customer not home, access issues, address problems). Default retry schedules (e.g., 'attempt again next business day') without customer input. Limited self-service options for customers to redirect or reschedule deliveries. Multiple failed attempts lead to return-to-sender with full logistics costs and customer dissatisfaction. Customer service handles all delivery exception inquiries via phone.",
+      "constraints": [
+        "15-25% first-attempt delivery failure rate",
+        "Fixed retry schedules ignore customer availability",
+        "3-5 delivery attempts before RTS (wasted costs)",
+        "Limited self-service (10-20% adoption where available)",
+        "60-70% of failed deliveries require customer service contact"
+      ],
+      "metrics": [
+        "First-attempt success rate: 75-85%",
+        "Recovery rate (after failure): 60-70%",
+        "Cost per failed delivery: $8-15"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered failed delivery management immediately detects delivery failures and triggers intelligent recovery workflow. Machine learning predicts optimal re-attempt timing based on customer availability patterns, historical delivery success by time-of-day, and location characteristics. Automated customer outreach (SMS/email) provides self-service options: select alternate delivery time, redirect to neighbor/locker/pickup point, authorize leave at door, or schedule hold for pickup. AI suggests alternate delivery locations (nearby lockers, pickup points, retail stores) based on customer location and preferences. For chronic failure addresses, system proactively offers alternatives before first attempt. Predictive analytics identify high-risk deliveries and recommend preventive actions (customer contact before delivery, require appointment).",
+      "agents": {
+        "orchestrator": "Failed Delivery Recovery Orchestrator",
+        "superAgents": [
+          "Re-Attempt Optimization Agent",
+          "Customer Availability Prediction Agent",
+          "Alternate Location Agent",
+          "Preventive Action Agent"
+        ],
+        "utilityAgents": [
+          "Customer Communication Agent",
+          "Self-Service Portal Agent",
+          "Locker/Pickup Point API Agent",
+          "Address Intelligence Agent"
+        ]
+      },
+      "dataSources": [
+        "Delivery attempt history and failure reasons",
+        "Customer availability patterns (successful delivery times)",
+        "Customer communication preferences and responses",
+        "Alternate delivery location options (lockers, pickup points, stores)",
+        "Address characteristics (access restrictions, apartment, business)",
+        "Carrier route schedules and capacity"
+      ],
+      "benefits": [
+        "40-60% reduction in first-attempt failures (10-15% vs 15-25%)",
+        "85-95% recovery rate after initial failure (vs 60-70%)",
+        "60-75% reduction in customer service contacts for delivery issues",
+        "50-70% cost savings through optimized re-attempts and self-service",
+        "80-90% self-service adoption for failed delivery recovery"
+      ],
+      "metrics": [
+        "First-attempt success rate: 85-90%",
+        "Recovery rate (after failure): 85-95%",
+        "Cost per failed delivery: $3-6"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated customer SMS notifications with self-service options (50% recovery improvement)",
+        "Implement ML-based re-attempt time optimization (30% second-attempt success increase)",
+        "Enable redirect to pickup locations/lockers (20% cost savings)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Customer communication platform (SMS/email)",
+        "Self-service delivery management portal",
+        "Delivery history data for ML training",
+        "Alternate delivery location network or partnerships"
+      ]
+    },
+    "icon": "rotate-right",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lmd-delivery-experience-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Delivery Experience Tracking & Feedback",
+    "description": "Real-time delivery satisfaction monitoring with driver performance analytics and continuous improvement insights.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Limited delivery experience data collection—occasional customer surveys or complaint tracking. No systematic driver performance monitoring beyond on-time delivery. Quarterly or annual driver reviews based on aggregate metrics. Reactive problem-solving after customer complaints escalate. Siloed feedback data across customer service, operations, and quality teams.",
+      "constraints": [
+        "Feedback collection: 5-10% of deliveries (survey fatigue)",
+        "Feedback lag: 1-7 days after delivery",
+        "Driver performance visibility limited to on-time %",
+        "No real-time issue detection (damaged packages, unprofessional behavior)",
+        "Quarterly driver coaching (slow improvement cycles)"
+      ],
+      "metrics": [
+        "Feedback coverage: 5-10%",
+        "Time to insight: 1-7 days",
+        "Driver coaching frequency: Quarterly"
+      ]
+    },
+    "agentic": {
+      "workflow": "Comprehensive delivery experience platform collects signals from multiple sources: automated post-delivery micro-surveys (single question, high completion rate), delivery app events (late arrival, multiple contact attempts), customer service inquiries, POD photo quality, and delivery time accuracy. Machine learning analyzes patterns to identify driver performance issues, training opportunities, and customer satisfaction drivers. Real-time alerts notify supervisors of critical incidents (customer complaint, safety issue, repeated late deliveries). AI generates personalized driver coaching recommendations based on performance patterns. Natural language processing analyzes customer feedback comments to identify systemic issues (packaging problems, communication gaps, route inefficiencies). Continuous benchmarking of driver performance with recognition for top performers.",
+      "agents": {
+        "orchestrator": "Delivery Experience Orchestrator",
+        "superAgents": [
+          "Feedback Analysis Agent",
+          "Driver Performance Analytics Agent",
+          "Coaching Recommendation Agent",
+          "Issue Pattern Detection Agent"
+        ],
+        "utilityAgents": [
+          "Survey Agent (micro-survey delivery)",
+          "NLP Sentiment Analysis Agent",
+          "Driver Communication Agent",
+          "Benchmarking Agent"
+        ]
+      },
+      "dataSources": [
+        "Post-delivery survey responses",
+        "Delivery app events and driver behavior",
+        "Customer service complaints and inquiries",
+        "POD photo quality scores",
+        "Delivery time performance vs. commitment",
+        "Driver self-reported issues",
+        "Customer repeat delivery patterns"
+      ],
+      "benefits": [
+        "70-85% feedback coverage (vs 5-10%) through micro-surveys",
+        "Real-time issue detection (vs 1-7 day lag)",
+        "30-45% improvement in delivery satisfaction scores",
+        "50-70% reduction in repeat customer complaints",
+        "Continuous driver coaching (weekly vs quarterly)"
+      ],
+      "metrics": [
+        "Feedback coverage: 70-85%",
+        "Time to insight: Real-time to hours",
+        "Driver coaching frequency: Weekly with real-time alerts"
+      ],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy single-question post-delivery SMS survey (60% response rate)",
+        "Implement driver performance dashboards with real-time metrics",
+        "Enable automated alerts for delivery satisfaction issues"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Customer communication platform (SMS/email)",
+        "Driver mobile app with event tracking",
+        "Delivery performance data (on-time, POD, attempts)",
+        "Survey tool or customer feedback platform"
+      ]
+    },
+    "icon": "star",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lmd-sustainable-delivery",
+    "type": "function",
+    "level": 4,
+    "label": "Sustainable Last-Mile Delivery Optimization",
+    "description": "Carbon-optimized routing and delivery mode selection with electric vehicle fleet management and customer sustainability preferences.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Route optimization focused solely on cost and speed without carbon considerations. Traditional gas-powered vehicle fleets with limited EV adoption. No visibility into carbon emissions per delivery or route. Customers have no option to select sustainable delivery. Sustainability reporting limited to annual aggregate emissions calculations for compliance.",
+      "constraints": [
+        "No carbon footprint visibility at delivery level",
+        "EV fleet adoption: 0-5% of vehicles",
+        "Route optimization ignores emissions (focuses on time/cost)",
+        "No customer sustainability options or transparency",
+        "Annual emissions reporting (lagging indicator)"
+      ],
+      "metrics": [
+        "Carbon visibility: Annual aggregate only",
+        "EV fleet %: 0-5%",
+        "Sustainability-conscious customer retention: N/A"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered sustainable delivery platform optimizes routes considering carbon emissions alongside cost and speed, using multi-objective optimization (Pareto frontier analysis). Machine learning recommends optimal vehicle type (EV, hybrid, gas) per route based on distance, charging infrastructure, payload, and carbon impact. Dynamic EV charging management optimizes charge scheduling based on renewable energy availability and route requirements. Carbon footprint calculated and displayed for every delivery option at customer checkout with option to select 'carbon-neutral delivery' (offset fee or slower consolidated delivery). Real-time emissions tracking and reporting with automated carbon offset purchasing. Predictive maintenance for EV fleet to maximize uptime. Customer sustainability preferences stored and auto-applied.",
+      "agents": {
+        "orchestrator": "Sustainable Delivery Orchestrator",
+        "superAgents": [
+          "Carbon-Optimized Routing Agent",
+          "Vehicle-to-Route Assignment Agent",
+          "EV Charging Optimization Agent",
+          "Offset Recommendation Agent"
+        ],
+        "utilityAgents": [
+          "Emissions Calculation Agent",
+          "Customer Preference Agent",
+          "Renewable Energy API Agent",
+          "Carbon Offset Platform Agent"
+        ]
+      },
+      "dataSources": [
+        "Vehicle emissions factors by type and fuel",
+        "Route distance and traffic patterns",
+        "EV charging station locations and availability",
+        "Renewable energy grid mix by time-of-day",
+        "Carbon offset pricing and availability",
+        "Customer sustainability preferences",
+        "Delivery time and cost constraints"
+      ],
+      "benefits": [
+        "30-50% reduction in carbon emissions per delivery",
+        "EV fleet adoption: 40-70% of urban deliveries",
+        "100% carbon footprint visibility (per-delivery level)",
+        "10-15% customer loyalty increase among sustainability-conscious segments",
+        "15-25% reduction in fuel costs through EV adoption and route optimization"
+      ],
+      "metrics": [
+        "Carbon visibility: Real-time per delivery",
+        "EV fleet %: 40-70% (urban routes)",
+        "Sustainability-conscious customer retention: +10-15%"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy carbon footprint display at checkout (transparency for customers)",
+        "Pilot EV fleet for high-density urban routes (30% emissions reduction)",
+        "Implement carbon-offset option for premium customers (revenue + sustainability)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "Route optimization software with multi-objective capability",
+        "EV fleet procurement or partnership",
+        "Charging infrastructure deployment",
+        "Carbon calculation methodology and emissions factors",
+        "Customer checkout integration for sustainability options"
+      ]
+    },
+    "icon": "leaf",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lmd-returns-logistics-reverse",
+    "type": "function",
+    "level": 4,
+    "label": "Returns Pickup & Reverse Logistics",
+    "description": "Convenient customer returns pickup scheduling with optimized reverse logistics routing and real-time tracking.",
+    "parentCapability": "capability-last-mile-delivery-returns",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Customers must drop off returns at carrier locations, retail stores, or schedule pickups via phone. Limited same-route pickup optimization (driver delivers and picks up returns opportunistically). No dedicated returns routing. Returns tracking limited to carrier scan events. High customer friction for returns leads to reduced satisfaction and retention.",
+      "constraints": [
+        "Customer must travel to drop-off location (inconvenience)",
+        "Scheduled returns pickups expensive (dedicated trip, $8-15 cost)",
+        "15-25% of delivery routes include opportunistic returns pickup (suboptimal)",
+        "No real-time returns tracking for customers",
+        "Reverse logistics costs 2-3x forward delivery costs"
+      ],
+      "metrics": [
+        "Returns pickup convenience score: 60-70%",
+        "Reverse logistics cost vs forward: 2-3x",
+        "Same-route returns pickup: 15-25%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered returns orchestration enables customers to schedule convenient at-home pickup via mobile app or website with dynamic time windows. Machine learning optimizes reverse logistics routing by combining returns pickups with forward deliveries on the same route, maximizing asset utilization. System predicts returns volume by route and proactively offers pickup appointments to customers based on driver proximity and capacity. Automated label generation (email or driver brings pre-printed label) streamlines customer experience. Real-time tracking of returns from pickup through processing. Predictive analytics identify high-return products and customers for targeted interventions. Circular economy integrations enable alternative disposition (resale, donation, recycling) directly from customer location.",
+      "agents": {
+        "orchestrator": "Returns Logistics Orchestrator",
+        "superAgents": [
+          "Returns Pickup Scheduling Agent",
+          "Reverse Route Optimization Agent",
+          "Returns Volume Prediction Agent",
+          "Disposition Optimization Agent"
+        ],
+        "utilityAgents": [
+          "Customer Communication Agent",
+          "Label Generation Agent",
+          "Tracking Agent",
+          "Circular Economy Platform Agent"
+        ]
+      },
+      "dataSources": [
+        "Customer return requests and preferences",
+        "Forward delivery routes and driver capacity",
+        "Historical returns patterns by route and customer",
+        "Returns processing center locations and capacity",
+        "Product return rates and disposition outcomes",
+        "Circular economy marketplace pricing"
+      ],
+      "benefits": [
+        "85-95% returns pickup convenience score (at-home pickup)",
+        "50-70% reduction in reverse logistics costs (same-route optimization)",
+        "60-80% same-route returns pickup (vs 15-25%)",
+        "30-45% improvement in customer retention from hassle-free returns",
+        "Real-time returns tracking for 100% of pickups"
+      ],
+      "metrics": [
+        "Returns pickup convenience score: 85-95%",
+        "Reverse logistics cost vs forward: 1.0-1.5x",
+        "Same-route returns pickup: 60-80%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable customer self-service returns pickup scheduling (60% convenience improvement)",
+        "Optimize routes to combine deliveries + returns pickups (40% cost reduction)",
+        "Deploy automated returns label generation and email delivery"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Returns management system integration",
+        "Customer self-service portal",
+        "Route optimization software with reverse logistics capability",
+        "Label generation and printing infrastructure",
+        "Driver mobile app with returns pickup workflow"
+      ]
+    },
+    "icon": "arrow-rotate-left",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

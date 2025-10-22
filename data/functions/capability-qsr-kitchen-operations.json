@@ -1,0 +1,462 @@
+[
+  {
+    "id": "function-kitchen-display-system-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Kitchen Display System (KDS) Optimization",
+    "description": "AI-powered order routing and priority management reducing average ticket time by 25-40% and improving order accuracy to 99%+ through intelligent kitchen orchestration.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Orders print on paper tickets in chronological sequence. 2. Kitchen manager manually assigns tickets to stations (grill, fry, assembly). 3. Orders prepared strictly in order received (FIFO) regardless of complexity. 4. Simple orders wait behind complex orders (1 burger waits for 10-item catering order). 5. Paper tickets lost, illegible, or out of sequence create errors.",
+      "constraints": [
+        "FIFO processing creates uneven wait times (simple orders delayed)",
+        "Manual routing to stations inefficient",
+        "Paper tickets lost or illegible (3-5% error rate)",
+        "No visibility into station capacity or bottlenecks",
+        "Average ticket time 8-12 minutes",
+        "Kitchen manager overwhelmed during peak (routing burden)"
+      ],
+      "metrics": ["Average ticket time: 8-12 min", "Order accuracy: 95-97%", "Routing: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Intelligent Routing Agent analyzes incoming orders and auto-routes items to optimal stations based on current workload. 2. Priority Engine resequences orders: simple 1-item orders fast-tracked, complex orders batched efficiently. 3. Load Balancing Agent distributes work across grill, fry, and assembly stations to prevent bottlenecks. 4. Real-Time KDS displays color-coded order status: green <3 min, yellow 3-6 min, red >6 min (urgency signals). 5. Assembly Coordination Agent ensures all items for an order ready simultaneously (no cold fries waiting for burger).",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Intelligent Routing Agent", "Priority Engine", "Load Balancing Agent", "Assembly Coordination Agent"],
+        "utilityAgents": ["Kitchen Display System", "Order Management", "Station Monitoring", "Timer Service"]
+      },
+      "dataSources": [
+        "Incoming order queue and item details",
+        "Station capacity and current workload",
+        "Prep time by item and station",
+        "Historical order completion times",
+        "Real-time kitchen staff availability",
+        "Order priority (dine-in vs delivery vs drive-thru)",
+        "Item dependencies (assembly requires all components)",
+        "Peak hour demand patterns"
+      ],
+      "benefits": [
+        "25-40% reduction in average ticket time (5-7 min vs 8-12 min)",
+        "99%+ order accuracy vs 95-97% (digital vs paper)",
+        "Intelligent routing eliminates kitchen manager bottleneck",
+        "Fast-track simple orders improve customer satisfaction",
+        "Load balancing prevents station idle time",
+        "Coordinated assembly ensures hot, fresh food"
+      ],
+      "metrics": ["Average ticket time: 5-7 min", "Order accuracy: 99%+", "Routing: AI-powered automatic"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy KDS at grill and fry stations", "Implement color-coded urgency timers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Kitchen Display System hardware", "POS integration", "Station-level monitoring", "Kitchen layout optimization"]
+    },
+    "icon": "desktop-computer",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-order-routing-load-balancing",
+    "type": "function",
+    "level": 4,
+    "label": "Order Routing & Load Balancing",
+    "description": "Dynamic work distribution across kitchen stations increasing throughput 30-50% and reducing station idle time by 60-80% through optimal resource allocation.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. All burger orders go to primary grill station even if secondary grill is idle. 2. Kitchen manager notices backup at grill, manually tells staff to use secondary grill. 3. No visibility into which stations are overloaded vs idle. 4. Fry station idle while grill is overwhelmed (unbalanced workload). 5. Peak hour chaos with manager shouting instructions.",
+      "constraints": [
+        "Manual load balancing slow and reactive",
+        "Station utilization uneven (some overloaded, some idle)",
+        "No real-time visibility into station capacity",
+        "30-40% station idle time during peak (capacity wasted)",
+        "Kitchen manager overwhelmed coordinating work",
+        "Throughput limited by bottleneck stations"
+      ],
+      "metrics": ["Station utilization: 60-70%", "Idle time: 30-40%", "Throughput: Constrained"]
+    },
+    "agentic": {
+      "workflow": "1. Load Monitoring Agent tracks real-time capacity at each station: grill at 90%, fry at 40%, assembly at 70%. 2. Dynamic Routing directs incoming burger order to secondary grill (idle capacity) instead of overloaded primary grill. 3. Cross-Training Optimizer suggests station reassignments: 'Move Sarah from fry to assembly (fry has excess capacity)'. 4. Predictive Demand Agent forecasts next 15 min workload and pre-positions staff. 5. Bottleneck Alert notifies manager of emerging constraints before backup occurs.",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Load Monitoring Agent", "Dynamic Routing", "Cross-Training Optimizer", "Predictive Demand Agent"],
+        "utilityAgents": ["Station Sensors", "KDS Integration", "Staff Scheduling", "Alert System"]
+      },
+      "dataSources": [
+        "Real-time station workload and queue depth",
+        "Station capacity and throughput rates",
+        "Staff skills and cross-training certifications",
+        "Incoming order stream and predictions",
+        "Historical demand patterns by daypart",
+        "Station prep times by item",
+        "Staff availability and positioning",
+        "Equipment status (grill temp, fryer ready)"
+      ],
+      "benefits": [
+        "30-50% throughput increase through optimal routing",
+        "85-95% station utilization vs 60-70% traditional",
+        "60-80% reduction in idle time",
+        "Predictive staffing prevents bottlenecks",
+        "Manager freed from real-time coordination",
+        "Peak hour capacity maximized"
+      ],
+      "metrics": ["Station utilization: 85-95%", "Idle time: 5-15%", "Throughput: Maximized"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time station monitoring dashboard", "Enable automatic routing to secondary stations when primary >80% capacity"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["KDS with station-level data", "Real-time monitoring sensors", "Staff skill matrix", "Predictive demand models"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-preparation-time-prediction",
+    "type": "function",
+    "level": 4,
+    "label": "Preparation Time Prediction",
+    "description": "ML-based prep time forecasting with 90-95% accuracy enabling precise customer promises and reducing wait time complaints by 50-70% through realistic expectations.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer places order and system says '10-15 minutes' for all orders regardless of complexity. 2. Simple burger takes 5 minutes, customer annoyed by overpromise. 3. Complex 20-item order takes 25 minutes, customer frustrated by underpromise. 4. No adjustment for current kitchen workload or peak hours. 5. 40-50% of time estimates inaccurate, damaging trust.",
+      "constraints": [
+        "Static time estimates ignore order complexity",
+        "No adjustment for current kitchen load",
+        "40-50% inaccuracy rate damages customer trust",
+        "Overpromising creates negative surprise",
+        "Underpromising creates anxiety and abandonment",
+        "Peak hour estimates wildly inaccurate"
+      ],
+      "metrics": ["Prediction accuracy: 50-60%", "Customer complaints: 20-30%", "Wait time variance: High"]
+    },
+    "agentic": {
+      "workflow": "1. Prep Time Prediction Agent analyzes order: 1 burger (3 min) + 2 sides (4 min) + shake (2 min) = 6 min total (parallel prep). 2. Kitchen Load Adjuster adds current queue delay: 4 orders ahead averaging 4 min each = +5 min. 3. Staff Availability Factor adjusts for current staffing: lunch rush with full crew = no delay, mid-afternoon short-staffed = +2 min. 4. Real-Time Update adjusts estimate as order progresses: 'Your order is ahead of schedule, ready in 3 min instead of 8'. 5. Accuracy Tracking learns from actual completion times to refine future predictions.",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Prep Time Prediction Agent", "Kitchen Load Adjuster", "Staff Availability Factor", "Real-Time Update"],
+        "utilityAgents": ["ML Prediction Model", "KDS Integration", "Order Tracking", "Customer Notification"]
+      },
+      "dataSources": [
+        "Historical prep times by item and complexity",
+        "Current kitchen queue and workload",
+        "Staff count and skill levels on shift",
+        "Station capacity and utilization",
+        "Day of week and time of day patterns",
+        "Order completion time actual vs predicted",
+        "Equipment status and performance",
+        "Drive-thru vs dine-in vs delivery channel"
+      ],
+      "benefits": [
+        "90-95% prediction accuracy vs 50-60% traditional",
+        "50-70% reduction in wait time complaints",
+        "Real-time updates keep customers informed",
+        "Accurate promises build trust and loyalty",
+        "Reduces customer anxiety and abandonment",
+        "Enables better capacity planning"
+      ],
+      "metrics": ["Prediction accuracy: 90-95%", "Customer complaints: 8-12%", "Wait time variance: Low"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML model for top 20 menu items", "Add real-time order tracking with updates"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Historical order completion data", "ML platform for modeling", "KDS with real-time tracking", "Customer notification system"]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-par-level-management",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Par Level Management",
+    "description": "Automated inventory monitoring with predictive replenishment reducing stockouts by 80-90% and waste by 30-50% through intelligent demand forecasting.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Kitchen staff manually checks inventory levels during shift. 2. Staff estimates remaining portions: 'We have about 20 patties left'. 3. Manager decides when to prep more based on gut feel. 4. Chicken nuggets run out during dinner rush (stockout). 5. Over-prepped fries discarded at end of shift (waste).",
+      "constraints": [
+        "Manual inventory checks time-consuming and inaccurate",
+        "Stockouts during peak hours (10-15% of shifts)",
+        "Over-production leads to 20-30% waste",
+        "No predictive replenishment (reactive prep)",
+        "Par levels set quarterly, don't adapt to demand changes",
+        "Staff distracted from cooking to monitor inventory"
+      ],
+      "metrics": ["Stockout rate: 10-15%", "Waste: 20-30%", "Inventory accuracy: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Inventory Tracking Agent monitors real-time usage: 12 Big Macs sold in last 30 min, 8 patties remaining. 2. Demand Forecasting predicts next hour needs: lunch rush forecasts 25 Big Mac orders, need to prep 20 more patties. 3. Replenishment Alert notifies staff: 'Prep 20 beef patties now for lunch demand'. 4. Par Level Optimization dynamically adjusts mins based on daypart: breakfast needs 10 egg patties, dinner needs 50 beef patties. 5. Waste Prevention Agent alerts before over-production: 'Only prep 10 fries, low demand expected last 2 hours'.",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Inventory Tracking Agent", "Demand Forecasting", "Replenishment Alert", "Par Level Optimization", "Waste Prevention Agent"],
+        "utilityAgents": ["POS Integration", "Inventory Sensors", "ML Forecast Model", "Kitchen Alert System"]
+      },
+      "dataSources": [
+        "Real-time sales by item from POS",
+        "Current inventory levels by ingredient",
+        "Historical demand patterns by daypart",
+        "Day of week and seasonal trends",
+        "Weather impact on demand (hot day = more drinks)",
+        "Promotional calendar and LTO forecasts",
+        "Prep time and batch sizes",
+        "Hold time and shelf life by item"
+      ],
+      "benefits": [
+        "80-90% stockout reduction through predictive replenishment",
+        "30-50% waste reduction via demand-based prep",
+        "Real-time inventory accuracy 95%+ vs 70-80%",
+        "Dynamic par levels adapt to actual demand",
+        "Labor efficiency (automated monitoring vs manual checks)",
+        "Improved customer satisfaction (items available)"
+      ],
+      "metrics": ["Stockout rate: 1-3%", "Waste: 8-15%", "Inventory accuracy: 95%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy inventory sensors for top 10 high-velocity items", "Implement demand-based prep alerts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["POS sales data integration", "Inventory tracking sensors or manual input", "Demand forecasting models", "Kitchen alert system"]
+    },
+    "icon": "clipboard-list",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-food-safety-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Food Safety Monitoring (Time, Temp)",
+    "description": "Automated time and temperature tracking with real-time alerts preventing 95%+ food safety violations and ensuring regulatory compliance through continuous monitoring.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Staff manually checks fridge temperature with thermometer every 4 hours. 2. Staff records temperature on paper log (often forgotten or faked). 3. Cooked food hold times tracked with manual timers and sticky notes. 4. Food held beyond safe time limits served to customers (potential illness). 5. Health inspector finds violations in paper logs (fines, closure risk).",
+      "constraints": [
+        "Manual checks every 4 hours miss temperature excursions",
+        "Paper logs unreliable (forgotten, backdated, fabricated)",
+        "Hold time violations common (15-20% of shifts)",
+        "No real-time alerts for unsafe conditions",
+        "Health code violations risk fines ($500-$5000) or closure",
+        "Foodborne illness liability and reputation damage"
+      ],
+      "metrics": ["Violations: 15-20%", "Manual logs: Paper", "Alert time: 4+ hours"]
+    },
+    "agentic": {
+      "workflow": "1. IoT Temperature Sensors continuously monitor fridges, freezers, hot holding units every 2 minutes. 2. Alert Agent immediately notifies manager if temp falls below 40°F (fridge) or 140°F (hot holding). 3. Hold Time Tracker starts timer when food placed in hot holding, alerts at 3.5 hours (before 4-hour limit). 4. Automatic Discard triggers at 4-hour limit: 'Discard chicken nuggets from batch #447 - hold time exceeded'. 5. Digital Compliance Log auto-generates audit trail for health inspectors with timestamps and corrective actions.",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["IoT Temperature Sensors", "Alert Agent", "Hold Time Tracker", "Automatic Discard"],
+        "utilityAgents": ["Sensor Network", "Alert System", "Digital Log", "Compliance Reporting"]
+      },
+      "dataSources": [
+        "Real-time temperature readings from all equipment",
+        "Hold time start timestamps by batch",
+        "Food safety regulations and thresholds",
+        "Corrective action log (temp issues, discards)",
+        "Equipment maintenance history",
+        "Health inspection requirements",
+        "Staff acknowledgment of alerts",
+        "Historical violation patterns"
+      ],
+      "benefits": [
+        "95%+ violation prevention through real-time monitoring",
+        "Immediate alerts (2 min) vs 4-hour manual checks",
+        "Digital compliance logs for health inspectors",
+        "Automatic discard prevents serving unsafe food",
+        "Zero paper log fraud (automated timestamps)",
+        "Liability protection and reputation preservation"
+      ],
+      "metrics": ["Violations: <5%", "Manual logs: Digital automated", "Alert time: 2 min real-time"]
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "Food hold time reaches 4-hour safety limit",
+      "policy": "Require manager confirmation before automatic discard, or auto-discard if manager unavailable within 5 minutes"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy IoT temp sensors in all fridges and hot holding units", "Implement hold time alerts at 3.5 hours"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["IoT temperature sensors", "WiFi/cellular connectivity", "Alert system (SMS, app)", "Digital logging platform"]
+    },
+    "icon": "shield-exclamation",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-waste-tracking-reduction",
+    "type": "function",
+    "level": 4,
+    "label": "Waste Tracking & Reduction",
+    "description": "AI-powered waste analytics with root cause identification reducing food waste by 40-60% and saving $15K-$30K annually per location through targeted interventions.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Staff discards expired or excess food at end of shift. 2. Manager estimates waste: 'We threw out about $50 of food today'. 3. No tracking of what items, why discarded, or trends over time. 4. Same over-production mistakes repeated daily. 5. 3-5% food cost waste accepted as normal.",
+      "constraints": [
+        "No waste tracking or accountability",
+        "Unknown root causes (over-prep, expiration, quality issues)",
+        "3-5% food cost waste ($15K-$40K/year per location)",
+        "Repeated mistakes due to no feedback loop",
+        "Manager unaware of high-waste items or patterns",
+        "Environmental impact (landfill, sustainability goals)"
+      ],
+      "metrics": ["Waste: 3-5% food cost", "Tracking: None", "Root cause analysis: None"]
+    },
+    "agentic": {
+      "workflow": "1. Waste Tracking Agent requires staff to scan/log all discarded items: reason (expired, overcooked, quality, customer mistake). 2. Analytics Engine identifies patterns: 'Fries waste peaks at 2pm daily (over-prepping for lunch rush)'. 3. Root Cause Agent surfaces top issues: 25% of waste from hold time expiration, 30% from over-production, 20% from prep errors. 4. Intervention Recommendations suggest fixes: 'Reduce fry batch size by 30% at 1:30pm', 'Retrain evening crew on burger cooking temps'. 5. Waste Reduction Tracker measures improvement: waste reduced from 4.2% to 2.1% over 3 months ($20K annual savings).",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Waste Tracking Agent", "Analytics Engine", "Root Cause Agent", "Intervention Recommendations", "Waste Reduction Tracker"],
+        "utilityAgents": ["Barcode Scanner", "Waste Log App", "Analytics Platform", "Reporting Dashboard"]
+      },
+      "dataSources": [
+        "Item-level waste logs with reasons",
+        "Sales and production volumes",
+        "Waste patterns by daypart and day of week",
+        "Staff shift schedules (waste by team)",
+        "Recipe and batch sizes",
+        "Food cost per item",
+        "Historical waste trends",
+        "Intervention effectiveness tracking"
+      ],
+      "benefits": [
+        "40-60% waste reduction through targeted interventions",
+        "1.5-2.5% food cost waste vs 3-5% traditional",
+        "$15K-$30K annual savings per location",
+        "Root cause identification enables corrective action",
+        "Staff accountability improves behavior",
+        "Sustainability and environmental benefits"
+      ],
+      "metrics": ["Waste: 1.5-2.5% food cost", "Tracking: 100% item-level", "Root cause analysis: Automated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement waste logging app for end-of-shift discards", "Generate weekly waste reports by item and reason"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Waste tracking app or system", "Barcode scanners (optional)", "Analytics platform", "Manager training on interventions"]
+    },
+    "icon": "trash",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-recipe-prep-guidance",
+    "type": "function",
+    "level": 4,
+    "label": "Recipe & Prep Guidance",
+    "description": "Interactive digital prep guides with video tutorials reducing training time by 50-70% and improving consistency to 98%+ through standardized procedures.",
+    "parentCapability": "capability-qsr-kitchen-operations",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. New hire shadows experienced crew member to learn prep tasks. 2. Verbal instructions: 'Put this much lettuce and these toppings on the burger'. 3. No standardized measurements or procedures (quality inconsistent). 4. Binder with laminated recipe cards rarely referenced. 5. New menu items require in-person training (slow rollout).",
+      "constraints": [
+        "Training inconsistent (depends on trainer skill)",
+        "2-3 weeks to fully train new kitchen staff",
+        "Quality variance across shifts and locations",
+        "Recipe cards outdated or ignored",
+        "New menu rollouts require mass retraining",
+        "No visual guidance for complex prep"
+      ],
+      "metrics": ["Training time: 2-3 weeks", "Recipe consistency: 85-90%", "Format: Paper cards"]
+    },
+    "agentic": {
+      "workflow": "1. Digital Recipe Guide displays step-by-step instructions on KDS or tablet: 'Step 1: Place bottom bun. Step 2: Add 1 patty. Step 3: Add 2 slices pickles...'. 2. Video Tutorial shows proper technique for complex tasks: how to fold burrito, proper portioning. 3. Interactive Checklist ensures all steps completed: checkmarks for each ingredient added. 4. Quality Photo shows finished product for visual comparison. 5. Real-Time Update pushes new recipes or modifications instantly to all locations.",
+      "agents": {
+        "orchestrator": "QSR Kitchen Operations Orchestration Agent",
+        "superAgents": ["Digital Recipe Guide", "Video Tutorial", "Interactive Checklist"],
+        "utilityAgents": ["KDS Integration", "Video Platform", "Content Management", "Training System"]
+      },
+      "dataSources": [
+        "Standardized recipe database with steps",
+        "Video library of prep techniques",
+        "Ingredient specifications and portions",
+        "Quality standards and photos",
+        "Menu updates and new item rollouts",
+        "Nutritional and allergen information",
+        "Equipment operating instructions",
+        "Best practice tips and troubleshooting"
+      ],
+      "benefits": [
+        "50-70% training time reduction (3-5 days vs 2-3 weeks)",
+        "98%+ recipe consistency across all shifts and locations",
+        "Visual guidance improves quality and reduces errors",
+        "Instant menu rollout (no in-person retraining)",
+        "New hire confidence and competence",
+        "Reduced reliance on experienced trainers"
+      ],
+      "metrics": ["Training time: 3-5 days", "Recipe consistency: 98%+", "Format: Interactive digital"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy digital recipe guides on KDS for top 10 items", "Create video tutorials for complex prep tasks"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["KDS or tablets in kitchen", "Recipe digitization", "Video production capability", "Content management system"]
+    },
+    "icon": "book-open",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

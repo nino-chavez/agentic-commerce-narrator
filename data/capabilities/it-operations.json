@@ -1,0 +1,696 @@
+[
+  {
+    "id": "capability-it-service-management",
+    "type": "capability",
+    "level": 3,
+    "label": "IT Service Management (ITSM)",
+    "description": "Transforms reactive break-fix IT support into AI-powered self-service with high chatbot resolution, automated routing, and improved first contact resolution through intelligent ticket classification, knowledge management, and auto-remediation.",
+    "parentDomain": "domain-technology-platform",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Ticket Classification & Prioritization",
+      "Conversational AI Chatbot Self-Service",
+      "Intelligent Routing & Assignment",
+      "Auto-Remediation & Runbook Automation",
+      "Knowledge Management & Search",
+      "SLA & Performance Management",
+      "Problem Management & Continuous Improvement"
+    ],
+    "traditionalApproach": {
+      "description": "Manual ticket triage with low first contact resolution, high escalation rate, and no self-service capability resulting in high IT staff overhead.",
+      "characteristics": [
+        "Manual ticket categorization and assignment by service desk agents",
+        "High percentage of tickets escalated from Level 1 to Level 2/3",
+        "No self-service (employees always create tickets)",
+        "Long average handle time per ticket",
+        "Knowledge base sparse with tribal knowledge in technician heads",
+        "SLA breaches common with no proactive alerts",
+        "Same incidents recur with no continuous improvement"
+      ],
+      "constraints": [
+        "Manual ticket triage delays correct team assignment",
+        "High Level 1 escalation rate",
+        "No automation (every ticket requires human touch)",
+        "Alert storms during outages create hundreds of duplicate tickets",
+        "Large ticket backlog",
+        "Low employee satisfaction scores",
+        "Moderate SLA compliance"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-itsm-001",
+          "metric": "First Contact Resolution (FCR) Rate",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'HDI Service Desk Benchmarking Report 2024']"
+        },
+        {
+          "id": "bench-itsm-002",
+          "metric": "Level 1 Escalation Rate",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Service desk escalation benchmarks']"
+        },
+        {
+          "id": "bench-itsm-003",
+          "metric": "Average Handle Time (AHT)",
+          "value": "30-60 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'IT service desk productivity benchmarks']"
+        },
+        {
+          "id": "bench-itsm-004",
+          "metric": "Ticket Backlog (Large Enterprises)",
+          "value": "500-2,000 open tickets",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise IT service desk metrics']"
+        },
+        {
+          "id": "bench-itsm-005",
+          "metric": "Employee Satisfaction (CSAT)",
+          "value": "3.0-3.5 / 5.0",
+          "source": "TBD: [SME to provide source, e.g., 'IT service satisfaction surveys']"
+        },
+        {
+          "id": "bench-itsm-006",
+          "metric": "SLA Compliance Rate",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Service desk SLA performance studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered ITSM with chatbot self-service, automated routing, and auto-remediation achieving high first contact resolution.",
+      "characteristics": [
+        "AI Ticket Classification Agent auto-categorizes and prioritizes",
+        "Chatbot Self-Service Agent resolves password resets and software installs automatically",
+        "Auto-Routing Agent assigns to best-fit technician by skills and workload",
+        "Auto-Remediation Agent executes scripts for common issues",
+        "Knowledge Management Agent suggests solutions from knowledge base",
+        "SLA Management Agent monitors and escalates at-risk tickets",
+        "Continuous Improvement Agent identifies recurring incidents and recommends fixes"
+      ],
+      "benefits": [
+        "High first contact resolution rate",
+        "High chatbot resolution rate (no human needed)",
+        "Significantly reduced average handle time",
+        "Ticket backlog reduced through automation",
+        "High SLA compliance",
+        "Improved employee satisfaction",
+        "Increased IT staff capacity (less time on routine tickets)"
+      ],
+      "projections": [
+        {
+          "metric": "First Contact Resolution (FCR) Improvement",
+          "value": "70-80% (vs 30-40%, +40-50 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI auto-remediation, knowledge base suggestions, and chatbot handling tier-1 issues']",
+          "sourceBenchmark": "bench-itsm-001"
+        },
+        {
+          "metric": "Chatbot Resolution Rate",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on conversational AI handling password resets, software installs, and common requests without human agent']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Average Handle Time (AHT) Reduction",
+          "value": "60-80% (to 10-20 min from 30-60 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI classification, auto-routing, and knowledge suggestions accelerating resolution']",
+          "sourceBenchmark": "bench-itsm-003"
+        },
+        {
+          "metric": "Ticket Backlog Reduction",
+          "value": "70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation resolving tickets faster and chatbot preventing ticket creation']",
+          "sourceBenchmark": "bench-itsm-004"
+        },
+        {
+          "metric": "SLA Compliance Improvement",
+          "value": "95%+ (vs 70-80%, +15-25 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated SLA monitoring, proactive escalation, and faster resolution times']",
+          "sourceBenchmark": "bench-itsm-006"
+        },
+        {
+          "metric": "Employee Satisfaction (CSAT) Improvement",
+          "value": "4.5+ / 5.0 (vs 3.0-3.5, +1.0-1.5 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on faster resolution, 24/7 chatbot availability, and self-service convenience']",
+          "sourceBenchmark": "bench-itsm-005"
+        },
+        {
+          "metric": "IT Staff Capacity Increase",
+          "value": "40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation handling routine tickets, freeing staff for complex issues and projects']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "IT Service Management Orchestration Agent",
+        "AI Ticket Classification & Prioritization Agent",
+        "Conversational AI Chatbot Agent",
+        "Intelligent Routing & Assignment Agent",
+        "Auto-Remediation & Runbook Automation Agent",
+        "Knowledge Management & Search Agent",
+        "SLA & Performance Management Agent",
+        "Problem Management & Continuous Improvement Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Chatbot for password resets (40% of tickets)",
+        "Auto-categorization of tickets (reduce triage time)",
+        "Knowledge base search improvements"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Modern ITSM platform (ServiceNow, Jira Service Management)",
+        "Knowledge base (existing or create)",
+        "Automation tools (Ansible, PowerShell)",
+        "Active Directory integration",
+        "IT staff skills (automation, scripting)"
+      ]
+    },
+    "icon": "support",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-infrastructure-operations-aiops",
+    "type": "capability",
+    "level": 3,
+    "label": "Infrastructure Operations & Monitoring (AIOps)",
+    "description": "Transforms reactive incident response into predictive, self-healing infrastructure with dramatic alert noise reduction, faster MTTR, and high auto-remediation through AI-powered monitoring, anomaly detection, and automated runbooks.",
+    "parentDomain": "domain-technology-platform",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Anomaly Detection & Noise Reduction",
+      "Intelligent Alert Correlation",
+      "Predictive Analytics & Capacity Planning",
+      "Auto-Remediation & Self-Healing",
+      "Incident Command & War Room Orchestration",
+      "Root Cause Analysis",
+      "Observability & Traceability"
+    ],
+    "traditionalApproach": {
+      "description": "Manual alert response with very high false positive rate, long MTTR, and chaotic war rooms resulting in on-call engineer burnout.",
+      "characteristics": [
+        "Monitoring tools generate thousands of alerts per day",
+        "Very high false positive rate creates alert fatigue",
+        "Reactive incident response (discover after customer impact)",
+        "Manual correlation of alerts to identify root cause",
+        "War rooms chaotic with too many people and no clear owner",
+        "Long mean time to detect",
+        "Long mean time to resolution"
+      ],
+      "constraints": [
+        "Alert fatigue (thousands of alerts, majority false positives)",
+        "Siloed monitoring tools (no unified view)",
+        "No predictive analytics (fix problems after they occur)",
+        "Runbooks outdated (if they exist at all)",
+        "High incident recurrence rate",
+        "On-call engineer burnout high (paged at 2am for false alarms)",
+        "No root cause analysis (fix symptom, not underlying issue)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-aiops-001",
+          "metric": "Daily Alert Volume",
+          "value": "10,000-50,000 alerts",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise monitoring alert volume studies']"
+        },
+        {
+          "id": "bench-aiops-002",
+          "metric": "Alert False Positive Rate",
+          "value": "85-95%",
+          "source": "TBD: [SME to provide source, e.g., 'AIOps alert fatigue research']"
+        },
+        {
+          "id": "bench-aiops-003",
+          "metric": "Mean Time to Detect (MTTD)",
+          "value": "20-60 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'Infrastructure incident detection benchmarks']"
+        },
+        {
+          "id": "bench-aiops-004",
+          "metric": "Mean Time to Resolution (MTTR)",
+          "value": "2-8 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Infrastructure incident resolution benchmarks']"
+        },
+        {
+          "id": "bench-aiops-005",
+          "metric": "Incident Recurrence Rate",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Infrastructure problem management studies']"
+        },
+        {
+          "id": "bench-aiops-006",
+          "metric": "Infrastructure Uptime",
+          "value": "99.5%",
+          "source": "TBD: [SME to provide source, e.g., 'Infrastructure availability benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered AIOps with unified observability, predictive failure detection, and self-healing infrastructure achieving dramatically faster MTTR and significant incident prevention.",
+      "characteristics": [
+        "AIOps Platform Agent ingests data from all monitoring tools",
+        "Anomaly Detection Agent reduces noise significantly (real issues only)",
+        "Alert Correlation Agent groups hundreds of alerts into single incident",
+        "Incident Prediction Agent forecasts failures before they occur",
+        "Auto-Remediation Agent executes runbooks automatically",
+        "Incident Response Agent orchestrates war room with context",
+        "Root Cause Analysis Agent identifies underlying issues via ML"
+      ],
+      "benefits": [
+        "Alert noise dramatically reduced",
+        "Mean time to detect significantly faster",
+        "Mean time to resolution dramatically faster",
+        "High auto-remediation rate (no human needed)",
+        "Incidents predicted and prevented",
+        "On-call quality of life improved (fewer false alarms)",
+        "Infrastructure uptime improved"
+      ],
+      "projections": [
+        {
+          "metric": "Alert Noise Reduction",
+          "value": "90% (10,000 → 1,000 actionable)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML anomaly detection filtering false positives and alert correlation grouping related alerts']",
+          "sourceBenchmark": "bench-aiops-001"
+        },
+        {
+          "metric": "Mean Time to Detect (MTTD) Improvement",
+          "value": "85% faster (to 1-5 min from 20-60 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time anomaly detection and predictive analytics identifying issues before impact']",
+          "sourceBenchmark": "bench-aiops-003"
+        },
+        {
+          "metric": "Mean Time to Resolution (MTTR) Improvement",
+          "value": "85% faster (to 10-30 min from 2-8 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated remediation, root cause identification, and contextualized incident response']",
+          "sourceBenchmark": "bench-aiops-004"
+        },
+        {
+          "metric": "Auto-Remediation Rate",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated runbook execution for common incidents and self-healing infrastructure']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Incident Prevention Rate",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive analytics forecasting failures and proactive intervention before customer impact']",
+          "sourceBenchmark": "bench-aiops-005"
+        },
+        {
+          "metric": "Infrastructure Uptime Improvement",
+          "value": "99.9%+ (vs 99.5%, +0.4 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive failure detection and automated remediation reducing unplanned downtime']",
+          "sourceBenchmark": "bench-aiops-006"
+        }
+      ],
+      "agents": [
+        "AIOps Orchestration Agent",
+        "Anomaly Detection & Noise Reduction Agent",
+        "Intelligent Alert Correlation Agent",
+        "Predictive Analytics & Capacity Planning Agent",
+        "Auto-Remediation & Self-Healing Agent",
+        "Incident Command & War Room Agent",
+        "Root Cause Analysis Agent",
+        "Observability & Traceability Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Alert correlation (reduce duplicate alerts)",
+        "Anomaly detection (reduce false positives)",
+        "Auto-remediation for common issues (restart service)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "Modern monitoring tools (APM, infra, logs)",
+        "Unified data platform (or AIOps platform)",
+        "DevOps culture (automation, monitoring)",
+        "Runbook documentation (or create)",
+        "Incident management platform (PagerDuty, Opsgenie)"
+      ]
+    },
+    "icon": "server",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-it-asset-management",
+    "type": "capability",
+    "level": 3,
+    "label": "IT Asset Management (ITAM)",
+    "description": "Transforms manual spreadsheet tracking into automated asset discovery with high inventory accuracy, near-perfect license compliance, and significant software license savings through continuous monitoring and optimization.",
+    "parentDomain": "domain-technology-platform",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Automated Asset Discovery",
+      "Software License Management",
+      "Asset Lifecycle & Refresh Management",
+      "Procurement & Provisioning Automation",
+      "Usage Analytics & Optimization",
+      "Shadow IT & Risk Management",
+      "Compliance & Audit Readiness"
+    ],
+    "traditionalApproach": {
+      "description": "Manual spreadsheet tracking with moderate inventory accuracy, moderate license compliance, and significant software license waste resulting in audit fines and overspending.",
+      "characteristics": [
+        "Asset inventory tracked in spreadsheets (always outdated)",
+        "No automated discovery (manual data entry)",
+        "Software license compliance manual (annual audit reveals issues)",
+        "Asset procurement slow (weeks to get laptop)",
+        "No visibility into software usage (paying for unused licenses)",
+        "Shadow IT unknown (employees buy cloud services secretly)",
+        "End-of-life assets not identified (security risk)"
+      ],
+      "constraints": [
+        "Low asset inventory accuracy",
+        "Moderate license compliance (audit fines common)",
+        "Long time to provision new asset",
+        "Significant software license waste (paying for unused)",
+        "Shadow IT apps discovered during audits",
+        "No asset lifecycle tracking (warranty, end-of-life)",
+        "Audit preparation takes weeks"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-itam-001",
+          "metric": "Asset Inventory Accuracy",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'ITAM asset tracking accuracy benchmarks']"
+        },
+        {
+          "id": "bench-itam-002",
+          "metric": "License Compliance Rate",
+          "value": "60-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Software license audit compliance studies']"
+        },
+        {
+          "id": "bench-itam-003",
+          "metric": "Time to Provision New Asset",
+          "value": "1-3 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'IT asset procurement cycle time benchmarks']"
+        },
+        {
+          "id": "bench-itam-004",
+          "metric": "Software License Waste",
+          "value": "20-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Software license utilization studies']"
+        },
+        {
+          "id": "bench-itam-005",
+          "metric": "Shadow IT Discovery (Apps During Audit)",
+          "value": "100-500+ apps",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise shadow IT discovery research']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered ITAM with automated asset discovery, continuous license optimization, and shadow IT detection achieving high inventory accuracy and significant license cost savings.",
+      "characteristics": [
+        "Asset Discovery Agent auto-discovers all devices, software, cloud services",
+        "License Management Agent tracks installs and optimizes allocation",
+        "Asset Lifecycle Agent monitors warranties and end-of-life dates",
+        "Procurement Automation Agent auto-approves standard requests",
+        "Usage Analytics Agent identifies unused licenses",
+        "Shadow IT Detection Agent discovers unauthorized cloud services",
+        "Compliance & Audit Agent generates reports instantly"
+      ],
+      "benefits": [
+        "High asset inventory accuracy",
+        "Near-perfect license compliance",
+        "Dramatically faster time to provision",
+        "Significant software license savings (eliminate waste)",
+        "Complete shadow IT visibility",
+        "Rapid audit preparation time",
+        "Asset refresh optimized (lower TCO)"
+      ],
+      "projections": [
+        {
+          "metric": "Asset Inventory Accuracy Improvement",
+          "value": "95%+ (vs 50-70%, +25-45 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated network discovery, endpoint agents, and continuous asset tracking']",
+          "sourceBenchmark": "bench-itam-001"
+        },
+        {
+          "metric": "License Compliance Improvement",
+          "value": "99% (vs 60-80%, +19-39 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous license tracking, automated compliance monitoring, and usage optimization']",
+          "sourceBenchmark": "bench-itam-002"
+        },
+        {
+          "metric": "Asset Provisioning Time Reduction",
+          "value": "80% (to 1-3 days from 1-3 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated approval workflows and pre-configured asset provisioning']",
+          "sourceBenchmark": "bench-itam-003"
+        },
+        {
+          "metric": "Software License Cost Savings",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on usage analytics identifying unused licenses for reclamation or non-renewal']",
+          "sourceBenchmark": "bench-itam-004"
+        },
+        {
+          "metric": "Shadow IT Visibility",
+          "value": "100% (vs discovering during audit)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous cloud service discovery via SSO logs, network monitoring, and expense analysis']",
+          "sourceBenchmark": "bench-itam-005"
+        }
+      ],
+      "agents": [
+        "IT Asset Management Orchestration Agent",
+        "Automated Asset Discovery Agent",
+        "Software License Management Agent",
+        "Asset Lifecycle & Refresh Agent",
+        "Procurement & Provisioning Automation Agent",
+        "Usage Analytics & Optimization Agent",
+        "Shadow IT & Risk Management Agent",
+        "Compliance & Audit Readiness Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Automated asset discovery (know what you have)",
+        "Software license optimization (reclaim unused)",
+        "Shadow IT discovery (SaaS apps via SSO logs)"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "ITAM platform (or ITSM with ITAM module)",
+        "Network access for discovery scans",
+        "Endpoint agent deployment",
+        "Integration with procurement, HR, finance",
+        "License entitlement data (contracts, purchases)"
+      ]
+    },
+    "icon": "desktop-computer",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-cybersecurity-operations",
+    "type": "capability",
+    "level": 3,
+    "label": "Cybersecurity Operations (SecOps)",
+    "description": "Transforms reactive threat response into proactive AI-powered security with dramatic alert noise reduction, dramatically faster threat detection, and high auto-remediation through SOAR, threat hunting, and vulnerability management.",
+    "parentDomain": "domain-technology-platform",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Threat Detection & Correlation",
+      "Automated Investigation & Enrichment",
+      "Automated Incident Response (SOAR)",
+      "Proactive Threat Hunting",
+      "Vulnerability Management & Prioritization",
+      "Security Awareness & Phishing Defense",
+      "Security Analytics & Posture Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual alert review with very high false positive rate, very long breach detection time, and reactive incident response resulting in analyst burnout and major security incidents.",
+      "characteristics": [
+        "Security tools generate thousands of alerts per day",
+        "Very high false positive rate creates alert fatigue",
+        "Very long mean time to detect breach",
+        "Long mean time to respond",
+        "Manual investigation takes many hours",
+        "Threat hunting periodic (weekly or monthly)",
+        "Vulnerability scans monthly (outdated by time remediated)"
+      ],
+      "constraints": [
+        "Alert fatigue (thousands of security alerts, very high false positive rate)",
+        "Breach detection delayed significantly",
+        "Analyst burnout (manual investigation, alert overload)",
+        "Siloed security tools (no unified view)",
+        "Threat intelligence not actionable (PDF reports)",
+        "Vulnerability management reactive (patch after exploit)",
+        "No proactive threat hunting"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-sec-001",
+          "metric": "Daily Security Alert Volume",
+          "value": "5,000-50,000 alerts",
+          "source": "TBD: [SME to provide source, e.g., 'SIEM alert volume benchmarks']"
+        },
+        {
+          "id": "bench-sec-002",
+          "metric": "Security Alert False Positive Rate",
+          "value": "95%+",
+          "source": "TBD: [SME to provide source, e.g., 'Security operations alert fatigue research']"
+        },
+        {
+          "id": "bench-sec-003",
+          "metric": "Mean Time to Detect (MTTD) Breach",
+          "value": "200+ days",
+          "source": "TBD: [SME to provide source, e.g., 'IBM Cost of Data Breach Report 2024']"
+        },
+        {
+          "id": "bench-sec-004",
+          "metric": "Mean Time to Respond (MTTR)",
+          "value": "3-30 days",
+          "source": "TBD: [SME to provide source, e.g., 'Incident response time benchmarks']"
+        },
+        {
+          "id": "bench-sec-005",
+          "metric": "Vulnerability Remediation Time",
+          "value": "60-90 days",
+          "source": "TBD: [SME to provide source, e.g., 'Vulnerability management lifecycle studies']"
+        },
+        {
+          "id": "bench-sec-006",
+          "metric": "Phishing Click Rate",
+          "value": "20-30%",
+          "source": "TBD: [SME to provide source, e.g., 'Phishing simulation campaign benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered SecOps with SOAR automation, continuous threat hunting, and predictive vulnerability management achieving dramatically faster threat detection and high auto-remediation.",
+      "characteristics": [
+        "Security Orchestration Agent ingests alerts from all security tools",
+        "Threat Detection Agent identifies real threats using ML",
+        "Automated Investigation Agent correlates alerts and enriches with threat intel",
+        "Incident Response Agent executes playbooks automatically",
+        "Threat Hunting Agent proactively searches for threats continuously",
+        "Vulnerability Management Agent prioritizes and auto-patches",
+        "Security Analytics Agent provides posture scoring and insights"
+      ],
+      "benefits": [
+        "Alert noise dramatically reduced",
+        "Mean time to detect breach dramatically faster",
+        "Mean time to respond dramatically faster",
+        "High incident auto-remediation rate",
+        "Threats proactively hunted and eliminated",
+        "Vulnerability remediation significantly faster",
+        "Phishing click rate significantly reduced",
+        "Analyst productivity dramatically improved"
+      ],
+      "projections": [
+        {
+          "metric": "Alert Noise Reduction",
+          "value": "90% (5,000 → 500 actionable)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML threat detection filtering false positives and correlating related security events']",
+          "sourceBenchmark": "bench-sec-001"
+        },
+        {
+          "metric": "Mean Time to Detect (MTTD) Improvement",
+          "value": "95% faster (to 1-7 days from 200+ days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous threat hunting, behavioral analytics, and automated investigation']",
+          "sourceBenchmark": "bench-sec-003"
+        },
+        {
+          "metric": "Mean Time to Respond (MTTR) Improvement",
+          "value": "95% faster (to 10 min - 4 hours from 3-30 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on SOAR playbook automation and automated remediation actions']",
+          "sourceBenchmark": "bench-sec-004"
+        },
+        {
+          "metric": "Incident Auto-Remediation Rate",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated response playbooks (block IP, isolate endpoint, disable account) for common threats']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Vulnerability Remediation Time Reduction",
+          "value": "80% (to 7-14 days from 60-90 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on risk-based prioritization and automated patch deployment for critical vulnerabilities']",
+          "sourceBenchmark": "bench-sec-005"
+        },
+        {
+          "metric": "Phishing Click Rate Reduction",
+          "value": "70-80% (to <5% from 20-30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous security awareness training and simulated phishing campaigns with automated coaching']",
+          "sourceBenchmark": "bench-sec-006"
+        },
+        {
+          "metric": "Analyst Productivity Increase",
+          "value": "+300%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation handling tier-1 alerts, allowing analysts to focus on high-value threat hunting and investigation']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Security Operations Orchestration Agent (SOAR)",
+        "AI Threat Detection & Correlation Agent",
+        "Automated Investigation & Enrichment Agent",
+        "Automated Incident Response Agent",
+        "Proactive Threat Hunting Agent",
+        "Vulnerability Management & Prioritization Agent",
+        "Security Awareness & Phishing Agent",
+        "Security Analytics & Posture Management Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Alert correlation and deduplication (reduce noise)",
+        "Automated phishing email analysis",
+        "Auto-remediation for common incidents (block IP, isolate endpoint)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-24 months",
+      "prerequisites": [
+        "Modern SIEM (Splunk, Sentinel) or willingness to replace",
+        "EDR deployment (all endpoints protected)",
+        "Security operations center (SOC) team",
+        "Threat intelligence subscriptions",
+        "Incident response playbooks (documented)",
+        "Executive sponsorship (CISO + CIO + CEO)"
+      ]
+    },
+    "icon": "shield-exclamation",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

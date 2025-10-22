@@ -1,0 +1,410 @@
+[
+  {
+    "id": "function-market-benchmarking-intelligence",
+    "type": "function",
+    "level": 4,
+    "label": "Market Benchmarking & Intelligence",
+    "description": "Real-time compensation market data integration with continuous monitoring of salary trends, role-specific pay ranges by location and industry, competitive intelligence, and proactive alerts for below-market employees at retention risk.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR compensation team purchases annual salary survey data from providers (Radford, Mercer, Willis Towers Watson) costing $10K-50K. 2. Compensation analyst manually downloads survey reports as PDFs or Excel files. 3. Analyst manually matches company job codes to survey job descriptions (50-100 roles takes 2-3 weeks). 4. Analyst creates compensation ranges in Excel spreadsheet by role, level, location. 5. Compensation data shared once per year during annual merit cycle. 6. Market data becomes stale 6-12 months after purchase as salaries change. 7. Below-market employees discovered reactively when they resign and cite compensation.",
+      "constraints": [
+        "Annual salary surveys have 6-12 month data lag (collected Jan-Mar, published Sept)",
+        "Manual job matching to survey data takes 2-3 weeks for 50-100 roles",
+        "Point-in-time data: purchased once per year, stale within 6 months",
+        "Limited data sources: 1-2 salary survey providers only",
+        "No real-time alerts when employees fall below market due to market rate increases",
+        "Reactive retention: employees resign citing pay before HR knows they're underpaid",
+        "Geographic granularity limited: US regions vs specific metro areas"
+      ],
+      "metrics": ["Data refresh frequency: Annual", "Job matching time: 2-3 weeks", "Data sources: 1-2 providers", "Market positioning accuracy: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Market Intelligence & Benchmarking Agent continuously monitors market compensation data from multiple real-time sources: Radford, Willis Towers Watson, Mercer (traditional surveys), Payscale, Salary.com (crowdsourced data), LinkedIn Salary Insights, Glassdoor (employee-reported data), Levels.fyi (tech roles). 2. Agent automatically matches company roles to market data using ML-powered job description semantic matching (no manual job code mapping). 3. Agent refreshes compensation ranges hourly/daily with latest market data (vs annual refresh). 4. Agent identifies below-market employees: flags anyone whose salary falls below 90th percentile of market range for their role/location/experience. 5. Agent provides percentile positioning for each employee: 'Jane Doe: Software Engineer, 75th percentile vs market' or 'John Smith: 45th percentile—RETENTION RISK'. 6. Agent triggers retention alerts to managers and HR: 'Employee below market, recommend adjustment to avoid attrition'. 7. Agent generates market intelligence reports: emerging roles, salary trends by geography, competitive pressure by role family.",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Market Intelligence & Benchmarking Agent", "Competitive Analysis Agent"],
+        "utilityAgents": ["Radford API Agent", "Willis Towers Watson API Agent", "Mercer API Agent", "Payscale API Agent", "LinkedIn Salary API Agent", "Glassdoor API Agent", "Job Matching Engine Agent", "Alert & Notification Agent"]
+      },
+      "dataSources": [
+        "Traditional salary survey data (Radford, Mercer, Willis Towers Watson)",
+        "Real-time crowdsourced salary data (Payscale, Salary.com)",
+        "Employee-reported compensation (Glassdoor, LinkedIn Salary)",
+        "Tech-specific compensation data (Levels.fyi, Blind)",
+        "Company employee compensation and job data",
+        "Market trend analytics and inflation indicators",
+        "Geographic cost-of-labor indices"
+      ],
+      "benefits": [
+        "Real-time market data vs 6-12 month lag: compensation decisions based on current market",
+        "90%+ percentile accuracy through multiple data sources vs 70-80% single-source accuracy",
+        "Proactive retention interventions: identify below-market employees before they resign",
+        "80% time savings: automated job matching vs 2-3 weeks manual matching for 50-100 roles",
+        "5-10x data refresh frequency: hourly/daily updates vs annual refresh",
+        "Comprehensive market view: 5-8 data sources vs 1-2 traditional survey providers",
+        "Geographic precision: metro-area level data vs broad US regions"
+      ],
+      "metrics": ["Data refresh: Hourly/daily (vs annual)", "Job matching: Automated (<1 hour vs 2-3 weeks)", "Data sources: 5-8 providers (+3-6x)", "Accuracy: 90%+ percentile positioning"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate 2-3 real-time market data APIs (Payscale, LinkedIn, Glassdoor)", "Deploy automated job matching for top 50 critical roles", "Create below-market employee alert dashboard for HR and managers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["HRIS with employee compensation data and job descriptions", "Market data provider subscriptions and API access", "Job matching algorithm or ML model", "Manager dashboard for retention alerts", "Legal review of market data usage for compensation decisions"]
+    },
+    "icon": "chart-line",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-pay-equity-analysis-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Pay Equity Analysis & Compliance",
+    "description": "Automated statistical analysis of compensation by gender, race, and protected classes with regression modeling, gap identification, remediation recommendations, and continuous monitoring to ensure pay equity compliance and reduce legal risk.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR compensation team conducts annual pay equity audit (once per year, typically Q4). 2. Analyst exports employee data to Excel: salary, gender, race, job level, tenure, location. 3. Analyst manually runs regression analysis in Excel or hires external consultant ($50K-150K). 4. Analysis takes 40-80 hours over 4-6 weeks to complete regression models by job family. 5. Analyst identifies statistically significant pay gaps (p<0.05): 'Women paid 5% less than men for same role after controlling for tenure, performance'. 6. HR presents findings to executive team and recommends equity adjustments. 7. Adjustments made during next annual merit cycle (3-6 months later). 8. No ongoing monitoring: pay gaps re-emerge throughout year as new hires, promotions, and raises create new disparities.",
+      "constraints": [
+        "Annual pay equity audit: once per year analysis (364 days of blindness)",
+        "Manual regression analysis: 40-80 hours of analyst/consultant time",
+        "External consultant costs: $50K-150K for large enterprises",
+        "4-6 week analysis cycle from data export to results presentation",
+        "Point-in-time snapshot: pay gaps emerge between annual audits",
+        "Reactive remediation: equity adjustments lag 3-6 months after analysis",
+        "Limited demographic analysis: gender and race only (not intersectional)"
+      ],
+      "metrics": ["Analysis frequency: Annual", "Analysis time: 40-80 hours", "Consultant cost: $50K-150K", "Time to remediation: 3-6 months"]
+    },
+    "agentic": {
+      "workflow": "1. Pay Equity & Compliance Agent continuously monitors employee compensation data from HRIS (real-time vs annual). 2. Agent automatically runs regression analysis monthly: controls for legitimate factors (job level, tenure, performance, location, education) to isolate unexplained pay gaps by gender, race, age, veteran status. 3. Agent identifies statistically significant gaps (p<0.05): 'Women in Software Engineering paid 4.8% less than men after controlling for level, tenure, performance—STATISTICALLY SIGNIFICANT'. 4. Agent calculates remediation costs: 'Closing gender pay gap requires $127K in equity adjustments across 23 employees'. 5. Agent generates individual adjustment recommendations: 'Jane Doe: recommend +$8,500 salary adjustment to reach equity with male peers'. 6. Agent triggers HITL review: equity adjustments >$5K per employee require HR VP approval. 7. Agent tracks compliance: generates EEO-1 reports, OFCCP audit readiness documentation, state pay transparency compliance (CA, NY, CO).",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Pay Equity & Compliance Agent", "Statistical Analysis Agent"],
+        "utilityAgents": ["HRIS API Agent", "Regression Analysis Engine", "Demographic Data Agent", "Compliance Reporting Agent", "EEO-1 Filing Agent", "OFCCP Audit Agent", "State Pay Transparency Agent"]
+      },
+      "dataSources": [
+        "Employee compensation data (salary, bonus, equity)",
+        "Employee demographics (gender, race, age, veteran status)",
+        "Job levels, titles, and family classifications",
+        "Performance ratings and tenure data",
+        "Geographic location and cost-of-labor adjustments",
+        "Promotion and hiring date history",
+        "Statistical significance thresholds and legal standards"
+      ],
+      "benefits": [
+        "95-98% time savings: 2-4 hours automated analysis vs 40-80 hours manual/consultant",
+        "Continuous monitoring vs annual audits: pay gaps detected and closed immediately",
+        "Proactive compliance vs reactive audits: OFCCP audit-ready at all times",
+        "$50K-150K consultant cost savings through automated regression analysis",
+        "Intersectional analysis: identifies compounded disparities (e.g., women of color)",
+        "Real-time remediation: equity adjustments made monthly vs waiting 3-6 months",
+        "Legal risk reduction: continuous compliance reduces discrimination lawsuit exposure"
+      ],
+      "metrics": ["Analysis frequency: Monthly/real-time (vs annual)", "Analysis time: 2-4 hours automated (-95-98%)", "Consultant cost: $0 (vs $50K-150K)", "Time to remediation: <1 month (vs 3-6 months)"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 6,
+      "threshold": "Equity adjustments greater than $5,000 per employee",
+      "policy": "HR VP or Chief People Officer must review and approve all individual equity adjustments exceeding $5,000 to ensure appropriateness, budget availability, and legal compliance; agent provides recommendations but humans make final decisions"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated pay equity analysis for pilot department or job family", "Implement monthly regression analysis vs annual audit", "Create executive dashboard showing real-time pay equity metrics by demographic group"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Clean HRIS demographic and compensation data", "Regression analysis software or ML platform", "Legal review of pay equity methodology and statistical thresholds", "Executive sponsorship (CHRO, General Counsel) for remediation budget", "State pay transparency law compliance requirements (CA, NY, CO, etc.)"]
+    },
+    "icon": "scale",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-annual-compensation-planning-modeling",
+    "type": "function",
+    "level": 4,
+    "label": "Annual Compensation Planning & Modeling",
+    "description": "Streamlined merit cycle management with intelligent budget allocation, manager self-service compensation planning, real-time what-if scenario modeling, pay-for-performance simulations, and automated workflow approvals to reduce cycle time by 70%.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR determines annual merit budget (e.g., 3% of total payroll) and shares guidance with executives. 2. HR distributes Excel spreadsheet templates to managers: list of employees with current salary, performance rating, proposed increase %. 3. Managers manually fill out spreadsheets allocating merit increases within their department budget over 1-2 weeks. 4. Managers email completed spreadsheets back to HR. 5. HR manually reviews each spreadsheet for budget compliance, pay equity, and errors (2-3 weeks). 6. HR sends back spreadsheets requiring revisions (25-40% need corrections). 7. Multiple email revision cycles between HR and managers (2-4 weeks). 8. Final merit increases manually entered into payroll system by HR. 9. Total cycle time: 4-6 weeks with high error rates and manager frustration.",
+      "constraints": [
+        "4-6 week compensation planning cycle from budget allocation to payroll entry",
+        "Manual Excel spreadsheets: version control issues, formula errors, file corruption",
+        "No real-time budget visibility: managers over-allocate or under-allocate without immediate feedback",
+        "Limited scenario modeling: can't easily test different allocation strategies",
+        "25-40% of manager submissions require corrections and revisions",
+        "No pay-for-performance linkage: difficult to differentiate top performers vs average",
+        "HR review bottleneck: reviewing 50-200 manager spreadsheets manually takes weeks"
+      ],
+      "metrics": ["Planning cycle time: 4-6 weeks", "Revision rate: 25-40%", "Scenario modeling: None", "Manager satisfaction: 2.5/5"]
+    },
+    "agentic": {
+      "workflow": "1. Compensation Planning Agent launches annual merit cycle with executive-approved budget (e.g., 3% merit pool + 0.5% promotion pool). 2. Agent provides managers with self-service compensation planning portal: see all direct reports with current salary, performance rating, market position, last increase, tenure. 3. Manager allocates merit increases in real-time dashboard: agent shows remaining budget, pay equity alerts, market positioning as manager makes decisions. 4. Agent enables what-if scenario modeling: 'What if I give top performers 5% and average performers 2%? How does that impact my budget and pay equity?' 5. Agent enforces pay-for-performance guidelines: alerts manager if high performer receiving below-guideline increase or low performer receiving above-guideline. 6. Manager submits plan for approval: agent auto-validates budget compliance, pay equity, and merit guidelines. 7. Approval workflow: agent routes to senior manager and HR for review (flagged exceptions only, not every submission). 8. Agent auto-loads approved increases into payroll system (no manual data entry). 9. Total cycle time: 1-2 weeks vs 4-6 weeks.",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Compensation Planning Agent", "Merit Modeling Agent"],
+        "utilityAgents": ["Budget Allocation Agent", "Manager Self-Service Portal Agent", "Scenario Modeling Engine", "Pay-for-Performance Guidelines Agent", "Approval Workflow Agent", "Payroll System API Agent"]
+      },
+      "dataSources": [
+        "Annual merit budget and compensation philosophy guidelines",
+        "Employee compensation data (current salary, last increase, tenure)",
+        "Performance ratings and pay-for-performance matrices",
+        "Market positioning data (percentile vs market)",
+        "Pay equity analysis results",
+        "Promotion and transfer data",
+        "Payroll system for automatic increase loading"
+      ],
+      "benefits": [
+        "70-80% cycle time reduction: 1-2 weeks vs 4-6 weeks from planning to payroll",
+        "Real-time budget visibility: managers see remaining budget and can optimize allocations",
+        "Unlimited scenario modeling: test different allocation strategies before committing",
+        "80% reduction in revisions: 5-10% vs 25-40% require corrections (real-time validation)",
+        "Pay-for-performance linkage: agent enforces differentiation for top performers",
+        "Automated payroll loading: eliminates manual data entry errors and 3-5 day processing time",
+        "Manager satisfaction improvement: 4.5/5 vs 2.5/5 due to self-service and transparency"
+      ],
+      "metrics": ["Cycle time: 1-2 weeks (-70-80%)", "Revision rate: 5-10% (-75% vs traditional)", "Scenario modeling: Unlimited real-time", "Manager satisfaction: 4.5/5 (+2 pts)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy manager self-service portal for compensation planning", "Implement real-time budget tracking to eliminate over/under-allocation errors", "Enable pay-for-performance guidelines enforcement with automated alerts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months (ready for next annual merit cycle)",
+      "prerequisites": ["HRIS with compensation planning module or separate comp planning platform", "Performance management system integration for performance ratings", "Payroll system API for automatic merit increase loading", "Compensation philosophy and pay-for-performance guidelines documented", "Manager training on self-service compensation planning tools"]
+    },
+    "icon": "calculator",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-benefits-selection-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Benefits Selection & Optimization",
+    "description": "Personalized benefits recommendations based on employee demographics and life stage with AI-guided plan comparisons, cost calculators, dependent eligibility verification, and HSA/FSA contribution optimization to increase utilization from 50-60% to 75-85%.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR sends annual benefits enrollment packet to all employees (100-page PDF) via email. 2. Employee reads through benefits options: medical plans, dental, vision, life insurance, HSA vs FSA, 401(k). 3. Employee confused by plan options and jargon: deductibles, copays, out-of-pocket maximums, coinsurance, HDHPs. 4. Employee makes benefits elections in online portal or paper forms without understanding trade-offs. 5. 30-40% of employees choose sub-optimal plans: high-cost HDHP when they have chronic conditions requiring frequent care, or expensive PPO when they rarely use healthcare. 6. Employees discover election mistakes after enrollment closes (can't change until next year). 7. 50-60% benefits utilization: many employees don't use available benefits (EAP, wellness programs, commuter benefits).",
+      "constraints": [
+        "Generic benefits information: same 100-page PDF for all employees regardless of needs",
+        "Confusing jargon: employees don't understand deductibles, coinsurance, HDHPs, HSAs, FSAs",
+        "No personalized recommendations: employees must figure out best plan for their situation",
+        "Sub-optimal plan selection: 30-40% choose wrong plan (high cost or inadequate coverage)",
+        "No cost comparison tools: employees can't easily compare total annual costs across plans",
+        "Low benefits awareness: 50-60% utilization of available benefits",
+        "Enrollment errors: 5-10% make mistakes (incorrect dependents, wrong plan, missed deadlines)"
+      ],
+      "metrics": ["Benefits utilization: 50-60%", "Sub-optimal plan selection: 30-40%", "Enrollment errors: 5-10%", "Employee satisfaction: 3.0/5"]
+    },
+    "agentic": {
+      "workflow": "1. Benefits Selection & Optimization Agent analyzes employee profile: age, family status (single, married, children), health history (if disclosed), income level, geographic location. 2. Agent recommends personalized benefits: 'Based on your profile (married, 2 children, income $85K), we recommend PPO High plan for comprehensive family coverage'. 3. Agent provides side-by-side plan comparison: total annual cost estimates (premiums + estimated out-of-pocket) for each plan based on employee's expected healthcare usage. 4. Agent offers interactive cost calculator: 'How much will this plan cost me if I have a baby this year? What if I need surgery?' 5. Agent recommends HSA vs FSA: 'Based on your health profile, maximize HSA contributions ($3,850) for tax savings and long-term savings'. 6. Agent verifies dependent eligibility: checks that dependents qualify for coverage (marriage certificates, birth certificates). 7. Agent sends reminder notifications: 'Benefits enrollment closes in 7 days' with SMS and email. 8. Agent enables chatbot Q&A: 'What is a deductible? Which plan covers my doctor? How do I use my HSA?'",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Benefits Selection & Optimization Agent", "Personalization Engine"],
+        "utilityAgents": ["Benefits Administration Platform API Agent", "Claims Data API Agent", "Cost Calculator Agent", "Dependent Eligibility Verification Agent", "HSA/FSA Optimizer Agent", "Chatbot Platform Agent"]
+      },
+      "dataSources": [
+        "Employee demographics (age, family status, income, location)",
+        "Benefits plan details (premiums, deductibles, copays, networks)",
+        "Historical claims data (employee healthcare utilization patterns)",
+        "Dependent verification documents (marriage cert, birth cert)",
+        "HSA/FSA contribution limits and tax savings calculations",
+        "Benefits enrollment platform data",
+        "Benefits utilization data (EAP, wellness, commuter benefits)"
+      ],
+      "benefits": [
+        "15-25 percentage point benefits utilization improvement: 75-85% vs 50-60%",
+        "60% reduction in sub-optimal plan selection: 10-15% vs 30-40% choose wrong plan",
+        "Personalized recommendations increase employee satisfaction: 4.2/5 vs 3.0/5",
+        "15-25% reduction in cost per employee through better plan matching and HSA optimization",
+        "80% reduction in enrollment errors: 1-2% vs 5-10% through automated validation",
+        "Chatbot deflects 60-70% of benefits inquiries from HR (saves HR time)",
+        "Dependent verification prevents ineligible dependents (compliance and cost savings)"
+      ],
+      "metrics": ["Benefits utilization: 75-85% (+15-25 pts)", "Sub-optimal selection: 10-15% (-60%)", "Enrollment errors: 1-2% (-80%)", "Employee satisfaction: 4.2/5 (+1.2 pts)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy benefits recommendation engine for next open enrollment", "Implement cost calculator showing total annual cost estimates for each plan option", "Launch benefits chatbot to answer common questions and deflect HR inquiries"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months (ready for next open enrollment period)",
+      "prerequisites": ["Benefits administration platform with API (Workday, Benefitfocus, Businessolver)", "Employee demographic and family status data in HRIS", "Historical claims data for cost modeling (if available)", "Chatbot platform for benefits Q&A", "Benefits plan details and cost structures documented"]
+    },
+    "icon": "heart",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-benefits-communication-engagement",
+    "type": "function",
+    "level": 4,
+    "label": "Benefits Communication & Engagement",
+    "description": "Multi-channel personalized benefits education with video explainers, email campaigns, SMS reminders, chatbot support, and interactive total rewards statements to increase open enrollment engagement from 40-50% to 70-80%.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR sends mass email to all employees announcing open enrollment with PDF benefits guide. 2. Email has generic subject line: 'Benefits Open Enrollment Now Open'. 3. 40-50% of employees open the email (rest ignore or mark as spam). 4. Employees who open email confused by 100-page PDF with insurance jargon. 5. HR holds optional benefits fair (in-person or Zoom) with low attendance (15-25%). 6. Employees email HR with benefits questions: 'What is the difference between HMO and PPO? Which plan covers my doctor?' 7. HR team overwhelmed with 500-2,000 benefits inquiries during 2-3 week open enrollment period. 8. Many employees miss enrollment deadline or make rushed decisions without understanding options.",
+      "constraints": [
+        "Mass generic emails: same message to all employees regardless of needs or demographics",
+        "40-50% email open rate: half of employees miss benefits enrollment announcements",
+        "Static PDF guides: boring, confusing, not interactive or personalized",
+        "Low benefits fair attendance: 15-25% attend in-person or virtual sessions",
+        "HR inquiry overload: 500-2,000 benefits questions via email/phone during enrollment",
+        "Passive communication: employees must seek out information vs proactive education",
+        "No measurement: don't know which communications drive engagement and enrollment"
+      ],
+      "metrics": ["Email open rate: 40-50%", "Benefits fair attendance: 15-25%", "HR inquiries: 500-2,000 during enrollment", "Enrollment completion: 85-90%"]
+    },
+    "agentic": {
+      "workflow": "1. Benefits Communication & Engagement Agent launches personalized multi-channel campaign 4 weeks before open enrollment: email, SMS, push notifications, intranet portal. 2. Agent personalizes messaging by employee segment: 'New parents: learn about our enhanced parental leave and dependent care FSA', 'Employees 50+: maximize catch-up contributions to 401(k)'. 3. Agent sends video explainers for complex topics: 3-minute video 'HSA vs FSA: Which is right for you?', 2-minute video 'How to choose a medical plan'. 4. Agent sends countdown reminders: 'Open enrollment closes in 14 days. Make your elections now!' with personalized link. 5. Agent offers 24/7 chatbot for benefits Q&A: 'What is my deductible? Does my plan cover physical therapy?' 6. Agent tracks engagement: monitors email opens, video views, chatbot interactions, identifies employees who haven't completed enrollment. 7. Agent sends targeted nudges to non-enrollees: 'You haven't completed benefits enrollment yet. Deadline is Nov 15. Click here to get started.'",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Benefits Communication & Engagement Agent", "Content Personalization Agent"],
+        "utilityAgents": ["Email/SMS Gateway Agent", "Video Platform Agent", "Chatbot Platform Agent", "Benefits Portal API Agent", "Engagement Analytics Agent", "Notification Service Agent"]
+      },
+      "dataSources": [
+        "Employee demographic and segmentation data",
+        "Benefits enrollment status (completed vs incomplete)",
+        "Communication engagement data (email opens, clicks, video views)",
+        "Chatbot interaction logs and FAQs",
+        "Benefits plan details and documentation",
+        "Personalized messaging templates by employee segment",
+        "Open enrollment timeline and deadlines"
+      ],
+      "benefits": [
+        "30 percentage point engagement improvement: 70-80% vs 40-50% email open rates",
+        "50% reduction in HR benefits inquiries: chatbot deflects 60-70% of common questions",
+        "95-98% enrollment completion: targeted reminders and nudges vs 85-90% traditional",
+        "Video engagement: 60-70% of employees watch at least one benefits explainer video",
+        "Personalized messaging increases relevance and reduces information overload",
+        "Multi-channel approach reaches employees where they are (email, SMS, portal, mobile)",
+        "Measurable ROI: track which communications drive engagement and optimize future campaigns"
+      ],
+      "metrics": ["Email open rate: 70-80% (+30 pts)", "HR inquiries: 150-600 (-50-70%)", "Enrollment completion: 95-98% (+10 pts)", "Video views: 60-70% of employees"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create 3-5 short video explainers for most confusing benefits topics (HSA vs FSA, plan selection)", "Deploy benefits chatbot to answer FAQs and deflect HR inquiries", "Implement personalized email campaigns by employee segment (new parents, employees 50+, etc.)"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months (ready for next open enrollment)",
+      "prerequisites": ["Email and SMS communication platform", "Video creation tool or agency for benefits explainer videos", "Chatbot platform with benefits knowledge base", "Benefits portal for enrollment tracking", "Employee segmentation data (demographics, life events) in HRIS"]
+    },
+    "icon": "speakerphone",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-total-rewards-statements-transparency",
+    "type": "function",
+    "level": 4,
+    "label": "Total Rewards Statements & Transparency",
+    "description": "Interactive total compensation dashboards with real-time visibility into all compensation components (base, bonus, equity, benefits, perks) with personalized value calculations, market comparisons, and year-round access to increase employee awareness of total comp value by 30-40%.",
+    "parentCapability": "capability-compensation-benefits",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR generates annual total rewards statement once per year (typically Q4 or end of year). 2. HR exports employee compensation data from payroll and benefits systems to Excel. 3. HR manually creates total rewards PDF statements in Word or PowerPoint templates: base salary, bonus, employer 401(k) match, health insurance employer contribution, life insurance, PTO value. 4. HR emails PDF statements to employees. 5. Employees receive PDF, glance at it, don't understand employer contributions or benefits value. 6. Low employee awareness: surveys show 40-60% of employees significantly underestimate their total compensation by $10K-30K (don't realize employer pays $8K-15K for health insurance, $5K for 401(k) match, $3K for PTO).",
+      "constraints": [
+        "Annual statement only: employees see total rewards value once per year, no year-round visibility",
+        "Static PDF: not interactive, can't explore components or see calculations",
+        "Manual creation: HR spends 20-40 hours creating statements for 500-2,000 employees",
+        "Limited components: typically includes only salary, bonus, benefits (misses perks like free lunch, gym, learning stipends)",
+        "No personalization: generic template, doesn't explain value relevant to individual's situation",
+        "No market comparison: employees don't know if their total comp is competitive",
+        "Low awareness: 40-60% of employees underestimate total comp by $10K-30K"
+      ],
+      "metrics": ["Statement frequency: Annual", "Components included: 5-7", "Employee awareness: 40-60% accurately understand total comp", "Statement creation time: 20-40 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Total Rewards Visualization Agent generates interactive real-time total compensation dashboard for each employee: accessible year-round via employee self-service portal. 2. Dashboard shows all compensation components with calculated values: base salary ($85,000), annual bonus ($8,500), equity grants ($12,000 vested this year), employer 401(k) match ($4,250), health insurance employer contribution ($12,500), dental/vision ($1,200), life insurance ($500), PTO value ($6,500 based on 15 days accrued), wellness perks ($2,000 gym + wellness stipend), learning & development ($1,500 conference budget). 3. Agent calculates total rewards value: 'Your total compensation package is worth $134,000' (vs $85,000 salary alone). 4. Agent shows market comparison: 'Your total comp is at 75th percentile vs market for your role and location'. 5. Agent provides interactive sliders: 'What if you increased 401(k) contribution to 8%? Employer match would increase to $6,800'. 6. Agent enables lifetime value projections: 'Your equity grants will be worth $150K in 4 years if stock price grows 10% per year'. 7. Agent updates dashboard in real-time as compensation changes: raises, bonuses, promotions reflected immediately.",
+      "agents": {
+        "orchestrator": "Compensation & Benefits Orchestration Agent",
+        "superAgents": ["Total Rewards Visualization Agent", "Value Communication Agent"],
+        "utilityAgents": ["Payroll API Agent", "Benefits Platform API Agent", "Equity Management API Agent", "Market Data API Agent", "Perks & Stipends Tracking Agent", "Visualization Engine Agent"]
+      },
+      "dataSources": [
+        "Payroll data (base salary, bonus, commissions)",
+        "Benefits enrollment and employer contributions",
+        "Equity grants and vesting schedules",
+        "401(k) contributions and employer match",
+        "PTO accrual balances and cash value",
+        "Perks and stipends (gym, wellness, learning, commuter)",
+        "Market compensation data for benchmarking",
+        "Tax calculations and net value estimates"
+      ],
+      "benefits": [
+        "30-40% improvement in employee awareness of total comp value",
+        "Year-round visibility: real-time dashboard vs annual PDF statement",
+        "Comprehensive component coverage: 10-15 components vs 5-7 in traditional statements",
+        "95% time savings: automated generation vs 20-40 hours manual creation",
+        "Interactive exploration: employees can model different scenarios (401(k) contributions, etc.)",
+        "Market comparison builds confidence: employees see competitive positioning",
+        "Retention impact: employees who understand total comp value 20-30% less likely to leave"
+      ],
+      "metrics": ["Statement frequency: Real-time year-round (vs annual)", "Components: 10-15 (vs 5-7)", "Employee awareness: 80-90% (+30-40 pts)", "Creation time: Automated (vs 20-40 hours)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy total rewards dashboard for pilot employee group", "Automate calculation of employer benefits contributions (health insurance, 401(k) match)", "Create market comparison feature showing employee's total comp percentile vs market"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["HRIS with employee self-service portal", "Payroll system API for compensation data", "Benefits platform API for employer contribution data", "Equity management system API (if applicable)", "Visualization platform or custom dashboard development", "Market compensation data for benchmarking"]
+    },
+    "icon": "document-text",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

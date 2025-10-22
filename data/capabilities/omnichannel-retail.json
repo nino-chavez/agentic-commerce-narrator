@@ -1,0 +1,989 @@
+[
+  {
+    "id": "capability-bopis-click-collect",
+    "type": "capability",
+    "level": 3,
+    "label": "BOPIS (Buy Online, Pick-up In Store)",
+    "description": "Enables customers to purchase online and pick up orders at physical store locations with optimized fulfillment workflows, real-time inventory visibility, and seamless customer arrival experiences.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Real-time store inventory reservation",
+      "Optimal store selection and routing",
+      "Staff task coordination and scheduling",
+      "Customer arrival detection and notification",
+      "Pick task optimization",
+      "Order ready notification"
+    ],
+    "traditionalApproach": {
+      "description": "Manual order routing with phone confirmations and static store selection",
+      "characteristics": [
+        "Manual order routing to store",
+        "Phone calls to confirm availability",
+        "Customer arrival notification via app only",
+        "Store staff manually retrieves items",
+        "Separate payment reconciliation process",
+        "No real-time inventory holds"
+      ],
+      "constraints": [
+        "Limited visibility into order status",
+        "Inefficient staff task management"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-bopis-001",
+          "metric": "Order Accuracy (Traditional)",
+          "value": "70-80% (20-30% inventory discrepancies)",
+          "source": "TBD: [SME to provide source, e.g., 'BOPIS order accuracy benchmarks']"
+        },
+        {
+          "id": "bench-bopis-002",
+          "metric": "Customer Wait Time (Traditional)",
+          "value": "15-25 minutes average",
+          "source": "TBD: [SME to provide source, e.g., 'BOPIS customer experience benchmarks']"
+        },
+        {
+          "id": "bench-bopis-003",
+          "metric": "Operational Cost per Order (Traditional)",
+          "value": "$8-15",
+          "source": "TBD: [SME to provide source, e.g., 'BOPIS cost benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-orchestrated BOPIS with intelligent fulfillment, real-time inventory holds, and proactive customer engagement",
+      "characteristics": [
+        "Real-time inventory verification with holds",
+        "AI-driven optimal store selection (inventory, proximity, capacity)",
+        "Automated staff task prioritization and routing",
+        "Geofencing-based arrival detection",
+        "Proactive status notifications",
+        "Dynamic time slot estimation"
+      ],
+      "benefits": [
+        "Improved order accuracy and customer wait time reduction",
+        "Staff productivity improvement and BOPIS adoption increase",
+        "Operational cost reduction"
+      ],
+      "agents": [
+        "BOPIS Fulfillment Orchestrator",
+        "Inventory Promise Agent",
+        "Order Routing Agent",
+        "Fulfillment Coordination Agent",
+        "Customer Notification Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Order Accuracy Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time inventory holds preventing discrepancies']",
+          "sourceBenchmark": "bench-bopis-001"
+        },
+        {
+          "metric": "Customer Wait Time Reduction",
+          "value": "60% (6-10 min vs 15-25 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI task prioritization and arrival detection']",
+          "sourceBenchmark": "bench-bopis-002"
+        },
+        {
+          "metric": "Staff Productivity Improvement",
+          "value": "40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized pick paths and task routing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "BOPIS Adoption Increase",
+          "value": "15-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on improved customer experience driving adoption']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Operational Cost Reduction",
+          "value": "50% ($4-7 vs $8-15)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation and efficiency gains']",
+          "sourceBenchmark": "bench-bopis-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable real-time inventory visibility for top 20% of SKUs",
+        "Implement geofencing-based arrival detection",
+        "Deploy staff task management app with pick optimization"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Real-time inventory system with reservation capability",
+        "Order management system (OMS) with store fulfillment",
+        "Mobile app for customer notifications",
+        "Store task management system"
+      ]
+    },
+    "icon": "shopping-bag",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-ship-from-store",
+    "type": "capability",
+    "level": 3,
+    "label": "Ship from Store",
+    "description": "Leverages store inventory as fulfillment nodes to enable faster delivery, reduce shipping costs, and optimize inventory positioning across the distribution network.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery"
+    ],
+    "businessModels": [
+      "B2C",
+      "Hybrid"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Network-wide fulfillment node optimization",
+      "Store-as-DC operations management",
+      "Real-time carrier selection and rate shopping",
+      "Shipping label generation and tracking",
+      "Exception detection and customer communication"
+    ],
+    "traditionalApproach": {
+      "description": "Manual assessment of store versus distribution center inventory with static fulfillment rules",
+      "characteristics": [
+        "Manual assessment of store vs DC inventory",
+        "Store staff uses general packing supplies",
+        "Carrier pickup scheduled manually",
+        "Limited visibility into in-transit status",
+        "No cost optimization in routing decisions"
+      ],
+      "constraints": [
+        "Orders routed suboptimally (cost + time)",
+        "Store staff lacks proper training/tools",
+        "Delivery times not optimized",
+        "Customer experience inconsistent"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-sfs-001",
+          "metric": "Fulfillment Cost Premium (Traditional)",
+          "value": "30-40% higher vs optimized routing",
+          "source": "TBD: [SME to provide source, e.g., 'Fulfillment cost optimization benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered distributed fulfillment network with real-time optimization across all nodes",
+      "characteristics": [
+        "Evaluates all fulfillment nodes (DCs, stores, 3PLs) in real-time",
+        "AI-driven routing based on cost, speed, inventory, and carbon footprint",
+        "Guided fulfillment workflows for store staff",
+        "Real-time carrier rate shopping and selection",
+        "Proactive tracking and exception management"
+      ],
+      "benefits": [
+        "Fulfillment cost reduction and delivery speed improvement",
+        "Inventory turnover improvement and split shipment reduction",
+        "Customer satisfaction improvement"
+      ],
+      "agents": [
+        "Distributed Fulfillment Orchestrator",
+        "Network Optimization Agent",
+        "Store Fulfillment Agent",
+        "Carrier Selection Agent",
+        "Tracking & Exception Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Fulfillment Cost Reduction",
+          "value": "30-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI routing optimizing cost, speed, and inventory']",
+          "sourceBenchmark": "bench-sfs-001"
+        },
+        {
+          "metric": "Delivery Speed Improvement",
+          "value": "1-2 days faster on average",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on shipping from nearest store with inventory']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Turnover Improvement",
+          "value": "25-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on utilizing store inventory vs DC-only fulfillment']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Split Shipment Reduction",
+          "value": "50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent node selection maximizing single-node fulfillment']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Satisfaction Improvement",
+          "value": "20-30% (delivery speed)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on faster delivery improving NPS']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable ship-from-store for fast-moving products at top 20% of stores",
+        "Implement real-time carrier rate shopping",
+        "Deploy store fulfillment app with packing guidance"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Distributed order management system (DOM)",
+        "Store inventory visibility in real-time",
+        "Integration with carrier APIs (UPS, FedEx, USPS)",
+        "Shipping station equipment at stores",
+        "Store staff training program"
+      ]
+    },
+    "icon": "truck",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-return-to-store",
+    "type": "capability",
+    "level": 3,
+    "label": "Return to Store (BORIS - Buy Online, Return In Store)",
+    "description": "Enables customers to return online purchases at physical store locations with streamlined processing, instant refunds, and intelligent inventory disposition.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "Hybrid"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Returns authorization and validation",
+      "Instant refund processing",
+      "Quality assessment and disposition",
+      "Inventory reintegration",
+      "Return fraud detection"
+    ],
+    "traditionalApproach": {
+      "description": "Manual returns processing with paper receipts and delayed refunds",
+      "characteristics": [
+        "Customer brings item with receipt to store",
+        "Store associate processes return in POS manually",
+        "Manual inventory reconciliation",
+        "Delayed refund processing (3-7 days)",
+        "Limited visibility into return reasons"
+      ],
+      "constraints": [
+        "Delayed refunds frustrate customers",
+        "Return fraud difficult to detect",
+        "Inconsistent disposition decisions (restock vs salvage)",
+        "No analytics on return patterns",
+        "Manual inventory adjustments prone to errors"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-boris-001",
+          "metric": "Return Processing Time (Traditional)",
+          "value": "10-15 minutes average",
+          "source": "TBD: [SME to provide source, e.g., 'Returns processing time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered returns orchestration with instant authorization, refunds, and intelligent disposition",
+      "characteristics": [
+        "Digital return authorization (QR code or return ID)",
+        "Instant eligibility validation and return code generation",
+        "Automated refund processing (instant to original payment method)",
+        "AI-driven disposition decisions (restock, salvage, return to vendor)",
+        "Quality assessment automation",
+        "Return fraud detection and prevention"
+      ],
+      "benefits": [
+        "Faster return processing and improved customer satisfaction",
+        "Return fraud reduction and handling cost savings",
+        "Improved inventory reintegration accuracy",
+        "Real-time return analytics enable root cause analysis"
+      ],
+      "agents": [
+        "Returns Orchestration Agent",
+        "Returns Authorization Agent",
+        "Disposition Agent",
+        "Refund Processing Agent",
+        "Inventory Reintegration Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Return Processing Time Reduction",
+          "value": "60-70% faster (3-5 min vs 10-15 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on digital authorization and instant validation']",
+          "sourceBenchmark": "bench-boris-001"
+        },
+        {
+          "metric": "Customer Satisfaction Improvement",
+          "value": "+25% NPS",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on instant refunds improving customer experience']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Return Fraud Reduction",
+          "value": "10-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI fraud detection patterns']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Handling Cost Savings",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimal disposition decisions (restock vs salvage)']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Reintegration Accuracy",
+          "value": "99%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated inventory updates']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Digital return authorization with QR codes",
+        "Instant refund processing for returns within policy",
+        "Return fraud detection for high-risk returns"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Order management system integration",
+        "Payment gateway for instant refunds",
+        "POS system with returns module",
+        "Return policy engine",
+        "Inventory management system integration"
+      ]
+    },
+    "icon": "arrow-path",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-reserve-in-store",
+    "type": "capability",
+    "level": 3,
+    "label": "Reserve in Store",
+    "description": "Allows customers to reserve products online for in-store pickup or purchase, with time-based holds and conversion optimization.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Real-time availability checking and reservation",
+      "Time-based hold management",
+      "Reservation lifecycle tracking",
+      "Conversion optimization and reminders"
+    ],
+    "traditionalApproach": {
+      "description": "Manual phone-based reservations tracked in spreadsheets",
+      "characteristics": [
+        "Customer calls store to check availability",
+        "Store associate manually reserves item",
+        "Reservation tracked in spreadsheet or manual note",
+        "Follow-up call to confirm customer pickup",
+        "No automated expiration or renewal"
+      ],
+      "constraints": [
+        "Phone-based only (no digital channel)",
+        "Manual tracking prone to errors",
+        "Reservations forgotten or expire without notice",
+        "No conversion tracking or optimization",
+        "Store staff time-intensive",
+        "Poor customer experience"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Digital reservation system with intelligent hold management and proactive conversion",
+      "characteristics": [
+        "Online reservation with real-time inventory checking",
+        "Automated inventory hold with time-based release logic",
+        "Digital reservation confirmation and reminders",
+        "Expiration tracking with renewal options",
+        "Proactive conversion optimization",
+        "Store staff notification of active reservations"
+      ],
+      "benefits": [
+        "Phone call reduction to stores and improved reservation accuracy",
+        "Reservation-to-purchase conversion improvement",
+        "Automated expiration and release prevents inventory lockup",
+        "Real-time visibility for customers and store staff",
+        "Higher customer satisfaction with digital convenience"
+      ],
+      "agents": [
+        "Reservation Management Orchestrator",
+        "Availability Promise Agent",
+        "Reservation Lifecycle Agent",
+        "Customer Engagement Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Phone Call Reduction to Stores",
+          "value": "80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on online reservation capability eliminating phone inquiries']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Reservation Accuracy Improvement",
+          "value": "95%+ (vs manual tracking errors)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time inventory verification and holds']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Reservation-to-Purchase Conversion Improvement",
+          "value": "30-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated reminders and conversion optimization']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable online reservation for top-selling items",
+        "Automated SMS/email reminders for active reservations",
+        "Time-based expiration with auto-release to inventory"
+      ],
+      "investmentRequired": "Low",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "Real-time store inventory system",
+        "Reservation management module in OMS or POS",
+        "Customer notification system (email/SMS)",
+        "Ecommerce platform integration"
+      ]
+    },
+    "icon": "bookmark",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-endless-aisle",
+    "type": "capability",
+    "level": 3,
+    "label": "Endless Aisle",
+    "description": "Extends in-store product selection beyond physical inventory by enabling store associates to access and sell from the full online catalog with seamless ordering and fulfillment.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "Retail",
+      "Grocery"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Extended catalog access in-store",
+      "AI-powered product recommendations",
+      "Fulfillment options presentation",
+      "In-store payment with attribution",
+      "Order tracking and customer notifications"
+    ],
+    "traditionalApproach": {
+      "description": "Separate kiosk or tablet systems with limited catalog and manual order entry",
+      "characteristics": [
+        "Store associate searches separate kiosk or tablet",
+        "Manual order entry if product not in stock",
+        "Customer pays in-store and waits for shipping",
+        "Limited product catalog visibility",
+        "No integration with online inventory or pricing"
+      ],
+      "constraints": [
+        "Separate systems create friction",
+        "Limited product selection visible",
+        "Manual order entry errors",
+        "Store doesn't receive credit for online sales",
+        "Poor customer experience vs online shopping",
+        "Associate training required on separate system"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Seamless access to full online catalog with AI-assisted selling and integrated fulfillment",
+      "characteristics": [
+        "Store associates access full online catalog via tablet/mobile",
+        "AI-powered product search and recommendations",
+        "Real-time inventory and pricing from all channels",
+        "Multiple fulfillment options (ship-to-home, nearby store pickup)",
+        "In-store payment with store attribution",
+        "Seamless checkout experience"
+      ],
+      "benefits": [
+        "Infinite product selection drives basket size increase",
+        "Zero lost sales due to out-of-stocks",
+        "Store receives credit for extended catalog sales",
+        "AI recommendations improve average order value",
+        "Better customer experience vs leaving to shop online",
+        "Associate empowerment with full product knowledge"
+      ],
+      "agents": [
+        "Endless Aisle Orchestrator",
+        "Extended Catalog Agent",
+        "Assisted Selling Agent",
+        "Fulfillment Options Agent",
+        "In-Store Payment Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Basket Size Increase",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on infinite product selection increasing purchase amount']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Lost Sales Elimination",
+          "value": "Zero lost sales due to out-of-stocks",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on full catalog access regardless of store inventory']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Average Order Value Improvement",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI recommendations driving upsell']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy tablets with catalog access at top 20% of stores",
+        "Enable ship-to-home ordering with in-store payment",
+        "Train store associates on endless aisle selling"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Unified commerce platform (single catalog, inventory, pricing)",
+        "Tablet or mobile devices for store associates",
+        "POS integration for in-store payment",
+        "Order management system",
+        "Associate training program"
+      ]
+    },
+    "icon": "squares-plus",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-fulfillment-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "In-Store Fulfillment Optimization",
+    "description": "Optimizes store-based order fulfillment operations through intelligent task routing, workload balancing, and performance analytics.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Dynamic pick path optimization",
+      "Workload balancing across staff",
+      "Priority-based task queuing",
+      "Capacity management",
+      "SLA monitoring and alerting",
+      "Performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "FIFO pick queues with static zone assignments and manual task distribution",
+      "characteristics": [
+        "FIFO (First In, First Out) pick queue",
+        "Manual pick list printing",
+        "Static zone assignments for staff",
+        "No real-time capacity monitoring",
+        "Limited visibility into fulfillment progress"
+      ],
+      "constraints": [
+        "Inefficient pick paths (extra walking time)",
+        "Unbalanced workload (some staff idle, others overwhelmed)",
+        "SLA violations not detected until too late",
+        "No prioritization of urgent/VIP orders",
+        "Limited performance visibility",
+        "Staff productivity inconsistent"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-sfo-001",
+          "metric": "SLA Adherence (Traditional)",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Store fulfillment SLA performance benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven fulfillment orchestration with intelligent routing, prioritization, and continuous optimization",
+      "characteristics": [
+        "Dynamic pick path optimization (minimize walking)",
+        "Real-time workload balancing across available staff",
+        "SLA-based priority scoring (urgent orders first)",
+        "Capacity monitoring and bottleneck detection",
+        "Batch picking for efficiency",
+        "Performance analytics per associate"
+      ],
+      "benefits": [
+        "Pick efficiency improvement and fulfillment time reduction",
+        "SLA adherence improvement",
+        "Balanced workload prevents staff burnout",
+        "Real-time visibility enables proactive intervention",
+        "Continuous improvement through performance analytics"
+      ],
+      "agents": [
+        "Store Fulfillment Optimization Orchestrator",
+        "Dynamic Routing Agent",
+        "Capacity Management Agent",
+        "Priority Scoring Agent",
+        "Performance Analytics Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Pick Efficiency Improvement",
+          "value": "40-50% (items per hour)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized pick paths minimizing walking time']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Fulfillment Time Reduction",
+          "value": "30-40% per order",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI routing and prioritization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "SLA Adherence Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on priority-based queuing and real-time monitoring']",
+          "sourceBenchmark": "bench-sfo-001"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy pick path optimization for BOPIS orders",
+        "Implement SLA-based priority queuing",
+        "Real-time fulfillment dashboard for store managers"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Warehouse/store management system (WMS) or fulfillment app",
+        "Real-time task queue system",
+        "Staff mobile devices (handheld scanners or smartphones)",
+        "Store layout mapping",
+        "Performance tracking infrastructure"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#6366F1",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-clienteling",
+    "type": "capability",
+    "level": 3,
+    "label": "Clienteling",
+    "description": "Enables personalized relationship-building between store associates and customers through AI-powered customer insights, recommendations, and engagement orchestration.",
+    "parentDomain": "domain-customer-experience",
+    "industries": [
+      "Retail",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Customer 360-degree view",
+      "Personalized product recommendations",
+      "Outreach coordination (email, SMS, messaging)",
+      "Event and appointment management",
+      "Relationship tracking",
+      "Performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual relationship management via personal notebooks with limited customer data",
+      "characteristics": [
+        "Store associates maintain personal notebooks",
+        "Limited customer purchase history visibility",
+        "Manual follow-up via personal phone/email",
+        "No coordination across stores",
+        "Relationship knowledge lost when associate leaves"
+      ],
+      "constraints": [
+        "Relationships don't scale beyond associate's memory",
+        "No cross-store coordination",
+        "Limited customer insights (purchase history only)",
+        "Manual outreach time-consuming",
+        "Lost relationships when associate turnover",
+        "Inconsistent customer experiences"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "AI-powered clienteling platform providing comprehensive customer insights and automated relationship management",
+      "characteristics": [
+        "Unified customer 360 view (purchases, preferences, lifetime value)",
+        "AI-driven personalized product recommendations",
+        "Automated outreach orchestration (email, SMS, messaging)",
+        "Event and private shopping management",
+        "Cross-store relationship continuity",
+        "Performance tracking per associate"
+      ],
+      "benefits": [
+        "Outreach efficiency increase and customer lifetime value improvement",
+        "Associate productivity improvement",
+        "Relationships preserved through associate turnover",
+        "Scalable customer capacity per associate",
+        "Consistent experiences across stores"
+      ],
+      "agents": [
+        "Clienteling Orchestrator",
+        "Customer 360 Agent",
+        "Personalized Recommendation Agent",
+        "Outreach Coordination Agent",
+        "Event & Appointment Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Outreach Efficiency Increase",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated outreach vs manual follow-up']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Lifetime Value Improvement",
+          "value": "25-40% for clienteled customers",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized relationship management increasing retention and purchase frequency']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Associate Productivity Improvement",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered insights and automated outreach']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Capacity per Associate",
+          "value": "10x more customers per associate",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation enabling scale beyond manual memory limits']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy customer 360 view for high-value customers",
+        "AI product recommendations for VIP clientele",
+        "Automated birthday and milestone outreach"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Customer data platform (CDP) or unified CRM",
+        "Purchase history integration",
+        "Recommendation engine",
+        "Communication platform (email/SMS/messaging)",
+        "Associate mobile app or tablet"
+      ]
+    },
+    "icon": "user-group",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-inventory-visibility",
+    "type": "capability",
+    "level": 3,
+    "label": "Real-Time Store Inventory Visibility",
+    "description": "Provides accurate, real-time visibility into store-level inventory across all channels with intelligent reservation, shrinkage detection, and allocation optimization.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Perpetual inventory reconciliation",
+      "Real-time reservation management",
+      "Shrinkage detection and prevention",
+      "Intelligent allocation",
+      "Multi-channel visibility",
+      "Inventory accuracy tracking"
+    ],
+    "traditionalApproach": {
+      "description": "Batch inventory updates with manual cycle counts and limited real-time accuracy",
+      "characteristics": [
+        "Batch inventory updates (nightly)",
+        "Store counts via manual audits (weekly/monthly)",
+        "Discrepancies discovered during customer pickup",
+        "No real-time reservation awareness",
+        "Limited shrinkage visibility"
+      ],
+      "constraints": [
+        "Overselling due to lack of real-time visibility",
+        "Customer disappointment from pickup failures",
+        "Shrinkage discovered weeks/months after occurrence",
+        "Manual reconciliation time-consuming",
+        "Poor allocation decisions due to inaccurate data"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-siv-001",
+          "metric": "Inventory Accuracy (Traditional)",
+          "value": "85-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Store inventory accuracy benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Real-time inventory system with perpetual reconciliation, intelligent holds, and proactive shrinkage detection",
+      "characteristics": [
+        "Perpetual inventory reconciliation (POS, receiving, returns, transfers)",
+        "Real-time reservation holds for BOPIS, ship-from-store, reserve",
+        "AI-based shrinkage detection and anomaly alerts",
+        "Intelligent allocation based on demand and channel priorities",
+        "Multi-channel visibility (online, stores, associates)",
+        "IoT/RFID integration for automated counting"
+      ],
+      "benefits": [
+        "Inventory accuracy improvement and overselling elimination",
+        "Shrinkage reduction and inventory turnover improvement",
+        "Real-time allocation prevents stockouts and overstocks",
+        "Better customer experience with accurate promises"
+      ],
+      "agents": [
+        "Real-Time Inventory Orchestrator",
+        "Perpetual Inventory Agent",
+        "Reservation Hold Agent",
+        "Shrinkage Detection Agent",
+        "Allocation Intelligence Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Inventory Accuracy Improvement",
+          "value": "95-99% (vs 85-90%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on perpetual reconciliation and real-time updates']",
+          "sourceBenchmark": "bench-siv-001"
+        },
+        {
+          "metric": "Overselling Elimination",
+          "value": "Eliminates overselling with intelligent holds",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time reservation holds preventing double-allocation']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Shrinkage Reduction",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI anomaly detection catching issues early']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Turnover Improvement",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time allocation preventing stockouts and overstocks']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable real-time inventory sync from POS to online",
+        "Implement reservation holds for BOPIS orders",
+        "Deploy shrinkage anomaly detection for high-theft items"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Modern inventory management system with real-time capability",
+        "POS integration for real-time transaction feeds",
+        "IoT/RFID infrastructure (optional but recommended)",
+        "Unified commerce platform",
+        "Data quality and master data management"
+      ]
+    },
+    "icon": "cube",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

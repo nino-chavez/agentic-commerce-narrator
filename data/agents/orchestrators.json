@@ -1,0 +1,880 @@
+[
+  {
+    "id": "agent-orchestrator-s-op-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "S&OP Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-supply-chain-visibility-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Supply Chain Visibility Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-network-optimization-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Network Optimization Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning",
+      "modelType": "optimization"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-allocation-replenishment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Allocation & Replenishment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning",
+      "modelType": "optimization"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-supplier-collaboration-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier Collaboration Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-cross-docking-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Cross-Docking Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-bnpl-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "BNPL Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-digital-payment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Digital Payment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-payment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Payment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-subscription-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Subscription Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-revenue-recognition-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Revenue Recognition Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-hotel-revenue-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Hotel Revenue Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-guest-experience-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Guest Experience Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-housekeeping-operations-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Housekeeping Operations Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-revenue-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Revenue Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-channel-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-loyalty-program-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Program Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-crew-scheduling-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Scheduling Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-assortment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Assortment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-visual-merchandising-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Visual Merchandising Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-clienteling-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Clienteling Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-omnichannel-fulfillment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Omnichannel Fulfillment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-fresh-department-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Fresh Department Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-replenishment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Replenishment Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-pharmacy-operations-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Pharmacy Operations Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-price-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Price Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-voice-commerce-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Commerce Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-conversational-ai-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Conversational AI Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-ai-shopping-assistant-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "AI Shopping Assistant Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-proactive-engagement-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Proactive Engagement Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-knowledge-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Knowledge Management Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-drive-thru-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Drive-Thru Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-kitchen-production-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Kitchen Production Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-qsr-labor-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "QSR Labor Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-journey-intelligence-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "Journey Intelligence Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-omnichannel-experience-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "Omnichannel Experience Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-experimentation-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Experimentation Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-voc-intelligence-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "VoC Intelligence Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-next-best-action-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "Next Best Action Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-clv-optimization-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "CLV Optimization Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning",
+      "modelType": "optimization"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-predictive-analytics-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Analytics Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-marketing-attribution-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Marketing Attribution Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-marketing-mix-modeling-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "label": "Marketing Mix Modeling Orchestrator",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning",
+      "modelType": "simulation"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-churn-prevention-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Churn Prevention Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-demand-intelligence-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Demand Intelligence Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  },
+  {
+    "id": "agent-orchestrator-intelligent-dashboard-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Dashboard Orchestration",
+    "role": "orchestrator",
+    "icon": "sitemap",
+    "color": "#8B5CF6",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "planning"
+    },
+    "description": "Orchestrates 1 capability."
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "function-external-theft-detection-prevention",
+    "type": "function",
+    "level": 4,
+    "label": "External Theft Detection & Prevention",
+    "description": "AI video analytics detecting suspicious behavior with real-time alerts achieving 0.5-0.8% shrink versus 1.0-1.5% manual surveillance with 40-60% external theft reduction.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store relies on manual surveillance: Loss Prevention associate or store manager monitors camera feeds intermittently when time allows (10-20% coverage). 2. LP associate watches for suspicious behavior: customer lingering in high-value aisle, removing security tags, placing items in bag, concealing merchandise. 3. Manual monitoring limited: LP can only watch 1-4 camera feeds simultaneously missing 80-90% of potential theft incidents. 4. Reactive apprehension: LP follows suspected shoplifter after observing theft, attempts to stop outside store (safety risk, confrontation). 5. External theft detected via inventory shrink: annual/quarterly physical inventory reveals $50,000-$150,000 missing inventory but specific theft incidents unknown. 6. Shrink rate 1.0-1.5% of sales attributed to external theft with minimal prevention capability. 7. No real-time alerts or proactive intervention resulting in significant merchandise loss and safety risks.",
+      "constraints": [
+        "Manual surveillance covers only 10-20% of store activity (limited LP staffing)",
+        "LP can monitor 1-4 cameras simultaneously missing 80-90% of potential incidents",
+        "Reactive apprehension approach creates safety risks and confrontation",
+        "External theft detected only via inventory shrink (no incident-level tracking)",
+        "1.0-1.5% shrink rate from external theft ($50,000-$150,000 annual loss)",
+        "No real-time alerts or proactive intervention capability"
+      ],
+      "metrics": ["External theft shrink: 1.0-1.5% of sales", "Surveillance coverage: 10-20%", "Detection timing: After-the-fact (inventory shrink)", "Apprehension safety risk: High (confrontation)"]
+    },
+    "agentic": {
+      "workflow": "1. Theft Detection Agent monitors all camera feeds using AI video analytics: analyzes customer behavior patterns across 100% of cameras vs 10-20% manual coverage. 2. Behavior Analysis Agent detects suspicious actions: customer picks up high-value item ($200 headphones), looks around nervously, places in bag instead of cart - flags as 85% theft probability. 3. Agent sends real-time alert to LP and store manager mobile devices: 'Potential theft in progress - Electronics aisle camera 12 - customer red jacket - see live video feed'. 4. LP associate reviews alert on mobile device: sees 15-second video clip of suspicious behavior, decides to monitor customer or provide visible customer service deterrent. 5. Agent tracks customer through store using multi-camera correlation: follows red jacket customer movement from Electronics to front exit avoiding confrontation during apprehension. 6. LP intercepts customer at exit if merchandise not paid: requests receipt, recovers merchandise, processes incident safely vs unsafe parking lot confrontation. 7. 40-60% external theft reduction (0.5-0.8% shrink vs 1.0-1.5%) through AI-powered detection, real-time alerts, and proactive intervention with 100% camera coverage.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["Theft Detection Agent", "Behavior Analysis Agent"],
+        "utilityAgents": ["Video Analytics Platform (Veesion, Turing AI)", "Camera System Integration", "Alert System (Mobile Push)", "Multi-Camera Tracking"]
+      },
+      "dataSources": [
+        "Video feeds from all store cameras (100% coverage vs 10-20% manual)",
+        "Computer vision models trained on suspicious behavior patterns",
+        "High-value product location data and shrink-prone categories",
+        "Customer movement patterns and dwell time analytics",
+        "Historical theft incident data and behavior signatures",
+        "LP associate mobile devices for real-time alert delivery",
+        "Multi-camera correlation for customer tracking across store"
+      ],
+      "benefits": [
+        "40-60% external theft reduction (0.5-0.8% vs 1.0-1.5% shrink rate)",
+        "100% surveillance coverage vs 10-20% manual (AI monitors all cameras)",
+        "Real-time alerts enable intervention before exit vs after-the-fact detection",
+        "Safer apprehension process (inside store vs parking lot confrontation)",
+        "Deterrence effect from visible monitoring and rapid LP response",
+        "$30,000-$90,000 annual shrink savings per store ($100K to $60K typical loss)"
+      ],
+      "metrics": ["External theft shrink: 0.5-0.8% of sales", "Surveillance coverage: 100% (AI-powered)", "Detection timing: Real-time (during incident)", "Apprehension safety risk: Low (controlled environment)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI video analytics at pilot stores with highest external theft shrink", "Enable real-time mobile alerts for LP associates and store managers", "Focus on high-value categories (electronics, health & beauty, apparel)"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Store-level video surveillance system (minimum 8-12 HD cameras)", "HD camera infrastructure (1080p+) for AI analytics quality", "AI video analytics platform (Veesion, Turing AI, DeepNorth) with behavioral detection", "Network bandwidth for video streaming and AI processing", "LP associate mobile devices for real-time alert delivery", "Camera placement covering high-shrink areas and entry/exit points", "Integration with loss prevention case management system"]
+    },
+    "icon": "shield-exclamation",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-internal-theft-fraud-detection",
+    "type": "function",
+    "level": 4,
+    "label": "Internal Theft & Fraud Detection",
+    "description": "Real-time POS anomaly detection with ML fraud patterns achieving <0.2% shrink versus 0.5-1.0% traditional with 60-80% internal theft reduction.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loss Prevention conducts annual audit: reviews store records looking for internal theft indicators (inventory shrink, cash variances, unusual transactions). 2. LP runs monthly exception reports: pulls POS data showing high void/refund rates, excessive discounts, no-sale transactions by employee. 3. LP manually investigates exceptions: employee with 15% void rate (vs 3% average) flagged for investigation taking 10-20 hours to review transaction history. 4. LP reviews video footage: spends days scrubbing through video looking for suspicious transactions (void without customer, refund without merchandise return). 5. Internal theft detected weeks/months after occurrence: employee stealing via fraudulent refunds for 6 months before detection ($5,000-$15,000 loss). 6. Limited investigation capacity: LP can only investigate 2-3 cases per month missing 80-90% of internal theft. 7. Internal theft shrink 0.5-1.0% of sales ($30,000-$60,000 annual loss) with delayed detection and limited prevention.",
+      "constraints": [
+        "Monthly exception reports delay detection weeks/months after theft occurred",
+        "Manual investigation takes 10-20 hours per case (limited LP capacity)",
+        "Annual audit approach misses real-time theft opportunities",
+        "Video review time-consuming (days of scrubbing per investigation)",
+        "Internal theft 0.5-1.0% shrink ($30,000-$60,000 annual) with delayed detection",
+        "Limited investigation capacity (2-3 cases/month) misses 80-90% of incidents"
+      ],
+      "metrics": ["Internal theft shrink: 0.5-1.0% of sales", "Detection timing: Weeks to months (monthly reports)", "Investigation time: 10-20 hours per case", "Investigation capacity: 2-3 cases/month"]
+    },
+    "agentic": {
+      "workflow": "1. Internal Fraud Agent monitors POS transactions in real-time: analyzes all transactions across all stores detecting anomalies as they occur vs monthly batch reports. 2. Anomaly Detection Agent applies ML fraud patterns: identifies cashier processed $75 refund at 9pm with no receipt scan, store closed, no customers in video - flags as 95% fraud probability. 3. Agent correlates video automatically: retrieves exact transaction timestamp video showing cashier processed refund alone with no customer present - confirms fraudulent refund. 4. Agent analyzes employee historical patterns: identifies same cashier processed 8 similar suspicious refunds past 2 weeks totaling $600 - escalates to LP immediately. 5. LP receives mobile alert: 'High-confidence fraud detected - Cashier ID 4567 - 8 suspicious refunds $600 total - see evidence package' with transaction data and video clips. 6. LP investigates case in 30-60 minutes: reviews AI-generated evidence package, interviews employee, confirms theft, initiates termination. 7. 60-80% internal theft reduction (<0.2% vs 0.5-1.0% shrink) through real-time detection, ML pattern recognition, and immediate investigation vs delayed monthly reports.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["Internal Fraud Agent", "Anomaly Detection Agent"],
+        "utilityAgents": ["POS Transaction Analytics API", "Video Management System", "Employee Behavior Analytics", "ML Fraud Detection Model"]
+      },
+      "dataSources": [
+        "Real-time POS transaction data (voids, refunds, discounts, no-sales) with cashier ID and timestamp",
+        "ML fraud detection model trained on known internal theft patterns",
+        "Video management system with transaction-to-video correlation",
+        "Employee shift schedules and cashier performance history",
+        "Historical fraud investigation outcomes and patterns",
+        "Receipt scan data to validate refund legitimacy",
+        "Customer presence detection from video analytics"
+      ],
+      "benefits": [
+        "60-80% internal theft reduction (<0.2% vs 0.5-1.0% shrink rate)",
+        "Real-time detection vs weeks/months delay (monthly exception reports)",
+        "95% investigation time reduction (30-60 min vs 10-20 hours per case)",
+        "ML pattern recognition identifies fraud humans miss (subtle patterns)",
+        "Automated video correlation eliminates days of manual video scrubbing",
+        "$24,000-$57,000 annual shrink savings per store ($30K-60K to $6K-12K typical)"
+      ],
+      "metrics": ["Internal theft shrink: <0.2% of sales", "Detection timing: Real-time (during shift)", "Investigation time: 30-60 min per case", "Investigation capacity: 20-30 cases/month (AI-assisted)"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 6,
+      "threshold": "Employee termination decisions require human review of AI-generated evidence",
+      "policy": "AI agent detects fraud and generates evidence package (transaction anomalies, video clips, historical patterns) but Loss Prevention and Store Manager must review evidence and make final termination decision. Agent provides high-confidence recommendations but cannot execute employee termination autonomously."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time POS anomaly detection for voids, refunds, and discounts", "Implement automated transaction-to-video correlation for investigation acceleration", "Enable ML fraud pattern detection for subtle multi-transaction theft schemes"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["POS system integration with real-time transaction streaming", "Video management system with timestamp correlation capability", "ML fraud detection model trained on historical internal theft cases", "Employee behavior analytics platform for pattern analysis", "LP case management system for investigation workflow", "Mobile alert system for real-time fraud notifications to LP team", "Legal review of employee monitoring and investigation procedures"]
+    },
+    "icon": "user-circle",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-organized-retail-crime-intelligence",
+    "type": "function",
+    "level": 4,
+    "label": "Organized Retail Crime (ORC) Intelligence",
+    "description": "Facial recognition across stores with ORC database integration achieving 30-50% ORC incident reduction through multi-store tracking, predictive alerts, and law enforcement coordination.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store LP witnesses organized retail crime incident: 2-3 suspects enter store, fill bags with high-value merchandise ($2,000-$5,000), exit quickly before LP can respond. 2. LP files incident report with local police: describes suspects, provides video footage, requests investigation taking 2-4 weeks for police response. 3. Police investigation limited: resource constraints prevent follow-up on most retail theft cases (<10% prosecution rate). 4. Same ORC group hits multiple stores: suspects steal from 10-20 stores across region over 3 months before pattern recognized. 5. No intelligence sharing between retailers: Store A suffers ORC loss but Store B unaware same group operating in area. 6. Reactive response only: stores cannot predict or prevent ORC incidents until after losses occur. 7. ORC shrink significant: 0.5-1.0% of sales ($30,000-$60,000 annual) with minimal prevention or recovery.",
+      "constraints": [
+        "Reactive incident response only after ORC theft already occurred",
+        "No intelligence sharing between stores or retailers (siloed)",
+        "Limited police follow-up (<10% prosecution rate due to resources)",
+        "Same ORC groups hit 10-20 stores before pattern recognized",
+        "No predictive capability or prevention opportunity",
+        "ORC shrink 0.5-1.0% of sales ($30,000-$60,000 annual loss per store)"
+      ],
+      "metrics": ["ORC shrink: 0.5-1.0% of sales", "Detection timing: After incident (reactive)", "Intelligence sharing: None (siloed)", "Prosecution rate: <10%"]
+    },
+    "agentic": {
+      "workflow": "1. ORC Intelligence Agent monitors store entrances using facial recognition: compares customer faces to ORC database of known organized retail crime suspects across retail consortium. 2. Agent detects known ORC suspect entering store: matches face to database showing suspect involved in 8 prior theft incidents across 5 retailers totaling $25,000 losses. 3. Facial Recognition Agent sends real-time alert to store LP and regional LP manager: 'High-risk ORC suspect entered store - see photo and prior incident history - monitor closely'. 4. LP increases visible presence and customer service approach: greets suspect providing deterrent effect, suspect leaves without attempting theft. 5. Agent updates ORC consortium database: logs suspect sighting at store with timestamp, shares intelligence with other retailers in real-time. 6. Agent provides predictive alerts: analyzes ORC patterns identifying 'Tuesday afternoons high-risk time for ORC group targeting electronics' enabling increased LP staffing. 7. 30-50% ORC incident reduction through facial recognition deterrence, real-time intelligence sharing, coordinated law enforcement response vs reactive siloed approach.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["ORC Intelligence Agent", "Facial Recognition Agent"],
+        "utilityAgents": ["Facial Recognition API (requires regulatory compliance)", "ORC Database (retailer consortium)", "Law Enforcement Integration", "Camera System Integration"]
+      },
+      "dataSources": [
+        "ORC database with known suspect photos and prior incident history (retailer consortium)",
+        "Store camera feeds at entrances and exits for facial recognition scanning",
+        "Facial recognition model trained on suspect identification (requires consent/compliance)",
+        "Historical ORC incident data showing patterns, timing, target merchandise",
+        "Law enforcement databases and warrant information (with legal agreements)",
+        "Regional LP network for real-time intelligence sharing across retailers",
+        "Predictive analytics on ORC timing and targeting patterns"
+      ],
+      "benefits": [
+        "30-50% ORC incident reduction through deterrence and proactive monitoring",
+        "Real-time intelligence sharing across stores and retailers vs siloed approach",
+        "Facial recognition identifies known suspects before theft occurs (prevention)",
+        "Law enforcement coordination improves prosecution rate (10% → 25-30%)",
+        "Predictive alerts enable targeted LP staffing during high-risk periods",
+        "$15,000-$30,000 annual ORC shrink savings per store (reduced by 50%)"
+      ],
+      "metrics": ["ORC shrink: 0.25-0.5% of sales", "Detection timing: Before incident (predictive)", "Intelligence sharing: Real-time (consortium)", "Prosecution rate: 25-30% (coordinated)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Join retailer ORC consortium for intelligence sharing and database access", "Deploy facial recognition at store entrances in compliant jurisdictions", "Implement real-time LP mobile alerts for known ORC suspect sightings"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Legal review of facial recognition use and regulatory compliance (varies by jurisdiction)", "Facial recognition API with accuracy and bias testing (privacy considerations)", "Store camera infrastructure at entrances/exits with sufficient resolution for facial recognition", "ORC database access through retailer consortium (e.g., Retail Industry Leaders Association)", "Law enforcement partnerships and information sharing agreements", "LP mobile alert system for real-time suspect notifications", "Privacy policy updates and customer notification signage where required"]
+    },
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-shrink-analysis-root-cause",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Shrink Analysis & Root Cause",
+    "description": "Perpetual inventory with RFID and ML root cause analysis achieving 0.7-1.5% shrink versus 1.5-3.0% annual physical with 50% shrink reduction and actionable root cause identification.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store conducts annual physical inventory: closes store, counts all products over 8-12 hours, enters data into inventory system over 2-4 weeks. 2. Inventory shrink calculated: compares system book inventory to physical count finding $150,000 shrink (1.5-3.0% of sales) - 'missing inventory' discovered. 3. Root cause analysis limited: total shrink known but causes unknown (external theft? internal theft? receiving errors? damaged goods?). 4. LP investigates high-shrink categories: identifies 'Electronics 5% shrink, Health & Beauty 4% shrink' but cannot determine specific causes. 5. LP implements broad corrective actions: increases camera coverage, adds EAS tags, retrains employees, with limited effectiveness since root causes unknown. 6. Shrink continues at similar rate next year: 1.5-3.0% ongoing because underlying causes not addressed. 7. Annual detection cycle too infrequent: shrink issues persist 365 days before measurement and intervention.",
+      "constraints": [
+        "Annual physical inventory detects shrink only once per year (365-day delay)",
+        "Total shrink known but root causes unknown (can't distinguish theft vs errors)",
+        "High-shrink categories identified but not specific product-level or cause-level insights",
+        "Broad corrective actions with limited effectiveness (addressing symptoms not causes)",
+        "1.5-3.0% ongoing shrink rate ($90,000-$180,000 annual in $6M sales store)",
+        "No daily visibility or perpetual inventory management"
+      ],
+      "metrics": ["Total shrink: 1.5-3.0% of sales", "Shrink visibility: Annual (365-day cycle)", "Root cause identification: Limited (category-level only)", "Corrective action effectiveness: Low (broad changes)"]
+    },
+    "agentic": {
+      "workflow": "1. Shrink Analysis Agent maintains perpetual inventory using RFID: tracks all products entering/leaving store in real-time vs annual count approach. 2. Agent detects shrink daily by category: identifies 'Electronics shrink 0.2% yesterday - 5 AirPods missing from shelf location' vs annual total only. 3. Root Cause Agent analyzes shrink patterns using ML: correlates RFID exit events (product left store), POS transactions (product sold?), video footage identifying root causes. 4. Agent determines shrink attribution: '3 AirPods sold but not scanned at POS = cashier error, 2 AirPods RFID exit no POS transaction = external theft'. 5. Agent generates actionable insights: 'AirPods 40% shrink from cashier scanning errors, 60% from external theft - corrective actions: retraining for cashiers, display locking cases for theft prevention'. 6. Agent tracks corrective action effectiveness: measures shrink reduction after interventions showing 'AirPods shrink reduced from 5% to 1.5% after display lock installation'. 7. 50% shrink reduction (0.7-1.5% vs 1.5-3.0%) through daily visibility, ML root cause analysis, and targeted corrective actions vs annual broad interventions.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["Shrink Analysis Agent", "Root Cause Agent"],
+        "utilityAgents": ["RFID System", "Inventory Management System API", "Analytics Platform", "BI Dashboard"]
+      },
+      "dataSources": [
+        "RFID tag read events showing product movement (receiving, shelf, exit)",
+        "POS transaction data with scanned product sales",
+        "Inventory management system with perpetual inventory balances",
+        "Video footage correlated with RFID exit events (product leaving store)",
+        "Historical shrink patterns by product, category, store, time period",
+        "Corrective action tracking system (interventions and effectiveness)",
+        "ML models for shrink attribution (theft vs errors vs damages)"
+      ],
+      "benefits": [
+        "50% shrink reduction (0.7-1.5% vs 1.5-3.0%) through root cause targeting",
+        "Daily shrink visibility vs annual 365-day delay (perpetual inventory)",
+        "ML root cause analysis identifies specific causes (theft vs errors vs damage)",
+        "Actionable insights enable targeted corrective actions vs broad interventions",
+        "Corrective action effectiveness measured (close the loop)",
+        "$45,000-$135,000 annual shrink savings per store ($90K-180K to $45K-90K typical)"
+      ],
+      "metrics": ["Total shrink: 0.7-1.5% of sales", "Shrink visibility: Daily (perpetual)", "Root cause identification: High (product + cause level)", "Corrective action effectiveness: High (targeted interventions)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy RFID system for high-shrink categories (electronics, health & beauty)", "Implement daily perpetual inventory tracking with ML analytics", "Enable root cause analysis dashboard showing shrink attribution by cause type"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["RFID infrastructure (readers at receiving, exits, strategic locations)", "RFID tags on products (source tagging or store application)", "Inventory management system integration for perpetual inventory tracking", "POS integration for sales transaction correlation with RFID exits", "Video management system for shrink incident correlation (optional)", "ML analytics platform for root cause pattern detection", "BI dashboard for daily shrink visibility and corrective action tracking"]
+    },
+    "icon": "chart-pie",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-high-risk-item-protection-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "High-Risk Item Protection & Monitoring",
+    "description": "RFID smart shelves with real-time removal alerts achieving <1% shrink on high-risk items versus 2-5% manual EAS with 60-80% shrink reduction and 95%+ tagging compliance.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store identifies high-risk items: electronics, health & beauty, razors, designer handbags subject to high theft rates (2-5% shrink). 2. Store associates manually apply EAS tags: attach security tags to products during receiving or stocking process with 20-30% tagging compliance (many products missed). 3. EAS system at exit detects tagged items: if customer exits with tagged merchandise, alarm sounds, LP investigates. 4. Tag removal circumvention common: thieves remove tags, disable with magnets, or exit through non-alarmed doors bypassing EAS system. 5. High-risk item shrink remains 2-5%: EAS provides minimal deterrence due to low tagging compliance and easy circumvention. 6. No real-time monitoring: theft detected only at exit alarm (after product removed from shelf) or annual inventory shrink discovery. 7. Lost sales and shrink significant: high-margin products frequently out-of-stock due to theft ($50,000-$150,000 annual loss on high-risk categories).",
+      "constraints": [
+        "Manual EAS tagging with 20-30% compliance (70-80% products not tagged)",
+        "EAS tag removal/circumvention common (thieves bypass system easily)",
+        "High-risk item shrink remains 2-5% despite EAS investment",
+        "No real-time monitoring (theft detected at exit or annual inventory only)",
+        "Frequent out-of-stocks on high-margin items due to undetected theft",
+        "$50,000-$150,000 annual shrink on high-risk categories per store"
+      ],
+      "metrics": ["High-risk item shrink: 2-5%", "EAS tagging compliance: 20-30%", "Detection timing: Exit alarm or annual inventory", "Theft prevention: Low (easy circumvention)"]
+    },
+    "agentic": {
+      "workflow": "1. High-Risk Monitoring Agent manages RFID smart shelves: shelves equipped with RFID readers continuously monitor high-value products (razors, electronics, designer items). 2. Smart Shelf Agent detects product removal in real-time: customer removes 3 Gillette razor packs from smart shelf at 2:15pm, RFID readers detect removal instantly. 3. Agent correlates with POS transactions: checks if razors scanned at POS within 15 minutes, if not, generates theft alert. 4. Agent sends real-time alert to LP and store manager: 'Potential theft - 3 Gillette razors removed from shelf 2:15pm, not scanned at POS, customer in red jacket near Electronics aisle - see video'. 5. LP provides visible customer service: approaches customer offering assistance creating deterrent effect, customer proceeds to checkout and pays avoiding theft incident. 6. Agent tracks tagging compliance: 95%+ products on smart shelves have RFID tags vs 20-30% manual EAS tagging through source tagging or automated application. 7. 60-80% shrink reduction on high-risk items (<1% vs 2-5%) through real-time monitoring, instant alerts, and 95%+ tagging compliance vs manual EAS approach.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["High-Risk Monitoring Agent", "Smart Shelf Agent"],
+        "utilityAgents": ["RFID Smart Shelves", "EAS System Integration", "Video Analytics", "Real-Time Alert System"]
+      },
+      "dataSources": [
+        "RFID smart shelf readers monitoring product presence in real-time",
+        "POS transaction data for product scan correlation (did customer pay?)",
+        "High-risk product catalog with shrink rates and theft patterns",
+        "Video management system for visual confirmation of removal events",
+        "LP mobile devices for real-time alert delivery and response",
+        "RFID tag inventory and compliance tracking (source tagging vs store application)",
+        "Historical shrink data by product showing reduction after smart shelf deployment"
+      ],
+      "benefits": [
+        "60-80% high-risk item shrink reduction (<1% vs 2-5%)",
+        "Real-time theft detection vs exit alarm or annual inventory delay",
+        "95%+ tagging compliance through RFID vs 20-30% manual EAS tagging",
+        "Instant alerts enable LP intervention before exit (deterrence effect)",
+        "Product availability improved (fewer out-of-stocks from undetected theft)",
+        "$40,000-$120,000 annual shrink savings on high-risk categories per store"
+      ],
+      "metrics": ["High-risk item shrink: <1%", "RFID tagging compliance: 95%+", "Detection timing: Real-time (during removal)", "Theft prevention: High (instant alerts + deterrence)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy RFID smart shelves for top 10-20 highest-shrink SKUs", "Implement real-time removal alerts for LP mobile devices", "Enable POS transaction correlation to distinguish theft from legitimate purchases"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["RFID smart shelf hardware (shelves with embedded RFID readers)", "RFID tags on high-risk products (source tagging preferred)", "POS system integration for transaction correlation", "Video management system for visual confirmation of removal events", "LP mobile alert system for real-time theft notifications", "Network connectivity for smart shelf data transmission", "High-risk product catalog and shrink data for prioritization"]
+    },
+    "icon": "lock-closed",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-return-fraud-receipt-validation",
+    "type": "function",
+    "level": 4,
+    "label": "Return Fraud & Receipt Validation",
+    "description": "Receipt OCR validation with ML fraud detection achieving <1% fraud versus 3-5% manual with 70-85% return fraud reduction and instant validation.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer requests return at service desk: presents merchandise and claims receipt lost or provides printed receipt. 2. Associate manually inspects receipt: checks date, store number, product description, price attempting to spot fraudulent receipts. 3. Fraudulent returns common: customers return stolen merchandise with no receipt (store gives store credit), counterfeit receipts printed at home, receipts found in parking lot used for merchandise swaps. 4. Manual receipt validation ineffective: associates cannot detect sophisticated frauds (altered receipts, receipt washing, barcode swaps) in 30-60 second interaction. 5. Return fraud rate 3-5% of returns: $15,000-$50,000 annual loss from fraudulent returns (stolen goods, counterfeit receipts, serial returners). 6. Policy violations frequent: customers exceed return limits (3 returns per year no-receipt policy) but associates unaware of history. 7. No systematic fraud detection or pattern analysis resulting in ongoing abuse of return policies.",
+      "constraints": [
+        "Manual receipt inspection in 30-60 seconds cannot detect sophisticated fraud",
+        "3-5% return fraud rate ($15,000-$50,000 annual loss per store)",
+        "Stolen merchandise returned for cash or store credit",
+        "Counterfeit receipts, receipt washing, barcode swap fraud undetected",
+        "Policy violations common (customers exceed no-receipt return limits)",
+        "No fraud pattern analysis or serial returner identification"
+      ],
+      "metrics": ["Return fraud rate: 3-5% of returns", "Receipt validation: Manual (30-60 sec inspection)", "Policy violation detection: Limited (no history tracking)", "Fraud pattern detection: None"]
+    },
+    "agentic": {
+      "workflow": "1. Return Fraud Agent receives return request: customer scans receipt or associate enters receipt number at POS return terminal. 2. Receipt Validation Agent uses OCR to extract receipt data: scans receipt image extracting store number, date, transaction ID, products purchased, payment method in <5 seconds. 3. Agent validates receipt authenticity: compares OCR data to POS transaction database confirming receipt legitimate (not counterfeit, not altered, not duplicate). 4. Agent checks customer purchase history: retrieves customer profile showing 'Customer purchased this product 3 days ago transaction #12345, eligible for return within 30-day policy'. 5. Fraud Detection Agent applies ML fraud patterns: analyzes customer return history showing 'Customer 15 returns past 6 months, 8 no-receipt returns exceeding 3-per-year policy limit - flag for manual review'. 6. Agent blocks fraudulent return: 'Receipt validation failed - receipt does not match POS transaction database' or 'Customer exceeds no-receipt return policy limit - manager override required'. 7. 70-85% return fraud reduction (<1% vs 3-5%) through instant OCR validation, purchase history lookup, and ML fraud pattern detection vs manual inspection.",
+      "agents": {
+        "orchestrator": "Loss Prevention Orchestration Agent",
+        "superAgents": ["Return Fraud Agent", "Receipt Validation Agent"],
+        "utilityAgents": ["OCR Engine (Optical Character Recognition)", "Customer Purchase History API", "ML Fraud Detection Model", "POS Integration API"]
+      },
+      "dataSources": [
+        "Receipt images captured via scanner or mobile camera for OCR processing",
+        "POS transaction database with all historical sales receipts",
+        "Customer purchase history and return history by customer ID",
+        "Return policy rules (30-day window, 3 no-receipt returns per year, etc.)",
+        "ML fraud detection model trained on known return fraud patterns",
+        "Counterfeit receipt detection algorithms (font analysis, formatting validation)",
+        "Serial returner database showing customers with excessive return activity"
+      ],
+      "benefits": [
+        "70-85% return fraud reduction (<1% vs 3-5%)",
+        "Instant receipt validation (<5 sec vs 30-60 sec manual)",
+        "Purchase history lookup prevents stolen merchandise returns",
+        "ML fraud patterns detect serial returners and policy violators",
+        "Counterfeit receipt detection through OCR and database validation",
+        "$10,500-$42,500 annual return fraud savings per store (70-85% of $15K-50K)"
+      ],
+      "metrics": ["Return fraud rate: <1% of returns", "Receipt validation: Automated (<5 sec)", "Policy violation detection: High (history tracking)", "Fraud pattern detection: Automated (ML-powered)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy receipt OCR scanning at service desk for instant validation", "Implement customer purchase history lookup to verify original purchase", "Enable ML fraud detection for serial returners and policy violators"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["OCR engine for receipt scanning and data extraction", "POS transaction database API for receipt validation", "Customer loyalty program or payment card data for purchase history lookup", "Return policy rules codified in system (30-day window, no-receipt limits)", "ML fraud detection model trained on historical return fraud cases", "Receipt scanner at service desk (or mobile camera for associates)", "POS integration for return authorization and fraud blocking"]
+    },
+    "icon": "receipt-refund",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-employee-training-awareness-programs",
+    "type": "function",
+    "level": 4,
+    "label": "Employee Training & Awareness Programs",
+    "description": "Microlearning with gamification achieving 90%+ completion versus 50-60% annual in-person with better knowledge retention and measurable behavior change through scenario-based learning.",
+    "parentCapability": "capability-shrink-loss-prevention",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loss Prevention conducts annual training: schedules 2-hour in-person session for all store associates covering theft awareness, shoplifting signs, fraud prevention. 2. Training attendance 50-60%: associates miss training due to shift scheduling conflicts, time-off, turnover (hired after annual training). 3. Training format lecture-based: LP presents PowerPoint slides with theft statistics, security procedures, case examples in passive learning format. 4. Knowledge retention low: associates forget 70-80% of training content within 30 days due to information overload and lack of practice. 5. No behavior change measurement: training completion tracked but no assessment of whether associates apply learnings on the job. 6. Training once per year insufficient: new theft tactics emerge, policies change, but associates not updated until next annual session. 7. Shrink continues despite training: minimal impact on theft prevention due to low completion, poor retention, and lack of behavior change.",
+      "constraints": [
+        "50-60% training completion rate due to scheduling conflicts and turnover",
+        "Annual training frequency insufficient (new hires miss training, tactics evolve)",
+        "Lecture-based passive learning with 70-80% content forgotten within 30 days",
+        "No knowledge retention assessment or behavior change measurement",
+        "2-hour sessions create information overload and engagement challenges",
+        "Minimal shrink impact despite training investment"
+      ],
+      "metrics": ["Training completion: 50-60%", "Knowledge retention: 20-30% (30 days post-training)", "Behavior change: Not measured", "Training frequency: Annual"]
+    },
+    "agentic": {
+      "workflow": "1. Training Assignment Agent delivers microlearning modules: sends 5-10 minute mobile learning modules to associates covering specific topics (spotting shoplifters, receipt fraud, internal theft red flags). 2. Agent assigns training based on role: cashiers receive POS fraud training, floor associates receive external theft awareness, managers receive investigation procedures. 3. Agent gamifies learning: associates earn points and badges for completing modules, competing on leaderboard creating engagement and motivation. 4. Scenario-based learning: modules present realistic theft scenarios with video, asking associates to identify suspicious behavior and select appropriate response testing decision-making. 5. Completion Tracking Agent monitors progress: sends reminders for incomplete modules, tracks completion rate 90%+ vs 50-60% annual in-person. 6. Agent assesses knowledge retention: delivers quiz after each module, requires 80%+ score to pass, tracks retention over time measuring 70-80% retention vs 20-30% lecture format. 7. Agent measures behavior change: correlates training completion with shrink reduction showing 'Associates completing external theft module showed 25% fewer missed shoplifter incidents' proving training effectiveness.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Training Assignment Agent", "Completion Tracking Agent"],
+        "utilityAgents": ["Learning Management System API", "Mobile Learning App", "Quiz/Assessment Engine", "Gamification Platform"]
+      },
+      "dataSources": [
+        "Employee roster with roles and training requirements by position",
+        "Microlearning module library covering theft awareness topics",
+        "Training completion data with timestamps and quiz scores",
+        "Knowledge retention assessments (quizzes at 30, 60, 90 days post-training)",
+        "Shrink incident data correlated with training completion for behavior change measurement",
+        "Gamification leaderboard and badge achievement data",
+        "Video scenarios showing realistic theft situations for decision-making practice"
+      ],
+      "benefits": [
+        "30-40 point completion improvement (90% vs 50-60%) through mobile microlearning",
+        "50 point retention improvement (70-80% vs 20-30%) via scenario-based learning",
+        "Measurable behavior change: correlate training with shrink reduction by store",
+        "Continuous training vs annual (modules delivered as-needed when tactics evolve)",
+        "Role-specific content improves relevance and engagement",
+        "Gamification increases engagement and knowledge retention"
+      ],
+      "metrics": ["Training completion: 90%+", "Knowledge retention: 70-80% (30 days post-training)", "Behavior change: Measurable (shrink correlation)", "Training frequency: Continuous (microlearning)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile microlearning platform with 5-10 minute modules", "Implement gamification with leaderboard and badges for engagement", "Create scenario-based video modules for external and internal theft awareness"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Learning management system (LMS) with mobile app delivery", "Microlearning module library (5-10 min videos covering theft topics)", "Quiz and assessment engine for knowledge retention measurement", "Gamification platform for points, badges, leaderboard", "Employee mobile device access (BYOD or store-provided)", "Video production for realistic theft scenario creation", "Shrink data correlation for behavior change measurement"]
+    },
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "id": "capability-buy-now-pay-later",
+    "type": "capability",
+    "level": 3,
+    "label": "Buy Now, Pay Later (BNPL)",
+    "description": "Offers flexible payment installment options at checkout with real-time credit decisioning and automated collections management.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "BNPL Eligibility & Decisioning",
+      "Installment Presentation",
+      "Risk Assessment",
+      "Collection Management"
+    ],
+    "traditionalApproach": {
+      "description": "Credit cards only with no installment options, resulting in high cart abandonment for high-value purchases.",
+      "characteristics": [
+        "Credit cards only",
+        "High cart abandonment due to upfront cost",
+        "No installment options",
+        "Limited to high-ticket items"
+      ],
+      "constraints": [
+        "High cart abandonment for high-value purchases",
+        "No flexibility for customers without credit cards",
+        "Lost sales to competitors offering BNPL",
+        "High upfront cost barrier for impulse purchases",
+        "No access to younger demographics preferring BNPL"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-bnpl-001",
+          "metric": "Cart Abandonment Rate (High-Value Purchases)",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Baymard Institute Cart Abandonment Study 2024']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "BNPL option shown at checkout with instant approval, automated collections, and significant cart abandonment reduction.",
+      "characteristics": [
+        "Real-time BNPL eligibility decisioning (Affirm, Klarna, Afterpay)",
+        "Installment presentation at optimal checkout moments",
+        "Automated risk assessment evaluates creditworthiness instantly",
+        "Collection management handles installments and retries automatically",
+        "Multiple BNPL provider integration for coverage"
+      ],
+      "benefits": [
+        "Significant cart abandonment reduction on high-value items",
+        "Instant approval decision (seconds vs minutes)",
+        "Average order value increase",
+        "Automated collections vs manual follow-up",
+        "Access to younger demographics (18-35 age group)",
+        "Competitive parity with BNPL-enabled retailers"
+      ],
+      "projections": [
+        {
+          "metric": "Cart Abandonment Reduction (High-Value Items)",
+          "value": "20-30% reduction",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on Klarna merchant case studies showing installment payment flexibility reduces purchase hesitancy']",
+          "sourceBenchmark": "bench-bnpl-001"
+        },
+        {
+          "metric": "Average Order Value Increase",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on Affirm merchant data showing customers spend more when installment options are available']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "BNPL Orchestration Agent",
+        "BNPL Eligibility Agent",
+        "Installment Presentation Agent",
+        "Risk Assessment Agent",
+        "Collection Management Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy BNPL option for purchases over $200",
+        "Integrate leading provider (Affirm, Klarna, or Afterpay)",
+        "Enable installment messaging on product pages"
+      ],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": [
+        "Payment gateway with BNPL provider integration",
+        "Checkout flow modification capability",
+        "Merchant account approval with BNPL provider",
+        "Risk tolerance and fraud policies defined",
+        "Customer support training for BNPL inquiries"
+      ]
+    },
+    "icon": "credit-card",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-cryptocurrency-digital-wallet",
+    "type": "capability",
+    "level": 3,
+    "label": "Cryptocurrency & Digital Wallet Payments",
+    "description": "Accepts cryptocurrency and digital wallet payments with real-time FX conversion, volatility protection, and instant fiat settlement.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["Retail", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Crypto Payment Processing",
+      "Digital Wallet Integration",
+      "Currency Conversion",
+      "Volatility Protection"
+    ],
+    "traditionalApproach": {
+      "description": "Credit card only with no crypto acceptance or expanded wallet options, limiting payment method diversity.",
+      "characteristics": [
+        "Credit card only",
+        "No crypto acceptance",
+        "Limited wallet options (Apple Pay, Google Pay)",
+        "No web3 integration"
+      ],
+      "constraints": [
+        "No access to crypto-holding customers",
+        "Limited payment method diversity",
+        "Missing web3-native demographic",
+        "Competitive disadvantage vs crypto-enabled merchants",
+        "No participation in emerging payment ecosystems"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Crypto payments accepted with instant fiat settlement, volatility risk eliminated, and expanded payment options.",
+      "characteristics": [
+        "Crypto payment acceptance (BTC, ETH, stablecoins via Coinbase Commerce, BitPay)",
+        "Digital wallet integration (Apple Pay, Google Pay, PayPal, Venmo)",
+        "Real-time FX conversion with settlement in merchant's fiat currency",
+        "Volatility protection locks in price at checkout",
+        "Multi-wallet support for broad payment acceptance"
+      ],
+      "benefits": [
+        "Access to crypto-holding customer base",
+        "Instant settlement in fiat eliminates volatility risk",
+        "Expanded payment options increase conversion",
+        "Lower fees than credit cards for some crypto payments",
+        "Web3 integration enables NFT loyalty and tokenized programs",
+        "Conversion lift from payment method diversity"
+      ],
+      "projections": [
+        {
+          "metric": "Conversion Rate Lift (Payment Method Diversity)",
+          "value": "5-10%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on Coinbase Commerce merchant data showing conversion improvement when crypto payment option is available']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Digital Payment Orchestration Agent",
+        "Crypto Payment Agent",
+        "Wallet Integration Agent",
+        "Currency Conversion Agent",
+        "Volatility Protection Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Integrate Coinbase Commerce or BitPay for crypto payments",
+        "Enable Apple Pay and Google Pay for mobile checkout",
+        "Deploy volatility protection for instant fiat settlement"
+      ],
+      "investmentRequired": "Low",
+      "timeToValue": "1-3 months",
+      "prerequisites": [
+        "Crypto payment processor account (Coinbase Commerce, BitPay, Stripe Crypto)",
+        "Digital wallet provider integrations",
+        "FX rate API for real-time conversion",
+        "Treasury policy for crypto settlement (immediate to fiat vs hold)",
+        "Compliance review for crypto payment regulations"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-payment-orchestration",
+    "type": "capability",
+    "level": 3,
+    "label": "Payment Orchestration",
+    "description": "Optimizes payment processing across multiple gateways with intelligent routing, automatic failover, and cost optimization.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Gateway Routing Optimization",
+      "Failover Management",
+      "Retry Optimization",
+      "Cost Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Single payment gateway with vendor lock-in, no optimization, and high processing costs.",
+      "characteristics": [
+        "Single payment gateway (vendor lock-in)",
+        "Manual failover when gateway down",
+        "No routing optimization",
+        "High payment processing costs"
+      ],
+      "constraints": [
+        "Vendor lock-in with single gateway dependency",
+        "Revenue loss during gateway downtime",
+        "No cost optimization across providers",
+        "Fixed approval rates regardless of routing",
+        "Manual intervention required for gateway issues"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-po-001",
+          "metric": "Payment Processing Costs",
+          "value": "2.5-3.5% of transaction volume",
+          "source": "TBD: [SME to provide source, e.g., 'Stripe/Adyen standard merchant pricing 2024']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Multi-gateway redundancy with optimal routing, automatic failover, and significant fee savings.",
+      "characteristics": [
+        "Intelligent routing selects optimal gateway by cost, approval rate, region",
+        "Automatic failover to backup gateway on downtime",
+        "Retry optimization uses smart logic for soft declines",
+        "Cost optimization continuously adjusts gateway mix for lowest fees",
+        "A/B testing of routing strategies",
+        "Real-time gateway performance monitoring"
+      ],
+      "benefits": [
+        "Cost savings through optimal routing",
+        "High uptime through automatic failover",
+        "Approval rate improvement through intelligent routing",
+        "Zero revenue loss from gateway downtime",
+        "Soft decline recovery increases successful transactions",
+        "Multi-gateway negotiating leverage with providers"
+      ],
+      "projections": [
+        {
+          "metric": "Payment Processing Cost Reduction",
+          "value": "15-25% savings",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on Spreedly merchant case studies showing cost savings through intelligent gateway routing']",
+          "sourceBenchmark": "bench-po-001"
+        },
+        {
+          "metric": "Payment Uptime",
+          "value": "99.99%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automatic failover architecture with redundant gateway infrastructure']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Approval Rate Improvement",
+          "value": "2-5%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent routing to gateways with highest approval rates by geography and card type']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Payment Orchestration Agent",
+        "Gateway Routing Agent",
+        "Failover Agent",
+        "Retry Optimization Agent",
+        "Cost Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy payment orchestration platform (Stripe, Adyen, or Spreedly)",
+        "Configure failover to secondary gateway for critical transactions",
+        "Implement intelligent retry logic for soft declines"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "Multiple payment gateway accounts (primary + backup)",
+        "Payment orchestration platform or build routing engine",
+        "Transaction data for routing optimization",
+        "Gateway performance SLAs and cost structure",
+        "Treasury and finance alignment on cost optimization goals"
+      ]
+    },
+    "icon": "switch-horizontal",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-subscription-billing-recurring",
+    "type": "capability",
+    "level": 3,
+    "label": "Subscription Billing & Recurring Payments",
+    "description": "Automates recurring billing with usage-based pricing support, intelligent dunning management, and significant failed payment recovery.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["All"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Billing Cycle Management",
+      "Usage Metering",
+      "Dunning Management",
+      "Subscription Lifecycle Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual subscription management with fixed billing cycles and high involuntary churn from failed payments.",
+      "characteristics": [
+        "Manual subscription management",
+        "Fixed billing cycles",
+        "No usage-based billing",
+        "Churn due to failed payments (credit card expires)"
+      ],
+      "constraints": [
+        "Fixed billing cycles inflexible for customer needs",
+        "No usage-based pricing for consumption models",
+        "High failed payment rate causes involuntary churn",
+        "Manual retry attempts inefficient and inconsistent",
+        "Pro-ration and adjustments require manual intervention",
+        "Subscription lifecycle changes (upgrades, downgrades) manual"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-sub-001",
+          "metric": "Failed Payment Rate (Manual Recovery)",
+          "value": "20-30%",
+          "source": "TBD: [SME to provide source, e.g., 'ProfitWell Retention Report 2024']"
+        },
+        {
+          "id": "bench-sub-002",
+          "metric": "Manual Failed Payment Recovery Rate",
+          "value": "10-15%",
+          "source": "TBD: [SME to provide source, e.g., 'Chargebee Dunning Management Study 2024']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated recurring billing with usage-based pricing, intelligent dunning, and high failed payment recovery.",
+      "characteristics": [
+        "Automated billing cycle management with pro-ration",
+        "Usage metering tracks consumption for usage-based billing",
+        "Intelligent dunning retries failed payments and updates expired cards",
+        "Subscription lifecycle automation manages upgrades, downgrades, cancellations",
+        "Customer self-service portal for plan changes",
+        "Win-back campaigns triggered on cancellation"
+      ],
+      "benefits": [
+        "High recovery of failed payments vs manual attempts",
+        "Significant reduction in involuntary churn",
+        "Usage-based pricing enables new monetization models",
+        "Automated lifecycle management reduces manual work",
+        "Pro-ration accuracy eliminates billing errors",
+        "Self-service reduces customer support volume"
+      ],
+      "projections": [
+        {
+          "metric": "Failed Payment Recovery Rate",
+          "value": "40%+ (vs 10-15% manual)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent dunning with card updater services and optimized retry timing']",
+          "sourceBenchmark": "bench-sub-002"
+        },
+        {
+          "metric": "Involuntary Churn Reduction",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated payment retry and card update preventing churn from expired cards']",
+          "sourceBenchmark": "bench-sub-001"
+        },
+        {
+          "metric": "Customer Support Volume Reduction",
+          "value": "30-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service portal enabling customers to manage subscriptions without agent assistance']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Subscription Management Orchestration Agent",
+        "Billing Cycle Agent",
+        "Usage Metering Agent",
+        "Dunning Management Agent",
+        "Subscription Lifecycle Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy dunning management for failed payment recovery",
+        "Implement customer self-service portal for plan changes",
+        "Enable automated pro-ration for mid-cycle changes"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Subscription billing platform (Stripe Billing, Chargebee, Recurly, Zuora)",
+        "Payment gateway integration with card updater service",
+        "Usage tracking infrastructure for consumption-based pricing",
+        "Customer portal for self-service management",
+        "Defined subscription lifecycle rules and policies"
+      ]
+    },
+    "icon": "refresh",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-revenue-recognition-automation",
+    "type": "capability",
+    "level": 3,
+    "label": "Revenue Recognition Automation",
+    "description": "Automates revenue recognition with ASC 606/IFRS 15 compliance, real-time visibility, and hours-long month-end close.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["All"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Revenue Allocation",
+      "Deferred Revenue Management",
+      "Revenue Reporting",
+      "Compliance Monitoring"
+    ],
+    "traditionalApproach": {
+      "description": "Manual revenue recognition in spreadsheets with days-long month-end close and compliance risk.",
+      "characteristics": [
+        "Manual revenue recognition (spreadsheets)",
+        "Month-end close takes days",
+        "Compliance risk (ASC 606, IFRS 15)",
+        "No real-time revenue visibility"
+      ],
+      "constraints": [
+        "Multi-day month-end close for revenue recognition",
+        "Spreadsheet errors create audit risk",
+        "No real-time revenue visibility for business decisions",
+        "Manual allocation to performance obligations error-prone",
+        "Compliance risk with ASC 606 and IFRS 15 standards",
+        "Deferred revenue schedules maintained manually"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-rev-001",
+          "metric": "Month-End Close Duration (Manual)",
+          "value": "3-5 days",
+          "source": "TBD: [SME to provide source, e.g., 'APQC Finance Close Cycle Time Benchmark 2024']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated revenue recognition with real-time visibility, ASC 606 compliance, and hours-long month-end close.",
+      "characteristics": [
+        "Automated revenue allocation to performance obligations (ASC 606 compliant)",
+        "Deferred revenue schedules managed automatically",
+        "Real-time revenue dashboards and forecasts",
+        "Compliance monitoring ensures GAAP/IFRS compliance",
+        "Audit trail generation for all revenue transactions",
+        "Integration with ERP, billing, and contract systems"
+      ],
+      "benefits": [
+        "Month-end close in hours vs days (significantly faster)",
+        "Real-time revenue visibility vs month-end batch",
+        "100% ASC 606/IFRS 15 compliance vs manual risk",
+        "Audit-ready documentation automatically generated",
+        "Reduced finance headcount (efficiency gain)",
+        "Scalable to complex multi-element arrangements"
+      ],
+      "projections": [
+        {
+          "metric": "Month-End Close Time Reduction",
+          "value": "Hours vs 3-5 days (80%+ faster)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated revenue allocation and real-time integration with billing systems']",
+          "sourceBenchmark": "bench-rev-001"
+        },
+        {
+          "metric": "Finance Team Efficiency Gain",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on elimination of manual spreadsheet work and automated schedule generation']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Revenue Recognition Orchestration Agent",
+        "Revenue Allocation Agent",
+        "Deferred Revenue Agent",
+        "Revenue Reporting Agent",
+        "Compliance Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy revenue recognition platform for pilot product line",
+        "Automate deferred revenue schedules for subscriptions",
+        "Enable real-time revenue dashboard for executive team"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Revenue recognition platform (Zuora RevPro, Zone, NetSuite ARM)",
+        "ERP integration for financial data",
+        "Contract and billing system integration",
+        "Revenue policies documented (SSP, allocation rules)",
+        "Accounting team trained on ASC 606/IFRS 15 standards"
+      ]
+    },
+    "icon": "document-report",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

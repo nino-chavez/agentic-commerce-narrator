@@ -1,0 +1,44 @@
+{
+  "id": "industry-grocery",
+  "type": "industry",
+  "label": "Grocery",
+  "description": "Supermarkets, hypermarkets, specialty food retailers, and convenience stores selling food, beverages, household products, pharmacy items, and prepared meals, characterized by extreme perishability complexity and razor-thin margins.",
+  "marketSize": "$850 billion (US grocery sales, 2023)",
+  "growthRate": "2-3% annually (US grocery)",
+  "characteristics": [
+    "Extreme perishability (30-50% of sales, 1-7 day shelf life)",
+    "Razor-thin margins (1-3% net, 25-30% gross)",
+    "Massive SKU complexity (30,000-60,000 SKUs, 100,000+ in hypermarkets)",
+    "Labor-intensive operations (12-18% of sales, 15-25 departments)",
+    "High transaction volumes (300-500K transactions/week for large chains)",
+    "Food safety critical (HACCP, FDA regulations, recall management)",
+    "Shrink crisis ($25B-$42B annually, 3-5% of sales)"
+  ],
+  "segments": [
+    "Traditional Supermarkets (Kroger, Albertsons, Publix) - Full-service, 40K-50K SKUs, pharmacy, prepared foods",
+    "Hypermarkets (Walmart Supercenter, Target SuperTarget) - 100K+ SKUs, grocery + general merchandise",
+    "Warehouse Clubs (Costco, Sam's Club, BJ's) - Membership model, bulk sizes, limited assortment (4K-6K SKUs)",
+    "Natural/Organic (Whole Foods, Sprouts, Fresh Thyme) - Premium positioning, organic focus, smaller format",
+    "Discount Grocery (Aldi, Lidl, Save-A-Lot) - Limited assortment (1K-2K SKUs), private label, ultra-low cost",
+    "Convenience Stores (7-Eleven, Wawa, Sheetz) - Small format, grab-and-go, fuel/foodservice combo"
+  ],
+  "stats": {
+    "perishableSales": "30-50% of total sales",
+    "shrinkRate": "3-5% of sales ($25B-$42B annual US loss)",
+    "freshShrink": "4-8% traditional, 2-4% agentic",
+    "outOfStockRate": "8-12% traditional, 3-6% agentic",
+    "pharmacyPenetration": "60-70% of supermarkets have pharmacies",
+    "onlineGroceryShare": "10-15% of sales",
+    "keyValueItems": "50-100 SKUs customers track prices for",
+    "promotionalSales": "30-40% of category sales on promotion",
+    "inventoryTurns": "8-12x traditional, 10-15x agentic",
+    "pharmacyWaitTime": "20-30 min traditional, 5-10 min agentic"
+  },
+  "createdAt": "2025-01-09T00:00:00Z",
+  "updatedAt": "2025-01-09T00:00:00Z",
+  "version": "1.0.0",
+  "x": 200,
+  "y": 0,
+  "color": "#1E3A8A",
+  "icon": "shopping-cart"
+}

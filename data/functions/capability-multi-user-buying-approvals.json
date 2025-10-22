@@ -1,0 +1,460 @@
+[
+  {
+    "id": "function-multi-user-cart-management",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-User Cart Management",
+    "description": "Shared team shopping carts with real-time collaboration, commenting, version history, and role-based permissions enabling multiple stakeholders to contribute to purchase requisitions simultaneously.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee creates purchase requisition by adding items to personal cart in procurement portal. 2. Employee emails cart summary to manager for review and input via PDF or Excel export. 3. Manager reviews offline, sends feedback via email with suggested changes (add, remove, modify items). 4. Employee manually updates cart based on email feedback. 5. Back-and-forth email cycle repeats 2-3 times until all stakeholders aligned (3-7 days). 6. Final cart submitted for approval workflow after email consensus achieved.",
+      "constraints": [
+        "Single-user carts force email-based collaboration (no real-time visibility)",
+        "Email back-and-forth creates 3-7 day cycle time for team alignment",
+        "No version history or audit trail of cart changes (who added/removed what?)",
+        "Manual cart updates from email feedback prone to errors and omissions",
+        "No commenting or discussion capability within cart (context lost)",
+        "Manager has no real-time visibility into team's requisitions or spend"
+      ],
+      "metrics": ["Team alignment cycle: 3-7 days (email-based)", "Cart collaboration: Email only", "Version history: None", "Real-time visibility: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Multi-User Cart Agent creates shared team cart with role-based permissions: requester (edit), manager (review/approve), finance (view only). 2. Requester adds initial items to shared cart, which appears instantly in manager's and finance team's dashboards. 3. Manager reviews cart in real-time, adds comments on specific line items: 'Why do we need 3 printers?' or 'Check if we have budget for this'. 4. Requester responds to comments, modifies quantities or items based on feedback, all tracked with timestamps and user attribution. 5. Agent maintains version history showing all changes: who added/removed items, quantity changes, comments, with rollback capability. 6. Team achieves consensus through inline collaboration in 4-8 hours vs 3-7 days email cycle, then submits for approval workflow.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Multi-User Cart Agent", "Collaboration Agent"],
+        "utilityAgents": ["Cart API", "Notification Service", "User Management API", "Version Control Engine"]
+      },
+      "dataSources": [
+        "User roles and permissions (requester, approver, viewer)",
+        "Shopping cart data with item details and quantities",
+        "Comment and discussion threads by line item",
+        "Version history with timestamps and user attribution",
+        "Real-time cart state synchronization data",
+        "Notification preferences and delivery channels"
+      ],
+      "benefits": [
+        "30-50% faster team purchasing cycles (4-8 hours vs 3-7 days)",
+        "Real-time collaboration eliminates email back-and-forth",
+        "Complete audit trail with version history and user attribution",
+        "Inline commenting preserves context and decision rationale",
+        "Manager dashboard provides real-time visibility into all team requisitions",
+        "Improved accuracy through collaborative review vs serial email updates"
+      ],
+      "metrics": ["Team alignment cycle: 4-8 hours (real-time)", "Cart collaboration: Real-time + comments", "Version history: Complete audit trail", "Real-time visibility: 100%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy shared carts for pilot department with frequent multi-stakeholder purchases", "Implement commenting capability on cart line items", "Enable real-time cart synchronization and notifications"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["B2B commerce platform with cart sharing capability", "User management system with role-based permissions", "Notification infrastructure (email, SMS, push)", "Version control and audit logging system", "Real-time data synchronization architecture"]
+    },
+    "icon": "shopping-cart",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-intelligent-approval-routing",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Approval Routing",
+    "description": "Policy-based approval workflow engine with dynamic routing rules based on amount thresholds, GL codes, categories, risk factors, and parallel approvals reducing approval cycles from days to hours.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee submits requisition via email to direct manager for approval. 2. Manager approves and forwards to department head if >$1K via email. 3. Department head approves and forwards to finance director if >$5K via email. 4. Finance director approves and forwards to CFO if >$25K via email. 5. Serial email chain creates 3-7 day approval cycle with delays when approvers unavailable or on vacation. 6. No policy-based auto-approval rules (all requisitions require manual approval).",
+      "constraints": [
+        "Static serial approval hierarchies create 3-7 day cycles",
+        "Email-based routing: approvals delayed when person unavailable",
+        "No policy-based auto-approval (even low-risk $50 purchases require manager review)",
+        "Amount thresholds hard-coded in policy document, not systematically enforced",
+        "No parallel approvals (finance and IT must approve sequentially, not concurrently)",
+        "Routing errors when wrong approver selected or policy changed"
+      ],
+      "metrics": ["Approval cycle time: 3-7 days (serial email)", "Auto-approval rate: 0%", "Policy enforcement: Manual (inconsistent)", "Parallel approvals: Not available"]
+    },
+    "agentic": {
+      "workflow": "1. Intelligent Approval Routing Agent receives submitted requisition and analyzes policy rules: amount ($500 = manager only, $5K = manager + dept head, $25K = manager + dept head + CFO), GL code (IT purchases require IT director approval regardless of amount), category (hazmat requires safety approval). 2. Agent calculates optimal routing: parallel approvals when possible (finance + IT concurrently), serial when dependencies exist (manager must approve before CFO). 3. Agent applies policy-based auto-approval: requisitions <$500 from preferred vendors with budget availability auto-approved instantly (50-70% of requisitions). 4. Agent routes for manual approval with all context: cart details, budget status, policy rationale, recommended action. 5. Agent monitors approval SLAs, sends reminders at 24/48 hours, escalates to delegates if approver unavailable. 6. Approval cycle reduced to 4-8 hours for manual reviews vs 3-7 days traditional.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Intelligent Approval Routing Agent", "Policy Engine Agent"],
+        "utilityAgents": ["ERP Integration Agent", "User Directory (LDAP/AD)", "Workflow Engine", "Notification Service"]
+      },
+      "dataSources": [
+        "Approval policy rules (amount thresholds, category exceptions, GL code routing)",
+        "User roles, reporting hierarchy, and delegation settings",
+        "Budget availability and GL code validation data",
+        "Vendor risk scores and preferred vendor lists",
+        "Historical approval patterns and SLA compliance data",
+        "Approver availability and out-of-office status"
+      ],
+      "benefits": [
+        "50-70% faster approval cycles (4-8 hours vs 3-7 days)",
+        "50-70% auto-approval rate for low-risk requisitions eliminates manual review",
+        "100% policy enforcement through systematic rule engine vs manual inconsistency",
+        "Parallel approvals reduce waiting time when multiple approvers required",
+        "Smart delegation and escalation prevent delays from unavailable approvers",
+        "Real-time approver visibility into pending approvals and context"
+      ],
+      "metrics": ["Approval cycle time: 4-8 hours (intelligent routing)", "Auto-approval rate: 50-70%", "Policy enforcement: 100% (automated)", "Parallel approvals: Enabled"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "Requisitions exceeding $25K or flagged high-risk (new vendor, hazmat, capital equipment)",
+      "policy": "CFO or designated executive must review and approve any requisition over $25K or with high-risk indicators including new vendors, hazardous materials, capital equipment, or unusual category purchases"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement policy-based auto-approval for requisitions <$500 from preferred vendors", "Enable parallel approvals for finance + IT when both required", "Deploy smart delegation routing when primary approver out-of-office"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Documented approval policies (amount thresholds, category exceptions, routing rules)", "User directory integration (LDAP/AD) for org hierarchy and roles", "Workflow engine platform for routing and SLA management", "Budget system integration for real-time validation", "ERP GL code structure and validation rules"]
+    },
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-budget-validation-spend-control",
+    "type": "function",
+    "level": 4,
+    "label": "Budget Validation & Spend Control",
+    "description": "Real-time budget availability checks against GL codes and cost centers with spend forecasting, variance alerts, and budget override workflows to eliminate budget overruns and provide financial control.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee submits requisition with GL code and cost center. 2. No real-time budget check (validation happens in finance after approval). 3. Approval workflow completes, requisition sent to procurement to process PO. 4. Finance reviews PO during monthly close, discovers budget overrun for that GL code (budget already spent). 5. Finance contacts department manager via email about overrun, requires budget transfer or cancellation. 6. Back-and-forth negotiation to resolve overrun, PO delayed or cancelled (5-10 days).",
+      "constraints": [
+        "No real-time budget checking during requisition or approval",
+        "Budget overruns discovered post-facto during monthly close (reactive)",
+        "15-25% of requisitions exceed budget requiring cancellation or budget transfers",
+        "Manual budget tracking in spreadsheets with 1-30 day lag",
+        "No spend forecasting or proactive budget alerts before overrun",
+        "Department managers lack real-time visibility into budget utilization"
+      ],
+      "metrics": ["Budget check timing: Post-approval (monthly close)", "Budget overruns: 15-25% of requisitions", "Real-time visibility: None", "Spend forecasting: Manual (monthly)"]
+    },
+    "agentic": {
+      "workflow": "1. Budget Validation Agent receives requisition with GL code, cost center, and amount. 2. Agent queries ERP financial system for real-time budget availability: annual budget, YTD spend, committed but not spent (pending POs), remaining budget. 3. Agent validates requisition against available budget: approved if within budget, flagged if would exceed budget, warning if would consume >80% of remaining budget. 4. Agent provides real-time feedback to requester: 'Budget available: $15,000 of $50,000 annual budget' or 'Budget exceeded by $2,500 - requires budget override approval'. 5. Agent routes budget overrides to finance director for manual review and approval with full context: budget history, variance explanation, requester justification. 6. Agent forecasts future spend based on pending requisitions and historical patterns, alerts budget owners proactively when trending toward overrun.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Budget Validation Agent", "Spend Control Agent"],
+        "utilityAgents": ["ERP Financial System API", "Budget Management System", "Spend Forecasting Engine", "Alert Notification Service"]
+      },
+      "dataSources": [
+        "ERP GL budget data by cost center and account code",
+        "Year-to-date actual spend and committed purchase orders",
+        "Pending requisitions and forecasted spend",
+        "Historical spending patterns by month and quarter",
+        "Budget transfer and reallocation history",
+        "Budget override approval policies and thresholds"
+      ],
+      "benefits": [
+        "80-95% reduction in budget overruns through real-time validation",
+        "Real-time budget visibility for department managers vs 1-30 day lag",
+        "Proactive spend forecasting prevents surprise overruns",
+        "Budget override workflow provides controlled exception process",
+        "Eliminated finance rework from post-facto overrun resolution",
+        "Improved financial control and planning accuracy"
+      ],
+      "metrics": ["Budget check timing: Real-time (requisition)", "Budget overruns: <5%", "Real-time visibility: 100%", "Spend forecasting: Automated (real-time)"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "Budget overrides exceeding $10K or 20% of remaining budget",
+      "policy": "Finance director must review and approve any requisition that would exceed budget by more than $10K or consume more than 20% of remaining budget in a single transaction, requiring written justification and potential budget transfer"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time budget validation for top 100 cost centers", "Deploy proactive budget alerts at 80% utilization threshold", "Enable budget override workflow for controlled exceptions"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["ERP financial system integration with real-time budget API", "Clean GL code and cost center master data", "Documented budget override policies and approval thresholds", "Pending PO and committed spend data for accurate budget calculation", "Historical spend data for forecasting (12-24 months)"]
+    },
+    "icon": "currency-dollar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-delegated-purchasing-proxy-buying",
+    "type": "function",
+    "level": 4,
+    "label": "Delegated Purchasing & Proxy Buying",
+    "description": "Temporary delegation and proxy buying capabilities with granular spending limits, category restrictions, expiration dates, and complete audit trails enabling assistants and procurement teams to buy on behalf of executives efficiently.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Executive needs supplies ordered but delegates task to executive assistant via email. 2. Assistant doesn't have purchasing system access or executive's budget authority. 3. Assistant requests IT to create temporary user account with executive's permissions (3-5 day delay). 4. IT manually provisions access, often granting full permissions instead of limited delegation. 5. Assistant completes purchase, IT notified via email to revoke access. 6. Manual access revocation delayed or forgotten creating ongoing security risk and compliance issues.",
+      "constraints": [
+        "No delegation capability forces manual IT provisioning (3-5 days per request)",
+        "All-or-nothing access permissions (can't limit delegate to specific amounts or categories)",
+        "Manual access revocation delayed or forgotten creating security risks",
+        "No audit trail of purchases made by delegates on behalf of others",
+        "Assistant frustration from lack of authority to execute routine purchases",
+        "Executives become bottleneck for routine purchasing"
+      ],
+      "metrics": ["Delegation setup time: 3-5 days (IT manual)", "Access control granularity: All-or-nothing", "Security risk: High (forgotten revocations)", "Audit trail: Limited"]
+    },
+    "agentic": {
+      "workflow": "1. Delegation Management Agent receives executive's delegation request: 'Grant my assistant Jane Smith purchasing authority up to $5K for office supplies only, effective for next 30 days'. 2. Agent provisions temporary delegation with granular controls: spending limit ($5K total), category restrictions (office supplies only), expiration date (30 days), approval routing (delegate's manager). 3. Assistant receives notification of delegation authority with clear limits and instructions. 4. Assistant shops and submits requisitions as proxy on behalf of executive, with purchases clearly attributed: 'Purchased by Jane Smith on behalf of John Executive'. 5. Agent automatically revokes delegation at expiration date (30 days) with no manual intervention required. 6. Complete audit trail maintained: who delegated to whom, for what purpose, spending limits, all transactions made under delegation.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Delegation Management Agent", "Access Control Agent"],
+        "utilityAgents": ["User Management API", "Audit Log System", "Notification Service", "Policy Enforcement Engine"]
+      },
+      "dataSources": [
+        "User delegation relationships and temporary authority grants",
+        "Spending limits, category restrictions, and expiration dates",
+        "Purchase transaction history with delegation attribution",
+        "Approval routing rules for delegated purchases",
+        "Audit logs of delegation creation, usage, and revocation",
+        "User roles and permanent purchasing authority"
+      ],
+      "benefits": [
+        "70-85% time savings for assistants/procurement teams through self-service delegation",
+        "Granular access controls limit delegation to specific amounts and categories",
+        "Automatic expiration eliminates forgotten access revocation security risks",
+        "Complete audit trail provides transparency and compliance",
+        "Executive time freed from routine purchasing for strategic work",
+        "Improved assistant satisfaction through appropriate authority"
+      ],
+      "metrics": ["Delegation setup time: Instant (self-service)", "Access control granularity: Amount + category + time", "Security risk: Low (auto-expiration)", "Audit trail: Complete"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy delegation capability for C-suite executive assistants", "Implement granular spending limits and category restrictions", "Enable automatic delegation expiration with no manual revocation required"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["User management system with delegation and proxy capability", "Role-based access control (RBAC) framework for granular permissions", "Audit logging system for delegation tracking and compliance", "Category taxonomy for restriction enforcement", "Automated expiration and revocation workflows"]
+    },
+    "icon": "user-add",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-purchase-history-smart-reordering",
+    "type": "function",
+    "level": 4,
+    "label": "Purchase History & Smart Reordering",
+    "description": "AI-recommended replenishment with usage pattern detection, predictive reorder timing, quantity optimization, and one-click reorder capability reducing routine purchasing time by 60-80%.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee realizes supplies running low (printer paper, janitorial supplies, etc.). 2. Employee logs into procurement system, searches catalog to find previously ordered items. 3. Employee reviews past orders via email or procurement system history (10-20 minutes searching). 4. Employee manually looks up quantities from last order, estimates current need. 5. Employee manually adds items and quantities to cart, submits requisition. 6. No predictive reordering or proactive replenishment recommendations (reactive only).",
+      "constraints": [
+        "Reactive reordering only when supplies already low (risk of stockouts)",
+        "Manual searching through purchase history takes 10-20 minutes per reorder",
+        "No AI recommendation of optimal quantities based on usage patterns",
+        "Employee must remember what to reorder and when (no proactive alerts)",
+        "No detection of usage pattern changes (seasonal spikes, growth trends)",
+        "Time-consuming process discourages frequent smaller orders (leads to stockouts)"
+      ],
+      "metrics": ["Reorder trigger: Reactive (manual)", "Reorder time: 10-20 minutes (manual search)", "Quantity optimization: Manual guess", "Proactive alerts: None"]
+    },
+    "agentic": {
+      "workflow": "1. Smart Reordering Agent analyzes employee's purchase history: order frequency (monthly, quarterly), quantities, seasonal patterns, usage velocity. 2. Agent detects usage patterns: 'Office supplies ordered every 6 weeks, increasing quantities over last year suggest team growth or usage increase'. 3. Agent predicts optimal reorder timing: 'Recommend reordering printer paper in 2 weeks based on 6-week cycle and current inventory depletion rate'. 4. Agent calculates optimized quantities: account for growth trends, seasonal adjustments, bulk discounts, avoid over-ordering. 5. Agent provides proactive reorder alerts: 'Time to reorder office supplies - click here for one-click reorder of recommended items'. 6. Employee reviews AI-recommended reorder list, adjusts if needed, submits with one click (60-80% time savings vs manual).",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Smart Reordering Agent", "Pattern Recognition Agent"],
+        "utilityAgents": ["Order History API", "Inventory Forecast Engine", "Product Catalog API", "Pricing Engine"]
+      },
+      "dataSources": [
+        "Employee purchase history with order dates and quantities",
+        "Usage velocity and depletion patterns",
+        "Seasonal adjustment factors and trend analysis",
+        "Current inventory levels (if integrated with inventory system)",
+        "Supplier lead times and delivery schedules",
+        "Bulk discount tiers and pricing optimizations"
+      ],
+      "benefits": [
+        "60-80% time savings per reorder (2-5 minutes vs 10-20 minutes)",
+        "Proactive replenishment recommendations prevent stockouts",
+        "Optimized quantities balance inventory levels, bulk discounts, and storage capacity",
+        "Pattern detection adjusts for seasonal changes and usage trends",
+        "One-click reorder reduces friction for routine purchases",
+        "Improved employee productivity through automation of repetitive buying"
+      ],
+      "metrics": ["Reorder trigger: Proactive (AI alerts)", "Reorder time: 2-5 minutes (one-click)", "Quantity optimization: AI-recommended", "Proactive alerts: Enabled"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart reordering for frequently purchased office supplies and consumables", "Implement one-click reorder from purchase history", "Enable proactive reorder alerts based on order frequency patterns"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Historical purchase data (minimum 12 months for pattern detection)", "Product catalog integration for reorder list population", "Inventory data (optional but improves accuracy)", "Usage velocity calculation algorithms or ML models", "Notification infrastructure for proactive reorder alerts"]
+    },
+    "icon": "refresh",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-spend-analytics-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Spend Analytics & Reporting",
+    "description": "Real-time spend visibility dashboards by category, vendor, user, department with anomaly detection, tail spend consolidation opportunities, and contract compliance tracking delivering 20-30% cost savings insights.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Finance team exports monthly purchase data from ERP to Excel (end of month). 2. Analyst manually categorizes spend by vendor, category, department in spreadsheets (8-20 hours). 3. Analyst creates pivot tables and charts for monthly spend report. 4. Report distributed via email to department heads 2-3 weeks after month end. 5. No real-time visibility, anomaly detection, or actionable insights. 6. Strategic sourcing team conducts annual spend analysis for vendor consolidation opportunities.",
+      "constraints": [
+        "Monthly spend reports with 2-3 week lag provide stale visibility",
+        "Manual categorization in Excel takes 8-20 hours per month",
+        "No real-time anomaly detection (overspending, policy violations, duplicate purchases)",
+        "Limited drill-down capability (can't easily analyze by user, project, GL code)",
+        "Tail spend (small vendors, one-off purchases) not analyzed systematically",
+        "No contract compliance tracking (are we using contracted vendors and pricing?)"
+      ],
+      "metrics": ["Report frequency: Monthly (2-3 week lag)", "Anomaly detection: None", "Real-time visibility: 0%", "Tail spend analysis: Annual"]
+    },
+    "agentic": {
+      "workflow": "1. Spend Analytics Agent generates real-time dashboards tracking: total spend, spend by category (IT, office supplies, marketing, etc.), top vendors, department comparisons, trend analysis. 2. Agent provides drill-down capability: click category to see vendors, click vendor to see users, click user to see individual transactions (self-service exploration). 3. Agent detects spending anomalies: 'IT spend up 40% this month vs historical average - investigate' or 'Department X purchasing from 15 different office supply vendors - consolidation opportunity'. 4. Agent identifies tail spend consolidation: 'You're spending $50K across 25 different vendors for office supplies - consolidating to 2 preferred vendors could save 20-30%'. 5. Agent monitors contract compliance: 'You have a contract with Vendor A for laptops at $800, but 30% of purchases are from other vendors at $950 - enforce contract compliance for savings'. 6. Agent recommends actionable cost savings: vendor consolidation targets, contract compliance enforcement, duplicate spend elimination.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Spend Analytics Agent", "Anomaly Detection Agent"],
+        "utilityAgents": ["BI Platform API", "Data Warehouse Integration Agent", "Reporting Engine", "Contract Management API"]
+      },
+      "dataSources": [
+        "Purchase order and invoice data from ERP/procurement system",
+        "Vendor master data with category and risk classifications",
+        "Contract pricing and terms from contract management system",
+        "Budget and GL code data for financial tracking",
+        "Historical spend patterns and benchmarks",
+        "User, department, and project attribution data"
+      ],
+      "benefits": [
+        "Real-time spend visibility vs 2-3 week monthly lag",
+        "Self-service analytics eliminates 8-20 hours per month manual report creation",
+        "20-30% cost savings from insights: vendor consolidation, tail spend reduction, contract compliance",
+        "Proactive anomaly detection prevents overspending and policy violations",
+        "Contract compliance tracking ensures negotiated pricing and terms enforced",
+        "Data-driven sourcing decisions vs gut-feel vendor selection"
+      ],
+      "metrics": ["Report frequency: Real-time dashboards", "Anomaly detection: Automated (real-time)", "Real-time visibility: 100%", "Tail spend analysis: Continuous"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time spend dashboard for top spend categories and vendors", "Implement anomaly detection for spending spikes and policy violations", "Create tail spend report to identify vendor consolidation opportunities"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Purchase data from ERP/procurement system (12-24 months historical)", "Vendor master data with clean categorization", "Business intelligence platform (Tableau, Power BI, Looker)", "Contract data for compliance tracking", "Data warehouse or analytics platform for spend cube"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-policy-enforcement-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Policy Enforcement & Compliance",
+    "description": "Real-time policy enforcement with supplier whitelist/blacklist validation, contract compliance checks, category restrictions, and automated audit trails achieving 90-95% policy compliance versus 60-70% manual enforcement.",
+    "parentCapability": "capability-multi-user-buying-approvals",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Procurement policy documented in PDF manual: approved vendors, spending limits, category restrictions, contract requirements. 2. Employees expected to read and follow policy manually. 3. No systematic enforcement during requisition or approval process. 4. Procurement team conducts quarterly audits of purchase orders to identify policy violations. 5. Policy violations discovered post-facto: non-approved vendors, exceeding limits, purchasing restricted items. 6. Violation reports sent to managers via email with requests for corrective action (too late - purchase already made).",
+      "constraints": [
+        "Policy documented but not systematically enforced (employees must remember)",
+        "60-70% policy compliance rate with manual approach",
+        "Quarterly audits discover violations 1-3 months after purchases made (too late)",
+        "No real-time supplier whitelist/blacklist enforcement",
+        "Contract compliance not validated (employees may use non-contracted vendors)",
+        "Category restrictions (hazmat, regulated items) not enforced systematically"
+      ],
+      "metrics": ["Policy compliance: 60-70% (manual)", "Enforcement timing: Post-facto (quarterly audits)", "Whitelist/blacklist: Not enforced", "Contract compliance: Not validated"]
+    },
+    "agentic": {
+      "workflow": "1. Policy Enforcement Agent receives requisition and validates against all policy rules in real-time. 2. Agent checks supplier whitelist/blacklist: blocks purchases from blacklisted vendors (financial instability, quality issues, legal problems), prompts warning for non-whitelisted vendors requiring justification. 3. Agent validates contract compliance: if contract exists for category, enforces contracted vendor and pricing (prevents off-contract maverick spend). 4. Agent enforces category restrictions: hazardous materials require safety approval, regulated items require compliance attestation, capital equipment requires asset tag. 5. Agent blocks policy violations: 'Cannot purchase from Vendor X (blacklisted due to financial distress)' or 'This item requires hazmat safety approval - submit justification'. 6. Agent maintains complete audit trail: all policy checks, violations blocked, warnings issued, justifications provided for compliance reporting.",
+      "agents": {
+        "orchestrator": "Multi-User Buying Orchestration Agent",
+        "superAgents": ["Policy Enforcement Agent", "Compliance Agent"],
+        "utilityAgents": ["Contract Management System API", "Vendor Master API", "Audit Log System", "Regulatory Compliance Database"]
+      },
+      "dataSources": [
+        "Procurement policy rules and requirements",
+        "Vendor whitelist and blacklist with risk classifications",
+        "Contract data with contracted vendors and pricing",
+        "Category restriction rules (hazmat, regulated, capital equipment)",
+        "Audit trail logs of policy checks and violations",
+        "Compliance attestations and justification documentation"
+      ],
+      "benefits": [
+        "90-95% policy compliance (vs 60-70%) through real-time systematic enforcement",
+        "Proactive compliance vs reactive quarterly audits discovering violations too late",
+        "100% supplier whitelist/blacklist enforcement eliminates risky vendor purchases",
+        "Contract compliance ensures negotiated pricing and terms enforced (5-10% savings)",
+        "Category restrictions prevent regulatory violations and safety incidents",
+        "Complete audit trail for compliance reporting and attestation"
+      ],
+      "metrics": ["Policy compliance: 90-95% (automated)", "Enforcement timing: Real-time (requisition)", "Whitelist/blacklist: 100% enforced", "Contract compliance: 100% validated"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement supplier whitelist/blacklist enforcement for high-risk categories", "Deploy contract compliance checking for top contracted vendors", "Enable category restriction rules for hazmat and regulated items"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Documented procurement policies codified into rules engine", "Vendor master data with whitelist/blacklist classifications", "Contract data with contracted vendors and pricing terms", "Category taxonomy with restriction requirements", "Audit logging system for compliance tracking"]
+    },
+    "icon": "shield-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

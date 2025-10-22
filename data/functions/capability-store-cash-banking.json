@@ -1,0 +1,397 @@
+[
+  {
+    "id": "function-register-opening-till-assignment",
+    "type": "function",
+    "level": 4,
+    "label": "Register Opening & Till Assignment",
+    "description": "Smart safe auto-dispensing with biometric till assignment achieving <2 minutes per cashier versus 10-15 minutes manual with 99.5%+ accuracy reducing counting errors from 1-3%.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Opening manager unlocks store safe containing cash drawers for each register. 2. Manager manually counts each till's opening cash: $200 per drawer in denominations ($20s, $10s, $5s, $1s, coins) taking 10-15 minutes per cashier to count and verify. 3. Manager records opening till amount on paper log with cashier name and register number. 4. Counting errors frequent due to manual process: $197 counted but $200 expected, or wrong denomination mix (1-3% error rate). 5. Manager assigns tills to cashiers who sign paper log acknowledging receipt. 6. Total opening process 10-15 minutes per cashier (30-75 minutes for 3-5 cashiers) delaying store opening. 7. Discrepancies discovered at end of shift if till doesn't balance: can't determine if opening count wrong or cashier mistake.",
+      "constraints": [
+        "Manual till counting takes 10-15 minutes per cashier (30-75 min for 3-5 cashiers)",
+        "1-3% counting error rate due to human mistakes creating discrepancies",
+        "Paper log with no biometric verification (can't prove who received till)",
+        "Store opening delayed while manager counts and assigns tills",
+        "No real-time discrepancy detection (errors found end of shift)",
+        "Cash security risk with manual safe access and till transfers"
+      ],
+      "metrics": ["Till assignment time: 10-15 min per cashier", "Counting accuracy: 97-99% (1-3% errors)", "Opening delay: 30-75 min (3-5 cashiers)", "Accountability: Paper log (no verification)"]
+    },
+    "agentic": {
+      "workflow": "1. Opening manager authenticates to smart safe using biometric (fingerprint) or PIN code triggering morning opening workflow. 2. Auto-Dispensing Agent calculates till requirements: 5 cashiers scheduled today, each needs $200 opening till in standard denomination mix. 3. Smart safe automatically dispenses 5 tills with exact cash amounts: counts and bundles $200 per till in cassettes (4x$20, 4x$10, 6x$5, 20x$1, $10 coins) in <2 minutes each vs 10-15 minutes manual. 4. Till Assignment Agent prompts cashier biometric authentication: cashier scans fingerprint, safe dispenses assigned till, system records timestamp and cash amount. 5. Agent validates till accuracy: smart safe counts and verifies cash 99.5%+ accuracy before dispensing vs 97-99% manual. 6. Agent detects instant discrepancies: if safe inventory doesn't match expected $1,000 opening balance (5 tills x $200), alerts manager immediately vs end-of-shift discovery. 7. Total process <2 minutes per cashier (10 minutes for 5 cashiers) with biometric audit trail and 99.5%+ accuracy vs 30-75 minutes manual at 97-99%.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Till Assignment Agent", "Auto-Dispensing Agent"],
+        "utilityAgents": ["Smart Safe API (Loomis SafePoint, Brinks CompuSafe)", "Biometric Scanner", "POS Integration API", "Audit Log System"]
+      },
+      "dataSources": [
+        "Cashier shift schedules and register assignments",
+        "Smart safe cash inventory by denomination in real-time",
+        "Standard till configuration (opening amount, denomination mix)",
+        "Biometric authentication data (fingerprint, PIN) for audit trail",
+        "POS system integration for register opening events",
+        "Historical till variance patterns by cashier",
+        "Cash position reporting and treasury dashboards"
+      ],
+      "benefits": [
+        "80-90% time savings (<2 min vs 10-15 min per cashier)",
+        "2.5 point accuracy improvement (99.5% vs 97-99%) eliminating counting errors",
+        "Instant discrepancy detection vs end-of-shift discovery",
+        "Biometric audit trail ensures accountability (proves who received till)",
+        "Store opening accelerated (10 min vs 30-75 min for 5 cashiers)",
+        "Cash security improved with automated dispensing and access control"
+      ],
+      "metrics": ["Till assignment time: <2 min per cashier", "Counting accuracy: 99.5%+", "Opening delay: 10 min (5 cashiers)", "Accountability: Biometric verification (full audit trail)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart safe at pilot stores with highest cash volume or variances", "Implement biometric till assignment for cashier accountability", "Enable real-time cash inventory tracking and discrepancy alerts"],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Smart safe system (Loomis SafePoint, Brinks CompuSafe, Gunnebo) with auto-dispensing", "Biometric scanner integration (fingerprint reader) for cashier authentication", "POS system integration for register opening and cash tracking", "Standard till configuration defined (opening amount, denomination mix)", "Store-level internet connectivity for smart safe API communication", "Cashier training on biometric authentication and till receipt process", "Audit log system for cash tracking and compliance reporting"]
+    },
+    "icon": "cash",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cash-handling-drop-management",
+    "type": "function",
+    "level": 4,
+    "label": "Cash Handling & Drop Management",
+    "description": "Smart safe auto-validation achieving 95%+ accuracy with real-time cash tracking and instant discrepancy alerts versus manual safe drops every 2-4 hours reducing 80-90% theft risk.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Cashier register accumulates cash during shift: when drawer exceeds $300-$500, cashier performs safe drop to reduce theft risk. 2. Cashier manually counts cash to drop: removes $200-$300 from drawer, counts bills and coins, records amount on paper drop log. 3. Cashier places cash in tamper-evident bag with paper log slip showing amount, cashier name, register number, time. 4. Manager unlocks store safe, cashier deposits bag, manager initials paper log acknowledging drop. 5. Over/short tracking difficult: paper logs prone to errors, illegible handwriting, missing entries (5-10% log errors). 6. Safe drops every 2-4 hours manual process taking 5-10 minutes per drop with theft risk if not done properly. 7. Discrepancies not discovered until end-of-day reconciliation: paper logs compared to POS sales finding variances but root causes unknown.",
+      "constraints": [
+        "Manual safe drops every 2-4 hours taking 5-10 minutes with counting errors",
+        "Paper drop logs with 5-10% error rate (illegible, missing entries, math mistakes)",
+        "Theft risk from manual cash handling and delayed safe deposits",
+        "Over/short tracking difficult with paper logs and delayed reconciliation",
+        "Discrepancies discovered end-of-day (8-12 hours after occurrence)",
+        "No real-time cash tracking or corporate visibility into store cash positions"
+      ],
+      "metrics": ["Drop frequency: Every 2-4 hours (manual)", "Drop accuracy: 90-95% (5-10% errors)", "Discrepancy detection: End-of-day (8-12 hours)", "Theft risk: High (manual handling)"]
+    },
+    "agentic": {
+      "workflow": "1. Cash Drop Agent monitors register cash levels in real-time: POS integration shows Register 3 has $525 cash, exceeds $500 threshold, triggers drop alert to cashier. 2. Cashier counts cash drop amount ($300) and places in smart safe deposit slot with register number input. 3. Smart safe automatically validates and counts cash: bills and coins counted via optical scanner and weight sensors, amount verified 95%+ accuracy. 4. Agent detects discrepancies instantly: cashier entered $300 but smart safe counted $285 - alerts manager immediately for investigation vs end-of-day discovery. 5. Discrepancy Detection Agent analyzes variance: correlates cashier performance, register transaction history, video footage timestamps identifying potential causes. 6. Agent maintains real-time cash tracking: updates store cash position (registers + safe) visible in corporate treasury dashboard vs manual paper logs. 7. Theft prevention improved 80-90%: smart safe eliminates manual handling, validates amounts instantly, creates audit trail with timestamps and video correlation.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Cash Drop Agent", "Discrepancy Detection Agent"],
+        "utilityAgents": ["Smart Safe API", "Cash Counter (Optical + Weight Sensors)", "POS Integration API", "Audit System"]
+      },
+      "dataSources": [
+        "POS transaction data with real-time register cash levels",
+        "Smart safe cash deposits with counted amounts and timestamps",
+        "Cashier drop entries (expected amount vs smart safe counted amount)",
+        "Historical cash variance patterns by cashier and register",
+        "Video management system for cash handling video correlation",
+        "Corporate treasury dashboard for real-time cash position visibility",
+        "Discrepancy investigation workflows and root cause codes"
+      ],
+      "benefits": [
+        "95%+ drop accuracy with smart safe auto-validation vs 90-95% manual",
+        "Instant discrepancy detection vs end-of-day (8-12 hour delay)",
+        "80-90% theft risk reduction through auto-validation and audit trail",
+        "Real-time cash tracking replaces paper logs (5-10% error elimination)",
+        "Corporate visibility into store cash positions enables treasury optimization",
+        "Cashier accountability improved with immediate variance alerts"
+      ],
+      "metrics": ["Drop frequency: On-demand (automated alerts)", "Drop accuracy: 95%+", "Discrepancy detection: Instant (real-time)", "Theft risk: Low (80-90% reduction)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart safe with auto-validation at high-cash-volume stores", "Implement real-time cash tracking and discrepancy alerts", "Enable POS integration for automated drop threshold alerts"],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Smart safe with cash counting and validation capability", "POS system integration for real-time register cash level monitoring", "Cash drop thresholds configured by register and time of day", "Discrepancy investigation workflows and manager alert system", "Video management system integration for cash handling correlation (optional)", "Corporate treasury system for cash position visibility", "Store-level internet connectivity for smart safe and POS communication"]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-end-of-day-reconciliation-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "End-of-Day Reconciliation & Reporting",
+    "description": "Auto-reconciliation with smart safe integration achieving 5-10 minute review versus 30-90 minute manual with <2% variance investigation rate versus 5-10% traditional.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Closing manager retrieves all register tills and counts cash: each register drawer counted manually at end of day (10-20 minutes per register, 30-60 minutes for 3-4 registers). 2. Manager compares cash counted to POS Z-report (daily sales report): Register 1 sales $2,850, cash expected $3,050 (sales + $200 opening till), cash counted $3,045 = $5 short. 3. Manager counts safe cash: manually verifies all safe drops recorded on paper logs, counts remaining safe cash, calculates total cash on hand. 4. Manager completes reconciliation worksheet: enters register totals, safe drops, cash counted, calculates over/short variances taking 30-90 minutes total process. 5. Manager investigates variances over $10: reviews paper logs, questions cashiers, checks for data entry errors requiring 15-30 minutes per variance (5-10% of days). 6. Manager emails or enters reconciliation into accounting system: manual data entry with errors, delays corporate visibility until next day. 7. Total process 30-90 minutes per night with 5-10% variances requiring investigation discovered hours after occurrence.",
+      "constraints": [
+        "Manual cash counting and reconciliation takes 30-90 minutes nightly",
+        "5-10% variance rate requiring investigation (root causes unknown)",
+        "Variances discovered hours after occurrence (can't identify exact transaction)",
+        "Manual data entry into accounting system with errors and delays",
+        "Paper logs prone to illegibility and missing entries",
+        "Manager time-intensive process delays store closing and adds labor cost"
+      ],
+      "metrics": ["Reconciliation time: 30-90 min nightly", "Variance investigation rate: 5-10%", "Corporate visibility: Next day (manual entry)", "Data accuracy: 90-95% (5-10% errors)"]
+    },
+    "agentic": {
+      "workflow": "1. Reconciliation Agent triggers end-of-day workflow automatically: pulls POS Z-report with total sales, expected cash, opening tills, safe drops. 2. Agent retrieves smart safe cash count: smart safe already counted and validated all register drop amounts throughout day, provides current safe balance $8,500. 3. Agent calculates expected vs actual cash: compares POS expected cash to smart safe counted cash finding $8,485 actual vs $8,500 expected = $15 short variance. 4. Variance Analysis Agent investigates discrepancy: analyzes cashier performance, identifies Register 2 cashier underdropped $15 at 2:35pm drop based on smart safe validation alert. 5. Agent auto-generates reconciliation report: populates accounting system with register totals, safe balance, variances, root causes via API in <1 minute vs manual entry. 6. Manager reviews exceptions dashboard: 5-10 minute review of <2% variances vs 30-90 minute full reconciliation, investigates only significant discrepancies >$20. 7. 80-95% time savings (5-10 min vs 30-90 min) with 60-80% variance reduction through smart safe real-time validation enabling same-day closing.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Reconciliation Agent", "Variance Analysis Agent"],
+        "utilityAgents": ["POS System API", "Smart Safe API", "Accounting System API", "BI Dashboard"]
+      },
+      "dataSources": [
+        "POS Z-report with daily sales, expected cash, payment tenders",
+        "Smart safe cash inventory with all drops counted and timestamps",
+        "Opening till amounts and cashier assignments from morning",
+        "Historical variance patterns by store, cashier, day of week",
+        "Cashier performance metrics and drop accuracy rates",
+        "Accounting system integration for reconciliation report automation",
+        "Exception dashboard showing significant variances only (>$20)"
+      ],
+      "benefits": [
+        "80-95% time savings (5-10 min review vs 30-90 min full reconciliation)",
+        "60-80% variance reduction (<2% vs 5-10%) through real-time validation",
+        "Same-day closing vs next-day manual entry (accelerated financial reporting)",
+        "Automated accounting system integration eliminates manual data entry errors",
+        "Root cause identification with smart safe validation alerts",
+        "Manager focus shifted to exceptions only vs full reconciliation process"
+      ],
+      "metrics": ["Reconciliation time: 5-10 min review", "Variance investigation rate: <2%", "Corporate visibility: Real-time (API integration)", "Data accuracy: 99%+ (automated)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart safe integration with POS for auto-reconciliation", "Implement exception-based dashboards showing only significant variances", "Enable accounting system API integration for automated reporting"],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Smart safe with cash counting and inventory tracking", "POS system integration for Z-report data and expected cash calculations", "Accounting system API for automated reconciliation report submission", "BI dashboard platform for exception-based variance visualization", "Variance threshold rules (e.g., investigate only >$20 discrepancies)", "Historical reconciliation data for variance pattern analysis", "Manager training on exception-based review process vs full reconciliation"]
+    },
+    "icon": "document-report",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-bank-deposit-preparation-pickup",
+    "type": "function",
+    "level": 4,
+    "label": "Bank Deposit Preparation & Pickup",
+    "description": "Smart safe auto-preparation with dynamic armored car routing achieving <30 minute prep versus 2-4 hours manual with 60-80% error reduction from 2-5% to <1%.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Store manager prepares bank deposit manually: counts all safe cash, separates bills by denomination, bundles in $100 stacks, wraps coin rolls. 2. Manager completes deposit slip: writes store number, date, cash amount by denomination, total deposit amount taking 2-4 hours for high-volume stores. 3. Manager places cash and deposit slip in tamper-evident deposit bag, seals bag, records bag number on paper log. 4. Armored car service scheduled on fixed route: visits store 2-3 times per week regardless of actual cash volume (Tuesdays and Fridays 2-4pm). 5. Armored car driver picks up deposit bags, provides receipt, transports to bank for deposit (1-2 day bank credit lag). 6. Deposit errors frequent: 2-5% of deposits have discrepancies (miscounted, wrong denomination, deposit slip math error) requiring bank investigation and adjustment. 7. Fixed armored car schedule suboptimal: excess cash held 3-7 days between pickups creating security risk and working capital inefficiency.",
+      "constraints": [
+        "Manual deposit preparation takes 2-4 hours for high-volume stores",
+        "2-5% deposit error rate from miscounting and deposit slip mistakes",
+        "Fixed armored car schedule (2-3x/week) regardless of cash volume",
+        "Excess cash held 3-7 days between pickups (security risk, working capital tied up)",
+        "1-2 day bank credit lag after armored car pickup",
+        "Bank reconciliation issues requiring investigation and adjustments"
+      ],
+      "metrics": ["Deposit prep time: 2-4 hours", "Deposit error rate: 2-5%", "Armored car frequency: Fixed 2-3x/week", "Cash holding period: 3-7 days"]
+    },
+    "agentic": {
+      "workflow": "1. Deposit Preparation Agent monitors smart safe cash levels: safe balance $45,000 exceeds threshold, triggers armored car pickup request. 2. Smart safe automatically prepares deposit: counts and bundles cash by denomination, generates electronic deposit slip with store info and amount, seals deposit in cassette. 3. Pickup Scheduling Agent optimizes armored car route dynamically: analyzes cash levels across 50 stores in region, schedules pickups at 8 stores with high balances ($40,000+) for single route today vs fixed schedule. 4. Agent communicates pickup schedule to store manager: mobile notification 'Armored car arriving today 3-4pm, deposit prepared in safe cassette #7, estimated amount $45,285'. 5. Armored car driver authenticates at smart safe using biometric, retrieves pre-prepared deposit cassette in <30 minutes vs 2-4 hours manual preparation. 6. Agent tracks deposit through bank credit: receives electronic confirmation from armored car and bank, updates cash position in corporate treasury dashboard. 7. 90%+ time savings (<30 min vs 2-4 hours) with 60-80% error reduction (<1% vs 2-5%) and optimized pickup routes reducing armored car costs 30-50%.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Deposit Preparation Agent", "Pickup Scheduling Agent"],
+        "utilityAgents": ["Smart Safe API", "Armored Car Service API (Brinks, Loomis)", "Route Optimization Engine", "Bank Integration API"]
+      },
+      "dataSources": [
+        "Smart safe cash inventory and balance by denomination in real-time",
+        "Deposit threshold rules by store (e.g., request pickup when >$40,000)",
+        "Armored car service API for dynamic pickup scheduling",
+        "Route optimization data showing store locations and cash levels",
+        "Bank integration for electronic deposit confirmation and credit timing",
+        "Historical cash patterns for predictive pickup scheduling",
+        "Corporate treasury dashboard showing cash-in-transit and available balances"
+      ],
+      "benefits": [
+        "90%+ time savings (<30 min vs 2-4 hours) through auto-preparation",
+        "60-80% error reduction (<1% vs 2-5%) with smart safe auto-counting",
+        "30-50% armored car cost reduction via optimized dynamic routing",
+        "3-7 days → 1-2 days cash holding with dynamic scheduling (working capital optimization)",
+        "Electronic deposit confirmation eliminates manual bank reconciliation",
+        "Security risk reduction with shorter cash holding periods"
+      ],
+      "metrics": ["Deposit prep time: <30 min (automated)", "Deposit error rate: <1%", "Armored car frequency: Dynamic (optimized)", "Cash holding period: 1-2 days"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart safe with auto-deposit preparation at high-volume stores", "Implement dynamic armored car scheduling based on cash thresholds", "Enable electronic deposit confirmation with bank integration"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Smart safe with deposit preparation and cassette system", "Armored car service API integration (Brinks, Loomis, Garda) for dynamic scheduling", "Route optimization engine for multi-store pickup planning", "Bank integration API for electronic deposit confirmation", "Deposit threshold rules configured by store cash volume patterns", "Biometric authentication for armored car driver access to smart safe", "Corporate treasury system integration for cash position visibility"]
+    },
+    "icon": "truck",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cash-forecasting-change-order-management",
+    "type": "function",
+    "level": 4,
+    "label": "Cash Forecasting & Change Order Management",
+    "description": "ML-powered cash forecasting with auto-replenishment achieving <5% stockouts versus 20-30% manual with 90%+ optimal cash levels and 15-20 point emergency order reduction.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Store manager manually estimates change order needs: reviews last week's sales, makes rough guess on denomination needs: 'Order $1,000 in change - $300 in $5 bills, $200 in $1 bills, $500 in coins'. 2. Manager calls bank or armored car service weekly to place change order: describes denomination needs, schedules delivery. 3. Change order arrives 3-5 days later: often wrong mix (ordered $300 in $5s but received $200) or wrong total amount. 4. Change shortages frequent: 20-30% of days store runs short on specific denominations ($5 bills, quarters) forcing cashiers to provide $10s or $20s for change annoying customers. 5. Emergency change orders required: manager makes urgent call for change delivery (15-20% of weeks) with expedite fees ($50-$100) and 24-hour wait. 6. Excess change held: manager over-orders to avoid stockouts tying up working capital ($2,000-$5,000 excess cash per store). 7. No systematic forecasting or optimization resulting in 20-30% stockouts, 15-20% emergency orders, excess inventory.",
+      "constraints": [
+        "Manual weekly change orders based on manager estimates (no forecasting)",
+        "20-30% stockout rate on specific denominations causing customer dissatisfaction",
+        "15-20% emergency order rate with expedite fees ($50-$100 per order)",
+        "3-5 day change order lead time creates planning challenges",
+        "Excess change inventory ($2,000-$5,000 per store) ties up working capital",
+        "No denomination-level forecasting or optimization"
+      ],
+      "metrics": ["Stockout rate: 20-30%", "Emergency order rate: 15-20%", "Excess inventory: $2,000-$5,000 per store", "Change order frequency: Weekly (manual)"]
+    },
+    "agentic": {
+      "workflow": "1. Cash Forecasting Agent analyzes historical sales patterns: identifies cash transaction trends by day of week, time of day, seasonality: 'Fridays average 40% cash sales vs 25% Mondays, $5 bills usage spikes Fridays 60%'. 2. Agent forecasts denomination needs by day: predicts 'This Friday need $400 in $5 bills based on expected 350 cash transactions with $15 average change required'. 3. Change Order Agent compares forecast to current smart safe inventory: safe has $150 in $5 bills, need $400 Friday, order $250 in $5s from bank. 4. Agent auto-generates change order optimizing denomination mix: sends order to bank or armored car via API for delivery Thursday (1-2 days before need). 5. Agent maintains 90%+ optimal cash levels: prevents stockouts (<5% vs 20-30%) and minimizes excess inventory (keeps 1-2 days buffer vs 5-10 days manual). 6. Agent eliminates emergency orders: proactive forecasting reduces emergency rate to <5% vs 15-20% saving expedite fees and customer dissatisfaction. 7. Working capital optimization: holds $500-$1,000 change inventory (vs $2,000-$5,000) freeing working capital while maintaining service levels.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Cash Forecasting Agent", "Change Order Agent"],
+        "utilityAgents": ["Historical Sales Data API", "Cash Transaction Analytics", "Bank API Integration", "Smart Safe Integration"]
+      },
+      "dataSources": [
+        "Historical POS transaction data with cash sales and change given by denomination",
+        "Sales forecasts by day of week, time of day, seasonality",
+        "Smart safe real-time denomination-level inventory",
+        "Bank or armored car service API for change order placement",
+        "Change order lead times and delivery schedules",
+        "Cash transaction velocity and denomination usage patterns",
+        "Emergency order history and costs for optimization modeling"
+      ],
+      "benefits": [
+        "70-85% stockout reduction (<5% vs 20-30%) through ML forecasting",
+        "15-20 point emergency order reduction (<5% vs 15-20%) saving expedite fees",
+        "Working capital optimization: $1,500-$4,000 freed per store (500-1,000 vs 2,000-5,000 inventory)",
+        "90%+ optimal cash levels maintained with 1-2 day buffer vs 5-10 day manual",
+        "Denomination-level forecasting optimizes change mix vs rough estimates",
+        "Auto-order placement eliminates manager time and phone calls to bank"
+      ],
+      "metrics": ["Stockout rate: <5%", "Emergency order rate: <5%", "Excess inventory: $500-$1,000 per store", "Change order frequency: Auto-triggered (as-needed)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement historical cash transaction analysis for denomination usage patterns", "Enable smart safe denomination-level inventory tracking", "Deploy ML forecasting model for Friday/weekend change needs (highest volume)"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Historical POS cash transaction data (minimum 12 months) by denomination", "Smart safe with denomination-level inventory tracking and reporting", "Bank or armored car service API for automated change order placement", "ML forecasting model for cash demand by denomination and day of week", "Sales forecasting data for expected transaction volume", "Change order lead time and delivery schedule data", "Corporate treasury integration for working capital optimization"]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cash-variance-investigation-auditing",
+    "type": "function",
+    "level": 4,
+    "label": "Cash Variance Investigation & Auditing",
+    "description": "AI-powered variance analysis with video correlation achieving 85-95% root cause identified versus 40-60% manual with 85-95% time savings from 2-4 hours to 15-30 minutes per incident.",
+    "parentCapability": "capability-store-banking-cash-reconciliation",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Store manager discovers cash variance during end-of-day reconciliation: Register 2 cashier $50 short but cause unknown. 2. Manager manually investigates variance: reviews paper drop logs looking for miscounts, checks POS transaction report for voids/refunds/no-sales, questions cashier about errors. 3. Manager reviews video footage: spends 1-2 hours scrubbing through 8-hour shift video looking for suspicious activity (cash handling, large transactions, customer interactions). 4. Manager compares register tape to video: attempts to correlate transactions to video timestamps finding specific transactions difficult (2-4 hours total investigation). 5. Root cause identified in only 40-60% of cases: many variances remain unexplained 'shrinkage' with no corrective action possible. 6. Manager documents investigation findings: writes incident report for LP or DM review, no centralized tracking or pattern analysis. 7. Total investigation time 2-4 hours per incident with limited success identifying root causes or preventing recurrence.",
+      "constraints": [
+        "Manual investigation takes 2-4 hours per variance incident",
+        "Root cause identified only 40-60% of cases (40-60% remain unexplained)",
+        "Video review time-consuming scrubbing through 8-hour shifts",
+        "Transaction-to-video correlation difficult (timestamp matching manual)",
+        "No centralized tracking or pattern analysis across stores/cashiers",
+        "Reactive investigation after variance occurred (can't prevent)"
+      ],
+      "metrics": ["Investigation time: 2-4 hours per incident", "Root cause identified: 40-60%", "Video review time: 1-2 hours", "Pattern detection: None (siloed investigations)"]
+    },
+    "agentic": {
+      "workflow": "1. Variance Investigation Agent detects cash variance in real-time: Register 2 cashier $50 short at 2:35pm drop, immediately triggers investigation workflow vs end-of-day discovery. 2. Agent correlates POS transaction data: analyzes all Register 2 transactions 10am-2:35pm identifying 3 anomalies: $50 refund at 1:15pm with no receipt scan, $30 void at 12:45pm, $25 no-sale at 2:10pm. 3. Video Correlation Agent automatically retrieves video clips: pulls exact video timestamps for 3 anomalous transactions (1:15pm, 12:45pm, 2:10pm) eliminating need to review full 8-hour shift. 4. Agent analyzes video using computer vision: detects cashier processed $50 refund but kept cash instead of returning to customer - identifies fraud incident. 5. Agent cross-references cashier performance history: identifies pattern of $50 shorts on 3 prior shifts with similar refund anomalies - escalates to LP for fraud investigation. 6. Agent generates investigation report: timeline of variance, POS anomalies, video clips, historical patterns, recommended action (employee termination) in 15-30 minutes vs 2-4 hours manual. 7. 85-95% time savings (15-30 min vs 2-4 hours) with 85-95% root cause identification vs 40-60% enabling fraud detection and prevention.",
+      "agents": {
+        "orchestrator": "Store Banking Orchestration Agent",
+        "superAgents": ["Variance Investigation Agent", "Video Correlation Agent"],
+        "utilityAgents": ["Video Management System API", "POS Transaction Log API", "Employee Shift Data", "Audit System"]
+      },
+      "dataSources": [
+        "Real-time cash variance alerts from smart safe and POS reconciliation",
+        "POS transaction logs with timestamp, cashier ID, transaction type, amount",
+        "Video management system with timestamp-indexed recordings",
+        "Employee shift schedules and cashier performance history",
+        "Historical variance patterns by cashier, transaction type, time of day",
+        "Computer vision analysis of cash handling in video footage",
+        "Fraud detection rules (e.g., refund without receipt scan, excessive voids)"
+      ],
+      "benefits": [
+        "85-95% time savings (15-30 min vs 2-4 hours investigation per incident)",
+        "45 point root cause improvement (85-95% vs 40-60% identified)",
+        "Real-time variance detection vs end-of-day discovery (immediate investigation)",
+        "Automated video correlation eliminates 1-2 hour manual video scrubbing",
+        "Pattern detection across cashiers/stores identifies fraud trends",
+        "Fraud detection and prevention through anomaly analysis and historical patterns"
+      ],
+      "metrics": ["Investigation time: 15-30 min per incident", "Root cause identified: 85-95%", "Video review time: <5 min (automated clips)", "Pattern detection: Automated (cross-store analysis)"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 6,
+      "threshold": "Employee termination decisions based on fraud evidence require human review",
+      "policy": "AI agent provides investigation report with evidence (POS anomalies, video clips, historical patterns) but Store Manager or Loss Prevention must review evidence and make final termination decision. Agent recommendations guide decision but cannot execute termination autonomously."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time variance detection with smart safe integration", "Enable automated POS transaction anomaly analysis (voids, refunds, no-sales)", "Deploy video correlation for transaction-to-video timestamp matching"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Smart safe and POS integration for real-time variance detection", "Video management system with timestamp-indexed recordings and API access", "POS transaction logs with detailed transaction types and cashier IDs", "Computer vision API for cash handling video analysis (optional Phase 2)", "Employee shift data and cashier performance history database", "Fraud detection rules and anomaly thresholds configured", "Audit system for investigation report tracking and LP workflow integration"]
+    },
+    "icon": "search",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

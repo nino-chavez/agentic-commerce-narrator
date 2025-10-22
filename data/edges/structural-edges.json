@@ -1,0 +1,3618 @@
+[
+  {
+    "id": "edge-structural-concept-librarian-domain-customer-experience",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-customer-experience",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-sales-commerce",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-sales-commerce",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-merchandising-product",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-merchandising-product",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-supply-chain",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-supply-chain",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-payments-finance",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-payments-finance",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-data-analytics",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-data-analytics",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-technology-platform",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-technology-platform",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-human-capital",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-human-capital",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-enterprise-support",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-enterprise-support",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-concept-librarian-domain-governance-risk",
+    "type": "structural",
+    "source": "concept-librarian",
+    "target": "domain-governance-risk",
+    "relationship": "contains",
+    "label": "contains"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-online-community-platform-management",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-online-community-platform-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-community-engagement-moderation",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-community-engagement-moderation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-community-driven-support-peer-to-peer",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-community-driven-support-peer-to-peer",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-gamification-rewards",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-gamification-rewards",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-community-analytics-health-scoring",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-community-analytics-health-scoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-advocacy-ambassador-programs",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-advocacy-ambassador-programs",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-community-management-function-community-content-moderation",
+    "type": "structural",
+    "source": "capability-customer-community-management",
+    "target": "function-community-content-moderation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-multi-platform-order-aggregation",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-multi-platform-order-aggregation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-menu-synchronization-across-platforms",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-menu-synchronization-across-platforms",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-delivery-partner-performance-tracking",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-delivery-partner-performance-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-commission-fee-management",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-commission-fee-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-virtual-brand-management",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-virtual-brand-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-delivery-aggregator-management-function-delivery-optimized-menu-packaging",
+    "type": "structural",
+    "source": "capability-qsr-delivery-aggregator-management",
+    "target": "function-delivery-optimized-menu-packaging",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-mobile-app-ordering-customization",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-mobile-app-ordering-customization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-kiosk-ordering-experience",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-kiosk-ordering-experience",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-online-ordering-delivery-integration",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-online-ordering-delivery-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-order-ahead-pickup",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-order-ahead-pickup",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-menu-personalization-recommendations",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-menu-personalization-recommendations",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-nutritional-information-allergen-filtering",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-nutritional-information-allergen-filtering",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-digital-ordering-function-order-modification-reordering",
+    "type": "structural",
+    "source": "capability-qsr-digital-ordering",
+    "target": "function-order-modification-reordering",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-ai-powered-site-search",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-ai-powered-site-search",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-natural-language-query-understanding",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-natural-language-query-understanding",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-faceted-search-filtering",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-faceted-search-filtering",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-search-autocomplete-suggestions",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-search-autocomplete-suggestions",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-visual-search-image-recognition",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-visual-search-image-recognition",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-search-experience-optimization-function-search-personalization-merchandising",
+    "type": "structural",
+    "source": "capability-search-experience-optimization",
+    "target": "function-search-personalization-merchandising",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-multi-echelon-inventory-optimization",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-multi-echelon-inventory-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-safety-stock-optimization-dynamic",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-safety-stock-optimization-dynamic",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-inventory-replenishment-automation",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-inventory-replenishment-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-slow-moving-obsolete-inventory-management",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-slow-moving-obsolete-inventory-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-inventory-transfer-optimization",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-inventory-transfer-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-service-level-optimization",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-service-level-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-inventory-optimization-function-inventory-health-monitoring",
+    "type": "structural",
+    "source": "capability-advanced-inventory-optimization",
+    "target": "function-inventory-health-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-contract-generation-templating",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-contract-generation-templating",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-intelligent-clause-library",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-intelligent-clause-library",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-redline-analysis-negotiation",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-redline-analysis-negotiation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-contract-approval-workflow",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-contract-approval-workflow",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-contract-repository-search",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-contract-repository-search",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-contract-compliance-monitoring",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-contract-compliance-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-renewal-churn-prediction",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-renewal-churn-prediction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-e-signature-integration",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-e-signature-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-contract-agreement-management-function-contract-analytics-reporting",
+    "type": "structural",
+    "source": "capability-contract-agreement-management",
+    "target": "function-contract-analytics-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-receiving-putaway",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-receiving-putaway",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-inventory-cycle-counting",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-inventory-cycle-counting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-picking-optimization",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-picking-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-packing-shipping",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-packing-shipping",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-labor-management",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-labor-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-returns-reverse-logistics",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-returns-reverse-logistics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-warehouse-management-systems-function-wms-warehouse-analytics",
+    "type": "structural",
+    "source": "capability-warehouse-management-systems",
+    "target": "function-wms-warehouse-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-kitchen-display-system-optimization",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-kitchen-display-system-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-order-routing-load-balancing",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-order-routing-load-balancing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-preparation-time-prediction",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-preparation-time-prediction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-inventory-par-level-management",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-inventory-par-level-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-food-safety-monitoring",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-food-safety-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-waste-tracking-reduction",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-waste-tracking-reduction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-kitchen-operations-function-recipe-prep-guidance",
+    "type": "structural",
+    "source": "capability-qsr-kitchen-operations",
+    "target": "function-recipe-prep-guidance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-real-time-1to1-personalization",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-real-time-1to1-personalization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-behavioral-targeting-segmentation",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-behavioral-targeting-segmentation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-product-recommendations",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-product-recommendations",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-dynamic-pricing-display",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-dynamic-pricing-display",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-personalized-search-results",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-personalized-search-results",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-content-offer-testing",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-content-offer-testing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-web-personalization-function-cross-sell-upsell-optimization",
+    "type": "structural",
+    "source": "capability-web-personalization",
+    "target": "function-cross-sell-upsell-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-realtime-catalog-generation-publishing",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-realtime-catalog-generation-publishing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-punchout-cxml-integration",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-punchout-cxml-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-customer-specific-catalog-personalization",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-customer-specific-catalog-personalization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-ai-product-discovery-search",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-ai-product-discovery-search",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-realtime-availability-promise",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-realtime-availability-promise",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-bulk-ordering-upload",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-bulk-ordering-upload",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-smart-substitution-alternatives",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-smart-substitution-alternatives",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-b2b-catalog-punchout-function-catalog-analytics-optimization",
+    "type": "structural",
+    "source": "capability-b2b-catalog-punchout",
+    "target": "function-catalog-analytics-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-points-rewards-accrual",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-points-rewards-accrual",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-personalized-rewards-offers",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-personalized-rewards-offers",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-tier-status-management",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-tier-status-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-coalition-partner-integration",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-coalition-partner-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-gamification-engagement-mechanics",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-gamification-engagement-mechanics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-churn-prediction-winback",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-churn-prediction-winback",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-loyalty-program-management-function-loyalty-analytics-roi-measurement",
+    "type": "structural",
+    "source": "capability-loyalty-program-management",
+    "target": "function-loyalty-analytics-roi-measurement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-category-assortment-optimization",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-category-assortment-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-space-to-sales-allocation",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-space-to-sales-allocation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-new-product-introduction-planning",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-new-product-introduction-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-assortment-localization",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-assortment-localization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-seasonal-assortment-planning",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-seasonal-assortment-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-assortment-planning-function-assortment-performance-tracking",
+    "type": "structural",
+    "source": "capability-assortment-planning",
+    "target": "function-assortment-performance-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-automated-itinerary-generation",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-automated-itinerary-generation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-multi-traveler-coordination",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-multi-traveler-coordination",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-real-time-disruption-management",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-real-time-disruption-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-alternative-options-rebooking",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-alternative-options-rebooking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-itinerary-sharing-collaboration",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-itinerary-sharing-collaboration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-travel-document-management",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-travel-document-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-itinerary-management-function-mobile-itinerary-check-in",
+    "type": "structural",
+    "source": "capability-travel-itinerary-management",
+    "target": "function-mobile-itinerary-check-in",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-product-data-governance-master-data",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-product-data-governance-master-data",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-product-enrichment-content-creation",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-product-enrichment-content-creation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-multi-channel-product-syndication",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-multi-channel-product-syndication",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-product-attribute-taxonomy-management",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-product-attribute-taxonomy-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-digital-asset-management-integration",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-digital-asset-management-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-product-lifecycle-management",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-product-lifecycle-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-product-information-management-function-product-data-quality-compliance-monitoring",
+    "type": "structural",
+    "source": "capability-product-information-management",
+    "target": "function-product-data-quality-compliance-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-pulse-surveys-feedback-collection",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-pulse-surveys-feedback-collection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-sentiment-text-analytics",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-sentiment-text-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-manager-effectiveness-measurement",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-manager-effectiveness-measurement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-employee-relations-case-management",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-employee-relations-case-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-crisis-detection-early-warning",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-crisis-detection-early-warning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-recognition-programs-peer-appreciation",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-recognition-programs-peer-appreciation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-employee-engagement-relations-function-action-planning-initiative-tracking",
+    "type": "structural",
+    "source": "capability-employee-engagement-relations",
+    "target": "function-action-planning-initiative-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-daily-opening-closing-procedures",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-daily-opening-closing-procedures",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-merchandising-planogram-compliance",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-merchandising-planogram-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-inventory-cycle-counts-adjustments",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-inventory-cycle-counts-adjustments",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-price-change-execution-verification",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-price-change-execution-verification",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-promotional-setup-takedown",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-promotional-setup-takedown",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-facility-maintenance-repairs",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-facility-maintenance-repairs",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-task-management-function-store-communications-announcements",
+    "type": "structural",
+    "source": "capability-store-task-management",
+    "target": "function-store-communications-announcements",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-ai-credit-scoring-underwriting",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-ai-credit-scoring-underwriting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-dynamic-credit-limit-management",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-dynamic-credit-limit-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-payment-terms-optimization",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-payment-terms-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-proactive-collections-management",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-proactive-collections-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-portfolio-risk-monitoring-alerts",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-portfolio-risk-monitoring-alerts",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-risk-based-pricing-discounting",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-risk-based-pricing-discounting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-credit-payment-terms-function-credit-analytics-reporting",
+    "type": "structural",
+    "source": "capability-credit-payment-terms",
+    "target": "function-credit-analytics-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-gdpr-ccpa-compliance",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-gdpr-ccpa-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-consent-management",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-consent-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-access-control-audit",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-access-control-audit",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-pii-detection-masking",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-pii-detection-masking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-data-retention-archival",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-data-retention-archival",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-governance-privacy-function-privacy-impact-assessment",
+    "type": "structural",
+    "source": "capability-data-governance-privacy",
+    "target": "function-privacy-impact-assessment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-market-benchmarking-intelligence",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-market-benchmarking-intelligence",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-pay-equity-analysis-compliance",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-pay-equity-analysis-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-annual-compensation-planning-modeling",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-annual-compensation-planning-modeling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-benefits-selection-optimization",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-benefits-selection-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-benefits-communication-engagement",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-benefits-communication-engagement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-compensation-benefits-function-total-rewards-statements-transparency",
+    "type": "structural",
+    "source": "capability-compensation-benefits",
+    "target": "function-total-rewards-statements-transparency",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-incident-management-triage",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-incident-management-triage",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-problem-management-root-cause",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-problem-management-root-cause",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-change-management-approval",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-change-management-approval",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-asset-configuration-management",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-asset-configuration-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-knowledge-management-self-service",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-knowledge-management-self-service",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-service-catalog-request-fulfillment",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-service-catalog-request-fulfillment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-service-management-function-sla-management-reporting",
+    "type": "structural",
+    "source": "capability-it-service-management",
+    "target": "function-sla-management-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-health-safety-compliance-monitoring",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-health-safety-compliance-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-labor-law-wage-compliance",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-labor-law-wage-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-product-recall-withdrawal-management",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-product-recall-withdrawal-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-store-audit-preparation-execution",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-store-audit-preparation-execution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-license-permit-renewal-tracking",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-license-permit-renewal-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-compliance-audits-function-corrective-action-tracking-closure",
+    "type": "structural",
+    "source": "capability-store-compliance-audits",
+    "target": "function-corrective-action-tracking-closure",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-customer-master-data",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-customer-master-data",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-product-master-data",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-product-master-data",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-supplier-vendor-master",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-supplier-vendor-master",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-location-site-master",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-location-site-master",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-data-governance-workflows",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-data-governance-workflows",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-data-lineage-impact",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-data-lineage-impact",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-master-data-management-function-mdm-master-data-sync",
+    "type": "structural",
+    "source": "capability-master-data-management",
+    "target": "function-mdm-master-data-sync",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-job-requisition-description-optimization",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-job-requisition-description-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-multi-channel-sourcing-posting",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-multi-channel-sourcing-posting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-resume-screening-matching",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-resume-screening-matching",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-interview-scheduling-coordination",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-interview-scheduling-coordination",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-candidate-experience-engagement",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-candidate-experience-engagement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-diversity-inclusion-sourcing",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-diversity-inclusion-sourcing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-reference-background-checks",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-reference-background-checks",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-talent-acquisition-recruiting-function-offer-management-onboarding-handoff",
+    "type": "structural",
+    "source": "capability-talent-acquisition-recruiting",
+    "target": "function-offer-management-onboarding-handoff",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-order-routing-allocation",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-order-routing-allocation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-order-promising-atp",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-order-promising-atp",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-backorder-management",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-backorder-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-order-exception-management",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-order-exception-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-multi-channel-inventory-sync",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-multi-channel-inventory-sync",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-order-fulfillment-orchestration-function-ofs-fulfillment-performance-analytics",
+    "type": "structural",
+    "source": "capability-order-fulfillment-orchestration",
+    "target": "function-ofs-fulfillment-performance-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-headless-cms-content-delivery",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-headless-cms-content-delivery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-ai-powered-content-generation",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-ai-powered-content-generation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-content-personalization-engine",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-content-personalization-engine",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-content-performance-analytics",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-content-performance-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-digital-asset-management",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-digital-asset-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-content-localization-translation",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-content-localization-translation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-content-management-personalization-function-content-governance-workflow",
+    "type": "structural",
+    "source": "capability-content-management-personalization",
+    "target": "function-content-governance-workflow",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-promotional-planning-calendar-management",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-promotional-planning-calendar-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-offer-personalization-targeting",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-offer-personalization-targeting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-cross-channel-campaign-orchestration",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-cross-channel-campaign-orchestration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-promotional-performance-analytics",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-promotional-performance-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-budget-allocation-spend-optimization",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-budget-allocation-spend-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-promotional-campaign-management-function-ab-testing-experimentation",
+    "type": "structural",
+    "source": "capability-promotional-campaign-management",
+    "target": "function-ab-testing-experimentation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-real-time-data-integration",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-real-time-data-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-batch-orchestration",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-batch-orchestration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-api-data-ingestion",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-api-data-ingestion",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-change-data-capture",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-change-data-capture",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-data-transformation-enrichment",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-data-transformation-enrichment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-integration-etl-function-etl-integration-monitoring",
+    "type": "structural",
+    "source": "capability-data-integration-etl",
+    "target": "function-etl-integration-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-store-site-performance-monitoring",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-store-site-performance-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-supply-chain-control-tower",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-supply-chain-control-tower",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-customer-experience-real-time-monitoring",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-customer-experience-real-time-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-campaign-performance-tracking",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-campaign-performance-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-fleet-logistics-real-time-visibility",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-fleet-logistics-real-time-visibility",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-real-time-operational-dashboards-function-financial-performance-dashboards",
+    "type": "structural",
+    "source": "capability-real-time-operational-dashboards",
+    "target": "function-financial-performance-dashboards",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-multi-touch-attribution-modeling",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-multi-touch-attribution-modeling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-marketing-mix-modeling",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-marketing-mix-modeling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-incrementality-testing-measurement",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-incrementality-testing-measurement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-customer-journey-attribution",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-customer-journey-attribution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-channel-performance-analysis",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-channel-performance-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-attribution-function-marketing-roi-optimization",
+    "type": "structural",
+    "source": "capability-marketing-attribution",
+    "target": "function-marketing-roi-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-ad-hoc-analytics-self-service-bi",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-ad-hoc-analytics-self-service-bi",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-automated-insight-generation",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-automated-insight-generation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-anomaly-detection-root-cause-analysis",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-anomaly-detection-root-cause-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-what-if-scenario-modeling",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-what-if-scenario-modeling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-cross-functional-analytics-integration",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-cross-functional-analytics-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-data-storytelling-narrative-reporting",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-data-storytelling-narrative-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-advanced-analytics-reporting-function-mobile-analytics-alerts",
+    "type": "structural",
+    "source": "capability-advanced-analytics-reporting",
+    "target": "function-mobile-analytics-alerts",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-multi-channel-feedback-collection",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-multi-channel-feedback-collection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-sentiment-text-analytics",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-sentiment-text-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-nps-csat-monitoring",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-nps-csat-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-customer-journey-feedback-attribution",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-customer-journey-feedback-attribution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-closed-loop-feedback-resolution",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-closed-loop-feedback-resolution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-voice-of-customer-analytics-function-predictive-voc-analytics",
+    "type": "structural",
+    "source": "capability-voice-of-customer-analytics",
+    "target": "function-predictive-voc-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-demand-forecasting-planning",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-demand-forecasting-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-safety-stock-reorder-point-optimization",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-safety-stock-reorder-point-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-multi-echelon-inventory-optimization",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-multi-echelon-inventory-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-allocation-replenishment-automation",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-allocation-replenishment-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-inventory-health-aging-monitoring",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-inventory-health-aging-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-inventory-optimization-function-inventory-accuracy-cycle-counting",
+    "type": "structural",
+    "source": "capability-inventory-optimization",
+    "target": "function-inventory-accuracy-cycle-counting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-asset-discovery-inventory",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-asset-discovery-inventory",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-software-license-optimization",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-software-license-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-hardware-lifecycle-management",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-hardware-lifecycle-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-asset-procurement-provisioning",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-asset-procurement-provisioning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-asset-disposal-data-sanitization",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-asset-disposal-data-sanitization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-it-asset-management-function-asset-cost-allocation-chargeback",
+    "type": "structural",
+    "source": "capability-it-asset-management",
+    "target": "function-asset-cost-allocation-chargeback",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-influencer-discovery-vetting",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-influencer-discovery-vetting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-campaign-management-tracking",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-campaign-management-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-affiliate-network-management",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-affiliate-network-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-commission-payout-automation",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-commission-payout-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-performance-analytics-attribution",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-performance-analytics-attribution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-influencer-affiliate-marketing-function-fraud-detection-compliance",
+    "type": "structural",
+    "source": "capability-influencer-affiliate-marketing",
+    "target": "function-fraud-detection-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-continuous-feedback-recognition",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-continuous-feedback-recognition",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-goal-setting-tracking-okrs",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-goal-setting-tracking-okrs",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-360-feedback-orchestration",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-360-feedback-orchestration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-performance-analytics-insights",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-performance-analytics-insights",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-development-career-planning",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-development-career-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-performance-management-function-calibration-compensation-alignment",
+    "type": "structural",
+    "source": "capability-performance-management",
+    "target": "function-calibration-compensation-alignment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-skills-assessment-gap-analysis",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-skills-assessment-gap-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-personalized-learning-recommendations",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-personalized-learning-recommendations",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-content-curation-delivery",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-content-curation-delivery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-compliance-training-management",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-compliance-training-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-learning-impact-measurement",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-learning-impact-measurement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-career-pathing-development-planning",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-career-pathing-development-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-learning-development-function-certification-credential-management",
+    "type": "structural",
+    "source": "capability-learning-development",
+    "target": "function-certification-credential-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-strategic-sourcing-rfp-management",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-strategic-sourcing-rfp-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-supplier-discovery-qualification",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-supplier-discovery-qualification",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-contract-negotiation-support",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-contract-negotiation-support",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-purchase-order-automation",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-purchase-order-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-spend-analysis-category-management",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-spend-analysis-category-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-supplier-relationship-management",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-supplier-relationship-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-procurement-sourcing-function-procurement-analytics-savings-tracking",
+    "type": "structural",
+    "source": "capability-procurement-sourcing",
+    "target": "function-procurement-analytics-savings-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-multi-user-cart-management",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-multi-user-cart-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-intelligent-approval-routing",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-intelligent-approval-routing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-budget-validation-spend-control",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-budget-validation-spend-control",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-delegated-purchasing-proxy-buying",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-delegated-purchasing-proxy-buying",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-purchase-history-smart-reordering",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-purchase-history-smart-reordering",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-spend-analytics-reporting",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-spend-analytics-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-multi-user-buying-approvals-function-policy-enforcement-compliance",
+    "type": "structural",
+    "source": "capability-multi-user-buying-approvals",
+    "target": "function-policy-enforcement-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-open-to-buy-planning",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-open-to-buy-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-sales-margin-planning",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-sales-margin-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-inventory-investment-optimization",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-inventory-investment-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-receipt-flow-planning",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-receipt-flow-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-financial-target-allocation",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-financial-target-allocation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-merchandise-financial-planning-function-plan-vs-actual-variance-analysis",
+    "type": "structural",
+    "source": "capability-merchandise-financial-planning",
+    "target": "function-plan-vs-actual-variance-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-dynamic-pricing-competitive-intelligence",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-dynamic-pricing-competitive-intelligence",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-promotional-price-planning-execution",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-promotional-price-planning-execution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-markdown-optimization-clearance",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-markdown-optimization-clearance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-zone-location-based-pricing",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-zone-location-based-pricing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-price-change-execution-validation",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-price-change-execution-validation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-cost-plus-value-based-pricing-analysis",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-cost-plus-value-based-pricing-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-pricing-markdown-management-function-price-elasticity-revenue-management",
+    "type": "structural",
+    "source": "capability-pricing-markdown-management",
+    "target": "function-price-elasticity-revenue-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-customer-lifetime-value-prediction",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-customer-lifetime-value-prediction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-product-recommendation-engines",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-product-recommendation-engines",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-next-best-action-optimization",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-next-best-action-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-propensity-modeling-churn-purchase-upsell",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-propensity-modeling-churn-purchase-upsell",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-market-basket-analysis-association-rules",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-market-basket-analysis-association-rules",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-predictive-analytics-ml-function-time-series-forecasting-sales-demand-traffic",
+    "type": "structural",
+    "source": "capability-predictive-analytics-ml",
+    "target": "function-time-series-forecasting-sales-demand-traffic",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-cross-platform-ad-campaign-management",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-cross-platform-ad-campaign-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-programmatic-advertising-rtb",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-programmatic-advertising-rtb",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-ad-creative-optimization-testing",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-ad-creative-optimization-testing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-bid-management-budget-allocation",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-bid-management-budget-allocation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-attribution-roas-tracking",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-attribution-roas-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-paid-advertising-management-function-audience-targeting-lookalike-modeling",
+    "type": "structural",
+    "source": "capability-paid-advertising-management",
+    "target": "function-audience-targeting-lookalike-modeling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-real-time-dashboard-creation",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-real-time-dashboard-creation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-interactive-data-exploration",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-interactive-data-exploration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-embedded-analytics-operational-apps",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-embedded-analytics-operational-apps",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-executive-scorecards-kpi-tracking",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-executive-scorecards-kpi-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-drill-down-slice-dice-analysis",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-drill-down-slice-dice-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-collaborative-analytics-annotations",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-collaborative-analytics-annotations",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-business-intelligence-visualization-function-data-democratization-governance",
+    "type": "structural",
+    "source": "capability-business-intelligence-visualization",
+    "target": "function-data-democratization-governance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-drive-thru-queue-management",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-drive-thru-queue-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-ai-powered-voice-ordering",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-ai-powered-voice-ordering",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-order-confirmation-upsell",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-order-confirmation-upsell",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-speed-of-service-tracking",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-speed-of-service-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-dynamic-menu-board-pricing",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-dynamic-menu-board-pricing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-payment-processing-optimization",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-payment-processing-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-qsr-drive-thru-optimization-function-drive-thru-analytics-bottleneck-detection",
+    "type": "structural",
+    "source": "capability-qsr-drive-thru-optimization",
+    "target": "function-drive-thru-analytics-bottleneck-detection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-demand-forecasting-capacity-planning",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-demand-forecasting-capacity-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-attrition-prediction-retention",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-attrition-prediction-retention",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-skills-competency-analytics",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-skills-competency-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-succession-planning-talent-mobility",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-succession-planning-talent-mobility",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-diversity-equity-inclusion-analytics",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-diversity-equity-inclusion-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-talent-mobility-internal-marketplace",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-talent-mobility-internal-marketplace",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-workforce-planning-analytics-function-scenario-planning-what-if-analysis",
+    "type": "structural",
+    "source": "capability-workforce-planning-analytics",
+    "target": "function-scenario-planning-what-if-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-delivery-window-optimization",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-delivery-window-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-proof-of-delivery",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-proof-of-delivery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-failed-delivery-recovery",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-failed-delivery-recovery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-delivery-experience-tracking",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-delivery-experience-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-sustainable-delivery",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-sustainable-delivery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-last-mile-delivery-returns-function-lmd-returns-logistics-reverse",
+    "type": "structural",
+    "source": "capability-last-mile-delivery-returns",
+    "target": "function-lmd-returns-logistics-reverse",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-email-campaign-creation-scheduling",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-email-campaign-creation-scheduling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-email-personalization-dynamic-content",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-email-personalization-dynamic-content",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-send-time-optimization",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-send-time-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-email-deliverability-management",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-email-deliverability-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-automated-reengagement-campaigns",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-automated-reengagement-campaigns",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-email-analytics-attribution",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-email-analytics-attribution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-email-marketing-function-list-segmentation-hygiene",
+    "type": "structural",
+    "source": "capability-email-marketing",
+    "target": "function-list-segmentation-hygiene",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-multi-channel-campaign-orchestration",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-multi-channel-campaign-orchestration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-automated-drip-nurture-campaigns",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-automated-drip-nurture-campaigns",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-behavioral-trigger-marketing",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-behavioral-trigger-marketing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-lead-scoring-qualification",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-lead-scoring-qualification",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-marketing-workflow-automation",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-marketing-workflow-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-ab-multivariate-testing",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-ab-multivariate-testing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-marketing-automation-function-campaign-performance-optimization",
+    "type": "structural",
+    "source": "capability-marketing-automation",
+    "target": "function-campaign-performance-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-intelligent-call-chat-routing",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-intelligent-call-chat-routing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-ai-chatbot-self-service",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-ai-chatbot-self-service",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-proactive-customer-outreach",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-proactive-customer-outreach",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-sentiment-analysis-escalation",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-sentiment-analysis-escalation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-knowledge-management-suggestion",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-knowledge-management-suggestion",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-service-support-function-omnichannel-case-management",
+    "type": "structural",
+    "source": "capability-customer-service-support",
+    "target": "function-omnichannel-case-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-register-opening-till-assignment",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-register-opening-till-assignment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-cash-handling-drop-management",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-cash-handling-drop-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-end-of-day-reconciliation-reporting",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-end-of-day-reconciliation-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-bank-deposit-preparation-pickup",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-bank-deposit-preparation-pickup",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-cash-forecasting-change-order-management",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-cash-forecasting-change-order-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-store-banking-cash-reconciliation-function-cash-variance-investigation-auditing",
+    "type": "structural",
+    "source": "capability-store-banking-cash-reconciliation",
+    "target": "function-cash-variance-investigation-auditing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-external-theft-detection-prevention",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-external-theft-detection-prevention",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-internal-theft-fraud-detection",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-internal-theft-fraud-detection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-organized-retail-crime-intelligence",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-organized-retail-crime-intelligence",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-inventory-shrink-analysis-root-cause",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-inventory-shrink-analysis-root-cause",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-high-risk-item-protection-monitoring",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-high-risk-item-protection-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-return-fraud-receipt-validation",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-return-fraud-receipt-validation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-shrink-loss-prevention-function-employee-training-awareness-programs",
+    "type": "structural",
+    "source": "capability-shrink-loss-prevention",
+    "target": "function-employee-training-awareness-programs",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-review-collection-syndication",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-review-collection-syndication",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-review-response-automation",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-review-response-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-sentiment-analysis-insights",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-sentiment-analysis-insights",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-review-fraud-detection",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-review-fraud-detection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-review-display-optimization",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-review-display-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-reviews-ratings-management-function-product-qa-management",
+    "type": "structural",
+    "source": "capability-reviews-ratings-management",
+    "target": "function-product-qa-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-automated-data-profiling-quality-scoring",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-automated-data-profiling-quality-scoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-data-cleansing-standardization",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-data-cleansing-standardization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-duplicate-detection-deduplication",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-duplicate-detection-deduplication",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-data-validation-rules-monitoring",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-data-validation-rules-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-data-quality-dashboards-alerting",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-data-quality-dashboards-alerting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-root-cause-analysis-data-issues",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-root-cause-analysis-data-issues",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-data-quality-management-function-continuous-data-quality-improvement",
+    "type": "structural",
+    "source": "capability-data-quality-management",
+    "target": "function-continuous-data-quality-improvement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-sop-process-orchestration",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-sop-process-orchestration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-consensus-demand-planning",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-consensus-demand-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-capacity-planning-constraint-management",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-capacity-planning-constraint-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-financial-planning-integration",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-financial-planning-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-scenario-planning-what-if-analysis",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-scenario-planning-what-if-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-executive-sop-review-automation",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-executive-sop-review-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-sales-operations-planning-function-sop-performance-metrics-dashboards",
+    "type": "structural",
+    "source": "capability-sales-operations-planning",
+    "target": "function-sop-performance-metrics-dashboards",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-seat-selection-upsell",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-seat-selection-upsell",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-baggage-fee-management",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-baggage-fee-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-in-flight-services-upgrades",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-in-flight-services-upgrades",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-travel-insurance-protection",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-travel-insurance-protection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-destination-activities-experiences",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-destination-activities-experiences",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-car-rental-ground-transportation",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-car-rental-ground-transportation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-ancillary-revenue-function-dynamic-ancillary-pricing",
+    "type": "structural",
+    "source": "capability-travel-ancillary-revenue",
+    "target": "function-dynamic-ancillary-pricing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-predictive-maintenance-work-orders",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-predictive-maintenance-work-orders",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-space-planning-utilization",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-space-planning-utilization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-energy-management-sustainability",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-energy-management-sustainability",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-vendor-contractor-management",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-vendor-contractor-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-workplace-safety-incident-tracking",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-workplace-safety-incident-tracking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-meeting-room-resource-booking",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-meeting-room-resource-booking",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-facilities-management-function-facilities-analytics-reporting",
+    "type": "structural",
+    "source": "capability-facilities-management",
+    "target": "function-facilities-analytics-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-statistical-demand-forecasting",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-statistical-demand-forecasting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-machine-learning-demand-prediction",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-machine-learning-demand-prediction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-demand-sensing-real-time",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-demand-sensing-real-time",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-new-product-demand-forecasting",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-new-product-demand-forecasting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-promotional-demand-planning",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-promotional-demand-planning",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-seasonal-trend-analysis",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-seasonal-trend-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-demand-planning-forecasting-function-forecast-accuracy-monitoring-improvement",
+    "type": "structural",
+    "source": "capability-demand-planning-forecasting",
+    "target": "function-forecast-accuracy-monitoring-improvement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-route-optimization",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-route-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-carrier-selection",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-carrier-selection",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-freight-audit-payment",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-freight-audit-payment",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-load-consolidation",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-load-consolidation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-shipment-tracking-visibility",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-shipment-tracking-visibility",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-yard-dock-management",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-yard-dock-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-transportation-logistics-function-tms-network-optimization",
+    "type": "structural",
+    "source": "capability-transportation-logistics",
+    "target": "function-tms-network-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-multi-platform-social-publishing",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-multi-platform-social-publishing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-social-listening-sentiment-analysis",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-social-listening-sentiment-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-social-media-engagement-response",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-social-media-engagement-response",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-influencer-identification-management",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-influencer-identification-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-user-generated-content-curation",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-user-generated-content-curation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-social-commerce-integration",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-social-commerce-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-social-media-management-function-social-media-analytics-reporting",
+    "type": "structural",
+    "source": "capability-social-media-management",
+    "target": "function-social-media-analytics-reporting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-rfq-intake-triage",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-rfq-intake-triage",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-product-configuration-guided-selling",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-product-configuration-guided-selling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-dynamic-pricing-optimization",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-dynamic-pricing-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-quote-generation-documentation",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-quote-generation-documentation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-approval-workflow-management",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-approval-workflow-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-conversion-prediction-analytics",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-conversion-prediction-analytics",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-negotiation-support",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-negotiation-support",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-order-conversion-validation",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-order-conversion-validation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-quote-to-order-management-function-quote-lifecycle-management",
+    "type": "structural",
+    "source": "capability-quote-to-order-management",
+    "target": "function-quote-lifecycle-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-intelligent-alert-correlation-noise-reduction",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-intelligent-alert-correlation-noise-reduction",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-anomaly-detection-pattern-recognition",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-anomaly-detection-pattern-recognition",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-auto-remediation-self-healing",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-auto-remediation-self-healing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-capacity-planning-forecasting",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-capacity-planning-forecasting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-incident-prediction-prevention",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-incident-prediction-prevention",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-aiops-monitoring-function-service-dependency-mapping-impact-analysis",
+    "type": "structural",
+    "source": "capability-aiops-monitoring",
+    "target": "function-service-dependency-mapping-impact-analysis",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-points-accrual-redemption",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-points-accrual-redemption",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-status-tier-management-benefits",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-status-tier-management-benefits",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-partner-loyalty-integration",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-partner-loyalty-integration",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-personalized-rewards-offers",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-personalized-rewards-offers",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-gamification-challenges",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-gamification-challenges",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-elite-member-recognition-service",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-elite-member-recognition-service",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-loyalty-rewards-function-loyalty-analytics-segmentation",
+    "type": "structural",
+    "source": "capability-travel-loyalty-rewards",
+    "target": "function-loyalty-analytics-segmentation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-journey-mapping-visualization",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-journey-mapping-visualization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-touchpoint-experience-optimization",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-touchpoint-experience-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-next-best-action-recommendations",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-next-best-action-recommendations",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-journey-anomaly-detection-recovery",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-journey-anomaly-detection-recovery",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-cross-channel-journey-continuity",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-cross-channel-journey-continuity",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-persona-based-journey-customization",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-persona-based-journey-customization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-customer-journey-orchestration-function-journey-performance-analytics-attribution",
+    "type": "structural",
+    "source": "capability-customer-journey-orchestration",
+    "target": "function-journey-performance-analytics-attribution",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-multi-modal-trip-search-comparison",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-multi-modal-trip-search-comparison",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-dynamic-packaging-bundling",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-dynamic-packaging-bundling",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-real-time-availability-pricing",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-real-time-availability-pricing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-booking-workflow-automation",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-booking-workflow-automation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-payment-ticketing",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-payment-ticketing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-booking-modification-cancellation",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-booking-modification-cancellation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-travel-booking-reservation-function-group-booking-management",
+    "type": "structural",
+    "source": "capability-travel-booking-reservation",
+    "target": "function-group-booking-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-intelligent-time-capture-validation",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-intelligent-time-capture-validation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-overtime-management-compliance",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-overtime-management-compliance",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-pto-leave-management",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-pto-leave-management",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-workforce-scheduling-optimization",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-workforce-scheduling-optimization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-labor-analytics-forecasting",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-labor-analytics-forecasting",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-time-attendance-function-payroll-integration-validation",
+    "type": "structural",
+    "source": "capability-time-attendance",
+    "target": "function-payroll-integration-validation",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-push-notification-personalization",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-push-notification-personalization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-in-app-messaging-engagement",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-in-app-messaging-engagement",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-mobile-app-ab-testing",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-mobile-app-ab-testing",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-app-performance-monitoring",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-app-performance-monitoring",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-mobile-specific-personalization",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-mobile-specific-personalization",
+    "relationship": "parent-child",
+    "label": "implements"
+  },
+  {
+    "id": "edge-structural-capability-mobile-app-experience-function-app-analytics-user-behavior",
+    "type": "structural",
+    "source": "capability-mobile-app-experience",
+    "target": "function-app-analytics-user-behavior",
+    "relationship": "parent-child",
+    "label": "implements"
+  }
+]

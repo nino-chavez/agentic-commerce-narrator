@@ -1,0 +1,392 @@
+[
+  {
+    "id": "function-demand-forecasting-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Demand Forecasting & Planning",
+    "description": "ML demand sensing with external signals achieving 85-95% accuracy versus 60-70% historical averages with 15-25 point accuracy improvement and 30-50% inventory reduction through daily updates and weather/event integration.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Demand planner generates monthly forecasts: uses historical sales averages calculating 'Product A sold average 500 units/month past 12 months, forecast 500 units next month' ignoring trends, seasonality, or external factors. 2. Planner updates forecasts monthly: locks forecast for 30 days with no adjustments for market changes, promotions, or unexpected demand shifts resulting in 60-70% forecast accuracy (MAPE). 3. Simple statistical methods: applies moving averages or exponential smoothing without machine learning, trend detection, or seasonality modeling missing complex demand patterns. 4. No external signal integration: ignores weather (impacts seasonal products), events (concerts, sports), trends (social media virality), or economic indicators that influence demand. 5. Promotion impact not modeled: treats promotional periods as outliers or manually adjusts forecasts based on gut feeling without systematic promotion lift modeling. 6. Forecast errors lead to issues: 60-70% accuracy results in frequent stock-outs (lost sales, customer dissatisfaction) or overstock (excess inventory, markdowns, carrying costs). 7. Monthly forecast updates with 60-70% accuracy and no external signals result in 30-50% excess inventory and poor service levels from demand-supply mismatches.",
+      "constraints": [
+        "Monthly forecast updates too infrequent to respond to demand changes",
+        "60-70% forecast accuracy (MAPE) results in frequent stock-outs and overstock",
+        "Historical averages ignore trends, seasonality, and external demand drivers",
+        "No external signal integration (weather, events, social trends, economics)",
+        "Promotion impact not systematically modeled (manual adjustments or outliers)",
+        "30-50% excess inventory from demand-supply mismatches and forecast errors"
+      ],
+      "metrics": ["Forecast accuracy: 60-70% (MAPE)", "Update frequency: Monthly", "External signals: None", "Inventory levels: Baseline + 30-50% excess"]
+    },
+    "agentic": {
+      "workflow": "1. Demand Forecasting Agent generates daily forecasts: uses ML models (LSTM, Prophet) analyzing historical sales, trends, seasonality predicting 'Product A will sell 520 units next week (vs 500 historical avg) due to warming weather trend'. 2. External Signal Agent enriches forecasts: integrates weather data ('15% demand lift for ice cream when temperature >80°F'), event calendars (concerts, sports games boost nearby store traffic), social trends (viral TikTok increases product demand 300%). 3. Agent models promotion impact: predicts promotional lift showing 'Product A with 20% discount will sell 750 units (50% lift from 500 baseline)' enabling accurate inventory planning for promotions. 4. Agent detects demand shifts early: identifies sudden demand changes ('Product B sales up 40% this week vs forecast') investigating root causes (competitor stock-out, influencer mention) and adjusting forecasts dynamically. 5. Agent updates forecasts daily: refreshes predictions continuously incorporating latest sales, external signals, and market conditions vs monthly static forecasts enabling agile response. 6. Agent achieves 85-95% forecast accuracy: ML models with external signal integration improve accuracy 15-25 points (85-95% vs 60-70%) reducing stock-outs by 70-85% and excess inventory by 30-50%. 7. 15-25 point accuracy improvement (85-95% vs 60-70%) with daily updates and external signals enable 30-50% inventory reduction and better service levels.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Demand Forecasting Agent", "External Signal Agent"],
+        "utilityAgents": ["ML Forecasting Engine (Prophet, LSTM)", "Weather API", "Event Data Service", "Historical Sales Database", "Trend Analysis Platform"]
+      },
+      "dataSources": [
+        "Historical sales data (2+ years) by product, location, channel for model training",
+        "ML forecasting models (LSTM, Prophet, XGBoost) for demand prediction",
+        "Weather data (temperature, precipitation, forecasts) by store location",
+        "Event calendars (concerts, sports, holidays, local events) impacting traffic",
+        "Social media trending data (hashtags, influencer mentions, viral products)",
+        "Economic indicators (employment, consumer confidence, gas prices)",
+        "Promotional calendar with planned discounts and marketing campaigns"
+      ],
+      "benefits": [
+        "15-25 point forecast accuracy improvement (85-95% vs 60-70% MAPE)",
+        "30-50% inventory reduction through demand-supply matching and forecast accuracy",
+        "70-85% stock-out reduction from accurate demand prediction and proactive replenishment",
+        "Daily forecast updates vs monthly enable agile response to market changes",
+        "External signal integration (weather, events, trends) captures demand drivers",
+        "Promotion impact modeling enables accurate inventory planning for campaigns"
+      ],
+      "metrics": ["Forecast accuracy: 85-95% (MAPE)", "Update frequency: Daily", "External signals: Extensive (weather, events, trends)", "Inventory levels: -30-50% vs baseline"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML forecasting models (Prophet, LSTM) for top 500-1,000 products", "Integrate weather API for seasonal product demand adjustment", "Implement daily forecast updates replacing monthly static forecasts"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Historical sales data (2+ years) for ML model training", "ML forecasting platform (Prophet, LSTM, commercial solutions)", "Weather API integration by store location", "Event calendar data (concerts, sports, holidays)", "Social media listening tools for trend detection", "Promotional calendar integration for lift modeling", "Forecast accuracy monitoring and continuous model improvement"]
+    },
+    "icon": "trending-up",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-safety-stock-reorder-point-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Safety Stock & Reorder Point Optimization",
+    "description": "Dynamic safety stock with ML-powered reorder points achieving 5-15% excess versus 20-40% rule-based with 50-75% excess inventory reduction and 70-85% stockout reduction through demand variability analysis and lead time optimization.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Inventory planner sets safety stock using fixed formulas: applies rule '2 weeks of average sales' uniformly across all products without considering demand variability or lead time uncertainty. 2. Rule-based approach over-stocks: applies same 2-week buffer to stable products (low variability) and volatile products (high variability) resulting in 20-40% excess inventory. 3. Static reorder points: sets reorder point at 'Lead time demand + Safety stock' without dynamic adjustment for seasonality, promotions, or lead time changes. 4. Frequent stock-outs: rule-based safety stock insufficient for high-variability products or lead time delays resulting in 15-25% stock-out rate on fast-moving items. 5. Manual adjustments reactive: planner discovers stock-outs or excess inventory weeks after occurrence making one-off adjustments but not systematically optimizing across catalog. 6. No lead time variability consideration: assumes fixed lead times (e.g., '14 days from supplier') ignoring delays from supplier issues, transportation disruptions, or seasonal congestion. 7. Rule-based safety stock with 20-40% excess inventory and 15-25% stock-out rate results in high carrying costs and poor service levels.",
+      "constraints": [
+        "Fixed safety stock formulas (2 weeks sales) ignore demand variability differences",
+        "20-40% excess inventory from over-stocking stable products with same buffer as volatile",
+        "Static reorder points not adjusted for seasonality, promotions, or lead time changes",
+        "15-25% stock-out rate on fast-moving items from insufficient safety stock",
+        "Reactive manual adjustments weeks after stock-outs or excess inventory discovered",
+        "No lead time variability modeling ignores supplier delays and transportation disruptions"
+      ],
+      "metrics": ["Safety stock: 20-40% excess", "Stock-out rate: 15-25%", "Optimization: None (fixed rules)", "Lead time modeling: Static (assumed constant)"]
+    },
+    "agentic": {
+      "workflow": "1. Safety Stock Agent analyzes demand variability by product: calculates coefficient of variation showing 'Product A: low variability (CV 0.15) requires 1 week safety stock, Product B: high variability (CV 0.60) requires 3 weeks' vs uniform 2-week rule. 2. Reorder Point Agent optimizes reorder triggers dynamically: sets reorder point based on demand forecast, lead time, variability, and target service level (e.g., 98% in-stock) updating continuously vs static formula. 3. Agent models lead time variability: tracks supplier lead times showing 'Supplier X: average 14 days, standard deviation 3 days, 95th percentile 18 days' adjusting safety stock for lead time uncertainty. 4. Agent adjusts for seasonality: increases safety stock for seasonal products during peak demand periods (e.g., 'Ice cream: 3-week safety stock June-August, 1-week September-May') preventing stock-outs. 5. Agent optimizes service level tradeoffs: balances inventory costs with service levels recommending 'Product A: 98% service level requires 2 weeks safety stock ($5K inventory cost), 95% requires 1.2 weeks ($3K cost), recommend 98% for strategic product'. 6. Agent achieves 50-75% excess inventory reduction: optimizes safety stock by product variability achieving 5-15% excess inventory vs 20-40% rule-based while reducing stock-outs 70-85%. 7. Dynamic safety stock and ML reorder points reduce excess inventory 50-75% (5-15% vs 20-40%) while cutting stock-outs 70-85% through demand variability and lead time optimization.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Safety Stock Agent", "Reorder Point Agent"],
+        "utilityAgents": ["Inventory Analytics Platform", "Demand Variability Analysis Engine", "Lead Time Database", "Optimization Engine"]
+      },
+      "dataSources": [
+        "Historical demand data showing variability (standard deviation, CV) by product",
+        "ML demand forecasts with prediction intervals (confidence ranges)",
+        "Supplier lead time data (average, standard deviation, delays) by product",
+        "Service level targets (in-stock %) by product category and strategic importance",
+        "Inventory carrying costs and stock-out costs for tradeoff analysis",
+        "Seasonal patterns and promotional calendar impacting demand volatility",
+        "Real-time inventory positions and replenishment pipeline visibility"
+      ],
+      "benefits": [
+        "50-75% excess inventory reduction (5-15% vs 20-40%) through variability-based optimization",
+        "70-85% stock-out reduction from dynamic safety stock and optimized reorder points",
+        "Product-specific optimization vs uniform rules (low variability = less inventory)",
+        "Lead time variability modeling accounts for supplier delays and transportation disruptions",
+        "Seasonal adjustments prevent stock-outs during peak demand periods",
+        "Service level optimization balances inventory costs with customer satisfaction"
+      ],
+      "metrics": ["Safety stock: 5-15% excess (optimized)", "Stock-out rate: 3-8% (70-85% reduction)", "Optimization: High (ML-driven)", "Lead time modeling: Dynamic (variability-aware)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy demand variability analysis for safety stock optimization by product", "Implement dynamic reorder points based on ML demand forecasts", "Enable lead time variability modeling using supplier performance data"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Historical demand data (2+ years) for variability analysis", "ML demand forecasting with prediction intervals", "Supplier lead time database with performance tracking", "Inventory optimization engine with safety stock and reorder point algorithms", "Service level targets and inventory carrying cost data", "Real-time inventory visibility across locations", "Seasonal pattern modeling for safety stock adjustments"]
+    },
+    "icon": "shield-check",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-multi-echelon-inventory-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Echelon Inventory Optimization",
+    "description": "Network-wide optimization with optimal inventory positioning achieving 15-30% total inventory reduction versus location-by-location with improved service levels and lower logistics costs through total cost minimization.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Inventory planner optimizes each location independently: sets safety stock and reorder points for each distribution center and store in isolation without considering network-wide inventory positioning. 2. Local optimization sub-optimal: DC holds 4 weeks inventory and stores hold 2 weeks inventory duplicating safety stock across network resulting in excess total inventory. 3. No inventory pooling: stores stock products locally even if product rarely sells locally but frequently at nearby stores missing opportunity to centralize slow-moving inventory. 4. Uncoordinated replenishment: each location orders independently potentially creating bullwhip effect (demand variability amplification upstream) and supplier capacity constraints. 5. Inefficient transshipments: discovers stock-out at Store A while Store B has excess inventory but no systematic mechanism for lateral replenishment (store-to-store transfers). 6. No total cost optimization: focuses on inventory carrying costs without considering transportation costs, stock-out costs, or transshipment costs resulting in sub-optimal network-wide decisions. 7. Location-by-location optimization with no network coordination results in excess total inventory, sub-optimal service levels, and higher logistics costs.",
+      "constraints": [
+        "Location-by-location optimization misses network-wide inventory opportunities",
+        "Duplicated safety stock across DCs and stores increases total inventory",
+        "No inventory pooling for slow-moving items (stores stock locally vs centralize)",
+        "Uncoordinated replenishment creates bullwhip effect and supplier constraints",
+        "Inefficient transshipments due to lack of lateral replenishment mechanisms",
+        "No total cost optimization (carrying, transportation, stock-out, transshipment)"
+      ],
+      "metrics": ["Network inventory: Baseline (location-optimized)", "Service level: Baseline", "Total cost: Baseline", "Transshipment efficiency: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Network Optimization Agent analyzes multi-echelon inventory: models entire supply chain network (suppliers → DCs → stores → customers) identifying optimal inventory positioning to minimize total costs. 2. Inventory Positioning Agent determines optimal stock levels by echelon: recommends 'DC: 3 weeks inventory (vs 4 weeks local), Stores: 1 week inventory (vs 2 weeks local)' reducing total network inventory 15-30% through pooling. 3. Agent centralizes slow-moving products: identifies 'Product A sells 1 unit/month per store (50 stores = 50 units total inventory), recommend centralize at DC holding 15 units (70% reduction) with 1-2 day fulfillment' vs local stocking. 4. Agent coordinates replenishment: synchronizes ordering across locations reducing bullwhip effect and optimizing supplier capacity utilization vs independent location orders. 5. Agent optimizes transshipments: identifies 'Store A stock-out, Store B excess inventory 5 miles away, recommend lateral transfer (cost $8 vs $25 expedited from DC)' enabling cost-effective lateral replenishment. 6. Agent balances total costs: optimizes inventory positioning considering carrying costs (inventory investment), transportation costs (DC to store shipping), stock-out costs (lost sales), and transshipment costs minimizing total supply chain cost. 7. 15-30% total inventory reduction through network-wide optimization, inventory pooling, and coordinated replenishment while improving service levels and lowering logistics costs.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Network Optimization Agent", "Inventory Positioning Agent"],
+        "utilityAgents": ["Supply Chain Network Model", "Inventory Database (multi-echelon)", "Transportation Cost Data", "Optimization Solver (CPLEX, Gurobi)"]
+      },
+      "dataSources": [
+        "Supply chain network topology (suppliers, DCs, stores, customers, connections)",
+        "Multi-echelon inventory data (on-hand, in-transit, safety stock) by location",
+        "Demand data by location for local vs pooled inventory analysis",
+        "Transportation costs (DC to store, store to store, expedited) and lead times",
+        "Inventory carrying costs (storage, capital, obsolescence) by location",
+        "Stock-out costs (lost sales, customer dissatisfaction) by product",
+        "Transshipment constraints (distance limits, transfer costs, feasibility)"
+      ],
+      "benefits": [
+        "15-30% total inventory reduction through network-wide optimization vs location-by-location",
+        "Improved service levels through inventory pooling and coordinated replenishment",
+        "Slow-moving product centralization reduces local inventory 50-70%",
+        "Reduced bullwhip effect through coordinated multi-echelon replenishment",
+        "Cost-effective transshipments (lateral transfers) prevent stock-outs",
+        "Total cost minimization balances inventory, transportation, stock-out, transshipment"
+      ],
+      "metrics": ["Network inventory: -15-30% vs baseline", "Service level: Improved (pooling benefit)", "Total cost: -10-20% (optimized)", "Transshipment efficiency: High (lateral transfers)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy network-wide inventory visibility across DCs and stores", "Implement slow-moving product centralization at DC vs local stocking", "Enable lateral transshipment recommendations (store-to-store transfers)"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Supply chain network model (suppliers, DCs, stores topology)", "Multi-echelon inventory database with real-time visibility", "Demand data by location for pooling analysis", "Transportation cost data (DC to store, store to store, expedited)", "Optimization solver (CPLEX, Gurobi) for multi-echelon optimization", "Transshipment execution capabilities (lateral replenishment workflow)", "Total cost calculation (inventory, transportation, stock-out, transshipment)"]
+    },
+    "icon": "view-grid",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-allocation-replenishment-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Allocation & Replenishment Automation",
+    "description": "AI-powered allocation with daily/hourly replenishment achieving 20-35% inventory productivity improvement versus manual with store-performance-based allocation and optimal store mix through demand-driven automation.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Inventory planner allocates inventory manually: receives 1,000 units of new product allocating to 50 stores based on simple rules (equal split: 20 units per store or sales history: proportional to past sales). 2. Equal allocation sub-optimal: high-performing Store A (sells 40 units/week) receives same 20 units as low-performing Store B (sells 5 units/week) resulting in stock-outs at A and excess at B. 3. Replenishment cycle weekly: generates replenishment orders weekly based on reorder points with 2-3 day execution lag resulting in frequent stock-outs before next cycle. 4. Manual allocation time-consuming: planner spends 10-20 hours per week reviewing inventory positions and creating allocation decisions limiting capacity to 50-100 products. 5. No demand-driven prioritization: allocates inventory without considering store-level demand forecasts, promotions, or customer preferences resulting in sub-optimal store mix. 6. Reactive adjustments: discovers allocation errors (stock-outs, excess) weeks after initial allocation making manual corrections but learning not systematically applied. 7. Weekly replenishment cycles with manual allocation result in 20-35% lower inventory productivity vs optimal AI-driven allocation and demand-based store mix.",
+      "constraints": [
+        "Manual allocation taking 10-20 hours weekly limits coverage to 50-100 products",
+        "Equal split or sales history rules ignore store-level demand forecasts and performance",
+        "Weekly replenishment cycles with 2-3 day lag result in frequent stock-outs",
+        "Sub-optimal store mix from lack of demand-driven prioritization",
+        "Reactive allocation adjustments weeks after errors discovered",
+        "20-35% inventory productivity gap from manual allocation vs optimal"
+      ],
+      "metrics": ["Allocation time: 10-20 hours weekly (manual)", "Replenishment frequency: Weekly", "Store mix optimization: Low (rule-based)", "Inventory productivity: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Allocation Agent analyzes store-level demand: uses ML forecasts predicting 'Store A will sell 40 units next week, Store B 5 units' allocating inventory proportionally to demand vs equal split or sales history. 2. Agent optimizes store mix: prioritizes high-performing stores for allocation showing 'Allocate 60% of inventory to top 20% stores (generate 50% of sales)' vs uniform distribution. 3. Replenishment Agent automates reordering: monitors inventory positions hourly triggering replenishment orders when inventory drops below dynamic reorder point vs weekly manual review. 4. Agent considers multi-dimensional factors: allocates based on demand forecast, store performance, local demographics, promotional calendar, and competitive intensity vs simple rules. 5. Agent handles allocation at scale: automates allocation for entire catalog (10,000+ SKUs across 100+ stores) in minutes vs 10-20 hours manual for 50-100 products. 6. Agent executes daily/hourly replenishment: generates and transmits replenishment orders to suppliers/DCs multiple times daily vs weekly batch process reducing stock-outs 60-75%. 7. 20-35% inventory productivity improvement through AI-powered allocation, demand-driven store mix, and daily/hourly automated replenishment vs weekly manual process.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Allocation Agent", "Replenishment Agent"],
+        "utilityAgents": ["Inventory Management System API", "Store Performance Analytics", "Demand Forecasting Engine", "Order Management System"]
+      },
+      "dataSources": [
+        "Store-level demand forecasts (ML predictions) by product and location",
+        "Store performance data (sales, inventory turns, sell-through) by product category",
+        "Real-time inventory positions (on-hand, in-transit, reserved) by store and DC",
+        "Dynamic reorder points and safety stock levels by product and location",
+        "Promotional calendar showing planned markdowns and marketing campaigns",
+        "Local market data (demographics, competitive intensity, store traffic patterns)",
+        "Supplier lead times and order minimums for replenishment planning"
+      ],
+      "benefits": [
+        "20-35% inventory productivity improvement through optimal allocation and replenishment",
+        "AI-powered store mix allocates to high-performing locations vs equal split",
+        "Daily/hourly replenishment vs weekly reduces stock-outs 60-75%",
+        "Scale automation across 10,000+ SKUs vs manual 50-100 products",
+        "Demand-driven allocation uses ML forecasts vs simple sales history rules",
+        "Multi-dimensional optimization considers demand, performance, demographics, promotions"
+      ],
+      "metrics": ["Allocation time: Minutes (automated)", "Replenishment frequency: Daily/hourly", "Store mix optimization: High (demand-driven)", "Inventory productivity: +20-35%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI-powered allocation using store-level demand forecasts", "Implement daily automated replenishment replacing weekly manual process", "Enable store performance-based allocation prioritizing high-performers"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Store-level ML demand forecasting by product and location", "Real-time inventory visibility across stores and DCs", "Inventory management system with API for allocation and replenishment", "Store performance analytics (sales, turns, sell-through) by category", "Order management system integration for replenishment order transmission", "Supplier lead time and order minimum data for planning", "Dynamic reorder point and safety stock calculation by product/location"]
+    },
+    "icon": "switch-vertical",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-health-aging-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Health & Aging Monitoring",
+    "description": "Real-time aging dashboards with proactive alerts achieving 10-20% aged inventory versus 30-40% monthly reports with 50% aged inventory reduction through auto-clearance triggers and markdown optimization.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Inventory planner reviews aging reports monthly: generates report showing inventory by age buckets (0-30 days, 31-60 days, 61-90 days, 90+ days) identifying aged inventory retrospectively. 2. Discovers aging issues late: identifies 'Product A: 500 units aged 90+ days requiring clearance' but inventory already aged 3 months missing early intervention opportunity. 3. Manual clearance decisions: reviews aged inventory list deciding which products to markdown but decisions based on gut feeling without systematic prioritization or optimization. 4. Aged inventory accumulates: 30-40% of inventory aged >60 days due to monthly review cycle and delayed clearance actions resulting in heavy markdowns and margin erosion. 5. No proactive intervention: aging report identifies problems retrospectively without predictive alerts for products trending toward aging. 6. Limited markdown automation: manually enters markdown decisions into system taking 1-2 weeks to execute clearance strategy across channels. 7. Monthly aging reports with 30-40% aged inventory result in late clearance decisions, heavy markdowns (60-80% off), and margin erosion.",
+      "constraints": [
+        "Monthly aging reports identify issues retrospectively after 3+ months of aging",
+        "30-40% of inventory aged >60 days due to delayed review and action",
+        "Manual clearance decisions without systematic prioritization or optimization",
+        "No proactive alerts for products trending toward aging (predictive intervention)",
+        "Manual markdown execution taking 1-2 weeks across channels",
+        "Heavy clearance markdowns (60-80% off) from late intervention"
+      ],
+      "metrics": ["Aged inventory: 30-40% (>60 days)", "Review frequency: Monthly (retrospective)", "Clearance timing: Late (after 90+ days)", "Markdown depth: 60-80% (heavy discounts)"]
+    },
+    "agentic": {
+      "workflow": "1. Inventory Health Agent monitors aging continuously: tracks inventory age by product and location in real-time generating daily aging dashboards vs monthly retrospective reports. 2. Aging Monitoring Agent provides proactive alerts: identifies 'Product A trending toward aging: current 45 days, forecast 90+ days in 6 weeks based on sales velocity' enabling early intervention. 3. Agent prioritizes clearance actions: ranks aged inventory by clearance urgency showing 'Product A: high priority (seasonal deadline, high inventory value), Product B: low priority (stable demand, low value)'. 4. Agent recommends optimal clearance strategy: suggests 'Product A: markdown 20% now vs wait and markdown 60% later' using ML models to optimize timing and depth minimizing margin erosion. 5. Agent triggers auto-clearance workflows: automatically creates markdown requests when inventory exceeds aging thresholds (e.g., '60 days aged or 8 weeks supply') for approval and execution. 6. Agent tracks clearance effectiveness: monitors sell-through after markdowns showing 'Product A: 20% markdown cleared 80% of inventory in 2 weeks, learning applied to similar products'. 7. 50% aged inventory reduction (10-20% vs 30-40%) through real-time monitoring, proactive alerts, optimal markdown timing vs monthly retrospective reports.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Inventory Health Agent", "Aging Monitoring Agent"],
+        "utilityAgents": ["Inventory Analytics Platform", "Aging Dashboard", "Alert System", "Clearance Workflow Automation"]
+      },
+      "dataSources": [
+        "Real-time inventory data (on-hand, age, location) by product and store",
+        "Sales velocity data for aging trajectory prediction",
+        "Historical clearance performance (markdown depth, timing, sell-through)",
+        "Seasonal deadlines and product lifecycle stages for urgency assessment",
+        "ML models predicting optimal markdown timing and depth",
+        "Clearance workflow system for markdown request and execution",
+        "Aging thresholds and alerts (60 days, 8 weeks supply) by category"
+      ],
+      "benefits": [
+        "50% aged inventory reduction (10-20% vs 30-40%) through proactive management",
+        "Real-time vs monthly monitoring enables early intervention (45 days vs 90+ days)",
+        "Proactive alerts predict aging trends preventing accumulation",
+        "Optimal markdown timing and depth minimize margin erosion (20-40% vs 60-80%)",
+        "Auto-clearance triggers streamline workflow reducing manual effort 70-80%",
+        "Clearance effectiveness tracking enables continuous learning and improvement"
+      ],
+      "metrics": ["Aged inventory: 10-20% (>60 days)", "Review frequency: Daily (real-time)", "Clearance timing: Early (45-60 days)", "Markdown depth: 20-40% (optimized)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time aging dashboards replacing monthly retrospective reports", "Implement proactive alerts for products trending toward aging", "Enable auto-clearance workflows triggered by aging thresholds"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time inventory data by product age and location", "Inventory analytics platform with aging calculation and visualization", "Sales velocity data for aging trajectory prediction", "ML models for optimal markdown timing and depth recommendation", "Clearance workflow automation with threshold-based triggers", "Historical clearance performance data for model training", "Aging dashboard with drill-down capabilities by product and location"]
+    },
+    "icon": "clock",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-accuracy-cycle-counting",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Accuracy & Cycle Counting",
+    "description": "RFID perpetual inventory with daily validation achieving 99%+ accuracy versus 95-97% annual with 2-4 point accuracy improvement and <1% shrink through continuous visibility and real-time reconciliation.",
+    "parentCapability": "capability-inventory-optimization",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store conducts annual physical inventory: closes store for 8-12 hours counting all products manually updating inventory system with physical counts. 2. Physical inventory reveals discrepancies: discovers system shows 100 units on-hand but physical count finds 95 units (5% shrink) but root causes unknown. 3. Accuracy issues between counts: inventory accuracy degrades throughout year from unrecorded transactions (theft, damaged goods, receiving errors) reaching 95-97% accuracy pre-physical inventory. 4. Limited cycle counting: occasionally conducts cycle counts on high-value products (weekly or monthly) but 90%+ of inventory only counted annually. 5. No real-time visibility: inventory system shows 'Available: 100 units' but actual shelf stock unknown until physical count or customer reports out-of-stock. 6. Manual count errors: human counting errors (miscounts, data entry mistakes) contribute 1-2% inaccuracy on top of actual shrink and process issues. 7. Annual physical inventory with 95-97% accuracy and limited cycle counting result in 2-3% shrink, frequent stock-outs from inaccurate inventory, and customer dissatisfaction.",
+      "constraints": [
+        "Annual physical inventory with 8-12 hour store closure (labor intensive)",
+        "95-97% inventory accuracy pre-physical count due to transaction errors and shrink",
+        "Limited cycle counting (10% of inventory) with 90% counted only annually",
+        "No real-time visibility into actual shelf stock vs system inventory",
+        "Manual counting errors contribute 1-2% additional inaccuracy",
+        "2-3% shrink from theft, damage, errors discovered annually retrospectively"
+      ],
+      "metrics": ["Inventory accuracy: 95-97%", "Count frequency: Annual physical + limited cycle", "Shrink: 2-3%", "Real-time visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Inventory Accuracy Agent manages RFID perpetual inventory: RFID tags on products enable continuous inventory tracking with RFID readers at receiving, exits, and strategic locations monitoring product movement in real-time. 2. Agent reconciles inventory continuously: compares RFID reads with POS transactions identifying discrepancies immediately (e.g., 'RFID shows 98 units, POS shows 100 units sold, investigate 2-unit gap'). 3. Cycle Count Agent prioritizes targeted counts: identifies high-risk products for cycle counting based on discrepancies, high value, or theft history focusing count efforts on 10-20% of inventory vs uniform sampling. 4. Agent validates accuracy daily: tracks inventory accuracy by product and location showing '99.5% accuracy on Product A, 96% on Product B (investigate)' enabling proactive issue resolution. 5. Agent detects shrink in real-time: identifies 'RFID exit event without POS transaction = potential theft' alerting loss prevention immediately vs annual retrospective discovery. 6. Agent reduces manual counts: RFID-based perpetual inventory eliminates need for annual physical inventory reducing store labor 8-12 hours per year and eliminating manual counting errors. 7. 2-4 point accuracy improvement (99%+ vs 95-97%) with continuous validation, targeted cycle counting, and real-time shrink detection vs annual physical inventory.",
+      "agents": {
+        "orchestrator": "Inventory Optimization Orchestration Agent",
+        "superAgents": ["Inventory Accuracy Agent", "Cycle Count Agent"],
+        "utilityAgents": ["RFID System (Tags, Readers)", "Inventory Management System API", "Accuracy Dashboard", "Exception Management System"]
+      },
+      "dataSources": [
+        "RFID tag read events (receiving, shelf, exits) tracking product movement",
+        "POS transaction data for RFID-to-sale reconciliation",
+        "Inventory management system with perpetual inventory balances",
+        "High-risk product criteria (value, theft history, shrink patterns)",
+        "Cycle count schedules and results by product and location",
+        "Accuracy metrics (system vs physical) by product and location",
+        "Shrink detection algorithms comparing RFID exits to POS transactions"
+      ],
+      "benefits": [
+        "2-4 point accuracy improvement (99%+ vs 95-97%) through RFID perpetual inventory",
+        "Real-time vs annual visibility enables proactive issue resolution",
+        "Continuous reconciliation detects discrepancies immediately vs retrospective discovery",
+        "Targeted cycle counting focuses on high-risk items (10-20% vs 100% annual count)",
+        "Shrink detection in real-time (<1% vs 2-3%) through RFID exit monitoring",
+        "Eliminates annual physical inventory saving 8-12 hours store labor and manual errors"
+      ],
+      "metrics": ["Inventory accuracy: 99%+", "Count frequency: Daily validation + targeted cycle", "Shrink: <1%", "Real-time visibility: 100% (RFID)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy RFID system in pilot stores for high-value categories", "Implement daily inventory accuracy monitoring and exception alerts", "Enable targeted cycle counting for high-risk products"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["RFID infrastructure (tags on products, readers at key points)", "Inventory management system integration for perpetual inventory tracking", "POS integration for RFID-to-transaction reconciliation", "High-risk product criteria for targeted cycle counting", "Accuracy dashboard with daily metrics and exception alerts", "Cycle count workflow and mobile app for store associates", "Shrink detection algorithms comparing RFID events to transactions"]
+    },
+    "icon": "clipboard-check",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

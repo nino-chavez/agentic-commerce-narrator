@@ -1,0 +1,461 @@
+[
+  {
+    "id": "function-incident-management-triage",
+    "type": "function",
+    "level": 4,
+    "label": "Incident Management & Triage",
+    "description": "AI-powered ticket classification with auto-routing, knowledge base suggestions, and first-contact resolution achieving 70-80% FCR versus 30-40% manual triage and <15 minute response time.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee submits IT ticket via email or web portal with vague description: 'My laptop is slow'. 2. Level 1 service desk agent reads ticket, attempts to categorize (hardware, software, network) and prioritize (low, medium, high) based on judgment. 3. Agent searches knowledge base manually (keyword search) finding 50+ potential articles, most irrelevant. 4. Agent escalates to Level 2 team via manual reassignment (60-70% of tickets escalated due to lack of expertise). 5. Level 2 technician contacts employee 4-8 hours later to diagnose issue and resolve. 6. First contact resolution only 30-40% due to poor triage and limited agent knowledge.",
+      "constraints": [
+        "Manual ticket triage by Level 1 agents inconsistent and error-prone",
+        "30-40% first contact resolution due to poor categorization and limited expertise",
+        "4-8 hour average response time to initial contact (email-based, manual queue)",
+        "Knowledge base search ineffective (keyword-only, irrelevant results)",
+        "60-70% escalation rate to Level 2 creates bottlenecks and delays",
+        "No intelligent routing (tickets assigned randomly or by availability, not skills)"
+      ],
+      "metrics": ["First contact resolution: 30-40%", "Average response time: 4-8 hours", "Level 1 escalation rate: 60-70%", "Knowledge base deflection: 10-15%"]
+    },
+    "agentic": {
+      "workflow": "1. Incident Triage Agent receives ticket and applies NLP to classify issue type automatically: 'My laptop is slow' → Hardware - Performance issue, Priority: Medium (business impact: employee productivity). 2. Agent searches knowledge base using semantic search, finds top 3 relevant articles: 'Laptop Performance Troubleshooting', 'Clear Disk Space', 'Update Device Drivers'. 3. Agent detects duplicate tickets during incident: merges 15 'VPN down' tickets into single incident reducing alert storm noise. 4. Auto-Routing Agent assigns ticket to best-fit technician: skill match (laptop performance expert), location (onsite if hardware replacement needed), current workload (not overloaded). 5. Auto-Resolution Agent executes common fixes automatically: runs disk cleanup script, restarts services, updates drivers - resolving 40-60% of tickets without human intervention. 6. For complex issues, agent provides technician with ticket history, similar resolved incidents, and recommended troubleshooting steps achieving 70-80% first contact resolution and <15 minute response time.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Incident Triage Agent", "Auto-Resolution Agent"],
+        "utilityAgents": ["ITSM Platform API (ServiceNow, Jira Service Desk)", "Knowledge Base API", "Slack/Teams Integration", "NLP Classification Engine"]
+      },
+      "dataSources": [
+        "Incident ticket descriptions and historical categorization data",
+        "Knowledge base articles and solution documentation",
+        "Technician skills, availability, and location data",
+        "Historical incident resolution patterns and success rates",
+        "Duplicate ticket detection from incident keywords and timing",
+        "Employee data (users, departments, locations, roles)"
+      ],
+      "benefits": [
+        "40-50 point FCR improvement (70-80% vs 30-40%) through AI triage and auto-resolution",
+        "85-95% faster initial response (<15 min vs 4-8 hours) via automation",
+        "60% auto-resolution rate eliminates human intervention for common issues",
+        "Intelligent routing matches tickets to best-fit technician reducing escalations",
+        "Semantic knowledge base search improves article relevance and deflection",
+        "Duplicate detection during incidents reduces alert storm noise 90%"
+      ],
+      "metrics": ["First contact resolution: 70-80%", "Average response time: <15 minutes", "Level 1 escalation rate: 20-30%", "Knowledge base deflection: 40-60%"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI ticket classification for automated categorization", "Implement semantic knowledge base search with article recommendations", "Enable auto-resolution scripts for top 5 common issues (password reset, VPN reconnect)"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Modern ITSM platform (ServiceNow, Jira Service Management) with API access", "Knowledge base with documented solutions (or create/migrate)", "NLP classification engine for ticket categorization", "Integration with Slack/Teams for response notifications", "Automation platform (Ansible, PowerShell) for auto-remediation scripts", "Technician skills database for intelligent routing"]
+    },
+    "icon": "support",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-problem-management-root-cause",
+    "type": "function",
+    "level": 4,
+    "label": "Problem Management & Root Cause Analysis",
+    "description": "Pattern recognition across incidents with ML-powered root cause analysis reducing recurring incidents 60-80% and shortening RCA from 2-4 weeks to 2-4 days through proactive problem identification.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Incident occurs and resolved reactively (fix symptom, not root cause). 2. Same incident recurs 2-3 times before someone notices pattern: 'We keep fixing this issue every week'. 3. IT manager manually reviews incident history in spreadsheet identifying recurring issues. 4. Root cause analysis conducted via manual investigation: review logs, interview technicians, test hypotheses over 2-4 weeks. 5. RCA findings documented in Word document, shared with IT leadership. 6. Problem ticket created to implement permanent fix, often delayed or deprioritized. 7. 40-60% of incidents are recurring issues never fully resolved.",
+      "constraints": [
+        "Reactive problem-solving only after multiple incident recurrences (3+ incidents)",
+        "2-4 weeks to complete root cause analysis due to manual investigation",
+        "40-60% of incidents are recurring issues with unaddressed root causes",
+        "Pattern recognition manual and delayed (spreadsheet review, human observation)",
+        "RCA findings documented but fixes deprioritized (problem tickets backlogged)",
+        "No proactive problem identification before incidents impact business"
+      ],
+      "metrics": ["Recurring incident rate: 40-60%", "Root cause analysis time: 2-4 weeks", "Problem identification: Reactive (after 3+ incidents)", "Permanent fix rate: 30-40%"]
+    },
+    "agentic": {
+      "workflow": "1. Problem Detection Agent continuously analyzes incident patterns using ML: detects 'VPN disconnection' incident occurring 15 times across 12 employees in 2 days - flags as emerging problem. 2. Agent correlates incidents with recent changes: cross-references CMDB change log discovering VPN server patch deployed 3 days ago, strong correlation to incident spike. 3. Root Cause Analysis Agent aggregates data sources: pulls application logs from VPN server, network traffic patterns, affected employee locations, device types. 4. Agent applies ML pattern recognition: identifies common thread - all affected employees using Windows 11 version 23H2 incompatible with VPN server patch. 5. Agent generates RCA report in 2-4 days: timeline of events, correlation analysis, root cause hypothesis with 85% confidence. 6. Agent creates problem ticket with recommended fix: rollback VPN patch or deploy Windows compatibility update. 7. Monitoring shows 60-80% reduction in recurring incidents through proactive root cause resolution.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Problem Detection Agent", "Root Cause Analysis Agent"],
+        "utilityAgents": ["Log Analytics Platform", "APM Integration (Datadog, New Relic)", "CMDB API", "Change Management System API"]
+      },
+      "dataSources": [
+        "Incident ticket history with resolution patterns",
+        "Application and infrastructure logs for error correlation",
+        "CMDB change records (deployments, patches, config changes)",
+        "Network and system performance metrics from APM tools",
+        "Affected user demographics (location, device type, OS version)",
+        "Historical root cause analysis findings and resolution data"
+      ],
+      "benefits": [
+        "60-80% reduction in recurring incidents through permanent fixes",
+        "2-4 weeks → 2-4 days RCA completion via ML-powered analysis",
+        "Proactive problem identification before widespread business impact",
+        "Change correlation automatically links incidents to recent deployments",
+        "ML pattern recognition identifies root causes humans miss",
+        "Automated RCA reports save 10-20 hours of manual investigation per problem"
+      ],
+      "metrics": ["Recurring incident rate: 10-20%", "Root cause analysis time: 2-4 days", "Problem identification: Proactive (after 2-3 incidents)", "Permanent fix rate: 70-85%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy pattern recognition for recurring incident detection", "Implement change correlation linking incidents to recent deployments", "Enable automated log aggregation for root cause data collection"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ITSM platform with problem management module", "Log analytics platform (Splunk, ELK) for data aggregation", "CMDB integration for change correlation", "APM tools (Datadog, New Relic) for performance metrics", "ML platform for pattern recognition and RCA modeling", "Historical incident data (minimum 12-24 months) for ML training", "Integration with change management system for deployment tracking"]
+    },
+    "icon": "search-circle",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-change-management-approval",
+    "type": "function",
+    "level": 4,
+    "label": "Change Management & Approval",
+    "description": "Risk-based auto-approval for low-risk changes with intelligent CAB scheduling and impact analysis achieving 60-80% auto-approval rate and 70% CAB meeting time reduction from 2-4 hours to 30-60 minutes.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT staff submits change request via email or ITSM form describing proposed change (deploy new application version, patch server, update firewall rule). 2. Change manager manually reviews request, categorizes risk level (low, medium, high) based on subjective assessment. 3. All changes routed to weekly Change Advisory Board (CAB) meeting regardless of risk level - 2-4 hour meeting reviewing 30-50 changes. 4. CAB members (IT managers, application owners, security) debate each change: 'What's the rollback plan?', 'Which systems affected?', 'Any dependencies?'. 5. Change approved or rejected, implementation scheduled for next maintenance window (often 3-7 days after approval). 6. No systematic impact analysis (changes conflict with each other, cause outages). 7. Change approval cycle 3-7 days slows deployment velocity and business agility.",
+      "constraints": [
+        "All changes require CAB approval creating 3-7 day bottleneck",
+        "2-4 hour weekly CAB meetings waste leadership time on low-risk changes",
+        "Manual risk assessment subjective and inconsistent",
+        "No automated impact analysis (changes conflict, cause outages)",
+        "Low-risk changes (update document, add user account) require same approval as high-risk",
+        "Change approval slows deployment velocity and agility"
+      ],
+      "metrics": ["Change approval time: 3-7 days", "CAB meeting duration: 2-4 hours weekly", "Auto-approval rate: 0%", "Change-caused incidents: 20-30%"]
+    },
+    "agentic": {
+      "workflow": "1. IT staff submits change request, Change Risk Assessment Agent automatically evaluates risk: 'Update DNS record for marketing subdomain' → Low risk (non-production, single component, tested, rollback plan documented). 2. Agent analyzes change impact: queries CMDB for affected systems, checks dependency map showing only marketing website affected (no upstream/downstream services). 3. Low-risk change auto-approved within 15 minutes, high-risk changes escalated to CAB. 4. Impact Analysis Agent detects conflicts: 'Database maintenance window scheduled 2PM Saturday conflicts with e-commerce deployment 3PM Saturday - recommend reschedule'. 5. Intelligent CAB Scheduling Agent curates agenda with only high-risk changes (production database, core infrastructure, customer-facing services) requiring discussion. 6. CAB meeting reduced to 30-60 minutes (vs 2-4 hours) reviewing 5-10 high-risk changes instead of 30-50 all changes. 7. 60-80% auto-approval rate for low-risk changes accelerates deployment velocity while maintaining governance.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Change Risk Assessment Agent", "Impact Analysis Agent"],
+        "utilityAgents": ["CMDB API", "Deployment Pipeline Integration", "Calendar API", "Dependency Mapping Service"]
+      },
+      "dataSources": [
+        "Change request details (scope, affected systems, rollback plan)",
+        "CMDB configuration items and dependency relationships",
+        "Historical change success/failure rates by type and owner",
+        "Deployment pipeline integration for automated testing results",
+        "Scheduled maintenance windows and change calendar",
+        "Production incident history linked to prior changes",
+        "CAB member availability and calendar integration"
+      ],
+      "benefits": [
+        "60-80% auto-approval rate for low-risk changes accelerates deployment",
+        "70% CAB time reduction (30-60 min vs 2-4 hours) focusing on high-risk only",
+        "3-7 days → 15 minutes approval for low-risk changes (immediate deployment)",
+        "Automated impact analysis prevents change conflicts and outages",
+        "Risk-based governance maintains control while improving agility",
+        "Change-caused incidents reduced 40-60% through dependency analysis"
+      ],
+      "metrics": ["Change approval time: 15 min (low-risk), 1-2 days (high-risk)", "CAB meeting duration: 30-60 minutes weekly", "Auto-approval rate: 60-80%", "Change-caused incidents: 10-15%"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "High-risk changes affecting production databases, core infrastructure, or customer-facing services with >10,000 user impact",
+      "policy": "CAB must review and approve all high-risk changes before implementation. Auto-approval limited to pre-defined low-risk change categories with documented rollback plans and successful automated testing."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Define low-risk change categories eligible for auto-approval (DNS updates, user provisioning, documentation)", "Implement automated risk scoring based on change attributes", "Enable CMDB integration for automated impact analysis"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ITSM platform with change management and approval workflows", "CMDB with accurate configuration items and dependencies", "Change categories and risk criteria defined", "Integration with deployment pipelines for automated testing validation", "CAB governance policy supporting risk-based auto-approval", "Rollback plan requirements documented for all change types", "Historical change success/failure data for risk model training"]
+    },
+    "icon": "clipboard-check",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-asset-configuration-management",
+    "type": "function",
+    "level": 4,
+    "label": "Asset & Configuration Management",
+    "description": "Auto-discovery and real-time CMDB synchronization achieving 95%+ accuracy versus 40-60% manual updates with continuous validation replacing quarterly audits.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT staff manually updates CMDB when deploying new infrastructure (add server record, document IP address, owner, location). 2. CMDB updates often skipped or delayed due to time pressure (deploy first, document later). 3. Configuration drift occurs as servers patched, applications updated, but CMDB not refreshed. 4. CMDB accuracy 40-60% (missing assets, outdated configurations, incorrect relationships). 5. Quarterly audit conducted comparing CMDB to actual infrastructure discovering 30-50% discrepancies. 6. Audit findings corrected manually over 2-4 weeks, CMDB temporarily accurate then drifts again. 7. Poor CMDB quality undermines change impact analysis, incident response, asset tracking.",
+      "constraints": [
+        "Manual CMDB updates skipped or delayed creating 40-60% accuracy",
+        "Configuration drift as changes deployed but CMDB not refreshed",
+        "Quarterly audits find 30-50% discrepancies requiring manual correction",
+        "2-4 week audit remediation cycle labor-intensive and temporary",
+        "No real-time visibility into infrastructure changes",
+        "Poor CMDB quality undermines change management and incident response"
+      ],
+      "metrics": ["CMDB accuracy: 40-60%", "Update frequency: Manual (ad-hoc)", "Audit frequency: Quarterly", "Audit remediation time: 2-4 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Asset Discovery Agent continuously scans network discovering new devices, servers, applications within 15 minutes of deployment. 2. Agent queries cloud provider APIs (AWS, Azure, GCP) for EC2 instances, VMs, containers refreshing CMDB in real-time. 3. Configuration Validation Agent detects drift: 'Web server IP address changed from 10.1.2.3 to 10.1.2.5 - auto-update CMDB configuration'. 4. Agent discovers dependencies automatically: 'Application server depends on database server, load balancer, storage array - map relationships in CMDB'. 5. Agent validates CMDB against actual infrastructure continuously: 'CMDB shows 250 servers, discovery finds 275 - investigate 25 undocumented servers (shadow IT)'. 6. Agent maintains 95%+ CMDB accuracy through continuous discovery and validation vs quarterly audit approach. 7. Accurate CMDB enables effective change impact analysis, incident response, and asset tracking.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Asset Discovery Agent", "Configuration Validation Agent"],
+        "utilityAgents": ["Network Discovery Tools (Nmap, Lansweeper)", "Cloud Provider APIs (AWS, Azure, GCP)", "CMDB API", "Dependency Mapping Service"]
+      },
+      "dataSources": [
+        "Network discovery scans (devices, IP addresses, ports)",
+        "Cloud provider inventory APIs (EC2, VMs, containers, storage)",
+        "CMDB configuration items and attributes",
+        "Application dependency mapping from APM tools",
+        "Network traffic analysis for relationship discovery",
+        "Change management records for expected configuration updates",
+        "Asset management system for hardware inventory"
+      ],
+      "benefits": [
+        "35-55 point accuracy improvement (95% vs 40-60%) through automation",
+        "Real-time CMDB updates vs quarterly audit cycle (continuous validation)",
+        "15-minute asset discovery vs manual data entry delays",
+        "Automated dependency mapping improves change impact analysis",
+        "Shadow IT detection through continuous discovery (undocumented assets)",
+        "CMDB quality enables effective incident response and change management"
+      ],
+      "metrics": ["CMDB accuracy: 95%+", "Update frequency: Real-time (continuous)", "Audit frequency: Continuous validation", "Audit remediation time: Real-time (auto-corrected)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy network discovery tools for automated asset detection", "Implement cloud provider API integration for real-time inventory", "Enable continuous CMDB validation with drift detection alerts"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["CMDB platform (ServiceNow CMDB, Device42, SolarWinds) with API access", "Network discovery tools (Nmap, Lansweeper, SolarWinds) deployed", "Cloud provider API credentials and permissions (AWS, Azure, GCP)", "Network access for discovery scans across all subnets", "APM or dependency mapping tools for relationship discovery", "CMDB data model defined with configuration item types and attributes", "Integration with change management for expected configuration updates"]
+    },
+    "icon": "database",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-knowledge-management-self-service",
+    "type": "function",
+    "level": 4,
+    "label": "Knowledge Management & Self-Service",
+    "description": "AI-curated knowledge base with auto-generated articles from resolved incidents and chatbot-guided self-service achieving 70-80% adoption and 40-50 point deflection improvement versus static KB.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT staff creates knowledge base articles manually when they have time (rare). 2. Articles written once, never updated as software/processes change (30-40% accuracy due to staleness). 3. Employees search KB using keyword search finding 50+ irrelevant results, give up. 4. Self-service adoption low (20-30%) due to poor search and outdated content. 5. Employees create tickets instead of self-service (80% could be self-resolved). 6. Knowledge base viewed as low priority (no ownership, no quality metrics). 7. Technicians solve same issues repeatedly because solutions not documented in KB.",
+      "constraints": [
+        "Manual article creation infrequent and inconsistent",
+        "30-40% article accuracy due to outdated content (never refreshed)",
+        "Keyword-based search finds 50+ irrelevant results (low precision)",
+        "20-30% self-service adoption due to poor user experience",
+        "80% of tickets could be self-resolved with good KB (deflection opportunity)",
+        "No KB ownership or quality metrics (viewed as low priority)"
+      ],
+      "metrics": ["KB article accuracy: 30-40%", "Self-service adoption: 20-30%", "Ticket deflection rate: 10-15%", "Article creation: Manual (ad-hoc)"]
+    },
+    "agentic": {
+      "workflow": "1. Knowledge Curation Agent analyzes resolved incident tickets identifying common issues: 'VPN connection failed' resolved 150 times with same solution - auto-generate KB article. 2. Agent creates article draft from ticket resolution: 'How to Fix VPN Connection Issues' with step-by-step instructions extracted from technician notes. 3. Agent routes draft to subject matter expert for review and approval (one-click publish). 4. Self-Service Chatbot Agent guides employees through troubleshooting: 'I can't access VPN' → chatbot asks diagnostic questions, provides KB article, walks through resolution steps. 5. Agent measures article effectiveness: tracks view count, helpfulness ratings, whether user created ticket after viewing (article didn't help). 6. Agent retires stale articles: identifies articles not viewed in 12 months or consistently rated 'not helpful' - archive or update. 7. 70-80% self-service adoption and 40-50 point deflection improvement (60-65% tickets avoided) through AI-curated KB and chatbot guidance.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Knowledge Curation Agent", "Self-Service Chatbot Agent"],
+        "utilityAgents": ["Knowledge Base API", "NLP Engine", "Chatbot Platform", "Confluence/SharePoint Integration"]
+      },
+      "dataSources": [
+        "Resolved incident tickets with resolution notes and steps",
+        "Knowledge base articles and metadata (views, ratings, publish date)",
+        "Employee search queries and click behavior",
+        "Chatbot conversation transcripts and resolution outcomes",
+        "Article effectiveness metrics (helpfulness ratings, ticket creation after view)",
+        "Technician subject matter expertise and article authorship",
+        "Software and system change log for content update triggers"
+      ],
+      "benefits": [
+        "40-50 point deflection improvement (60-65% vs 10-15%) reducing ticket volume",
+        "70-80% self-service adoption through chatbot guidance and relevant content",
+        "Auto-generated articles from tickets eliminate manual creation burden",
+        "Semantic search finds relevant articles (precision vs keyword noise)",
+        "Continuous KB curation retires stale content maintaining 80-90% accuracy",
+        "Chatbot guides employees through troubleshooting improving resolution success"
+      ],
+      "metrics": ["KB article accuracy: 80-90%", "Self-service adoption: 70-80%", "Ticket deflection rate: 60-65%", "Article creation: Automated (from resolved tickets)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy chatbot for top 10 common IT issues (password reset, VPN, software install)", "Implement semantic search replacing keyword search for better article relevance", "Enable auto-article generation from top 20 recurring resolved incidents"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Knowledge base platform (ServiceNow KB, Confluence, SharePoint) with API", "Chatbot platform (ServiceNow Virtual Agent, Microsoft Bot Framework)", "NLP engine for semantic search and article generation", "Integration with ITSM for resolved ticket analysis", "Slack/Teams integration for chatbot deployment", "Historical incident data for common issue identification", "SME review workflow for auto-generated article approval"]
+    },
+    "icon": "book-open",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-service-catalog-request-fulfillment",
+    "type": "function",
+    "level": 4,
+    "label": "Service Catalog & Request Fulfillment",
+    "description": "Self-service catalog with automated provisioning and policy-based approvals achieving 70-85% fulfillment time reduction from 5-10 days to 1-2 days with 90%+ auto-provisioning rate.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee emails manager requesting software license or hardware: 'Need Adobe Creative Cloud license for design work'. 2. Manager approves via email reply (if remembered). 3. IT procurement receives forwarded email thread, manually creates purchase request in system. 4. Procurement sends requisition to vendor, vendor ships license or hardware in 3-5 days. 5. IT technician manually provisions software license, adds user to Active Directory group, sends credentials via email. 6. Total fulfillment time 5-10 days due to manual approvals, procurement, and provisioning. 7. No self-service catalog (employees don't know what's available or how to request).",
+      "constraints": [
+        "Email-based request process slow and manual (5-10 day fulfillment)",
+        "Manual approvals via email create delays and lost requests",
+        "No self-service catalog (employees unaware of available services)",
+        "Manual procurement and provisioning labor-intensive",
+        "No policy-based auto-approval (all requests require human review)",
+        "Inconsistent provisioning (different technicians follow different procedures)"
+      ],
+      "metrics": ["Request fulfillment time: 5-10 days", "Auto-provisioning rate: 0%", "Self-service adoption: 0%", "Request approval time: 1-3 days (manual)"]
+    },
+    "agentic": {
+      "workflow": "1. Employee browses self-service catalog in portal: sees Adobe Creative Cloud, Microsoft Office, laptop upgrades, conference room booking, VPN access requests. 2. Employee requests Adobe license, Request Fulfillment Agent routes to policy-based approval: manager auto-approved for <$500 items, department head required for >$500. 3. Manager receives Slack notification, approves in one click within 30 minutes. 4. Provisioning Automation Agent triggers workflows: creates Okta account, assigns Adobe license from pool, adds user to AD security group, sends welcome email with credentials. 5. Employee receives access within 1-2 days (vs 5-10 days manual). 6. 90%+ auto-provisioning rate eliminates manual technician work for standard requests. 7. Catalog standardization ensures consistent provisioning and compliance (all users provisioned identically).",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["Request Fulfillment Agent", "Provisioning Automation Agent"],
+        "utilityAgents": ["ITSM API", "Active Directory/Okta", "Cloud Provisioning APIs", "Workflow Engine"]
+      },
+      "dataSources": [
+        "Service catalog items with pricing and approval policies",
+        "Employee request history and fulfillment metrics",
+        "Approval policies by request type, cost, and requester role",
+        "Manager approval response times and patterns",
+        "Active Directory/Okta user and group data",
+        "Software license pool inventory and availability",
+        "Provisioning workflow templates and automation scripts",
+        "Vendor APIs for license procurement and activation"
+      ],
+      "benefits": [
+        "70-85% fulfillment time reduction (1-2 days vs 5-10 days) through automation",
+        "90%+ auto-provisioning rate eliminates manual technician work",
+        "Self-service catalog improves employee experience and awareness",
+        "Policy-based auto-approval (manager, department head, procurement thresholds)",
+        "Slack/Teams approval enables 30-minute approval vs 1-3 day email cycle",
+        "Standardized provisioning ensures consistency and compliance"
+      ],
+      "metrics": ["Request fulfillment time: 1-2 days", "Auto-provisioning rate: 90%+", "Self-service adoption: 80-90%", "Request approval time: 30 min - 2 hours (automated)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy self-service catalog for top 10 common requests (software licenses, hardware)", "Implement policy-based auto-approval for low-cost items (<$500)", "Enable Slack/Teams approval notifications for faster manager response"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ITSM platform with service catalog and workflow automation", "Integration with Active Directory/Okta for user provisioning", "Cloud provider APIs for infrastructure provisioning (AWS, Azure)", "Approval policies defined by request type and cost threshold", "Slack/Teams integration for approval notifications", "Software license inventory and vendor API access", "Provisioning automation workflows (Ansible, PowerShell, Terraform)", "Service catalog content creation and documentation"]
+    },
+    "icon": "shopping-cart",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sla-management-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "SLA Management & Reporting",
+    "description": "Real-time SLA monitoring with predictive breach alerts and auto-escalation achieving 80-90% SLA achievement versus 60-70% reactive tracking with executive dashboards.",
+    "parentCapability": "capability-it-service-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. SLA policies defined in ITSM system (Priority 1: respond 1 hour, resolve 4 hours; Priority 2: respond 4 hours, resolve 24 hours). 2. Tickets assigned SLA targets automatically when created. 3. Technicians unaware of SLA deadlines while working tickets (no alerts or reminders). 4. SLA breaches discovered after the fact when ticket remains open past deadline. 5. IT manager generates monthly SLA report showing 60-70% achievement: 'Last month we met SLA on 65% of tickets'. 6. No root cause analysis or corrective action (report shows we're bad, but no plan to improve). 7. Reactive breach management (fix after it's too late) vs proactive prevention.",
+      "constraints": [
+        "60-70% SLA achievement due to lack of real-time monitoring",
+        "Technicians unaware of SLA deadlines (no alerts or visibility)",
+        "SLA breaches discovered after deadline passed (too late to recover)",
+        "Monthly reporting cycle too slow for corrective action",
+        "No predictive alerts (can't prevent breaches proactively)",
+        "No auto-escalation when tickets at risk of SLA breach"
+      ],
+      "metrics": ["SLA achievement: 60-70%", "Breach notification: After deadline (reactive)", "Escalation: Manual (if at all)", "Reporting frequency: Monthly"]
+    },
+    "agentic": {
+      "workflow": "1. SLA Monitoring Agent tracks ticket SLAs in real-time: 'Priority 1 ticket created, SLA target 1 hour response, 4 hours resolution - clock starts'. 2. Agent provides technician with SLA visibility: dashboard shows tickets sorted by SLA urgency (red = 30 min remaining, yellow = 2 hours, green = 4+ hours). 3. Predictive Escalation Agent forecasts SLA breach: 'Ticket #12345 assigned to Sarah, she has 5 other tickets, average resolution time 6 hours, SLA target 4 hours - likely breach, escalate now'. 4. Agent auto-escalates at-risk tickets: sends Slack alert to manager 2 hours before SLA deadline: 'Ticket #12345 at risk of breach, reassign to available technician?'. 5. Manager reassigns ticket, SLA met. 6. Agent generates executive dashboards: real-time SLA achievement by team, technician, priority with drill-down into breach root causes. 7. 80-90% SLA achievement through proactive monitoring and escalation vs 60-70% reactive tracking.",
+      "agents": {
+        "orchestrator": "ITSM Orchestration Agent",
+        "superAgents": ["SLA Monitoring Agent", "Predictive Escalation Agent"],
+        "utilityAgents": ["ITSM API", "BI Dashboard", "Alerting System", "Executive Reporting Engine"]
+      },
+      "dataSources": [
+        "SLA policies and targets by ticket priority and type",
+        "Ticket creation, assignment, and resolution timestamps",
+        "Technician workload and average resolution time by ticket type",
+        "SLA breach history and root cause analysis",
+        "Escalation rules and notification preferences",
+        "Real-time ticket status and SLA countdown timers",
+        "Executive dashboard metrics (achievement by team, priority, time period)"
+      ],
+      "benefits": [
+        "80-90% SLA achievement (vs 60-70%) through proactive monitoring",
+        "Predictive breach alerts 2-4 hours before deadline enable prevention",
+        "Auto-escalation ensures at-risk tickets get leadership attention",
+        "Real-time dashboards vs monthly reports (immediate visibility)",
+        "Technician SLA awareness (red/yellow/green ticket prioritization)",
+        "Root cause analysis identifies systemic issues (understaffing, training gaps)"
+      ],
+      "metrics": ["SLA achievement: 80-90%", "Breach notification: 2-4 hours before deadline (predictive)", "Escalation: Automated (at-risk tickets)", "Reporting frequency: Real-time (dashboard)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time SLA dashboard showing ticket urgency (red/yellow/green)", "Implement predictive breach alerts 2 hours before SLA deadline", "Enable auto-escalation rules for at-risk tickets to manager via Slack"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["ITSM platform with SLA tracking and API access", "SLA policies defined by ticket priority and type", "Technician average resolution time data for predictive modeling", "BI dashboard platform for real-time visualization", "Alerting system with Slack/Teams integration", "Escalation rules and notification workflows configured", "Executive reporting requirements and KPIs defined"]
+    },
+    "icon": "clock",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "id": "industry-hospitality",
+  "type": "industry",
+  "label": "Hospitality",
+  "description": "Hotels, resorts, vacation rentals, and lodging properties providing temporary accommodations, characterized by service intensity, dynamic pricing, and experience-driven differentiation.",
+  "marketSize": "$240 billion (US hotel industry revenue, 2023)",
+  "growthRate": "5-7% annually (post-pandemic recovery)",
+  "characteristics": [
+    "Service intensity (3-5 guest touchpoints per stay, 200-400 employees per 500-room hotel)",
+    "Inventory perishability (unsold room-night = $0 revenue, cannot be stored)",
+    "Capital intensive ($150K-$500K per room investment, 20-30 year asset lifecycle)",
+    "Revenue complexity (rooms + F&B + spa + meetings + parking + amenities)",
+    "Labor intensive (25-35% of revenue, 0.5-1.5 employees per room)",
+    "Distribution costs (15-30% of revenue to OTAs, GDS, metasearch)",
+    "Reputation sensitivity (1-star drop in ratings = 10-20% occupancy loss)"
+  ],
+  "segments": [
+    "Luxury Hotels (Four Seasons, Ritz-Carlton, St. Regis) - $400-$1,500 ADR, personalization, high-touch service",
+    "Upper Upscale (Marriott, Hilton, Hyatt flagship brands) - $150-$350 ADR, full-service, loyalty-driven",
+    "Upscale (Courtyard, DoubleTree, Hyatt Place) - $100-$200 ADR, select-service, business travel focus",
+    "Midscale (Holiday Inn, Best Western, Ramada) - $70-$120 ADR, limited service, highway/suburban",
+    "Economy (Motel 6, Super 8, Days Inn) - $50-$80 ADR, minimal amenities, price-sensitive",
+    "Resorts (Atlantis, Disney, Sandals) - All-inclusive or premium, destination focus, F&B heavy",
+    "Vacation Rentals (Airbnb, VRBO, Vacasa) - Whole-home, local experience, peer-to-peer"
+  ],
+  "stats": {
+    "totalRooms": "5.4M+ rooms (US hotel supply)",
+    "occupancyRate": "60-70% average (traditional), 65-75% (agentic)",
+    "averageDailyRate": "$100-$150 (US average), $200-$400 (luxury)",
+    "revPAR": "$60-$100 typical, $250-$600 luxury",
+    "laborCost": "25-35% of revenue",
+    "distributionCost": "15-30% of revenue (OTA commissions, metasearch)",
+    "directBookingShare": "30-50% traditional, 40-60% agentic",
+    "guestSatisfaction": "75-85% traditional, 85-95% agentic (satisfaction scores)",
+    "housekeepingTime": "25-35 min/room traditional, 20-28 min/room agentic",
+    "checkInTime": "3-5 min traditional, 1-2 min agentic (mobile check-in)",
+    "roomRevenueShare": "60-75% of total (remaining: F&B, spa, parking, other)",
+    "loyaltyMemberRevenue": "50-70% of room nights from loyalty members"
+  },
+  "createdAt": "2025-01-09T00:00:00Z",
+  "updatedAt": "2025-01-09T00:00:00Z",
+  "version": "1.0.0",
+  "x": 800,
+  "y": 0,
+  "color": "#1E3A8A",
+  "icon": "hotel"
+}

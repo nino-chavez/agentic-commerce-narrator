@@ -1,0 +1,102 @@
+# Agent OS Configuration for Agentic Commerce Narrator
+# Version: 3.0.0
+# Last Updated: 2025-10-21
+
+version: "3.0.0"
+
+# Project Configuration
+project:
+  name: "agentic-commerce-narrator"
+  type: "web-fullstack"
+  description: "Knowledge graph visualization platform for enterprise digital transformation - Traditional vs Agentic commerce models"
+
+# Technology Stack
+tech_stack:
+  framework: "React 18"
+  language: "TypeScript"
+  styling: "Tailwind CSS v4"
+  visualization: "ReactFlow, D3.js patterns, Framer Motion"
+  testing: "jest"
+  build: "vite"
+  lint: "eslint"
+
+# Workflow Modes (Simplified)
+workflow:
+  default_mode: "fast"    # Use fast mode for 95% of work
+
+  fast_mode:
+    validations: ["lint", "type-check", "build"]
+    manual_reviews: []    # No manual reviews
+    token_budget: 1000
+    time_estimate: "5-15 minutes"
+
+  careful_mode:
+    validations: ["lint", "type-check", "unit-tests", "integration-tests", "build"]
+    manual_reviews: ["architecture", "performance"]  # Only when triggered
+    token_budget: 5000
+    time_estimate: "30-60 minutes"
+
+# Quality Gates (Automated First)
+quality_gates:
+  always_automated:
+    - "linting"
+    - "type_checking"
+    - "build_verification"
+
+  conditional_manual:
+    - trigger: "graph|data-model|types"
+      review: "architecture_review"
+      reason: "Graph data model is critical - 1,426 nodes across 7 levels"
+    - trigger: "performance|reactflow|visualization"
+      review: "performance_review"
+      reason: "Visualization performance with large datasets"
+    - trigger: "nlp|search|filters"
+      review: "architecture_review"
+      reason: "Core search/filter functionality"
+
+# Agent Model (Simplified)
+agents:
+  primary: "single_agent"  # One agent handles most work
+  specialists:             # Called only for specific domains
+    - "architecture"       # For graph data model changes
+    - "performance"        # For visualization optimizations
+    - "ux-ui"             # For diagram and component UX
+
+# Project-Specific Considerations
+project_specific:
+  critical_files:
+    - "data/types/graph.ts"           # 7-level node hierarchy
+    - "data/utils/applyFilters.ts"    # Core filtering logic
+    - "data/services/nlpService.ts"   # Natural language processing
+    - "data/components/CapabilityExplorer/"  # Master component
+
+  data_integrity:
+    - "Maintain type safety across 7-level node hierarchy"
+    - "Preserve domain-to-layer mappings"
+    - "Validate edge relationships (5 types)"
+    - "Ensure backward compatibility for shareable URLs"
+
+  performance_targets:
+    - "Graph rendering: < 2s for 1,426 nodes"
+    - "Filter operations: < 100ms"
+    - "Lazy loading for view components"
+    - "Bundle size: < 5MB (with pre-compiled data)"
+
+# Token Optimization
+token_optimization:
+  batch_operations: true
+  caching: true
+  fail_fast: true
+  max_redundant_reviews: 0
+
+# Success Metrics (Streamlined)
+metrics:
+  efficiency:
+    token_cost_per_task: "< 1000"
+    feedback_time: "< 10 minutes"
+    false_positives: "< 5%"
+
+  quality:
+    type_safety: "100%"
+    build_success: "> 95%"
+    resolution_time: "< 2 hours"

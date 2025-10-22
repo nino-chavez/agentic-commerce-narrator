@@ -1,0 +1,750 @@
+[
+  {
+    "id": "agent-ats-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Applicant Tracking System (ATS) API",
+    "description": "Integration layer for ATS platforms (Workday, Greenhouse, Lever) enabling candidate data access, application management, and hiring workflow automation.",
+    "capabilities": [
+      "Access candidate profiles and application data",
+      "Update candidate status and stage transitions",
+      "Manage job requisitions and postings",
+      "Retrieve interview schedules and feedback",
+      "Export hiring analytics and reports"
+    ],
+    "integrations": [
+      "Workday Recruiting",
+      "Greenhouse",
+      "Lever",
+      "iCIMS",
+      "Taleo"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "database",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-job-board-apis",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Job Board APIs",
+    "description": "Integration with major job boards (LinkedIn, Indeed, Glassdoor) for automated job posting, application import, and candidate sourcing.",
+    "capabilities": [
+      "Post jobs to multiple boards simultaneously",
+      "Import applications from job boards to ATS",
+      "Track job board performance and analytics",
+      "Manage job board budgets and spending",
+      "Access candidate profiles and resumes"
+    ],
+    "integrations": [
+      "LinkedIn Jobs API",
+      "Indeed API",
+      "Glassdoor API",
+      "ZipRecruiter API",
+      "CareerBuilder API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "globe",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-background-check-vendors",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Background Check Vendor APIs",
+    "description": "Integration with background screening providers (Sterling, HireRight, Checkr) for automated background check initiation, status tracking, and results retrieval.",
+    "capabilities": [
+      "Initiate background check orders",
+      "Track check status and completion",
+      "Retrieve background check results",
+      "Verify I-9 and work authorization",
+      "Maintain compliance documentation"
+    ],
+    "integrations": [
+      "Sterling Background Check API",
+      "HireRight API",
+      "Checkr API",
+      "First Advantage API",
+      "E-Verify"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-calendar-apis",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Calendar APIs",
+    "description": "Integration with calendar systems (Outlook, Google Calendar) for scheduling, availability checking, and meeting coordination.",
+    "capabilities": [
+      "Check interviewer availability",
+      "Create and update calendar events",
+      "Send meeting invitations",
+      "Manage room booking",
+      "Generate video conference links"
+    ],
+    "integrations": [
+      "Microsoft Outlook Calendar API",
+      "Google Calendar API",
+      "Office 365 Calendar API",
+      "Exchange Server API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calendar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-video-interview-platforms",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Video Interview Platform APIs",
+    "description": "Integration with video conferencing tools (Zoom, Teams, Google Meet) for generating meeting links, recording interviews, and managing virtual interview rooms.",
+    "capabilities": [
+      "Generate video meeting links",
+      "Schedule and manage video interviews",
+      "Record interview sessions",
+      "Share meeting credentials",
+      "Track interview attendance"
+    ],
+    "integrations": [
+      "Zoom API",
+      "Microsoft Teams API",
+      "Google Meet API",
+      "Webex API",
+      "HireVue"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "video-camera",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-hris-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "HRIS API",
+    "description": "Integration with Human Resource Information Systems (Workday, BambooHR, ADP) for employee data access, org chart management, and HR process automation.",
+    "capabilities": [
+      "Access employee master data",
+      "Update employee records",
+      "Retrieve organizational hierarchy",
+      "Manage employee lifecycle events",
+      "Generate HR reports and analytics"
+    ],
+    "integrations": [
+      "Workday HCM API",
+      "BambooHR API",
+      "ADP Workforce Now API",
+      "UKG Pro API",
+      "SAP SuccessFactors API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "database",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-it-service-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "IT Service Management API",
+    "description": "Integration with ITSM platforms (ServiceNow, Jira Service Management) for IT provisioning tickets, access requests, and equipment orders.",
+    "capabilities": [
+      "Create IT service tickets",
+      "Track ticket status and resolution",
+      "Automate provisioning workflows",
+      "Manage IT asset assignments",
+      "Generate IT service reports"
+    ],
+    "integrations": [
+      "ServiceNow API",
+      "Jira Service Management API",
+      "BMC Remedy API",
+      "Freshservice API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "ticket",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-identity-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Identity Management API",
+    "description": "Integration with identity and access management platforms (Active Directory, Okta, Azure AD) for user provisioning, access control, and authentication.",
+    "capabilities": [
+      "Create and manage user accounts",
+      "Provision application access",
+      "Manage role-based access control",
+      "Revoke access upon termination",
+      "Audit access logs"
+    ],
+    "integrations": [
+      "Active Directory API",
+      "Okta API",
+      "Azure Active Directory API",
+      "OneLogin API",
+      "Ping Identity API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "key",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-lms-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Learning Management System (LMS) API",
+    "description": "Integration with LMS platforms (Cornerstone, Docebo, Degreed) for training enrollment, progress tracking, and learning content delivery.",
+    "capabilities": [
+      "Enroll employees in courses",
+      "Track learning progress and completion",
+      "Access course catalog and content",
+      "Generate learning reports",
+      "Manage certifications and compliance training"
+    ],
+    "integrations": [
+      "Cornerstone OnDemand API",
+      "Docebo API",
+      "Degreed API",
+      "SAP Litmos API",
+      "Absorb LMS API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "book-open",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-content-platform-apis",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Content Platform APIs",
+    "description": "Integration with online learning content providers (LinkedIn Learning, Coursera, Udemy) for course catalog access and learner enrollment.",
+    "capabilities": [
+      "Access course catalogs",
+      "Enroll learners in courses",
+      "Track course completion",
+      "Retrieve course ratings and reviews",
+      "Manage content licenses"
+    ],
+    "integrations": [
+      "LinkedIn Learning API",
+      "Coursera API",
+      "Udemy Business API",
+      "Pluralsight API",
+      "edX API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-performance-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Performance Management Platform API",
+    "description": "Integration with performance management systems (Workday, 15Five, Lattice) for goal tracking, feedback collection, and performance reviews.",
+    "capabilities": [
+      "Manage goals and OKRs",
+      "Collect and store feedback",
+      "Conduct performance reviews",
+      "Track development plans",
+      "Generate performance reports"
+    ],
+    "integrations": [
+      "Workday Performance Management API",
+      "15Five API",
+      "Lattice API",
+      "BetterWorks API",
+      "CultureAmp API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-survey-tools-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Survey Tools API",
+    "description": "Integration with survey platforms (Qualtrics, SurveyMonkey, Typeform) for engagement surveys, pulse surveys, and feedback collection.",
+    "capabilities": [
+      "Create and distribute surveys",
+      "Collect survey responses",
+      "Analyze survey results",
+      "Generate reports and dashboards",
+      "Trigger follow-up actions"
+    ],
+    "integrations": [
+      "Qualtrics API",
+      "SurveyMonkey API",
+      "Typeform API",
+      "Glint API",
+      "Peakon API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "clipboard-list",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-benefits-admin-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Benefits Administration Platform API",
+    "description": "Integration with benefits admin systems (Benefitfocus, Businessolver, Workday Benefits) for enrollment, plan management, and carrier integration.",
+    "capabilities": [
+      "Manage benefits enrollment",
+      "Update plan elections",
+      "Process life events",
+      "Integrate with insurance carriers",
+      "Generate benefits reports"
+    ],
+    "integrations": [
+      "Benefitfocus API",
+      "Businessolver API",
+      "Workday Benefits API",
+      "ADP Benefits API",
+      "PlanSource API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "heart",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-payroll-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Payroll System API",
+    "description": "Integration with payroll systems (ADP, Paychex, Workday Payroll) for compensation data, time and attendance import, and payroll processing.",
+    "capabilities": [
+      "Import time and attendance data",
+      "Update compensation information",
+      "Process payroll runs",
+      "Generate pay statements",
+      "Manage payroll deductions"
+    ],
+    "integrations": [
+      "ADP Workforce Now Payroll API",
+      "Paychex API",
+      "Workday Payroll API",
+      "Gusto API",
+      "Paylocity API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "currency-dollar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-market-data-providers-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Market Data Provider APIs",
+    "description": "Integration with compensation survey providers (Payscale, Salary.com, Radford, Mercer) for market salary benchmarking and pay equity analysis.",
+    "capabilities": [
+      "Access salary survey data",
+      "Benchmark jobs to market",
+      "Retrieve compensation trends",
+      "Analyze pay competitiveness",
+      "Generate compensation reports"
+    ],
+    "integrations": [
+      "Payscale API",
+      "Salary.com API",
+      "Radford Survey API",
+      "Mercer Compensation Data API",
+      "Willis Towers Watson API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-line",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-time-attendance-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Time & Attendance System API",
+    "description": "Integration with time tracking platforms (Kronos, ADP Time, UKG) for time capture, approval workflows, and payroll integration.",
+    "capabilities": [
+      "Capture time punches",
+      "Manage employee schedules",
+      "Process time approvals",
+      "Track PTO and leave",
+      "Export time data to payroll"
+    ],
+    "integrations": [
+      "Kronos Workforce Central API",
+      "ADP Time & Attendance API",
+      "UKG Pro Workforce Management API",
+      "Workday Time Tracking API",
+      "Deputy API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "clock",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-biometric-time-clocks",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Biometric Time Clock Hardware",
+    "description": "Hardware integration with biometric time clocks (fingerprint, facial recognition) for secure time capture and buddy punch prevention.",
+    "capabilities": [
+      "Capture biometric time punches",
+      "Verify employee identity",
+      "Prevent buddy punching",
+      "Sync time data to system",
+      "Manage device configuration"
+    ],
+    "integrations": [
+      "Kronos InTouch Time Clocks",
+      "ADP Time Clocks",
+      "UKG Time Clocks",
+      "ZKTeco Biometric Devices",
+      "TimeClock Plus Hardware"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "finger-print",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-people-analytics-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "People Analytics Platform API",
+    "description": "Integration with people analytics tools (Visier, OneModel, Workday VNDLY) for workforce insights, predictive modeling, and reporting.",
+    "capabilities": [
+      "Access workforce data and metrics",
+      "Run predictive analytics models",
+      "Generate dashboards and reports",
+      "Perform scenario modeling",
+      "Export data for analysis"
+    ],
+    "integrations": [
+      "Visier People API",
+      "OneModel API",
+      "Workday Prism Analytics API",
+      "IBM Watson Talent Insights API",
+      "SAP Analytics Cloud API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-pie",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-engagement-platform-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Engagement Platform API",
+    "description": "Integration with employee engagement platforms (Culture Amp, Glint, Peakon) for pulse surveys, sentiment analysis, and action planning.",
+    "capabilities": [
+      "Deliver pulse surveys",
+      "Collect employee feedback",
+      "Analyze engagement trends",
+      "Generate manager insights",
+      "Track action plan progress"
+    ],
+    "integrations": [
+      "Culture Amp API",
+      "Glint API",
+      "Peakon (Workday) API",
+      "Qualtrics Employee Experience API",
+      "TINYpulse API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "heart",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-case-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Case Management System API",
+    "description": "Integration with case management platforms (ServiceNow, Salesforce Service Cloud) for employee relations case tracking, investigation workflows, and compliance reporting.",
+    "capabilities": [
+      "Create and manage ER cases",
+      "Track investigation workflows",
+      "Store case documentation",
+      "Generate compliance reports",
+      "Maintain audit trails"
+    ],
+    "integrations": [
+      "ServiceNow HR Service Delivery API",
+      "Salesforce Service Cloud API",
+      "Zendesk API",
+      "Freshdesk API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "clipboard-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-eap-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Employee Assistance Program (EAP) API",
+    "description": "Integration with EAP providers for mental health support referrals, crisis intervention, and counseling services.",
+    "capabilities": [
+      "Make EAP referrals",
+      "Track utilization",
+      "Access crisis support",
+      "Generate anonymized reports",
+      "Manage provider network"
+    ],
+    "integrations": [
+      "ComPsych API",
+      "Magellan Healthcare API",
+      "Optum EAP API",
+      "LifeWorks API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "support",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-compliance-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Compliance Management Platform API",
+    "description": "Integration with compliance systems (Mitratech, Navex Global) for policy management, compliance tracking, and regulatory reporting.",
+    "capabilities": [
+      "Manage compliance calendars",
+      "Track regulatory requirements",
+      "Store compliance documentation",
+      "Generate audit reports",
+      "Monitor policy acknowledgments"
+    ],
+    "integrations": [
+      "Mitratech Compliance API",
+      "Navex Global API",
+      "Convercent API",
+      "OneTrust API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-regulatory-intelligence-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Regulatory Intelligence Service API",
+    "description": "Integration with legal research platforms (Thomson Reuters, Bloomberg Law) for monitoring regulatory changes, court rulings, and compliance updates.",
+    "capabilities": [
+      "Monitor regulatory changes",
+      "Access legal research",
+      "Track court rulings",
+      "Receive compliance alerts",
+      "Generate legal briefings"
+    ],
+    "integrations": [
+      "Thomson Reuters Practical Law API",
+      "Bloomberg Law API",
+      "LexisNexis API",
+      "Wolters Kluwer API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "document-search",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-document-management-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Document Management System API",
+    "description": "Integration with document repositories (SharePoint, Box, Google Drive) for HR document storage, version control, and access management.",
+    "capabilities": [
+      "Store and retrieve documents",
+      "Manage document versions",
+      "Control access permissions",
+      "Search document repository",
+      "Track document history"
+    ],
+    "integrations": [
+      "SharePoint API",
+      "Box API",
+      "Google Drive API",
+      "Dropbox API",
+      "DocuWare API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "folder",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-email-sms-gateway",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Email/SMS Gateway API",
+    "description": "Integration with communication services (SendGrid, Twilio) for automated email and SMS notifications, reminders, and alerts.",
+    "capabilities": [
+      "Send automated emails",
+      "Send SMS notifications",
+      "Track delivery status",
+      "Manage communication templates",
+      "Handle opt-in/opt-out"
+    ],
+    "integrations": [
+      "SendGrid API",
+      "Twilio API",
+      "Mailchimp Transactional API",
+      "Amazon SES API",
+      "Plivo API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "mail",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-collaboration-tools-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Collaboration Tools API",
+    "description": "Integration with workplace collaboration platforms (Slack, Microsoft Teams) for real-time feedback, notifications, and chatbot interactions.",
+    "capabilities": [
+      "Send notifications and alerts",
+      "Collect feedback via bot",
+      "Post updates to channels",
+      "Manage user interactions",
+      "Integrate workflows"
+    ],
+    "integrations": [
+      "Slack API",
+      "Microsoft Teams API",
+      "Google Chat API",
+      "Workplace by Facebook API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chat",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-financial-planning-api",
+    "type": "agent",
+    "level": 6,
+    "role": "utility",
+    "label": "Financial Planning System API",
+    "description": "Integration with FP&A platforms (Anaplan, Adaptive Insights) for workforce budgeting, headcount planning, and financial scenario modeling.",
+    "capabilities": [
+      "Access budget data",
+      "Model headcount scenarios",
+      "Track budget utilization",
+      "Integrate workforce costs",
+      "Generate financial reports"
+    ],
+    "integrations": [
+      "Anaplan API",
+      "Adaptive Insights API",
+      "Workday Adaptive Planning API",
+      "Oracle Hyperion API"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calculator",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

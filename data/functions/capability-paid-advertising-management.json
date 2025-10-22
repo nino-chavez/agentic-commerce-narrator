@@ -1,0 +1,380 @@
+[
+  {
+    "id": "function-cross-platform-ad-campaign-management",
+    "type": "function",
+    "level": 4,
+    "label": "Cross-Platform Ad Campaign Management",
+    "description": "Unified management of ad campaigns across Google, Meta, Amazon, TikTok with centralized optimization and 50-70% reduction in campaign management overhead.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Media buyers manually log into each platform (Google Ads, Meta Ads Manager, Amazon Advertising) separately. 2. Create campaigns individually in each platform with inconsistent naming, targeting, and creative. 3. Manually check performance daily by switching between platforms. 4. Copy/paste data into spreadsheets to compare performance across platforms. 5. Campaign setup and daily management requires 15-20 hours per week across platforms.",
+      "constraints": [
+        "Platform silos require 15-20 hours weekly for management and reporting",
+        "Inconsistent campaign setup across platforms leads to measurement gaps",
+        "Manual data aggregation in spreadsheets error-prone and time-consuming",
+        "No unified view of cross-platform customer journey",
+        "Budget shifts between platforms require manual reallocation (weekly at best)",
+        "Each platform optimizes in isolation without cross-platform learning"
+      ],
+      "metrics": ["Management time: 15-20 hrs/week", "Platform integration: Siloed", "Budget reallocation: Weekly manual"]
+    },
+    "agentic": {
+      "workflow": "1. Campaign Management Agent creates campaigns across all platforms from single brief with unified naming and taxonomy. 2. Creative Distribution Agent automatically sizes and formats assets for each platform's requirements. 3. Performance Monitoring Agent aggregates real-time performance across all platforms in unified dashboard. 4. Cross-Platform Optimization Agent shifts budgets between platforms based on performance. 5. Agent learns which platform performs best for each audience segment and product category.",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Campaign Management Agent", "Performance Monitoring Agent", "Cross-Platform Optimization Agent"],
+        "utilityAgents": ["Google Ads API", "Meta Marketing API", "Amazon Advertising API", "TikTok Ads API", "Creative Management"]
+      },
+      "dataSources": [
+        "Campaign performance data from all ad platforms",
+        "Cross-platform customer journey data",
+        "Creative asset library and performance by platform",
+        "Budget allocation and spend data",
+        "Conversion data and attribution across platforms",
+        "Audience overlap and platform preference data"
+      ],
+      "benefits": [
+        "50-70% reduction in campaign management time (15-20 hrs to 5-7 hrs/week)",
+        "Unified dashboard provides single view across all platforms",
+        "Automated budget optimization shifts spend to best-performing platforms daily",
+        "Consistent campaign setup ensures accurate cross-platform measurement",
+        "Creative automatically formatted for each platform's specifications",
+        "Cross-platform learning improves audience targeting and budget allocation"
+      ],
+      "metrics": ["Management time: 5-7 hrs/week", "Platform integration: Unified", "Budget reallocation: Automated daily"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement unified performance dashboard", "Automate cross-platform reporting"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["API access to all ad platforms", "Campaign management platform or integration layer", "Unified analytics and attribution", "Creative asset management system"]
+    },
+    "icon": "megaphone",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-programmatic-advertising-rtb",
+    "type": "function",
+    "level": 4,
+    "label": "Programmatic Advertising & Real-Time Bidding",
+    "description": "AI-driven programmatic buying with real-time bidding optimization achieving 30-50% better cost efficiency and 2-4x scale vs direct buys.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Media planner negotiates direct deals with publishers and ad networks manually. 2. Fixed CPM rates agreed upfront with minimum spend commitments. 3. Limited inventory access (only what's available through direct relationships). 4. Manual insertion orders and campaign trafficking (2-5 day lead time). 5. Post-campaign reporting shows wasted spend on low-performing placements.",
+      "constraints": [
+        "Direct deals limit inventory access to 10-20% of available impressions",
+        "Fixed CPM pricing means overpaying for low-value impressions",
+        "Manual IO process requires 2-5 days to launch or modify campaigns",
+        "No real-time optimization based on performance",
+        "Limited audience targeting (basic demographics and context only)",
+        "Wasted spend on poorly performing placements discovered post-campaign"
+      ],
+      "metrics": ["Inventory access: 10-20% of market", "Bid optimization: None (fixed CPM)", "Cost efficiency: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Programmatic Agent accesses 90%+ of available inventory through demand-side platform (DSP). 2. Real-Time Bidding Agent evaluates every impression in milliseconds: audience match quality, contextual relevance, predicted conversion probability, historical site performance. 3. Dynamic Bidding adjusts bid price per impression based on value (pay more for high-intent users, less for discovery). 4. Performance Optimization Agent continuously learns which placements, contexts, and audiences convert best. 5. Fraud Detection Agent filters invalid traffic in real-time.",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Programmatic Agent", "Real-Time Bidding Agent", "Performance Optimization Agent"],
+        "utilityAgents": ["Demand-Side Platform (DSP)", "Data Management Platform (DMP)", "Fraud Detection", "Attribution Platform"]
+      },
+      "dataSources": [
+        "Real-time ad exchange inventory and pricing",
+        "Audience data and behavioral profiles",
+        "Historical campaign performance by placement",
+        "Conversion probability models",
+        "Contextual relevance signals",
+        "Invalid traffic and fraud patterns"
+      ],
+      "benefits": [
+        "30-50% better cost efficiency through intelligent per-impression bidding",
+        "Access to 90%+ of inventory vs 10-20% via direct deals (2-4x scale)",
+        "Real-time optimization adjusts bids every millisecond vs fixed pricing",
+        "Advanced audience targeting (behavioral, intent, lookalike) vs basic demographics",
+        "Fraud detection prevents 15-25% wasted spend on invalid traffic",
+        "Continuous ML learning improves targeting and bid efficiency over time"
+      ],
+      "metrics": ["Inventory access: 90%+ of market", "Bid optimization: Per-impression ML", "Cost efficiency: 30-50% improvement"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Pilot programmatic for prospecting campaigns", "Implement fraud detection filters"],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Demand-Side Platform (DSP) partnership", "First-party audience data", "Conversion tracking and attribution", "Fraud detection capability", "Sufficient budget scale ($50k+/month)"]
+    },
+    "icon": "trending-up",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ad-creative-optimization-testing",
+    "type": "function",
+    "level": 4,
+    "label": "Ad Creative Optimization & Testing",
+    "description": "Automated creative testing with dynamic assembly and AI-powered insights improving ad performance by 40-80% through continuous optimization.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Creative team manually produces 2-3 ad variations with different messaging/images. 2. Media buyer manually sets up A/B test with equal budget splits. 3. Test runs 2-4 weeks before checking results. 4. Analyst manually analyzes performance and declares winner. 5. Process repeated quarterly - slow iteration limits creative improvement.",
+      "constraints": [
+        "Limited to 2-3 creative variants due to manual production overhead",
+        "2-4 week test cycles mean slow learning and optimization",
+        "Equal budget splits waste spend on losing variants",
+        "Manual analysis delays winner selection and deployment",
+        "No testing of granular elements (headline, image, CTA independently)",
+        "Creative insights not systematically captured for future campaigns"
+      ],
+      "metrics": ["Creative variants: 2-3", "Test duration: 2-4 weeks", "Learning velocity: Quarterly"]
+    },
+    "agentic": {
+      "workflow": "1. Creative Assembly Agent generates dozens of ad variants by combining elements: headlines (10 options), images (15 options), CTAs (8 options), body copy (12 options). 2. Dynamic Creative Optimization serves best-performing combination to each user. 3. Multi-Armed Bandit Algorithm allocates more budget to winning variants automatically. 4. Creative Insights Agent identifies patterns (e.g., 'Product-focused headlines outperform benefit-focused 2:1'). 5. Generative AI Agent creates new variants based on winning patterns.",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Creative Assembly Agent", "Creative Insights Agent"],
+        "utilityAgents": ["Ad Platform DCO", "Multi-Armed Bandit", "Generative AI", "Creative Analytics"]
+      },
+      "dataSources": [
+        "Creative asset library (images, headlines, copy)",
+        "Ad performance data by creative element",
+        "Audience engagement and conversion metrics",
+        "Creative testing results and insights database",
+        "Brand guidelines and approved messaging",
+        "Competitor creative analysis (if available)"
+      ],
+      "benefits": [
+        "40-80% ad performance improvement through continuous creative optimization",
+        "100+ creative variants tested vs 2-3 (granular element-level testing)",
+        "Multi-armed bandit reduces waste on losing variants by 60-80%",
+        "Weekly learning cycles vs quarterly (10-15x faster iteration)",
+        "Automated insights reveal winning patterns for future campaigns",
+        "Generative AI accelerates variant creation (hours vs weeks)"
+      ],
+      "metrics": ["Creative variants: 100+", "Test duration: Continuous", "Learning velocity: Weekly"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable dynamic creative optimization on Facebook/Google", "Test 5 headline variants instead of 2"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Ad platform with DCO capability", "Creative asset library", "Multi-armed bandit or automated optimization", "Sufficient traffic for testing"]
+    },
+    "icon": "palette",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-bid-management-budget-allocation",
+    "type": "function",
+    "level": 4,
+    "label": "Bid Management & Budget Allocation",
+    "description": "AI-driven bid optimization and budget allocation across campaigns delivering 25-45% efficiency improvement through real-time adjustments.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Media buyer sets campaign budgets and bids based on historical performance and intuition. 2. Manual bid adjustments made weekly by reviewing performance reports. 3. Budget reallocation between campaigns requires monthly planning cycles. 4. No real-time response to performance changes or competitive pressure. 5. Overspending on weekends when conversion rates drop, underspending during high-performing windows.",
+      "constraints": [
+        "Weekly bid adjustments miss optimal moments (competitors shift bids hourly)",
+        "Manual budget allocation locked for 30 days (can't respond to performance)",
+        "No time-of-day or day-of-week bid modifiers (flat bids 24/7)",
+        "Intuition-based bidding leaves 20-40% efficiency opportunity on table",
+        "Budget pacing issues: blow budget early or leave unspent at month-end",
+        "No consideration of cross-campaign cannibalization or synergies"
+      ],
+      "metrics": ["Bid adjustment frequency: Weekly", "Budget reallocation: Monthly", "Efficiency opportunity: 20-40% wasted"]
+    },
+    "agentic": {
+      "workflow": "1. Bid Optimization Agent continuously adjusts bids based on: time of day, day of week, device, location, audience segment, competitive pressure, conversion probability. 2. Budget Allocation Agent shifts budgets between campaigns in real-time based on performance and pacing. 3. Portfolio Optimization ensures cross-campaign balance (brand vs acquisition vs retention). 4. Predictive Bidding uses ML models to forecast conversion probability and bid accordingly. 5. Pacing Agent ensures smooth budget delivery (avoid front-loading or leaving unspent budget).",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Bid Optimization Agent", "Budget Allocation Agent", "Portfolio Optimization Agent"],
+        "utilityAgents": ["ML Bidding Models", "Budget Management Platform", "Performance Analytics", "Competitive Intelligence"]
+      },
+      "dataSources": [
+        "Real-time campaign performance (clicks, conversions, spend)",
+        "Historical performance by dimension (time, device, location)",
+        "Conversion probability models",
+        "Competitive bidding data (auction insights)",
+        "Budget pacing and delivery data",
+        "Cross-campaign performance and attribution"
+      ],
+      "benefits": [
+        "25-45% efficiency improvement through intelligent bidding vs manual",
+        "Real-time bid adjustments vs weekly manual changes",
+        "Automated budget reallocation maximizes portfolio performance",
+        "Time-of-day and day-of-week bid modifiers capture high-value windows",
+        "Predictive bidding increases conversion rates 15-30%",
+        "Smooth budget pacing eliminates end-of-month scrambles or waste"
+      ],
+      "metrics": ["Bid adjustment frequency: Real-time continuous", "Budget reallocation: Automated hourly", "Efficiency opportunity: Captured"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable automated bidding for search campaigns", "Implement day-of-week bid modifiers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "1-3 months",
+      "prerequisites": ["Sufficient conversion data for ML models", "Conversion tracking properly configured", "Ad platform automation features", "Historical performance data (90+ days)"]
+    },
+    "icon": "dollar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-attribution-roas-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Attribution & ROAS Tracking",
+    "description": "Multi-touch attribution with incrementality testing revealing true ad contribution and enabling 30-60% more effective budget allocation.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Media buyer relies on platform-reported ROAS from each ad platform (Google, Meta, Amazon). 2. Last-click attribution used - only the final ad before purchase gets credit. 3. Sum of platform-reported conversions exceeds actual sales by 2-3x (duplication). 4. No understanding of incremental impact (would customer have bought anyway?). 5. Budget allocation based on inflated platform-reported ROAS metrics.",
+      "constraints": [
+        "Platform-reported ROAS inflated due to attribution duplication and non-incremental credit",
+        "Last-click attribution undervalues upper-funnel awareness and consideration ads",
+        "Can't identify which channels truly drive incremental sales vs claim credit",
+        "No cross-device or cross-channel journey visibility",
+        "Budget over-allocated to bottom-funnel retargeting (takes credit but low incrementality)",
+        "Can't prove ad effectiveness to CFO (attribution conflicts with sales data)"
+      ],
+      "metrics": ["Attribution model: Last-click platform", "ROAS accuracy: Low (2-3x duplication)", "Incrementality: Unknown"]
+    },
+    "agentic": {
+      "workflow": "1. Attribution Platform tracks complete customer journey across devices and channels. 2. Multi-Touch Attribution Agent applies position-based, time-decay, and algorithmic models to credit all touchpoints. 3. Incrementality Testing Agent runs geo-holdout or PSA tests to measure true incremental impact. 4. Unified Reporting deduplicates conversions across platforms to show true sales attribution. 5. Budget Optimization Agent reallocates spend based on true incremental ROAS not platform claims.",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Multi-Touch Attribution Agent", "Incrementality Testing Agent", "Budget Optimization Agent"],
+        "utilityAgents": ["Attribution Platform", "Incrementality Testing Tool", "CDP", "Analytics Platform"]
+      },
+      "dataSources": [
+        "Complete customer journey data across all touchpoints",
+        "Transaction and conversion data (online and offline)",
+        "Ad exposure data from all platforms",
+        "Incrementality test results (geo-holdout, PSA)",
+        "Cross-device and cross-channel identity graph",
+        "Platform-reported attribution data for comparison"
+      ],
+      "benefits": [
+        "30-60% more effective budget allocation through accurate incrementality measurement",
+        "Multi-touch attribution reveals upper-funnel ads drive 40-60% of conversions (uncredited by last-click)",
+        "Deduplication shows true conversion volume (not inflated 2-3x platform duplication)",
+        "Incrementality testing proves which channels truly drive new sales",
+        "Cross-device journey tracking captures mobile research → desktop purchase paths",
+        "CFO-credible reporting matches ad attribution to actual sales data"
+      ],
+      "metrics": ["Attribution model: Multi-touch algorithmic", "ROAS accuracy: High (deduplicated)", "Incrementality: Measured via testing"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement basic multi-touch attribution", "Run geo-holdout test on largest channel"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Attribution platform or capability", "Cross-device identity resolution", "Incrementality testing methodology", "Complete journey data across channels", "Offline sales data integration"]
+    },
+    "icon": "chart-line",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-audience-targeting-lookalike-modeling",
+    "type": "function",
+    "level": 4,
+    "label": "Audience Targeting & Lookalike Modeling",
+    "description": "AI-powered audience creation with lookalike modeling and behavioral segmentation improving acquisition efficiency by 35-60% vs broad targeting.",
+    "parentCapability": "capability-paid-advertising-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Media buyer creates audiences using basic demographics (age, gender, location). 2. Manual list uploads for retargeting (website visitors, past customers). 3. Broad targeting for prospecting ('Women 25-45 interested in fashion'). 4. No sophisticated segmentation or behavioral patterns. 5. High customer acquisition costs due to untargeted reach.",
+      "constraints": [
+        "Demographic targeting captures only 20-30% of high-value prospects",
+        "Broad prospecting wastes budget on low-probability audiences",
+        "Manual list management doesn't scale beyond basic retargeting",
+        "No behavioral modeling to identify 'looks like my best customers'",
+        "Static audiences don't update as customer behavior evolves",
+        "High CAC due to inefficient targeting (35-50% wasted impressions)"
+      ],
+      "metrics": ["Targeting precision: Low (20-30%)", "Audience types: Basic demos + lists", "CAC efficiency: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Audience Modeling Agent analyzes best customers to identify common patterns: behavioral signals (engagement patterns, content consumption), demographic and psychographic attributes, product preferences and category affinities, purchase timing and lifecycle patterns. 2. Lookalike Expansion Agent builds prospecting audiences that match high-value customer profiles. 3. Behavioral Segmentation creates micro-segments (high-intent, price-sensitive, loyalty-driven). 4. Dynamic Audience Sync automatically updates audiences daily based on behavior. 5. Agent tests and learns which audience segments perform best by product/campaign type.",
+      "agents": {
+        "orchestrator": "Paid Advertising Orchestration Agent",
+        "superAgents": ["Audience Modeling Agent", "Lookalike Expansion Agent", "Behavioral Segmentation Agent"],
+        "utilityAgents": ["Data Management Platform (DMP)", "CDP", "ML Platform", "Ad Platform Audience APIs"]
+      },
+      "dataSources": [
+        "First-party customer data (transactions, behavior, value)",
+        "Website and app behavioral data",
+        "Engagement signals (email, social, content)",
+        "Third-party demographic and interest data",
+        "Ad platform audience insights",
+        "Conversion and CAC data by audience segment"
+      ],
+      "benefits": [
+        "35-60% improvement in acquisition efficiency through precise targeting",
+        "Lookalike models find high-value prospects with 3-5x better conversion rates",
+        "Behavioral segmentation enables personalized messaging (price vs quality vs convenience)",
+        "Dynamic audiences auto-update daily vs static manual lists",
+        "Micro-segmentation (50+ audiences) vs broad targeting (5-10 audiences)",
+        "Continuous learning improves audience models and reduces CAC over time"
+      ],
+      "metrics": ["Targeting precision: High (60-80%)", "Audience types: 50+ behavioral segments", "CAC efficiency: 35-60% improvement"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build lookalike audiences from top 10% customers", "Implement behavioral retargeting (cart abandoners, category browsers)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Customer Data Platform or DMP", "First-party customer data (purchase, behavior, value)", "ML platform for modeling", "Ad platform audience integration", "Sufficient customer base (10k+ for modeling)"]
+    },
+    "icon": "target",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,449 @@
+[
+  {
+    "id": "function-real-time-1to1-personalization",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time 1:1 Personalization",
+    "description": "Sub-second personalization of every page element based on behavioral and contextual signals delivering 45-80% engagement improvement vs generic experiences.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. All website visitors see identical page layout, products, messaging regardless of who they are. 2. Manual A/B testing creates 2-3 page variants for broad segments (new vs returning). 3. Winning variant deployed for all users in that segment (still one-size-fits-all). 4. Personalization limited to 'Welcome back, [Name]' and recently viewed items. 5. Generic experience yields 15-30% engagement and 2-4% conversion rates.",
+      "constraints": [
+        "No behavioral personalization (browsing history, product interests ignored)",
+        "Segment-level personalization still generic (all 'returning customers' see same experience)",
+        "Static page elements don't adapt to individual customer context",
+        "Manual A/B testing limits to 2-3 variants (can't handle 1:1 scale)",
+        "15-30% engagement rates due to irrelevant generic content",
+        "Missed opportunity to serve high-intent customers optimally"
+      ],
+      "metrics": ["Personalization: None to segment-level", "Engagement rate: 15-30%", "Conversion rate: 2-4%"]
+    },
+    "agentic": {
+      "workflow": "1. Real-Time Context Agent captures visitor signals: current session behavior (pages viewed, products clicked), historical data (purchase history, category preferences), contextual factors (referral source, device, location, time of day). 2. Decisioning Engine selects optimal experience from thousands of possibilities in <100ms. 3. Dynamic Rendering Agent personalizes every element: hero banner, product grids, messaging, CTAs, navigation, offers. 4. Learning Agent captures engagement outcomes and optimizes personalization models continuously. 5. Fallback Logic ensures graceful degradation for new visitors without history.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Real-Time Context Agent", "Decisioning Engine", "Dynamic Rendering Agent"],
+        "utilityAgents": ["CDP", "Personalization Platform", "Real-Time Decision Engine", "A/B Testing"]
+      },
+      "dataSources": [
+        "Real-time behavioral stream (clicks, views, scrolls)",
+        "Customer purchase and browsing history",
+        "Propensity models (product interest, purchase intent)",
+        "Contextual signals (referral, device, location, time)",
+        "A/B test results and winning patterns",
+        "Inventory and promotional availability"
+      ],
+      "benefits": [
+        "45-80% engagement improvement through relevant 1:1 experiences",
+        "8-15% conversion rates vs 2-4% generic (3-5x improvement)",
+        "Every page element personalized (hero, products, messaging, navigation)",
+        "Sub-100ms decisioning doesn't impact page load performance",
+        "Thousands of personalization variants vs 2-3 manual segments",
+        "Continuous ML learning improves personalization effectiveness over time"
+      ],
+      "metrics": ["Personalization: 1:1 individual", "Engagement rate: 50-75%", "Conversion rate: 8-15%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Personalize homepage hero based on category affinity", "Show personalized product grids"],
+      "investmentRequired": "High",
+      "timeToValue": "5-8 months",
+      "prerequisites": ["Customer Data Platform", "Real-time decisioning engine", "Personalization platform", "Behavioral tracking", "A/B testing infrastructure", "Sufficient traffic for ML learning"]
+    },
+    "icon": "sparkles",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-behavioral-targeting-segmentation",
+    "type": "function",
+    "level": 4,
+    "label": "Behavioral Targeting & Segmentation",
+    "description": "AI-powered behavioral segmentation with predictive intent scoring enabling hyper-targeted experiences and 40-65% improvement in segment performance.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing creates 5-10 broad segments based on demographics (age, gender) and basic behavior (new vs returning). 2. Segments defined manually using simple rules (e.g., 'Visited 3+ times in 30 days'). 3. Same experience shown to all users in segment regardless of nuanced differences. 4. Segments static and don't update as customer behavior evolves. 5. Limited ability to target micro-segments due to operational complexity.",
+      "constraints": [
+        "5-10 broad segments can't capture behavioral nuances",
+        "Demographic segmentation (age, gender) weak predictor of purchase intent",
+        "Rule-based segments static and don't adapt to changing behavior",
+        "All segment members get same experience despite individual differences",
+        "Can't identify high-intent customers within segment for priority treatment",
+        "Manual segment management doesn't scale beyond basic categories"
+      ],
+      "metrics": ["Segment count: 5-10 broad", "Targeting precision: Low (40-60%)", "Adaptation: Static"]
+    },
+    "agentic": {
+      "workflow": "1. Behavioral Analysis Agent tracks granular behavior patterns: content consumption, search queries, product research depth, price sensitivity signals, engagement velocity. 2. Segmentation Engine creates 50-100+ micro-segments using ML clustering. 3. Intent Scoring Agent predicts purchase propensity and timeline for each visitor. 4. Dynamic Segment Assignment updates segment membership in real-time as behavior changes. 5. Experience Targeting delivers segment-specific content, products, and offers automatically.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Behavioral Analysis Agent", "Segmentation Engine", "Intent Scoring Agent"],
+        "utilityAgents": ["CDP", "ML Platform", "Propensity Modeling", "Personalization Engine"]
+      },
+      "dataSources": [
+        "Behavioral data (browsing, search, engagement patterns)",
+        "Purchase history and transaction data",
+        "Content consumption and time spent",
+        "Price sensitivity signals (coupon usage, cart abandonment)",
+        "Historical conversion patterns by behavior",
+        "Real-time session context"
+      ],
+      "benefits": [
+        "40-65% improvement in segment performance through precise behavioral targeting",
+        "50-100+ micro-segments vs 5-10 broad (granular targeting)",
+        "Predictive intent scoring identifies high-probability buyers (2-3x conversion vs average)",
+        "Real-time segment updates vs static monthly refreshes",
+        "Behavioral segmentation outperforms demographics 3-5x",
+        "Automated segment creation discovers new valuable customer patterns"
+      ],
+      "metrics": ["Segment count: 50-100+ micro", "Targeting precision: High (80-90%)", "Adaptation: Real-time dynamic"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build high-intent visitor segment", "Create price-sensitive vs quality-focused segments"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Customer Data Platform", "Behavioral tracking", "ML platform for segmentation", "Propensity scoring models", "Personalization delivery capability"]
+    },
+    "icon": "target",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-recommendations",
+    "type": "function",
+    "level": 4,
+    "label": "Product Recommendations (Homepage, PDP, Cart)",
+    "description": "ML-powered product recommendations across all touchpoints increasing AOV by 25-45% and conversion by 15-35% through hyper-relevant suggestions.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Merchandiser manually selects 'Featured Products' or 'Best Sellers' to display on homepage. 2. Product detail pages show generic 'Customers Also Bought' based on simple product affinity rules. 3. Cart page shows random or top-selling items as add-ons. 4. Same recommendations shown to all visitors regardless of preferences or context. 5. Recommendations updated manually weekly or monthly.",
+      "constraints": [
+        "Generic recommendations not personalized to individual preferences",
+        "'Best Sellers' approach shows popular items but ignores personal taste",
+        "Rule-based affinity (co-purchase) misses complex preference patterns",
+        "Same recommendations for everyone yields 5-12% click-through rates",
+        "Manual curation limits freshness (weekly/monthly updates)",
+        "Cart recommendations don't consider current cart contents intelligently"
+      ],
+      "metrics": ["Recommendation CTR: 5-12%", "AOV impact: Minimal", "Personalization: Generic"]
+    },
+    "agentic": {
+      "workflow": "1. Recommendation Engine analyzes customer preferences using collaborative filtering, content-based matching, and deep learning models. 2. Context-Aware Agent tailors recommendations by touchpoint: homepage → discovery and inspiration, PDP → complementary and alternative products, cart → add-ons and bundles. 3. Real-Time Personalization factors in: current session behavior, browsing and purchase history, product affinity patterns, inventory and margins. 4. A/B Testing Agent continuously optimizes recommendation algorithms. 5. Cold-Start Handler serves relevant recommendations even for new visitors without history.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Recommendation Engine", "Context-Aware Agent", "A/B Testing Agent"],
+        "utilityAgents": ["ML Platform", "Product Catalog", "Inventory System", "Real-Time Decisioning"]
+      },
+      "dataSources": [
+        "Customer purchase history and product affinity",
+        "Browsing behavior and product views",
+        "Real-time session context and cart contents",
+        "Product catalog and attributes",
+        "Inventory levels and margins",
+        "Historical recommendation performance data"
+      ],
+      "benefits": [
+        "25-45% increase in AOV through intelligent cross-sell and upsell",
+        "15-35% conversion improvement via relevant product discovery",
+        "25-40% recommendation CTR vs 5-12% generic (3-5x improvement)",
+        "Personalized recommendations based on individual preferences",
+        "Context-aware: homepage discovery vs PDP complementary vs cart add-ons",
+        "Real-time adaptation to session behavior and inventory changes"
+      ],
+      "metrics": ["Recommendation CTR: 25-40%", "AOV impact: +25-45%", "Personalization: 1:1 ML-driven"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML recommendations on product detail pages", "Implement personalized homepage product grid"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Recommendation engine or ML platform", "Product catalog with attributes", "Purchase and behavioral data (6+ months)", "Inventory integration", "A/B testing capability"]
+    },
+    "icon": "gift",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-pricing-display",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Pricing Display",
+    "description": "Personalized pricing and promotional visibility based on customer value and price sensitivity optimizing margin while maintaining conversion.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. All customers see identical prices and promotional messaging on website. 2. Promotions displayed prominently to everyone including customers who would buy at full price. 3. No differentiation by customer value tier (VIPs and first-time browsers treated same). 4. Promotions either on (all customers) or off (no customers) with no nuance. 5. Leaving margin on table by over-discounting to price-insensitive customers.",
+      "constraints": [
+        "Blanket promotions shown to all customers wastes margin (30-40% would buy without discount)",
+        "VIP customers get same discounts as bargain hunters (margin erosion)",
+        "No price sensitivity intelligence (which customers need discounts to convert)",
+        "Promotional messaging distracts brand-focused customers",
+        "All-or-nothing promotions miss opportunity for targeted offers",
+        "Can't optimize margin while maintaining conversion rates"
+      ],
+      "metrics": ["Margin optimization: None", "Promotional precision: 0% (blanket)", "Price sensitivity: Unknown"]
+    },
+    "agentic": {
+      "workflow": "1. Price Sensitivity Agent analyzes customer behavior to predict willingness to pay: coupon usage patterns, cart abandonment at price thresholds, price comparison behavior, discount response history. 2. Value Tier Agent classifies customers: VIPs (high LTV, price insensitive), loyal (repeat buyers), price-sensitive (discount seekers), unknown (first-time visitors). 3. Dynamic Display Agent personalizes pricing presentation: VIPs see minimal promotional messaging, price-sensitive see targeted discounts, unknowns see social proof instead of discounts. 4. Agent ensures promotional parity (same price available to all but visibility personalized). 5. A/B Testing optimizes discount thresholds by segment.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Price Sensitivity Agent", "Value Tier Agent", "Dynamic Display Agent"],
+        "utilityAgents": ["CDP", "Pricing Engine", "Propensity Modeling", "A/B Testing Platform"]
+      },
+      "dataSources": [
+        "Customer purchase history and lifetime value",
+        "Coupon and discount usage patterns",
+        "Cart abandonment behavior and price thresholds",
+        "Price comparison and research behavior",
+        "Historical response to promotions by customer",
+        "Competitive pricing intelligence"
+      ],
+      "benefits": [
+        "3-8% margin improvement by reducing over-discounting to price-insensitive customers",
+        "Conversion rates maintained or improved through targeted promotional visibility",
+        "VIP experience enhanced by minimizing discount messaging (brand focus)",
+        "Price-sensitive customers get targeted offers (conversion optimization)",
+        "Promotional parity maintained (same prices available, visibility personalized)",
+        "A/B testing reveals optimal discount thresholds by segment"
+      ],
+      "metrics": ["Margin optimization: +3-8%", "Promotional precision: Segment-targeted", "Price sensitivity: ML-predicted"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Pricing strategy changes",
+      "policy": "Pricing and merchandising leaders review and approve price sensitivity segmentation and display rules for brand and legal compliance"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Suppress promotional banners for top 10% customers", "Test targeted discounts for cart abandoners"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer Data Platform with value tiering", "Price sensitivity models", "Legal review for pricing practices", "A/B testing infrastructure", "Personalization platform"]
+    },
+    "icon": "tag",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-personalized-search-results",
+    "type": "function",
+    "level": 4,
+    "label": "Personalized Search Results",
+    "description": "Behavioral search ranking and personalized results increasing search conversion by 30-55% through relevance optimization.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Site search returns same results for all users based on keyword matching and popularity. 2. Results ranked by: text relevance, product popularity, revenue/margin. 3. No personalization based on customer preferences or behavior. 4. Search for 'shoes' returns identical results for men, women, and children. 5. Generic results yield 10-20% search conversion rates.",
+      "constraints": [
+        "Generic search results ignore individual preferences (men see women's shoes)",
+        "Popularity-based ranking favors mass market (niche preferences buried)",
+        "No learning from customer's past searches and purchases",
+        "Same results for 'shoes' whether customer bought athletic or dress shoes before",
+        "10-20% search conversion due to irrelevant results",
+        "High-intent search visitors don't get optimized results"
+      ],
+      "metrics": ["Search conversion: 10-20%", "Result relevance: Generic", "Personalization: None"]
+    },
+    "agentic": {
+      "workflow": "1. Search Personalization Agent reranks results based on individual customer profile: category and brand preferences, size and style affinities, price sensitivity, past purchase patterns. 2. Behavioral Ranking boosts products similar to customer's browsing and purchase history. 3. Intent Recognition Agent interprets search intent (research vs ready to buy) and adjusts results. 4. Query Understanding handles synonyms, misspellings, and natural language. 5. Learning Agent improves rankings based on search engagement and conversion outcomes.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Search Personalization Agent", "Behavioral Ranking Agent", "Intent Recognition Agent"],
+        "utilityAgents": ["Search Engine", "CDP", "ML Ranking Models", "Query Understanding"]
+      },
+      "dataSources": [
+        "Customer purchase and browsing history",
+        "Category and brand preferences",
+        "Size, style, and attribute affinities",
+        "Search engagement data (clicks, conversions)",
+        "Real-time session context",
+        "Product catalog and attributes"
+      ],
+      "benefits": [
+        "30-55% increase in search conversion through personalized relevant results",
+        "Behavioral ranking shows products aligned with customer's past preferences",
+        "Gender, size, style auto-detected from history (no manual filtering needed)",
+        "Intent-aware results (research queries get educational content, buy-intent gets products)",
+        "Continuous learning improves ranking effectiveness over time",
+        "Reduced zero-result searches through query understanding"
+      ],
+      "metrics": ["Search conversion: 25-40%", "Result relevance: Personalized", "Personalization: 1:1 behavioral"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Boost products in customer's preferred categories", "Filter by customer's typical size/attributes"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Site search platform with personalization capability", "Customer Data Platform", "Behavioral tracking and history", "ML ranking models", "Search analytics"]
+    },
+    "icon": "search",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-offer-testing",
+    "type": "function",
+    "level": 4,
+    "label": "Content & Offer Testing",
+    "description": "Automated multivariate testing with AI-powered experiment design accelerating learning velocity 5-10x and improving conversion 20-40%.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager manually designs A/B test (e.g., test 2 homepage hero images). 2. Test runs 2-4 weeks to reach statistical significance with 50/50 traffic split. 3. Analyst manually checks results and declares winner. 4. Winning variant deployed manually. 5. Limited to 3-5 tests per quarter due to manual overhead and slow cycle time.",
+      "constraints": [
+        "Simple A/B tests only (can't handle multivariate complexity)",
+        "2-4 week test duration limits learning velocity (3-5 tests per quarter)",
+        "Fixed 50/50 splits waste traffic on losing variants",
+        "Manual significance analysis prone to errors and p-hacking",
+        "Limited test capacity means can't test everything that matters",
+        "No automated winner deployment (manual delays time to value)"
+      ],
+      "metrics": ["Test velocity: 3-5 tests/quarter", "Test complexity: Simple A/B", "Time to significance: 2-4 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Experiment Design Agent creates multivariate tests: hero image × headline × CTA × offer (100+ combinations). 2. Multi-Armed Bandit Agent dynamically allocates traffic to winning variants (more traffic to winners, less to losers). 3. Bayesian Analysis Agent continuously monitors for statistical significance. 4. Auto-Deployment Agent implements winner when significance reached. 5. Learning Database captures insights and recommends next high-value tests.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Experiment Design Agent", "Multi-Armed Bandit Agent", "Bayesian Analysis Agent"],
+        "utilityAgents": ["A/B Testing Platform", "Statistical Analysis", "Auto-Deployment", "Insights Database"]
+      },
+      "dataSources": [
+        "Historical test results and learnings",
+        "Page performance metrics (conversion, engagement, revenue)",
+        "Traffic volume and statistical power calculations",
+        "Bayesian prior distributions",
+        "Real-time test performance data",
+        "Content and offer variants"
+      ],
+      "benefits": [
+        "5-10x test velocity (20-40 tests per quarter vs 3-5)",
+        "20-40% cumulative conversion improvement through continuous optimization",
+        "Multivariate testing handles 100+ variant combinations vs simple A/B",
+        "Multi-armed bandit minimizes regret (30-50% less wasted traffic on losers)",
+        "Automated significance detection and deployment (3-7 days vs 2-4 weeks)",
+        "AI-recommended next tests based on learning potential"
+      ],
+      "metrics": ["Test velocity: 20-40 tests/quarter", "Test complexity: Multivariate", "Time to significance: 3-7 days"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable multi-armed bandit on current A/B tests", "Test 5 variants instead of 2"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["A/B testing platform with multivariate capability", "Multi-armed bandit or Bayesian optimization", "Sufficient traffic volume", "Auto-deployment capability", "Statistical analysis framework"]
+    },
+    "icon": "beaker",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cross-sell-upsell-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Cross-Sell & Upsell Optimization",
+    "description": "AI-driven cross-sell and upsell strategies with propensity modeling increasing revenue per transaction by 30-60% through intelligent recommendations.",
+    "parentCapability": "capability-web-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Merchandiser manually creates product bundles and 'Frequently Bought Together' sets. 2. Generic upsell prompts (e.g., 'Upgrade to premium?') shown to all customers. 3. Cross-sell recommendations based on simple co-purchase rules. 4. Same offers shown regardless of customer value or likelihood to accept. 5. Low attach rates (8-15%) due to irrelevant generic offers.",
+      "constraints": [
+        "Manual bundles static and not personalized to individual customers",
+        "Generic upsell offers have low acceptance rates (8-15%)",
+        "Co-purchase rules miss complex complementary product patterns",
+        "No propensity modeling (which customers likely to accept upsell)",
+        "Same offers to everyone wastes opportunity (VIPs vs price-sensitive)",
+        "Cart-level cross-sell doesn't consider current cart contents intelligently"
+      ],
+      "metrics": ["Upsell acceptance: 8-15%", "Cross-sell attach: 12-20%", "Revenue per transaction: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Propensity Modeling Agent predicts likelihood customer will accept: upsell (premium version, larger size, extended warranty), cross-sell (complementary products, accessories, bundles). 2. Offer Selection Agent chooses optimal offer based on: customer value tier (VIPs get premium upsells), predicted acceptance probability, margin and revenue impact. 3. Contextual Presentation shows offers at optimal moment (product page, cart, checkout). 4. Dynamic Pricing adjusts bundle discounts based on propensity to purchase. 5. Learning Agent optimizes offer strategy based on acceptance outcomes.",
+      "agents": {
+        "orchestrator": "Web Personalization Orchestration Agent",
+        "superAgents": ["Propensity Modeling Agent", "Offer Selection Agent", "Learning Agent"],
+        "utilityAgents": ["ML Platform", "Recommendation Engine", "Pricing Engine", "CDP"]
+      },
+      "dataSources": [
+        "Historical cross-sell and upsell acceptance data",
+        "Customer purchase history and value tier",
+        "Product affinity and complementary patterns",
+        "Current cart contents and order value",
+        "Propensity scores for upsell/cross-sell",
+        "Margin and inventory data"
+      ],
+      "benefits": [
+        "30-60% increase in revenue per transaction through intelligent upsell/cross-sell",
+        "25-40% upsell acceptance vs 8-15% generic (2-3x improvement)",
+        "30-50% cross-sell attach vs 12-20% (2-3x improvement)",
+        "Propensity targeting focuses offers on likely acceptors (higher efficiency)",
+        "VIP-optimized offers (premium upsells) vs price-sensitive (bundles)",
+        "Continuous learning improves offer selection and acceptance rates over time"
+      ],
+      "metrics": ["Upsell acceptance: 25-40%", "Cross-sell attach: 30-50%", "Revenue per transaction: +30-60%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build upsell propensity model", "Personalize cart cross-sell recommendations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["ML platform for propensity modeling", "Historical acceptance data", "Recommendation engine", "Customer Data Platform", "Product catalog with attributes and margins"]
+    },
+    "icon": "arrow-trending-up",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

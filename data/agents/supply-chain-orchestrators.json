@@ -1,0 +1,230 @@
+[
+  {
+    "id": "agent-sop-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "S&OP Orchestration Agent",
+    "description": "Enables continuous Sales & Operations Planning by coordinating demand planning, supply planning, financial planning, scenario modeling, and collaborative consensus.",
+    "capabilities": [
+      "Orchestrate continuous S&OP process (weekly/monthly)",
+      "Coordinate demand, supply, and financial planning integration",
+      "Manage scenario simulation and what-if analysis",
+      "Facilitate cross-functional consensus and decision tracking",
+      "Balance conflicting objectives (cost, service, inventory)",
+      "Monitor plan performance and execution gaps"
+    ],
+    "integrations": [
+      "S&OP Platform (Anaplan, o9 Solutions, Kinaxis)",
+      "Forecasting Models and ML Platform",
+      "Optimization Engine",
+      "Collaboration Tools (Teams, Slack)",
+      "ERP System",
+      "BI Platform for visualization"
+    ],
+    "dataSources": [
+      "Demand forecast data (statistical + judgmental)",
+      "Supply constraints and capacity data",
+      "Financial budgets and P&L targets",
+      "Scenario assumptions and parameters",
+      "Historical plan vs actual data",
+      "External factors (market, competition)"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-supply-chain-visibility-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Supply Chain Visibility Orchestration Agent",
+    "description": "Provides end-to-end supply chain control tower by coordinating multi-tier visibility, exception detection, impact analysis, and resolution orchestration.",
+    "capabilities": [
+      "Orchestrate end-to-end supply chain visibility",
+      "Coordinate exception detection across all partners",
+      "Manage impact analysis for supply chain disruptions",
+      "Trigger resolution workflows (expedite, re-route, notify)",
+      "Balance trade-offs between cost and service",
+      "Monitor supply chain health and resilience"
+    ],
+    "integrations": [
+      "Visibility Platform (FourKites, project44, BluJay)",
+      "EDI/API Integration with suppliers, carriers, 3PLs",
+      "Alert and Notification System",
+      "Collaboration Tools",
+      "ERP and WMS Systems",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Order and shipment tracking data",
+      "Inventory positions across network",
+      "Supplier and carrier performance data",
+      "Exception and delay data",
+      "Impact models (revenue, customer, operations)",
+      "Resolution options and costs"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-network-optimization-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Network Optimization Orchestration Agent",
+    "description": "Continuously optimizes distribution network by coordinating demand pattern analysis, cost modeling, scenario testing, and data-driven recommendations.",
+    "capabilities": [
+      "Orchestrate continuous network optimization",
+      "Coordinate geographic demand pattern analysis",
+      "Manage total landed cost modeling",
+      "Run scenario simulations for network changes",
+      "Generate ROI-quantified recommendations",
+      "Monitor network performance and trigger re-optimization"
+    ],
+    "integrations": [
+      "Network Design Tool (COUPA, LLamasoft, anyLogistix)",
+      "Optimization Solver",
+      "GIS Mapping and Distance Calculation",
+      "Cost Database",
+      "ERP System",
+      "BI Platform"
+    ],
+    "dataSources": [
+      "Historical demand data by geography",
+      "Storage, transport, and handling costs",
+      "DC locations, capacities, and utilization",
+      "Service level requirements",
+      "Future growth scenarios",
+      "Total landed cost by lane"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-allocation-replenishment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Allocation & Replenishment Orchestration Agent",
+    "description": "Optimizes inventory positioning by coordinating demand-driven allocation, dynamic replenishment, transfer optimization, and safety stock calculation.",
+    "capabilities": [
+      "Orchestrate demand-driven inventory allocation",
+      "Coordinate ML-based replenishment decisions",
+      "Manage store-to-store transfer optimization",
+      "Calculate optimal safety stock levels",
+      "Balance stock-out risk vs carrying cost",
+      "Monitor inventory health and turnover"
+    ],
+    "integrations": [
+      "Replenishment Platform with ML capabilities",
+      "Demand Forecasting System",
+      "Inventory Management System",
+      "WMS for fulfillment",
+      "Optimization Engine",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Demand forecast by SKU/location",
+      "Inventory positions and in-transit",
+      "Historical sales and stock-out data",
+      "Transfer costs and lead times",
+      "Safety stock parameters",
+      "Supplier lead times and reliability"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-supplier-collaboration-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Supplier Collaboration Orchestration Agent",
+    "description": "Enables real-time supplier collaboration by coordinating forecast sharing, PO automation, performance monitoring, and issue resolution.",
+    "capabilities": [
+      "Orchestrate supplier collaboration workflows",
+      "Coordinate rolling forecast sharing",
+      "Manage automated PO generation and acknowledgment",
+      "Monitor supplier performance (OTD, quality, responsiveness)",
+      "Trigger issue escalation and resolution",
+      "Track supplier relationship health"
+    ],
+    "integrations": [
+      "Supplier Portal Platform",
+      "EDI/API for PO and forecast exchange",
+      "Performance Dashboard",
+      "Collaboration Tools",
+      "ERP System",
+      "Quality Management System"
+    ],
+    "dataSources": [
+      "Demand forecasts by supplier",
+      "PO data (creation, acknowledgment, changes)",
+      "Supplier performance metrics (OTD, quality, lead time)",
+      "Issue tracking and resolution data",
+      "Supplier capacity and constraints",
+      "Product development collaboration data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-cross-docking-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Cross-Docking Orchestration Agent",
+    "description": "Increases flow-through velocity by coordinating eligibility determination, dock scheduling, sortation management, and performance tracking.",
+    "capabilities": [
+      "Orchestrate cross-dock vs putaway decisions",
+      "Coordinate dock scheduling optimization",
+      "Manage sortation to outbound staging",
+      "Track cross-dock performance metrics",
+      "Balance throughput vs resource constraints",
+      "Monitor dwell time and identify bottlenecks"
+    ],
+    "integrations": [
+      "Warehouse Management System (WMS)",
+      "Yard Management System (YMS)",
+      "Transportation Management System (TMS)",
+      "Dock Scheduling Tool",
+      "Performance Analytics",
+      "Sortation Systems"
+    ],
+    "dataSources": [
+      "Inbound shipment data and arrival times",
+      "Outbound order data and shipping schedules",
+      "SKU eligibility rules (fast movers, promotional)",
+      "Dock capacity and utilization",
+      "Cross-dock percentage and dwell time",
+      "Labor availability and productivity"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

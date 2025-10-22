@@ -1,0 +1,464 @@
+[
+  {
+    "id": "function-ad-hoc-analytics-self-service-bi",
+    "type": "function",
+    "level": 4,
+    "label": "Ad-Hoc Analytics & Self-Service BI",
+    "description": "Natural language query interface with AI-powered data exploration achieving 75-85% reduction in analyst dependency and enabling business users to generate insights in minutes versus days.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager needs sales analysis by region and product category, submits ticket to analytics team. 2. Analyst receives request in queue (3-5 day backlog), writes SQL queries, joins tables, aggregates data. 3. Analyst creates Excel spreadsheet or PowerPoint with charts, emails to requester 5-7 days later. 4. Manager reviews report, realizes needs different dimension (by channel not region), submits follow-up request. 5. Another 3-5 day wait for revised report, cycle repeats 2-3 times before getting right answer. 6. Total time to insight: 10-15 days for simple ad-hoc analysis. 7. Analyst backlog grows (50+ pending requests), business users frustrated by 2-week turnaround.",
+      "constraints": [
+        "3-5 day analyst backlog for ad-hoc report requests",
+        "10-15 day total time to insight (including iterations)",
+        "Business users dependent on analysts for simple queries",
+        "SQL/BI tool knowledge required (excludes 80% of business users)",
+        "Iterative refinement slow (submit ticket, wait days, repeat)",
+        "Analyst team becomes bottleneck (50+ pending requests)"
+      ],
+      "metrics": ["Time to insight: 10-15 days", "Analyst dependency: High (80% of users)", "Request backlog: 50+ pending", "Self-service rate: <20%"]
+    },
+    "agentic": {
+      "workflow": "1. Marketing manager opens AI Analytics Assistant, types natural language query: 'Show me sales by region and product category for Q4 2024'. 2. NL Query Agent translates to SQL, executes query, returns interactive dashboard in 30 seconds: sales map, category breakdown, trend charts. 3. Manager explores data interactively: 'Now show me by channel instead of region', agent updates visualizations instantly. 4. Manager discovers insight: 'Why did Northeast region drop 20% in Q4?', agent performs root cause analysis: 'Northeast decline driven by Electronics category (-35%), correlated with competitor promotion launch Oct 15'. 5. Manager asks follow-up: 'What products were most affected?', agent drills down to SKU-level detail with competitive pricing comparison. 6. Total time to insight: 5-10 minutes vs 10-15 days. 7. 75-85% reduction in analyst dependency, analysts focus on complex strategic projects instead of ad-hoc requests.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["NL Query Agent", "Data Exploration Agent", "Insight Generation Agent"],
+        "utilityAgents": ["Semantic Layer API", "Visualization Engine", "Query Optimizer", "Data Catalog"]
+      },
+      "dataSources": [
+        "Enterprise data warehouse (sales, customer, product, inventory)",
+        "Semantic layer mapping business terms to database schema",
+        "Historical query patterns and common analysis templates",
+        "Data dictionary with field definitions and relationships",
+        "User role-based access controls and data permissions",
+        "Pre-built visualization templates and chart libraries",
+        "Natural language processing models for query understanding",
+        "Query performance statistics and optimization rules"
+      ],
+      "benefits": [
+        "75-85% reduction in analyst dependency (business users self-serve)",
+        "5-10 minutes to insight vs 10-15 days (90%+ time reduction)",
+        "Natural language queries (no SQL/BI tool training required)",
+        "Interactive exploration enables iterative refinement in real-time",
+        "Analysts freed for strategic work (50+ ad-hoc requests eliminated)",
+        "Data democratization (80% of users can generate insights)"
+      ],
+      "metrics": ["Time to insight: 5-10 minutes", "Analyst dependency: Low (20% of users)", "Request backlog: <10 complex requests", "Self-service rate: 80%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy natural language query interface for top 10 data sources (sales, customers, inventory)", "Implement semantic layer mapping business terms to technical schema", "Enable pre-built report templates for common analysis patterns"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Modern BI platform (Tableau, Power BI, Looker, ThoughtSpot)", "Data warehouse or data lake with clean schema", "Semantic layer with business glossary", "Role-based access controls for data governance", "NLP models or AI-powered query translation", "User training on self-service analytics workflows"]
+    },
+    "icon": "search-circle",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-automated-insight-generation",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Insight Generation",
+    "description": "ML-powered anomaly detection and narrative generation producing automated daily insights with 85-95% analyst time savings and surfacing hidden patterns humans miss.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Analyst manually reviews 50+ daily KPI dashboards: sales, conversion, traffic, inventory, customer satisfaction. 2. Analyst exports data to Excel, creates pivot tables, calculates week-over-week changes, identifies outliers. 3. Analyst investigates anomalies one-by-one: 'Why did mobile conversion drop 15% yesterday?' - digs through segmentation, geography, product categories. 4. Analyst creates summary email with 5-10 key insights, sends to leadership team after 2-3 hours analysis. 5. Many insights missed (analyst can only review top-level metrics, subtle patterns invisible). 6. Next day, repeat process - manual daily insight generation becomes full-time job. 7. Analyst burnout from repetitive daily reporting, leadership receives insights 8-12 hours after day ends.",
+      "constraints": [
+        "2-3 hours daily manual analysis per analyst",
+        "Limited coverage (review top-level metrics only, miss subtle patterns)",
+        "Delayed insights (8-12 hours after business day ends)",
+        "Analyst burnout from repetitive daily reporting",
+        "Human cognitive limits (can't analyze thousands of metric combinations)",
+        "Inconsistent quality (varies based on analyst skill and fatigue)"
+      ],
+      "metrics": ["Analysis time: 2-3 hours/day", "Coverage: 50 top-level KPIs", "Insight delay: 8-12 hours", "Patterns detected: Limited to human review capacity"]
+    },
+    "agentic": {
+      "workflow": "1. Automated Insight Agent analyzes thousands of metrics nightly: sales, conversion, traffic, inventory, customer behavior across all dimensions (product, geography, channel, customer segment). 2. Agent detects anomalies automatically: 'Mobile conversion dropped 15% yesterday (iOS app only, Android normal), root cause: payment gateway latency increased 2.5x affecting checkout completion'. 3. Narrative Generation Agent creates natural language summary: 'Key Insight #1: iOS checkout conversion declined 15% due to payment processing delays averaging 8 seconds (vs normal 3 seconds), resulting in $45K revenue loss. Recommend investigate payment gateway provider issue affecting iOS app only'. 4. Agent surfaces hidden patterns: 'Emerging Trend: Electronics category showing 8% daily growth over past 7 days (vs 2% normal), driven by new product launch buzz on social media, recommend increase inventory allocation'. 5. Agent prioritizes insights by business impact: revenue impact $45K (critical), inventory opportunity $20K (high), minor trends (informational). 6. Leadership receives automated daily insight report at 6am (ready for morning review), analysts freed from manual reporting. 7. 85-95% analyst time savings, more comprehensive coverage (thousands of metrics vs 50), real-time anomaly detection vs delayed manual analysis.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Automated Insight Agent", "Narrative Generation Agent", "Anomaly Detection Agent"],
+        "utilityAgents": ["ML Platform", "Data Warehouse", "NLG Engine", "Impact Calculator"]
+      },
+      "dataSources": [
+        "Real-time business metrics (sales, traffic, conversion, inventory)",
+        "Historical baseline data for anomaly detection",
+        "Dimensional data (product, geography, channel, customer segment)",
+        "External data (weather, events, social media trends)",
+        "ML models for pattern recognition and forecasting",
+        "Business rules for insight prioritization and impact calculation",
+        "Natural language generation templates",
+        "Previous insights and feedback for continuous learning"
+      ],
+      "benefits": [
+        "85-95% analyst time savings (automated daily insight generation)",
+        "Comprehensive coverage (thousands of metrics vs 50 manual)",
+        "Real-time detection (6am daily report vs 8-12 hour delay)",
+        "Hidden patterns surfaced (ML detects correlations humans miss)",
+        "Consistent quality (no fatigue or skill variation)",
+        "Prioritized by business impact ($45K revenue loss highlighted)"
+      ],
+      "metrics": ["Analysis time: 15-30 min/day (review automated insights)", "Coverage: 1,000s of metrics and combinations", "Insight delay: Real-time (6am report)", "Patterns detected: ML-powered comprehensive analysis"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy anomaly detection for top 20 KPIs with automated alerts", "Implement narrative generation for daily executive summary", "Enable root cause analysis for top 5 anomaly types"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform for anomaly detection and pattern recognition", "Data warehouse with comprehensive metrics coverage", "Natural language generation engine", "Historical data (12-24 months) for baseline learning", "Business impact calculation framework", "Integration with communication platforms (email, Slack)", "Feedback loop for insight quality improvement"]
+    },
+    "icon": "light-bulb",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-anomaly-detection-root-cause-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Anomaly Detection & Root Cause Analysis",
+    "description": "Multi-dimensional anomaly detection with automated root cause identification reducing investigation time by 70-85% from hours to minutes with 80%+ accuracy.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Alert received: 'Daily revenue down 25% yesterday', leadership asks 'Why?'. 2. Analyst begins manual investigation: exports sales data, creates pivot tables by product, geography, channel, customer segment. 3. Analyst discovers Electronics category down 60%, other categories normal, drills into Electronics subcategories. 4. Analyst finds Laptops down 80% while Phones/Tablets normal, drills into laptop SKUs. 5. Analyst discovers one high-volume laptop SKU had zero sales (normally $200K/day), checks inventory system: SKU marked out-of-stock incorrectly. 6. Total investigation time: 2-4 hours drilling through dimensions manually to find root cause. 7. Root cause: inventory system data feed failed marking in-stock products as unavailable, 6-hour outage lost $1.2M revenue.",
+      "constraints": [
+        "2-4 hour manual investigation time per anomaly",
+        "Sequential drilling (analyze one dimension at time: product, then category, then SKU)",
+        "Human cognitive limits (hard to analyze all dimension combinations simultaneously)",
+        "Root cause often deep (requires 4-6 drill-down levels)",
+        "Data export/pivot table overhead (30-45 min per dimension)",
+        "Delayed action (4 hour investigation allows issue to persist)"
+      ],
+      "metrics": ["Investigation time: 2-4 hours", "Root cause accuracy: 60-70% (sometimes wrong dimension)", "Analysis depth: 4-6 drill-down levels", "Time to remediation: 4-8 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Anomaly detected: 'Daily revenue down 25% yesterday', Root Cause Agent triggered automatically. 2. Agent analyzes all dimensions simultaneously in parallel: product (1,000 SKUs), geography (50 regions), channel (5 channels), customer segment (20 segments), time (24 hours). 3. Agent identifies anomaly source in 2 minutes: 'Revenue decline isolated to: Product=Laptop SKU XYZ-123, Geography=All regions, Channel=All channels, Time=10am-4pm, Root cause confidence: 95%'. 4. Agent performs correlated analysis: 'Laptop SKU XYZ-123 revenue $0 (normally $200K/day), inventory system shows out-of-stock, but warehouse system shows 500 units available - data feed mismatch detected'. 5. Agent provides remediation recommendation: 'Inventory data feed failed at 10am, marked 15 SKUs as unavailable incorrectly, reconnect data feed and refresh product availability, estimated revenue recovery $200K/day'. 6. Operations team notified immediately (10 min after anomaly), fixes data feed within 30 minutes, products back online. 7. 70-85% investigation time reduction (2-4 hours → 5-10 min), faster remediation (4-8 hours → 1 hour), $1.2M revenue loss prevented.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Anomaly Detection Agent", "Root Cause Analysis Agent", "Impact Assessment Agent"],
+        "utilityAgents": ["Multi-Dimensional Analytics Engine", "Correlation Analyzer", "Data Quality Monitor", "ML Models"]
+      },
+      "dataSources": [
+        "Real-time transaction data (sales, orders, traffic, conversions)",
+        "Dimensional hierarchies (product catalog, geography, channels, customer segments)",
+        "Historical baselines by dimension combinations",
+        "Correlated data sources (inventory, pricing, promotions, external events)",
+        "Data lineage and quality metadata",
+        "ML models for anomaly scoring and pattern recognition",
+        "Business rules for impact calculation",
+        "System logs for data feed and integration monitoring"
+      ],
+      "benefits": [
+        "70-85% investigation time reduction (5-10 min vs 2-4 hours)",
+        "Parallel multi-dimensional analysis (all combinations simultaneously)",
+        "95%+ root cause accuracy (automated correlation analysis)",
+        "Correlated data sources (inventory, pricing, data feeds) analyzed automatically",
+        "Immediate alerts enable rapid remediation (1 hour vs 4-8 hours)",
+        "Revenue loss prevention ($1.2M saved through fast detection and fix)"
+      ],
+      "metrics": ["Investigation time: 5-10 minutes", "Root cause accuracy: 95%+ (automated correlation)", "Analysis depth: All dimensions simultaneously", "Time to remediation: 1 hour"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy multi-dimensional anomaly detection for revenue and conversion metrics", "Implement automated correlation analysis with inventory and pricing data", "Enable data quality monitoring for critical data feeds"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Advanced analytics platform with ML-powered anomaly detection", "Multi-dimensional data model (product, geography, channel, customer)", "Real-time data pipelines for transaction and operational data", "Historical baseline data (12-24 months) for pattern learning", "Correlated data sources integrated (inventory, pricing, promotions)", "Data lineage and quality monitoring", "Alert and workflow integration for remediation"]
+    },
+    "icon": "clipboard-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-what-if-scenario-modeling",
+    "type": "function",
+    "level": 4,
+    "label": "What-If Scenario Modeling",
+    "description": "AI-powered scenario simulation with Monte Carlo analysis enabling real-time forecasting of business decisions reducing planning cycles from weeks to hours with 75-85% accuracy.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. CFO asks: 'What if we increase marketing spend 20% in Q1 2025, how does it impact revenue and profitability?'. 2. FP&A analyst creates Excel financial model: builds assumptions (conversion rate, CAC, LTV), links formulas across 10 worksheets. 3. Analyst manually adjusts marketing spend scenarios: baseline, +10%, +20%, +30%, recalculates revenue and profit for each. 4. Analyst creates sensitivity analysis: varies conversion rate ±10%, ±20% to show range of outcomes. 5. Analyst builds PowerPoint presentation with scenario comparison tables and charts. 6. Total analysis time: 1-2 weeks (build model, validate assumptions, create scenarios, present findings). 7. CFO asks follow-up: 'What if competitor launches 30% discount promotion?', another week for revised model.",
+      "constraints": [
+        "1-2 week analysis cycle per scenario question",
+        "Manual Excel modeling (error-prone, hard to validate)",
+        "Limited scenarios analyzed (3-5 due to time constraints)",
+        "Static assumptions (no probabilistic or sensitivity modeling)",
+        "Follow-up questions require rebuilding model",
+        "No real-time simulation (CEO can't explore interactively)"
+      ],
+      "metrics": ["Analysis time: 1-2 weeks per scenario", "Scenarios modeled: 3-5 static cases", "Accuracy: 60-70% (deterministic assumptions)", "Interactivity: None (static reports)"]
+    },
+    "agentic": {
+      "workflow": "1. CFO opens Scenario Planning Agent: 'What if we increase marketing spend 20% in Q1 2025?'. 2. Agent simulates scenario in real-time: increases ad spend from $5M to $6M, models impact on traffic (+15%), conversion (+2%), CAC (+5%), revenue (+18%), profit (+12%). 3. Agent runs Monte Carlo simulation with probabilistic ranges: 'Revenue increase likely 15-22% (75% confidence), profit increase 8-16%, breakeven ROI at 12% revenue lift (achieved with 85% probability)'. 4. CFO explores interactively: 'Now add competitor 30% discount scenario', agent adjusts model: 'Competitor promotion reduces conversion -8%, net revenue lift 8-14% (vs 15-22% without competition)'. 5. Agent provides decision recommendation: 'Increase marketing spend to $6M recommended - expected $900K profit increase, 85% probability of positive ROI even with competitor promotion'. 6. Agent shows sensitivity analysis: key drivers ranked by impact (conversion rate ±10% = ±$500K profit, CAC ±10% = ±$200K profit). 7. Total analysis time: 15-30 minutes vs 1-2 weeks, interactive exploration vs static reports, probabilistic vs deterministic.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Scenario Planning Agent", "Monte Carlo Simulation Agent", "Decision Recommendation Agent"],
+        "utilityAgents": ["Financial Modeling Engine", "Statistical Simulation Platform", "Data Warehouse", "Optimization Engine"]
+      },
+      "dataSources": [
+        "Historical performance data (revenue, conversion, CAC, LTV)",
+        "Marketing spend and ROI by channel and campaign",
+        "Competitive intelligence (pricing, promotions, market share)",
+        "Seasonal patterns and business event calendar",
+        "Financial models and business rules",
+        "Market trends and economic indicators",
+        "Probabilistic distributions for key assumptions",
+        "Constraints and business boundaries (budget limits, capacity)"
+      ],
+      "benefits": [
+        "90%+ time reduction (15-30 min vs 1-2 weeks per scenario)",
+        "Interactive exploration (CEO adjusts assumptions in real-time)",
+        "Probabilistic modeling (Monte Carlo vs deterministic assumptions)",
+        "Unlimited scenarios (no rebuild required for follow-up questions)",
+        "75-85% accuracy with confidence intervals (vs 60-70% point estimates)",
+        "Decision recommendations with risk quantification"
+      ],
+      "metrics": ["Analysis time: 15-30 minutes per scenario", "Scenarios modeled: Unlimited (interactive)", "Accuracy: 75-85% (probabilistic with confidence intervals)", "Interactivity: Real-time (CEO self-service)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy scenario modeling for top 5 business decisions (pricing, marketing spend, promotions)", "Implement Monte Carlo simulation for revenue and profit forecasting", "Enable interactive what-if interface for executive self-service"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Advanced analytics platform with scenario modeling capabilities", "Financial models codified with business rules and relationships", "Historical data (24+ months) for pattern learning and validation", "Probabilistic distributions for key assumptions and drivers", "Monte Carlo simulation engine", "Integration with data warehouse and financial systems", "Executive training on scenario planning workflows"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cross-functional-analytics-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Cross-Functional Analytics Integration",
+    "description": "Unified analytics platform connecting siloed functional data with 360-degree business views reducing data reconciliation time by 80-90% and enabling cross-functional insights.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. CEO asks: 'Which customer segments are most profitable and what's their lifetime value?'. 2. Analysis requires data from 5 siloed systems: CRM (customer acquisition), ERP (order history), Marketing (campaign spend), Finance (costs and margins), Support (service costs). 3. Analyst emails 5 teams requesting data exports, waits 3-5 days for responses, receives 5 Excel files with inconsistent formats. 4. Analyst spends 2-3 days reconciling data: customer IDs don't match across systems, date ranges inconsistent, missing records discovered. 5. Analyst builds combined dataset, calculates profitability and LTV, discovers 30% of customers missing from one system or another. 6. Total time: 7-10 days (data gathering 5 days, reconciliation 3 days, analysis 2 days). 7. CEO receives report noting '30% data completeness issues, results directional only', questions credibility.",
+      "constraints": [
+        "Data siloed across 5+ functional systems (CRM, ERP, Marketing, Finance, Support)",
+        "3-5 day data gathering cycle (email requests, exports, waiting)",
+        "2-3 day data reconciliation (inconsistent IDs, formats, date ranges)",
+        "30-40% data completeness issues (missing records across systems)",
+        "7-10 day total analysis cycle",
+        "Results lack credibility due to data quality issues"
+      ],
+      "metrics": ["Data gathering time: 3-5 days", "Reconciliation time: 2-3 days", "Data completeness: 60-70%", "Cross-functional insights: Rare (too difficult)"]
+    },
+    "agentic": {
+      "workflow": "1. CEO asks: 'Which customer segments are most profitable and what's their lifetime value?', opens Unified Analytics Platform. 2. Cross-Functional Integration Agent queries integrated data platform: joins CRM (acquisition), ERP (orders), Marketing (campaigns), Finance (margins), Support (service costs) automatically. 3. Agent reconciles customer IDs across systems using golden record from MDM: matches 98% of customers, flags 2% for manual review. 4. Agent calculates comprehensive profitability: acquisition cost (CRM + Marketing), lifetime revenue (ERP), gross margin (Finance), service costs (Support), net LTV per segment. 5. Agent generates insight report in 10-15 minutes: 'Premium segment LTV $15K (vs $3K mass market), driven by higher purchase frequency (5x/year vs 2x/year) and lower service costs (30% vs 60% contact rate)'. 6. CEO explores interactively: 'Show me LTV trend over past 3 years', agent provides historical analysis with segment migration patterns. 7. 80-90% time reduction (10-15 min vs 7-10 days), 98% data completeness vs 60-70%, credible cross-functional insights.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Cross-Functional Integration Agent", "Data Reconciliation Agent", "360-Degree Insight Agent"],
+        "utilityAgents": ["MDM Golden Record Service", "Data Integration Platform", "Semantic Layer", "Data Quality Engine"]
+      },
+      "dataSources": [
+        "CRM system (customer profiles, acquisition dates, sources)",
+        "ERP system (order history, revenue, product purchases)",
+        "Marketing automation (campaign spend, attribution, channel performance)",
+        "Finance system (costs, margins, profitability by product/customer)",
+        "Support system (cases, resolution time, service costs)",
+        "Master data management (golden customer records, ID mapping)",
+        "Data warehouse with integrated cross-functional data",
+        "Semantic layer mapping business concepts across systems"
+      ],
+      "benefits": [
+        "80-90% time reduction (10-15 min vs 7-10 days)",
+        "98% data completeness (vs 60-70% manual reconciliation)",
+        "Automated cross-system integration (no manual data gathering)",
+        "Golden record matching (MDM resolves ID inconsistencies)",
+        "360-degree customer view (acquisition, revenue, costs, service)",
+        "Credible insights (high data quality enables confident decision-making)"
+      ],
+      "metrics": ["Data gathering time: Real-time (integrated platform)", "Reconciliation time: Automated (<1 min)", "Data completeness: 98%+", "Cross-functional insights: Daily (self-service)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy data integration platform connecting top 5 functional systems", "Implement customer MDM for golden record and ID reconciliation", "Enable unified analytics layer with cross-functional data model"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Data integration platform (Informatica, Talend, Fivetran)", "Customer MDM system for golden record management", "Data warehouse or data lake for integrated storage", "Semantic layer mapping business concepts across systems", "Data quality rules and monitoring", "API access to source systems (CRM, ERP, Marketing, Finance, Support)", "Data governance framework and stewardship"]
+    },
+    "icon": "view-grid",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-data-storytelling-narrative-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Data Storytelling & Narrative Reporting",
+    "description": "Automated narrative generation from data with contextual insights producing executive-ready reports reducing analyst time by 75-85% and improving stakeholder comprehension by 60%+.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Analyst creates monthly business review: analyzes sales, profit, customer metrics, operational KPIs. 2. Analyst exports data to Excel, creates 20+ charts and tables showing trends, comparisons, breakdowns. 3. Analyst builds PowerPoint deck: copies charts from Excel, writes bullet points describing each metric. 4. Analyst writes narrative connecting insights: 'Sales increased 12% driven by new product launch, partially offset by 8% margin decline due to promotional pricing'. 5. Analyst spends 8-12 hours creating 30-slide deck with charts and minimal narrative. 6. Executive reviews deck, struggles to understand story: 'Too many charts, not enough context - what's the bottom line?'. 7. Analyst revises deck adding more narrative, another 4-6 hours, total 12-18 hours for monthly report.",
+      "constraints": [
+        "12-18 hours analyst time per monthly business review",
+        "Chart-heavy reports with minimal narrative (executives want story not data)",
+        "Manual chart creation and narrative writing",
+        "Inconsistent storytelling (varies by analyst skill)",
+        "Low stakeholder comprehension (too much data, not enough insights)",
+        "Repetitive monthly process (analyst burnout)"
+      ],
+      "metrics": ["Report creation time: 12-18 hours/month", "Narrative quality: Inconsistent", "Stakeholder comprehension: 40-50% (too data-heavy)", "Analyst satisfaction: Low (repetitive work)"]
+    },
+    "agentic": {
+      "workflow": "1. Narrative Generation Agent analyzes monthly business data: sales, profit, customers, operations. 2. Agent identifies key insights: 'Sales increased 12% ($2.4M to $2.7M) driven by new product launch contributing $400K incremental revenue (15% of total), partially offset by Electronics category decline -8% ($-200K) due to competitive pricing pressure'. 3. Agent structures narrative flow: Executive Summary (key takeaways), Performance Highlights (wins and challenges), Deep Dives (category analysis), Recommendations (actions needed). 4. Agent generates natural language report: 'This month's standout performance was driven by our new Smart Home product line launch, which exceeded forecast by 25%. However, we face headwinds in Electronics where competitor pricing drove margin compression. We recommend...'. 5. Agent creates data visualizations supporting narrative: sparklines showing trends, comparison charts for context, tables for details. 6. Agent produces executive-ready report in 2-3 hours (automated generation 30 min, analyst review/refinement 90 min). 7. 75-85% time reduction (2-3 hours vs 12-18 hours), improved comprehension (narrative-driven vs chart-heavy), consistent quality.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Narrative Generation Agent", "Insight Prioritization Agent", "Visualization Recommendation Agent"],
+        "utilityAgents": ["NLG Engine", "Chart Automation", "Template Library", "Business Context DB"]
+      },
+      "dataSources": [
+        "Business metrics (sales, profit, customers, operations)",
+        "Historical trends and benchmarks for context",
+        "Anomaly detection results and root cause analysis",
+        "Business rules for insight prioritization",
+        "Natural language generation templates and patterns",
+        "Visualization best practices library",
+        "Executive preferences and feedback on past reports",
+        "Industry benchmarks and competitive data for context"
+      ],
+      "benefits": [
+        "75-85% time reduction (2-3 hours vs 12-18 hours per report)",
+        "Narrative-driven vs chart-heavy (improved stakeholder comprehension)",
+        "60%+ improvement in stakeholder understanding and engagement",
+        "Consistent quality (no variation based on analyst skill)",
+        "Automated insight prioritization (what matters most highlighted)",
+        "Context-rich storytelling (why things happened, not just what)"
+      ],
+      "metrics": ["Report creation time: 2-3 hours/month", "Narrative quality: Consistent (AI-generated)", "Stakeholder comprehension: 85%+ (narrative-driven)", "Analyst satisfaction: High (strategic work focus)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy NLG for monthly business review executive summary", "Implement automated insight prioritization for key metrics", "Enable template library for consistent report structure"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Natural language generation platform (Narrative Science, Arria, custom NLP)", "Data warehouse with business metrics and historical trends", "Anomaly detection and insight generation capabilities", "Report templates and narrative patterns", "Integration with BI tools for visualization automation", "Feedback mechanism for continuous improvement"]
+    },
+    "icon": "document-text",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mobile-analytics-alerts",
+    "type": "function",
+    "level": 4,
+    "label": "Mobile Analytics & Alerts",
+    "description": "Real-time mobile dashboards with smart alerts achieving 90%+ executive engagement and enabling immediate action on critical insights from anywhere with 85% time-to-action reduction.",
+    "parentCapability": "capability-advanced-analytics-reporting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Executive traveling to customer meeting, wants to check current day sales performance. 2. Executive emails analyst: 'Can you send me today's sales numbers by region?'. 3. Analyst receives email 2 hours later (time zones), logs into desktop BI tool, exports data to Excel. 4. Analyst emails Excel spreadsheet: 'Today's sales $450K (vs $520K yesterday), Northeast down 25%'. 5. Executive receives email 3-4 hours after initial request, opens Excel on phone (unreadable, requires pinch-zoom). 6. Executive calls analyst for clarification: 'Why is Northeast down?', analyst investigates, calls back 1 hour later. 7. Total time to insight: 4-5 hours, executive missed opportunity to discuss issue in customer meeting.",
+      "constraints": [
+        "4-5 hour time to insight for mobile executives",
+        "Desktop BI tools not mobile-optimized (pinch-zoom Excel on phone)",
+        "Analyst dependency (executive can't self-serve on mobile)",
+        "Email-based communication (delays, no real-time)",
+        "No proactive alerts (executive must ask for data)",
+        "Missed opportunities (can't act on insights immediately)"
+      ],
+      "metrics": ["Time to insight: 4-5 hours", "Mobile engagement: <10% (desktop-dependent)", "Alert effectiveness: 0% (no proactive alerts)", "Executive self-service: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Executive opens mobile analytics app while traveling, sees real-time dashboard: today's sales $450K (red, -13% vs target), Northeast region -25% (critical alert). 2. Executive taps Northeast alert, Mobile Analytics Agent provides context: 'Northeast sales declined due to major customer ABC Corp order delay (expected $150K today, rescheduled to tomorrow), other customers tracking normal'. 3. Executive drills down by customer: sees ABC Corp $0 today (vs $150K expected), Sales Agent notes: 'ABC Corp confirmed order rescheduled to 11/10 per purchasing manager email this morning'. 4. Executive comfortable with explanation, no action needed (one-time delay, not systemic issue). 5. Smart Alert Agent sends proactive notification: 'Midwest region 20% above target today driven by XYZ Corp large order $80K (2x normal), recommend follow-up on expansion opportunity'. 6. Executive shares alert with sales team via app: 'Great work team! Follow up with XYZ on expansion potential'. 7. Total time to insight: 2 minutes vs 4-5 hours, executive acts immediately, no analyst dependency.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Mobile Analytics Agent", "Smart Alert Agent", "Context Provider Agent"],
+        "utilityAgents": ["Mobile App Platform", "Push Notification Service", "Data API", "Visualization Engine"]
+      },
+      "dataSources": [
+        "Real-time business metrics (sales, orders, traffic, inventory)",
+        "Dimensional data (products, customers, regions, channels)",
+        "Historical baselines and targets for variance calculation",
+        "Contextual data (order schedules, customer communications, events)",
+        "Alert rules and thresholds by metric and role",
+        "User preferences for notification delivery and frequency",
+        "Mobile-optimized visualization templates",
+        "Collaboration features for sharing and annotations"
+      ],
+      "benefits": [
+        "85% time-to-action reduction (2 min vs 4-5 hours)",
+        "90%+ executive engagement (mobile-first vs desktop-dependent)",
+        "Proactive alerts with context (not just data, but why it matters)",
+        "Drill-down capability from alerts to root cause details",
+        "Immediate action (share with team, make decisions in-flight)",
+        "No analyst dependency for routine insights"
+      ],
+      "metrics": ["Time to insight: <2 minutes", "Mobile engagement: 90%+ (daily usage)", "Alert effectiveness: 85%+ (actionable, low false positives)", "Executive self-service: High"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile analytics app for top 10 executive KPIs", "Implement smart alerts with context for critical variance thresholds", "Enable drill-down from alerts to dimensional root cause analysis"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Mobile BI platform (Tableau Mobile, Power BI Mobile, Qlik Sense Mobile)", "Real-time data APIs for current-day performance", "Alert engine with threshold configuration and ML-based filtering", "Mobile-optimized dashboard templates", "Push notification infrastructure", "User preference management", "Integration with collaboration tools (email, Slack, Teams)"]
+    },
+    "icon": "device-mobile",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,600 @@
+[
+  {
+    "id": "function-wms-receiving-putaway",
+    "type": "function",
+    "level": 4,
+    "label": "Receiving & Putaway Optimization",
+    "description": "Automated receiving processes with intelligent putaway location assignment to maximize warehouse efficiency and minimize labor.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Manual barcode scanning at receiving dock followed by paper-based putaway instructions. Associates determine putaway locations based on experience or fixed slotting rules. Process requires multiple handoffs and manual data entry into WMS. High error rates (5-8%) and inconsistent putaway locations lead to inventory accuracy issues.",
+      "constraints": [
+        "60-90 minutes average receiving time per pallet",
+        "5-8% receiving accuracy errors",
+        "Suboptimal putaway locations (30-40% travel time waste)",
+        "No real-time inventory visibility during receiving",
+        "Manual exception handling for damaged/mislabeled goods"
+      ],
+      "metrics": [
+        "Receiving throughput: 8-12 pallets/hour",
+        "Putaway efficiency: 60-70%",
+        "Inventory accuracy: 92-95%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI vision systems scan incoming pallets and automatically verify SKU, quantity, and quality using computer vision. Machine learning algorithms calculate optimal putaway locations based on real-time demand forecasting, SKU velocity, pick path optimization, and available capacity. Autonomous mobile robots (AMRs) or guided workflows direct associates to exact locations. System auto-resolves exceptions (damaged goods, quantity discrepancies) and triggers alerts only for HITL review. Real-time inventory updates across all systems.",
+      "agents": {
+        "orchestrator": "Receiving & Putaway Orchestrator",
+        "superAgents": [
+          "Vision Quality Inspection Agent",
+          "Slotting Optimization Agent",
+          "Inventory Reconciliation Agent"
+        ],
+        "utilityAgents": [
+          "WMS Integration Agent",
+          "AMR/AGV Coordination Agent",
+          "ERP Sync Agent"
+        ]
+      },
+      "dataSources": [
+        "Computer vision cameras",
+        "WMS database",
+        "Demand forecasting system",
+        "Real-time inventory positions",
+        "Historical pick patterns",
+        "SKU velocity analytics"
+      ],
+      "benefits": [
+        "70-85% faster receiving (20-30 min vs 60-90 min per pallet)",
+        "98-99.5% receiving accuracy (vs 92-95%)",
+        "35-50% reduction in putaway travel time",
+        "20-30% increase in warehouse capacity utilization",
+        "90% reduction in manual data entry"
+      ],
+      "metrics": [
+        "Receiving throughput: 25-35 pallets/hour",
+        "Putaway efficiency: 90-95%",
+        "Inventory accuracy: 98-99.5%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Discrepancy >10% or damaged goods value >$500",
+      "policy": "Supervisor approval required for high-value exceptions before system auto-disposition"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement mobile scanning with AI-suggested putaway locations (60% effort reduction)",
+        "Deploy demand-based slotting for top 20% SKUs (30% pick time improvement)",
+        "Enable real-time inventory visibility dashboard"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Modern WMS with API integration",
+        "Mobile devices or tablets for warehouse staff",
+        "Wi-Fi coverage across warehouse",
+        "SKU master data accuracy >95%"
+      ]
+    },
+    "icon": "package-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-inventory-cycle-counting",
+    "type": "function",
+    "level": 4,
+    "label": "Perpetual Inventory & Cycle Counting",
+    "description": "Continuous inventory accuracy management with AI-driven cycle count prioritization and RFID/IoT automated counting.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Scheduled physical inventory counts (annual or quarterly) requiring warehouse shutdown. Manual cycle counting programs based on ABC classification with fixed schedules. Associates manually count items and reconcile discrepancies through paper forms or spreadsheets. High disruption to operations and significant labor costs. Reactive approach to inventory accuracy issues.",
+      "constraints": [
+        "Annual physical inventory requires 2-5 day warehouse shutdown",
+        "Cycle count accuracy: 85-90%",
+        "Fixed ABC schedules miss dynamic accuracy degradation",
+        "2-4 weeks to complete full cycle count program",
+        "Manual reconciliation delays (3-7 days)"
+      ],
+      "metrics": [
+        "Overall inventory accuracy: 92-95%",
+        "Cycle count coverage: 60-70% annually",
+        "Shrink: 1.5-3.0%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered perpetual inventory system continuously monitors accuracy using transaction analysis, exception detection, and predictive modeling. Machine learning prioritizes cycle counts based on SKU value, velocity, error history, and days since last count rather than fixed schedules. RFID tunnels and IoT sensors provide passive counting for tagged items. Computer vision validates picks and replenishments in real-time. System auto-corrects minor discrepancies and routes exceptions to mobile apps for immediate resolution. Predictive alerts trigger proactive counts before accuracy degrades.",
+      "agents": {
+        "orchestrator": "Inventory Accuracy Orchestrator",
+        "superAgents": [
+          "Cycle Count Prioritization Agent",
+          "Discrepancy Analysis Agent",
+          "Shrink Detection Agent"
+        ],
+        "utilityAgents": [
+          "RFID Reader Integration Agent",
+          "Computer Vision Agent",
+          "WMS Sync Agent"
+        ]
+      },
+      "dataSources": [
+        "WMS transaction logs",
+        "RFID reader data",
+        "Computer vision cameras",
+        "IoT sensors (weight, temperature, motion)",
+        "Historical accuracy data",
+        "Demand/sales patterns"
+      ],
+      "benefits": [
+        "99.5%+ inventory accuracy (vs 92-95%)",
+        "Eliminate annual physical inventory shutdowns",
+        "60-70% reduction in cycle count labor hours",
+        "50-70% shrink reduction (0.5-1.0% vs 1.5-3.0%)",
+        "Real-time discrepancy resolution (hours vs days)"
+      ],
+      "metrics": [
+        "Overall inventory accuracy: 99.5%+",
+        "Cycle count coverage: 100% annually with dynamic prioritization",
+        "Shrink: 0.5-1.0%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI cycle count prioritization (40% labor reduction)",
+        "Deploy RFID for high-value items (95%+ accuracy for tagged SKUs)",
+        "Enable mobile cycle counting with photo verification"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "WMS with transaction history access",
+        "Mobile devices with camera capability",
+        "RFID infrastructure for phased rollout",
+        "Clean SKU master data"
+      ]
+    },
+    "icon": "clipboard-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-picking-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Pick Path Optimization",
+    "description": "AI-driven picking strategies with dynamic batching, zone optimization, and real-time route adjustments for maximum throughput.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Fixed picking strategies (zone, wave, batch) determined by static rules. Associates receive pick lists in predetermined sequence based on warehouse zones. No dynamic optimization for changing conditions (stockouts, congestion, priority orders). Manual exception handling when items are out of stock or mislabeled. Significant travel time waste and picker congestion in high-velocity zones.",
+      "constraints": [
+        "150-200 lines per hour pick rate",
+        "40-50% of time spent traveling between picks",
+        "Pick accuracy: 96-98%",
+        "No real-time route adjustment for exceptions",
+        "Zone congestion during peak periods (30-40% throughput loss)"
+      ],
+      "metrics": [
+        "Pick rate: 150-200 lines/hour",
+        "Travel efficiency: 50-60%",
+        "Pick accuracy: 96-98%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI orchestrator dynamically creates optimal pick waves based on real-time order priority, SKU locations, picker availability, and warehouse congestion. Machine learning algorithms generate shortest-path routes that continuously adjust for stockouts, replenishments, or traffic. Computer vision confirms each pick and validates quantities. System intelligently batches orders to minimize touches while meeting SLA requirements. Autonomous mobile robots collaborate with pickers for high-volume picks or multi-level picking. Predictive analytics trigger proactive replenishments to prevent stockouts during picking.",
+      "agents": {
+        "orchestrator": "Pick Path Optimization Orchestrator",
+        "superAgents": [
+          "Wave Planning Agent",
+          "Route Optimization Agent",
+          "Pick Verification Agent",
+          "Congestion Management Agent"
+        ],
+        "utilityAgents": [
+          "AMR Coordination Agent",
+          "Computer Vision Agent",
+          "Real-time Inventory Agent"
+        ]
+      },
+      "dataSources": [
+        "Real-time order queue and priorities",
+        "Warehouse layout and SKU locations",
+        "Picker locations and availability",
+        "Historical pick time by SKU",
+        "Congestion heat maps",
+        "Inventory availability"
+      ],
+      "benefits": [
+        "60-80% faster picking (250-350 vs 150-200 lines/hour)",
+        "50-65% reduction in travel time",
+        "99%+ pick accuracy with vision verification",
+        "30-40% throughput increase during peak periods",
+        "70-80% reduction in stockout exceptions during picks"
+      ],
+      "metrics": [
+        "Pick rate: 250-350 lines/hour",
+        "Travel efficiency: 85-90%",
+        "Pick accuracy: 99%+"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI-suggested pick sequences on existing mobile devices (25% efficiency gain)",
+        "Deploy voice picking with vision verification (35% accuracy improvement)",
+        "Enable real-time route re-optimization for top 20% SKUs"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "WMS with real-time inventory API",
+        "Mobile devices or wearables for pickers",
+        "Accurate SKU location data",
+        "Network connectivity across warehouse"
+      ]
+    },
+    "icon": "route",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-packing-shipping",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Packing & Shipping",
+    "description": "AI-optimized cartonization with automated label generation, carrier selection, and shipping documentation for fast, cost-effective fulfillment.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Manual selection of box sizes based on associate experience or trial-and-error. Associates manually weigh packages, print shipping labels, and apply to boxes. Carrier selection based on default rules without optimization. Significant material waste from oversized boxes and excessive void fill. Manual entry of tracking numbers and shipping confirmations.",
+      "constraints": [
+        "30-50 packages per hour packing rate",
+        "20-35% packaging material waste (oversized boxes)",
+        "Limited carrier optimization (default carrier 80-90% of time)",
+        "Manual dimensional weight entry (5-10% error rate)",
+        "Shipping cost overruns: 15-25% vs optimal"
+      ],
+      "metrics": [
+        "Packing rate: 30-50 packages/hour",
+        "Packaging efficiency: 65-80%",
+        "Shipping cost accuracy: 85-90%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI cartonization engine analyzes order line items and calculates optimal box size, orientation, and void fill requirements to minimize dimensional weight and material costs. Computer vision validates item placement and triggers alerts for fragile items requiring special handling. System automatically selects least-cost carrier based on real-time rates, service level requirements, destination zone, and package characteristics. Automated print-and-apply systems generate and affix shipping labels. Dimensioning systems capture precise package dimensions and weight for accurate rating. Real-time tracking updates sent to customers and OMS.",
+      "agents": {
+        "orchestrator": "Packing & Shipping Orchestrator",
+        "superAgents": [
+          "Cartonization Optimization Agent",
+          "Carrier Selection Agent",
+          "Pack Verification Agent"
+        ],
+        "utilityAgents": [
+          "Multi-Carrier Integration Agent",
+          "Dimensioning System Agent",
+          "Label Printer Agent",
+          "Tracking Notification Agent"
+        ]
+      },
+      "dataSources": [
+        "Order line item details (SKU dimensions, weight, fragility)",
+        "Available box sizes and costs",
+        "Real-time carrier rates and service levels",
+        "Destination zone and delivery requirements",
+        "Computer vision cameras",
+        "Dimensioning/weighing systems"
+      ],
+      "benefits": [
+        "70-90% faster packing (50-90 vs 30-50 packages/hour)",
+        "60-75% reduction in packaging material waste",
+        "15-25% shipping cost savings through optimal carrier selection",
+        "99%+ dimensional weight accuracy",
+        "Real-time tracking visibility (100% vs 60-70% manual entry)"
+      ],
+      "metrics": [
+        "Packing rate: 50-90 packages/hour",
+        "Packaging efficiency: 90-95%",
+        "Shipping cost accuracy: 99%+"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI carton recommendation on packing workstations (50% material waste reduction)",
+        "Enable multi-carrier rate shopping (10-15% shipping cost savings)",
+        "Deploy auto-dimensioning for accurate rating"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Multi-carrier shipping platform",
+        "SKU master data with accurate dimensions/weights",
+        "Packing station tablets or displays",
+        "Network-connected label printers"
+      ]
+    },
+    "icon": "package",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-labor-management",
+    "type": "function",
+    "level": 4,
+    "label": "Warehouse Labor Management & Productivity",
+    "description": "AI-driven labor planning, task assignment, and performance management to optimize workforce utilization and productivity.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Static labor schedules created weekly based on historical volume averages. Manual task assignment by supervisors each shift with limited visibility into individual productivity or task queue depth. Associates work in fixed zones without dynamic rebalancing. Performance tracking limited to daily or weekly aggregated metrics. Reactive staffing adjustments lead to overstaffing (wasted labor) or understaffing (missed SLAs).",
+      "constraints": [
+        "15-25% labor utilization waste (idle time or overstaffing)",
+        "Weekly schedule adjustments (cannot respond to intraday demand spikes)",
+        "Manual task balancing (supervisors manage 8-12 associates)",
+        "Performance feedback delayed by 1-7 days",
+        "30-40% variance in individual productivity not addressed"
+      ],
+      "metrics": [
+        "Labor utilization: 75-85%",
+        "Schedule adherence: 80-85%",
+        "Productivity variance: 30-40%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI forecasting predicts hourly labor requirements based on expected order volume, SKU mix, historical productivity, and seasonal patterns. Machine learning continuously assigns tasks to associates based on skills, certifications, current location, fatigue levels, and real-time workload across all zones. System dynamically rebalances labor between receiving, picking, packing, and shipping to eliminate bottlenecks. Real-time productivity dashboards provide immediate feedback and coaching opportunities. Gamification elements drive engagement and friendly competition. Predictive alerts recommend breaks to prevent fatigue-related errors.",
+      "agents": {
+        "orchestrator": "Labor Management Orchestrator",
+        "superAgents": [
+          "Labor Forecasting Agent",
+          "Task Assignment Agent",
+          "Productivity Analytics Agent",
+          "Fatigue Detection Agent"
+        ],
+        "utilityAgents": [
+          "Workforce Management System Agent",
+          "Gamification Engine Agent",
+          "Time & Attendance Agent"
+        ]
+      },
+      "dataSources": [
+        "Order volume forecasts",
+        "Historical productivity by task type",
+        "Associate skills and certifications",
+        "Real-time task queue depths",
+        "Wearable/device data (activity, location)",
+        "Time and attendance system"
+      ],
+      "benefits": [
+        "20-35% improvement in labor utilization (90-95% vs 75-85%)",
+        "30-45% reduction in productivity variance across associates",
+        "15-25% reduction in overall labor costs",
+        "50-60% improvement in schedule adherence",
+        "25-35% increase in associate engagement scores"
+      ],
+      "metrics": [
+        "Labor utilization: 90-95%",
+        "Schedule adherence: 95%+",
+        "Productivity variance: 10-15%"
+      ],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy real-time productivity dashboards (20% engagement improvement)",
+        "Implement AI labor forecasting for next-day scheduling (15% labor cost reduction)",
+        "Enable mobile task assignment with priority queues"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "WMS with task-level data capture",
+        "Workforce management system or time & attendance platform",
+        "Mobile devices for associates",
+        "Historical volume and productivity data"
+      ]
+    },
+    "icon": "users",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-returns-reverse-logistics",
+    "type": "function",
+    "level": 4,
+    "label": "Returns Processing & Reverse Logistics",
+    "description": "Automated returns receiving, disposition, and restocking with AI-driven quality assessment and fraud detection.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Manual returns receiving and inspection at dedicated returns desk. Associates manually verify return authorization, inspect items for damage or wear, and determine disposition (restock, liquidate, destroy). Data entry into returns management system with limited fraud detection capabilities. High labor costs and slow processing times lead to inventory delays and working capital tied up in returns inventory.",
+      "constraints": [
+        "15-25 minutes per return item processing time",
+        "Inconsistent quality inspection (30-40% variance between inspectors)",
+        "5-10% fraudulent returns not detected",
+        "3-7 days to return items to sellable inventory",
+        "Limited visibility into root cause analysis"
+      ],
+      "metrics": [
+        "Returns processing rate: 20-30 items/hour",
+        "Restock rate: 50-60%",
+        "Fraud detection: 90-95%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered returns portal provides instant return authorization with intelligent fraud scoring based on customer history, return patterns, and product characteristics. Computer vision systems automatically inspect returned items for defects, wear, authenticity, and condition upon arrival. Machine learning disposition engine determines optimal outcome (restock, refurbish, liquidate, recycle) based on item condition, market value, and restocking costs. RFID tagging expedites putaway of restockable items. Natural language processing analyzes return reasons to identify product quality issues or misleading descriptions. Automated refunds and customer notifications.",
+      "agents": {
+        "orchestrator": "Returns & Reverse Logistics Orchestrator",
+        "superAgents": [
+          "Returns Fraud Detection Agent",
+          "Quality Inspection Agent",
+          "Disposition Optimization Agent",
+          "Root Cause Analysis Agent"
+        ],
+        "utilityAgents": [
+          "Computer Vision Agent",
+          "Returns Authorization Agent",
+          "Refund Processing Agent",
+          "Liquidation Platform Agent"
+        ]
+      },
+      "dataSources": [
+        "Customer order history and return patterns",
+        "Computer vision cameras",
+        "Product master data (original condition, price)",
+        "Secondary market pricing data",
+        "Return reason codes and customer feedback",
+        "Fraud pattern database"
+      ],
+      "benefits": [
+        "75-85% faster returns processing (3-5 min vs 15-25 min per item)",
+        "90-95% fraud detection rate improvement (99%+ vs 90-95%)",
+        "20-30% increase in restock rate (70-80% vs 50-60%)",
+        "60-75% reduction in time to resaleable inventory (1-2 days vs 3-7 days)",
+        "15-25% improvement in returns margin through optimized disposition"
+      ],
+      "metrics": [
+        "Returns processing rate: 80-120 items/hour",
+        "Restock rate: 70-80%",
+        "Fraud detection: 99%+"
+      ],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 2,
+      "threshold": "Fraud score >85% or item value >$500",
+      "policy": "Manager review required before customer account restriction or high-value item disposition"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI fraud scoring for return authorizations (50% fraud reduction)",
+        "Implement vision-based quality inspection for electronics/apparel (40% processing time reduction)",
+        "Enable automated refund processing for low-risk returns"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Returns management system with API access",
+        "Customer order history database",
+        "Computer vision cameras at returns inspection stations",
+        "Refund processing automation capability"
+      ]
+    },
+    "icon": "package-x",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-wms-warehouse-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Warehouse Performance Analytics & Insights",
+    "description": "Real-time warehouse KPI dashboards with predictive analytics for proactive bottleneck identification and continuous improvement.",
+    "parentCapability": "capability-warehouse-management-systems",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Weekly or monthly manual reporting of warehouse KPIs compiled from WMS extracts and spreadsheets. Static dashboards showing lagging indicators (last week's performance). Root cause analysis requires manual investigation across multiple systems. Limited visibility into real-time bottlenecks or emerging issues. Reactive problem-solving after SLA misses or customer complaints.",
+      "constraints": [
+        "1-7 day reporting lag for performance metrics",
+        "Static reports with limited drill-down capability",
+        "Manual root cause analysis (2-5 days per investigation)",
+        "No predictive alerts for capacity or bottleneck issues",
+        "Siloed metrics across receiving, picking, packing, shipping"
+      ],
+      "metrics": [
+        "Reporting frequency: Weekly or monthly",
+        "Time to insight: 1-7 days",
+        "Predictive capability: None"
+      ]
+    },
+    "agentic": {
+      "workflow": "Real-time analytics platform ingests data from WMS, labor management, material handling systems, and IoT sensors to provide live warehouse performance dashboards. Machine learning identifies anomalies and bottlenecks as they emerge, triggering proactive alerts to supervisors. Predictive models forecast capacity constraints 24-48 hours in advance based on order pipeline and current performance trends. AI-driven root cause analysis automatically correlates issues across systems (e.g., 'pick rate decline correlates with high-velocity zone congestion and 15% staffing shortage'). Natural language query interface allows managers to ask questions ('Why did pack rate drop 20% yesterday?') and receive instant insights. Continuous improvement recommendations based on industry benchmarks and best practices.",
+      "agents": {
+        "orchestrator": "Warehouse Analytics Orchestrator",
+        "superAgents": [
+          "Anomaly Detection Agent",
+          "Predictive Capacity Agent",
+          "Root Cause Analysis Agent",
+          "Benchmarking Agent"
+        ],
+        "utilityAgents": [
+          "WMS Data Integration Agent",
+          "IoT Sensor Agent",
+          "Visualization Engine Agent",
+          "Natural Language Query Agent"
+        ]
+      },
+      "dataSources": [
+        "WMS transaction data (real-time)",
+        "Labor management system",
+        "Material handling equipment (conveyors, sorters, AMRs)",
+        "IoT sensors (temperature, motion, weight)",
+        "Order management system",
+        "Industry benchmark data"
+      ],
+      "benefits": [
+        "Real-time KPI visibility (vs 1-7 day lag)",
+        "70-85% faster root cause identification (hours vs days)",
+        "40-60% reduction in SLA misses through predictive alerts",
+        "15-25% productivity improvement from continuous optimization insights",
+        "30-50% reduction in time spent on manual reporting"
+      ],
+      "metrics": [
+        "Reporting frequency: Real-time",
+        "Time to insight: Minutes to hours",
+        "Predictive capability: 24-48 hour forecast accuracy >85%"
+      ],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy real-time dashboard for top 5 warehouse KPIs (immediate visibility)",
+        "Enable automated daily performance summary emails (50% reporting time savings)",
+        "Implement anomaly detection for pick/pack rates (proactive alerts)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "WMS with API or data export capability",
+        "Data warehouse or analytics platform",
+        "Historical performance data (3-6 months minimum)",
+        "Defined KPIs and thresholds"
+      ]
+    },
+    "icon": "chart-line",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

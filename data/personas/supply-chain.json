@@ -1,0 +1,104 @@
+[
+  {
+    "id": "persona-supply-chain-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "label": "Supply Chain Director",
+    "title": "Supply Chain Director",
+    "description": "Leads end-to-end supply chain strategy, planning, and execution including S&OP, network optimization, supplier collaboration, and operational excellence.",
+    "responsibilities": [
+      "Define supply chain strategy and transformation roadmap",
+      "Lead Sales & Operations Planning (S&OP) process",
+      "Optimize supply chain network configuration",
+      "Manage supplier relationships and performance",
+      "Drive continuous improvement and cost reduction",
+      "Ensure supply chain resilience and risk management"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Monthly S&OP meetings with slide deck presentations",
+      "Annual network optimization analysis (consultants required)",
+      "Email-based supplier communication",
+      "Quarterly business reviews and reporting",
+      "Reactive issue resolution and expediting"
+    ],
+    "agenticWorkflow": [
+      "Continuous S&OP with integrated demand, supply, financial planning",
+      "Real-time network optimization with scenario modeling",
+      "Automated supplier collaboration and performance tracking",
+      "Real-time supply chain control tower visibility",
+      "Proactive exception management and resolution"
+    ],
+    "painPointsAddressed": [
+      "Monthly S&OP cycles too slow for dynamic markets",
+      "Static network configuration suboptimal over time",
+      "Limited supplier visibility and collaboration",
+      "Delayed insights reduce decision speed",
+      "Reactive approach increases costs and risk"
+    ],
+    "kpis": [
+      "Supply Chain Cost as % of Revenue",
+      "Perfect Order Rate",
+      "Inventory Turnover",
+      "Supplier On-Time Delivery",
+      "Cash-to-Cash Cycle Time"
+    ],
+    "icon": "truck",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-logistics-fulfillment-coordinator",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "label": "Logistics & Fulfillment Coordinator",
+    "title": "Logistics & Fulfillment Coordinator",
+    "description": "Manages day-to-day logistics, warehouse operations, order fulfillment, and last-mile delivery to ensure on-time, accurate customer deliveries.",
+    "responsibilities": [
+      "Coordinate inbound and outbound logistics",
+      "Manage warehouse operations and labor scheduling",
+      "Optimize order fulfillment and shipping",
+      "Track shipment status and resolve delivery issues",
+      "Oversee cross-docking and flow-through operations",
+      "Monitor fulfillment KPIs and service levels"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual dock scheduling and yard management",
+      "Spreadsheet-based fulfillment tracking",
+      "Reactive issue resolution via phone calls and emails",
+      "Manual cross-dock eligibility determination",
+      "Daily operational reporting and firefighting"
+    ],
+    "agenticWorkflow": [
+      "Automated dock scheduling and yard optimization",
+      "Real-time fulfillment visibility across all locations",
+      "Proactive exception detection and resolution",
+      "AI-driven cross-docking recommendations",
+      "Predictive analytics for capacity planning"
+    ],
+    "painPointsAddressed": [
+      "Manual scheduling creates dock bottlenecks",
+      "Limited visibility into shipment status",
+      "Reactive issue resolution delays deliveries",
+      "Missed cross-dock opportunities increase costs",
+      "Time-intensive manual coordination"
+    ],
+    "kpis": [
+      "On-Time In-Full (OTIF) Rate",
+      "Order Accuracy Rate",
+      "Warehouse Throughput",
+      "Cross-Dock Percentage",
+      "Fulfillment Cost per Order"
+    ],
+    "icon": "clipboard-list",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

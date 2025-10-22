@@ -1,0 +1,194 @@
+[
+  {
+    "id": "agent-quote-to-order-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Quote-to-Order Orchestration Agent",
+    "description": "Coordinates entire quote lifecycle from inquiry through order conversion, integrating CRM, CPQ, ERP, inventory, pricing, and credit systems.",
+    "parentFunction": "function-quote-to-order-lifecycle",
+    "capabilities": [
+      "Orchestrate end-to-end quote process",
+      "Balance speed, accuracy, margin optimization, and customer satisfaction",
+      "Coordinate RFQ intake, configuration, pricing, approval, and conversion",
+      "Monitor quote aging and recommend proactive actions",
+      "Track conversion metrics and identify optimization opportunities"
+    ],
+    "integrations": [
+      "CRM (Salesforce, Dynamics, HubSpot)",
+      "CPQ (Salesforce CPQ, Oracle CPQ, Apttus)",
+      "ERP (SAP, Oracle, NetSuite)",
+      "Inventory Management Systems",
+      "Pricing Engines",
+      "Credit Management Systems",
+      "Contract Management Systems"
+    ],
+    "dataSources": [
+      "Customer opportunity data",
+      "Product catalog and configurations",
+      "Pricing rules and customer-specific contracts",
+      "Inventory availability",
+      "Credit limits and payment terms",
+      "Historical quote and conversion data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-contract-lifecycle-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Contract Lifecycle Orchestration Agent",
+    "description": "Coordinates contract creation, negotiation, execution, monitoring, and renewal while balancing speed, risk management, compliance, and revenue protection.",
+    "parentFunction": "function-contract-lifecycle-management",
+    "capabilities": [
+      "Orchestrate end-to-end contract lifecycle",
+      "Balance speed with risk management and compliance",
+      "Coordinate contract generation, negotiation, and execution",
+      "Monitor contract performance and compliance",
+      "Trigger proactive renewal workflows"
+    ],
+    "integrations": [
+      "CRM (Salesforce, Dynamics)",
+      "CLM (Ironclad, Icertis, Agiloft, DocuSign CLM)",
+      "E-Signature (DocuSign, Adobe Sign)",
+      "ERP (SAP, Oracle, NetSuite)",
+      "Pricing Systems",
+      "Compliance Systems"
+    ],
+    "dataSources": [
+      "CRM opportunity and customer data",
+      "Contract templates and clause library",
+      "Customer risk profiles",
+      "Historical contract performance",
+      "Pricing and volume commitment data",
+      "Compliance and SLA tracking data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-b2b-catalog-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "B2B Catalog Orchestration Agent",
+    "description": "Coordinates catalog generation, personalization, distribution, and punchout integration while balancing real-time freshness, performance, and scalability.",
+    "parentFunction": "function-b2b-catalog-management",
+    "capabilities": [
+      "Orchestrate real-time catalog generation and distribution",
+      "Balance freshness, performance, and personalization",
+      "Coordinate punchout integration with customer procurement systems",
+      "Manage multi-channel catalog syndication",
+      "Optimize catalog content and structure"
+    ],
+    "integrations": [
+      "ERP (SAP, Oracle, NetSuite)",
+      "PIM (Akeneo, Salsify, InRiver)",
+      "Pricing Engines",
+      "Inventory Management",
+      "Contract Management",
+      "Procurement Systems (Coupa, Ariba, Jaggaer)",
+      "B2B Marketplaces (Amazon Business, Alibaba)"
+    ],
+    "dataSources": [
+      "Product master data (PIM)",
+      "Real-time inventory levels",
+      "Customer-specific pricing and contracts",
+      "Purchase history and preferences",
+      "Catalog engagement metrics",
+      "Product images and specifications"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-multi-user-buying-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Multi-User Buying Orchestration Agent",
+    "description": "Coordinates requisition, approval routing, budget checking, and order placement while balancing approval thoroughness vs speed and compliance vs user experience.",
+    "parentFunction": "function-requisition-approval-management",
+    "capabilities": [
+      "Orchestrate multi-user buying and approval workflows",
+      "Balance approval thoroughness with speed",
+      "Coordinate budget validation and policy enforcement",
+      "Manage delegation and escalation scenarios",
+      "Optimize approval policies based on performance data"
+    ],
+    "integrations": [
+      "B2B Catalog/Commerce Platform",
+      "Budget/GL Systems (SAP, Oracle Financials, NetSuite)",
+      "User Directory (Active Directory, Okta, LDAP)",
+      "Order Management Systems",
+      "Notification Systems (Email, Mobile Push)",
+      "Calendar Systems (Outlook, Google Calendar)"
+    ],
+    "dataSources": [
+      "User roles, departments, and manager hierarchy",
+      "Budget codes and available budgets",
+      "Approval policies and thresholds",
+      "Requisition and approval history",
+      "Approver availability (calendar integration)",
+      "Policy compliance metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-credit-payment-terms-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Credit & Payment Terms Orchestration Agent",
+    "description": "Coordinates credit evaluation, limit assignment, monitoring, and collections while balancing sales enablement with risk management.",
+    "parentFunction": "function-credit-terms-management",
+    "capabilities": [
+      "Orchestrate end-to-end credit and payment terms lifecycle",
+      "Balance sales enablement (approve quickly) vs risk management",
+      "Coordinate credit scoring, limit setting, and collections",
+      "Monitor portfolio-level risk exposure",
+      "Optimize credit policies based on performance data"
+    ],
+    "integrations": [
+      "CRM (Salesforce, Dynamics)",
+      "ERP/AR (SAP, Oracle, NetSuite)",
+      "Credit Bureaus (D&B, Experian)",
+      "Financial Data Providers",
+      "Payment Gateways",
+      "Collection Management Systems"
+    ],
+    "dataSources": [
+      "Customer credit applications and references",
+      "D&B credit reports and scores",
+      "Financial statements and filings",
+      "Payment history and AR aging",
+      "Industry risk data",
+      "Portfolio performance metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

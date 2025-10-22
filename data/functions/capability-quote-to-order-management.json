@@ -1,0 +1,585 @@
+[
+  {
+    "id": "function-rfq-intake-triage",
+    "type": "function",
+    "level": 4,
+    "label": "RFQ Intake & Requirements Gathering",
+    "description": "Intelligent extraction of customer requirements from unstructured emails, forms, and voice transcripts with automatic CRM opportunity creation and missing information detection.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizational Level": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer sends RFQ via email or phone call to sales rep. 2. Rep manually reads email/transcribes call notes. 3. Rep schedules clarification call with customer (3-5 days delay). 4. Rep manually creates opportunity in CRM with typed notes. 5. Rep forwards RFQ to product specialists for technical review.",
+      "constraints": [
+        "3-5 days to clarify requirements via back-and-forth emails",
+        "30-40% of RFQs missing critical information (specs, volumes, delivery dates)",
+        "Inconsistent opportunity data entry across sales reps",
+        "No automated categorization by product line or complexity",
+        "Lost or delayed RFQs stuck in email inboxes"
+      ],
+      "metrics": ["RFQ processing time: 3-5 days", "Missing information rate: 30-40%", "Manual CRM data entry: 100%"]
+    },
+    "agentic": {
+      "workflow": "1. NLP agent extracts requirements from email/form/voice transcript in seconds. 2. Agent auto-categorizes by product line, complexity, urgency. 3. Agent creates CRM opportunity with pre-populated fields. 4. Agent identifies missing information and auto-generates clarification questions. 5. Agent suggests similar past quotes for reference and learning.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["RFQ Intelligence Agent"],
+        "utilityAgents": ["CRM Integration Agent", "NLP Processing Agent", "Email Gateway Agent"]
+      },
+      "dataSources": [
+        "Email inbox and attachments",
+        "Web form submissions",
+        "Voice call transcripts",
+        "Historical RFQ database",
+        "CRM opportunity data",
+        "Product catalog"
+      ],
+      "benefits": [
+        "95% faster RFQ processing (minutes vs 3-5 days)",
+        "90% reduction in missing information through intelligent prompting",
+        "100% consistent CRM data structure and completeness",
+        "Automatic prioritization by urgency and deal size",
+        "Zero lost RFQs with automated tracking and routing"
+      ],
+      "metrics": ["RFQ processing time: 5-15 minutes", "Missing information rate: <5%", "Auto-population accuracy: 95%+"]
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "Missing critical information or unclear requirements",
+      "policy": "Human sales rep reviews AI-generated questions before sending to customer"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy NLP extraction for pilot product line", "Auto-create CRM opportunities from email RFQs"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Email system API access", "CRM with API", "Historical RFQ data for training"]
+    },
+    "icon": "inbox-in",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-configuration-guided-selling",
+    "type": "function",
+    "level": 4,
+    "label": "Product Configuration & Guided Selling",
+    "description": "Interactive questioning to determine optimal product configurations with compatibility validation, upsell recommendations, and total cost of ownership calculations.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sales rep asks customer questions via email or phone. 2. Rep manually looks up product compatibility in spec sheets or calls product team. 3. Rep creates Bill of Materials (BOM) in Excel spreadsheet. 4. Rep sends configuration to customer for review. 5. Customer requests changes, rep repeats process (3-5 revision cycles).",
+      "constraints": [
+        "Rep spends 8-12 hours on complex configurations",
+        "30-40% configuration errors (incompatible components, wrong specs)",
+        "No proactive upsell/cross-sell recommendations",
+        "Limited TCO analysis for customer justification",
+        "Configuration knowledge concentrated in few expert reps"
+      ],
+      "metrics": ["Configuration time: 8-12 hours", "Error rate: 30-40%", "Revision cycles: 3-5 per quote"]
+    },
+    "agentic": {
+      "workflow": "1. Guided selling agent asks intelligent questions based on customer needs. 2. Agent validates technical compatibility in real-time. 3. Agent recommends optimal configuration with justification. 4. Agent suggests upsell/cross-sell based on customer profile and usage. 5. Agent calculates TCO including maintenance, support, and lifecycle costs.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Guided Selling & Configuration Agent"],
+        "utilityAgents": ["Product Catalog Agent", "Compatibility Validation Agent", "TCO Calculator Agent"]
+      },
+      "dataSources": [
+        "Product catalog with specifications",
+        "Compatibility matrix database",
+        "Customer purchase history",
+        "Industry benchmarks and use cases",
+        "Pricing and cost data"
+      ],
+      "benefits": [
+        "90% faster configuration (1-2 hours vs 8-12 hours)",
+        "95%+ configuration accuracy eliminating errors",
+        "15-25% higher quote values through intelligent upsell",
+        "TCO analysis improves customer justification and win rates",
+        "Configuration expertise democratized across all reps"
+      ],
+      "metrics": ["Configuration time: 1-2 hours", "Error rate: <5%", "Upsell attachment rate: +20%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement guided selling for standard product lines", "Auto-validate compatibility rules"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Product catalog with structured data", "Compatibility rules documented", "Historical quote data"]
+    },
+    "icon": "puzzle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-pricing-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Pricing Optimization",
+    "description": "AI-powered pricing engine that optimizes for margin, volume, competitive position, and customer lifetime value with real-time market adaptation and guardrail enforcement.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Rep manually looks up list price from price book or spreadsheet. 2. Rep applies standard discount (10-20%) based on volume. 3. Rep checks with manager for approval if discount >15%. 4. No consideration of competitive prices, inventory levels, or customer value. 5. Static pricing remains until annual price book update.",
+      "constraints": [
+        "Inconsistent pricing across reps (same customer, different prices)",
+        "No real-time market or competitive pricing intelligence",
+        "Discounting decisions based on gut feel not data",
+        "Missed margin opportunities (could have charged more)",
+        "No optimization for win probability vs margin trade-offs"
+      ],
+      "metrics": ["Pricing variance between reps: 15-30%", "Margin leakage: 3-7%", "Competitive intel usage: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. AI analyzes: cost, target margin, customer segment, competitive pricing, inventory levels, demand forecast. 2. Agent applies: volume discounts, contract pricing, promotional offers, loyalty bonuses. 3. Agent optimizes for: deal profitability vs win probability (margin-maximizing or volume-maximizing strategies). 4. Agent provides pricing guardrails: floor prices (below which requires approval), ceiling prices (market-competitive). 5. Agent tracks effectiveness: win rates by price level, margin vs volume trade-offs.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Dynamic Pricing Optimization Agent"],
+        "utilityAgents": ["Competitive Intelligence Agent", "Contract Pricing Agent", "Margin Calculator Agent", "Inventory Availability Agent"]
+      },
+      "dataSources": [
+        "Cost and margin data",
+        "Customer value and segment data",
+        "Competitive pricing intelligence",
+        "Historical win/loss data by price point",
+        "Real-time inventory levels",
+        "Demand forecasts"
+      ],
+      "benefits": [
+        "2-5 percentage point margin improvement through optimization",
+        "95% pricing consistency across reps and deals",
+        "Real-time competitive pricing reduces lost deals",
+        "Win probability optimization increases conversion 10-20%",
+        "Dynamic pricing adapts to inventory and demand in real-time"
+      ],
+      "metrics": ["Margin improvement: +2-5 pts", "Pricing consistency: 95%+", "Win rate increase: +10-20%"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Pricing below floor or discount >20%",
+      "policy": "Sales manager approval required for pricing outside guardrails"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy dynamic pricing for standard products", "Implement competitive price monitoring"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Accurate cost data", "Historical pricing and win/loss data", "Competitive intelligence sources", "Clear pricing strategy and policies"]
+    },
+    "icon": "currency-dollar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-quote-generation-documentation",
+    "type": "function",
+    "level": 4,
+    "label": "Quote Generation & Documentation",
+    "description": "Automated assembly of professional quote documents from templates with product specifications, pricing tables, terms, delivery schedules, and multiple scenario generation.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Rep copies previous quote template (Word or PDF). 2. Rep manually enters product details, pricing, terms. 3. Rep formats tables and checks for typos. 4. Rep emails draft to sales ops for review. 5. Sales ops corrects errors and returns (3-5 day cycle). 6. Rep sends final quote to customer.",
+      "constraints": [
+        "4-8 hours to create professional quote document",
+        "30-40% quotes contain formatting or data entry errors",
+        "No automatic expiration dates or pricing validity tracking",
+        "Manual effort to create multiple scenarios (1-year vs 3-year)",
+        "Inconsistent branding and messaging across reps"
+      ],
+      "metrics": ["Quote document creation time: 4-8 hours", "Error rate: 30-40%", "Manual review required: 100%"]
+    },
+    "agentic": {
+      "workflow": "1. Agent selects optimal template based on customer type and deal structure. 2. Agent auto-populates from: CRM opportunity, product configuration, pricing engine output. 3. Agent assembles: product specs, pricing tables, terms & conditions, delivery schedules, payment terms. 4. Agent generates multiple scenarios (e.g., 1-year vs 3-year contract, different volumes). 5. Agent personalizes content based on customer industry and prior interactions. 6. Agent sets auto-expiration based on pricing validity and inventory reservations.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Quote Generation Agent"],
+        "utilityAgents": ["Quote Template Agent", "Document Assembly Agent", "Multi-Currency Agent", "Expiration Tracking Agent"]
+      },
+      "dataSources": [
+        "Quote templates library",
+        "Product specifications and images",
+        "Pricing and discount data",
+        "Terms and conditions library",
+        "Delivery and logistics data",
+        "Customer profile and history"
+      ],
+      "benefits": [
+        "95% faster quote creation (15-30 minutes vs 4-8 hours)",
+        "95%+ quote accuracy eliminating manual errors",
+        "Multiple scenarios generated instantly (vs hours of manual work)",
+        "Consistent branding and messaging across all quotes",
+        "Auto-expiration prevents stale pricing issues"
+      ],
+      "metrics": ["Quote creation time: 15-30 minutes", "Error rate: <5%", "Scenarios per quote: 2-3 (vs 1)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy template-based quote generation", "Auto-populate from CRM and pricing engine"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Quote templates approved by legal and marketing", "Integration with CRM and pricing systems", "Product catalog with images and specs"]
+    },
+    "icon": "document-text",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-approval-workflow-management",
+    "type": "function",
+    "level": 4,
+    "label": "Approval Workflow Management",
+    "description": "Intelligent routing of quotes through approval chains with policy-based auto-approval, SLA enforcement, and bottleneck identification.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Rep emails quote to sales manager for approval. 2. Manager forwards to pricing analyst if discount >10%. 3. Pricing analyst forwards to finance if margin <30%. 4. Finance forwards to VP if deal >$500K. 5. Each approver takes 1-3 days to respond. 6. No tracking or SLA enforcement. 7. Quotes get lost or forgotten requiring chase emails.",
+      "constraints": [
+        "5-15 day approval cycle time with email chains",
+        "10-20% of quotes lost or delayed in approval process",
+        "No visibility into approval status for reps or customers",
+        "Approvers become bottlenecks when out-of-office",
+        "Inconsistent approval criteria across managers",
+        "No auto-approval for low-risk deals"
+      ],
+      "metrics": ["Approval cycle time: 5-15 days", "Lost/delayed quotes: 10-20%", "Auto-approval rate: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Workflow engine routes based on rules: deal size, discount %, margin, customer risk, strategic importance. 2. Agent auto-approves within policy (e.g., <$50K, >30% margin, standard terms). 3. Agent escalates exceptions: requires sales manager approval >15% discount, VP approval >$500K. 4. Agent enforces SLAs: auto-escalates if approver doesn't respond in 24 hours. 5. Agent tracks bottlenecks: identifies approvers causing delays. 6. Agent provides mobile approval interface for quick decisions.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Intelligent Approval Workflow Agent"],
+        "utilityAgents": ["Notification Agent", "Escalation Agent", "Mobile Approval Agent", "Approval Analytics Agent"]
+      },
+      "dataSources": [
+        "Approval policy rules and thresholds",
+        "User directory with approval hierarchies",
+        "Quote risk scoring data",
+        "Historical approval patterns",
+        "Approver availability calendars"
+      ],
+      "benefits": [
+        "80% faster approvals (2-8 hours vs 5-15 days)",
+        "50-70% auto-approval rate for low-risk quotes",
+        "100% approval tracking and visibility",
+        "Zero lost quotes with automated escalation",
+        "SLA enforcement improves approver responsiveness",
+        "Bottleneck identification enables process optimization"
+      ],
+      "metrics": ["Approval cycle time: 2-8 hours", "Auto-approval rate: 50-70%", "Lost quotes: 0%"]
+    },
+    "hitlGate": {
+      "step": 2,
+      "threshold": "Quotes outside auto-approval policy",
+      "policy": "Appropriate manager/executive must review and approve based on deal parameters"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement auto-approval for low-value quotes", "Deploy mobile approval app"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Documented approval policies and thresholds", "User directory with approval hierarchies", "Workflow automation platform"]
+    },
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-conversion-prediction-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Conversion Prediction & Analytics",
+    "description": "Machine learning models that predict quote-to-order conversion probability and recommend improvement actions with continuous learning from outcomes.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Rep submits quote and hopes for the best. 2. Rep follows up via email/phone at random intervals. 3. Customer eventually buys or doesn't (rep often surprised). 4. No tracking of conversion rates or win/loss reasons. 5. No predictive insights into deal risk or actions to improve odds.",
+      "constraints": [
+        "No visibility into conversion probability",
+        "Random follow-up strategy (too aggressive or not enough)",
+        "Win/loss reasons not systematically captured",
+        "No data-driven recommendations to improve deals",
+        "20-40% quote conversion rate with no improvement plan",
+        "Lost deals surprise management and reps"
+      ],
+      "metrics": ["Quote conversion rate: 20-40%", "Win/loss analysis: Manual, incomplete", "Predictive accuracy: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. ML model predicts quote-to-order conversion probability (0-100%) based on: customer engagement, price competitiveness, delivery timeline, relationship strength, past behavior. 2. Agent recommends actions to improve conversion: pricing adjustments, faster delivery, financing options, executive engagement. 3. Agent monitors quote aging and triggers proactive follow-ups. 4. Agent captures win/loss reasons via automated surveys post-decision. 5. Agent continuously learns: adjusts models based on actual outcomes to improve accuracy.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Predictive Conversion & Win/Loss Agent"],
+        "utilityAgents": ["ML Model Agent", "Survey Agent", "Quote Aging Agent", "Competitive Intelligence Agent"]
+      },
+      "dataSources": [
+        "Historical quote and order data",
+        "Customer engagement signals (email opens, portal visits)",
+        "Competitive pricing intelligence",
+        "Customer relationship data (tenure, satisfaction)",
+        "Win/loss survey responses",
+        "Quote aging and follow-up history"
+      ],
+      "benefits": [
+        "50-80% quote conversion rate (vs 20-40% traditional)",
+        "70-85% predictive accuracy for conversion probability",
+        "Data-driven actions improve win rates 15-30%",
+        "Proactive deal management prevents last-minute surprises",
+        "Win/loss insights inform future pricing and strategy",
+        "Continuous learning improves predictions over time"
+      ],
+      "metrics": ["Quote conversion rate: 50-80%", "Prediction accuracy: 70-85%", "Win rate improvement: +15-30%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement win/loss surveys", "Track quote aging and follow-up effectiveness"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["12-24 months historical quote data", "ML model development capability", "Integration with CRM and quote system", "Win/loss survey process"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-negotiation-support",
+    "type": "function",
+    "level": 4,
+    "label": "Negotiation Support",
+    "description": "AI-powered negotiation assistant that suggests counteroffer strategies, calculates concession impacts, and enforces guardrails to protect margin.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer requests lower price or better terms. 2. Rep calls manager to discuss concessions. 3. Rep offers discount without understanding margin impact. 4. Back-and-forth negotiations over days/weeks via email. 5. Rep often gives unnecessary concessions to close deal. 6. No tracking of negotiation patterns or successful tactics.",
+      "constraints": [
+        "Rep lacks real-time margin impact visibility during negotiations",
+        "Inconsistent negotiation strategies across reps",
+        "Unnecessary concessions given (customer would have accepted less)",
+        "No data on which objections are common or how to counter",
+        "1-3 week negotiation cycles delay deal closure",
+        "No enforcement of minimum acceptable margin guardrails"
+      ],
+      "metrics": ["Negotiation cycle time: 1-3 weeks", "Unnecessary concessions: 30-50% of deals", "Margin erosion: 3-5%"]
+    },
+    "agentic": {
+      "workflow": "1. Customer raises objection (price, delivery, terms). 2. Agent suggests counteroffer strategies based on similar situations and outcomes. 3. Agent calculates impact of concessions in real-time: 'Reducing price 5% drops margin from 32% to 27%'. 4. Agent recommends value-adds instead of price cuts: faster delivery, extended warranty, training. 5. Agent enforces negotiation guardrails: alerts when approaching minimum acceptable margin. 6. Agent tracks patterns: common objections, successful concession strategies for future learning.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Negotiation Assistant Agent"],
+        "utilityAgents": ["Margin Calculator Agent", "Competitive Intelligence Agent", "Negotiation Analytics Agent", "Value-Add Recommendation Agent"]
+      },
+      "dataSources": [
+        "Historical negotiation data and outcomes",
+        "Customer objection patterns",
+        "Margin and cost data",
+        "Competitive positioning data",
+        "Value-add options and costs",
+        "Successful negotiation tactics library"
+      ],
+      "benefits": [
+        "50-70% faster negotiations (3-7 days vs 1-3 weeks)",
+        "Real-time margin visibility prevents excessive concessions",
+        "Value-add alternatives protect margin while satisfying customers",
+        "Consistent negotiation excellence across all reps",
+        "Guardrails prevent deals below minimum acceptable margin",
+        "Negotiation intelligence improves with each interaction"
+      ],
+      "metrics": ["Negotiation cycle time: 3-7 days", "Margin protection: +2-4 pts", "Unnecessary concessions: <10%"]
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "Concessions approaching minimum margin guardrail",
+      "policy": "Sales manager must approve any negotiations that push margin below threshold"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Provide reps with real-time margin calculators", "Document common objections and counter-strategies"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Historical negotiation data", "Margin calculation rules", "Value-add option library", "Negotiation playbooks"]
+    },
+    "icon": "chat-alt",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-order-conversion-validation",
+    "type": "function",
+    "level": 4,
+    "label": "Order Conversion & Validation",
+    "description": "One-click quote acceptance that auto-converts to orders with real-time inventory checks, credit validation, and delivery date confirmation.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer sends PO via email or fax. 2. Rep manually enters order into ERP system (30-60 minutes). 3. Rep manually checks inventory availability. 4. Rep discovers items out of stock, emails customer with delay notice. 5. Rep manually checks customer credit status. 6. Rep discovers credit hold, deals with finance to resolve (1-3 days). 7. Rep confirms delivery dates with logistics via email.",
+      "constraints": [
+        "1-3 day order entry to confirmation cycle",
+        "30-50% of orders have issues (out of stock, credit holds, data entry errors)",
+        "Manual data entry introduces 5-10% error rate",
+        "Customer receives no confirmation until all issues resolved",
+        "No visibility into order status for customer",
+        "Order fulfillment delayed by preventable issues"
+      ],
+      "metrics": ["Order entry time: 30-60 minutes", "Order issue rate: 30-50%", "Entry error rate: 5-10%"]
+    },
+    "agentic": {
+      "workflow": "1. Customer clicks 'Accept Quote' button in self-service portal. 2. Agent performs pre-conversion validation: inventory availability, credit check, delivery date feasibility. 3. Agent auto-converts quote to order in ERP with all data pre-populated. 4. Agent reserves inventory and creates delivery schedule. 5. Agent sends instant confirmation to customer with order number and expected delivery. 6. Agent alerts rep of any exceptions requiring human intervention (partial stock, credit issues).",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Order Conversion Agent"],
+        "utilityAgents": ["Inventory Availability Agent", "Credit Check Agent", "Delivery Date Agent", "ERP Integration Agent"]
+      },
+      "dataSources": [
+        "Quote data with all product and pricing details",
+        "Real-time inventory levels",
+        "Customer credit status and limits",
+        "Logistics and delivery scheduling data",
+        "ERP order management system"
+      ],
+      "benefits": [
+        "95% faster order conversion (5-10 minutes vs 1-3 days)",
+        "90% reduction in order issues through pre-validation",
+        "Zero data entry errors with direct quote-to-order conversion",
+        "Instant customer confirmation improves experience",
+        "5-10% exceptions routed to human for resolution",
+        "Seamless quote-to-cash process with no manual handoffs"
+      ],
+      "metrics": ["Order conversion time: 5-10 minutes", "Order issue rate: 5-10%", "Entry error rate: 0%"]
+    },
+    "hitlGate": {
+      "step": 6,
+      "threshold": "Issues detected (stock shortage, credit hold, delivery constraint)",
+      "policy": "Sales rep or ops team intervenes to resolve exceptions before order confirmation"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable quote acceptance button in customer portal", "Pre-validate inventory before sending quote"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Integration with ERP order management", "Real-time inventory visibility", "Credit system integration", "Customer self-service portal"]
+    },
+    "icon": "shopping-cart",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-quote-lifecycle-management",
+    "type": "function",
+    "level": 4,
+    "label": "Quote Lifecycle Management",
+    "description": "Comprehensive tracking of quote status from creation through order conversion with aging alerts, expiration management, and revision history.",
+    "parentCapability": "capability-quote-to-order-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Rep creates quote and sends to customer. 2. Rep manually adds quote to tracking spreadsheet. 3. Rep sets reminder in Outlook to follow up. 4. Rep forgets to follow up or misses reminder. 5. Customer receives multiple conflicting quote versions. 6. Quote expires but no one notices, causing pricing issues. 7. No centralized view of all outstanding quotes.",
+      "constraints": [
+        "No automated tracking of quote status or aging",
+        "Lost follow-up opportunities (quotes forgotten)",
+        "Multiple quote versions in circulation (confusion)",
+        "Expired quotes used for orders (wrong pricing)",
+        "No visibility for managers into quote pipeline",
+        "Manual effort to track and report on quotes"
+      ],
+      "metrics": ["Quote tracking: Manual spreadsheets", "Follow-up compliance: 50-70%", "Quote pipeline visibility: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Agent tracks quote status throughout lifecycle: Draft → Sent → Under Review → Negotiating → Approved → Converted/Lost. 2. Agent monitors quote aging and alerts rep at key milestones (3 days, 7 days, 14 days). 3. Agent manages quote expiration: auto-expires quotes based on pricing validity, sends renewal notifications. 4. Agent maintains version control: tracks all revisions, ensures customers reference current version. 5. Agent provides pipeline visibility: dashboards for reps and managers showing quote status, aging, conversion trends. 6. Agent recommends proactive actions: follow-up timing, escalation for at-risk deals.",
+      "agents": {
+        "orchestrator": "Quote-to-Order Orchestration Agent",
+        "superAgents": ["Quote Lifecycle Management Agent"],
+        "utilityAgents": ["Quote Aging Agent", "Expiration Management Agent", "Version Control Agent", "Quote Analytics Agent"]
+      },
+      "dataSources": [
+        "Quote creation and modification history",
+        "Customer engagement signals (email opens, portal visits)",
+        "Quote status and stage transitions",
+        "Pricing validity periods",
+        "Historical conversion patterns",
+        "Rep activity and follow-up data"
+      ],
+      "benefits": [
+        "100% quote tracking and visibility (vs manual spreadsheets)",
+        "Automated aging alerts ensure timely follow-ups",
+        "Version control eliminates confusion and errors",
+        "Expiration management prevents pricing issues",
+        "Real-time pipeline visibility for forecasting",
+        "Proactive deal management maximizes conversion"
+      ],
+      "metrics": ["Quote tracking: 100% automated", "Follow-up compliance: 95%+", "Pipeline visibility: Real-time dashboards"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated quote aging alerts", "Create quote pipeline dashboard"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["CPQ or quote management system", "Integration with CRM", "Quote lifecycle stages defined"]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

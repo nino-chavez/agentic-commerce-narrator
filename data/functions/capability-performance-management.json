@@ -1,0 +1,396 @@
+[
+  {
+    "id": "function-continuous-feedback-recognition",
+    "type": "function",
+    "level": 4,
+    "label": "Continuous Feedback & Recognition",
+    "description": "Weekly/biweekly check-ins with AI-prompted feedback, real-time peer recognition, and sentiment analysis replacing annual reviews with continuous performance conversations driving 25% employee satisfaction improvement.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Manager provides performance feedback once per year during annual review (60-90 minute meeting). 2. Feedback suffers from recency bias (entire year judged on last 2-3 months). 3. Employee surprised by feedback (no ongoing conversations throughout year). 4. Manager writes review in isolation, submits to HR for processing. 5. Recognition ad-hoc and infrequent (maybe quarterly awards for top performers). 6. 2.5/5 employee satisfaction with performance management (reviews dreaded, seen as punitive).",
+      "constraints": [
+        "Annual feedback creates 364 days of blindness (no ongoing conversations)",
+        "Recency bias makes reviews unfair (ignores 10 months of performance)",
+        "Surprises and defensiveness from lack of continuous dialogue",
+        "Recognition infrequent and inconsistent (quarterly awards only)",
+        "Low employee satisfaction (2.5/5) - reviews seen as negative experience",
+        "No real-time course correction when performance issues arise"
+      ],
+      "metrics": ["Feedback frequency: Annual only", "Employee satisfaction: 2.5/5", "Recognition frequency: Quarterly (top performers only)", "Recency bias: High"]
+    },
+    "agentic": {
+      "workflow": "1. Continuous Feedback & Recognition Agent sends weekly check-in prompts via Slack/Teams: 'How's John doing on the customer portal project? Any feedback to share?'. 2. Manager provides quick feedback in 2-3 minutes: 'Great progress on API design, customer happy. Work on communication - keep project stakeholders updated proactively'. 3. Agent aggregates feedback over time, tracks themes and patterns: 'John receiving consistent praise for technical skills, opportunity areas in communication and stakeholder management'. 4. Agent enables peer-to-peer recognition: 'Give John a kudos for helping you debug the authentication issue - visible to team and management'. 5. Agent analyzes feedback sentiment: detects positive trends (morale improving), negative trends (engagement dropping), or concerning patterns (conflict with peer). 6. Agent surfaces feedback history during quarterly development discussions: manager reviews 12 weeks of continuous feedback with John, no surprises or recency bias.",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["Continuous Feedback & Recognition Agent", "Feedback Prompting Agent"],
+        "utilityAgents": ["Performance Management Platform API", "Recognition Platform API", "Slack/Teams Integration", "Sentiment Analysis Engine"]
+      },
+      "dataSources": [
+        "Weekly/biweekly check-in feedback from managers",
+        "Peer-to-peer recognition and kudos data",
+        "Project collaboration and contribution data",
+        "Sentiment analysis of feedback tone and patterns",
+        "Feedback themes and categorization (strengths, opportunities)",
+        "Historical feedback trends over time"
+      ],
+      "benefits": [
+        "25% improvement in employee satisfaction (4.0/5 vs 2.5/5) through continuous dialogue",
+        "Recency bias eliminated by reviewing 52 weeks of feedback vs last 2-3 months",
+        "No surprises - employees know strengths and opportunities in real-time",
+        "Real-time course correction when issues arise (vs waiting for annual review)",
+        "Frequent recognition (weekly peer kudos) vs quarterly awards only",
+        "Manager burden spread throughout year (2-3 min weekly) vs 60-90 min annual marathon"
+      ],
+      "metrics": ["Feedback frequency: Weekly/biweekly", "Employee satisfaction: 4.0/5", "Recognition frequency: Weekly (peer-driven)", "Recency bias: Eliminated"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy weekly check-in prompts via Slack/Teams for pilot teams", "Enable peer recognition platform with visible kudos", "Implement manager feedback aggregation dashboard to review themes"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Performance management platform with continuous feedback capability", "Slack/Teams integration for feedback prompts", "Recognition platform or capability (built-in or standalone)", "Manager training on effective feedback delivery", "Cultural shift from annual to continuous mindset (executive sponsorship)"]
+    },
+    "icon": "chat-alt-2",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-goal-setting-tracking-okrs",
+    "type": "function",
+    "level": 4,
+    "label": "Goal Setting & Tracking (OKRs/MBOs)",
+    "description": "Quarterly OKR cascading with real-time progress tracking, red/yellow/green status alerts, and strategic alignment visualization achieving 85-90% goal completion versus 60-70% annual static goals.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Manager sets employee goals during annual review (3-5 goals for the year). 2. Goals written in Word document or performance management system, rarely revisited. 3. No goal progress tracking or check-ins mid-year (set-and-forget). 4. Manager remembers goals 12 months later during next annual review (or forgets). 5. Employee achieves 60-70% of goals on average (if goals even remembered or still relevant). 6. No cascading from company strategy (employee goals disconnected from organizational objectives).",
+      "constraints": [
+        "Annual goals static and inflexible (business priorities change quarterly)",
+        "No progress tracking or mid-year check-ins (set-and-forget)",
+        "60-70% goal completion rate due to lack of accountability and alignment",
+        "Goals disconnected from company strategy (no cascading alignment)",
+        "12-month time horizon too long (priorities shift, goals become irrelevant)",
+        "No visibility into team's goals (siloed individual goal setting)"
+      ],
+      "metrics": ["Goal completion rate: 60-70%", "Progress tracking: Annual review only", "Strategic alignment: Low (no cascading)", "Goal revision frequency: Never"]
+    },
+    "agentic": {
+      "workflow": "1. Goal Setting & Tracking Agent cascades company OKRs down organization: company objective 'Expand enterprise market share' → department objective 'Close 50 enterprise deals' → individual objective 'Generate 200 qualified enterprise leads'. 2. Agent helps employee set quarterly OKRs with SMART criteria and measurable key results: 'Generate 200 qualified enterprise leads (current: 50/quarter)'. 3. Agent tracks progress in real-time: integrates with CRM, project management tools, business systems to auto-update OKR completion (e.g., 120/200 leads = 60% progress, yellow status). 4. Agent provides weekly progress check-ins: 'You're 60% toward lead generation goal with 8 weeks remaining (on track). Sarah on your team at 30% (at risk) - offer support?'. 5. Agent enables goal adjustments mid-quarter: business priority shifts, manager and employee revise OKR with approval workflow. 6. Agent visualizes organizational alignment: shows how individual OKRs ladder up to department and company objectives (transparency and purpose).",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["Goal Setting & Tracking Agent", "OKR Alignment Agent"],
+        "utilityAgents": ["Performance Management Platform API", "CRM Integration", "Project Management System APIs", "Business Intelligence Dashboard", "Notification Service"]
+      },
+      "dataSources": [
+        "Company, department, and team OKRs for cascading",
+        "Individual employee OKRs and key results",
+        "CRM, project management, and business system data for progress tracking",
+        "Weekly/monthly progress updates and status (red/yellow/green)",
+        "Goal revision history and approval workflows",
+        "Organizational hierarchy for alignment visualization"
+      ],
+      "benefits": [
+        "85-90% goal completion rate (vs 60-70%) through accountability and tracking",
+        "Quarterly OKR cycle aligns with business agility vs inflexible annual goals",
+        "Real-time progress tracking (red/yellow/green status) vs annual review surprise",
+        "Strategic alignment transparency shows how individual work contributes to company goals",
+        "Mid-quarter goal adjustment capability adapts to changing business priorities",
+        "Manager visibility into team's goal progress enables proactive coaching"
+      ],
+      "metrics": ["Goal completion rate: 85-90%", "Progress tracking: Real-time (weekly updates)", "Strategic alignment: High (cascaded OKRs)", "Goal revision: Quarterly + mid-cycle adjustments"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy quarterly OKR framework for pilot departments", "Implement real-time progress tracking from CRM and project management systems", "Enable OKR alignment visualization showing cascade from company to individual"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["OKR methodology training for managers and employees", "Performance management platform with OKR capability", "Integration with business systems for progress tracking (CRM, project management)", "Company and department OKRs defined and communicated", "Cultural shift from annual to quarterly goal cycles (executive sponsorship)"]
+    },
+    "icon": "target",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-360-feedback-orchestration",
+    "type": "function",
+    "level": 4,
+    "label": "360 Feedback Orchestration",
+    "description": "AI-recommended rater selection with automated survey distribution, intelligent reminders, and response rate optimization achieving 75-85% response rates versus 40-60% manual email-based 360 processes.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee nominates 5-8 peers, subordinates, stakeholders for 360 feedback during annual review. 2. Manager reviews and approves nominations (may add or remove raters). 3. HR manually sends 360 survey emails to nominated raters (often weeks after review cycle starts). 4. 40-60% response rate after 2-3 manual reminder emails over 4-6 weeks. 5. HR manually consolidates responses in Excel, anonymizes feedback (redacting names from comments). 6. 360 report shared with employee and manager 6-8 weeks after initial nomination (too late for timely action).",
+      "constraints": [
+        "Manual rater nomination and approval (employee may nominate friends, avoid critics)",
+        "40-60% response rate due to email-based reminders and survey fatigue",
+        "6-8 week 360 cycle from nomination to report delivery (too slow)",
+        "Manual anonymization and consolidation takes HR 2-4 hours per employee",
+        "No intelligent rater selection (quality of feedback depends on nominee choices)",
+        "360 only during annual review (infrequent, high-stakes)"
+      ],
+      "metrics": ["Response rate: 40-60%", "Cycle time: 6-8 weeks", "Rater selection: Manual (employee nominated)", "Frequency: Annual only"]
+    },
+    "agentic": {
+      "workflow": "1. 360 Feedback Orchestration Agent recommends raters based on collaboration data: 'You've worked with Sarah on 3 projects, exchanged 50+ emails, attended 10 meetings - strong candidate for peer feedback'. 2. Agent balances rater mix: ensures diverse perspectives (peers, manager, subordinates, cross-functional stakeholders) and avoids bias (not all friends or allies). 3. Agent sends survey invitations with personalized messages: 'John has requested your feedback as part of his development - your insights are valuable and will remain confidential'. 4. Agent sends intelligent reminders: friendly 1-week reminder, urgent 3-day reminder with time estimate ('10 minutes to complete'), final push 24 hours before deadline with SMS/Slack escalation. 5. Agent achieves 75-85% response rate through multi-channel reminders and nudges. 6. Agent auto-consolidates responses, anonymizes feedback, generates 360 report in 2-3 weeks vs 6-8 weeks manual.",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["360 Feedback Orchestration Agent", "Rater Selection Agent"],
+        "utilityAgents": ["Performance Management Platform API", "Survey Platform API", "Email/SMS Gateway", "Collaboration Analytics Agent"]
+      },
+      "dataSources": [
+        "Employee collaboration data (projects, emails, meetings, Slack/Teams interactions)",
+        "Organizational hierarchy and reporting relationships",
+        "Historical 360 participation and response quality data",
+        "Survey response tracking and reminder history",
+        "Rater feedback quality and calibration data",
+        "360 survey templates and question libraries"
+      ],
+      "benefits": [
+        "75-85% response rate (vs 40-60%) through intelligent reminders and multi-channel nudges",
+        "20-30 point response rate improvement drives higher quality 360 feedback",
+        "AI rater selection ensures diverse perspectives and reduces bias",
+        "2-3 week cycle time (vs 6-8 weeks) provides timely feedback for action",
+        "Automated consolidation and anonymization saves HR 2-4 hours per employee",
+        "Quarterly 360 capability vs annual only (continuous development focus)"
+      ],
+      "metrics": ["Response rate: 75-85%", "Cycle time: 2-3 weeks", "Rater selection: AI-recommended (collaboration-based)", "Frequency: Quarterly or biannual"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI rater recommendations based on collaboration data for pilot group", "Implement multi-channel reminder sequence (email + SMS + Slack)", "Enable automated 360 report generation with anonymization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["360 survey platform with automation capability", "Collaboration data from email, calendar, project management systems", "Multi-channel notification infrastructure (email, SMS, Slack)", "Survey templates and question libraries", "Anonymization and reporting automation", "Manager training on delivering 360 feedback"]
+    },
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-performance-analytics-insights",
+    "type": "function",
+    "level": 4,
+    "label": "Performance Analytics & Insights",
+    "description": "Predictive performance analytics with flight risk correlation, high performer identification, succession readiness scoring, and performance trend analysis enabling data-driven talent decisions and 20-40% attrition reduction.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR compiles annual performance ratings in Excel spreadsheet (3-5 rating categories). 2. HR calculates performance distribution: 10% top performers, 70% meets expectations, 20% below expectations. 3. HR creates PowerPoint presentation showing performance by department for leadership review. 4. No predictive analytics or flight risk correlation (high performers leave without warning). 5. Succession planning ad-hoc based on manager opinions (no data-driven readiness scores). 6. Performance trends not analyzed (is this employee improving, declining, plateauing?).",
+      "constraints": [
+        "Performance ratings backward-looking only (no predictive analytics)",
+        "High performers leave without warning (no flight risk correlation)",
+        "Succession planning based on manager gut feel (no readiness scoring)",
+        "Performance distribution reported but not actionable (so what?)",
+        "No trend analysis (improving vs declining performance over time)",
+        "Talent decisions reactive (respond to resignations) vs proactive (retain before they leave)"
+      ],
+      "metrics": ["Attrition prediction: None", "High performer identification: Ratings only (backward-looking)", "Succession readiness: Manager opinion", "Performance trends: Not analyzed"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Analytics & Insights Agent analyzes performance data to identify high performers: consistent top ratings, strong 360 feedback, goal overachievement, positive continuous feedback. 2. Agent correlates performance with flight risk: 'High performers with stagnant salary growth 40% more likely to leave within 6 months' or 'Top performers with no promotion in 3+ years at elevated attrition risk'. 3. Agent calculates succession readiness scores: 'Sarah ready for Director role (85% readiness: strong performance, leadership skills, lacks cross-functional experience)'. 4. Agent tracks performance trends: 'John's performance declining over last 3 quarters (4.5 → 4.0 → 3.5) - recommend manager intervention'. 5. Agent identifies engagement patterns: 'High performers in Engineering giving 30% less continuous feedback - potential morale issue, investigate'. 6. Agent provides talent insights dashboard: top performers by team, flight risk alerts, succession pipeline, performance trends for data-driven talent decisions.",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["Performance Analytics & Insights Agent", "Predictive Analytics Agent"],
+        "utilityAgents": ["Performance Management Platform API", "HRIS API", "Compensation Data API", "Analytics Platform", "Flight Risk Model"]
+      },
+      "dataSources": [
+        "Performance ratings history and trends over time",
+        "Continuous feedback volume and sentiment",
+        "360 feedback results and peer ratings",
+        "Goal achievement and OKR completion rates",
+        "Compensation history (salary, bonus, promotion timing)",
+        "Engagement survey responses and sentiment",
+        "Attrition history and exit interview themes",
+        "Skills and competency assessment data"
+      ],
+      "benefits": [
+        "20-40% attrition reduction through proactive flight risk intervention",
+        "Data-driven succession planning with readiness scores vs manager opinions",
+        "High performer retention through targeted compensation and development interventions",
+        "Performance trend analysis enables early intervention before ratings decline",
+        "Engagement pattern detection surfaces team morale issues for investigation",
+        "Talent decisions shift from reactive (resignation response) to proactive (retention before departure)"
+      ],
+      "metrics": ["Attrition prediction: 60-90 days advance (ML model)", "High performer identification: Multi-factor (ratings + feedback + goals)", "Succession readiness: Scored (0-100%)", "Performance trends: Analyzed (quarterly)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy high performer identification algorithm combining ratings, feedback, goals", "Implement flight risk model correlating performance with compensation and tenure", "Create succession readiness scoring for top 50 critical roles"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Performance management data (minimum 2-3 years history)", "Compensation and promotion data from HRIS", "Continuous feedback and 360 data for multi-factor analysis", "Attrition history and exit interview themes for flight risk model training", "Analytics platform or data warehouse for predictive modeling", "Machine learning capability for flight risk and succession models", "Executive sponsorship for data-driven talent decisions"]
+    },
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-development-career-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Development & Career Planning",
+    "description": "Personalized development plans based on performance feedback themes, skills gaps, and career aspirations with recommended experiences, training, and stretch assignments driving 40-60% faster skill development.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Manager provides generic development feedback during annual review: 'Work on leadership skills and communication'. 2. Employee expected to create own development plan (most don't know how). 3. 30% of employees create development plans, 70% do nothing. 4. Development plans generic: 'Read leadership books, attend communication workshop' with no specific actions or timeline. 5. No follow-up or accountability on development plan execution. 6. Next annual review, manager and employee forget about development plan (no progress made).",
+      "constraints": [
+        "Generic development feedback ('improve leadership') with no actionable guidance",
+        "70% of employees don't create development plans (lack clarity and resources)",
+        "30% who create plans don't execute (no accountability or follow-up)",
+        "Development disconnected from career goals (what am I developing for?)",
+        "No recommended experiences, training, or stretch assignments (employee must figure out)",
+        "Annual review cycle too infrequent for effective development (need continuous coaching)"
+      ],
+      "metrics": ["Development plan creation: 30%", "Plan execution: 10-20%", "Skills development time: Slow (undefined)", "Career connection: Weak"]
+    },
+    "agentic": {
+      "workflow": "1. Development & Career Planning Agent analyzes performance feedback themes from continuous check-ins and 360: 'Sarah receiving consistent feedback to improve stakeholder communication and strategic thinking'. 2. Agent identifies skills gaps from competency model: 'Sarah's current role requires advanced stakeholder management (she's at intermediate) and strategic planning (she's at basic)'. 3. Agent considers career aspirations: 'Sarah wants to move into Product Management which requires customer empathy and roadmap planning skills'. 4. Agent generates personalized development plan with specific actions: 'Complete \\\"Stakeholder Management\\\" course (2 hours), shadow Product Manager for 1 month, lead cross-functional project involving 5 stakeholders (stretch assignment), attend quarterly strategy planning sessions (experience)'. 5. Agent tracks development progress: 'Sarah completed course, shadowing PM week 2 of 4, cross-functional project on track'. 6. Agent provides quarterly check-ins: 'How is stakeholder management going? What support needed for cross-functional project leadership?'.",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["Development & Career Planning Agent", "Experience Recommendation Agent"],
+        "utilityAgents": ["Performance Management Platform API", "Learning Management System API", "Career Site API", "Skills Platform API", "Project Management APIs"]
+      },
+      "dataSources": [
+        "Continuous feedback themes and opportunity areas",
+        "360 feedback results highlighting development needs",
+        "Skills gap analysis from competency assessments",
+        "Career aspirations and desired future roles",
+        "Available training courses and development programs",
+        "Stretch assignment and project opportunities",
+        "Shadowing and experience-based learning opportunities",
+        "Development plan progress and completion tracking"
+      ],
+      "benefits": [
+        "90% development plan creation rate (vs 30%) through AI-generated personalized plans",
+        "40-60% faster skill development through specific actionable experiences",
+        "Career-connected development ensures learning aligns with aspirations",
+        "Recommended experiences (stretch assignments, shadowing, projects) vs just training courses",
+        "Quarterly check-ins ensure accountability and progress vs annual set-and-forget",
+        "Manager enabled to coach effectively with data-driven development recommendations"
+      ],
+      "metrics": ["Development plan creation: 90%", "Plan execution: 60-80%", "Skills development time: 40-60% faster", "Career connection: Strong (aspirations-driven)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI-generated development plans based on feedback themes for pilot teams", "Recommend specific training courses aligned with identified opportunity areas", "Enable stretch assignment and shadowing opportunity matching"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Continuous feedback and 360 data for development theme analysis", "Skills gap assessment capability", "Career aspirations data collection", "Learning management system integration for course recommendations", "Project and stretch assignment opportunity database", "Development progress tracking and quarterly check-in workflows", "Manager training on coaching and development planning"]
+    },
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-calibration-compensation-alignment",
+    "type": "function",
+    "level": 4,
+    "label": "Calibration & Compensation Alignment",
+    "description": "AI-assisted performance calibration across managers with anomaly detection, pay equity analysis, and pay-for-performance modeling achieving 70-85% time savings and ensuring fair compensation decisions.",
+    "parentCapability": "capability-performance-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Managers submit performance ratings for their teams to HR (no cross-manager discussion). 2. HR schedules 8-12 hour calibration session with all department managers in conference room. 3. Managers debate ratings case-by-case: 'Why is Sarah rated 4.5 while Bob is 4.0 with similar accomplishments?'. 4. Forced distribution applied: 10% top performers, 70% meets expectations, 20% needs improvement (creates unhealthy competition). 5. Compensation decisions made after calibration in separate process (ratings → merit budget allocation in spreadsheet). 6. No systematic pay equity analysis (gender, race, tenure pay gaps undiscovered).",
+      "constraints": [
+        "8-12 hour calibration sessions drain manager time and productivity",
+        "Forced distribution creates artificial scarcity and unhealthy competition",
+        "Ratings subjective and inconsistent across managers (lenient vs tough raters)",
+        "Compensation decisions disconnected from performance calibration (separate process)",
+        "No pay equity analysis (demographic pay gaps, tenure compression undiscovered)",
+        "Manual compensation planning in spreadsheets error-prone and time-consuming"
+      ],
+      "metrics": ["Calibration time: 8-12 hours per cycle", "Rating consistency: Low (subjective)", "Pay equity analysis: None", "Compensation planning: Manual (spreadsheets)"]
+    },
+    "agentic": {
+      "workflow": "1. Calibration Agent pre-analyzes ratings before calibration session: identifies outliers (manager rating all employees 4.5+), inconsistencies (similar employees rated differently), and forced distribution impacts. 2. Agent provides data-driven calibration recommendations: 'Sarah and Bob have similar goal achievement (90% vs 88%) and 360 scores (4.3 vs 4.2) - recommend both rated 4.5 vs Sarah 4.5 and Bob 4.0'. 3. Agent reduces calibration meeting to 2-3 hours (vs 8-12 hours) by pre-flagging only cases needing discussion (20-30% of employees). 4. Agent performs pay equity analysis: 'Women in Engineering rated 4.2 avg receiving 3.0% merit vs men rated 4.2 receiving 3.5% merit - investigate pay disparity'. 5. Agent models pay-for-performance scenarios: 'Current merit budget of 3.5% applied to ratings yields 2.5% merit for meets expectations, 4.5% for exceeds - does this align with philosophy?'. 6. Agent flags compensation anomalies: 'John rated top performer but paid at market 50th percentile - retention risk, recommend adjustment'.",
+      "agents": {
+        "orchestrator": "Performance Management Orchestration Agent",
+        "superAgents": ["Calibration Agent", "Compensation Alignment Agent"],
+        "utilityAgents": ["Performance Management Platform API", "Payroll System API", "Market Compensation Data APIs", "Pay Equity Analysis Engine", "Compensation Modeling Engine"]
+      },
+      "dataSources": [
+        "Manager-submitted performance ratings and justifications",
+        "Goal achievement, 360 feedback, continuous feedback data",
+        "Employee compensation history and current salary",
+        "Market compensation benchmarks by role and location",
+        "Pay equity data (gender, race, tenure, demographics)",
+        "Merit budget and compensation philosophy guidelines",
+        "Historical calibration decisions and rating distributions"
+      ],
+      "benefits": [
+        "70-85% time savings (2-3 hours vs 8-12 hours) through AI pre-analysis",
+        "Rating consistency improved through data-driven recommendations",
+        "Pay equity analysis ensures fair compensation across demographics",
+        "Pay-for-performance modeling aligns merit increases with ratings philosophy",
+        "Anomaly detection identifies retention risks (high performers underpaid)",
+        "Manager satisfaction improved (less time, more fair outcomes)"
+      ],
+      "metrics": ["Calibration time: 2-3 hours per cycle", "Rating consistency: High (data-driven)", "Pay equity analysis: Automated (by demographics)", "Compensation planning: Modeled (AI-assisted)"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Final performance ratings and compensation adjustments for all employees",
+      "policy": "Manager and HR must review and approve all AI-recommended calibration changes and compensation adjustments before implementation, with particular scrutiny for outliers, pay equity adjustments, and retention-risk increases"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI-assisted calibration analysis pre-identifying outliers and inconsistencies", "Implement pay equity analysis across gender, race, tenure dimensions", "Enable pay-for-performance modeling to align merit budget with rating distribution"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Performance management data with ratings, goals, feedback", "Compensation data from HRIS/payroll with salary history", "Market compensation benchmarks from external data sources", "Pay equity analysis methodology and legal review", "Compensation philosophy and merit budget guidelines documented", "Manager and HR training on AI-assisted calibration", "Executive sponsorship for data-driven compensation decisions"]
+    },
+    "icon": "scale",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

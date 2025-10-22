@@ -1,0 +1,455 @@
+[
+  {
+    "id": "function-headless-cms-content-delivery",
+    "type": "function",
+    "level": 4,
+    "label": "Headless CMS & Content Delivery",
+    "description": "API-first content management with intelligent caching and edge delivery achieving sub-100ms content load times and 99.99% availability.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content team creates/updates content in monolithic CMS (WordPress, Drupal) tightly coupled to website frontend. 2. Content changes require full site deployment (2-5 day lead time). 3. Same content structure must serve web, mobile app, kiosk, and voice (often requires content duplication). 4. Site performance degraded by CMS overhead (800ms-2s page load times). 5. Content delivery limited by single-region hosting (slow for global users).",
+      "constraints": [
+        "Monolithic CMS couples content to presentation (can't reuse across channels)",
+        "Content updates require developer involvement and deployment (2-5 days)",
+        "800ms-2s page load times due to database queries and CMS overhead",
+        "Content duplication across channels (web, mobile, kiosk) causes sync issues",
+        "Single-region hosting creates latency for global users (500ms+ in distant regions)",
+        "CMS downtime impacts all channels simultaneously (95-98% uptime typical)"
+      ],
+      "metrics": ["Content delivery: 800ms-2s", "Availability: 95-98%", "Update cycle: 2-5 days"]
+    },
+    "agentic": {
+      "workflow": "1. Headless CMS Agent manages content via API-first architecture separate from presentation layer. 2. Content Distribution Agent publishes to global CDN edge locations for low-latency delivery. 3. Intelligent Caching Agent pre-caches popular content and invalidates stale content automatically. 4. Multi-Channel Delivery serves content to web, mobile apps, kiosks, voice assistants via APIs. 5. Performance Monitoring Agent tracks load times and optimizes caching strategies.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Headless CMS Agent", "Content Distribution Agent", "Intelligent Caching Agent"],
+        "utilityAgents": ["CDN Network", "API Gateway", "Cache Management", "Performance Monitoring"]
+      },
+      "dataSources": [
+        "Content repository and version history",
+        "Content delivery performance metrics",
+        "Global traffic patterns and geography",
+        "Cache hit rates and invalidation patterns",
+        "Channel-specific content requirements",
+        "Content popularity and access frequency"
+      ],
+      "benefits": [
+        "Sub-100ms content delivery vs 800ms-2s through global edge caching",
+        "99.99% availability vs 95-98% through distributed architecture",
+        "Content updates live instantly (minutes vs 2-5 days deployment)",
+        "Single content source serves all channels (web, mobile, kiosk, voice)",
+        "Global edge delivery eliminates latency for international users",
+        "Decoupled architecture allows frontend changes without CMS impact"
+      ],
+      "metrics": ["Content delivery: <100ms", "Availability: 99.99%", "Update cycle: Real-time (<5 min)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement CDN for static content", "Deploy API layer for mobile app content"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Headless CMS platform selection and implementation", "Global CDN infrastructure", "API development and governance", "Content migration strategy", "Multi-channel content model"]
+    },
+    "icon": "cloud",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ai-powered-content-generation",
+    "type": "function",
+    "level": 4,
+    "label": "AI-Powered Content Generation",
+    "description": "Generative AI content creation with brand voice consistency reducing content production time by 60-80% while maintaining quality and SEO optimization.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content writers manually create product descriptions, category pages, blog posts (4-8 hours per piece). 2. Editor reviews and provides feedback (1-2 day turnaround). 3. Writer revises content based on feedback. 4. SEO specialist optimizes for keywords (1-2 hours per piece). 5. Process takes 3-7 days per content piece, limiting content production to 20-40 pieces per month.",
+      "constraints": [
+        "Manual writing limits production to 20-40 pieces per month per writer",
+        "4-8 hours per content piece makes scaling expensive",
+        "3-7 day production cycle too slow for timely/seasonal content",
+        "Inconsistent brand voice across writers and over time",
+        "SEO optimization happens late in process (requires rework)",
+        "Writer bandwidth becomes bottleneck for product launches and campaigns"
+      ],
+      "metrics": ["Production time: 4-8 hrs/piece", "Output: 20-40 pieces/month", "Cycle time: 3-7 days"]
+    },
+    "agentic": {
+      "workflow": "1. Content Generation Agent creates initial drafts using generative AI trained on brand guidelines and top-performing content. 2. Brand Voice Agent ensures consistency with brand tone, style, and messaging guidelines. 3. SEO Optimization Agent incorporates keywords, meta tags, and structured data automatically. 4. Human editor reviews AI-generated content for accuracy and nuance (30-60 min vs 4-8 hrs). 5. Multi-Variant Generator creates A/B test versions for optimization.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Content Generation Agent", "Brand Voice Agent", "SEO Optimization Agent"],
+        "utilityAgents": ["Generative AI Platform", "Brand Guidelines Database", "SEO Tools", "Content Review Workflow"]
+      },
+      "dataSources": [
+        "Brand guidelines and approved messaging",
+        "Historical top-performing content",
+        "Product data and specifications",
+        "SEO keyword research and rankings",
+        "Competitive content analysis",
+        "Customer questions and pain points"
+      ],
+      "benefits": [
+        "60-80% reduction in content production time (4-8 hrs to 30-60 min)",
+        "5-10x content output (100-400 pieces/month vs 20-40)",
+        "Consistent brand voice through AI training on brand guidelines",
+        "Built-in SEO optimization vs late-stage add-on",
+        "A/B test variants generated automatically for optimization",
+        "Timely content for product launches and seasonal campaigns (hours vs weeks)"
+      ],
+      "metrics": ["Production time: 30-60 min/piece", "Output: 100-400 pieces/month", "Cycle time: Same day"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "All AI-generated content",
+      "policy": "Human editor reviews for accuracy, brand appropriateness, and sensitive topics before publishing"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Use AI for product description drafts", "Generate blog post outlines and first drafts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Generative AI platform access", "Brand guidelines documentation", "Content quality review process", "SEO keyword database", "Editorial workflow integration"]
+    },
+    "icon": "wand",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-personalization-engine",
+    "type": "function",
+    "level": 4,
+    "label": "Content Personalization Engine",
+    "description": "Real-time content personalization with behavioral targeting delivering 35-60% engagement improvement through contextually relevant experiences.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. All website visitors see identical homepage content regardless of interests or behavior. 2. Manual A/B testing limited to 2-3 homepage variants by broad segment (e.g., new vs returning). 3. Personalization limited to 'Welcome back, [Name]' greeting. 4. Content editors manually choose single hero image/message for all visitors. 5. No dynamic content adaptation based on customer lifecycle stage or interests.",
+      "constraints": [
+        "One-size-fits-all content yields 15-25% engagement rates",
+        "Manual segmentation limits to 2-3 broad variants (new vs returning)",
+        "No behavioral targeting (browsing history, product interests ignored)",
+        "Static content doesn't adapt to customer lifecycle (first-time vs VIP same experience)",
+        "Hero image/message optimized for 'average' customer (sub-optimal for most)",
+        "Content changes require manual updates (can't dynamically select best content)"
+      ],
+      "metrics": ["Personalization: None (generic)", "Engagement rate: 15-25%", "Content variants: 1-3 manual"]
+    },
+    "agentic": {
+      "workflow": "1. Behavioral Analysis Agent analyzes visitor context: browsing history, product interests, purchase history, lifecycle stage, referral source, geographic location. 2. Content Selection Agent dynamically chooses optimal content: hero images based on product affinity, messaging tailored to lifecycle stage (new customer onboarding vs VIP exclusive), CTAs based on predicted next action. 3. Real-Time Rendering delivers personalized experience in <100ms. 4. A/B Testing Agent continuously tests content variations to improve performance. 5. Learning Engine captures what content works best for each segment.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Behavioral Analysis Agent", "Content Selection Agent", "A/B Testing Agent"],
+        "utilityAgents": ["CDP", "Personalization Engine", "Content Repository", "Real-Time Decisioning"]
+      },
+      "dataSources": [
+        "Customer behavioral data (browsing, purchases, engagement)",
+        "Real-time session context (referral, location, device)",
+        "Customer lifecycle stage and value tier",
+        "Product affinity and category preferences",
+        "A/B test results by segment",
+        "Content performance metrics"
+      ],
+      "benefits": [
+        "35-60% engagement improvement through relevant personalized content",
+        "1:1 personalization vs generic one-size-fits-all (every visitor unique experience)",
+        "Real-time behavioral targeting adapts to current session context",
+        "Lifecycle-based messaging (onboarding for new, exclusives for VIPs)",
+        "Continuous A/B testing optimizes content selection automatically",
+        "Sub-100ms personalization doesn't impact page load performance"
+      ],
+      "metrics": ["Personalization: 1:1 behavioral", "Engagement rate: 40-70%", "Content variants: 100+ automated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Personalize homepage hero for new vs returning visitors", "Show recently viewed products"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer Data Platform", "Personalization engine", "Behavioral tracking", "Content repository with metadata", "A/B testing platform"]
+    },
+    "icon": "user-circle",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-performance-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Content Performance Analytics",
+    "description": "AI-driven content analytics revealing what drives engagement and conversion enabling data-driven content strategy and 40-70% improvement in content ROI.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content team tracks basic metrics (page views, time on page) in Google Analytics. 2. Monthly report shows most-viewed pages but limited insight into why content performs. 3. No visibility into content contribution to conversion or revenue. 4. Gut-feel decisions about what content to create next. 5. Can't identify content gaps or underperforming content that should be refreshed.",
+      "constraints": [
+        "Page views don't reveal content quality or conversion impact",
+        "No attribution of revenue to content (can't prove content ROI)",
+        "Monthly reporting too slow for agile content optimization",
+        "Can't identify which content elements drive engagement (headline vs image vs copy)",
+        "No content gap analysis (what questions customers ask but content doesn't answer)",
+        "Editorial calendar based on intuition not data-driven insights"
+      ],
+      "metrics": ["Content ROI visibility: None", "Optimization frequency: Monthly", "Insight depth: Basic metrics only"]
+    },
+    "agentic": {
+      "workflow": "1. Content Analytics Agent tracks comprehensive metrics: engagement (time, scroll depth, interactions), conversion contribution (assisted conversions, revenue attribution), SEO performance (rankings, organic traffic), content element performance (headlines, images, CTAs). 2. Pattern Recognition Agent identifies what makes content successful: topics that drive engagement, formats that convert best, SEO patterns that rank well. 3. Content Gap Analysis Agent identifies missing content opportunities. 4. Recommendation Engine suggests content to create, refresh, or retire. 5. Real-time dashboards show content performance and insights.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Content Analytics Agent", "Pattern Recognition Agent", "Content Gap Analysis Agent"],
+        "utilityAgents": ["Analytics Platform", "Attribution System", "SEO Tools", "BI Dashboard"]
+      },
+      "dataSources": [
+        "Content engagement metrics (views, time, scroll, interactions)",
+        "Conversion and revenue attribution data",
+        "SEO performance (rankings, organic traffic, backlinks)",
+        "Customer journey data showing content touchpoints",
+        "Search query data (site search, Google Search Console)",
+        "Competitive content analysis"
+      ],
+      "benefits": [
+        "40-70% improvement in content ROI through data-driven strategy",
+        "Revenue attribution reveals content drives 15-30% of conversions",
+        "Real-time insights enable agile content optimization (daily vs monthly)",
+        "Pattern recognition identifies winning content formulas to replicate",
+        "Content gap analysis reveals high-value missing content (customer questions unanswered)",
+        "Automated recommendations for create/refresh/retire decisions"
+      ],
+      "metrics": ["Content ROI visibility: Full attribution", "Optimization frequency: Real-time", "Insight depth: Predictive recommendations"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement scroll depth and engagement tracking", "Connect content to conversion data"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Advanced analytics platform", "Content attribution capability", "SEO tools integration", "Customer journey tracking", "Content taxonomy and tagging"]
+    },
+    "icon": "chart-line",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-digital-asset-management",
+    "type": "function",
+    "level": 4,
+    "label": "Digital Asset Management (DAM)",
+    "description": "AI-powered asset organization with auto-tagging and intelligent search reducing asset retrieval time by 70-85% and eliminating duplicate asset creation.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Creative assets stored in shared network drives with inconsistent folder structure. 2. Designers manually organize and rename files (often duplicates exist). 3. Finding specific asset requires searching through dozens of folders (15-30 min per search). 4. No centralized approval workflow - assets shared via email and Slack. 5. Teams recreate assets that already exist because they can't find originals (30-40% asset duplication).",
+      "constraints": [
+        "15-30 minutes wasted searching for assets due to poor organization",
+        "30-40% of assets duplicated because teams can't find existing versions",
+        "No version control leads to outdated assets being used accidentally",
+        "Email-based approval workflows lose context and create version confusion",
+        "No usage rights tracking (teams use assets without license verification)",
+        "Brand guidelines inconsistently applied across asset creation"
+      ],
+      "metrics": ["Asset retrieval time: 15-30 min", "Duplication rate: 30-40%", "Search effectiveness: 40-60%"]
+    },
+    "agentic": {
+      "workflow": "1. Auto-Tagging Agent uses computer vision and AI to automatically tag assets with: visual attributes (colors, objects, people), product identifiers, brand elements, usage rights and licenses. 2. Intelligent Search Agent enables natural language search ('red dress on white background' finds exact match). 3. Version Control Agent tracks asset history and ensures latest versions used. 4. Approval Workflow Agent manages review and approval with automated routing. 5. Usage Analytics Agent tracks where assets are used across channels.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Auto-Tagging Agent", "Intelligent Search Agent", "Version Control Agent"],
+        "utilityAgents": ["DAM Platform", "Computer Vision AI", "Workflow Management", "Usage Tracking"]
+      },
+      "dataSources": [
+        "Asset metadata and tags",
+        "Visual analysis data (colors, objects, composition)",
+        "Usage rights and license information",
+        "Asset version history",
+        "Usage tracking across channels and campaigns",
+        "Brand guidelines and approved elements"
+      ],
+      "benefits": [
+        "70-85% reduction in asset retrieval time (15-30 min to 2-5 min)",
+        "Duplicate asset creation eliminated through findability (30-40% cost savings)",
+        "AI auto-tagging vs manual (10x faster asset organization)",
+        "Natural language search finds exact matches in seconds",
+        "Version control prevents outdated asset usage",
+        "Usage rights tracking ensures license compliance (avoids legal risk)"
+      ],
+      "metrics": ["Asset retrieval time: 2-5 min", "Duplication rate: <5%", "Search effectiveness: 95%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement AI auto-tagging for new assets", "Deploy natural language search"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["DAM platform selection and implementation", "AI tagging capability", "Asset migration strategy", "Brand guidelines and taxonomy", "Approval workflow design"]
+    },
+    "icon": "photo",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-localization-translation",
+    "type": "function",
+    "level": 4,
+    "label": "Content Localization & Translation",
+    "description": "AI-powered translation with cultural adaptation reducing localization time by 60-80% and cost by 50-70% while maintaining quality.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content team sends English content to translation agency (3-5 day turnaround per language). 2. Human translators manually translate content. 3. In-market reviewer checks translation for cultural appropriateness (2-3 days). 4. Revisions sent back to agency (another 2-3 days). 5. Process takes 10-15 days per language, making multi-market launches slow and expensive.",
+      "constraints": [
+        "10-15 day translation cycle delays multi-market content launches",
+        "Human translation costs $0.15-0.30 per word (expensive at scale)",
+        "Translation agencies don't understand brand voice consistently",
+        "Cultural nuances missed in literal translation (idioms, humor, sensitivities)",
+        "Version control issues when source content changes mid-translation",
+        "Limited to 5-10 languages due to cost and operational complexity"
+      ],
+      "metrics": ["Translation time: 10-15 days", "Cost: $0.15-0.30/word", "Language coverage: 5-10"]
+    },
+    "agentic": {
+      "workflow": "1. Translation Agent uses AI to translate content with brand-specific terminology and style. 2. Cultural Adaptation Agent adjusts idioms, humor, and culturally-specific references for local markets. 3. Quality Assurance Agent checks translations against brand guidelines and linguistic quality standards. 4. Human reviewer validates high-stakes content (marketing campaigns, legal terms). 5. Version Sync Agent detects source content changes and auto-updates translations.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Translation Agent", "Cultural Adaptation Agent", "Quality Assurance Agent"],
+        "utilityAgents": ["AI Translation Engine", "Translation Memory", "Glossary Management", "Version Control"]
+      },
+      "dataSources": [
+        "Brand-specific translation memory",
+        "Approved terminology glossaries",
+        "Cultural guidelines by market",
+        "Historical translation quality feedback",
+        "Source content and version history",
+        "Market-specific regulations and compliance requirements"
+      ],
+      "benefits": [
+        "60-80% reduction in localization time (10-15 days to 2-4 days)",
+        "50-70% cost reduction ($0.15-0.30/word to $0.05-0.10/word)",
+        "Consistent brand voice across all languages through AI training",
+        "Cultural adaptation prevents embarrassing mistakes and offense",
+        "Scale to 20-50+ languages economically vs 5-10",
+        "Version sync keeps translations up-to-date automatically"
+      ],
+      "metrics": ["Translation time: 2-4 days", "Cost: $0.05-0.10/word", "Language coverage: 20-50+"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "High-stakes content (campaigns, legal)",
+      "policy": "Native speaker reviews AI translations for marketing campaigns and legal/compliance content"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Use AI translation for product descriptions", "Build brand-specific glossaries"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["AI translation platform", "Translation memory database", "Brand terminology glossaries", "Cultural guidelines by market", "In-market reviewer network"]
+    },
+    "icon": "globe",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-governance-workflow",
+    "type": "function",
+    "level": 4,
+    "label": "Content Governance & Workflow",
+    "description": "Automated content approval workflows with compliance checking reducing approval cycle time by 50-75% while ensuring brand and legal compliance.",
+    "parentCapability": "capability-content-management-personalization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content creator submits content for review via email to brand manager. 2. Brand manager manually reviews and provides feedback (2-3 days). 3. Legal review required for claims and compliance (5-10 days waiting in queue). 4. Content revised and re-submitted for final approval. 5. Approval process takes 10-20 days from submission to publish, creating bottlenecks.",
+      "constraints": [
+        "Email-based approvals create version confusion and lost context",
+        "10-20 day approval cycle delays timely content (seasonal, news-jacking)",
+        "Legal review bottleneck (all content queued regardless of risk level)",
+        "No automated brand guideline checks (manual review error-prone)",
+        "Approval status visibility limited (creators don't know where content is stuck)",
+        "No content expiration tracking (outdated content remains published)"
+      ],
+      "metrics": ["Approval cycle: 10-20 days", "Legal review: 5-10 days", "Compliance issues: 15-25% catch rate"]
+    },
+    "agentic": {
+      "workflow": "1. Workflow Routing Agent automatically routes content to appropriate reviewers based on content type and risk level. 2. Compliance Checking Agent scans content for: brand guideline violations, prohibited claims, accessibility issues, competitive references, legal risk triggers. 3. Agent triages legal review: low-risk content auto-approved, medium-risk flagged for expedited review, high-risk queued for full legal review. 4. Approval Tracking provides real-time visibility and automatic escalation of delayed reviews. 5. Expiration Agent flags outdated content for refresh or archival.",
+      "agents": {
+        "orchestrator": "Content Management Orchestration Agent",
+        "superAgents": ["Workflow Routing Agent", "Compliance Checking Agent", "Approval Tracking Agent"],
+        "utilityAgents": ["Workflow Management Platform", "Brand Guidelines Database", "Legal Risk Scoring", "Notification System"]
+      },
+      "dataSources": [
+        "Content submissions and metadata",
+        "Brand guidelines and style guide",
+        "Legal compliance rules and prohibited claims",
+        "Approval hierarchy and delegations",
+        "Content risk scoring criteria",
+        "Historical approval patterns and timelines"
+      ],
+      "benefits": [
+        "50-75% reduction in approval cycle time (10-20 days to 3-5 days)",
+        "Automated brand compliance checking catches 90%+ violations vs 15-25%",
+        "Risk-based legal triage: low-risk auto-approved (60-70% of content)",
+        "Real-time approval tracking reduces follow-up emails by 80%",
+        "Automated escalation prevents content stuck in review limbo",
+        "Content expiration tracking keeps site fresh and compliant"
+      ],
+      "metrics": ["Approval cycle: 3-5 days", "Legal review: Risk-based triage", "Compliance issues: 90%+ catch rate"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated brand guideline checking", "Deploy approval tracking dashboard"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Workflow management platform", "Brand guidelines database", "Legal risk scoring framework", "Approval hierarchy and delegation rules", "Content classification taxonomy"]
+    },
+    "icon": "shield-check",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

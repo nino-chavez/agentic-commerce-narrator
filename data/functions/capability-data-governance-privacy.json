@@ -1,0 +1,529 @@
+[
+  {
+    "id": "function-privacy-gdpr-ccpa-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Data Privacy Compliance (GDPR, CCPA, etc.)",
+    "description": "Automated privacy compliance management with data discovery, classification, and regulatory requirement enforcement across all systems.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual spreadsheet inventory of personal data across systems. Periodic privacy audits (annual or when regulations change) requiring weeks of effort. Reactive compliance - wait for regulation to pass then scramble to implement. Manual privacy impact assessments (PIAs) for new systems. Limited ability to fulfill data subject requests (access, deletion, portability) requiring IT involvement and weeks of effort.",
+      "constraints": [
+        "Personal data inventory 6-12 months outdated",
+        "Compliance audits: Annual (reactive)",
+        "Data subject request fulfillment: 15-30 days",
+        "Manual PIA process (4-8 weeks per system)",
+        "Regulatory fines risk from non-compliance"
+      ],
+      "metrics": [
+        "Data subject request fulfillment time: 15-30 days",
+        "Privacy audit frequency: Annual",
+        "Compliance coverage: 60-80%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered privacy compliance platform continuously scans all data stores (databases, data lakes, SaaS apps, file shares) to discover and classify personal data using machine learning and pattern recognition. Automated data flow mapping tracks how personal data moves between systems for GDPR Article 30 Records of Processing Activities (ROPA). Real-time compliance monitoring validates data handling against GDPR, CCPA, and other regulations with automated alerts for violations. Intelligent data subject request fulfillment automates 80-90% of access, deletion, and portability requests by orchestrating actions across all systems holding the subject's data. Automated Privacy Impact Assessments (PIAs) use questionnaires and AI analysis of data flows to generate reports. Consent management integration ensures marketing and data processing respect user preferences.",
+      "agents": {
+        "orchestrator": "Privacy Compliance Orchestrator",
+        "superAgents": [
+          "Personal Data Discovery Agent",
+          "Data Classification Agent",
+          "Compliance Monitoring Agent",
+          "Data Subject Request Fulfillment Agent",
+          "Privacy Impact Assessment Agent"
+        ],
+        "utilityAgents": [
+          "Data Scanning Agent",
+          "ROPA Generation Agent",
+          "Consent Management Agent",
+          "Audit Trail Agent"
+        ]
+      },
+      "dataSources": [
+        "All enterprise data stores (databases, lakes, SaaS)",
+        "Data lineage and flow metadata",
+        "Regulatory requirement databases (GDPR, CCPA, etc.)",
+        "Data subject requests (access, deletion, portability)",
+        "Privacy policies and consent records",
+        "Data processing agreements (DPAs)"
+      ],
+      "benefits": [
+        "Continuous personal data discovery (vs 6-12 month outdated inventory)",
+        "90-95% reduction in data subject request fulfillment time (1-3 days vs 15-30 days)",
+        "Real-time compliance monitoring (vs annual audits)",
+        "80-90% automated DSR fulfillment (vs manual IT effort)",
+        "Significantly reduced regulatory fine risk"
+      ],
+      "metrics": [
+        "Data subject request fulfillment time: 1-3 days",
+        "Privacy audit frequency: Continuous with quarterly reports",
+        "Compliance coverage: 95-99%"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Data deletion request affecting >10,000 records or critical customer",
+      "policy": "DPO (Data Protection Officer) approval required for high-impact deletion requests"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated personal data discovery for top 5 systems (immediate visibility)",
+        "Implement automated GDPR access request fulfillment (80% time savings)",
+        "Enable consent management integration with marketing platforms"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "Privacy compliance platform (OneTrust, BigID, TrustArc)",
+        "Data catalog with data lineage",
+        "Integration with all systems storing personal data",
+        "DPO or privacy team established"
+      ]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-privacy-consent-management",
+    "type": "function",
+    "level": 4,
+    "label": "Consent & Preference Management",
+    "description": "Centralized consent capture, preference management, and real-time enforcement across all customer touchpoints and systems.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Consent captured at point of interaction (website checkbox, email opt-in) but stored in siloed systems. No centralized view of customer consent preferences. Manual enforcement—marketing teams must check multiple systems before sending campaigns. Consent not synchronized across channels (email consent doesn't apply to SMS). Opt-out requests processed manually via email with 7-14 day lag. Regulatory risk from inadvertent consent violations.",
+      "constraints": [
+        "Consent data siloed across 5-10 systems",
+        "No real-time consent enforcement",
+        "Manual opt-out processing (7-14 days)",
+        "Channel-specific consent (not unified)",
+        "Frequent consent violation fines and complaints"
+      ],
+      "metrics": [
+        "Consent violation rate: 5-10% of campaigns",
+        "Opt-out processing time: 7-14 days",
+        "Consent data accuracy: 70-80%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered consent management platform provides unified preference center where customers manage all consents (marketing email, SMS, phone, data sharing, cookie preferences) in one place. Real-time consent synchronization pushes preference updates to all systems (CRM, email service provider, call center, analytics) within seconds. Automated consent enforcement validates every customer interaction against current preferences before execution—marketing campaigns, personalization, analytics. Machine learning detects consent anomalies (e.g., customer opted out but still receiving emails) and triggers alerts. Granular consent management enables purpose-specific and processing-specific permissions. Consent audit trail tracks all consent changes for regulatory compliance. Smart consent UX optimizes acceptance rates while ensuring genuine informed consent.",
+      "agents": {
+        "orchestrator": "Consent Management Orchestrator",
+        "superAgents": [
+          "Consent Capture Agent",
+          "Preference Synchronization Agent",
+          "Consent Enforcement Agent",
+          "Consent Anomaly Detection Agent"
+        ],
+        "utilityAgents": [
+          "Multi-System Integration Agent",
+          "Preference Center UI Agent",
+          "Consent Audit Agent",
+          "Cookie Consent Agent"
+        ]
+      },
+      "dataSources": [
+        "Customer consent preferences (all channels)",
+        "Marketing system consent records",
+        "Website cookie consent",
+        "Customer interaction history",
+        "Consent change requests (opt-in/opt-out)",
+        "Regulatory consent requirements by jurisdiction"
+      ],
+      "benefits": [
+        "95-99% reduction in consent violations (<0.5% vs 5-10%)",
+        "Real-time opt-out enforcement (vs 7-14 day lag)",
+        "Unified cross-channel consent (vs siloed)",
+        "95-99% consent data accuracy",
+        "10-20% improvement in opt-in rates through better UX"
+      ],
+      "metrics": [
+        "Consent violation rate: <0.5%",
+        "Opt-out processing time: Real-time (seconds)",
+        "Consent data accuracy: 95-99%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy centralized preference center (immediate customer control)",
+        "Implement real-time consent sync to marketing platforms (90% violation reduction)",
+        "Enable automated opt-out processing (95% time savings)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Consent management platform (OneTrust, Segment, etc.)",
+        "Customer identity resolution (unified customer ID)",
+        "Integration with all marketing and analytics systems",
+        "Customer-facing preference center UI"
+      ]
+    },
+    "icon": "user-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-privacy-access-control-audit",
+    "type": "function",
+    "level": 4,
+    "label": "Data Access Controls & Audit Logging",
+    "description": "Role-based access controls with automated provisioning, real-time monitoring, and comprehensive audit trails for sensitive data.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual user provisioning and deprovisioning with ticket-based requests taking days. Static role assignments without consideration of data sensitivity. Limited access audit capabilities—difficult to answer 'who has access to customer PII?' Manual quarterly access reviews using spreadsheets. No real-time alerting for suspicious access patterns. Audit logs scattered across systems with limited retention.",
+      "constraints": [
+        "User provisioning: 3-7 days (manual tickets)",
+        "Quarterly access reviews (labor-intensive)",
+        "No real-time access monitoring",
+        "Difficult to determine 'who can see what data'",
+        "Audit log retention: 30-90 days"
+      ],
+      "metrics": [
+        "Provisioning time: 3-7 days",
+        "Access review frequency: Quarterly",
+        "Suspicious access detection: Reactive (post-breach)"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered identity and access management (IAM) platform automates user provisioning and deprovisioning based on HR system integrations (new hire, role change, termination). Attribute-based access control (ABAC) dynamically assigns permissions based on user attributes, data sensitivity, and business context. Machine learning continuously monitors access patterns and detects anomalies (unusual time, location, data volume, or sensitivity of access). Real-time alerts for high-risk access events (accessing customer PII outside normal role). Automated periodic access reviews with AI-suggested recertification decisions based on actual usage patterns. Comprehensive audit logging captures all data access with tamper-proof retention for regulatory compliance. Self-service access request workflows with automated approval routing and time-limited access grants.",
+      "agents": {
+        "orchestrator": "Access Control & Audit Orchestrator",
+        "superAgents": [
+          "User Provisioning Agent",
+          "Attribute-Based Access Control Agent",
+          "Access Anomaly Detection Agent",
+          "Access Review Agent"
+        ],
+        "utilityAgents": [
+          "HR System Integration Agent",
+          "SIEM Integration Agent",
+          "Audit Log Collection Agent",
+          "Alert & Notification Agent"
+        ]
+      },
+      "dataSources": [
+        "HR system (employee data, roles, org structure)",
+        "Identity provider (Okta, Azure AD, etc.)",
+        "Data classification and sensitivity labels",
+        "Access logs from all systems",
+        "User access patterns and behavior baselines",
+        "Access request and approval workflows"
+      ],
+      "benefits": [
+        "90-95% reduction in provisioning time (hours vs 3-7 days)",
+        "Continuous access monitoring (vs quarterly reviews)",
+        "Real-time suspicious access detection (vs reactive post-breach)",
+        "80-90% reduction in access review effort through AI suggestions",
+        "Complete audit trail with multi-year retention"
+      ],
+      "metrics": [
+        "Provisioning time: Hours to 1 day (automated)",
+        "Access review frequency: Continuous with quarterly formal reviews",
+        "Suspicious access detection: Real-time (minutes)"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "hitlGate": {
+      "step": 2,
+      "threshold": "Access to highly sensitive data (financials, health records, executive communications)",
+      "policy": "Manager and security team approval required for elevated access privileges"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement automated user provisioning/deprovisioning via HR integration (80% time savings)",
+        "Deploy real-time access anomaly detection for PII (immediate threat visibility)",
+        "Enable centralized audit log collection and retention"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "IAM platform (Okta, Azure AD, SailPoint)",
+        "HR system integration",
+        "SIEM platform for security monitoring",
+        "Data classification framework",
+        "Centralized audit log infrastructure"
+      ]
+    },
+    "icon": "lock",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-privacy-pii-detection-masking",
+    "type": "function",
+    "level": 4,
+    "label": "PII Detection, Classification & Masking",
+    "description": "Automated identification and protection of personally identifiable information across all data environments with dynamic masking.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual tagging of PII fields in databases and applications based on field names. No automated detection of unstructured PII in logs, documents, or freeform text fields. Static data masking in non-production environments created via manual SQL scripts. Developers and analysts have full access to production PII. Data exfiltration risk from unrestricted PII access.",
+      "constraints": [
+        "PII detection limited to known structured fields",
+        "Unstructured PII (logs, documents) not identified",
+        "Static masking requires manual scripting and maintenance",
+        "Full production PII access for developers/analysts",
+        "High data breach and exfiltration risk"
+      ],
+      "metrics": [
+        "PII detection coverage: 40-60% (structured only)",
+        "Masking coverage: 30-50% (non-production only)",
+        "Data breach risk: High"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered data protection platform uses machine learning and natural language processing to automatically discover PII across structured databases, unstructured documents, logs, and cloud storage. Intelligent classification assigns sensitivity levels (PII, sensitive PII, confidential) based on data type and regulatory requirements. Dynamic data masking presents masked or tokenized data to unauthorized users while showing real values to privileged users—no data duplication required. Context-aware masking applies different masking strategies (redaction, pseudonymization, tokenization, encryption) based on data sensitivity and user role. Automated PII detection in application logs and developer tools prevents accidental PII exposure. Real-time alerts when new PII fields are detected in production. Secure analytics enables data scientists to work with anonymized production data.",
+      "agents": {
+        "orchestrator": "PII Protection Orchestrator",
+        "superAgents": [
+          "PII Discovery & Classification Agent",
+          "Dynamic Masking Agent",
+          "Tokenization Agent",
+          "PII Monitoring Agent"
+        ],
+        "utilityAgents": [
+          "Data Scanning Agent (structured & unstructured)",
+          "NLP Agent (for text analysis)",
+          "Encryption/Decryption Agent",
+          "Alert Agent"
+        ]
+      },
+      "dataSources": [
+        "All enterprise data stores (databases, lakes, SaaS, files)",
+        "Application logs and monitoring tools",
+        "Data classification policies",
+        "User roles and access permissions",
+        "PII detection patterns and ML models",
+        "Regulatory PII definitions (GDPR, CCPA, etc.)"
+      ],
+      "benefits": [
+        "90-99% PII detection coverage (vs 40-60%)",
+        "90-99% masking coverage across all environments",
+        "85-95% reduction in data breach risk",
+        "Real-time PII exposure prevention in logs and tools",
+        "Secure analytics on production data (anonymized)"
+      ],
+      "metrics": [
+        "PII detection coverage: 90-99%",
+        "Masking coverage: 90-99% (all environments)",
+        "Data breach risk: Significantly reduced"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated PII discovery for top 10 databases (immediate visibility)",
+        "Implement dynamic masking for non-production environments (eliminate data duplication)",
+        "Enable PII detection in application logs (prevent exposure)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "Data masking/protection platform (Delphix, Informatica, etc.)",
+        "Data catalog and classification framework",
+        "Integration with all data systems",
+        "IAM for role-based masking policies"
+      ]
+    },
+    "icon": "eye-slash",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-privacy-data-retention-archival",
+    "type": "function",
+    "level": 4,
+    "label": "Data Retention & Automated Archival",
+    "description": "Policy-based data lifecycle management with automated archival, deletion, and legal hold enforcement for compliance and cost optimization.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Undefined or inconsistent data retention policies across business units. Data accumulates indefinitely due to 'save everything just in case' mentality. Manual ad-hoc purging efforts when storage costs spike or compliance requires deletion. Legal holds managed via email with manual tracking. Excessive data storage costs and regulatory risk from retaining data longer than required.",
+      "constraints": [
+        "No formal retention policies or inconsistent enforcement",
+        "Data accumulated indefinitely (storage cost escalation)",
+        "Manual deletion efforts (labor-intensive)",
+        "Legal hold tracking via email (error-prone)",
+        "Regulatory risk from excessive data retention"
+      ],
+      "metrics": [
+        "Data retention policy compliance: 30-50%",
+        "Storage cost optimization: Low (retention not managed)",
+        "Legal hold compliance: 70-80% (manual tracking)"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered data lifecycle management platform automatically classifies data based on type, sensitivity, and business value. Policy engine applies retention rules by data category, jurisdiction, and regulatory requirements (e.g., 'customer transaction data: retain 7 years, then delete per tax law'). Automated archival moves inactive data to cost-effective long-term storage tiers while maintaining accessibility for compliance. Intelligent deletion policies automatically purge data at end of retention period unless subject to legal hold. Machine learning identifies candidates for early deletion (duplicate, obsolete, trivial data) to optimize storage costs. Legal hold management system automatically preserves relevant data when litigation or investigation initiated with immutable audit trail. Automated compliance reporting demonstrates retention policy adherence.",
+      "agents": {
+        "orchestrator": "Data Lifecycle Management Orchestrator",
+        "superAgents": [
+          "Data Classification Agent",
+          "Retention Policy Engine Agent",
+          "Archival Agent",
+          "Deletion Agent",
+          "Legal Hold Agent"
+        ],
+        "utilityAgents": [
+          "Storage Tier Management Agent",
+          "Compliance Reporting Agent",
+          "Audit Trail Agent",
+          "Cost Optimization Agent"
+        ]
+      },
+      "dataSources": [
+        "All enterprise data across storage systems",
+        "Data classification and metadata",
+        "Retention policies by data category and jurisdiction",
+        "Regulatory retention requirements",
+        "Legal hold notices and case data",
+        "Data access patterns (for archival candidates)",
+        "Storage costs by tier"
+      ],
+      "benefits": [
+        "95-99% retention policy compliance (vs 30-50%)",
+        "40-60% storage cost reduction through archival and deletion",
+        "Automated deletion (vs manual labor-intensive efforts)",
+        "100% legal hold compliance with automated preservation",
+        "Reduced regulatory risk from compliant retention"
+      ],
+      "metrics": [
+        "Data retention policy compliance: 95-99%",
+        "Storage cost optimization: 40-60% reduction",
+        "Legal hold compliance: 99%+ (automated)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Define and publish formal retention policies by data category",
+        "Deploy automated archival for inactive data >1 year old (30% cost savings)",
+        "Implement automated legal hold system"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Data lifecycle management platform",
+        "Data classification framework",
+        "Retention policies defined with legal/compliance input",
+        "Tiered storage infrastructure (hot/warm/cold)",
+        "Legal hold management system"
+      ]
+    },
+    "icon": "archive",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-privacy-impact-assessment",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Privacy Impact Assessments (PIA/DPIA)",
+    "description": "AI-assisted privacy impact assessments with risk scoring, mitigation recommendations, and compliance validation for new systems and processes.",
+    "parentCapability": "capability-data-governance-privacy",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual Privacy Impact Assessments (PIAs) or Data Protection Impact Assessments (DPIAs) conducted via word documents and interviews. Process takes 4-8 weeks per assessment with heavy legal/compliance involvement. Inconsistent assessment methodology across projects. PIAs often conducted too late in development lifecycle causing costly rework. Limited follow-up to ensure recommended privacy controls are implemented.",
+      "constraints": [
+        "PIA/DPIA completion time: 4-8 weeks",
+        "Inconsistent assessment methodology",
+        "Late-stage assessments (after design decisions locked)",
+        "Limited tracking of mitigation implementation",
+        "Heavy manual effort (legal, compliance, IT)"
+      ],
+      "metrics": [
+        "PIA completion time: 4-8 weeks",
+        "PIAs completed: 50-70% of required projects",
+        "Mitigation implementation rate: 60-70%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered PIA/DPIA platform provides guided questionnaire-based assessments with intelligent question branching based on project characteristics. Machine learning analyzes project data flows, data types, and processing activities to automatically identify privacy risks and assign risk scores. AI-generated risk analysis compares project against GDPR, CCPA, and other regulatory requirements highlighting gaps. Automated mitigation recommendations suggest specific privacy controls (encryption, access controls, data minimization) based on identified risks. Integration with project management tools triggers PIA requirements at project initiation ensuring privacy-by-design. Workflow automation routes assessments to appropriate stakeholders (legal, security, DPO) for review and approval. Continuous monitoring tracks implementation of recommended mitigations with automated follow-up. Reusable assessment templates for common project types (new SaaS integration, new data processing, AI/ML initiative).",
+      "agents": {
+        "orchestrator": "Privacy Impact Assessment Orchestrator",
+        "superAgents": [
+          "Risk Identification Agent",
+          "Risk Scoring Agent",
+          "Mitigation Recommendation Agent",
+          "Compliance Validation Agent"
+        ],
+        "utilityAgents": [
+          "Questionnaire Engine Agent",
+          "Data Flow Analysis Agent",
+          "Project Management Integration Agent",
+          "Tracking & Monitoring Agent"
+        ]
+      },
+      "dataSources": [
+        "Project details and data flow documentation",
+        "Data classification and sensitivity",
+        "Regulatory requirements (GDPR, CCPA, etc.)",
+        "Historical PIA/DPIA data and outcomes",
+        "Privacy control library (mitigation options)",
+        "Project management system data",
+        "Mitigation implementation status"
+      ],
+      "benefits": [
+        "70-85% reduction in PIA completion time (1-2 weeks vs 4-8 weeks)",
+        "95-100% PIA completion for required projects (vs 50-70%)",
+        "Consistent assessment methodology across all projects",
+        "Early-stage privacy integration (shift-left approach)",
+        "85-95% mitigation implementation rate through tracking"
+      ],
+      "metrics": [
+        "PIA completion time: 1-2 weeks",
+        "PIAs completed: 95-100% of required projects",
+        "Mitigation implementation rate: 85-95%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy PIA questionnaire templates for common project types (50% time savings)",
+        "Integrate PIA triggers into project management workflows (100% coverage)",
+        "Implement automated risk scoring and mitigation recommendations"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Privacy management platform with PIA module",
+        "Data flow mapping and classification",
+        "Privacy control library documented",
+        "Integration with project management tools",
+        "DPO or privacy team established"
+      ]
+    },
+    "icon": "clipboard-list",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

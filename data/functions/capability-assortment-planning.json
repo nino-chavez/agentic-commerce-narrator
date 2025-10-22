@@ -1,0 +1,398 @@
+[
+  {
+    "id": "function-category-assortment-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Category Assortment Optimization",
+    "description": "SKU rationalization with sales velocity and profitability analysis achieving 15-25% SKU reduction while maintaining 98%+ revenue through elimination of low-performing items.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Category manager reviews 250 SKU cereal assortment annually: 'Too many SKUs, need to simplify'. 2. Exports sales report from last 12 months, sorts by revenue, identifies bottom 50 SKUs representing 5% of sales. 3. Manually reviews each SKU: 'This one only sells 10 units/month, maybe discontinue?'. 4. Creates discontinuation list based primarily on sales volume, submits for approval. 5. Post-implementation discovers issues: discontinued SKU#123 was only gluten-free option (customer complaints), SKU#456 had 40% margin (lost high-profit item), SKU#789 was required for promotional bundle. 6. Assortment decisions lack holistic analysis (profitability, customer preference, strategic value).",
+      "constraints": [
+        "Annual assortment review (too infrequent for dynamic markets)",
+        "Sales volume only criterion (ignores profitability, strategic value)",
+        "Manual SKU-by-SKU review (time-consuming, inconsistent)",
+        "Cross-impact analysis missing (bundle requirements, substitution)",
+        "Customer segment needs ignored (gluten-free, organic, premium)",
+        "No optimization (gut-feel decisions vs data-driven)"
+      ],
+      "metrics": ["Assortment review frequency: Annual", "Criteria: Sales volume only", "SKU reduction: 10-15%", "Revenue retention: 90-95%"]
+    },
+    "agentic": {
+      "workflow": "1. Assortment Optimization Agent analyzes 250 SKU cereal category across multiple dimensions: sales velocity, profitability (margin), customer ratings, strategic value (only gluten-free option?), substitutability. 2. Agent scores each SKU: 'SKU#123 low sales (10 units/month) BUT only gluten-free option + 4.5 star rating + no substitutes = KEEP. SKU#456 low sales (15 units/month) BUT 40% margin (vs 20% category average) = KEEP. SKU#789 low sales (8 units/month) + low margin (15%) + 2.8 star rating + 3 similar substitutes = DISCONTINUE'. 3. Agent identifies 60 SKUs for discontinuation (24% reduction): collectively represent 2% revenue but 8% complexity cost (inventory, logistics, shelf space). 4. Cross-Impact Agent validates: 'SKU#789 discontinuation drives 70% volume to SKU#790 (similar product, higher margin) + saves $50K annual complexity cost'. 5. Agent optimizes to 190 SKUs maintaining 98% revenue, improving category profitability 12% through better mix. 6. 15-25% SKU reduction with 98%+ revenue retention through multi-criteria optimization.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Assortment Optimization Agent", "SKU Scoring Agent", "Cross-Impact Agent"],
+        "utilityAgents": ["Sales Analytics", "Profitability Database", "Customer Reviews", "Substitution Modeling"]
+      },
+      "dataSources": [
+        "SKU sales velocity by location and time period",
+        "Profitability data (margin, COGS, complexity costs)",
+        "Customer ratings and review sentiment",
+        "Strategic attributes (dietary needs, brand portfolio, exclusives)",
+        "Substitution patterns (what customers buy when SKU unavailable)",
+        "Bundle and promotional requirements",
+        "Shelf space and slotting costs",
+        "Competitive assortment intelligence"
+      ],
+      "benefits": [
+        "15-25% SKU reduction vs 10-15% manual approach",
+        "98%+ revenue retention (vs 90-95% volume-only analysis)",
+        "Multi-criteria optimization (sales, margin, ratings, strategic value)",
+        "Cross-impact analysis prevents unintended consequences",
+        "Complexity cost savings ($50K annual per category)",
+        "Category profitability improvement 12% through better mix"
+      ],
+      "metrics": ["Assortment review frequency: Quarterly (continuous)", "Criteria: Multi-dimensional (8+ factors)", "SKU reduction: 15-25%", "Revenue retention: 98%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy SKU scoring for top 5 categories with sales, margin, ratings criteria", "Implement substitution analysis to validate discontinuation impact", "Create quarterly assortment review process vs annual"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["SKU sales and profitability data (12-24 months history)", "Customer ratings and review data integration", "Strategic attribute tagging (dietary, exclusive, bundle-required)", "Substitution modeling based on purchase patterns", "Complexity cost allocation by SKU", "Assortment optimization platform or analytics tools"]
+    },
+    "icon": "view-grid",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-space-to-sales-allocation",
+    "type": "function",
+    "level": 4,
+    "label": "Space-to-Sales Allocation",
+    "description": "Planogram optimization with shelf elasticity modeling achieving 10-20% sales lift through optimal shelf space allocation aligned to demand and profitability.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Category manager allocates shelf space based on current sales: 'SKU#A sells 100 units/week, gets 10 shelf facings. SKU#B sells 50 units/week, gets 5 facings'. 2. Equal space-to-sales ratio applied across all SKUs: current sales performance drives space allocation. 3. No consideration of shelf elasticity: 'Would SKU#B sell more if given better visibility and more facings?'. 4. High-margin SKUs treated same as low-margin: both allocated space proportional to sales. 5. Premium eye-level shelf space not optimized: low-margin commodity items at eye level, high-margin specialty at bottom shelf. 6. 10-20% sales opportunity missed due to suboptimal shelf allocation.",
+      "constraints": [
+        "Space allocated proportional to current sales only (circular logic)",
+        "Shelf elasticity not modeled (incremental sales from more space)",
+        "Margin not considered (low-margin gets same treatment as high-margin)",
+        "Eye-level premium space not optimized",
+        "Manual planogram design (time-consuming, inconsistent)",
+        "10-20% sales lift opportunity missed"
+      ],
+      "metrics": ["Space allocation: Sales-proportional", "Shelf elasticity: Not modeled", "Sales lift: 0% (baseline)", "Planogram optimization: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Space Allocation Agent analyzes shelf elasticity by SKU: 'SKU#B shows 15% sales lift per additional facing (high elasticity), SKU#A shows 3% lift (low elasticity, already saturated)'. 2. Agent models profitability: 'SKU#B generates $8 margin per unit, SKU#A generates $3 - prioritize high-margin SKUs for premium space'. 3. Optimization Agent recommends reallocation: 'Reduce SKU#A from 10 to 8 facings (-6% sales, -$180 margin), increase SKU#B from 5 to 7 facings (+30% sales, +$600 margin) - net category margin +$420/week'. 4. Eye-Level Agent places high-margin items at optimal height: 'Move SKU#B to eye level (50-65 inches height, 40% sales lift vs bottom shelf), move commodity SKU#A to lower shelf (minimal impact)'. 5. Agent designs planogram: 190 SKUs optimized across 48 linear feet of shelf space maximizing category profitability. 6. 10-20% sales lift achieved through shelf elasticity-based optimization vs sales-proportional allocation.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Space Allocation Agent", "Shelf Elasticity Agent", "Optimization Agent"],
+        "utilityAgents": ["Planogram Design Tool", "Sales Lift Modeling", "Profitability Calculator", "Visual Merchandising Rules"]
+      },
+      "dataSources": [
+        "SKU sales by shelf position and facing count (elasticity data)",
+        "Profitability by SKU (margin, contribution)",
+        "Shelf space constraints (linear feet, height zones)",
+        "Product dimensions and packaging (cube, weight)",
+        "Visual merchandising rules (brand blocking, vertical alignment)",
+        "Store layouts and shelf configurations",
+        "Competitor planograms and positioning",
+        "Customer shopping behavior (heat maps, dwell time)"
+      ],
+      "benefits": [
+        "10-20% sales lift through shelf elasticity optimization",
+        "Category profitability +$420/week example (high-margin SKUs prioritized)",
+        "Eye-level premium space allocated to high-elasticity, high-margin items",
+        "Automated planogram design vs manual (hours vs days)",
+        "Consistent optimization across all stores (no local variation)",
+        "Continuous improvement through elasticity learning"
+      ],
+      "metrics": ["Space allocation: Elasticity + margin optimized", "Shelf elasticity: ML-modeled", "Sales lift: 10-20%", "Planogram optimization: Automated"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Model shelf elasticity for top 50 SKUs in 3 pilot categories", "Optimize eye-level space allocation for high-margin items", "Deploy automated planogram design for 10 pilot stores"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Shelf elasticity data (test different facing counts, measure sales impact)", "SKU profitability data (margin, contribution by SKU)", "Planogram design software (JDA, Apollo, Shelf Logic)", "Store layout and fixture data", "Visual merchandising rules and brand guidelines", "A/B testing capability for planogram effectiveness"]
+    },
+    "icon": "template",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-new-product-introduction-planning",
+    "type": "function",
+    "level": 4,
+    "label": "New Product Introduction Planning",
+    "description": "Launch readiness orchestration with space planning and delisting decisions achieving 70-80% new product success rate versus 50-60% through systematic launch preparation.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. New keto ice cream SKU launching next month, category manager receives notification: 'Find shelf space for new product'. 2. Manager reviews current planogram: 250 SKUs, shelf 100% full, no available space. 3. Hastily selects SKU to discontinue: 'This one has low sales, remove it', no detailed analysis. 4. Launch day: new SKU placed on bottom shelf (only available space), minimal visibility. 5. Post-launch: new SKU underperforms (hard to find, poor placement), discontinued SKU was key item for senior customers (complaints). 6. 50-60% new product success rate due to poor launch preparation and space planning.",
+      "constraints": [
+        "Reactive space planning (find space last minute)",
+        "Hasty delisting decisions (no detailed analysis of discontinuation impact)",
+        "Suboptimal shelf placement (bottom shelf, low visibility)",
+        "50-60% new product success rate",
+        "Launch readiness checklist manual (often incomplete)",
+        "No cross-functional coordination (merchandising, marketing, supply chain)"
+      ],
+      "metrics": ["New product success rate: 50-60%", "Launch preparation time: 1-2 weeks (rushed)", "Delisting analysis: Minimal", "Shelf placement: Suboptimal (available space only)"]
+    },
+    "agentic": {
+      "workflow": "1. Launch Planning Agent receives new product notification 12 weeks pre-launch: 'Keto ice cream SKU launching, requires 3 shelf facings, premium positioning'. 2. Space Planning Agent analyzes assortment: '250 SKUs at capacity, recommend discontinue SKU#123 (low sales, 2.5 star rating, 5 similar substitutes available) and SKU#456 (slow-mover, seasonal peak passed) - frees 4 facings'. 3. Agent validates delisting: 'SKU#123 discontinuation drives 80% volume to SKU#124 (similar product), minimal revenue loss. SKU#456 end-of-season timing optimal'. 4. Placement Agent optimizes shelf position: 'New keto SKU eye-level placement (high visibility), adjacent to keto-friendly products (cross-sell opportunity), end-cap promotion week 1'. 5. Readiness Agent orchestrates launch: coordinates inventory delivery, planogram updates, staff training, promotional signage, supply chain readiness. 6. 70-80% new product success rate through systematic 12-week launch preparation vs 1-2 week reactive approach.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Launch Planning Agent", "Space Planning Agent", "Placement Agent", "Readiness Agent"],
+        "utilityAgents": ["Delisting Analysis", "Inventory Planning", "Promotional Calendar", "Supply Chain Coordination"]
+      },
+      "dataSources": [
+        "New product pipeline with launch dates and requirements",
+        "Current assortment and shelf space utilization",
+        "SKU performance for delisting analysis",
+        "Substitution patterns for discontinuation validation",
+        "Shelf placement rules and visual merchandising guidelines",
+        "Launch readiness checklist (inventory, training, signage, promotion)",
+        "Historical new product launch success rates",
+        "Cross-functional team calendars and dependencies"
+      ],
+      "benefits": [
+        "70-80% new product success rate vs 50-60% reactive approach",
+        "12-week launch preparation vs 1-2 week rushed timeline",
+        "Systematic delisting analysis (data-driven vs hasty decisions)",
+        "Optimal shelf placement (eye-level, cross-sell adjacency)",
+        "Cross-functional readiness coordination (inventory, training, marketing)",
+        "Launch playbook standardization (consistent execution)"
+      ],
+      "metrics": ["New product success rate: 70-80%", "Launch preparation time: 12 weeks (systematic)", "Delisting analysis: Comprehensive", "Shelf placement: Optimized (premium position)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create 12-week new product launch timeline and readiness checklist", "Implement delisting analysis using sales, margin, substitution criteria", "Deploy launch coordination workflow across merchandising, supply chain, marketing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["New product pipeline visibility (12+ weeks advance notice)", "Delisting analysis criteria and substitution modeling", "Shelf placement optimization rules", "Launch readiness checklist and workflow automation", "Cross-functional collaboration platform", "Historical launch performance tracking"]
+    },
+    "icon": "rocket",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-assortment-localization",
+    "type": "function",
+    "level": 4,
+    "label": "Assortment Localization (by Store/Cluster)",
+    "description": "Store clustering with demand-driven local assortments achieving 15-25% sales lift in localized categories versus one-size-fits-all corporate assortment through demographic matching.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Corporate merchandising creates single 250-SKU cereal assortment for all 500 stores nationwide. 2. Store in Miami (Hispanic demographic, 85°F average temp) receives same assortment as store in Minneapolis (Nordic demographic, 35°F average). 3. Miami store: gluten-free and organic SKUs don't sell (demographic mismatch), but no Cuban-style cereal options. Minneapolis store: tropical fruit cereal doesn't sell, but lacks hot cereal options. 4. Store managers complain: 'This assortment doesn't fit my customers', request local adjustments. 5. Corporate maintains one-size-fits-all policy (complexity concerns, lack of local demand data). 6. 15-25% sales opportunity missed due to demographic and climate mismatch.",
+      "constraints": [
+        "One-size-fits-all corporate assortment (ignores local demographics)",
+        "Demographic mismatch (Hispanic vs Nordic communities same assortment)",
+        "Climate mismatch (tropical vs cold weather products)",
+        "15-25% sales lift opportunity missed in localized categories",
+        "Store manager requests ignored (no systematic localization process)",
+        "Complexity concerns prevent localization (manage 500 different assortments)"
+      ],
+      "metrics": ["Assortment strategy: Corporate (one-size-fits-all)", "Store clusters: 1 (no localization)", "Local sales lift: 0% (baseline)", "Complexity: Low (single assortment)"]
+    },
+    "agentic": {
+      "workflow": "1. Store Clustering Agent analyzes 500 stores across demographics, climate, sales patterns: creates 12 store clusters (Urban Hispanic, Suburban Family, College Town, Senior Community, etc.). 2. Agent profiles each cluster: 'Cluster 3 (Urban Hispanic, 85 stores): 65% Hispanic population, 80°F average temp, preferences: Latin flavors, organic, gluten-free low demand'. 3. Localization Agent customizes assortment by cluster: 'Cluster 3: remove 15 low-selling gluten-free SKUs, add 12 Latin flavor SKUs (dulce de leche, churro, horchata cereals), add 3 tropical fruit options'. 4. Agent validates localization impact: 'Cluster 3 pilot (10 stores): localized assortment drives +22% category sales, +18% margin, customer satisfaction +15% (better selection fit)'. 5. Agent rolls out to all 85 Cluster 3 stores: corporate manages 12 cluster assortments (vs 500 store-specific) - manageable complexity. 6. 15-25% sales lift in localized categories through demographic-matched assortments vs one-size-fits-all.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Store Clustering Agent", "Localization Agent", "Validation Agent"],
+        "utilityAgents": ["Demographic Data", "Sales Analytics by Store", "Climate Database", "SKU Performance Tracker"]
+      },
+      "dataSources": [
+        "Store demographics (age, ethnicity, income, household size)",
+        "Climate data (temperature, seasonal patterns)",
+        "SKU sales by store and category",
+        "Customer purchase patterns and preferences by location",
+        "Competitor assortments in each trade area",
+        "Local events and cultural considerations",
+        "Store format and size constraints",
+        "Distribution and supply chain feasibility"
+      ],
+      "benefits": [
+        "15-25% sales lift in localized categories through demographic matching",
+        "12 cluster assortments vs 1 corporate or 500 store-specific (manageable)",
+        "Customer satisfaction +15% (better selection fit)",
+        "Margin improvement +18% (optimize mix for local preferences)",
+        "Pilot validation before rollout (reduce risk)",
+        "Continuous learning (cluster performance tracking)"
+      ],
+      "metrics": ["Assortment strategy: Clustered (localized)", "Store clusters: 12 (manageable complexity)", "Local sales lift: 15-25%", "Complexity: Medium (12 assortments)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Cluster 50 pilot stores into 3-5 groups by demographics and sales patterns", "Localize 2 test categories (e.g., cereal, beverages) in pilot clusters", "Measure sales lift and customer satisfaction in pilot before scaling"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Store demographic data and clustering analytics", "SKU performance data by store and category", "Assortment planning platform supporting multiple cluster assortments", "Supply chain capability to distribute differentiated assortments", "Change management for category managers (shift from 1 to 12 assortments)", "Pilot testing framework and A/B comparison methodology"]
+    },
+    "icon": "location-marker",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-seasonal-assortment-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Seasonal Assortment Planning",
+    "description": "Seasonal flow planning with pre-season positioning and post-season clearance achieving 30-50% markdown reduction through optimized lifecycle inventory management.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Halloween seasonal items ordered in July: 10,000 units pumpkin-flavored products based on last year sales. 2. Items arrive late August, placed on shelf, sell through October 31. 3. November 1: 3,500 units remaining (65% sell-through, 35% leftover). 4. Deep markdowns required: 50% off Nov 1-7, then 75% off, some items donated or destroyed. 5. $35,000 markdown loss on unsold seasonal inventory (35% × 10,000 × $10 cost × 50-75% markdown). 6. Next year: repeat same pattern (no systematic seasonal flow planning or markdown optimization).",
+      "constraints": [
+        "Fixed seasonal quantity based on last year (no demand forecasting)",
+        "65% sell-through typical (35% leftover requiring markdowns)",
+        "Deep markdowns 50-75% to clear seasonal inventory",
+        "$35,000 markdown loss per seasonal event (example)",
+        "No pre-season demand sensing or mid-season adjustment",
+        "Post-season clearance reactive (wait until excess obvious)"
+      ],
+      "metrics": ["Seasonal sell-through: 65%", "Markdown rate: 50-75%", "Markdown loss: $35K per event", "Planning approach: Last year + 5%"]
+    },
+    "agentic": {
+      "workflow": "1. Seasonal Planning Agent forecasts Halloween demand: '8,500 units projected based on trend analysis (declining pumpkin interest -15% YoY), weather forecast (warm October reduces fall product demand), social media sentiment (keto trend impacts sugary Halloween items)'. 2. Agent plans seasonal flow: 'Initial order 7,000 units (conservative), monitor daily sales, reserve 2,000 units fast-ship option if demand exceeds forecast'. 3. Mid-Season Agent tracks sell-through: 'Week 2 of October: 40% sold (on track for 85% total sell-through), trending better than forecast, release 1,000 additional units from reserve'. 4. Clearance Agent triggers markdown strategy: 'October 28: 90% sold, 800 units remaining, start 30% markdown Oct 29-31 (lighter markdown, still sell remaining units by Halloween)'. 5. Final results: 95% sell-through, 400 units remaining, 30-40% markdown (vs 50-75%), markdown loss $4,000 (vs $35,000). 6. 30-50% markdown reduction through demand-driven seasonal planning vs last-year-based ordering.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Seasonal Planning Agent", "Mid-Season Agent", "Clearance Agent"],
+        "utilityAgents": ["Demand Forecasting", "Social Sentiment", "Weather API", "Markdown Optimizer"]
+      },
+      "dataSources": [
+        "Historical seasonal sales trends (3-5 years)",
+        "Weather forecasts and climate patterns",
+        "Social media sentiment and trend analysis",
+        "Dietary and health trends (keto, organic impact)",
+        "Daily sell-through tracking during season",
+        "Competitor seasonal pricing and inventory",
+        "Fast-ship supply options and lead times",
+        "Markdown optimization models"
+      ],
+      "benefits": [
+        "30-50% markdown reduction ($35K → $4K example, 88% savings)",
+        "85-95% sell-through vs 65% (better demand matching)",
+        "Mid-season adjustments (add 1,000 units if trending high)",
+        "Lighter markdowns 30-40% vs 50-75% (preserve margin)",
+        "Demand forecasting vs last-year-based (trend and sentiment analysis)",
+        "Reserve inventory strategy (flexibility without over-commitment)"
+      ],
+      "metrics": ["Seasonal sell-through: 85-95%", "Markdown rate: 30-40%", "Markdown loss: $4K per event", "Planning approach: ML demand forecast + reserve"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy demand forecasting for top 3 seasonal events (Halloween, Christmas, Valentine's)", "Implement mid-season sell-through tracking and alerts", "Create reserve inventory strategy with fast-ship suppliers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Historical seasonal sales data (3-5 years, daily granularity)", "Weather and social sentiment data integrations", "Daily sell-through tracking during seasonal periods", "Fast-ship supplier agreements for reserve inventory", "Markdown optimization models and pricing tools", "Seasonal calendar and planning workflow"]
+    },
+    "icon": "sun",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-assortment-performance-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Assortment Performance Tracking",
+    "description": "Continuous assortment KPI monitoring with automated insights achieving 20-30% faster decision-making and 90%+ assortment effectiveness versus quarterly manual reviews.",
+    "parentCapability": "capability-assortment-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Quarterly business review: category manager exports sales data, manually calculates assortment KPIs in Excel. 2. Metrics calculated: sales by SKU, inventory turns, out-of-stock rate, new product performance. 3. Analysis reveals: 'SKU#789 hasn't sold in 3 months (dead stock), new product SKU#456 outperforming forecast by 200% (missed opportunity)'. 4. Actions identified too late: 3 months of dead stock holding costs ($5K), 3 months of stockouts on hot new product (lost $50K revenue). 5. Quarterly review frequency too slow for fast-moving markets (decisions delayed 90 days). 6. 70-80% assortment effectiveness due to delayed insights and reactive decisions.",
+      "constraints": [
+        "Quarterly review frequency (90-day decision lag)",
+        "Manual KPI calculation in Excel (time-consuming, error-prone)",
+        "70-80% assortment effectiveness (slow to optimize)",
+        "Dead stock identified 3 months late ($5K holding cost waste)",
+        "High-performing items stockout while waiting for quarterly review",
+        "No automated alerts or exception reporting"
+      ],
+      "metrics": ["Review frequency: Quarterly (90-day lag)", "KPI automation: Manual Excel", "Decision speed: 20-30 days (slow)", "Assortment effectiveness: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Tracking Agent monitors assortment KPIs daily: sales velocity, inventory turns, out-of-stock rate, new product performance, customer ratings, profitability. 2. Agent detects exceptions automatically: 'SKU#789 zero sales 14 days (dead stock alert), recommend clearance markdown or discontinuation'. 'SKU#456 selling 3x forecast, stockout risk in 5 days, recommend expedited replenishment'. 3. Agent generates automated insights: 'Category A: 12 SKUs (5% of assortment) driving 60% of sales (power items), 45 SKUs (18%) contributed <1% sales (rationalization candidates)'. 4. Decision Support Agent recommends actions: 'Discontinue 15 slow-movers (free $50K working capital), double inventory on 8 power items (capture $80K incremental revenue)'. 5. Agent tracks action effectiveness: 'Last month recommendations: discontinued 12 SKUs, freed $42K working capital, added 2 SKUs, generated $25K incremental revenue, net benefit $67K'. 6. 20-30% faster decision-making (daily insights vs quarterly review), 90%+ assortment effectiveness through continuous optimization.",
+      "agents": {
+        "orchestrator": "Assortment Planning Orchestration Agent",
+        "superAgents": ["Performance Tracking Agent", "Exception Detection Agent", "Decision Support Agent"],
+        "utilityAgents": ["Sales Analytics", "Inventory Tracking", "Customer Feedback", "Profitability Calculator", "Dashboard Platform"]
+      },
+      "dataSources": [
+        "Daily SKU sales and inventory data",
+        "Out-of-stock incidents and duration",
+        "New product performance vs forecast",
+        "Customer ratings and review sentiment",
+        "SKU profitability (sales, margin, holding costs)",
+        "Competitive assortment changes",
+        "Historical assortment decision outcomes",
+        "Exception thresholds and alert rules"
+      ],
+      "benefits": [
+        "20-30% faster decision-making (daily insights vs quarterly review)",
+        "90%+ assortment effectiveness through continuous optimization",
+        "Automated exception alerts (dead stock, stockout risk, hot items)",
+        "Daily KPI visibility vs manual quarterly calculation",
+        "Action tracking ($67K net benefit example from recommendations)",
+        "Working capital optimization (free $42K from slow-mover discontinuation)"
+      ],
+      "metrics": ["Review frequency: Daily (real-time)", "KPI automation: Automated dashboard", "Decision speed: 1-5 days (fast)", "Assortment effectiveness: 90%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy daily assortment dashboard for top 5 categories with key KPIs", "Implement automated alerts for dead stock (14 days zero sales) and stockout risk", "Create monthly assortment review process vs quarterly"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Daily SKU sales and inventory data integration", "Assortment KPI definitions and calculation logic", "Dashboard and visualization platform (Power BI, Tableau)", "Exception thresholds and alerting rules", "Decision recommendation engine and workflow", "Historical performance tracking for ROI measurement"]
+    },
+    "icon": "chart-pie",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

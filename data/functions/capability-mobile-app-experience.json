@@ -1,0 +1,380 @@
+[
+  {
+    "id": "function-push-notification-personalization",
+    "type": "function",
+    "level": 4,
+    "label": "Push Notification Personalization",
+    "description": "AI-driven push notification personalization with send time optimization and behavioral triggering achieving 5-10x engagement vs generic broadcasts.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing sends generic push notification to all app users (e.g., '20% off sale today!'). 2. Same message, time, and offer for everyone regardless of preferences. 3. Batch send at fixed time (e.g., 10am) ignoring individual engagement patterns. 4. No behavioral triggering (cart abandonment, location-based). 5. Generic approach yields 2-5% open rates and causes 15-25% opt-outs over time.",
+      "constraints": [
+        "Generic messages not relevant to individual interests (2-5% open rates)",
+        "Batch sends at fixed time miss individual engagement windows",
+        "No behavioral triggers (missed opportunities for cart abandon, geofencing)",
+        "Same frequency for all users causes notification fatigue",
+        "15-25% users opt-out due to irrelevant spam-like notifications",
+        "No learning or optimization based on engagement patterns"
+      ],
+      "metrics": ["Open rate: 2-5%", "Opt-out rate: 15-25%", "Personalization: None (broadcast)"]
+    },
+    "agentic": {
+      "workflow": "1. Personalization Agent tailors notification content to individual: product recommendations based on browsing/purchase history, offers based on category preferences and price sensitivity, messaging tailored to lifecycle stage. 2. Behavioral Trigger Agent sends notifications based on actions: cart abandonment recovery, price drop on wishlisted items, location-based offers (geofencing), back-in-stock alerts. 3. Send Time Optimization Agent delivers at optimal time for each user based on app engagement patterns. 4. Frequency Management prevents notification fatigue through intelligent pacing. 5. Learning Agent optimizes based on open rates and conversions.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Personalization Agent", "Behavioral Trigger Agent", "Send Time Optimization Agent"],
+        "utilityAgents": ["Push Notification Platform", "CDP", "Geolocation Services", "Engagement Analytics"]
+      },
+      "dataSources": [
+        "Customer behavioral data (app usage, purchases, browsing)",
+        "Product preferences and wishlist items",
+        "App engagement patterns by time and day",
+        "Real-time location data (with permission)",
+        "Push notification engagement history",
+        "Cart and abandoned session data"
+      ],
+      "benefits": [
+        "5-10x engagement improvement (15-30% open rates vs 2-5%)",
+        "70-80% reduction in opt-outs through relevant personalized messaging",
+        "Behavioral triggers capture high-intent moments (cart abandon, price drop)",
+        "Send time optimization delivers when user most likely to engage",
+        "Frequency management prevents notification fatigue",
+        "Location-based offers drive in-store traffic and local conversions"
+      ],
+      "metrics": ["Open rate: 15-30%", "Opt-out rate: 3-6%", "Personalization: 1:1 + behavioral triggers"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement cart abandonment push notifications", "Enable send time optimization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Push notification platform with personalization", "Customer Data Platform", "Behavioral trigger framework", "Location services integration", "Engagement analytics"]
+    },
+    "icon": "bell",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-in-app-messaging-engagement",
+    "type": "function",
+    "level": 4,
+    "label": "In-App Messaging & Engagement",
+    "description": "Contextual in-app messages with behavioral targeting driving 40-70% higher engagement than push notifications through non-intrusive timely prompts.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager creates static in-app banners promoting current sale or new feature. 2. Same banner shown to all users on app home screen regardless of context. 3. Manual updates required to change messaging (weekly at best). 4. No behavioral targeting or personalization. 5. Users dismiss banners as irrelevant noise (8-15% engagement).",
+      "constraints": [
+        "Static banners not contextually relevant to user's current activity",
+        "Same message for all users regardless of lifecycle stage or needs",
+        "Manual updates limit message freshness and responsiveness",
+        "No behavioral targeting (first-time vs power user gets same message)",
+        "Banner blindness due to generic irrelevant messaging (8-15% engagement)",
+        "Can't guide users through app features or purchases contextually"
+      ],
+      "metrics": ["Engagement rate: 8-15%", "Message relevance: Low", "Update frequency: Weekly manual"]
+    },
+    "agentic": {
+      "workflow": "1. Contextual Messaging Agent displays messages based on user state: onboarding flow for first-time users, feature discovery for active users, re-engagement for returning users, checkout assistance during cart flow. 2. Behavioral Targeting shows relevant prompts: cross-sell based on cart contents, loyalty program enrollment for frequent buyers, personalized offers for high-value customers. 3. Journey-Based Triggers display messages at optimal moments in user flow. 4. A/B Testing Agent optimizes message content, timing, and placement. 5. Non-Intrusive Delivery ensures messages enhance rather than interrupt experience.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Contextual Messaging Agent", "Behavioral Targeting Agent", "Journey-Based Triggers Agent"],
+        "utilityAgents": ["In-App Messaging Platform", "CDP", "User Journey Analytics", "A/B Testing"]
+      },
+      "dataSources": [
+        "Real-time user session and screen data",
+        "Customer lifecycle stage and app usage patterns",
+        "Cart contents and purchase intent signals",
+        "Feature adoption and usage analytics",
+        "A/B test results for messaging",
+        "Customer value tier and segment"
+      ],
+      "benefits": [
+        "40-70% higher engagement vs push notifications (30-50% engagement rates)",
+        "Contextual relevance improves conversion 3-5x vs generic banners",
+        "Non-intrusive delivery (no opt-out fatigue like push)",
+        "Journey-based guidance improves onboarding and feature adoption 50-80%",
+        "Behavioral targeting shows offers when user most receptive",
+        "Real-time message updates vs weekly manual changes"
+      ],
+      "metrics": ["Engagement rate: 30-50%", "Message relevance: High (contextual)", "Update frequency: Real-time dynamic"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement contextual onboarding for new users", "Show cart-based cross-sell messages"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["In-app messaging platform", "User journey tracking", "Behavioral segmentation", "A/B testing capability", "Real-time messaging orchestration"]
+    },
+    "icon": "message-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mobile-app-ab-testing",
+    "type": "function",
+    "level": 4,
+    "label": "Mobile App A/B Testing",
+    "description": "Server-side feature flags and A/B testing enabling rapid iteration and 4-8x faster learning cycles without app store approval delays.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product team designs new app feature or UI change. 2. Engineers build and test in development environment. 3. Submit app update to Apple/Google for approval (2-7 days). 4. All users get new feature simultaneously (no gradual rollout or testing). 5. If feature has issues, must submit another app update for fix (another 2-7 days).",
+      "constraints": [
+        "App store approval delays testing by 2-7 days per iteration",
+        "All-or-nothing releases prevent gradual rollout and testing",
+        "Can't A/B test features (would require multiple app versions)",
+        "Critical bugs impact all users immediately (no ability to rollback instantly)",
+        "Limited to 3-6 major iterations per year due to approval overhead",
+        "No experimentation culture (too slow and risky to test ideas)"
+      ],
+      "metrics": ["Release cycle: 2-7 days", "Test velocity: 3-6 tests/year", "Rollback time: 2-7 days"]
+    },
+    "agentic": {
+      "workflow": "1. Feature Flag Agent manages server-side feature toggles enabling instant on/off without app updates. 2. Experimentation Agent runs A/B tests on app features: UI layouts, navigation flows, checkout processes, personalization algorithms. 3. Gradual Rollout Agent deploys features to increasing % of users (5% → 25% → 50% → 100%). 4. Performance Monitoring Agent tracks crashes, errors, and KPIs in real-time. 5. Auto-Rollback triggers instant feature disable if critical issues detected.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Feature Flag Agent", "Experimentation Agent", "Gradual Rollout Agent"],
+        "utilityAgents": ["Feature Flag Platform", "A/B Testing Platform", "App Analytics", "Error Monitoring"]
+      },
+      "dataSources": [
+        "App performance metrics (crashes, latency, errors)",
+        "Feature engagement and conversion data",
+        "A/B test statistical results",
+        "User segment and device data",
+        "App analytics and behavioral data",
+        "Feature flag configurations"
+      ],
+      "benefits": [
+        "4-8x faster learning cycles (instant feature toggle vs 2-7 day app approval)",
+        "20-40 A/B tests per year vs 3-6 (enables experimentation culture)",
+        "Gradual rollout reduces risk (5% test before full deployment)",
+        "Instant rollback vs 2-7 day fix cycle (critical bug mitigation)",
+        "Test features for specific user segments before full launch",
+        "No app store approval delays for experiments and optimizations"
+      ],
+      "metrics": ["Release cycle: Instant", "Test velocity: 20-40 tests/year", "Rollback time: Instant"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement feature flags for new features", "Test checkout flow variations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Feature flag platform implementation", "A/B testing framework", "App analytics integration", "Error monitoring and alerting", "Statistical analysis capability"]
+    },
+    "icon": "flask",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-app-performance-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "App Performance Monitoring",
+    "description": "AI-powered performance monitoring with proactive issue detection reducing crashes by 60-80% and improving app store ratings.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Engineers rely on app store reviews to discover crashes and performance issues. 2. Manual investigation of crash reports from Apple/Google (limited details). 3. Attempt to reproduce issues locally (time-consuming, often unsuccessful). 4. Deploy fix in next app update (2-7 days minimum). 5. Poor app performance causes 1-3% crash rates and negative reviews.",
+      "constraints": [
+        "Reactive discovery via app store reviews (issues impact users for days)",
+        "Limited crash report details make debugging difficult",
+        "1-3% crash rate damages app store ratings and user trust",
+        "Slow page loads (3-5 seconds) cause 30-50% abandonment",
+        "No proactive performance monitoring or alerting",
+        "Can't correlate crashes with specific devices, OS versions, or user flows"
+      ],
+      "metrics": ["Crash rate: 1-3%", "Detection time: Days (via reviews)", "Page load time: 3-5 seconds"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Monitoring Agent tracks real-time metrics: crash-free rate, page load times, API response times, memory usage, battery consumption. 2. Anomaly Detection Agent identifies performance degradation patterns before widespread impact. 3. Error Tracking Agent captures detailed crash reports with: stack traces, device details, user flow before crash, affected user segments. 4. Alerting Agent notifies engineers immediately when critical thresholds breached. 5. Root Cause Analysis Agent correlates issues with recent code changes, device types, or OS versions.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Performance Monitoring Agent", "Anomaly Detection Agent", "Error Tracking Agent"],
+        "utilityAgents": ["APM Platform", "Error Tracking Service", "Analytics Platform", "Alerting System"]
+      },
+      "dataSources": [
+        "Real-time app performance metrics",
+        "Crash reports and stack traces",
+        "Device and OS version data",
+        "User flow and session data",
+        "API performance and latency data",
+        "Code deployment and version history"
+      ],
+      "benefits": [
+        "60-80% reduction in crash rates (1-3% to <0.5%)",
+        "Proactive detection before widespread impact (minutes vs days)",
+        "Sub-2 second page loads vs 3-5 seconds (50%+ improvement)",
+        "Detailed crash context accelerates debugging 5-10x",
+        "Correlation with device/OS identifies platform-specific issues",
+        "Improved app store ratings through better performance and reliability"
+      ],
+      "metrics": ["Crash rate: <0.5%", "Detection time: Real-time (minutes)", "Page load time: <2 seconds"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement crash reporting and monitoring", "Set up performance alerting"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Application Performance Monitoring (APM) platform", "Error tracking service", "Real-time alerting system", "Analytics integration", "Engineering on-call process"]
+    },
+    "icon": "gauge",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mobile-specific-personalization",
+    "type": "function",
+    "level": 4,
+    "label": "Mobile-Specific Personalization",
+    "description": "App-exclusive personalization leveraging mobile context (location, camera, sensors) delivering 35-60% higher engagement than mobile web.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Mobile app shows identical experience to mobile website (no mobile-specific features). 2. No leverage of mobile capabilities (location, camera, push, offline). 3. Generic experience doesn't adapt to on-the-go mobile context. 4. Users get desktop website squeezed into mobile screen. 5. Limited differentiation incentivizes app download (15-25% app adoption).",
+      "constraints": [
+        "No mobile-specific value proposition (why download app vs use mobile web?)",
+        "Can't leverage location for local offers or store-specific features",
+        "No camera integration (visual search, barcode scanning)",
+        "Desktop-optimized flows don't match mobile on-the-go usage patterns",
+        "15-25% app adoption due to limited mobile-specific value",
+        "Missed opportunity for offline functionality and faster performance"
+      ],
+      "metrics": ["App adoption: 15-25%", "Mobile-specific features: None", "Engagement vs mobile web: Similar"]
+    },
+    "agentic": {
+      "workflow": "1. Context Intelligence Agent leverages mobile signals: geolocation for local store offers and in-store navigation, camera for visual search and AR try-on, motion sensors for gesture controls, offline capability for browsing without connection. 2. Mobile-Optimized Flows streamline on-the-go tasks: one-tap reorder, mobile wallet integration, voice search. 3. App-Exclusive Features drive downloads: early access to sales, app-only discounts, loyalty rewards. 4. Push Notifications enable timely engagement unavailable on web. 5. Performance Optimization provides faster load times than mobile web.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Context Intelligence Agent", "Mobile-Optimized Flows Agent"],
+        "utilityAgents": ["Location Services", "Camera/AR APIs", "Offline Storage", "Mobile Analytics"]
+      },
+      "dataSources": [
+        "Real-time location data (with user permission)",
+        "Camera and visual input data",
+        "Device capabilities and sensors",
+        "Offline usage patterns",
+        "Mobile app engagement analytics",
+        "Store locations and inventory data"
+      ],
+      "benefits": [
+        "35-60% higher engagement vs mobile web through mobile-specific features",
+        "40-60% app adoption vs 15-25% (clear value proposition)",
+        "Location-based features drive in-store traffic and local conversions",
+        "Visual search and AR try-on reduce returns 20-40%",
+        "Offline browsing enables shopping anywhere (subway, plane)",
+        "2-3x faster performance than mobile web (native code + caching)"
+      ],
+      "metrics": ["App adoption: 40-60%", "Mobile-specific features: Full leverage", "Engagement vs mobile web: 35-60% higher"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement location-based store offers", "Add visual search capability"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Mobile app platform with native capabilities", "Location services integration", "Camera/AR capability", "Offline data synchronization", "Mobile analytics"]
+    },
+    "icon": "smartphone",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-app-analytics-user-behavior",
+    "type": "function",
+    "level": 4,
+    "label": "App Analytics & User Behavior",
+    "description": "Deep mobile analytics with session replay and funnel analysis revealing optimization opportunities and driving 25-45% conversion improvement.",
+    "parentCapability": "capability-mobile-app-experience",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager checks basic app metrics in Google Analytics (screen views, users). 2. Limited visibility into user behavior within app (no session replay). 3. Manual funnel analysis in spreadsheets (weekly at best). 4. Can't identify where users drop off or encounter friction. 5. Optimization decisions based on gut feel not data-driven insights.",
+      "constraints": [
+        "Basic metrics (screen views) don't reveal user behavior or friction",
+        "No session replay to see actual user experience and struggles",
+        "Weekly manual funnel analysis too slow for agile optimization",
+        "Can't identify specific elements causing drop-offs (buttons, forms, navigation)",
+        "No cohort analysis to understand retention patterns",
+        "Limited mobile-specific analytics (offline usage, crashes, performance)"
+      ],
+      "metrics": ["Analysis frequency: Weekly manual", "Insight depth: Basic metrics", "Optimization velocity: Slow"]
+    },
+    "agentic": {
+      "workflow": "1. Behavioral Analytics Agent tracks granular user actions: taps, swipes, scrolls, searches, session flow patterns. 2. Funnel Analysis Agent identifies drop-off points in critical flows (checkout, signup, search). 3. Session Replay Agent provides video playback of user sessions to see friction firsthand. 4. Cohort Analysis Agent reveals retention and engagement patterns over time. 5. Insight Recommendation Agent suggests high-impact optimizations based on data patterns.",
+      "agents": {
+        "orchestrator": "Mobile App Experience Orchestration Agent",
+        "superAgents": ["Behavioral Analytics Agent", "Funnel Analysis Agent", "Session Replay Agent"],
+        "utilityAgents": ["Mobile Analytics Platform", "Session Replay Tool", "Funnel Visualization", "Cohort Analysis"]
+      },
+      "dataSources": [
+        "Granular user interaction data (taps, swipes, scrolls)",
+        "Screen flow and navigation patterns",
+        "Conversion funnel metrics",
+        "Session replay recordings",
+        "Retention and cohort data",
+        "App performance and crash data"
+      ],
+      "benefits": [
+        "25-45% conversion improvement through data-driven optimization",
+        "Session replay reveals friction invisible in aggregate metrics",
+        "Real-time funnel analysis vs weekly manual (10x faster insights)",
+        "Cohort analysis shows retention drivers (Day 1, Day 7, Day 30)",
+        "Automated insight recommendations prioritize high-impact fixes",
+        "Mobile-specific analytics (offline, gestures, device types)"
+      ],
+      "metrics": ["Analysis frequency: Real-time continuous", "Insight depth: Behavioral + session replay", "Optimization velocity: Fast"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement session replay for checkout flow", "Build retention cohort dashboards"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Mobile analytics platform", "Session replay capability", "Funnel analysis tools", "Cohort tracking", "User privacy compliance for recordings"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

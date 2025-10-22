@@ -1,0 +1,462 @@
+[
+  {
+    "id": "function-automated-itinerary-generation",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Itinerary Generation",
+    "description": "AI-powered trip planning that auto-generates optimized day-by-day itineraries with personalized recommendations reducing planning time from hours to minutes with 90%+ traveler satisfaction.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Traveler spends 3-8 hours researching destination: reading blogs, TripAdvisor, guidebooks. 2. Traveler manually creates day-by-day plan in Google Docs or spreadsheet. 3. Traveler must calculate travel times, opening hours, optimal routing between activities. 4. No personalization - everyone follows same 'top 10 things to do' lists. 5. Itinerary becomes outdated (venue closures, seasonal changes).",
+      "constraints": [
+        "3-8 hours manual research per trip",
+        "Generic recommendations not personalized to interests",
+        "No optimization for routing, timing, or travel distances",
+        "Static plans don't adapt to weather, closures, or delays",
+        "Spreadsheet/document format not mobile-friendly",
+        "No integration with bookings or reservations"
+      ],
+      "metrics": ["Planning time: 3-8 hours", "Personalization: Generic", "Optimization: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Itinerary Generation Agent receives traveler input: destination, dates, interests (food, culture, outdoors), pace preference (relaxed vs packed). 2. Personalization Engine analyzes traveler profile: past trips, review patterns, spending habits, dietary preferences. 3. Agent generates day-by-day itinerary: activities, restaurants, optimal routes, estimated times, costs. 4. Optimization Algorithm balances: geographic clustering, opening hours, travel times, budget constraints. 5. Agent integrates bookings: reservations, tickets, confirmed activities linked to itinerary.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Itinerary Generation Agent", "Personalization Engine", "Optimization Algorithm"],
+        "utilityAgents": ["Destination Content Database", "Mapping & Routing Service", "Booking Integration", "Real-Time Data Feeds"]
+      },
+      "dataSources": [
+        "Traveler profile with interests and preferences",
+        "Destination POI database (attractions, restaurants, activities)",
+        "User-generated content and reviews",
+        "Real-time venue data (hours, closures, events)",
+        "Weather forecasts and seasonal patterns",
+        "Transportation options and travel times",
+        "Ticket pricing and availability",
+        "Past traveler itineraries and satisfaction scores"
+      ],
+      "benefits": [
+        "90% time reduction (15-30 min vs 3-8 hours)",
+        "Personalized to individual interests vs generic top-10 lists",
+        "Optimized routing saves 2-4 hours of travel time per day",
+        "Mobile-friendly format with maps and directions",
+        "Integrated with bookings and reservations",
+        "90%+ traveler satisfaction vs 60-70% for self-planned trips"
+      ],
+      "metrics": ["Planning time: 15-30 min", "Personalization: Individual 1:1", "Optimization: AI-powered"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy auto-itinerary for top 10 destinations", "Integrate with existing booking data"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Destination content database", "Customer preference profiles", "Routing optimization engine", "Mobile app or responsive web"]
+    },
+    "icon": "calendar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-multi-traveler-coordination",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Traveler Coordination",
+    "description": "Collaborative trip planning with shared itineraries and voting enabling seamless coordination for group travel reducing planning friction by 60-80%.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Trip organizer sends group text or email thread with proposed plans. 2. Group members respond asynchronously with preferences, creating 50+ message thread chaos. 3. Organizer manually reconciles conflicting preferences and schedules. 4. Final itinerary sent via email - some members miss updates. 5. Day-of changes communicated via text, creating confusion about current plan.",
+      "constraints": [
+        "Email/text threads with 50-100+ messages are chaotic",
+        "No centralized view of group preferences or votes",
+        "Organizer burden to reconcile all input manually",
+        "Updates lost in thread - travelers have different versions",
+        "No real-time coordination during trip",
+        "Conflicting preferences resolved by organizer fiat (frustration)"
+      ],
+      "metrics": ["Coordination messages: 50-100+", "Version conflicts: Frequent", "Real-time sync: None"]
+    },
+    "agentic": {
+      "workflow": "1. Trip Coordination Agent creates shared trip workspace for all travelers. 2. Voting Engine allows members to vote on options: restaurants, activities, timing (majority rules or consensus mode). 3. Preference Aggregation Agent collects input: dietary needs, mobility constraints, budget preferences, must-see attractions. 4. Agent generates itinerary balancing group preferences, flags conflicts for discussion. 5. Real-Time Sync keeps all travelers updated: push notifications for changes, map view of group location during trip.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Trip Coordination Agent", "Voting Engine", "Preference Aggregation Agent"],
+        "utilityAgents": ["Collaboration Platform", "Notification Service", "Location Sharing", "Chat Integration"]
+      },
+      "dataSources": [
+        "Individual traveler profiles and preferences",
+        "Group voting results and consensus levels",
+        "Shared itinerary with edit history",
+        "Real-time location data (during trip)",
+        "Communication threads and decisions",
+        "Accessibility needs and dietary restrictions",
+        "Budget constraints by traveler",
+        "Booking confirmations linked to itinerary"
+      ],
+      "benefits": [
+        "60-80% reduction in coordination effort",
+        "Single source of truth vs fragmented email threads",
+        "Democratic voting eliminates organizer burden",
+        "Real-time sync prevents version conflicts",
+        "Push notifications keep everyone informed",
+        "Accessibility and dietary needs auto-flagged"
+      ],
+      "metrics": ["Coordination messages: 10-15", "Version conflicts: Zero", "Real-time sync: Yes"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch shared itinerary with voting for group bookings", "Add real-time push notifications for itinerary changes"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Collaboration platform or portal", "Voting and consensus engine", "Real-time notification service", "Mobile app with location sharing"]
+    },
+    "icon": "users",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-real-time-disruption-management",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Disruption Management",
+    "description": "Proactive monitoring and automatic rebooking for flight delays and cancellations reducing traveler stress and downtime by 70-85% through instant alternative arrangements.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Flight delayed or cancelled - customer learns via airport monitor or gate agent. 2. Customer stands in 60-90 minute rebooking line at airport. 3. Agent manually searches for alternatives on overloaded system during irregular ops. 4. Customer may miss connections, hotel reservations, important meetings. 5. Customer must separately rebook hotel, car rental, missed activities.",
+      "constraints": [
+        "Customer learns of disruption only at airport (no proactive alerts)",
+        "60-90 min rebooking wait during irregular operations",
+        "Downstream impacts (hotel, car, activities) not addressed",
+        "Limited rebooking options due to high demand during disruptions",
+        "No compensation or recovery offers proactively presented",
+        "Customer frustration and loyalty erosion from poor experience"
+      ],
+      "metrics": ["Notification: At airport", "Rebooking time: 60-90 min", "Downstream coordination: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Disruption Monitoring Agent tracks real-time flight status, weather, airline operations data. 2. Alert Agent detects delay/cancellation and immediately notifies customer via push, SMS, email (30-60 min before airline announcement). 3. Automatic Rebooking Agent finds best alternative flights, presents options in app with one-tap acceptance. 4. Downstream Coordination Agent auto-adjusts hotel, car rental, activity bookings to new schedule. 5. Compensation Agent proactively offers meal vouchers, lounge access, hotel for overnight delays per policy.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Disruption Monitoring Agent", "Alert Agent", "Automatic Rebooking Agent", "Downstream Coordination Agent", "Compensation Agent"],
+        "utilityAgents": ["Flight Status APIs", "NDC/GDS", "Hotel/Car APIs", "Notification Service", "Policy Engine"]
+      },
+      "dataSources": [
+        "Real-time flight status and delay predictions",
+        "Weather data and airport conditions",
+        "Airline schedule changes and cancellations",
+        "Customer itinerary and bookings",
+        "Alternative flight inventory and pricing",
+        "Hotel and car rental reservations",
+        "Airline compensation and service recovery policies",
+        "Customer loyalty status and preferences"
+      ],
+      "benefits": [
+        "70-85% stress reduction through proactive management",
+        "30-60 min advance notice vs at-airport surprise",
+        "5-10 min rebooking vs 60-90 min agent lines",
+        "Automatic coordination of hotel, car, activities",
+        "Proactive compensation improves satisfaction 40-60%",
+        "Customer loyalty retention during disruptions"
+      ],
+      "metrics": ["Notification: 30-60 min advance", "Rebooking time: 5-10 min", "Downstream coordination: Automatic"]
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Rebooking cost >$500 or schedule change >4 hours",
+      "policy": "Present options for customer approval before auto-rebooking high-impact changes"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement proactive delay alerts 30 min before airline", "Enable one-tap rebooking for cancellations"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time flight status data feeds", "Automated rebooking APIs", "Integrated itinerary management", "Multi-channel notification platform"]
+    },
+    "icon": "exclamation-triangle",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-alternative-options-rebooking",
+    "type": "function",
+    "level": 4,
+    "label": "Alternative Options & Rebooking",
+    "description": "Intelligent multi-carrier and multi-modal alternative search during disruptions with instant rebooking reducing stranded time by 50-70% through comprehensive options.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Flight cancelled - agent only searches same airline for alternatives. 2. Same-airline options may be 12-24 hours away due to limited inventory. 3. Customer not offered alternatives on partner airlines or other carriers. 4. Ground transportation alternatives (train, bus) not considered. 5. Customer left to manually research and book alternatives at own expense.",
+      "constraints": [
+        "Single-carrier search limits alternative options",
+        "12-24 hour delays common when airline is fully booked",
+        "No partner airline or alliance rebooking proactively offered",
+        "Ground transportation ignored (even if faster/better)",
+        "Customer may pay out-of-pocket for better alternative",
+        "Loyalty erosion when better options exist but not offered"
+      ],
+      "metrics": ["Carrier options: 1", "Modal options: Flight only", "Average delay: 12-24 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Alternative Search Agent simultaneously searches: same airline, partner airlines, alliance carriers, competing airlines with interline agreements. 2. Multi-Modal Agent evaluates ground options: high-speed rail, bus, car rental for sub-400 mile trips. 3. Optimization Engine ranks options by: arrival time, cost, travel comfort, customer preference (fastest vs cheapest). 4. Agent presents top 3-5 alternatives with clear comparison and one-tap booking. 5. Interline Booking Agent handles cross-carrier rebooking, luggage transfer, ticket reissue.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Alternative Search Agent", "Multi-Modal Agent", "Optimization Engine", "Interline Booking Agent"],
+        "utilityAgents": ["Multi-Carrier GDS", "Rail APIs", "Ground Transport APIs", "Interline Agreement Database"]
+      },
+      "dataSources": [
+        "Multi-carrier flight inventory (GDS, NDC)",
+        "Partner and alliance airline schedules",
+        "Interline and codeshare agreements",
+        "High-speed rail schedules and availability",
+        "Bus and ground transportation options",
+        "Real-time pricing across all options",
+        "Customer preferences (fastest vs cheapest vs comfort)",
+        "Loyalty program reciprocity and benefits"
+      ],
+      "benefits": [
+        "50-70% reduction in stranded time (4-8 hours vs 12-24 hours)",
+        "5-10 carrier options vs single airline",
+        "Multi-modal alternatives (flight, rail, car) for flexibility",
+        "Optimized by customer priority (time vs cost)",
+        "Seamless interline booking and luggage handling",
+        "Higher satisfaction through comprehensive options"
+      ],
+      "metrics": ["Carrier options: 5-10", "Modal options: Flight, rail, car", "Average delay: 4-8 hours"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable partner airline search for disruptions", "Add rail alternatives for <400 mile trips"],
+      "investmentRequired": "High",
+      "timeToValue": "8-12 months",
+      "prerequisites": ["Multi-carrier GDS access", "Interline agreements and APIs", "Rail and ground transport integrations", "Cross-modal routing engine"]
+    },
+    "icon": "refresh",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-itinerary-sharing-collaboration",
+    "type": "function",
+    "level": 4,
+    "label": "Itinerary Sharing & Collaboration",
+    "description": "Social sharing and family coordination features with real-time updates enabling seamless communication and 80-90% reduction in coordination overhead.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Traveler forwards confirmation emails to family members for emergency contact. 2. Family member must parse 5-10 separate emails to understand traveler's schedule. 3. No real-time location or status updates during travel. 4. Traveler must manually text family at each leg ('landed in Chicago'). 5. Shared itinerary via Google Doc or PDF quickly becomes outdated.",
+      "constraints": [
+        "Fragmented information across multiple emails",
+        "No real-time status or location sharing",
+        "Manual updates via text create burden on traveler",
+        "Family members can't see delays or disruptions",
+        "Emergency contacts don't have current itinerary",
+        "No proactive alerts to family for delays/cancellations"
+      ],
+      "metrics": ["Update burden: Manual texts", "Real-time visibility: None", "Coordination overhead: High"]
+    },
+    "agentic": {
+      "workflow": "1. Sharing Agent allows traveler to share itinerary link with family, colleagues, or social networks. 2. Real-Time Status Feed shows family members: current flight status, gate changes, delays, traveler location (if enabled). 3. Auto-Update Agent pushes notifications to shared contacts for major changes (cancellations, significant delays). 4. Location Sharing (opt-in) provides peace of mind for family during travel. 5. Emergency Contact Integration gives emergency contacts instant access to full itinerary and current location.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Sharing Agent", "Real-Time Status Feed", "Auto-Update Agent"],
+        "utilityAgents": ["Notification Service", "Location Services", "Privacy Controls", "Emergency Contact System"]
+      },
+      "dataSources": [
+        "Complete travel itinerary and bookings",
+        "Real-time flight status and gate information",
+        "Traveler location data (if shared)",
+        "Delay and disruption alerts",
+        "Shared contact preferences and permissions",
+        "Emergency contact registry",
+        "Privacy settings and sharing controls",
+        "Push notification preferences"
+      ],
+      "benefits": [
+        "80-90% reduction in manual coordination (no manual texts needed)",
+        "Real-time visibility eliminates family anxiety",
+        "Proactive alerts keep family informed of disruptions",
+        "One-tap sharing vs forwarding multiple emails",
+        "Emergency contacts have instant access to current itinerary",
+        "Privacy controls allow granular sharing (location vs itinerary only)"
+      ],
+      "metrics": ["Update burden: Automatic", "Real-time visibility: 100%", "Coordination overhead: Minimal"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable one-tap itinerary sharing with real-time status", "Add automatic delay alerts to shared contacts"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Mobile app or web portal", "Real-time flight status feeds", "Push notification infrastructure", "Privacy and sharing controls"]
+    },
+    "icon": "share",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-travel-document-management",
+    "type": "function",
+    "level": 4,
+    "label": "Travel Document Management",
+    "description": "Automated passport and visa requirement verification with expiration tracking reducing denied boarding and entry issues by 90-95% through proactive compliance.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer books international flight without checking passport expiration. 2. Customer discovers at airport that passport expires within 6 months (denied boarding in many countries). 3. Customer responsible for researching visa requirements manually. 4. Customer may arrive at destination and be denied entry due to missing visa. 5. Airline/hotel have no liability but suffer reputation damage.",
+      "constraints": [
+        "5-10% of international bookings have document issues",
+        "Denied boarding costs airline $200-500 per incident",
+        "No proactive document verification at booking",
+        "Customer unaware of 6-month passport validity rules",
+        "Visa requirements complex and frequently changing",
+        "Customer frustration and loyalty erosion from preventable issues"
+      ],
+      "metrics": ["Document issues: 5-10%", "Denied boarding: 2-3%", "Proactive alerts: None"]
+    },
+    "agentic": {
+      "workflow": "1. Document Verification Agent checks passport expiration at booking (must be 6+ months valid for most destinations). 2. Visa Requirement Engine validates visa needs based on: destination country, traveler nationality, trip purpose, stay duration. 3. Alert Agent notifies traveler at booking if passport renewal needed or visa required. 4. Document Wallet stores encrypted passport, visa, vaccination records accessible in mobile app. 5. Expiration Monitoring Agent sends alerts 90, 60, 30 days before passport expiration.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Document Verification Agent", "Visa Requirement Engine", "Alert Agent", "Expiration Monitoring Agent"],
+        "utilityAgents": ["Travel Document Database", "Secure Document Vault", "Regulatory Update Service", "Notification Service"]
+      },
+      "dataSources": [
+        "Customer passport information and expiration date",
+        "Visa requirement database by country pair",
+        "IATA Timatic travel requirements database",
+        "Destination country entry requirements",
+        "COVID-19 and health document requirements",
+        "Vaccination certificate validation",
+        "Traveler nationality and visa history",
+        "Regulatory changes and travel restrictions"
+      ],
+      "benefits": [
+        "90-95% reduction in document-related boarding denials",
+        "Proactive alerts at booking prevent issues vs at-airport surprises",
+        "$200-500 saved per prevented denied boarding incident",
+        "Automated visa requirement checking vs manual research",
+        "Digital document wallet for instant access",
+        "Improved customer satisfaction and loyalty"
+      ],
+      "metrics": ["Document issues: 0.5-1%", "Denied boarding: <0.2%", "Proactive alerts: 100%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add passport expiration check at booking", "Integrate IATA Timatic for visa requirements"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Document verification service (IATA Timatic)", "Secure document storage", "Customer profile with passport data", "Automated notification system"]
+    },
+    "icon": "identification",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mobile-itinerary-check-in",
+    "type": "function",
+    "level": 4,
+    "label": "Mobile Itinerary & Check-In",
+    "description": "All-in-one mobile hub with offline access and automatic check-in delivering 95%+ mobile adoption and seamless travel experience from booking to boarding.",
+    "parentCapability": "capability-travel-itinerary-management",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer receives email confirmations, must print or save PDFs for each flight, hotel, car rental. 2. Customer must remember to check in online 24 hours before each flight. 3. Customer searches email at airport for confirmation codes. 4. No offline access - customer stranded without WiFi/cellular. 5. Boarding passes across multiple apps or paper printouts.",
+      "constraints": [
+        "Fragmented experience across airline apps, emails, PDFs",
+        "Customer must manually check in for each flight",
+        "Email search at airport creates stress and delays",
+        "No offline functionality (helpless without connectivity)",
+        "Multiple apps and paper documents cumbersome",
+        "Missed check-in means poor seat selection"
+      ],
+      "metrics": ["Mobile adoption: 40-60%", "Offline access: None", "Auto check-in: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Mobile Itinerary Agent consolidates all travel components in single app: flights, hotels, cars, activities. 2. Automatic Check-In Agent checks traveler in for flights 24 hours before departure, selects best available seat per preferences. 3. Offline Mode caches full itinerary, boarding passes, confirmations for no-connectivity scenarios. 4. Wallet Integration adds boarding passes to Apple Wallet/Google Pay for tap-to-board. 5. Contextual Assistant provides gate directions, airport maps, lounge access, real-time status.",
+      "agents": {
+        "orchestrator": "Travel Itinerary Orchestration Agent",
+        "superAgents": ["Mobile Itinerary Agent", "Automatic Check-In Agent", "Contextual Assistant"],
+        "utilityAgents": ["Mobile App Platform", "Offline Cache", "Wallet APIs", "Mapping Service"]
+      },
+      "dataSources": [
+        "Complete travel itinerary and bookings",
+        "Flight check-in APIs (airline-specific)",
+        "Seat preference profile",
+        "Airport maps and wayfinding data",
+        "Lounge access eligibility",
+        "Real-time gate and terminal information",
+        "Boarding pass and barcode generation",
+        "Offline-capable data cache"
+      ],
+      "benefits": [
+        "95%+ mobile adoption vs 40-60% traditional",
+        "Automatic check-in ensures best seat selection",
+        "Single app vs 5-10 emails and apps",
+        "100% offline access eliminates connectivity stress",
+        "Tap-to-board with mobile wallet",
+        "Contextual assistance reduces airport navigation time 40-60%"
+      ],
+      "metrics": ["Mobile adoption: 95%+", "Offline access: 100%", "Auto check-in: 100%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch mobile app with consolidated itinerary view", "Implement automatic check-in for top airline partners"],
+      "investmentRequired": "Medium",
+      "timeToValue": "5-7 months",
+      "prerequisites": ["Mobile app development", "Airline check-in API integrations", "Offline data architecture", "Mobile wallet SDK integration"]
+    },
+    "icon": "device-mobile",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

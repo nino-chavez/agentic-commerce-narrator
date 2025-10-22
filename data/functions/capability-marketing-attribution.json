@@ -1,0 +1,380 @@
+[
+  {
+    "id": "function-multi-touch-attribution-modeling",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Touch Attribution Modeling",
+    "description": "Algorithmic attribution across all touchpoints revealing true marketing contribution and enabling 40-70% improvement in budget allocation vs last-click models.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst uses last-click attribution from Google Analytics (only final touchpoint gets credit). 2. Manual spreadsheet attempts to compare channel performance using siloed platform data. 3. Awareness and consideration channels (display, social, email) appear to have no ROI. 4. Budget over-allocated to bottom-funnel retargeting and branded search. 5. No visibility into cross-device or online-to-offline journey contributions.",
+      "constraints": [
+        "Last-click attribution ignores 70-90% of customer journey touchpoints",
+        "Upper-funnel channels (display, social, video) appear ineffective and get de-funded",
+        "Platform silos prevent unified view (Google vs Meta vs email each claim full credit)",
+        "No cross-device tracking (mobile research → desktop purchase uncredited)",
+        "Offline conversions (in-store, phone) not attributed to digital touchpoints",
+        "Budget allocation based on incomplete/misleading attribution data"
+      ],
+      "metrics": ["Attribution model: Last-click only", "Journey visibility: 10-30%", "Cross-device: None"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Tracking Agent captures complete customer journey across: all digital touchpoints (search, display, social, email, organic), cross-device paths (mobile app → desktop web → tablet), online and offline (digital ads → in-store purchase). 2. Attribution Modeling Agent applies multiple models: position-based (40% first, 40% last, 20% middle), time-decay (more recent gets more credit), data-driven algorithmic (ML determines optimal weighting). 3. Touchpoint Contribution Analysis shows incremental value of each channel. 4. Unified Reporting deduplicates conversions across platforms. 5. Budget Recommendation Agent suggests optimal allocation based on true contribution.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["Journey Tracking Agent", "Attribution Modeling Agent", "Budget Recommendation Agent"],
+        "utilityAgents": ["Attribution Platform", "CDP", "Cross-Device Graph", "Analytics Platform"]
+      },
+      "dataSources": [
+        "Complete customer journey data across all channels",
+        "Cross-device identity resolution data",
+        "Online transaction and conversion data",
+        "Offline sales data (in-store, phone, direct mail)",
+        "Ad exposure and engagement data from all platforms",
+        "Customer lifetime value and cohort data"
+      ],
+      "benefits": [
+        "40-70% improvement in budget allocation through accurate attribution",
+        "Multi-touch models reveal upper-funnel drives 50-70% of conversions (vs 0% credit in last-click)",
+        "Cross-device tracking captures 25-40% of journeys missed by single-device attribution",
+        "Online-to-offline attribution proves digital impact on in-store sales",
+        "Data-driven algorithmic models optimize channel mix for maximum ROI",
+        "Unified view eliminates platform duplication and attribution conflicts"
+      ],
+      "metrics": ["Attribution model: Multi-touch algorithmic", "Journey visibility: 90%+", "Cross-device: Full tracking"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement position-based attribution as first step beyond last-click", "Deploy cross-device identity resolution"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Attribution platform or capability", "Customer Data Platform", "Cross-device identity graph", "Complete journey data across channels", "Online and offline sales data integration"]
+    },
+    "icon": "graph",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-marketing-mix-modeling",
+    "type": "function",
+    "level": 4,
+    "label": "Marketing Mix Modeling (MMM)",
+    "description": "Statistical modeling of marketing effectiveness including non-digital channels delivering holistic view of all marketing drivers and 30-50% optimization opportunity.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team engages consulting firm to build marketing mix model annually. 2. Consultant collects 2-3 years of historical data on spend and sales. 3. Manual regression modeling done in spreadsheets over 2-3 months. 4. Static report delivered showing historical channel contribution and ROI. 5. Insights already outdated by delivery and not actionable for in-flight optimization.",
+      "constraints": [
+        "Annual cadence means insights stale 11 out of 12 months",
+        "2-3 month analysis process delays decision-making",
+        "Static historical view doesn't enable real-time optimization",
+        "Manual modeling limits sophistication (linear regression only)",
+        "Expensive consulting engagements ($100k-500k per model)",
+        "No integration with media buying or budget allocation systems"
+      ],
+      "metrics": ["Model frequency: Annual", "Analysis time: 2-3 months", "Actionability: Retrospective only"]
+    },
+    "agentic": {
+      "workflow": "1. Data Integration Agent continuously ingests marketing spend, sales, and external factors (seasonality, macroeconomic, competitive). 2. MMM Agent builds and updates statistical models: channel contribution and ROI, saturation curves (diminishing returns), carryover effects (lagged impact), synergies between channels. 3. Scenario Planning Agent forecasts impact of budget allocation changes. 4. Optimization Engine recommends optimal marketing mix for maximum efficiency. 5. Models auto-refresh monthly with latest data for current insights.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["Data Integration Agent", "MMM Agent", "Scenario Planning Agent"],
+        "utilityAgents": ["Statistical Modeling Platform", "Data Warehouse", "Forecasting Engine", "Visualization Tools"]
+      },
+      "dataSources": [
+        "Marketing spend by channel (digital and offline)",
+        "Sales and revenue data (online and offline)",
+        "External factors (seasonality, weather, economic indicators)",
+        "Competitive spend and share of voice data",
+        "Media mix variables (reach, frequency, GRPs)",
+        "Product launches and promotional calendar"
+      ],
+      "benefits": [
+        "30-50% optimization opportunity identified through holistic channel analysis",
+        "Monthly model updates vs annual (12x faster insights)",
+        "Includes non-digital channels (TV, radio, print, OOH) often 40-60% of budget",
+        "Scenario planning enables 'what-if' budget allocation testing",
+        "Automated modeling reduces cost 80-90% vs consulting engagements",
+        "Actionable recommendations integrate with media buying decisions"
+      ],
+      "metrics": ["Model frequency: Monthly", "Analysis time: Automated continuous", "Actionability: Predictive + prescriptive"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate offline spend and sales data", "Build baseline MMM for top channels"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["2+ years historical marketing spend and sales data", "Offline sales data integration", "Statistical modeling platform or data science capability", "External data sources (seasonality, economic)", "Cross-functional alignment on model methodology"]
+    },
+    "icon": "chart-mixed",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-incrementality-testing-measurement",
+    "type": "function",
+    "level": 4,
+    "label": "Incrementality Testing & Measurement",
+    "description": "Controlled experiments measuring true causal impact of marketing revealing 20-40% of attributed sales are non-incremental and redirecting budget accordingly.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing assumes all platform-reported conversions are incremental (wouldn't have happened without ad). 2. No testing to validate whether ads truly caused sales or just took credit. 3. Budget allocated based on attribution data that conflates correlation with causation. 4. Retargeting gets huge budget despite low incrementality (users would buy anyway). 5. No measurement of cannibalizing effect between channels.",
+      "constraints": [
+        "No distinction between incremental vs non-incremental conversions",
+        "Attribution assumes causation (ad caused sale) when often just correlation",
+        "20-40% of attributed sales would have occurred without ad exposure",
+        "Over-investment in low-incrementality tactics (heavy retargeting, branded search)",
+        "No experimental framework to test true causal impact",
+        "CFO skepticism due to inability to prove incremental value"
+      ],
+      "metrics": ["Incrementality measurement: None", "Non-incremental spend: 20-40%", "Testing rigor: Correlation only"]
+    },
+    "agentic": {
+      "workflow": "1. Experiment Design Agent creates incrementality tests: geo-holdout (advertise in test markets, hold out control markets), PSA (Public Service Announcement) method (replace ads with PSAs), audience holdout (exclude random control group from targeting). 2. Test Execution Agent runs experiments with statistical rigor. 3. Analysis Agent measures incremental lift (sales in test vs control) and calculates true incremental ROAS. 4. Channel Comparison reveals which channels drive highest incrementality. 5. Budget Optimization redirects spend from low-incrementality to high-incrementality channels.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["Experiment Design Agent", "Test Execution Agent", "Analysis Agent"],
+        "utilityAgents": ["Experimentation Platform", "Geo-Experiment Tool", "Statistical Analysis", "Media Buying APIs"]
+      },
+      "dataSources": [
+        "Sales data by geography and audience segment",
+        "Ad exposure data (who saw ads, who didn't)",
+        "Experimental test and control group definitions",
+        "Historical sales patterns for baseline comparison",
+        "Channel spend and impression data",
+        "Statistical power and sample size calculations"
+      ],
+      "benefits": [
+        "20-40% budget reallocation from non-incremental to incremental channels",
+        "Geo-holdout tests prove causal impact with 95%+ confidence",
+        "Reveals retargeting incrementality often 30-50% (not 100% as attribution implies)",
+        "Branded search incrementality testing prevents over-investment",
+        "Channel interaction effects measured (e.g., TV + digital synergy)",
+        "CFO-credible ROI measurement based on controlled experiments not correlation"
+      ],
+      "metrics": ["Incrementality measurement: Rigorous testing", "Non-incremental spend: Identified & reallocated", "Testing rigor: Causal experiments"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Run geo-holdout test on largest paid channel", "Test retargeting incrementality via audience holdout"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Sufficient geographic or audience scale for testing", "Geo-level sales data", "Ability to control ad delivery by geo or audience", "Statistical analysis capability", "3-6 month test duration for statistical power"]
+    },
+    "icon": "flask",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-customer-journey-attribution",
+    "type": "function",
+    "level": 4,
+    "label": "Customer Journey Attribution",
+    "description": "Path-level attribution analysis revealing high-value journey patterns and enabling 35-55% improvement in journey optimization vs touchpoint-only view.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst looks at individual touchpoint performance in isolation (email open rate, ad click rate). 2. No visibility into common journey paths or sequences. 3. Touchpoint optimization done without understanding role in broader journey. 4. Can't identify high-converting journey patterns to replicate. 5. Journey analysis limited to quarterly custom SQL queries by data team.",
+      "constraints": [
+        "Touchpoint-only view misses journey sequence importance (order matters)",
+        "Can't identify which journey paths convert best (e.g., 'Social → Email → Search' pattern)",
+        "Optimizing individual touchpoints without journey context sub-optimal",
+        "No visibility into journey length, velocity, or common patterns",
+        "Quarterly custom analysis doesn't enable real-time journey optimization",
+        "Missing cross-channel journey orchestration opportunity"
+      ],
+      "metrics": ["Journey visibility: Touchpoint-only", "Path analysis: Quarterly manual", "Pattern detection: None"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Mapping Agent reconstructs complete customer paths across all touchpoints and channels. 2. Path Analysis Agent identifies common journey patterns: high-converting paths (e.g., 'Display → Email → Retargeting → Purchase'), dead-end paths (high drop-off), optimal journey length and velocity. 3. Sequence Attribution credits touchpoints based on their position in successful journeys. 4. Journey Optimization Agent recommends where to add/remove touchpoints for better conversion. 5. Real-time dashboards show journey flow, conversion rates by path, and optimization opportunities.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["Journey Mapping Agent", "Path Analysis Agent", "Journey Optimization Agent"],
+        "utilityAgents": ["Journey Analytics Platform", "CDP", "Sequence Analysis", "Visualization Tools"]
+      },
+      "dataSources": [
+        "Complete customer journey data across all touchpoints",
+        "Touchpoint sequence and timing data",
+        "Conversion and revenue data by journey path",
+        "Journey length and velocity metrics",
+        "Drop-off and abandonment points",
+        "Customer segment and cohort data"
+      ],
+      "benefits": [
+        "35-55% improvement in journey optimization through path-level insights",
+        "High-converting journey patterns identified and replicated (2-3x conversion vs average paths)",
+        "Journey sequence matters: 'Email → Search' converts 40% better than 'Search → Email'",
+        "Optimal journey length discovered (e.g., 4-6 touchpoints maximize conversion)",
+        "Dead-end paths identified and fixed (add missing touchpoints to complete journey)",
+        "Real-time journey dashboards vs quarterly custom analysis"
+      ],
+      "metrics": ["Journey visibility: Complete path-level", "Path analysis: Real-time continuous", "Pattern detection: ML-powered"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Map top 10 most common customer journey paths", "Identify highest-converting journey patterns"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer Data Platform with journey tracking", "Journey analytics capability", "Complete touchpoint data across channels", "Sequence analysis tools", "Sufficient journey volume for pattern detection"]
+    },
+    "icon": "route",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-channel-performance-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Channel Performance Analysis",
+    "description": "Unified cross-channel performance analytics with role-based attribution revealing channel synergies and driving 25-45% efficiency gains.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Each channel team reports their performance in silos (paid search team, email team, social team). 2. Channel metrics pulled from separate platforms and manually compiled in spreadsheets. 3. Sum of channel-reported conversions exceeds actual sales by 150-250% due to duplication. 4. No understanding of channel roles (awareness vs conversion) or synergies. 5. Budget allocation battles driven by inflated individual channel claims.",
+      "constraints": [
+        "Siloed reporting creates attribution duplication (every channel claims full credit)",
+        "No unified view of cross-channel performance and interactions",
+        "Can't identify channel roles (e.g., display drives awareness, search captures demand)",
+        "Channel synergies invisible (e.g., TV + digital work better together)",
+        "Manual spreadsheet compilation error-prone and time-consuming (8-12 hours/month)",
+        "Budget allocation based on inflated metrics leads to misallocation"
+      ],
+      "metrics": ["Channel integration: Siloed", "Attribution duplication: 150-250%", "Synergy visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Channel Integration Agent consolidates performance data from all channels into unified platform. 2. Role Analysis Agent identifies each channel's primary role: awareness drivers (display, video, social), consideration facilitators (email, content, organic), conversion closers (retargeting, branded search, affiliates). 3. Synergy Detection Agent measures channel interaction effects (e.g., 'TV + search delivers 30% lift vs either alone'). 4. Unified Reporting deduplicates conversions for accurate cross-channel view. 5. Optimization Agent recommends channel mix based on roles, synergies, and efficiency.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["Channel Integration Agent", "Role Analysis Agent", "Synergy Detection Agent"],
+        "utilityAgents": ["Attribution Platform", "Analytics Warehouse", "BI Dashboard", "Statistical Analysis"]
+      },
+      "dataSources": [
+        "Performance data from all marketing channels",
+        "Customer journey data showing channel sequences",
+        "Conversion and revenue data (deduplicated)",
+        "Channel spend and cost data",
+        "Channel interaction and overlap data",
+        "Lift test results for synergy measurement"
+      ],
+      "benefits": [
+        "25-45% efficiency gains through optimized channel mix based on roles and synergies",
+        "Deduplicated reporting shows true conversion volume (not inflated 150-250%)",
+        "Channel role clarity: awareness channels get credit for introducing customers",
+        "Synergy detection reveals 20-40% lift from complementary channel combinations",
+        "Unified dashboards eliminate manual spreadsheet compilation (8-12 hrs saved/month)",
+        "Data-driven budget allocation replaces channel team politics"
+      ],
+      "metrics": ["Channel integration: Unified", "Attribution duplication: Eliminated", "Synergy visibility: Quantified"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build unified cross-channel performance dashboard", "Identify and eliminate attribution duplication"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Attribution platform or unified analytics", "Data integration from all marketing channels", "Customer Data Platform", "BI/dashboard tool", "Deduplicated conversion tracking"]
+    },
+    "icon": "layers",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-marketing-roi-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Marketing ROI Optimization",
+    "description": "Predictive ROI forecasting with automated budget optimization delivering 30-60% improvement in marketing efficiency through continuous reallocation.",
+    "parentCapability": "capability-marketing-attribution",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing budget allocated at start of year based on prior year spend and intuition. 2. Budget locked by channel for 12 months with minimal flexibility. 3. Quarterly retrospective ROI analysis shows underperforming channels. 4. Budget reallocation happens annually during next year's planning. 5. Missed opportunities due to inability to shift budget to high-performing channels in-year.",
+      "constraints": [
+        "Annual budget lock prevents in-flight optimization (stuck with bad allocation)",
+        "Retrospective ROI analysis identifies problems after budget already spent",
+        "No predictive forecasting of ROI by channel or campaign",
+        "Budget reallocation limited to 10-20% quarterly at most (organizational friction)",
+        "Seasonal opportunities missed due to inflexible budget allocation",
+        "30-60% efficiency opportunity left on table due to static allocation"
+      ],
+      "metrics": ["Budget flexibility: Annual lock", "Optimization frequency: Quarterly retrospective", "Efficiency opportunity: 30-60% wasted"]
+    },
+    "agentic": {
+      "workflow": "1. ROI Forecasting Agent predicts expected ROI by channel, campaign, and audience using ML models. 2. Optimization Engine calculates optimal budget allocation across channels to maximize total ROI. 3. Budget Reallocation Agent automatically shifts spend from underperforming to outperforming channels. 4. Scenario Planning Agent forecasts impact of different allocation strategies. 5. Continuous Learning improves predictions based on actual performance outcomes.",
+      "agents": {
+        "orchestrator": "Marketing Attribution Orchestration Agent",
+        "superAgents": ["ROI Forecasting Agent", "Optimization Engine", "Budget Reallocation Agent"],
+        "utilityAgents": ["Predictive Analytics Platform", "Budget Management System", "Attribution Platform", "Media Buying APIs"]
+      },
+      "dataSources": [
+        "Historical ROI data by channel, campaign, and audience",
+        "Real-time performance and spend data",
+        "Predictive models for conversion and LTV",
+        "Market conditions and seasonality patterns",
+        "Competitive spend and share of voice data",
+        "Budget constraints and allocation rules"
+      ],
+      "benefits": [
+        "30-60% improvement in marketing efficiency through continuous optimization",
+        "Predictive ROI forecasting enables proactive budget allocation",
+        "Automated budget reallocation shifts spend weekly/daily vs annual lock",
+        "Scenario planning quantifies trade-offs before making allocation decisions",
+        "Seasonal opportunities captured through flexible budget reallocation",
+        "ML-driven optimization outperforms human intuition-based allocation"
+      ],
+      "metrics": ["Budget flexibility: Dynamic continuous", "Optimization frequency: Automated real-time", "Efficiency opportunity: Captured"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build ROI forecasting model for top 3 channels", "Enable weekly budget reallocation"],
+      "investmentRequired": "High",
+      "timeToValue": "5-8 months",
+      "prerequisites": ["Historical ROI data by channel (12+ months)", "Real-time performance tracking", "Predictive analytics platform or ML capability", "Budget management system with API access", "Organizational alignment on dynamic budget reallocation"]
+    },
+    "icon": "trending-up",
+    "color": "#A855F7",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

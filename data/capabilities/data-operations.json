@@ -1,0 +1,1812 @@
+[
+  {
+    "id": "capability-data-governance-privacy",
+    "type": "capability",
+    "level": 3,
+    "label": "Data Governance & Privacy",
+    "description": "Enterprise data governance with privacy compliance automation and consent management achieving high regulatory compliance and significant reduction in privacy violations.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Data catalog & lineage",
+      "Privacy compliance automation (GDPR, CCPA)",
+      "Consent management",
+      "Data access controls & security",
+      "Data retention & deletion",
+      "Privacy impact assessments"
+    ],
+    "traditionalApproach": {
+      "description": "Manual data governance with spreadsheet-based tracking and reactive privacy management",
+      "characteristics": [
+        "Data catalog in spreadsheets (incomplete and outdated)",
+        "Manual privacy compliance tracking",
+        "Email-based consent collection",
+        "Role-based access controls only (no data-level security)",
+        "Manual data deletion requests (weeks to fulfill)",
+        "Annual privacy audits"
+      ],
+      "constraints": [
+        "Incomplete data catalog coverage",
+        "Manual compliance prone to errors and violations",
+        "Email consent difficult to track and manage",
+        "Broad access exposes sensitive data",
+        "Deletion requests take weeks (GDPR requires <30 days)",
+        "Annual audits miss ongoing violations"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dgp-001",
+          "metric": "Data Catalog Coverage (Traditional)",
+          "value": "70-80% of data ungoverned",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise data governance coverage benchmarks']"
+        },
+        {
+          "id": "bench-dgp-002",
+          "metric": "Manual Compliance Rate",
+          "value": "60-75%",
+          "source": "TBD: [SME to provide source, e.g., 'Privacy compliance effectiveness studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated data governance with AI-powered compliance monitoring and real-time privacy management",
+      "characteristics": [
+        "Automated data catalog with lineage tracking",
+        "AI-powered compliance monitoring (GDPR, CCPA, HIPAA)",
+        "Consent management platform with granular preferences",
+        "Automated data access controls and encryption",
+        "Automated data deletion and retention policies",
+        "Continuous privacy monitoring and impact assessments"
+      ],
+      "benefits": [
+        "High regulatory compliance rate",
+        "Significant reduction in privacy violations",
+        "Automated consent management scales to millions of users",
+        "Data-level access controls protect sensitive information",
+        "Deletion requests fulfilled in hours vs weeks",
+        "Continuous monitoring prevents compliance drift"
+      ],
+      "projections": [
+        {
+          "metric": "Regulatory Compliance Rate",
+          "value": "90%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated compliance monitoring and continuous privacy controls']",
+          "sourceBenchmark": "bench-dgp-002"
+        },
+        {
+          "metric": "Privacy Violation Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated governance preventing manual errors and continuous monitoring']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Data Governance Orchestrator",
+        "Compliance Monitoring Agent",
+        "Consent Management Agent",
+        "Access Control Agent",
+        "Data Retention Agent",
+        "Privacy Impact Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated data catalog for critical data assets",
+        "Implement consent management platform",
+        "Enable automated data deletion workflows"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Data governance platform",
+        "Privacy and consent management platform",
+        "Data catalog and lineage capability",
+        "Identity and access management (IAM) system",
+        "Legal and compliance team alignment"
+      ]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-master-data-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Master Data Management (MDM)",
+    "description": "Enterprise MDM with AI-powered data quality, deduplication, and golden record management achieving high data accuracy across customer, product, and supplier domains.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Customer master data management",
+      "Product master data management",
+      "Supplier/vendor master data",
+      "AI-powered deduplication & matching",
+      "Golden record creation & management",
+      "Data quality monitoring & remediation"
+    ],
+    "traditionalApproach": {
+      "description": "Siloed master data across systems with manual deduplication and inconsistent data quality",
+      "characteristics": [
+        "Customer data siloed across CRM, ERP, ecommerce",
+        "Product data duplicated in PIM, ecommerce, POS",
+        "Manual deduplication (run queries to find duplicates)",
+        "No golden record concept (system of record unclear)",
+        "Reactive data quality fixes when issues arise",
+        "Annual data cleanup initiatives"
+      ],
+      "constraints": [
+        "Lower data accuracy due to siloed sources",
+        "Manual deduplication misses significant portion of duplicates",
+        "No single source of truth causes downstream issues",
+        "Data quality issues discovered too late (in reports)",
+        "Annual cleanups temporary (data degrades quickly)",
+        "Customer/product data inconsistencies frustrate users"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-mdm-001",
+          "metric": "Data Accuracy (Traditional)",
+          "value": "70-85%",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise master data quality benchmarks']"
+        },
+        {
+          "id": "bench-mdm-002",
+          "metric": "Manual Deduplication Effectiveness",
+          "value": "50-70% of duplicates caught",
+          "source": "TBD: [SME to provide source, e.g., 'Manual deduplication effectiveness studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Enterprise MDM with AI-powered matching, golden records, and continuous data quality management",
+      "characteristics": [
+        "Single source of truth for customer, product, supplier data",
+        "AI-powered fuzzy matching and deduplication (95%+ accuracy)",
+        "Automated golden record creation with survivorship rules",
+        "Real-time data quality monitoring and auto-correction",
+        "Workflow-based data stewardship for exceptions",
+        "Continuous data enrichment and enhancement"
+      ],
+      "benefits": [
+        "Very high data accuracy",
+        "AI matching catches vast majority of duplicates",
+        "Golden records provide single source of truth",
+        "Real-time quality monitoring prevents downstream issues",
+        "Automated enrichment improves data completeness significantly",
+        "Consistent data across all systems and channels"
+      ],
+      "projections": [
+        {
+          "metric": "Data Accuracy Improvement",
+          "value": "95-99% (vs 70-85%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated golden record management with AI-powered deduplication']",
+          "sourceBenchmark": "bench-mdm-001"
+        },
+        {
+          "metric": "Duplicate Detection Rate",
+          "value": "95%+ (vs 50-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI fuzzy matching algorithms detecting complex duplicates']",
+          "sourceBenchmark": "bench-mdm-002"
+        },
+        {
+          "metric": "Data Completeness Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated enrichment from external sources']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Master Data Management Orchestrator",
+        "Deduplication Agent",
+        "Golden Record Agent",
+        "Data Quality Agent",
+        "Data Enrichment Agent",
+        "Stewardship Workflow Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement MDM for customer data first",
+        "Deploy AI deduplication for customer records",
+        "Enable real-time data quality monitoring"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "MDM platform selection and implementation",
+        "Data integration from source systems",
+        "Data quality rules and survivorship logic",
+        "Data stewardship team and processes",
+        "Executive sponsorship and governance"
+      ]
+    },
+    "icon": "database",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-data-quality-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Data Quality Management",
+    "description": "Automated data quality monitoring with AI-powered anomaly detection and remediation achieving very high data quality scores across critical datasets.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Data profiling & quality assessment",
+      "AI-powered anomaly detection",
+      "Automated data cleansing & standardization",
+      "Data quality scorecards & dashboards",
+      "Data quality issue remediation workflows"
+    ],
+    "traditionalApproach": {
+      "description": "Reactive data quality management with manual inspection and spreadsheet-based tracking",
+      "characteristics": [
+        "Data quality issues discovered in reports or by users",
+        "Manual data profiling and inspection",
+        "Spreadsheet-based quality tracking",
+        "Manual data cleansing scripts",
+        "No proactive monitoring or alerts",
+        "Quarterly data quality audits"
+      ],
+      "constraints": [
+        "Issues discovered too late (after impacting business)",
+        "Manual profiling limited to samples (miss systematic issues)",
+        "Spreadsheet tracking doesn't scale",
+        "Manual cleansing error-prone and time-consuming",
+        "No visibility into data quality trends",
+        "Quarterly audits too infrequent"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dqm-001",
+          "metric": "Data Quality Score (Traditional)",
+          "value": "70-85%",
+          "source": "TBD: [SME to provide source, e.g., 'Enterprise data quality benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated data quality platform with AI anomaly detection and continuous monitoring",
+      "characteristics": [
+        "Continuous data profiling and quality assessment",
+        "AI-powered anomaly detection (outliers, format changes, missing values)",
+        "Automated data cleansing with standardization rules",
+        "Real-time quality scorecards and trend dashboards",
+        "Automated remediation workflows with escalation",
+        "Predictive quality monitoring (prevent issues before they occur)"
+      ],
+      "benefits": [
+        "Very high data quality scores",
+        "AI anomaly detection catches issues weeks early",
+        "Automated cleansing saves substantial time per month",
+        "Real-time scorecards provide continuous visibility",
+        "Predictive monitoring prevents significant portion of quality issues",
+        "Consistent data quality across all systems"
+      ],
+      "projections": [
+        {
+          "metric": "Data Quality Score",
+          "value": "95%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous monitoring and automated remediation']",
+          "sourceBenchmark": "bench-dqm-001"
+        },
+        {
+          "metric": "Early Issue Detection Window",
+          "value": "4-8 weeks early",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI detecting patterns before they become systemic issues']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Manual Cleansing Time Savings",
+          "value": "100+ hours per month",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated standardization and cleansing rules']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Quality Issue Prevention",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive monitoring and proactive remediation']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Data Quality Orchestrator",
+        "Profiling Agent",
+        "Anomaly Detection Agent",
+        "Data Cleansing Agent",
+        "Quality Monitoring Agent",
+        "Remediation Workflow Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated profiling for critical datasets",
+        "Implement AI anomaly detection with alerts",
+        "Enable automated data standardization"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Data quality platform or tool",
+        "Access to source data systems",
+        "Defined data quality rules and standards",
+        "Data stewardship team",
+        "Integration with data pipeline/ETL"
+      ]
+    },
+    "icon": "check-circle",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-data-integration-etl",
+    "type": "capability",
+    "level": 3,
+    "label": "Data Integration & ETL",
+    "description": "Modern data integration platform with real-time streaming, CDC, and AI-powered data mapping achieving significant reduction in integration development time.",
+    "parentDomain": "domain-technology",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Batch ETL processing",
+      "Real-time streaming & CDC",
+      "AI-powered data mapping",
+      "Data transformation & cleansing",
+      "Integration monitoring & error handling"
+    ],
+    "traditionalApproach": {
+      "description": "Custom ETL scripts with manual mapping and batch-only processing",
+      "characteristics": [
+        "Custom ETL scripts (Python, SQL) for each integration",
+        "Batch-only processing (nightly or weekly)",
+        "Manual schema mapping and transformation logic",
+        "Limited error handling and retry logic",
+        "Manual monitoring via log files",
+        "No real-time or streaming capability"
+      ],
+      "constraints": [
+        "Custom scripts take weeks to develop per integration",
+        "Batch-only creates data latency (hours to days old)",
+        "Manual mapping error-prone and hard to maintain",
+        "Poor error handling causes silent failures",
+        "Manual log monitoring misses issues",
+        "No agility for real-time use cases"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Modern integration platform with visual design, real-time streaming, and AI-powered mapping",
+      "characteristics": [
+        "Visual drag-and-drop integration design",
+        "Real-time streaming and change data capture (CDC)",
+        "AI-powered schema mapping and transformation suggestions",
+        "Built-in error handling, retry, and dead-letter queues",
+        "Real-time monitoring dashboards and alerts",
+        "Reusable connectors and transformation libraries"
+      ],
+      "benefits": [
+        "Dramatic reduction in integration development time",
+        "Real-time streaming enables sub-second data latency",
+        "AI mapping reduces errors and accelerates development",
+        "Robust error handling prevents data loss",
+        "Real-time monitoring enables proactive issue resolution",
+        "Reusable components improve consistency and speed"
+      ],
+      "projections": [
+        {
+          "metric": "Integration Development Time Reduction",
+          "value": "80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on visual design and reusable connectors vs custom scripting']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Data Integration Orchestrator",
+        "Streaming Agent",
+        "Mapping Agent",
+        "Transformation Agent",
+        "Error Handling Agent",
+        "Monitoring Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy integration platform for new integrations",
+        "Migrate critical batch jobs to real-time streaming",
+        "Enable AI-powered schema mapping"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Integration platform selection (Informatica, Talend, cloud-native)",
+        "Source and target system access",
+        "Data governance and security policies",
+        "Integration team with platform expertise",
+        "Modern data architecture (cloud or hybrid)"
+      ]
+    },
+    "icon": "arrow-path",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-social-media-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Social Media Management",
+    "description": "AI-powered social media platform with content scheduling, engagement automation, and sentiment analysis achieving significant improvement in social ROI.",
+    "parentDomain": "domain-marketing",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Multi-channel content scheduling",
+      "AI-powered content creation & optimization",
+      "Social listening & sentiment analysis",
+      "Community management & engagement",
+      "Influencer identification & management",
+      "Social performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual social posting with limited analytics and reactive community management",
+      "characteristics": [
+        "Manual posting on each platform individually",
+        "Content created without data-driven optimization",
+        "No social listening or sentiment tracking",
+        "Reactive community management (respond when seen)",
+        "Manual influencer outreach and tracking",
+        "Basic platform analytics only (likes, shares)"
+      ],
+      "constraints": [
+        "Manual posting time-consuming and inconsistent",
+        "Content performance unpredictable (no optimization)",
+        "Miss brand mentions and sentiment trends",
+        "Slow response times frustrate customers",
+        "Influencer relationships ad-hoc and untracked",
+        "Limited ROI visibility and attribution"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "AI-driven social media platform with automated scheduling, optimization, and engagement",
+      "characteristics": [
+        "Unified scheduling across all social platforms",
+        "AI suggests optimal posting times and content formats",
+        "Real-time social listening with sentiment analysis",
+        "Automated engagement (respond to comments, DMs with AI)",
+        "AI-powered influencer identification and relationship management",
+        "Unified social analytics with ROI attribution"
+      ],
+      "benefits": [
+        "Significant improvement in social ROI",
+        "AI optimization improves engagement rates substantially",
+        "Real-time listening catches brand mentions much faster",
+        "Automated engagement dramatically reduces response time",
+        "Influencer campaigns drive substantially higher ROI",
+        "Unified analytics provide clear social performance view"
+      ],
+      "projections": [
+        {
+          "metric": "Social ROI Improvement",
+          "value": "50-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI optimization, automated engagement, and influencer management']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Engagement Rate Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized posting times and content formats']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Brand Mention Detection Speed",
+          "value": "4x faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time social listening vs manual monitoring']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Response Time Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated engagement and AI-powered responses']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Influencer Campaign ROI Improvement",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI discovery and relationship management']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Social Media Orchestrator",
+        "Content Scheduling Agent",
+        "Content Optimization Agent",
+        "Social Listening Agent",
+        "Engagement Agent",
+        "Influencer Management Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy unified social scheduling platform",
+        "Implement AI content optimization for best times",
+        "Enable social listening for brand mentions"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Social media management platform",
+        "Social listening and sentiment analysis tool",
+        "Content library and brand guidelines",
+        "Community management team",
+        "Social platform API integrations"
+      ]
+    },
+    "icon": "chat-bubble-oval-left",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-influencer-affiliate-marketing",
+    "type": "capability",
+    "level": 3,
+    "label": "Influencer & Affiliate Marketing",
+    "description": "AI-powered influencer and affiliate platform with automated discovery, campaign management, and fraud detection achieving significant improvement in influencer ROI.",
+    "parentDomain": "domain-marketing",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Influencer discovery & vetting",
+      "Campaign management & tracking",
+      "Affiliate program management",
+      "Performance analytics & attribution",
+      "Fraud detection & prevention",
+      "Payment & commission automation"
+    ],
+    "traditionalApproach": {
+      "description": "Manual influencer outreach with spreadsheet-based tracking and limited fraud detection",
+      "characteristics": [
+        "Manual influencer research on Instagram/TikTok",
+        "Email-based outreach and negotiation",
+        "Spreadsheet tracking of campaigns and performance",
+        "Manual affiliate link creation and tracking",
+        "No fraud detection (fake followers, click fraud)",
+        "Manual commission calculations and payments"
+      ],
+      "constraints": [
+        "Manual discovery limited to obvious/large influencers",
+        "Email outreach time-consuming and low response rate",
+        "Spreadsheet tracking doesn't scale beyond 10-20 influencers",
+        "Manual affiliate management prone to errors",
+        "Fraud costs significant portion of influencer spend",
+        "Manual payments delayed and error-prone"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-iam-001",
+          "metric": "Fraud Loss Rate",
+          "value": "15-30%",
+          "source": "TBD: [SME to provide source, e.g., 'Influencer marketing fraud cost studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered platform with automated discovery, campaign orchestration, and fraud prevention",
+      "characteristics": [
+        "AI discovers micro-influencers matching brand and audience",
+        "Automated campaign management with performance tracking",
+        "Self-service affiliate portal with automated link generation",
+        "Real-time performance analytics and attribution",
+        "AI fraud detection (fake followers, click/conversion fraud)",
+        "Automated commission calculation and payment"
+      ],
+      "benefits": [
+        "Significant improvement in influencer ROI",
+        "AI discovery finds dramatically more relevant micro-influencers",
+        "Automated management scales to many more influencer campaigns",
+        "Self-service affiliate portal improves partner experience",
+        "Fraud detection saves significant spend",
+        "Automated payments improve partner satisfaction"
+      ],
+      "projections": [
+        {
+          "metric": "Influencer ROI Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI discovery, automated management, and fraud prevention']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Micro-Influencer Discovery Increase",
+          "value": "10x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI analyzing audience match vs manual discovery']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Campaign Scale Improvement",
+          "value": "100+ campaigns (vs 10-20)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated management removing manual bottlenecks']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Fraud Cost Savings",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI fraud detection preventing fake follower and click fraud losses']",
+          "sourceBenchmark": "bench-iam-001"
+        }
+      ],
+      "agents": [
+        "Influencer Marketing Orchestrator",
+        "Influencer Discovery Agent",
+        "Campaign Management Agent",
+        "Affiliate Management Agent",
+        "Fraud Detection Agent",
+        "Payment Automation Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy influencer management platform",
+        "Implement AI influencer discovery for target audiences",
+        "Enable automated fraud detection"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Influencer/affiliate marketing platform",
+        "Social media API access for discovery",
+        "Attribution and tracking capability",
+        "Fraud detection tool or capability",
+        "Payment processing integration"
+      ]
+    },
+    "icon": "user-group",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-reviews-ratings-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Reviews & Ratings Management",
+    "description": "AI-powered review platform with solicitation automation, sentiment analysis, and response orchestration achieving significant increase in review volume and improvement in ratings.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Automated review solicitation",
+      "Multi-platform review aggregation",
+      "AI sentiment analysis & categorization",
+      "Automated response generation",
+      "Review syndication to product pages",
+      "Review performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual review monitoring with limited solicitation and delayed responses",
+      "characteristics": [
+        "Manual review monitoring on Google, Yelp, TripAdvisor",
+        "Occasional email requests for reviews (low response)",
+        "Reviews not aggregated or analyzed at scale",
+        "Manual responses when staff sees reviews",
+        "Reviews not displayed on product pages",
+        "No systematic performance tracking"
+      ],
+      "constraints": [
+        "Low review volume from customers",
+        "Manual monitoring misses negative reviews for days/weeks",
+        "No sentiment analysis or trend detection",
+        "Slow/inconsistent responses frustrate customers",
+        "Product pages lack social proof",
+        "Limited insights from reviews"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-rrm-001",
+          "metric": "Review Volume Rate (Traditional)",
+          "value": "< 5% of customers",
+          "source": "TBD: [SME to provide source, e.g., 'Customer review participation rate benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered review platform with automated solicitation, analysis, and response orchestration",
+      "characteristics": [
+        "Automated review requests via email/SMS at optimal times",
+        "Unified review aggregation from all platforms",
+        "AI sentiment analysis and topic categorization",
+        "Automated response drafts with brand voice consistency",
+        "Syndication of reviews to product pages and ads",
+        "Real-time review analytics and alerts"
+      ],
+      "benefits": [
+        "Significant increase in review volume",
+        "Substantial improvement in average ratings through optimal solicitation timing",
+        "AI analysis surfaces issues weeks early",
+        "Automated responses dramatically reduce response time",
+        "Product page reviews significantly increase conversion",
+        "Real-time alerts enable rapid issue resolution"
+      ],
+      "projections": [
+        {
+          "metric": "Review Volume Increase",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated solicitation at optimal post-purchase timing']",
+          "sourceBenchmark": "bench-rrm-001"
+        },
+        {
+          "metric": "Average Rating Improvement",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on timing solicitation when satisfaction is highest']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Early Issue Detection Window",
+          "value": "4-8 weeks early",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI sentiment analysis detecting patterns']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Response Time Reduction",
+          "value": "80-90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated response drafting and workflow']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Product Page Conversion Increase",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on social proof from syndicated reviews']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Review Management Orchestrator",
+        "Solicitation Agent",
+        "Aggregation Agent",
+        "Sentiment Analysis Agent",
+        "Response Generation Agent",
+        "Syndication Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement automated review solicitation post-purchase",
+        "Deploy AI sentiment analysis for all reviews",
+        "Enable review syndication to product pages"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Review management platform",
+        "Email/SMS capability for solicitation",
+        "Multi-platform API integrations",
+        "AI sentiment analysis capability",
+        "Ecommerce platform integration for syndication"
+      ]
+    },
+    "icon": "star",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-customer-community-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Customer Community Management",
+    "description": "AI-powered customer community platform with automated moderation, gamification, and insights achieving significant improvement in customer engagement and retention.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Community platform & forums",
+      "AI-powered content moderation",
+      "Gamification & rewards",
+      "User-generated content curation",
+      "Community insights & analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Basic forums with manual moderation and limited engagement features",
+      "characteristics": [
+        "Basic forum software with limited features",
+        "Manual content moderation (review all posts)",
+        "No gamification or incentives",
+        "User content not leveraged for marketing",
+        "Limited community analytics",
+        "Reactive community management"
+      ],
+      "constraints": [
+        "Basic forums have low engagement from users",
+        "Manual moderation doesn't scale (delays, inconsistency)",
+        "No incentives for quality contributions",
+        "User-generated content wasted (not used in marketing)",
+        "Limited insights on community health",
+        "Reactive management misses engagement opportunities"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ccm-001",
+          "metric": "Community Engagement Rate (Traditional)",
+          "value": "< 5% of users",
+          "source": "TBD: [SME to provide source, e.g., 'Online community engagement benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered community platform with automated moderation, gamification, and content amplification",
+      "characteristics": [
+        "Modern community platform with rich features",
+        "AI-powered moderation (auto-flag inappropriate content)",
+        "Gamification with points, badges, and leaderboards",
+        "Automated UGC curation for marketing and social",
+        "Community health dashboards and sentiment tracking",
+        "Proactive engagement with top contributors"
+      ],
+      "benefits": [
+        "Significant improvement in community engagement",
+        "AI moderation scales to much higher activity levels",
+        "Gamification dramatically increases contributions",
+        "UGC amplification significantly improves marketing ROI",
+        "Community insights inform product and service improvements",
+        "Engaged community substantially improves retention"
+      ],
+      "projections": [
+        {
+          "metric": "Community Engagement Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on gamification and proactive engagement']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Moderation Capacity Increase",
+          "value": "10x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI auto-flagging inappropriate content']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Contribution Rate Increase",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on gamification with points, badges, and recognition']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Marketing ROI from UGC",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on curated user content in marketing campaigns']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Retention Improvement",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on engaged community creating loyalty and belonging']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Community Management Orchestrator",
+        "Moderation Agent",
+        "Gamification Agent",
+        "UGC Curation Agent",
+        "Community Health Agent",
+        "Engagement Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy modern community platform",
+        "Implement AI content moderation",
+        "Enable gamification with points and badges"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Community platform selection",
+        "Content moderation AI capability",
+        "Gamification and rewards framework",
+        "Integration with loyalty program",
+        "Community management team"
+      ]
+    },
+    "icon": "users",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-search-experience-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Search Experience Optimization",
+    "description": "AI-powered site search with natural language processing, visual search, and personalized results achieving significant improvement in search conversion.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Natural language search & query understanding",
+      "Visual search (image-based product discovery)",
+      "Personalized search results & ranking",
+      "Auto-complete & suggestions",
+      "Search analytics & optimization",
+      "Faceted navigation & filtering"
+    ],
+    "traditionalApproach": {
+      "description": "Keyword-based search with generic results and limited personalization",
+      "characteristics": [
+        "Keyword matching only (exact or partial)",
+        "No natural language understanding",
+        "Generic search results (same for all users)",
+        "Basic auto-complete (common searches only)",
+        "Limited search analytics",
+        "Static facets and filters"
+      ],
+      "constraints": [
+        "Keyword-only search yields high zero-result rate",
+        "Customers must use exact product names",
+        "Generic results miss personalization opportunities",
+        "Limited auto-complete frustrates users",
+        "No visibility into search performance or gaps",
+        "Static facets don't adapt to query context"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-seo-001",
+          "metric": "Zero-Result Search Rate (Traditional)",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Site search effectiveness benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered search with NLP, visual search, and personalized ranking",
+      "characteristics": [
+        "Natural language processing understands intent ('running shoes for flat feet')",
+        "Visual search finds products by uploading images",
+        "Personalized result ranking based on preferences and behavior",
+        "AI-powered auto-complete with trending and personalized suggestions",
+        "Search analytics with query gap analysis",
+        "Dynamic facets based on query and results"
+      ],
+      "benefits": [
+        "Significant improvement in search conversion",
+        "NLP dramatically reduces zero-result searches",
+        "Visual search drives substantially higher engagement",
+        "Personalized ranking significantly improves click-through",
+        "AI auto-complete substantially increases search usage",
+        "Query analytics identify catalog gaps and opportunities"
+      ],
+      "projections": [
+        {
+          "metric": "Search Conversion Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on NLP understanding, personalization, and visual search']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Zero-Result Search Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on NLP understanding intent vs exact keyword matching']",
+          "sourceBenchmark": "bench-seo-001"
+        },
+        {
+          "metric": "Visual Search Engagement Increase",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on image-based discovery for hard-to-describe products']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Click-Through Rate Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized ranking showing most relevant results first']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Search Usage Increase",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent auto-complete making search easier']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Search Optimization Orchestrator",
+        "NLP Query Agent",
+        "Visual Search Agent",
+        "Ranking Personalization Agent",
+        "Auto-Complete Agent",
+        "Search Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement NLP for natural language query understanding",
+        "Deploy personalized search result ranking",
+        "Enable visual search for top categories"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Modern search platform (Elasticsearch, Algolia, etc.)",
+        "NLP and ML capabilities",
+        "Product catalog with rich metadata",
+        "Customer behavioral data for personalization",
+        "Visual search capability (computer vision)"
+      ]
+    },
+    "icon": "magnifying-glass",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-web-personalization",
+    "type": "capability",
+    "level": 3,
+    "label": "Web Personalization & Optimization",
+    "description": "AI-powered web personalization with behavioral targeting, A/B testing, and real-time optimization achieving significant improvement in conversion rates.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Behavioral targeting & segmentation",
+      "Real-time content personalization",
+      "A/B testing & multivariate testing",
+      "AI-powered recommendations",
+      "Conversion rate optimization",
+      "Personalization analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Generic website experience with limited A/B testing and manual personalization",
+      "characteristics": [
+        "Same website experience for all visitors",
+        "Manual A/B testing (2-3 tests per quarter)",
+        "Basic segmentation (new vs returning only)",
+        "Generic product recommendations (best sellers)",
+        "Manual optimization based on quarterly reviews",
+        "Limited performance visibility"
+      ],
+      "constraints": [
+        "One-size-fits-all yields low conversion rates",
+        "Manual testing limited (slow learning velocity)",
+        "Basic segmentation misses behavioral targeting",
+        "Generic recommendations lack relevance",
+        "Quarterly optimization too slow for agility",
+        "Limited insights on what drives conversion"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-wpo-001",
+          "metric": "Baseline Conversion Rate (Traditional)",
+          "value": "2-4%",
+          "source": "TBD: [SME to provide source, e.g., 'Ecommerce conversion rate benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered 1:1 personalization with behavioral targeting and continuous optimization",
+      "characteristics": [
+        "1:1 personalization based on behavior, preferences, and context",
+        "Automated A/B/n testing with multi-armed bandit",
+        "AI behavioral segmentation (100+ dynamic segments)",
+        "Personalized product recommendations and content",
+        "Real-time conversion optimization",
+        "Predictive analytics on visitor intent and conversion"
+      ],
+      "benefits": [
+        "Significant improvement in conversion rates",
+        "1:1 personalization increases relevance and engagement",
+        "Automated testing dramatically accelerates learning",
+        "Behavioral targeting substantially improves conversion",
+        "Real-time optimization prevents missed opportunities",
+        "Predictive analytics enable proactive engagement"
+      ],
+      "projections": [
+        {
+          "metric": "Conversion Rate Improvement",
+          "value": "35-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on 1:1 personalization and behavioral targeting']",
+          "sourceBenchmark": "bench-wpo-001"
+        },
+        {
+          "metric": "Learning Velocity Acceleration",
+          "value": "10x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated multi-variant testing vs manual quarterly tests']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Behavioral Targeting Conversion Lift",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic segments targeting specific behaviors vs generic segments']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Web Personalization Orchestrator",
+        "Behavioral Targeting Agent",
+        "Content Personalization Agent",
+        "A/B Testing Agent",
+        "Recommendation Agent",
+        "CRO Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement behavioral targeting for homepage hero",
+        "Deploy AI product recommendations",
+        "Enable automated A/B testing for key pages"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Personalization platform (Optimizely, Dynamic Yield, etc.)",
+        "Customer Data Platform for behavioral data",
+        "A/B testing capability",
+        "Recommendation engine",
+        "Web analytics and conversion tracking"
+      ]
+    },
+    "icon": "cursor-arrow-rays",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-mobile-app-experience",
+    "type": "capability",
+    "level": 3,
+    "label": "Mobile App Experience",
+    "description": "AI-powered mobile app with personalized experiences, push notifications, and offline capabilities achieving substantially higher engagement than mobile web.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Personalized app experience",
+      "AI-powered push notifications",
+      "In-app messaging & engagement",
+      "Offline mode & sync",
+      "Mobile wallet & payments",
+      "Location-based features",
+      "App performance monitoring"
+    ],
+    "traditionalApproach": {
+      "description": "Basic mobile app with generic experience and limited engagement features",
+      "characteristics": [
+        "Mobile web wrapper (not native app experience)",
+        "Generic push notifications (batch-and-blast)",
+        "Limited in-app engagement features",
+        "No offline capability (requires connection)",
+        "Basic payment integration",
+        "No location-based features",
+        "Limited app analytics"
+      ],
+      "constraints": [
+        "Web wrapper provides poor user experience",
+        "Generic push notifications yield very low open rates",
+        "Limited engagement drives high churn rate",
+        "No offline frustrates users in low connectivity",
+        "Basic payments miss digital wallet opportunities",
+        "No location features miss contextual engagement",
+        "Limited visibility into app performance"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-mae-001",
+          "metric": "Push Notification Open Rate (Generic)",
+          "value": "<5%",
+          "source": "TBD: [SME to provide source, e.g., 'Mobile push notification benchmarks']"
+        },
+        {
+          "id": "bench-mae-002",
+          "metric": "30-Day Churn Rate (Traditional)",
+          "value": "70%",
+          "source": "TBD: [SME to provide source, e.g., 'Mobile app retention benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Native mobile app with AI personalization, intelligent push, and rich engagement features",
+      "characteristics": [
+        "Native app with personalized home screen and navigation",
+        "AI-powered push notifications (behavioral triggers, optimal timing)",
+        "Rich in-app engagement (chatbot, gamification, recommendations)",
+        "Offline mode with background sync",
+        "Digital wallet integration (Apple Pay, Google Pay)",
+        "Location-based features (geofencing, store locator, AR)",
+        "Real-time app performance monitoring and crash analytics"
+      ],
+      "benefits": [
+        "Substantially higher engagement vs mobile web",
+        "AI push notifications achieve dramatically higher open rates",
+        "Rich engagement substantially improves retention",
+        "Offline mode prevents user drop-off",
+        "Digital wallet significantly increases mobile conversion",
+        "Location features substantially drive in-store traffic",
+        "Real-time monitoring ensures very high uptime"
+      ],
+      "projections": [
+        {
+          "metric": "Engagement vs Mobile Web",
+          "value": "40-70% higher",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on native app experience with personalization and rich features']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Push Notification Open Rate",
+          "value": "15-25% (vs <5%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered behavioral triggers and optimal timing']",
+          "sourceBenchmark": "bench-mae-001"
+        },
+        {
+          "metric": "Retention Improvement",
+          "value": "50-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on rich engagement features creating habit and value']",
+          "sourceBenchmark": "bench-mae-002"
+        },
+        {
+          "metric": "Mobile Conversion Increase",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on digital wallet reducing checkout friction']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "In-Store Traffic Increase",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on location-based offers and store features']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Mobile App Orchestrator",
+        "Personalization Agent",
+        "Push Notification Agent",
+        "In-App Engagement Agent",
+        "Offline Sync Agent",
+        "Location Services Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Rebuild as native app (not web wrapper)",
+        "Implement AI-powered push notifications",
+        "Enable offline mode for key features"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Native mobile app development (iOS + Android)",
+        "Push notification platform",
+        "Mobile analytics and crash reporting",
+        "Backend API architecture",
+        "Location services and mapping integration"
+      ]
+    },
+    "icon": "device-phone-mobile",
+    "color": "#6366F1",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-promotional-campaign-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Promotional Campaign Management",
+    "description": "AI-powered promotion planning and execution with performance optimization and ROI measurement achieving significant improvement in promotional effectiveness.",
+    "parentDomain": "domain-merchandising",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Promotion planning & calendar",
+      "Offer design & optimization",
+      "Multi-channel campaign execution",
+      "Promotional performance tracking",
+      "Incremental lift measurement",
+      "ROI optimization & attribution"
+    ],
+    "traditionalApproach": {
+      "description": "Spreadsheet-based promotion planning with limited performance measurement",
+      "characteristics": [
+        "Promotion calendar in spreadsheets",
+        "Fixed offers based on historical patterns",
+        "Manual campaign setup across channels",
+        "Basic performance tracking (sales during promo period)",
+        "No incremental lift measurement (can't isolate promo impact)",
+        "Limited ROI visibility"
+      ],
+      "constraints": [
+        "Spreadsheet planning doesn't scale or share well",
+        "Fixed offers miss optimization opportunities",
+        "Manual setup time-consuming and error-prone",
+        "Basic tracking conflates baseline and promotional sales",
+        "No way to measure true incremental impact",
+        "Can't optimize future promotions without ROI data"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "AI-powered promotion platform with optimization, automated execution, and incremental measurement",
+      "characteristics": [
+        "Unified promotion calendar with workflow management",
+        "AI-optimized offers based on customer segments and goals",
+        "Automated multi-channel campaign deployment",
+        "Real-time performance dashboards",
+        "Incremental lift measurement (control group comparison)",
+        "AI-powered ROI optimization and recommendations"
+      ],
+      "benefits": [
+        "Significant improvement in promotional ROI",
+        "AI offer optimization substantially increases conversion",
+        "Automated deployment dramatically reduces setup time",
+        "Real-time tracking enables in-flight optimization",
+        "Incremental lift measurement reveals true promo impact",
+        "Continuous learning improves future campaign performance"
+      ],
+      "projections": [
+        {
+          "metric": "Promotional ROI Improvement",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI optimization and incremental measurement']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Conversion Rate Increase",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized offers by customer segment']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Setup Time Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated multi-channel deployment']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Promotion Management Orchestrator",
+        "Offer Optimization Agent",
+        "Campaign Execution Agent",
+        "Performance Tracking Agent",
+        "Lift Measurement Agent",
+        "ROI Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy unified promotion calendar and workflow",
+        "Implement AI offer optimization for top campaigns",
+        "Enable incremental lift measurement with control groups"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Promotion management platform",
+        "Multi-channel marketing execution capability",
+        "Historical promotion and sales data",
+        "Customer segmentation",
+        "A/B testing and control group capability"
+      ]
+    },
+    "icon": "gift",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-procurement-sourcing",
+    "type": "capability",
+    "level": 3,
+    "label": "Procurement & Strategic Sourcing",
+    "description": "AI-powered procurement with supplier intelligence, automated sourcing, and contract optimization achieving significant cost savings.",
+    "parentDomain": "domain-supply-chain",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Strategic sourcing & RFx management",
+      "Supplier discovery & intelligence",
+      "Contract negotiation & management",
+      "Spend analytics & category management",
+      "Supplier performance monitoring",
+      "Procurement automation & workflows"
+    ],
+    "traditionalApproach": {
+      "description": "Manual sourcing with limited supplier intelligence and spreadsheet-based tracking",
+      "characteristics": [
+        "Manual RFP/RFQ creation and distribution",
+        "Limited supplier discovery (known vendors only)",
+        "Email-based negotiations",
+        "Contracts stored in file cabinets or shared drives",
+        "Spreadsheet-based spend analysis",
+        "Manual purchase requisitions and approvals"
+      ],
+      "constraints": [
+        "Manual sourcing takes substantial time per event",
+        "Limited supplier pool misses competitive pricing",
+        "Email negotiations lack visibility and control",
+        "Contract terms difficult to track and enforce",
+        "Spreadsheet spend analysis incomplete and outdated",
+        "Manual workflows create bottlenecks"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ps-001",
+          "metric": "Sourcing Cycle Time (Manual)",
+          "value": "4-12 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Procurement cycle time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered procurement with automated sourcing, supplier intelligence, and contract optimization",
+      "characteristics": [
+        "Automated RFx creation with templates and workflows",
+        "AI supplier discovery and qualification",
+        "Online negotiation platform with visibility",
+        "Contract lifecycle management with AI term extraction",
+        "Real-time spend analytics and category insights",
+        "Automated procurement workflows with smart approvals"
+      ],
+      "benefits": [
+        "Significant cost savings through competitive sourcing",
+        "Sourcing cycle time substantially reduced",
+        "AI supplier discovery dramatically expands vendor pool",
+        "Contract management ensures compliance and captures savings",
+        "Real-time spend analytics enable category optimization",
+        "Automated workflows significantly improve procurement efficiency"
+      ],
+      "projections": [
+        {
+          "metric": "Cost Savings",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on competitive sourcing with expanded vendor pool']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Sourcing Cycle Time Reduction",
+          "value": "50-70% (2-4 weeks vs 4-12 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated RFx workflows and online negotiation']",
+          "sourceBenchmark": "bench-ps-001"
+        },
+        {
+          "metric": "Vendor Pool Expansion",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI discovery beyond known vendors']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Procurement Efficiency Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated workflows and smart approvals']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Procurement Orchestrator",
+        "Sourcing Agent",
+        "Supplier Intelligence Agent",
+        "Contract Management Agent",
+        "Spend Analytics Agent",
+        "Workflow Automation Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated RFx management for top categories",
+        "Implement AI supplier discovery",
+        "Enable real-time spend analytics dashboard"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Procurement platform (Coupa, Ariba, Jaggaer, etc.)",
+        "Supplier database and qualification criteria",
+        "Contract repository and metadata",
+        "Spend data from ERP and P2P systems",
+        "Procurement team and stakeholder alignment"
+      ]
+    },
+    "icon": "shopping-bag",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-real-time-operational-dashboards",
+    "type": "capability",
+    "level": 3,
+    "label": "Real-Time Operational Dashboards",
+    "description": "Real-time operational intelligence with AI-powered anomaly detection and prescriptive recommendations achieving substantially faster issue detection and resolution.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Real-time KPI monitoring",
+      "AI-powered anomaly detection",
+      "Prescriptive recommendations",
+      "Alert management & escalation",
+      "Mobile dashboards & notifications"
+    ],
+    "traditionalApproach": {
+      "description": "Static daily/weekly reports with manual anomaly detection",
+      "characteristics": [
+        "Daily or weekly static reports",
+        "Manual review to detect anomalies",
+        "No prescriptive recommendations",
+        "Email alerts (if any)",
+        "Desktop-only access"
+      ],
+      "constraints": [
+        "Reports lag reality by hours/days",
+        "Manual anomaly detection slow and inconsistent",
+        "No guidance on what action to take",
+        "Email alerts easy to miss or ignore",
+        "Desktop-only limits real-time decision making"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time dashboards with AI anomaly detection and prescriptive analytics",
+      "characteristics": [
+        "Real-time KPI monitoring (sub-minute refresh)",
+        "AI detects anomalies automatically with root cause analysis",
+        "Prescriptive recommendations on corrective actions",
+        "Smart alerts with escalation and routing",
+        "Mobile-first dashboards with push notifications"
+      ],
+      "benefits": [
+        "Substantially faster issue detection and resolution",
+        "Real-time visibility enables agile operations",
+        "AI anomaly detection catches issues hours earlier",
+        "Prescriptive recommendations reduce troubleshooting time",
+        "Smart alerts reduce noise and improve response",
+        "Mobile access empowers field teams"
+      ],
+      "projections": [
+        {
+          "metric": "Issue Detection and Resolution Speed",
+          "value": "40-70% faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time monitoring and AI anomaly detection']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Early Detection Window",
+          "value": "4-8 hours earlier",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI detecting patterns before they become critical']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Operational Intelligence Orchestrator",
+        "Real-Time Monitoring Agent",
+        "Anomaly Detection Agent",
+        "Prescriptive Analytics Agent",
+        "Alert Management Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy real-time dashboards for critical KPIs",
+        "Implement AI anomaly detection with alerts",
+        "Enable mobile dashboard access"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Real-time data streaming infrastructure",
+        "BI platform with real-time capability",
+        "AI/ML platform for anomaly detection",
+        "Mobile app or responsive web dashboards",
+        "Defined operational KPIs and thresholds"
+      ]
+    },
+    "icon": "chart-bar-square",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-travel-loyalty-rewards",
+    "type": "capability",
+    "level": 3,
+    "label": "Travel Loyalty & Rewards Programs",
+    "description": "AI-powered travel loyalty with dynamic earning, personalized redemption, and coalition partnerships achieving significant increase in member lifetime value.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Travel", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Points earning & accrual",
+      "Personalized redemption options",
+      "Tier management & benefits",
+      "Coalition & partner integration",
+      "Loyalty analytics & segmentation",
+      "Gamification & engagement"
+    ],
+    "traditionalApproach": {
+      "description": "Miles-based loyalty with fixed redemption and limited personalization",
+      "characteristics": [
+        "Fixed miles earning (1 mile per dollar)",
+        "Generic redemption catalog",
+        "Static tier thresholds (miles or segments flown)",
+        "Limited coalition partners",
+        "Basic loyalty reporting",
+        "No gamification"
+      ],
+      "constraints": [
+        "Fixed earning misses revenue optimization",
+        "Generic redemption has low perceived value",
+        "Static tiers don't recognize engagement",
+        "Limited partners restrict redemption options",
+        "Basic reporting provides limited insights",
+        "Low engagement between bookings"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "AI-powered loyalty with dynamic earning, personalized redemption, and rich coalition",
+      "characteristics": [
+        "Dynamic points earning based on margin and customer value",
+        "Personalized redemption recommendations (flights, upgrades, experiences)",
+        "AI tier qualification (behavior + spend)",
+        "Extensive coalition with airlines, hotels, retail, restaurants",
+        "Predictive churn detection and retention campaigns",
+        "Gamification with challenges and milestone rewards"
+      ],
+      "benefits": [
+        "Significant increase in member lifetime value",
+        "Dynamic earning improves program profitability substantially",
+        "Personalized redemption increases satisfaction and loyalty",
+        "Coalition partners dramatically expand redemption options",
+        "Churn prediction enables proactive retention",
+        "Gamification substantially boosts engagement"
+      ],
+      "projections": [
+        {
+          "metric": "Member Lifetime Value Increase",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized engagement and dynamic optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Program Profitability Improvement",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic earning aligned with margin']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Redemption Option Expansion",
+          "value": "10x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on coalition partnerships beyond core business']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Engagement Increase",
+          "value": "50-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on gamification creating interaction between bookings']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Travel Loyalty Orchestrator",
+        "Dynamic Earning Agent",
+        "Personalized Redemption Agent",
+        "Tier Management Agent",
+        "Coalition Partner Agent",
+        "Churn Prediction Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement personalized redemption recommendations",
+        "Deploy churn prediction for at-risk members",
+        "Expand coalition partnerships"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Modern loyalty platform with AI capability",
+        "Customer Data Platform integration",
+        "Coalition partner integrations",
+        "Historical member transaction data",
+        "Mobile app for engagement"
+      ]
+    },
+    "icon": "trophy",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

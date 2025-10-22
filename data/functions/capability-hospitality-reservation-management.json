@@ -1,0 +1,1071 @@
+{
+  "id": "capability-hospitality-reservation-management",
+  "name": "Hospitality Reservation Management",
+  "description": "AI-powered reservation systems for hotels, restaurants, and hospitality venues managing bookings, inventory, pricing, and channel distribution with real-time optimization",
+  "category": "industry-specific",
+  "industryVertical": "hospitality",
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "maturity": "production-ready",
+    "benchmarkStatus": "proven-roi"
+  },
+  "functions": [
+    {
+      "id": "fn-hosp-res-room-table-management",
+      "name": "Room/Table Reservation Management",
+      "description": "AI-powered reservation system managing real-time availability, booking confirmations, and dynamic pricing for rooms, tables, and venue spaces with automated conflict resolution",
+      "traditional_workflow": "Staff manually check availability across spreadsheets or property management systems, taking 3-5 minutes per booking inquiry. They handle phone calls, emails, and walk-ins separately, often double-booking or missing revenue opportunities during peak times. Confirmation emails are sent manually, and availability updates require manual entry across multiple systems. Rate quotes are based on static rate cards without considering real-time demand.",
+      "agentic_workflow": "Intelligent agents monitor real-time inventory across all channels, automatically accepting bookings within defined parameters and flagging special requests for review. The system dynamically adjusts rates based on demand signals, competitor pricing, and historical patterns. Booking agents instantly confirm reservations, send automated confirmations with personalization, and update availability across all distribution channels simultaneously. The orchestrator manages overbooking risks and optimizes revenue per available room/table.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Reservation Orchestrator",
+          "role": "Coordinates availability checks, booking confirmations, channel updates, and pricing decisions across all reservation types",
+          "responsibilities": [
+            "Route booking requests to appropriate handlers",
+            "Coordinate real-time inventory synchronization",
+            "Manage pricing decisions and revenue optimization",
+            "Handle conflict resolution and overbooking"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Availability Agent",
+            "role": "Manages real-time inventory across all room types, tables, and venue spaces with instant availability checks",
+            "capabilities": [
+              "Real-time availability calculations",
+              "Multi-channel inventory synchronization",
+              "Constraint checking (min stay, blackout dates)",
+              "Conflict detection and resolution"
+            ]
+          },
+          {
+            "name": "Booking Confirmation Agent",
+            "role": "Processes reservations, generates confirmations, and manages booking lifecycle from inquiry to arrival",
+            "capabilities": [
+              "Automated booking acceptance/rejection",
+              "Confirmation generation and delivery",
+              "Modification and cancellation processing",
+              "Special request flagging and routing"
+            ]
+          },
+          {
+            "name": "Dynamic Pricing Agent",
+            "role": "Calculates optimal rates based on demand, competition, and revenue management rules",
+            "capabilities": [
+              "Real-time rate calculations",
+              "Demand forecasting integration",
+              "Competitor rate monitoring",
+              "Revenue optimization modeling"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Channel Distribution Agent",
+            "role": "Synchronizes availability and rates across OTAs, GDS, direct booking channels"
+          },
+          {
+            "name": "Guest Communication Agent",
+            "role": "Sends confirmations, reminders, and pre-arrival communications with personalization"
+          },
+          {
+            "name": "Payment Processing Agent",
+            "role": "Handles deposits, guarantees, and payment method validation"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-special-requests",
+          "name": "Special Request Review",
+          "trigger": "Booking includes non-standard requests (early check-in, specific room features, accessibility needs)",
+          "human_role": "Reservations Manager",
+          "decision_criteria": "Feasibility, resource availability, guest tier status, operational constraints",
+          "auto_proceed_conditions": "Standard requests matching available inventory and approved parameters",
+          "escalation_path": "Operations manager for complex requirements or high-value guests"
+        },
+        {
+          "gate_id": "gtg-group-bookings",
+          "name": "Group Booking Approval",
+          "trigger": "Reservations over threshold (10+ rooms, full venue buyout)",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Impact on overall inventory, group rate acceptance, contract terms, displacement analysis",
+          "auto_proceed_conditions": "Groups under 10 rooms with standard rates and no special terms",
+          "escalation_path": "Director of Sales for enterprise accounts and major events"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System (PMS)",
+          "data_elements": "Room inventory, availability calendar, rate plans, booking history, guest profiles",
+          "integration_pattern": "Real-time API, bidirectional sync"
+        },
+        {
+          "source": "Channel Manager",
+          "data_elements": "OTA rates, GDS availability, distribution channel performance, booking source attribution",
+          "integration_pattern": "Real-time webhook, XML messaging"
+        },
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Demand forecasts, optimal rates, pickup pace, competitive set pricing",
+          "integration_pattern": "Scheduled sync (hourly), API integration"
+        },
+        {
+          "source": "Guest CRM",
+          "data_elements": "Guest preferences, stay history, loyalty status, communication preferences",
+          "integration_pattern": "Real-time lookup, event-driven updates"
+        },
+        {
+          "source": "Payment Gateway",
+          "data_elements": "Payment methods, authorization status, deposit collection, refund processing",
+          "integration_pattern": "Real-time API, tokenized transactions"
+        },
+        {
+          "source": "Market Intelligence",
+          "data_elements": "Competitor rates, market demand, local events, seasonality patterns",
+          "integration_pattern": "Daily scraping, third-party data feeds"
+        }
+      ],
+      "quantified_benefits": {
+        "booking_speed": "3-5 minutes per reservation → 15-30 seconds automated",
+        "revenue_per_booking": "10-15% increase through dynamic pricing",
+        "double_bookings": "2-3% error rate → <0.1% with real-time sync",
+        "channel_distribution_time": "15-30 minutes manual updates → instant across all channels",
+        "conversion_rate": "65-70% inquiry-to-booking → 80-85% with instant confirmation",
+        "staff_efficiency": "60-70% utilization → 90-95% focusing on high-value interactions"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Enable automated confirmations for standard bookings (Week 1)",
+          "Implement real-time channel synchronization (Week 2)",
+          "Deploy basic dynamic pricing rules (Week 3)"
+        ],
+        "investment_required": "Medium - PMS integration, channel manager setup, pricing engine configuration",
+        "time_to_value": "4-6 weeks for core automation, 8-12 weeks for full revenue optimization",
+        "prerequisites": [
+          "Modern PMS with API capabilities",
+          "Channel manager or direct OTA connections",
+          "Clean historical booking data (12+ months)",
+          "Revenue management strategy defined"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-channel-management",
+      "name": "Channel Management (OTA, Direct, GDS)",
+      "description": "Multi-channel distribution system managing OTA partnerships, direct bookings, GDS connectivity, rate parity, and inventory allocation with automated optimization",
+      "traditional_workflow": "Revenue managers manually update rates and availability across 10-20 distribution channels, spending 1-2 hours daily on rate loading. They monitor rate parity using spreadsheets, catching disparities days after they occur. Channel performance is analyzed monthly through manual report compilation. Inventory is allocated based on gut feel and static allotments, often resulting in lost revenue from channel imbalances.",
+      "agentic_workflow": "Channel agents automatically distribute rates and inventory across all channels in real-time, maintaining rate parity and BAR compliance. The system monitors channel performance continuously, reallocating inventory to highest-performing channels dynamically. Rate parity agents scan competitor sites and detect discrepancies within minutes, automatically correcting them or alerting managers. Performance analytics agents identify underperforming channels and recommend optimization actions based on conversion data and cost of acquisition.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Channel Distribution Orchestrator",
+          "role": "Manages multi-channel strategy, rate parity enforcement, inventory allocation, and performance optimization across all distribution channels",
+          "responsibilities": [
+            "Coordinate rate and availability distribution",
+            "Enforce rate parity and brand standards",
+            "Optimize channel mix based on performance",
+            "Manage commission costs and ROI"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Rate Distribution Agent",
+            "role": "Pushes rates across all channels ensuring consistency, parity, and compliance with distribution agreements",
+            "capabilities": [
+              "Real-time rate updates to all channels",
+              "BAR (Best Available Rate) enforcement",
+              "Channel-specific pricing rules",
+              "Currency conversion and tax handling"
+            ]
+          },
+          {
+            "name": "Inventory Allocation Agent",
+            "role": "Dynamically allocates room inventory across channels based on performance, demand, and strategic priorities",
+            "capabilities": [
+              "Dynamic allotment adjustments",
+              "Channel performance analysis",
+              "Demand-based reallocation",
+              "Overbooking protection per channel"
+            ]
+          },
+          {
+            "name": "Rate Parity Monitor Agent",
+            "role": "Continuously monitors rate parity across all channels, detecting and correcting discrepancies",
+            "capabilities": [
+              "Automated rate parity scanning",
+              "Discrepancy detection and alerting",
+              "Competitor rate comparison",
+              "Compliance reporting and enforcement"
+            ]
+          },
+          {
+            "name": "Channel Performance Agent",
+            "role": "Analyzes channel effectiveness, conversion rates, and ROI to optimize distribution strategy",
+            "capabilities": [
+              "Conversion rate tracking by channel",
+              "Cost of acquisition analysis",
+              "Revenue attribution modeling",
+              "Channel optimization recommendations"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "GDS Connectivity Agent",
+            "role": "Manages connections to global distribution systems for corporate and travel agent bookings"
+          },
+          {
+            "name": "API Integration Agent",
+            "role": "Maintains connectivity with OTA APIs, direct booking engines, and metasearch platforms"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-rate-parity-violations",
+          "name": "Rate Parity Violation Review",
+          "trigger": "Rate disparity detected >5% below BAR or unauthorized discounting on channels",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Violation severity, channel relationship impact, strategic importance, contract compliance",
+          "auto_proceed_conditions": "Minor disparities <2% or technical glitches with automatic correction",
+          "escalation_path": "Director of Revenue for major violations or repeated offenders"
+        },
+        {
+          "gate_id": "gtg-channel-strategy",
+          "name": "Channel Strategy Adjustment",
+          "trigger": "Agent recommends major channel mix changes (>20% inventory reallocation, new channel addition/removal)",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Strategic fit, brand alignment, long-term contracts, market positioning",
+          "auto_proceed_conditions": "Tactical adjustments <10% inventory shifts based on performance data",
+          "escalation_path": "VP of Sales & Marketing for strategic partnerships"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Channel Manager Platform",
+          "data_elements": "Rate and availability across all channels, booking confirmations, channel performance metrics",
+          "integration_pattern": "Real-time bidirectional API"
+        },
+        {
+          "source": "OTA Extranets",
+          "data_elements": "Booking pace, guest reviews, promotional opportunities, commission structures",
+          "integration_pattern": "API polling, XML feeds"
+        },
+        {
+          "source": "GDS Systems",
+          "data_elements": "Corporate bookings, travel agent reservations, negotiated rates, availability queries",
+          "integration_pattern": "GDS-specific protocols (Sabre, Amadeus, etc.)"
+        },
+        {
+          "source": "Rate Shopping Tools",
+          "data_elements": "Competitor rates across channels, rate parity violations, market positioning",
+          "integration_pattern": "Automated scraping, third-party data feeds"
+        },
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Optimal rates by channel, demand forecasts, inventory recommendations, price sensitivity",
+          "integration_pattern": "API integration, scheduled sync"
+        },
+        {
+          "source": "Analytics Platform",
+          "data_elements": "Channel attribution, conversion funnels, customer acquisition costs, lifetime value by channel",
+          "integration_pattern": "Event stream, daily aggregation"
+        },
+        {
+          "source": "Contract Management",
+          "data_elements": "Channel agreements, commission rates, payment terms, performance guarantees",
+          "integration_pattern": "Database lookup, manual updates"
+        }
+      ],
+      "quantified_benefits": {
+        "rate_update_time": "1-2 hours daily manual work → automated real-time updates",
+        "rate_parity_detection": "Days to weeks for manual checks → minutes with automated monitoring",
+        "channel_revenue_optimization": "15-25% improvement through dynamic allocation",
+        "commission_costs": "8-12% reduction through direct channel prioritization",
+        "rate_parity_violations": "15-20 violations per month → <2 with automated enforcement",
+        "staff_productivity": "10-15 hours/week on rate management → 1-2 hours strategic review"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement automated rate distribution to top 5 channels (Week 1)",
+          "Deploy rate parity monitoring for major OTAs (Week 2)",
+          "Enable basic channel performance dashboards (Week 3)"
+        ],
+        "investment_required": "Medium - Channel manager platform, rate shopping tools, integration development",
+        "time_to_value": "6-8 weeks for automation, 12-16 weeks for optimization and strategic insights",
+        "prerequisites": [
+          "Established OTA and GDS partnerships",
+          "Channel manager platform or PMS with distribution capability",
+          "Historical channel performance data (6+ months)",
+          "Revenue management strategy with channel priorities"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-dynamic-pricing",
+      "name": "Dynamic Pricing & Revenue Management",
+      "description": "AI-driven revenue optimization system using machine learning for demand forecasting, competitive intelligence, and real-time price adjustments to maximize RevPAR and occupancy",
+      "traditional_workflow": "Revenue managers manually adjust rates 2-3 times weekly based on pickup reports and competitive rate shops. They use Excel spreadsheets to forecast demand, often relying on year-over-year comparisons without accounting for market shifts. Pricing decisions are reactive, changing rates only after observing competitor moves or booking pace changes. Revenue meetings involve lengthy discussions about rate positioning, with limited data-driven insights beyond basic occupancy and ADR metrics.",
+      "agentic_workflow": "AI-powered pricing agents continuously analyze hundreds of demand signals including booking pace, competitor rates, local events, weather forecasts, and web traffic patterns to calculate optimal rates every hour. Machine learning models predict demand at the room-type level, automatically adjusting prices to maximize revenue while maintaining target occupancy. The system responds to market changes instantly, raising rates when demand spikes or lowering them strategically to capture price-sensitive segments. Reinforcement learning improves pricing decisions over time based on actual conversion results.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Revenue Optimization Orchestrator",
+          "role": "Manages pricing strategy execution, demand forecasting, competitive positioning, and revenue goal achievement across all segments and channels",
+          "responsibilities": [
+            "Coordinate pricing decisions across room types",
+            "Balance occupancy targets with rate optimization",
+            "Manage competitive positioning strategy",
+            "Optimize revenue mix across segments"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Demand Forecasting Agent",
+            "role": "Predicts future demand using ML models analyzing historical patterns, market trends, and external factors",
+            "capabilities": [
+              "Multi-horizon demand forecasting (7, 30, 90 days)",
+              "Segment-level demand prediction",
+              "Event impact modeling",
+              "Uncertainty quantification"
+            ]
+          },
+          {
+            "name": "Competitive Intelligence Agent",
+            "role": "Monitors competitor pricing, positioning, and availability to inform strategic price decisions",
+            "capabilities": [
+              "Real-time competitor rate tracking",
+              "Competitive set analysis",
+              "Market positioning assessment",
+              "Price elasticity modeling"
+            ]
+          },
+          {
+            "name": "Price Optimization Agent",
+            "role": "Calculates optimal rates using ML algorithms that maximize revenue while achieving occupancy targets",
+            "capabilities": [
+              "Real-time price calculation",
+              "Segment-specific pricing",
+              "Length-of-stay pricing",
+              "Constraint-based optimization (minimum rates, ceiling rates)"
+            ]
+          },
+          {
+            "name": "Yield Management Agent",
+            "role": "Manages inventory controls, stay restrictions, and availability to optimize revenue per available room",
+            "capabilities": [
+              "Minimum length of stay (MLOS) optimization",
+              "Close-to-arrival restrictions",
+              "Overbooking recommendations",
+              "Segment mix optimization"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Market Data Agent",
+            "role": "Aggregates external data signals including events, weather, economic indicators"
+          },
+          {
+            "name": "Performance Analytics Agent",
+            "role": "Tracks revenue metrics, conversion rates, and pricing effectiveness"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-major-price-changes",
+          "name": "Major Price Adjustment Review",
+          "trigger": "AI recommends rate changes >20% from current rates or breaking rate floors/ceilings",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Market rationality, competitive impact, brand positioning, guest perception risk",
+          "auto_proceed_conditions": "Rate adjustments within 20% and staying within approved min/max thresholds",
+          "escalation_path": "Director of Revenue for strategic pricing decisions during major events"
+        },
+        {
+          "gate_id": "gtg-strategy-overrides",
+          "name": "Strategy Override Approval",
+          "trigger": "Human override of AI recommendations or manual rate loading outside system parameters",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Strategic reasoning, market knowledge, special circumstances, brand initiatives",
+          "auto_proceed_conditions": "No manual overrides - system operates autonomously within parameters",
+          "escalation_path": "VP of Revenue for policy exceptions or systemic strategy changes"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Booking pace, pickup patterns, length of stay, room type demand, cancellations, denials",
+          "integration_pattern": "Real-time API, event streaming"
+        },
+        {
+          "source": "Historical Data Warehouse",
+          "data_elements": "3-5 years of demand patterns, rate sensitivity, seasonal trends, event impacts",
+          "integration_pattern": "Batch ETL, data lake access"
+        },
+        {
+          "source": "Competitive Rate Shopping",
+          "data_elements": "Competitor rates by room type, availability, promotional offers, positioning changes",
+          "integration_pattern": "Automated scraping, API feeds"
+        },
+        {
+          "source": "Market Intelligence",
+          "data_elements": "Local events calendar, conferences, festivals, sports events, market demand indicators",
+          "integration_pattern": "Third-party data feeds, manual entry"
+        },
+        {
+          "source": "Web Analytics",
+          "data_elements": "Website traffic, search patterns, booking abandonment, conversion rates by rate level",
+          "integration_pattern": "Analytics API, click stream data"
+        },
+        {
+          "source": "Channel Performance",
+          "data_elements": "Conversion by channel, rate sensitivity by source, segment mix, acquisition costs",
+          "integration_pattern": "Channel manager API, attribution platform"
+        },
+        {
+          "source": "Economic Indicators",
+          "data_elements": "Local market trends, corporate spending, tourism statistics, airline capacity",
+          "integration_pattern": "External data feeds, government APIs"
+        },
+        {
+          "source": "Weather Forecasts",
+          "data_elements": "Short and long-term weather predictions affecting leisure demand",
+          "integration_pattern": "Weather API, daily updates"
+        }
+      ],
+      "quantified_benefits": {
+        "revpar_improvement": "10-20% increase through optimized pricing and yield management",
+        "occupancy_optimization": "75-85% baseline → 85-95% with AI optimization",
+        "rate_adjustment_frequency": "2-3 times per week → hourly automated optimization",
+        "forecast_accuracy": "70-75% manual forecasting → 85-95% with ML models",
+        "revenue_manager_productivity": "80% time on tactical rate updates → 80% on strategy",
+        "competitive_responsiveness": "Hours to days → minutes for rate adjustments"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy demand forecasting models for near-term periods (Week 1-2)",
+          "Implement basic dynamic pricing rules for off-peak periods (Week 3)",
+          "Enable automated competitor rate monitoring (Week 4)"
+        ],
+        "investment_required": "High - Revenue management system, ML infrastructure, data integration, training",
+        "time_to_value": "12-16 weeks for initial models, 6-12 months for full optimization as models learn",
+        "prerequisites": [
+          "3+ years of clean historical data",
+          "PMS with detailed booking and rate data",
+          "Competitive intelligence tools",
+          "Revenue management expertise to validate model outputs",
+          "Change management for staff adoption"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-overbooking-optimization",
+      "name": "Overbooking Optimization",
+      "description": "Machine learning-powered overbooking system analyzing cancellation patterns, no-show rates, and displacement costs to optimize inventory while minimizing walk risks",
+      "traditional_workflow": "Revenue managers manually set overbooking limits based on historical averages and gut feel, typically using static percentages (e.g., 5% overbooking). They review cancellation reports weekly and adjust limits monthly. Walk situations are handled reactively, with front desk staff scrambling to find alternative accommodations. Displacement costs are not systematically tracked, and revenue opportunity from optimal overbooking is missed. Fear of negative guest experiences often leads to conservative under-booking.",
+      "agentic_workflow": "ML agents analyze thousands of historical bookings to predict cancellation and no-show probability for each reservation based on booking characteristics, guest type, channel, advance purchase, and market conditions. The system calculates optimal overbooking levels dynamically by date, balancing revenue opportunity against walk costs and guest satisfaction impacts. Walk prediction agents identify high-risk dates and proactively suggest interventions like early check-in incentives or room type upgrades. When walks occur, automated agents handle guest communication, alternative accommodation booking, and compensation following brand standards.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Overbooking Optimization Orchestrator",
+          "role": "Manages overbooking strategy, walk risk mitigation, displacement handling, and revenue maximization while protecting guest satisfaction",
+          "responsibilities": [
+            "Calculate optimal overbooking levels by date",
+            "Coordinate walk prevention and management",
+            "Balance revenue opportunity with risk",
+            "Track displacement costs and ROI"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Cancellation Prediction Agent",
+            "role": "Predicts cancellation and no-show probability for each reservation using ML models",
+            "capabilities": [
+              "Booking-level cancellation probability scoring",
+              "No-show rate prediction by segment",
+              "Pattern recognition across booking attributes",
+              "Confidence interval estimation"
+            ]
+          },
+          {
+            "name": "Overbooking Calculation Agent",
+            "role": "Determines optimal overbooking levels balancing revenue opportunity against walk costs",
+            "capabilities": [
+              "Dynamic overbooking limit calculation",
+              "Risk-adjusted revenue optimization",
+              "Displacement cost modeling",
+              "Date-level and room-type optimization"
+            ]
+          },
+          {
+            "name": "Walk Prevention Agent",
+            "role": "Identifies high-risk walk situations and proactively implements mitigation strategies",
+            "capabilities": [
+              "Walk risk early warning system",
+              "Proactive upgrade offer recommendations",
+              "Early check-in incentives",
+              "Alternative date suggestions for flexible bookings"
+            ]
+          },
+          {
+            "name": "Walk Management Agent",
+            "role": "Handles walk situations when they occur, automating guest communication and alternative arrangements",
+            "capabilities": [
+              "Alternative hotel search and booking",
+              "Transportation arrangement",
+              "Compensation calculation and approval",
+              "Guest communication and service recovery"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Guest Scoring Agent",
+            "role": "Prioritizes walk decisions based on guest value, loyalty status, and situation"
+          },
+          {
+            "name": "Cost Tracking Agent",
+            "role": "Monitors displacement costs, compensation expenses, and overbooking ROI"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-walk-decisions",
+          "name": "Walk Decision Approval",
+          "trigger": "System determines walk is necessary and identifies guests to relocate",
+          "human_role": "Front Office Manager",
+          "decision_criteria": "Guest loyalty status, situation sensitivity (anniversary, honeymoon), compensation required, alternative options",
+          "auto_proceed_conditions": "Walk predicted days in advance with alternative booking secured and guest consent obtained",
+          "escalation_path": "General Manager for VIP guests or situations requiring >$500 compensation"
+        },
+        {
+          "gate_id": "gtg-overbooking-limits",
+          "name": "Aggressive Overbooking Review",
+          "trigger": "System recommends overbooking >10% over capacity or significantly higher than historical levels",
+          "human_role": "Revenue Manager",
+          "decision_criteria": "Risk tolerance, market conditions, alternative inventory, brand reputation considerations",
+          "auto_proceed_conditions": "Overbooking recommendations <10% with walk probability <5%",
+          "escalation_path": "Director of Revenue for high-risk strategies during peak periods"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Booking History Database",
+          "data_elements": "3-5 years of reservations with cancellation timing, no-show occurrences, booking characteristics",
+          "integration_pattern": "Data warehouse queries, ML model training pipeline"
+        },
+        {
+          "source": "Property Management System",
+          "data_elements": "Current bookings, on-the-books inventory, arrival dates, room types, rate codes",
+          "integration_pattern": "Real-time API, event streaming"
+        },
+        {
+          "source": "Guest CRM",
+          "data_elements": "Guest loyalty status, stay history, lifetime value, complaint history, preferences",
+          "integration_pattern": "API lookup, profile enrichment"
+        },
+        {
+          "source": "Channel Attribution",
+          "data_elements": "Booking source, OTA vs direct, advance purchase window, rate plan, modifications",
+          "integration_pattern": "Channel manager data, attribution platform"
+        },
+        {
+          "source": "Market Conditions",
+          "data_elements": "Local events, weather, competitive occupancy, market demand indicators",
+          "integration_pattern": "External data feeds, manual entry"
+        },
+        {
+          "source": "Displacement Cost Tracking",
+          "data_elements": "Historical walk costs, alternative hotel rates, transportation expenses, compensation given",
+          "integration_pattern": "Expense tracking system, manual logging"
+        },
+        {
+          "source": "Guest Feedback",
+          "data_elements": "Walk-related complaints, satisfaction scores, service recovery effectiveness",
+          "integration_pattern": "Survey platform, review aggregation"
+        }
+      ],
+      "quantified_benefits": {
+        "revenue_from_overbooking": "2-5% RevPAR improvement through optimized overbooking vs conservative approaches",
+        "walk_rate_optimization": "3-5% walks from aggressive manual overbooking → 1-2% with ML optimization",
+        "displacement_cost_reduction": "30-50% lower costs through better walk prediction and prevention",
+        "forecast_accuracy": "Historical average prediction 70-75% → 85-90% with ML cancellation models",
+        "proactive_walk_management": "90% reactive scrambling → 60-70% walks predicted 24+ hours ahead",
+        "staff_time_savings": "2-3 hours weekly on overbooking analysis → automated with review alerts only"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement basic cancellation rate tracking and reporting (Week 1)",
+          "Deploy simple ML cancellation prediction models (Week 4-6)",
+          "Automate walk management communication templates (Week 2)"
+        ],
+        "investment_required": "Medium-High - ML model development, data infrastructure, walk management workflow automation",
+        "time_to_value": "8-12 weeks for initial models, 6-9 months for full optimization as patterns emerge",
+        "prerequisites": [
+          "2-3 years of detailed booking and cancellation data",
+          "Guest loyalty program with value scoring",
+          "Walk management processes and compensation policies defined",
+          "Revenue management team comfortable with probabilistic decision-making",
+          "Strong service recovery protocols"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-group-event-booking",
+      "name": "Group & Event Booking",
+      "description": "AI-powered group sales system managing block bookings, event coordination, contract negotiation support, and rooming list management with displacement analysis",
+      "traditional_workflow": "Sales managers manually create group contracts using Word templates, taking 2-3 hours per proposal. They email back-and-forth with clients about room blocks, meeting space, and catering, often losing details in email threads. Rooming lists arrive via Excel spreadsheets requiring manual entry into the PMS. Displacement analysis is done with spreadsheets or skipped entirely. Contracts are filed in shared drives, and tracking group pickup requires manual reports. Coordination between sales, operations, and catering involves multiple meetings.",
+      "agentic_workflow": "Group booking agents automatically generate proposals including optimal room blocks, meeting space, and F&B packages based on availability and displacement analysis. The system tracks all client communications, contract terms, and requirements in a centralized platform. Natural language processing extracts details from client RFPs and populates proposals. Rooming list agents parse incoming spreadsheets and load them into the PMS automatically. Pickup tracking agents monitor group booking pace and alert sales when blocks are underperforming. The orchestrator coordinates all departments involved in group execution.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Group & Events Orchestrator",
+          "role": "Manages group sales lifecycle from RFP through execution, coordinating sales, operations, catering, and revenue management teams",
+          "responsibilities": [
+            "Route RFPs and proposals through workflow",
+            "Coordinate multi-department group execution",
+            "Track group performance and pickup",
+            "Manage contract compliance and billing"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Proposal Generation Agent",
+            "role": "Creates comprehensive group proposals with room blocks, meeting space, catering, and pricing based on availability and strategy",
+            "capabilities": [
+              "Automated proposal document generation",
+              "Displacement analysis and rate calculation",
+              "Meeting space and F&B package recommendations",
+              "Contract term suggestion based on group profile"
+            ]
+          },
+          {
+            "name": "RFP Processing Agent",
+            "role": "Extracts requirements from client RFPs using NLP and populates proposal templates",
+            "capabilities": [
+              "Document parsing and data extraction",
+              "Requirement identification and classification",
+              "Feasibility assessment",
+              "Response deadline tracking"
+            ]
+          },
+          {
+            "name": "Rooming List Agent",
+            "role": "Processes rooming lists from various formats, validates data, and loads into PMS with error checking",
+            "capabilities": [
+              "Multi-format file parsing (Excel, CSV, PDF)",
+              "Data validation and error detection",
+              "Automated PMS loading",
+              "Room type assignment optimization"
+            ]
+          },
+          {
+            "name": "Group Pickup Monitor Agent",
+            "role": "Tracks group booking pace against contracted blocks, alerting sales to underperforming groups",
+            "capabilities": [
+              "Daily pickup tracking",
+              "Pace comparison to historical patterns",
+              "Attrition risk identification",
+              "Release date management"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Contract Management Agent",
+            "role": "Tracks contract terms, deadlines, deposits, and cancellation policies"
+          },
+          {
+            "name": "Communication Agent",
+            "role": "Manages client communications, reminders, and document sharing"
+          },
+          {
+            "name": "Cross-Department Coordination Agent",
+            "role": "Notifies operations, housekeeping, F&B about group arrivals and special requirements"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-group-pricing",
+          "name": "Group Rate & Contract Approval",
+          "trigger": "Proposal includes rates below floor, large displacement, or non-standard terms",
+          "human_role": "Director of Sales",
+          "decision_criteria": "Strategic value, relationship importance, market conditions, contract risk, profit margin",
+          "auto_proceed_conditions": "Groups <25 rooms with standard rates and terms within approved parameters",
+          "escalation_path": "VP of Sales & Marketing or General Manager for major groups >100 rooms"
+        },
+        {
+          "gate_id": "gtg-special-requests",
+          "name": "Special Event Requirements Review",
+          "trigger": "Group requests include unusual requirements (full buyout, off-site events, complex F&B)",
+          "human_role": "Group Sales Manager",
+          "decision_criteria": "Operational feasibility, resource availability, cost implications, risk assessment",
+          "auto_proceed_conditions": "Standard meeting packages and room blocks within normal parameters",
+          "escalation_path": "Operations and F&B Directors for complex execution requirements"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Group Sales CRM",
+          "data_elements": "Client accounts, RFP history, proposals, contracts, group profiles, booking history",
+          "integration_pattern": "CRM API, document storage integration"
+        },
+        {
+          "source": "Property Management System",
+          "data_elements": "Group blocks, rooming lists, room assignments, pickup status, billing folios",
+          "integration_pattern": "Bidirectional API, real-time sync"
+        },
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Displacement analysis, transient demand forecasts, rate recommendations, inventory availability",
+          "integration_pattern": "API integration, scheduled queries"
+        },
+        {
+          "source": "Meeting & Event Software",
+          "data_elements": "Meeting space availability, setup requirements, BEO (Banquet Event Order) details",
+          "integration_pattern": "Calendar sync, API integration"
+        },
+        {
+          "source": "Catering & F&B System",
+          "data_elements": "Menu options, pricing, dietary requirements, event coordination",
+          "integration_pattern": "Order management API"
+        },
+        {
+          "source": "Contract Management",
+          "data_elements": "Contract templates, legal terms, signature status, deposit tracking, cancellation policies",
+          "integration_pattern": "Document management system"
+        },
+        {
+          "source": "Historical Group Performance",
+          "data_elements": "Past group pickup patterns, attrition rates, profitability by group type",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "proposal_creation_time": "2-3 hours manual work → 15-30 minutes with AI assistance",
+        "rooming_list_processing": "30-60 minutes manual entry per group → 5 minutes automated",
+        "group_revenue_capture": "15-25% more group revenue through better displacement analysis and pricing",
+        "contract_accuracy": "5-10% error rate → <1% with automated generation and validation",
+        "pickup_monitoring": "Weekly manual reports → daily automated alerts",
+        "sales_productivity": "60% time on admin → 80% time on selling and relationship building"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy automated proposal templates with basic data population (Week 1-2)",
+          "Implement rooming list parsing and validation (Week 3)",
+          "Enable pickup tracking dashboards (Week 4)"
+        ],
+        "investment_required": "Medium - CRM enhancement, PMS integration, document automation, workflow development",
+        "time_to_value": "6-10 weeks for core automation, 12-16 weeks for full group management optimization",
+        "prerequisites": [
+          "Group sales CRM or PMS with group management capabilities",
+          "Standardized contract templates and terms",
+          "Historical group performance data",
+          "Revenue management process for displacement analysis",
+          "Cross-department coordination protocols defined"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-waitlist-cancellation",
+      "name": "Waitlist & Cancellation Management",
+      "description": "Automated waitlist and cancellation system using ML to predict cancellations, optimize rebooking, and manage guest waitlists with real-time inventory recovery",
+      "traditional_workflow": "Staff manually maintain waitlists in spreadsheets or paper lists, calling guests sequentially when cancellations occur. They often miss rebooking opportunities during peak times because cancellations are not processed immediately. Guests on waitlists receive generic updates without priority ranking. Cancellation windows are not optimized, and early cancellations are not leveraged strategically. Revenue recovery from cancellations is suboptimal because filling gaps requires manual effort and decision-making.",
+      "agentic_workflow": "Waitlist agents automatically rank guests by priority (loyalty status, booking value, flexibility) and instantly notify them via their preferred channel when inventory becomes available. Cancellation prediction agents identify bookings likely to cancel early, enabling proactive outreach to prevent revenue loss. When cancellations occur, smart rebooking agents instantly match available inventory to waitlist guests or open it to channels with highest conversion probability. The system optimizes cancellation policies dynamically based on demand patterns, protecting revenue while maintaining flexibility.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Waitlist & Cancellation Orchestrator",
+          "role": "Manages inventory recovery from cancellations, waitlist prioritization, rebooking optimization, and revenue protection",
+          "responsibilities": [
+            "Coordinate waitlist management across room types",
+            "Optimize inventory recovery from cancellations",
+            "Match available rooms to highest-value opportunities",
+            "Manage cancellation policy enforcement"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Waitlist Management Agent",
+            "role": "Maintains prioritized waitlists, notifies guests when inventory becomes available, and manages waitlist communications",
+            "capabilities": [
+              "Priority-based waitlist ranking (loyalty, value, flexibility)",
+              "Multi-channel guest notification (SMS, email, app push)",
+              "Time-limited hold management",
+              "Waitlist analytics and conversion tracking"
+            ]
+          },
+          {
+            "name": "Cancellation Prediction Agent",
+            "role": "Predicts bookings at risk of cancellation using ML models, enabling proactive retention",
+            "capabilities": [
+              "Booking-level cancellation risk scoring",
+              "Early warning system for high-risk reservations",
+              "Pattern recognition across booking attributes",
+              "Retention offer recommendations"
+            ]
+          },
+          {
+            "name": "Smart Rebooking Agent",
+            "role": "Optimizes inventory filling when cancellations occur, matching rooms to highest-value opportunities",
+            "capabilities": [
+              "Real-time inventory reallocation",
+              "Waitlist-to-booking conversion optimization",
+              "Channel-specific availability release",
+              "Revenue maximization logic"
+            ]
+          },
+          {
+            "name": "Cancellation Policy Agent",
+            "role": "Manages cancellation policy enforcement, fee calculations, and refund processing",
+            "capabilities": [
+              "Policy rule enforcement by rate and segment",
+              "Automated fee calculation",
+              "Refund processing coordination",
+              "Policy exception flagging for review"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Guest Communication Agent",
+            "role": "Sends notifications, confirmations, and updates via preferred channels"
+          },
+          {
+            "name": "Payment Processing Agent",
+            "role": "Handles cancellation fees, refunds, and payment method updates"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-policy-exceptions",
+          "name": "Cancellation Policy Exception",
+          "trigger": "Guest requests waiver of cancellation fees or policy exception outside standard parameters",
+          "human_role": "Reservations Manager",
+          "decision_criteria": "Guest loyalty status, reason for cancellation, rebooking likelihood, relationship value",
+          "auto_proceed_conditions": "Cancellations within policy terms, standard fee collection",
+          "escalation_path": "Guest Services Manager for VIP guests or situations requiring goodwill gestures"
+        },
+        {
+          "gate_id": "gtg-waitlist-priorities",
+          "name": "Waitlist Priority Override",
+          "trigger": "Manual adjustment of AI-generated waitlist priority ranking",
+          "human_role": "Reservations Supervisor",
+          "decision_criteria": "Special circumstances, VIP status not reflected in system, group coordination needs",
+          "auto_proceed_conditions": "AI-generated priority ranking followed without intervention",
+          "escalation_path": "Front Office Manager for complex priority conflicts"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Current bookings, cancellations, cancellation timing, room type availability, waitlist entries",
+          "integration_pattern": "Real-time API, event-driven updates"
+        },
+        {
+          "source": "Historical Cancellation Data",
+          "data_elements": "2-3 years of cancellation patterns by booking attributes, timing, guest type, reason codes",
+          "integration_pattern": "Data warehouse, ML training pipeline"
+        },
+        {
+          "source": "Guest CRM",
+          "data_elements": "Loyalty status, communication preferences, past cancellation behavior, lifetime value",
+          "integration_pattern": "API lookup, profile enrichment"
+        },
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Demand forecasts, optimal pricing for recovered inventory, segment priorities",
+          "integration_pattern": "API integration, real-time queries"
+        },
+        {
+          "source": "Channel Performance",
+          "data_elements": "Conversion rates by channel, time-to-booking metrics, inventory absorption speed",
+          "integration_pattern": "Channel manager API, analytics platform"
+        },
+        {
+          "source": "Communication Platform",
+          "data_elements": "Message delivery status, guest response rates, channel preferences",
+          "integration_pattern": "Multi-channel messaging API"
+        }
+      ],
+      "quantified_benefits": {
+        "inventory_recovery_speed": "2-8 hours to manually fill cancellations → minutes with automated waitlist",
+        "revenue_recovery_rate": "60-70% of cancelled inventory resold → 85-95% with optimized rebooking",
+        "waitlist_conversion": "30-40% manual outreach → 60-70% with instant notifications and prioritization",
+        "staff_time_savings": "1-2 hours daily on waitlist management → automated with exception handling only",
+        "cancellation_fee_collection": "40-50% collected → 75-85% with automated enforcement and tracking",
+        "guest_satisfaction": "Frustrated waitlist guests → 80-85% CSAT from timely, transparent communication"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement automated waitlist notifications via email/SMS (Week 1)",
+          "Deploy real-time cancellation alerts to rebooking team (Week 2)",
+          "Enable basic waitlist prioritization rules (Week 3)"
+        ],
+        "investment_required": "Low-Medium - PMS integration, multi-channel communication platform, workflow automation",
+        "time_to_value": "4-6 weeks for basic automation, 8-12 weeks for ML-based optimization",
+        "prerequisites": [
+          "PMS with waitlist capabilities or custom development",
+          "Guest communication preferences captured in CRM",
+          "Historical cancellation data (12+ months)",
+          "Clear cancellation policy framework",
+          "Multi-channel messaging infrastructure"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-res-pre-arrival-communication",
+      "name": "Pre-Arrival Guest Communication",
+      "description": "AI-powered pre-stay engagement system sending personalized confirmations, capturing preferences, offering upsells, and preparing operations for guest arrival",
+      "traditional_workflow": "Front desk staff send generic confirmation emails 1-2 days before arrival, often without personalization. Special requests are captured manually via phone or email and may not be consistently communicated to operations. Upsell opportunities for room upgrades, spa services, or dining reservations are missed or handled ad-hoc. Operations teams are not systematically prepared for arriving guests, leading to last-minute scrambles for special amenities or arrangements. Guest preference data is scattered across systems and rarely used proactively.",
+      "agentic_workflow": "Pre-arrival agents automatically send personalized welcome messages 7-14 days before arrival, including property information, local recommendations, and digital check-in options. NLP agents analyze guest preferences and past stay history to recommend relevant upsells (room upgrades, spa packages, dining reservations) at optimal times. Preference capture agents use conversational interfaces to collect dietary needs, pillow preferences, and special occasion details. Operations preparation agents automatically notify housekeeping, F&B, and concierge teams about upcoming VIP arrivals and special requirements, ensuring seamless service delivery.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Pre-Arrival Engagement Orchestrator",
+          "role": "Manages pre-stay guest journey from booking confirmation through arrival preparation, coordinating communications, upsells, and operational readiness",
+          "responsibilities": [
+            "Trigger personalized communication sequence",
+            "Coordinate upsell opportunities timing",
+            "Ensure operational teams are prepared",
+            "Capture and distribute guest preferences"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Personalized Communication Agent",
+            "role": "Generates and sends tailored pre-arrival messages based on guest profile, booking details, and stay purpose",
+            "capabilities": [
+              "Dynamic content personalization",
+              "Multi-touch communication sequencing",
+              "Channel optimization (email, SMS, app)",
+              "Local recommendations based on interests"
+            ]
+          },
+          {
+            "name": "Upsell Optimization Agent",
+            "role": "Identifies and presents relevant upgrade and ancillary service opportunities at optimal times",
+            "capabilities": [
+              "Room upgrade offer targeting",
+              "Spa/dining/activity package recommendations",
+              "Pricing optimization for upsells",
+              "Conversion tracking and A/B testing"
+            ]
+          },
+          {
+            "name": "Preference Capture Agent",
+            "role": "Uses conversational AI to collect guest preferences, special requests, and occasion details",
+            "capabilities": [
+              "Natural language preference extraction",
+              "Special occasion detection (anniversary, birthday)",
+              "Dietary and accessibility need collection",
+              "Room preference capture (floor, view, amenities)"
+            ]
+          },
+          {
+            "name": "Operations Preparation Agent",
+            "role": "Notifies and coordinates operations teams (housekeeping, F&B, concierge) about arriving guests and special requirements",
+            "capabilities": [
+              "VIP arrival notifications",
+              "Special amenity coordination",
+              "Room preparation instructions",
+              "Service team briefings"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Digital Check-In Agent",
+            "role": "Facilitates mobile check-in, room selection, and mobile key distribution"
+          },
+          {
+            "name": "Local Experience Agent",
+            "role": "Provides personalized destination guides and activity recommendations"
+          }
+        ]
+      },
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-complex-requests",
+          "name": "Complex Special Request Review",
+          "trigger": "Guest requests unusual amenities or services beyond standard offerings",
+          "human_role": "Guest Services Manager",
+          "decision_criteria": "Feasibility, cost, sourcing requirements, execution complexity, relationship value",
+          "auto_proceed_conditions": "Standard requests (extra pillows, room location, champagne, flowers)",
+          "escalation_path": "General Manager for high-value guests with extraordinary requests"
+        },
+        {
+          "gate_id": "gtg-vip-coordination",
+          "name": "VIP Arrival Coordination",
+          "trigger": "Top-tier loyalty members or high-value guests with special recognition needs",
+          "human_role": "Guest Relations Manager",
+          "decision_criteria": "Personalization opportunities, upgrade options, recognition approach",
+          "auto_proceed_conditions": "Standard loyalty recognition (points, welcome amenity)",
+          "escalation_path": "General Manager for celebrity or ultra-high-net-worth guests"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Guest CRM & Profile",
+          "data_elements": "Stay history, preferences, loyalty status, past feedback, special occasions, interests",
+          "integration_pattern": "Real-time API, profile enrichment"
+        },
+        {
+          "source": "Property Management System",
+          "data_elements": "Booking details, room type, rate, arrival date, length of stay, party composition",
+          "integration_pattern": "Event-driven triggers, API queries"
+        },
+        {
+          "source": "Loyalty Program",
+          "data_elements": "Tier status, points balance, recognition preferences, benefits eligibility",
+          "integration_pattern": "API integration, real-time lookup"
+        },
+        {
+          "source": "Ancillary Service Systems",
+          "data_elements": "Spa availability, restaurant reservations, activity bookings, upgrade inventory",
+          "integration_pattern": "API integration for availability and booking"
+        },
+        {
+          "source": "Local Experience Database",
+          "data_elements": "Events, attractions, dining options, transportation, weather forecasts",
+          "integration_pattern": "Content management system, external APIs"
+        },
+        {
+          "source": "Marketing Automation",
+          "data_elements": "Communication templates, A/B test results, engagement metrics, send timing optimization",
+          "integration_pattern": "Marketing platform API"
+        },
+        {
+          "source": "Operations Systems",
+          "data_elements": "Housekeeping schedules, room status, amenity inventory, staff assignments",
+          "integration_pattern": "Work order system integration"
+        }
+      ],
+      "quantified_benefits": {
+        "upsell_revenue": "3-8% of room revenue through targeted pre-arrival offers vs <1% with manual approach",
+        "digital_check_in_adoption": "20-30% baseline → 60-70% with proactive pre-arrival engagement",
+        "guest_satisfaction": "75-80% CSAT → 85-90% from personalized pre-arrival experience",
+        "operational_readiness": "60-70% of special requests properly communicated → 95%+ with automation",
+        "staff_efficiency": "30-45 minutes per VIP arrival prep → 5-10 minutes with automated coordination",
+        "preference_capture_rate": "20-30% manually collected → 70-80% through conversational interfaces"
+      },
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy personalized confirmation emails with property info (Week 1)",
+          "Enable basic digital check-in with room selection (Week 2)",
+          "Implement automated upsell offers for room upgrades (Week 3)"
+        ],
+        "investment_required": "Medium - Marketing automation platform, CRM enhancement, digital check-in module, integration development",
+        "time_to_value": "6-8 weeks for basic personalization, 12-16 weeks for full AI-driven optimization",
+        "prerequisites": [
+          "Guest CRM with preference tracking",
+          "Marketing automation platform or email service",
+          "Digital check-in capability in PMS or mobile app",
+          "Upsell inventory management process",
+          "Operations coordination workflows defined",
+          "Guest communication opt-in/privacy compliance"
+        ]
+      }
+    }
+  ]
+}

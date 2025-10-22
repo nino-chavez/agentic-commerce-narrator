@@ -1,0 +1,1123 @@
+[
+  {
+    "id": "capability-demand-planning-forecasting",
+    "type": "capability",
+    "level": 3,
+    "label": "Demand Planning & Forecasting",
+    "description": "AI-powered demand forecasting with external signal integration and multi-horizon planning achieving 30-50% improvement in forecast accuracy.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Multi-horizon demand forecasting",
+      "External signal integration (weather, events, trends)",
+      "Promotional lift modeling",
+      "New product forecasting",
+      "Demand sensing & short-term forecasting",
+      "Forecast accuracy analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Spreadsheet-based forecasting using historical averages with manual adjustments",
+      "characteristics": [
+        "Historical average as baseline forecast",
+        "Manual adjustments based on buyer intuition",
+        "Limited external signal consideration",
+        "Promotional lift estimated using last year's data",
+        "Monthly forecast refresh cycle",
+        "Forecast accuracy high error"
+      ],
+      "constraints": [
+        "Historical averages miss trend changes",
+        "Manual adjustments subjective and inconsistent",
+        "Misses external signals (weather, events, competitors)",
+        "Promotional forecasts highly inaccurate",
+        "Monthly refresh too slow for agile supply chain",
+        "New products difficult to forecast (no history)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dpf-001",
+          "metric": "Forecast Accuracy (Traditional)",
+          "value": "60-75%",
+          "source": "TBD: [SME to provide source, e.g., 'Demand forecasting accuracy benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven demand forecasting with machine learning, external signals, and continuous refinement",
+      "characteristics": [
+        "ML models learn from historical patterns and trends",
+        "External signal integration (weather, events, social trends)",
+        "AI promotional lift modeling using similar campaign data",
+        "New product forecasting using analogous item patterns",
+        "Daily demand sensing for short-term accuracy",
+        "Continuous model retraining and accuracy improvement"
+      ],
+      "benefits": [
+        "Forecast accuracy improvement",
+        "External signals improve accuracy for weather-sensitive items",
+        "Promotional forecasts more accurate",
+        "Better new product forecasts reduce stockouts/excess",
+        "Daily sensing enables agile inventory adjustments",
+        "Reduced safety stock needs save working capital"
+      ],
+      "agents": [
+        "Demand Planning Orchestrator",
+        "ML Forecasting Agent",
+        "External Signal Agent",
+        "Promotional Lift Agent",
+        "New Product Forecast Agent",
+        "Demand Sensing Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Forecast Accuracy Improvement",
+          "value": "30-50% improvement (85-95% vs 60-75%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML models learning from patterns and external signals']",
+          "sourceBenchmark": "bench-dpf-001"
+        },
+        {
+          "metric": "Promotional Forecast Accuracy Improvement",
+          "value": "40-60% more accurate",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI promotional lift modeling using similar campaigns']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Working Capital Savings",
+          "value": "15-25% (safety stock reduction)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on improved forecast accuracy reducing safety stock needs']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement ML forecasting for top 20% of SKUs",
+        "Integrate weather data for seasonal categories",
+        "Deploy daily demand sensing for fast-moving items"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Demand planning platform with ML capability",
+        "Historical sales data (2-3 years at SKU-store-day level)",
+        "External data feeds (weather, events, trends)",
+        "Promotional calendar and historical lift data",
+        "Integration with inventory and replenishment systems"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-inventory-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Inventory Optimization & Allocation",
+    "description": "AI-driven inventory optimization with multi-echelon planning and dynamic allocation achieving 20-35% reduction in inventory while maintaining service levels.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Safety stock optimization",
+      "Multi-echelon inventory planning",
+      "Dynamic allocation & replenishment",
+      "Inventory health monitoring",
+      "Slow-moving & obsolete detection",
+      "Inventory positioning optimization",
+      "Service level management"
+    ],
+    "traditionalApproach": {
+      "description": "Rule-based min/max inventory levels with static safety stock calculations",
+      "characteristics": [
+        "Static min/max inventory levels set annually",
+        "Safety stock = fixed % of forecast or lead time * demand",
+        "Equal allocation across stores regardless of demand",
+        "Manual monitoring of slow-moving items",
+        "Reactive replenishment based on stock thresholds",
+        "Limited multi-echelon optimization (DC vs store independent)"
+      ],
+      "constraints": [
+        "Static safety stock over/under stocks items (excess or stockouts)",
+        "Equal allocation causes overstocks in low-demand stores",
+        "Slow-moving items tie up working capital",
+        "Reactive replenishment creates bullwhip effect",
+        "Siloed DC vs store optimization suboptimal",
+        "Service levels inconsistent"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-io-001",
+          "metric": "In-Stock Rate on A Items (Traditional)",
+          "value": "70-85%",
+          "source": "TBD: [SME to provide source, e.g., 'Inventory service level benchmarks']"
+        },
+        {
+          "id": "bench-io-002",
+          "metric": "Slow-Moving Inventory Percentage (Traditional)",
+          "value": "30-40% of working capital",
+          "source": "TBD: [SME to provide source, e.g., 'Inventory composition benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered dynamic inventory optimization with demand-driven allocation and continuous refinement",
+      "characteristics": [
+        "Dynamic safety stock based on forecast accuracy and lead time variability",
+        "Demand-driven allocation (high-demand stores get priority)",
+        "Multi-echelon optimization (DC + store network)",
+        "Automated slow-moving detection and markdown triggers",
+        "Proactive replenishment based on demand signals",
+        "Service level differentiation by item importance"
+      ],
+      "benefits": [
+        "Total inventory reduction",
+        "In-stock rate improvement on A items",
+        "Dynamic safety stock reduces excess",
+        "Demand-driven allocation improves turnover",
+        "Automated slow-mover detection frees working capital",
+        "Multi-echelon optimization reduces total network inventory"
+      ],
+      "agents": [
+        "Inventory Optimization Orchestrator",
+        "Safety Stock Agent",
+        "Allocation Agent",
+        "Replenishment Agent",
+        "Slow-Mover Detection Agent",
+        "Multi-Echelon Optimization Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Total Inventory Reduction",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic safety stock and multi-echelon optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "In-Stock Rate Improvement",
+          "value": "95%+ (vs 70-85% on A items)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on demand-driven allocation and proactive replenishment']",
+          "sourceBenchmark": "bench-io-001"
+        },
+        {
+          "metric": "Excess Inventory Reduction from Dynamic Safety Stock",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic safety stock vs fixed percentages']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Turnover Improvement",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on demand-driven allocation improving turnover']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Multi-Echelon Network Inventory Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on multi-echelon optimization vs siloed DC/store optimization']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement dynamic safety stock for top categories",
+        "Deploy demand-driven allocation for seasonal items",
+        "Enable automated slow-mover detection and alerts"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Inventory optimization platform or advanced supply chain planning system",
+        "Accurate demand forecasting capability",
+        "Real-time inventory visibility",
+        "Historical sales, forecast accuracy, and lead time data",
+        "Defined service level policies by item class"
+      ]
+    },
+    "icon": "cube-transparent",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-warehouse-management-systems",
+    "type": "capability",
+    "level": 3,
+    "label": "Warehouse Management Systems (WMS)",
+    "description": "AI-powered warehouse operations with intelligent slotting, dynamic routing, and labor optimization achieving 30-50% improvement in warehouse productivity.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Intelligent slotting & put-away",
+      "Wave planning & release",
+      "Dynamic pick path optimization",
+      "Labor management & task assignment",
+      "Inventory accuracy & cycle counting",
+      "Shipping & dock scheduling",
+      "WMS performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual warehouse operations with static slotting and paper-based picking",
+      "characteristics": [
+        "Static slotting based on product category (not velocity)",
+        "Manual wave planning and pick list generation",
+        "FIFO pick sequences (not optimized for travel)",
+        "Manual task assignment to warehouse staff",
+        "Annual or quarterly cycle counts",
+        "First-come first-serve dock scheduling"
+      ],
+      "constraints": [
+        "Static slotting puts slow movers in prime locations",
+        "Manual wave planning takes time",
+        "Inefficient pick paths waste picker time",
+        "Manual task assignment creates unbalanced workloads",
+        "Infrequent cycle counts yield lower accuracy",
+        "Dock congestion from unscheduled arrivals"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-wms-001",
+          "metric": "Inventory Accuracy (Traditional)",
+          "value": "85-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Warehouse inventory accuracy benchmarks']"
+        },
+        {
+          "id": "bench-wms-002",
+          "metric": "Wave Planning Time (Traditional)",
+          "value": "2-4 hours daily",
+          "source": "TBD: [SME to provide source, e.g., 'Warehouse planning time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven warehouse automation with dynamic slotting, optimized routing, and intelligent labor management",
+      "characteristics": [
+        "AI slotting based on velocity, affinity, and seasonality",
+        "Automated wave planning optimized for throughput and SLA",
+        "Dynamic pick path optimization (shortest path algorithms)",
+        "Intelligent task assignment balancing workload and skills",
+        "Perpetual inventory with RFID and AI-driven cycle counting",
+        "Automated dock scheduling with time slot optimization"
+      ],
+      "benefits": [
+        "Pick productivity improvement",
+        "AI slotting reduces travel time",
+        "Automated wave planning saves time daily",
+        "Balanced workload improves labor utilization",
+        "Inventory accuracy improvement with perpetual counts",
+        "Optimized dock scheduling reduces wait times"
+      ],
+      "agents": [
+        "WMS Orchestration Agent",
+        "Slotting Optimization Agent",
+        "Wave Planning Agent",
+        "Pick Path Optimization Agent",
+        "Labor Management Agent",
+        "Dock Scheduling Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Pick Productivity Improvement",
+          "value": "30-50% (items per hour)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic pick path optimization and AI slotting']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Travel Time Reduction from AI Slotting",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on velocity-based slotting vs static category-based']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Wave Planning Time Savings",
+          "value": "2-4 hours daily saved",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated wave planning vs manual']",
+          "sourceBenchmark": "bench-wms-002"
+        },
+        {
+          "metric": "Labor Utilization Improvement",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on balanced workload and intelligent task assignment']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Accuracy Improvement",
+          "value": "95-99% (vs 85-90%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on perpetual counts with RFID and AI-driven cycle counting']",
+          "sourceBenchmark": "bench-wms-001"
+        },
+        {
+          "metric": "Dock Wait Time Reduction",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized dock scheduling vs first-come-first-serve']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI slotting for fast-moving items",
+        "Deploy pick path optimization",
+        "Enable automated dock appointment scheduling"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Modern WMS platform with AI/ML capabilities",
+        "Warehouse layout mapping and zone definitions",
+        "Historical pick/put-away and velocity data",
+        "Labor management system integration",
+        "Barcode/RFID infrastructure"
+      ]
+    },
+    "icon": "building-storefront",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-transportation-logistics",
+    "type": "capability",
+    "level": 3,
+    "label": "Transportation & Logistics Management",
+    "description": "AI-powered transportation optimization with dynamic routing, carrier selection, and real-time visibility achieving 20-35% reduction in freight costs.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Load planning & optimization",
+      "Dynamic route optimization",
+      "Carrier selection & rate shopping",
+      "Real-time shipment tracking",
+      "Exception management",
+      "Freight audit & payment",
+      "Transportation analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual load planning with static carrier contracts and limited shipment visibility",
+      "characteristics": [
+        "Manual load building in spreadsheets",
+        "Static carrier contracts (annual negotiations)",
+        "Phone calls for carrier rate quotes",
+        "Limited shipment tracking (call carrier for status)",
+        "Reactive exception handling (customer calls)",
+        "Manual freight invoice audit and payment"
+      ],
+      "constraints": [
+        "Manual load planning yields lower utilization",
+        "Static contracts miss spot market opportunities",
+        "Manual rate shopping limited to 2-3 carriers",
+        "Poor shipment visibility frustrates customers",
+        "Reactive exception handling delays resolution",
+        "Freight audit errors cost percentage of freight spend"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-tl-001",
+          "metric": "Truck Utilization (Traditional)",
+          "value": "60-75%",
+          "source": "TBD: [SME to provide source, e.g., 'Freight utilization benchmarks']"
+        },
+        {
+          "id": "bench-tl-002",
+          "metric": "Freight Invoice Error Rate (Traditional)",
+          "value": "5-10% of freight spend",
+          "source": "TBD: [SME to provide source, e.g., 'Freight audit error benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered transportation management with dynamic optimization, real-time visibility, and automated execution",
+      "characteristics": [
+        "AI load optimization maximizing cube and weight utilization",
+        "Dynamic routing considering traffic, weather, and constraints",
+        "Real-time carrier rate shopping across spot and contract",
+        "Proactive shipment tracking with ETA predictions",
+        "Automated exception detection and resolution workflows",
+        "AI-powered freight audit with auto-matching and dispute resolution"
+      ],
+      "benefits": [
+        "Freight cost reduction",
+        "Truck utilization improvement",
+        "Dynamic carrier selection saves on rates",
+        "Real-time visibility improves customer satisfaction",
+        "Proactive exception management prevents issues",
+        "Automated freight audit catches invoice errors"
+      ],
+      "agents": [
+        "Transportation Management Orchestrator",
+        "Load Optimization Agent",
+        "Route Optimization Agent",
+        "Carrier Selection Agent",
+        "Shipment Tracking Agent",
+        "Freight Audit Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Freight Cost Reduction",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI load optimization and dynamic carrier selection']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Truck Utilization Improvement",
+          "value": "85-95% (vs 60-75%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI load optimization maximizing cube and weight']",
+          "sourceBenchmark": "bench-tl-001"
+        },
+        {
+          "metric": "Carrier Rate Savings",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic carrier selection across spot and contract markets']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Exception Prevention",
+          "value": "30-50% of issues prevented",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive exception management before delivery failures']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Invoice Error Detection Improvement",
+          "value": "95%+ (vs manual catching)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated freight audit with AI matching']",
+          "sourceBenchmark": "bench-tl-002"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI load optimization for full truckload shipments",
+        "Deploy real-time carrier rate shopping",
+        "Enable proactive shipment tracking and customer notifications"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Transportation Management System (TMS)",
+        "Carrier integrations (API or EDI)",
+        "Historical shipment and rate data",
+        "Real-time shipment tracking capability",
+        "Order and inventory system integration"
+      ]
+    },
+    "icon": "truck",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-last-mile-delivery-returns",
+    "type": "capability",
+    "level": 3,
+    "label": "Last-Mile Delivery & Returns",
+    "description": "AI-optimized last-mile delivery with dynamic routing, real-time tracking, and reverse logistics achieving 25-40% reduction in delivery costs.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Travel",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Dynamic delivery route optimization",
+      "Delivery time slot management",
+      "Real-time driver tracking & communication",
+      "Delivery exception handling",
+      "Reverse logistics & returns pickup",
+      "Last-mile performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Static delivery routes with limited customer visibility and manual returns processing",
+      "characteristics": [
+        "Static delivery routes planned manually",
+        "Fixed delivery windows (AM/PM only)",
+        "Phone-based driver communication",
+        "Customer calls for delivery status",
+        "Customers drop off returns (no pickup)",
+        "Manual route reconciliation and performance tracking"
+      ],
+      "constraints": [
+        "Static routes inefficient (empty miles)",
+        "Broad delivery windows frustrate customers",
+        "Limited visibility creates customer anxiety",
+        "Manual exception handling delays resolution",
+        "Returns require customer effort (trip to store/drop-off)",
+        "High cost per delivery"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-lmd-001",
+          "metric": "Empty Miles (Traditional)",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Last-mile efficiency benchmarks']"
+        },
+        {
+          "id": "bench-lmd-002",
+          "metric": "Delivery Cost per Package (Traditional)",
+          "value": "$8-15",
+          "source": "TBD: [SME to provide source, e.g., 'Last-mile cost benchmarks']"
+        },
+        {
+          "id": "bench-lmd-003",
+          "metric": "Delivery Success Rate (Traditional)",
+          "value": "75-85%",
+          "source": "TBD: [SME to provide source, e.g., 'First-time delivery success benchmarks']"
+        },
+        {
+          "id": "bench-lmd-004",
+          "metric": "WISMO Calls (Traditional)",
+          "value": "High volume of 'where is my order' calls",
+          "source": "TBD: [SME to provide source, e.g., 'Customer service contact benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered last-mile orchestration with real-time optimization and seamless customer experience",
+      "characteristics": [
+        "Dynamic route optimization considering real-time traffic and priorities",
+        "Narrow delivery windows (1-2 hours) with customer choice",
+        "Real-time tracking with ETA updates",
+        "Automated exception detection and customer communication",
+        "On-demand returns pickup scheduled via app",
+        "Continuous route and performance optimization"
+      ],
+      "benefits": [
+        "Delivery cost reduction per package",
+        "Dynamic routing reduces miles driven",
+        "Narrow windows increase customer satisfaction",
+        "Real-time tracking reduces WISMO calls",
+        "Returns pickup improves customer experience and recovery",
+        "Delivery success rate improves"
+      ],
+      "agents": [
+        "Last-Mile Orchestration Agent",
+        "Route Optimization Agent",
+        "Time Slot Management Agent",
+        "Driver Tracking Agent",
+        "Exception Handling Agent",
+        "Returns Pickup Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Delivery Cost Reduction",
+          "value": "25-40% per package",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic routing and optimized utilization']",
+          "sourceBenchmark": "bench-lmd-002"
+        },
+        {
+          "metric": "Miles Driven Reduction",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic routing vs static routes']",
+          "sourceBenchmark": "bench-lmd-001"
+        },
+        {
+          "metric": "Customer Satisfaction Improvement",
+          "value": "40-60% (narrow windows)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on narrow 1-2 hour delivery windows vs broad AM/PM']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "WISMO Call Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time tracking reducing customer inquiries']",
+          "sourceBenchmark": "bench-lmd-004"
+        },
+        {
+          "metric": "Delivery Success Rate Improvement",
+          "value": "95%+ (vs 75-85%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on narrow windows and proactive communication']",
+          "sourceBenchmark": "bench-lmd-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement real-time tracking with SMS/email updates",
+        "Deploy dynamic route optimization for delivery fleet",
+        "Enable returns pickup scheduling via app"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Last-mile delivery platform or TMS with optimization",
+        "Driver mobile app with GPS tracking",
+        "Customer notification system (SMS/email/app)",
+        "Order management system integration",
+        "Delivery fleet (owned or 3PL partnership)"
+      ]
+    },
+    "icon": "map-pin",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-predictive-analytics-ml",
+    "type": "capability",
+    "level": 3,
+    "label": "Predictive Analytics & Machine Learning Platform",
+    "description": "Enterprise ML platform enabling predictive models across business functions achieving 30-60% improvement in decision quality and speed.",
+    "parentDomain": "domain-data-analytics",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "ML model development & training",
+      "Model deployment & serving",
+      "Model monitoring & retraining",
+      "Feature engineering & management",
+      "AutoML & citizen data science",
+      "ML experimentation & A/B testing",
+      "Model governance & explainability"
+    ],
+    "traditionalApproach": {
+      "description": "Manual analytics in spreadsheets with limited predictive capability and no ML infrastructure",
+      "characteristics": [
+        "Spreadsheet-based historical analysis only",
+        "Manual regression models (if any predictive analytics)",
+        "No centralized ML infrastructure or tooling",
+        "Data scientists work in isolation on local machines",
+        "No model versioning or governance",
+        "Manual model deployment via scripts"
+      ],
+      "constraints": [
+        "Limited to descriptive analytics (what happened)",
+        "Manual models take time to develop",
+        "No scalable infrastructure for ML workloads",
+        "Models difficult to deploy and maintain",
+        "No model monitoring or performance tracking",
+        "Limited reusability and knowledge sharing"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ml-001",
+          "metric": "Model Development Time (Traditional)",
+          "value": "Weeks to months",
+          "source": "TBD: [SME to provide source, e.g., 'ML development cycle time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Enterprise ML platform enabling rapid model development, deployment, and continuous improvement",
+      "characteristics": [
+        "Centralized ML platform with managed infrastructure",
+        "Automated feature engineering and selection",
+        "AutoML enables citizen data scientists to build models",
+        "Automated model deployment to production",
+        "Continuous monitoring and auto-retraining",
+        "Model governance with explainability and bias detection"
+      ],
+      "benefits": [
+        "Model development time reduced",
+        "AutoML democratizes ML to more business users",
+        "Automated deployment reduces time-to-production",
+        "Continuous monitoring maintains model accuracy over time",
+        "Model governance ensures ethical and explainable AI",
+        "Decision quality improvement across use cases"
+      ],
+      "agents": [
+        "ML Platform Orchestrator",
+        "Feature Engineering Agent",
+        "AutoML Agent",
+        "Model Deployment Agent",
+        "Model Monitoring Agent",
+        "Governance & Explainability Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Model Development Time Reduction",
+          "value": "60-80% (weeks to days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on centralized ML platform with automated feature engineering']",
+          "sourceBenchmark": "bench-ml-001"
+        },
+        {
+          "metric": "AutoML User Democratization",
+          "value": "10x more business users building models",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AutoML enabling citizen data scientists']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Time-to-Production Reduction",
+          "value": "70-90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated deployment vs manual scripts']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Decision Quality Improvement",
+          "value": "30-60% across use cases",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML-powered decision making vs manual analysis']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy ML platform for data science team",
+        "Implement AutoML for citizen data scientist use cases",
+        "Enable automated model deployment for top use cases"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "ML platform selection (cloud-native or on-prem)",
+        "Data science team with ML expertise",
+        "Modern data infrastructure (data lake/warehouse)",
+        "Defined high-value ML use cases",
+        "Executive sponsorship and governance framework"
+      ]
+    },
+    "icon": "cpu-chip",
+    "color": "#6366F1",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-business-intelligence-visualization",
+    "type": "capability",
+    "level": 3,
+    "label": "Business Intelligence & Data Visualization",
+    "description": "Self-service BI platform with AI-powered insights and natural language querying enabling 50-80% reduction in time-to-insight.",
+    "parentDomain": "domain-data-analytics",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Interactive dashboards & reporting",
+      "Self-service analytics",
+      "Natural language querying",
+      "AI-powered insights & anomaly detection",
+      "Embedded analytics",
+      "Mobile BI & alerts"
+    ],
+    "traditionalApproach": {
+      "description": "Static reports generated by IT with limited self-service and weeks of turnaround time",
+      "characteristics": [
+        "Static reports generated monthly by IT/BI team",
+        "Limited self-service (pre-built reports only)",
+        "Report requests backlog",
+        "No natural language querying (SQL required)",
+        "Manual anomaly detection through report review",
+        "Desktop-only access (no mobile)"
+      ],
+      "constraints": [
+        "Static reports outdated by time they're delivered",
+        "Report backlog limits business agility",
+        "Technical skills required for custom analysis",
+        "Anomalies discovered weeks after occurrence",
+        "Limited data exploration and discovery",
+        "Desktop-only limits real-time decision making"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-bi-001",
+          "metric": "Report Backlog Time (Traditional)",
+          "value": "2-4 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'BI request turnaround time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Self-service BI platform with AI insights, natural language querying, and real-time mobile access",
+      "characteristics": [
+        "Self-service analytics empowering business users",
+        "Natural language querying ('show me top products by margin')",
+        "AI-powered automated insights and anomaly alerts",
+        "Interactive dashboards with drill-down capability",
+        "Embedded analytics in operational systems",
+        "Mobile BI with proactive alerts"
+      ],
+      "benefits": [
+        "Time-to-insight reduction",
+        "Business users self-serve analytics needs",
+        "Natural language querying democratizes data access",
+        "AI insights surface anomalies earlier",
+        "Real-time dashboards enable agile decision making",
+        "Mobile access empowers field teams with data"
+      ],
+      "agents": [
+        "Business Intelligence Orchestrator",
+        "Self-Service Analytics Agent",
+        "Natural Language Query Agent",
+        "AI Insights Agent",
+        "Anomaly Detection Agent",
+        "Mobile BI Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Time-to-Insight Reduction",
+          "value": "50-80% (hours vs weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service analytics vs report backlog']",
+          "sourceBenchmark": "bench-bi-001"
+        },
+        {
+          "metric": "Self-Service Adoption",
+          "value": "80%+ of analytics needs",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on business users empowered with self-service tools']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Anomaly Detection Lead Time",
+          "value": "4-8 weeks earlier",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI insights surfacing anomalies proactively']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy self-service BI platform for business users",
+        "Enable natural language querying for top use cases",
+        "Implement AI-powered anomaly detection and alerts"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Modern BI platform (Tableau, Power BI, Looker, etc.)",
+        "Data warehouse or data lake with clean, modeled data",
+        "Data governance and security framework",
+        "User training and adoption program",
+        "Defined KPIs and metrics"
+      ]
+    },
+    "icon": "presentation-chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-advanced-analytics-reporting",
+    "type": "capability",
+    "level": 3,
+    "label": "Advanced Analytics & Reporting",
+    "description": "Enterprise analytics platform providing complex multi-dimensional analysis, statistical modeling, and automated reporting achieving 40-70% analyst productivity improvement.",
+    "parentDomain": "domain-data-analytics",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Multi-dimensional OLAP analysis",
+      "Statistical modeling & hypothesis testing",
+      "Cohort & segment analysis",
+      "Automated report generation & distribution",
+      "Data storytelling & narrative analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual analysis in spreadsheets with limited statistical rigor and time-consuming report creation",
+      "characteristics": [
+        "Pivot tables in Excel for multi-dimensional analysis",
+        "Manual statistical tests using spreadsheet formulas",
+        "Cohort analysis via manual SQL queries and joins",
+        "Manual report creation in PowerPoint",
+        "Limited narrative insights (just charts and numbers)",
+        "Weekly/monthly reporting cycles"
+      ],
+      "constraints": [
+        "Spreadsheet limitations prevent complex analysis at scale",
+        "Manual statistical modeling error-prone and slow",
+        "Cohort analysis labor-intensive (days to complete)",
+        "Report creation consumes analyst time",
+        "Limited storytelling (charts without context)",
+        "Analysis doesn't scale beyond small datasets"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-aar-001",
+          "metric": "Analyst Time on Report Creation (Traditional)",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Analyst time allocation studies']"
+        },
+        {
+          "id": "bench-aar-002",
+          "metric": "Report Creation Time (Traditional)",
+          "value": "20+ hours per deck",
+          "source": "TBD: [SME to provide source, e.g., 'Report creation time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Advanced analytics platform with automated modeling, multi-dimensional OLAP, and AI-generated narratives",
+      "characteristics": [
+        "OLAP cubes enable instant multi-dimensional slicing/dicing",
+        "Automated statistical modeling and significance testing",
+        "Self-service cohort analysis with visual exploration",
+        "Automated report generation with AI narrative summaries",
+        "Natural language insights explain 'why' behind numbers",
+        "Real-time analytics vs batch reporting"
+      ],
+      "benefits": [
+        "Analyst productivity improvement",
+        "Complex analysis completes faster",
+        "Automated modeling ensures statistical rigor",
+        "Self-service cohort analysis empowers business users",
+        "AI narratives provide context and actionable insights",
+        "Real-time analytics enable faster decision making"
+      ],
+      "agents": [
+        "Advanced Analytics Orchestrator",
+        "OLAP Analysis Agent",
+        "Statistical Modeling Agent",
+        "Cohort Analysis Agent",
+        "Automated Reporting Agent",
+        "Narrative Generation Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Analyst Productivity Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation freeing analysts from manual report creation']",
+          "sourceBenchmark": "bench-aar-001"
+        },
+        {
+          "metric": "Complex Analysis Speed",
+          "value": "Minutes vs hours/days",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on OLAP cubes enabling instant multi-dimensional analysis']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy OLAP cube for sales and margin analysis",
+        "Implement automated statistical modeling for A/B tests",
+        "Enable AI narrative generation for executive dashboards"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Advanced analytics platform or OLAP database",
+        "Data warehouse with dimensional modeling",
+        "Statistical modeling capability (R, Python, or platform)",
+        "Historical data (2-3 years)",
+        "Analyst team with statistical expertise"
+      ]
+    },
+    "icon": "calculator",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

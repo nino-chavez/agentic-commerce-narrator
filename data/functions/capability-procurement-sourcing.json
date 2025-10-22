@@ -1,0 +1,464 @@
+[
+  {
+    "id": "function-strategic-sourcing-rfp-management",
+    "type": "function",
+    "level": 4,
+    "label": "Strategic Sourcing & RFP Management",
+    "description": "Automated RFP generation and supplier response analysis achieving 50-70% cycle time reduction from 12-16 weeks to 4-6 weeks and 15-25% cost savings through competitive bidding.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sourcing team identifies need to rebid $5M cereal category (contract expiring in 6 months). 2. Manually creates 80-page RFP document over 3-4 weeks: copy-paste from prior RFP, update specifications, pricing sheets, terms. 3. Emails RFP to 15 suppliers, receives responses over 4-6 weeks (Excel files, PDFs, varying formats). 4. Manually compiles supplier responses into comparison spreadsheet: 12-15 hours extracting pricing, lead times, terms from different formats. 5. Selects supplier based primarily on price (lack of time for holistic evaluation). 6. Total RFP cycle 12-16 weeks, achieves 8-12% cost savings through competitive bidding.",
+      "constraints": [
+        "12-16 week RFP cycle time (3-4 weeks creation, 4-6 weeks bidding, 4-6 weeks evaluation)",
+        "Manual RFP creation (80-page document, 3-4 weeks)",
+        "Supplier responses in varying formats (Excel, PDF, email)",
+        "12-15 hours manual response compilation",
+        "Price-focused selection (no time for quality, service, risk evaluation)",
+        "8-12% cost savings (limited competitive pressure)"
+      ],
+      "metrics": ["RFP cycle time: 12-16 weeks", "Cost savings: 8-12%", "Response analysis: Manual (12-15 hours)", "Evaluation: Price-focused"]
+    },
+    "agentic": {
+      "workflow": "1. RFP Agent auto-generates RFP using templates and category specifications: '80-page cereal category RFP created in 2 hours (vs 3-4 weeks manual), includes pricing sheets, technical specs, delivery terms, sustainability requirements'. 2. Agent distributes to 25 suppliers via e-sourcing platform: suppliers respond in standardized format, deadline 3 weeks. 3. Response Analysis Agent auto-compiles 25 bids: extracts pricing, lead times, payment terms, certifications into comparison matrix in minutes (vs 12-15 hours manual). 4. Evaluation Agent scores suppliers across 8 criteria: price (40%), quality certifications (20%), delivery performance (15%), financial stability (10%), sustainability (10%), innovation (5%). 5. Agent recommends top 3 suppliers: 'Supplier A: lowest price $4.1M (18% savings), Supplier B: best quality $4.3M (14% savings, superior certifications), Supplier C: best balance $4.2M (16% savings, strong across all criteria)'. 6. 50-70% cycle time reduction (12-16 weeks → 4-6 weeks), 15-25% cost savings through broader competition.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["RFP Generation Agent", "Response Analysis Agent", "Supplier Evaluation Agent"],
+        "utilityAgents": ["E-Sourcing Platform", "Document Template Library", "Supplier Database", "Scoring Engine"]
+      },
+      "dataSources": [
+        "RFP templates and category specifications",
+        "Supplier database with contact information",
+        "Historical pricing and bid data",
+        "Supplier performance scorecards",
+        "Quality certifications and compliance data",
+        "Financial stability ratings (D&B, credit reports)",
+        "Sustainability scorecards and ESG ratings",
+        "Delivery performance and lead time data"
+      ],
+      "benefits": [
+        "50-70% RFP cycle time reduction (12-16 weeks → 4-6 weeks)",
+        "15-25% cost savings vs 8-12% (broader competition, 25 vs 15 suppliers)",
+        "Automated RFP generation (2 hours vs 3-4 weeks)",
+        "Standardized bid responses (minutes to compile vs 12-15 hours)",
+        "Multi-criteria evaluation (price, quality, delivery, risk, sustainability)",
+        "Data-driven supplier selection vs gut-feel"
+      ],
+      "metrics": ["RFP cycle time: 4-6 weeks", "Cost savings: 15-25%", "Response analysis: Automated (minutes)", "Evaluation: Multi-criteria (8 factors)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy e-sourcing platform for RFP distribution and standardized bid collection", "Create RFP templates for top 5 spend categories", "Implement automated bid comparison for pricing extraction"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["E-sourcing platform (SAP Ariba, Coupa, Jaggaer)", "RFP template library by category", "Supplier database with profiles and contact info", "Multi-criteria scoring framework (price, quality, delivery, risk)", "Historical bidding data for benchmarking", "Cross-functional evaluation team (procurement, quality, operations)"]
+    },
+    "icon": "document-text",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-supplier-discovery-qualification",
+    "type": "function",
+    "level": 4,
+    "label": "Supplier Discovery & Qualification",
+    "description": "AI-powered supplier matching with automated qualification screening achieving 60-80% faster onboarding and 30-40% supply base expansion through systematic discovery.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Need new organic produce supplier (current supplier capacity-constrained). 2. Procurement relies on personal network: calls 3-4 known suppliers, asks for referrals. 3. Manually vets each candidate: requests financial statements, certifications, references. 4. Phone calls and emails back-and-forth over 6-8 weeks: 'Can you send your organic certification? What's your D&B rating? Do you have food safety audit results?'. 5. Finds 2 qualified suppliers (limited network reach, many suppliers never discovered). 6. Onboarding takes 12-16 weeks total (6-8 weeks discovery + 6-8 weeks qualification and setup).",
+      "constraints": [
+        "12-16 week new supplier onboarding (6-8 weeks discovery, 6-8 weeks qualification)",
+        "Personal network only (3-4 suppliers contacted, many never discovered)",
+        "Manual vetting (phone calls, emails, document collection)",
+        "Limited supply base expansion (only find 2 qualified suppliers)",
+        "Qualification inconsistent (different buyers ask different questions)",
+        "Missed opportunities (better suppliers exist but not found)"
+      ],
+      "metrics": ["Onboarding time: 12-16 weeks", "Suppliers discovered: 2-4", "Qualification: Manual (inconsistent)", "Supply base growth: 5-10%/year"]
+    },
+    "agentic": {
+      "workflow": "1. Supplier Discovery Agent searches multiple databases: industry directories, trade shows, online marketplaces, sustainability databases, certified organic lists. 2. Agent identifies 25 potential organic produce suppliers matching criteria: '25 suppliers found with organic certification, food safety compliance, capacity >$500K annual, within 500-mile radius'. 3. Qualification Agent auto-screens using questionnaires: sends standardized qualification form, collects financials, certifications, insurance, references electronically. 4. Agent scores suppliers automatically: 'Supplier A: 85/100 (strong certifications, good financials, regional proximity), Supplier B: 78/100 (adequate certifications, limited capacity), Supplier C: 92/100 (excellent across all criteria)'. 5. Agent fast-tracks top candidates: 'Top 5 suppliers qualify for detailed evaluation, schedule site visits, request samples'. 6. 60-80% faster onboarding (12-16 weeks → 3-5 weeks), 30-40% supply base expansion through systematic discovery.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["Supplier Discovery Agent", "Qualification Agent", "Scoring Agent"],
+        "utilityAgents": ["Supplier Databases", "Certification Verification", "Financial Rating Services", "Qualification Platform"]
+      },
+      "dataSources": [
+        "Supplier directories and industry databases",
+        "Certification databases (organic, food safety, quality)",
+        "Financial rating services (D&B, Experian)",
+        "Trade association memberships",
+        "Sustainability and ESG databases",
+        "Insurance verification services",
+        "Reference and customer testimonials",
+        "Qualification questionnaire responses"
+      ],
+      "benefits": [
+        "60-80% faster onboarding (12-16 weeks → 3-5 weeks)",
+        "25 suppliers discovered vs 2-4 (10x reach through systematic search)",
+        "Automated qualification screening (standardized, consistent)",
+        "30-40% supply base expansion (more suppliers qualified annually)",
+        "Scored evaluation (85/100 rating vs gut-feel)",
+        "Certification verification automated (organic, food safety, quality)"
+      ],
+      "metrics": ["Onboarding time: 3-5 weeks", "Suppliers discovered: 15-25", "Qualification: Automated (standardized)", "Supply base growth: 30-40%/year"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Subscribe to supplier databases and directories for key categories", "Create standardized qualification questionnaire with auto-scoring", "Implement certification verification automation (organic, food safety)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Supplier discovery databases and industry directories", "Standardized qualification questionnaire and criteria", "Certification verification integrations", "Financial rating service access (D&B, Experian)", "Supplier onboarding platform", "Scoring framework and qualification thresholds"]
+    },
+    "icon": "search",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-contract-negotiation-support",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Negotiation Support",
+    "description": "AI-powered negotiation insights with market benchmarking achieving 10-20% better pricing and 40-60% faster contract finalization through data-driven negotiation.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Negotiating $2M cereal supplier contract, supplier quotes $2.10/unit. 2. Buyer guesses: 'I think we can get $1.95/unit, let me try'. 3. No market benchmarking data: unaware that market rate is $1.85-$1.90/unit. 4. Negotiates back-and-forth over 6-8 weeks: email exchanges, phone calls, revised proposals. 5. Settles on $2.00/unit (thinks it's a win: $0.10 savings from initial quote). 6. Later discovers market benchmark $1.88/unit (overpaid $0.12/unit = $120K on 1M units annual volume). 7. Contract negotiation takes 6-8 weeks, leaves value on table due to lack of market intelligence.",
+      "constraints": [
+        "6-8 week contract negotiation (slow back-and-forth)",
+        "No market benchmarking (overpaid $120K vs market rate)",
+        "Gut-feel negotiation targets ($1.95 guess vs $1.88 market)",
+        "Limited leverage (unaware of competitive pricing)",
+        "Sequential negotiation (price, then terms, then conditions separately)",
+        "Value left on table (settle for $2.00 vs $1.88 achievable)"
+      ],
+      "metrics": ["Negotiation time: 6-8 weeks", "Savings vs initial quote: 5%", "Benchmark alignment: Poor (6% above market)", "Contract finalization: Slow"]
+    },
+    "agentic": {
+      "workflow": "1. Negotiation Agent analyzes supplier quote $2.10/unit against market benchmarks: 'Market data: cereal category $1.85-$1.90/unit average, your volume qualifies for lower end $1.85/unit'. 2. Agent recommends negotiation strategy: 'Target $1.87/unit (market-aligned), fallback $1.92/unit (acceptable), walk-away $1.98/unit (overpaying threshold)'. 3. Agent provides leverage points: 'Your strengths: 1M unit volume (top-tier buyer), multi-year commitment option, existing supplier wants to retain business. Supplier strengths: quality reputation, reliable delivery'. 4. Agent suggests bundled negotiation: 'Offer $1.88/unit + 3-year contract + payment terms Net-60 (vs Net-30) = supplier accepts lower price for cash flow benefit and volume security'. 5. Agent drafts contract provisions using templates: auto-generates 90% of contract language from templates, legal reviews 10% custom terms. 6. Negotiation concludes in 2-3 weeks: $1.88/unit achieved ($220K savings vs $2.10 initial, $120K savings vs $2.00 manual), contract finalized 40-60% faster.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["Negotiation Strategy Agent", "Market Intelligence Agent", "Contract Drafting Agent"],
+        "utilityAgents": ["Benchmark Database", "Leverage Analysis", "Contract Template Library", "Negotiation Analytics"]
+      },
+      "dataSources": [
+        "Market pricing benchmarks by category and volume",
+        "Historical contract pricing and terms",
+        "Supplier cost structures and margin estimates",
+        "Competitive intelligence (alternatives, market rates)",
+        "Internal spend data and volume leverage",
+        "Contract templates and clause library",
+        "Negotiation outcomes and lessons learned",
+        "Payment terms and cash flow impact models"
+      ],
+      "benefits": [
+        "10-20% better pricing ($1.88 vs $2.00, $120K savings on $1M volume)",
+        "40-60% faster contract finalization (6-8 weeks → 2-3 weeks)",
+        "Market-aligned pricing (benchmark-driven vs gut-feel)",
+        "Bundled negotiation (price + terms + conditions optimized together)",
+        "Automated contract drafting (90% from templates)",
+        "Data-driven leverage (know your strengths and supplier's)"
+      ],
+      "metrics": ["Negotiation time: 2-3 weeks", "Savings vs initial quote: 10-15%", "Benchmark alignment: Excellent (market-aligned)", "Contract finalization: Fast"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Subscribe to market benchmarking database for top 5 spend categories", "Create negotiation playbook with leverage points and targets", "Deploy contract template library to accelerate drafting"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Market pricing benchmark data sources", "Historical contract and pricing analytics", "Negotiation strategy framework and playbook", "Contract template library by category", "Leverage analysis tools (spend data, alternatives)", "Negotiation training for procurement team"]
+    },
+    "icon": "chat-alt-2",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-purchase-order-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Purchase Order Automation",
+    "description": "Automated PO generation from approved requisitions achieving 85-95% straight-through processing and 70-90% cycle time reduction through touchless ordering.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Store manager creates purchase requisition: 'Need 100 cases cereal SKU#123 for next week delivery'. 2. Requisition routed via email to buyer for approval (1-2 day delay). 3. Buyer manually creates PO in system: enters supplier name, SKU, quantity, price, delivery date, terms (15-20 minutes per PO). 4. PO emailed to supplier manually: copy-paste into email, send, wait for acknowledgment. 5. Processes 20-30 POs daily (6-8 hours buyer time), can't keep up during peak periods. 6. Delays cause expedite fees: 1-2 day PO creation lag forces expedited shipping to meet delivery deadlines.",
+      "constraints": [
+        "Manual PO creation (15-20 minutes each, 6-8 hours daily for 20-30 POs)",
+        "1-2 day approval and PO creation lag",
+        "Email-based supplier communication (manual, not tracked)",
+        "Buyer bandwidth limits (can't scale beyond 20-30 POs/day)",
+        "Expedite fees from delays ($5K-$10K monthly)",
+        "No straight-through processing (every PO touches buyer)"
+      ],
+      "metrics": ["PO automation: 0% (all manual)", "PO creation time: 15-20 min each", "Cycle time: 1-3 days (req to PO)", "Expedite fees: $5K-$10K/month"]
+    },
+    "agentic": {
+      "workflow": "1. PO Automation Agent receives approved requisition: validates SKU, quantity, delivery date against policies (auto-checks). 2. Agent selects supplier automatically: 'SKU#123 primary supplier: Supplier A, contract price $18.50/case, lead time 5 days, meets delivery requirement'. 3. Agent generates PO: 'PO#98765 created automatically, qty 100 cases @ $18.50, delivery next Tuesday, payment Net-30 per contract terms'. 4. Agent sends to supplier via EDI: electronic PO transmission, supplier acknowledges within hours, confirmation auto-updated in system. 5. 85-95% straight-through processing (only exceptions require buyer intervention: non-catalog items, over-limit, new suppliers). 6. 70-90% cycle time reduction (1-3 days → 2-4 hours requisition to confirmed PO), buyer time reduced 6-8 hours → 30-60 minutes (exception handling only).",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["PO Automation Agent", "Supplier Selection Agent", "EDI Integration Agent"],
+        "utilityAgents": ["Requisition System", "Supplier Catalog", "Contract Database", "EDI Gateway"]
+      },
+      "dataSources": [
+        "Approved purchase requisitions",
+        "Supplier contracts with pricing and terms",
+        "Supplier catalogs and lead times",
+        "Inventory positions and reorder policies",
+        "Supplier performance and reliability data",
+        "EDI integration for electronic PO transmission",
+        "Approval policies and spending limits",
+        "Exception rules (non-catalog, over-limit)"
+      ],
+      "benefits": [
+        "85-95% straight-through PO processing (touchless automation)",
+        "70-90% cycle time reduction (1-3 days → 2-4 hours)",
+        "Buyer time savings 6-8 hours → 30-60 min daily (focus on exceptions)",
+        "90% expedite fee reduction ($5K-$10K → $500-$1K monthly)",
+        "EDI integration enables supplier auto-acknowledgment",
+        "Scalability (process 200+ POs daily vs 20-30 manual limit)"
+      ],
+      "metrics": ["PO automation: 85-95%", "PO creation time: <5 min (automated)", "Cycle time: 2-4 hours (req to PO)", "Expedite fees: $500-$1K/month"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate PO generation for catalog items with approved suppliers", "Implement EDI integration for top 10 suppliers (70% volume)", "Enable auto-supplier selection based on contract and lead time rules"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Purchase requisition system with approval workflow", "Supplier contracts with pricing and terms loaded", "Supplier catalogs integrated (item numbers, prices, lead times)", "EDI integration for electronic PO transmission", "Exception handling rules and thresholds", "Buyer training on exception management process"]
+    },
+    "icon": "document-duplicate",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-spend-analysis-category-management",
+    "type": "function",
+    "level": 4,
+    "label": "Spend Analysis & Category Management",
+    "description": "AI-powered spend analytics with supplier consolidation opportunities achieving 15-30% cost reduction and 40-60% supplier base rationalization through data-driven category strategy.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual spend analysis: finance exports $50M procurement data to Excel, manually categorizes by supplier. 2. Discovers fragmented spend: 85 different office supply suppliers collectively $500K annual (avg $5,900 each, no volume leverage). 3. Analysis takes 2-3 weeks: manual categorization, deduplication, consolidation. 4. Identifies opportunity: 'We could consolidate to 3 suppliers and negotiate volume discounts'. 5. Implementation slow: takes 6-12 months to negotiate new contracts, migrate suppliers, realize savings. 6. Achieves 8-12% cost reduction on consolidated categories but misses many opportunities (analysis only annual).",
+      "constraints": [
+        "Annual spend analysis (opportunities identified once/year)",
+        "2-3 weeks manual Excel analysis",
+        "Fragmented suppliers (85 office suppliers at $5,900 each)",
+        "8-12% cost reduction (limited by slow implementation)",
+        "6-12 month implementation (miss short-term opportunities)",
+        "Supplier proliferation not monitored between annual reviews"
+      ],
+      "metrics": ["Spend analysis frequency: Annual", "Cost reduction: 8-12%", "Supplier consolidation: 10-20%", "Analysis time: 2-3 weeks (manual)"]
+    },
+    "agentic": {
+      "workflow": "1. Spend Analytics Agent monitors $50M procurement continuously: auto-categorizes transactions, identifies spend patterns, flags fragmentation daily. 2. Agent detects consolidation opportunity: '85 office supply suppliers, $500K annual, top 3 represent only $180K (36%), tail of 82 suppliers $320K (64%) - high fragmentation'. 3. Agent quantifies savings potential: 'Consolidate to 3 suppliers with volume $500K each = tier-1 pricing, estimated 18-25% savings ($90K-$125K annually)'. 4. Category Strategy Agent develops sourcing plan: 'Run RFP for office supplies, target 3 national suppliers, leverage $500K volume for discounts, include 2-year contract for pricing stability'. 5. Agent tracks implementation: 'Migration 40% complete (month 2), $35K savings realized, on track for $110K annual'. 6. 15-30% cost reduction through continuous monitoring and rapid consolidation vs 8-12% annual approach.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["Spend Analytics Agent", "Category Strategy Agent", "Consolidation Agent"],
+        "utilityAgents": ["Spend Cube Database", "Supplier Classification Engine", "Savings Calculator", "Implementation Tracker"]
+      },
+      "dataSources": [
+        "Procurement transaction data by supplier, category, SKU",
+        "Supplier master data and spend volumes",
+        "Contract terms and pricing",
+        "Category benchmarks and market rates",
+        "Supplier performance and quality data",
+        "Savings opportunities and consolidation potential",
+        "Implementation status and realized savings",
+        "Industry best practices for category strategies"
+      ],
+      "benefits": [
+        "15-30% cost reduction vs 8-12% (continuous optimization)",
+        "40-60% supplier base rationalization (85 → 3 office suppliers example)",
+        "Continuous spend monitoring vs annual (identify opportunities real-time)",
+        "Automated categorization and analysis (minutes vs 2-3 weeks)",
+        "Quantified savings potential ($90K-$125K for office supplies)",
+        "Implementation tracking (40% complete, $35K realized month 2)"
+      ],
+      "metrics": ["Spend analysis frequency: Continuous (daily)", "Cost reduction: 15-30%", "Supplier consolidation: 40-60%", "Analysis time: Minutes (automated)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy spend analytics platform for transaction categorization", "Identify top 3 fragmented categories for consolidation pilots", "Implement supplier rationalization for 1-2 tail spend categories"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Spend analytics platform (SAP Ariba, Coupa, or similar)", "Procurement transaction data integration", "Supplier master data and classification taxonomy", "Category management framework and strategies", "Savings tracking and measurement methodology", "Cross-functional stakeholder engagement for consolidation"]
+    },
+    "icon": "chart-pie",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-supplier-relationship-management",
+    "type": "function",
+    "level": 4,
+    "label": "Supplier Relationship Management (SRM)",
+    "description": "Structured supplier collaboration with performance improvement programs achieving 20-35% delivery performance improvement and 90%+ strategic supplier engagement through partnership approach.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Supplier relationships transactional: send PO, receive goods, pay invoice (no ongoing engagement). 2. Supplier performance issues discovered reactively: late delivery, quality defect, stockout occur before action taken. 3. Annual business review with top 5 suppliers only: 4-hour meeting reviewing prior year performance, vague commitments to improve. 4. No structured collaboration: suppliers unaware of growth plans, new product launches, strategic priorities. 5. Supplier innovation untapped: suppliers have ideas (cost reduction, quality improvement) but no forum to share. 6. 75-80% on-time delivery from key suppliers (suppliers not engaged in improvement).",
+      "constraints": [
+        "Transactional relationships (PO-centric, no partnership)",
+        "75-80% on-time delivery (performance issues not addressed proactively)",
+        "Annual review only (top 5 suppliers, vague improvement commitments)",
+        "No structured collaboration (suppliers unaware of strategic priorities)",
+        "Supplier innovation untapped (no idea-sharing forums)",
+        "Reactive problem-solving (fix issues after they occur)"
+      ],
+      "metrics": ["Strategic supplier engagement: 20-30%", "On-time delivery: 75-80%", "Business reviews: Annual (top 5 only)", "Innovation ideas captured: <10/year"]
+    },
+    "agentic": {
+      "workflow": "1. SRM Agent identifies strategic suppliers: 'Top 20 suppliers represent 70% spend, classify as strategic partners requiring active management'. 2. Agent schedules quarterly business reviews: agenda includes performance scorecard, improvement initiatives, strategic alignment, innovation pipeline. 3. Collaboration Agent facilitates improvement programs: 'Supplier A: on-time delivery 78% (below 95% target), root cause: forecast accuracy, solution: share 13-week rolling forecast weekly (vs monthly POs only)'. 4. Agent shares strategic roadmap: 'New organic product line launching Q3, requires certified suppliers, Supplier A starts certification process now (6-month lead time), ready for launch'. 5. Innovation Agent captures supplier ideas: 'Supplier B proposes alternative packaging (20% cost reduction, better sustainability), pilot test for 3 SKUs'. 6. 20-35% delivery performance improvement (78% → 95%+ on-time), 90%+ strategic supplier engagement, 50-80 innovation ideas captured annually.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["SRM Agent", "Collaboration Agent", "Innovation Agent"],
+        "utilityAgents": ["Supplier Portal", "Performance Scorecards", "Improvement Tracker", "Innovation Pipeline"]
+      },
+      "dataSources": [
+        "Supplier performance scorecards (delivery, quality, cost, innovation)",
+        "Spend data and supplier classification (strategic, tactical, transactional)",
+        "Quarterly business review schedules and agendas",
+        "Improvement initiatives and action plans",
+        "Strategic roadmaps and new product pipelines",
+        "Supplier innovation ideas and pilot results",
+        "Forecast sharing and demand visibility",
+        "Supplier certifications and capability development"
+      ],
+      "benefits": [
+        "20-35% delivery performance improvement (78% → 95%+ on-time)",
+        "90%+ strategic supplier engagement (top 20 suppliers actively managed)",
+        "Quarterly business reviews vs annual (proactive relationship management)",
+        "Strategic alignment (suppliers aware of roadmap, prepare for launches)",
+        "Supplier innovation captured (50-80 ideas/year vs <10)",
+        "Partnership approach vs transactional (suppliers invested in success)"
+      ],
+      "metrics": ["Strategic supplier engagement: 90%+", "On-time delivery: 95%+", "Business reviews: Quarterly (top 20)", "Innovation ideas captured: 50-80/year"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch quarterly business reviews with top 10 strategic suppliers", "Deploy supplier portal for forecast sharing and collaboration", "Create innovation idea submission process with pilot funding"],
+      "investmentRequired": "Medium",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Supplier segmentation (strategic, tactical, transactional)", "Performance scorecard framework and data", "Quarterly business review agenda template", "Supplier portal for collaboration and communication", "Improvement initiative tracking and methodology", "Innovation pipeline and pilot testing process"]
+    },
+    "icon": "user-group",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-procurement-analytics-savings-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Procurement Analytics & Savings Tracking",
+    "description": "Automated savings calculation with validated benefits tracking achieving 90%+ savings accuracy and 100% audit compliance through rigorous measurement methodology.",
+    "parentCapability": "capability-procurement-sourcing",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Procurement claims $2M savings from cereal category renegotiation: 'Reduced price from $2.00 to $1.85/unit, 500K units annual = $75K savings'. 2. Finance challenges: 'Did volume actually happen? Did we have baseline $2.00 contract or was that list price? Were there other cost increases (freight, fees)?'. 3. Savings calculation methodology inconsistent: each buyer calculates differently, some use list price vs contract price, actual vs projected volume. 4. No savings validation: claims not tracked post-implementation to confirm realization. 5. Audit reveals 40-50% of claimed savings not realized: volume didn't materialize, prices increased elsewhere, baseline incorrect. 6. Savings credibility damaged, procurement team spends time defending numbers vs sourcing.",
+      "constraints": [
+        "40-50% of claimed savings not realized (validation missing)",
+        "Inconsistent calculation methodology (each buyer different approach)",
+        "Baseline disputes (list price vs contract price)",
+        "Volume assumptions not validated (projected vs actual)",
+        "No post-implementation tracking (claims not confirmed)",
+        "Audit compliance poor (can't defend savings claims)"
+      ],
+      "metrics": ["Savings accuracy: 50-60%", "Methodology: Inconsistent", "Validation: None", "Audit compliance: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Savings Tracking Agent captures baseline: 'Cereal category current contract: $2.00/unit, 12-month actual volume 480K units (baseline $960K spend)'. 2. Agent calculates savings using standard methodology: 'New contract $1.85/unit, projected volume 500K units, savings = (baseline price - new price) × actual volume = ($2.00 - $1.85) × actual volume'. 3. Agent tracks actual realization monthly: 'Month 1: volume 42K units @ $1.85 = $6.3K actual savings (vs $7.5K projected at 50K units), adjusted projection $6.3K × 12 = $75.6K annual'. 4. Validation Agent reconciles: 'Confirmed invoice pricing $1.85/unit, freight unchanged $0.15/unit, no hidden fees, baseline $2.00 contract validated, savings calculation approved'. 5. Agent generates audit reports: 'Savings claim $75.6K, realization tracked monthly, 92% accuracy (actual vs projected), full documentation available'. 6. 90%+ savings accuracy through rigorous methodology and continuous tracking vs 50-60% manual claims.",
+      "agents": {
+        "orchestrator": "Procurement Orchestration Agent",
+        "superAgents": ["Savings Tracking Agent", "Validation Agent", "Audit Compliance Agent"],
+        "utilityAgents": ["Baseline Database", "Invoice Reconciliation", "Volume Tracking", "Reporting Platform"]
+      },
+      "dataSources": [
+        "Baseline contracts and pricing",
+        "Historical volume actuals by SKU and supplier",
+        "New contract terms and pricing",
+        "Invoice data and payment records",
+        "Volume actuals post-implementation",
+        "Cost changes (freight, fees, surcharges)",
+        "Savings calculation methodology standards",
+        "Audit trail and documentation requirements"
+      ],
+      "benefits": [
+        "90%+ savings accuracy vs 50-60% (validated methodology)",
+        "Standardized calculation (consistent across all buyers)",
+        "Baseline validation (contract price vs list price clear)",
+        "Actual volume tracking (projected vs realized reconciled)",
+        "Monthly realization monitoring (adjust projections based on actuals)",
+        "100% audit compliance (full documentation and validation)"
+      ],
+      "metrics": ["Savings accuracy: 90%+", "Methodology: Standardized", "Validation: Complete (monthly)", "Audit compliance: 100%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement standardized savings calculation methodology for all categories", "Deploy baseline documentation and approval workflow", "Create monthly savings realization tracking dashboard"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Standardized savings calculation methodology", "Baseline contract and pricing database", "Invoice and volume data integration", "Monthly realization tracking and reporting", "Validation workflow and approval process", "Audit documentation standards and retention"]
+    },
+    "icon": "chart-bar",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

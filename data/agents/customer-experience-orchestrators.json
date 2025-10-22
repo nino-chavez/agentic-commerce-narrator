@@ -1,0 +1,230 @@
+[
+  {
+    "id": "agent-journey-intelligence-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Journey Intelligence Orchestrator",
+    "description": "Orchestrates continuous customer journey discovery, friction detection, and improvement prioritization by coordinating behavioral analysis, ML-based pattern detection, and ROI optimization agents.",
+    "capabilities": [
+      "Coordinate real-time journey mapping from behavioral data",
+      "Manage friction detection and opportunity scoring pipeline",
+      "Balance quick wins vs strategic improvements",
+      "Trigger journey visualization updates",
+      "Monitor journey health metrics and trends",
+      "Orchestrate cross-functional improvement initiatives"
+    ],
+    "integrations": [
+      "Google Analytics 4 / Adobe Analytics",
+      "Session Replay Tools (Hotjar, FullStory, LogRocket)",
+      "Funnel Analysis Platform",
+      "Visualization Tools (Tableau, Looker)",
+      "Product Management Workflow (Jira, Linear)",
+      "Customer Data Platform"
+    ],
+    "dataSources": [
+      "Clickstream and behavioral data",
+      "Session replay recordings",
+      "Conversion funnel metrics",
+      "Customer feedback and surveys",
+      "A/B test results",
+      "Business KPIs (revenue, satisfaction, retention)"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-omnichannel-experience-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Omnichannel Experience Orchestrator",
+    "description": "Coordinates seamless customer experiences across all channels by managing context handoffs, channel routing, unified messaging, and cross-channel personalization.",
+    "capabilities": [
+      "Orchestrate context preservation across channel switches",
+      "Manage real-time customer state synchronization",
+      "Route customers to optimal channels based on intent",
+      "Coordinate unified messaging across email, SMS, push, in-app",
+      "Ensure personalization consistency everywhere",
+      "Monitor cross-channel experience quality"
+    ],
+    "integrations": [
+      "Customer Data Platform (Segment, mParticle, Tealium)",
+      "Session Management Platform",
+      "Marketing Automation (Braze, Iterable, Customer.io)",
+      "E-commerce Platform APIs",
+      "Mobile App Backend",
+      "Real-time Event Streaming (Kafka, Kinesis)"
+    ],
+    "dataSources": [
+      "Customer profiles and preferences",
+      "Real-time behavioral events",
+      "Cart and browsing history",
+      "Channel engagement history",
+      "Personalization rules and models",
+      "Cross-channel journey data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-experimentation-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Experimentation Orchestration Agent",
+    "description": "Manages end-to-end experimentation lifecycle from test design through winner rollout, coordinating AI-suggested hypotheses, traffic allocation, Bayesian analysis, and gradual deployment.",
+    "capabilities": [
+      "Orchestrate complete A/B test lifecycle",
+      "Manage concurrent multi-variate experiments",
+      "Coordinate traffic allocation and statistical monitoring",
+      "Trigger early stopping and winner declaration",
+      "Manage gradual rollout with safety monitoring",
+      "Track experimentation velocity and impact"
+    ],
+    "integrations": [
+      "A/B Testing Platform (Optimizely, VWO, Split.io)",
+      "Feature Flag Platform (LaunchDarkly, Flagsmith)",
+      "Statistical Analysis Engine",
+      "Analytics Platform (Amplitude, Mixpanel)",
+      "Product Management Tools",
+      "CI/CD Pipeline"
+    ],
+    "dataSources": [
+      "Historical A/B test results",
+      "Product analytics and metrics",
+      "User segmentation data",
+      "Traffic and conversion data",
+      "Statistical significance calculations",
+      "Feature flag configurations"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-voc-intelligence-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "VoC Intelligence Orchestrator",
+    "description": "Aggregates and analyzes customer feedback from all sources, coordinating NLP sentiment analysis, theme extraction, impact quantification, and targeted insight distribution to relevant teams.",
+    "capabilities": [
+      "Orchestrate multi-source feedback aggregation",
+      "Coordinate NLP analysis across surveys, reviews, support, social",
+      "Manage theme extraction and categorization",
+      "Connect feedback themes to business metrics",
+      "Route insights to relevant teams and owners",
+      "Track feedback trends and sentiment over time"
+    ],
+    "integrations": [
+      "Survey Platform (Qualtrics, SurveyMonkey, Typeform)",
+      "Review APIs (Trustpilot, Yelp, Google Reviews)",
+      "Social Listening Tools (Sprout Social, Hootsuite)",
+      "Support Ticket System (Zendesk, Intercom)",
+      "NLP Engine (GPT-4, AWS Comprehend, Google NLU)",
+      "Product Management Tools (Productboard, Aha!)"
+    ],
+    "dataSources": [
+      "Survey responses (structured and open-ended)",
+      "Product reviews and ratings",
+      "Social media mentions and comments",
+      "Support ticket data and resolutions",
+      "Churn and retention metrics",
+      "NPS and satisfaction scores"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-next-best-action-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Next Best Action Orchestrator",
+    "description": "Delivers real-time personalized recommendations across all channels by coordinating propensity modeling, offer optimization, channel selection, and multi-touch campaign orchestration.",
+    "capabilities": [
+      "Orchestrate real-time NBA decisioning at every touchpoint",
+      "Coordinate propensity models for multiple actions (buy, churn, upsell)",
+      "Manage offer optimization and selection",
+      "Route actions to optimal channels with timing",
+      "Coordinate multi-touch campaign sequences",
+      "Track NBA performance and impact"
+    ],
+    "integrations": [
+      "Customer Data Platform with unified profiles",
+      "ML Platform for propensity model serving",
+      "Marketing Automation (Salesforce Marketing Cloud, Adobe Campaign)",
+      "Channel APIs (email, SMS, push, in-app)",
+      "Real-time Decisioning Engine",
+      "Campaign Analytics Platform"
+    ],
+    "dataSources": [
+      "Customer profiles and behavior history",
+      "Propensity model scores (real-time)",
+      "Offer catalog and business rules",
+      "Channel preference and engagement data",
+      "Campaign response history",
+      "Product and inventory data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-clv-optimization-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "CLV Optimization Orchestrator",
+    "description": "Maximizes customer lifetime value by coordinating real-time CLV prediction, churn risk identification, proactive win-back campaigns, and growth opportunity targeting.",
+    "capabilities": [
+      "Orchestrate continuous CLV prediction and monitoring",
+      "Coordinate churn prediction and early warning",
+      "Trigger proactive retention interventions",
+      "Manage growth opportunity identification and pursuit",
+      "Balance retention spend with CLV potential",
+      "Track CLV impact and program ROI"
+    ],
+    "integrations": [
+      "ML Platform for CLV and churn model serving",
+      "Customer Data Platform",
+      "Campaign Automation Platform",
+      "CRM (Salesforce, HubSpot)",
+      "Analytics Platform",
+      "Customer Success Platform (Gainsight, ChurnZero)"
+    ],
+    "dataSources": [
+      "Customer transaction history",
+      "Engagement and behavior data",
+      "Support and service interactions",
+      "Subscription and renewal data",
+      "Predicted CLV and churn scores",
+      "Product usage and adoption metrics"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

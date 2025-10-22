@@ -1,0 +1,462 @@
+[
+  {
+    "id": "function-drive-thru-queue-management",
+    "type": "function",
+    "level": 4,
+    "label": "Drive-Thru Queue Management",
+    "description": "Real-time queue monitoring with predictive wait times reducing average wait from 5-7 minutes to 2.5-3.5 minutes and abandonment by 60-80% through intelligent capacity management.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customers join drive-thru queue with no visibility into wait time. 2. Queue backs up into street during lunch rush (safety hazard). 3. Customers abandon after waiting 8-10 minutes (15-25% abandonment during peak). 4. Staff unaware of queue length or customer frustration. 5. No proactive management or capacity adjustment.",
+      "constraints": [
+        "No queue visibility for customers (unknown wait time)",
+        "15-25% abandonment during peak hours",
+        "Average wait time 5-7 minutes (industry benchmark)",
+        "Queue overflow into street creates safety issues",
+        "Staff reactive not proactive to queue buildup",
+        "Lost revenue from abandoned customers"
+      ],
+      "metrics": ["Average wait: 5-7 min", "Peak abandonment: 15-25%", "Queue visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Queue Monitoring Agent tracks car count and position using sensors or cameras. 2. Wait Time Predictor calculates expected wait based on current orders and kitchen capacity: '6 cars ahead, 4 min wait'. 3. Mobile App Alert notifies customers: 'Drive-thru wait is 8 min, order inside for 3 min' (channel shift). 4. Dynamic Staffing alerts manager when queue exceeds capacity: 'Add expediter to reduce wait time'. 5. Overflow Management routes customers to mobile order pickup or inside counter when queue full.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Queue Monitoring Agent", "Wait Time Predictor", "Mobile App Alert", "Dynamic Staffing", "Overflow Management"],
+        "utilityAgents": ["Vehicle Sensors", "Camera Analytics", "Mobile App", "Staff Alert System"]
+      },
+      "dataSources": [
+        "Real-time vehicle count and positions",
+        "Order complexity and prep times",
+        "Current kitchen capacity and throughput",
+        "Historical wait time patterns",
+        "Staff availability and shift schedules",
+        "Mobile order volume (alternative channel)",
+        "Weather and time-of-day factors",
+        "Abandonment trigger thresholds"
+      ],
+      "benefits": [
+        "40-50% wait time reduction (2.5-3.5 min vs 5-7 min)",
+        "60-80% abandonment reduction (5-10% vs 15-25%)",
+        "Proactive queue management prevents overflow",
+        "Channel shift to mobile/inside balances capacity",
+        "Improved customer satisfaction (wait time transparency)",
+        "Revenue capture from retained customers"
+      ],
+      "metrics": ["Average wait: 2.5-3.5 min", "Peak abandonment: 5-10%", "Queue visibility: Real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Install vehicle detection sensors to count queue", "Display estimated wait time on digital board"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Vehicle detection sensors or camera", "Wait time prediction model", "Mobile app integration", "Digital signage"]
+    },
+    "icon": "truck",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ai-powered-voice-ordering",
+    "type": "function",
+    "level": 4,
+    "label": "AI-Powered Voice Ordering",
+    "description": "Conversational AI voice assistant with 95%+ accuracy reducing order time by 30-50% and freeing staff for food prep through automated order taking.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer arrives at speaker and waits for staff greeting (15-30 sec delay). 2. Staff manually takes order with background noise interference. 3. Staff asks clarifying questions: 'Did you say medium or large?'. 4. 8-12% order errors due to mishearing or miscommunication. 5. One staff member dedicated to drive-thru headset (can't assist kitchen).",
+      "constraints": [
+        "15-30 sec wait for staff greeting",
+        "8-12% order error rate from miscommunication",
+        "Background noise interferes with accuracy",
+        "Staff tied to headset, can't multitask",
+        "Accents and speech patterns create confusion",
+        "Peak hour overwhelm leads to rushed orders"
+      ],
+      "metrics": ["Order time: 90-120 sec", "Accuracy: 88-92%", "Staff required: 1 dedicated"]
+    },
+    "agentic": {
+      "workflow": "1. AI Voice Agent greets customer instantly upon arrival: 'Welcome to [Brand]! What can I get for you?'. 2. Natural Language Processing understands complex orders: 'Two Big Macs, one with no pickles, and a large fry'. 3. Confirmation Agent reads back order with visual display: 'I have 2 Big Macs, one no pickles, and large fry for $12.50. Is that correct?'. 4. Upsell Suggestion offers add-on: 'Would you like a drink to complete your meal?'. 5. Human Handoff transfers to staff for complex issues or customer preference.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["AI Voice Agent", "Natural Language Processing", "Confirmation Agent", "Upsell Suggestion"],
+        "utilityAgents": ["Speech Recognition", "Text-to-Speech", "POS Integration", "Menu Database"]
+      },
+      "dataSources": [
+        "Complete menu database with items and modifiers",
+        "Speech recognition models trained on QSR vocabulary",
+        "Customer order history (if loyalty member)",
+        "Upsell rules and combo offers",
+        "Accent and dialect training data",
+        "Background noise filtering algorithms",
+        "Real-time item availability (86'd items)",
+        "Conversational AI patterns and responses"
+      ],
+      "benefits": [
+        "30-50% order time reduction (45-75 sec vs 90-120 sec)",
+        "95%+ accuracy vs 88-92% human staff",
+        "Instant greeting (0 sec wait vs 15-30 sec)",
+        "Frees 1 staff member for food prep (labor optimization)",
+        "Consistent upsell execution (never forgets)",
+        "24/7 capability (handles overnight shifts)"
+      ],
+      "metrics": ["Order time: 45-75 sec", "Accuracy: 95%+", "Staff required: 0 (backup only)"]
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "AI confidence score <85% or customer requests human",
+      "policy": "Seamlessly transfer to human staff for complex orders, complaints, or upon customer request"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Pilot AI voice at 1-2 locations during off-peak hours", "Train on top 50 menu items and common modifiers"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Conversational AI platform", "Integration with POS", "High-quality audio hardware", "Menu data digitization", "Staff training for handoff"]
+    },
+    "icon": "microphone",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-order-confirmation-upsell",
+    "type": "function",
+    "level": 4,
+    "label": "Order Confirmation & Upsell",
+    "description": "Visual order confirmation displays with targeted upsell offers increasing average ticket 15-25% and reducing errors by 70-85% through dual-channel verification.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Staff verbally confirms order: 'So that's a Big Mac and fries, right?'. 2. Customer says 'yes' but order was actually entered wrong. 3. Customer realizes error at pickup window (too late to fix efficiently). 4. Upsell attempted verbally: 'Want to add a drink?' but easy to decline. 5. 10-15% order errors not caught until window.",
+      "constraints": [
+        "Verbal confirmation relies on customer hearing correctly",
+        "10-15% errors reach window (costly to fix at that point)",
+        "Verbal upsell easy to ignore or decline",
+        "No visual reinforcement of order details",
+        "Complex orders difficult to confirm verbally",
+        "Staff inconsistent with upsell execution"
+      ],
+      "metrics": ["Errors at window: 10-15%", "Upsell rate: 12-18%", "Confirmation: Verbal only"]
+    },
+    "agentic": {
+      "workflow": "1. Visual Confirmation Display shows order details on screen at speaker: item names, customizations, prices, total. 2. Error Detection Agent highlights potential issues: 'No drink ordered - add one?'. 3. Personalized Upsell displays targeted offer: 'Add apple pie for $1.50 (pairs great with your meal)' with accept button. 4. Real-Time Edit allows customer to modify via touchscreen or voice before finalizing. 5. Order Lock Confirmation requires customer acknowledgment before proceeding to window.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Visual Confirmation Display", "Error Detection Agent", "Personalized Upsell", "Real-Time Edit"],
+        "utilityAgents": ["Digital Display", "Touchscreen Interface", "Upsell Engine", "Order Management"]
+      },
+      "dataSources": [
+        "Order details and customizations",
+        "Menu items and pricing",
+        "Customer order history and preferences",
+        "Upsell rules and pairings",
+        "Common error patterns",
+        "Item availability status",
+        "Promotional offers and LTOs",
+        "Average ticket and basket analysis"
+      ],
+      "benefits": [
+        "70-85% error reduction at window (2-4% vs 10-15%)",
+        "15-25% average ticket increase through visual upsell",
+        "45-60% upsell acceptance vs 12-18% verbal",
+        "Customer confidence (see exactly what ordered)",
+        "Real-time corrections before reaching window",
+        "Automated upsell frees staff focus"
+      ],
+      "metrics": ["Errors at window: 2-4%", "Upsell rate: 45-60%", "Confirmation: Visual + verbal"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Install order confirmation displays at speaker box", "Configure top 5 upsell pairings"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Digital display hardware at speaker", "POS integration for real-time updates", "Upsell recommendation engine", "Touchscreen (optional)"]
+    },
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-speed-of-service-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Speed of Service Tracking",
+    "description": "Real-time performance monitoring with automated alerts improving drive-thru speed by 20-35% and ensuring 90%+ of cars served under 3-minute target through data-driven optimization.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Manager manually times cars with stopwatch during shift. 2. Times recorded on paper log for later review. 3. Weekly average calculated: 'We averaged 6.2 minutes last week'. 4. No real-time feedback or intervention during slow service. 5. Root causes of delays unknown (order taking vs kitchen vs payment?).",
+      "constraints": [
+        "Manual timing sporadic and incomplete",
+        "Retrospective data doesn't enable real-time improvement",
+        "No breakdown by stage (speaker, kitchen, window)",
+        "Unknown root causes of delays",
+        "Manager distracted by stopwatch during peak",
+        "60-70% of cars served under 4-minute target (industry benchmark)"
+      ],
+      "metrics": ["<3 min target: 60-70%", "Delay root cause: Unknown", "Monitoring: Manual sporadic"]
+    },
+    "agentic": {
+      "workflow": "1. Timer System tracks each vehicle through journey: speaker arrival, order complete, window arrival, exit. 2. Stage Breakdown identifies bottlenecks: 'Speaker time 90 sec (target 60), kitchen time 120 sec (target 90), window time 45 sec (on target)'. 3. Real-Time Alert notifies manager when car exceeds threshold: 'Car at window for 3 min (investigate delay)'. 4. Performance Dashboard shows live stats: '78% under 3 min today (target 90%), kitchen is current bottleneck'. 5. Coaching Opportunities highlight staff needing speed training.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Timer System", "Stage Breakdown", "Real-Time Alert", "Performance Dashboard"],
+        "utilityAgents": ["Vehicle Detection Sensors", "Timer Software", "Analytics Platform", "Alert System"]
+      },
+      "dataSources": [
+        "Vehicle detection at each checkpoint (speaker, window, exit)",
+        "Order timestamps (placed, sent to kitchen, completed)",
+        "Payment transaction times",
+        "Staff on duty and positions",
+        "Historical speed benchmarks",
+        "Day of week and time of day patterns",
+        "Order complexity and customizations",
+        "Kitchen capacity and staffing"
+      ],
+      "benefits": [
+        "20-35% speed improvement through real-time monitoring and intervention",
+        "90%+ cars served under 3-min target vs 60-70%",
+        "Stage-level breakdown identifies specific bottlenecks",
+        "Real-time alerts enable immediate corrective action",
+        "Data-driven coaching improves staff performance",
+        "Competitive advantage (faster service than rivals)"
+      ],
+      "metrics": ["<3 min target: 90%+", "Delay root cause: Identified by stage", "Monitoring: 100% automated real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy vehicle timers at speaker and window", "Create real-time dashboard for manager monitoring"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Vehicle detection sensors at checkpoints", "Timer tracking software", "Manager dashboard", "Alert system (SMS, app)"]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-menu-board-pricing",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Menu Board Pricing",
+    "description": "Real-time digital menu updates with daypart optimization and promotional management increasing revenue 8-15% through strategic pricing and merchandising.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Static printed menu boards updated quarterly at best. 2. Same menu shown all day (breakfast items at dinner, lunch combos at breakfast). 3. Promotional changes require physical menu replacement ($500-$2000 per location). 4. Price changes delayed by printing lead time (4-6 weeks). 5. Limited-time offers difficult to add/remove quickly.",
+      "constraints": [
+        "Quarterly menu updates miss promotional opportunities",
+        "Static daypart - breakfast menu shown during lunch",
+        "$500-$2000 cost per menu update",
+        "4-6 week lead time for menu changes",
+        "No A/B testing of menu layout or pricing",
+        "Can't respond to competitor pricing or demand shifts"
+      ],
+      "metrics": ["Update frequency: Quarterly", "Daypart optimization: None", "Update cost: $500-$2000"]
+    },
+    "agentic": {
+      "workflow": "1. Dynamic Menu Agent switches content by daypart: breakfast menu 6-10:30am, lunch 10:30am-4pm, dinner after 4pm. 2. Promotional Engine highlights limited-time offers at top: 'Try our new Spicy Chicken Sandwich - $5.99'. 3. Inventory Integration removes 86'd items instantly: chicken nuggets sold out, automatically removed from menu. 4. Pricing Optimization adjusts prices by demand: raise combo price $0.50 during peak, discount $1 during slow periods. 5. A/B Testing tries menu layouts: Feature image vs list format, measure conversion impact.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Dynamic Menu Agent", "Promotional Engine", "Inventory Integration", "Pricing Optimization", "A/B Testing"],
+        "utilityAgents": ["Digital Menu Board", "Content Management", "POS Integration", "Analytics Platform"]
+      },
+      "dataSources": [
+        "Menu items, prices, and images",
+        "Daypart schedules and transitions",
+        "Real-time item availability (86'd items)",
+        "Promotional calendar and LTO timing",
+        "Demand patterns by time and day",
+        "Competitor pricing data",
+        "Sales performance by menu placement",
+        "A/B test results and optimization metrics"
+      ],
+      "benefits": [
+        "8-15% revenue increase through optimized pricing and merchandising",
+        "Instant menu updates vs 4-6 week lead time",
+        "$0 update cost vs $500-$2000 per change",
+        "Daypart optimization shows relevant items",
+        "Real-time promotion changes capture opportunities",
+        "A/B testing enables continuous improvement"
+      ],
+      "metrics": ["Update frequency: Real-time", "Daypart optimization: Automatic", "Update cost: $0"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Replace static boards with digital displays", "Implement daypart menu switching"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Digital menu board hardware", "Content management system", "POS integration", "Daypart scheduling capability"]
+    },
+    "icon": "menu",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-payment-processing-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Payment Processing Optimization",
+    "description": "Contactless payment integration with mobile wallet support reducing payment time by 40-60% and transaction errors by 80-90% through streamlined digital payments.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer hands cash or card to staff at window. 2. Staff manually enters card, waits for approval (15-30 sec). 3. Card reader errors require retry or different payment method. 4. Cash transactions require change-making (error-prone, time-consuming). 5. Payment averages 45-60 seconds of window time.",
+      "constraints": [
+        "45-60 sec payment time extends overall drive-thru time",
+        "Card reader errors frustrate customers (5-8% failure rate)",
+        "Cash handling errors and shortages",
+        "Physical card exchange creates pandemic concerns",
+        "No mobile wallet or contactless support",
+        "Staff distracted counting change during peak"
+      ],
+      "metrics": ["Payment time: 45-60 sec", "Error rate: 5-8%", "Contactless: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Mobile Payment Agent enables in-app payment before reaching window (zero window time). 2. Contactless Terminal accepts tap payments: Apple Pay, Google Pay, contactless cards (3-5 sec transaction). 3. Auto-Tender calculates exact change and dispenses automatically (cash customers). 4. Payment Routing selects fastest method: contactless > chip > swipe with automatic retry on failure. 5. Receipt Options send digital receipt via email/SMS (no printer delay).",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Mobile Payment Agent", "Contactless Terminal", "Auto-Tender", "Payment Routing"],
+        "utilityAgents": ["Mobile App", "Payment Gateway", "Cash Dispenser", "Receipt System"]
+      },
+      "dataSources": [
+        "Payment method preferences by customer",
+        "Mobile app linked payment methods",
+        "Transaction success rates by type",
+        "Cash drawer inventory",
+        "Payment gateway performance",
+        "Mobile wallet adoption rates",
+        "Receipt preference (digital vs printed)",
+        "Transaction time by payment method"
+      ],
+      "benefits": [
+        "40-60% payment time reduction (20-30 sec vs 45-60 sec)",
+        "80-90% error reduction (<1% vs 5-8%)",
+        "60-70% contactless adoption reduces physical contact",
+        "Mobile pre-payment enables zero-window-time transactions",
+        "Automated change-making eliminates cash errors",
+        "Digital receipts reduce paper waste and printer maintenance"
+      ],
+      "metrics": ["Payment time: 20-30 sec", "Error rate: <1%", "Contactless: 60-70%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Upgrade to contactless payment terminals", "Enable Apple Pay and Google Pay acceptance"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Contactless payment terminal hardware", "Payment gateway supporting NFC", "Mobile app with payment integration", "Automated cash dispenser (optional)"]
+    },
+    "icon": "credit-card",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-drive-thru-analytics-bottleneck-detection",
+    "type": "function",
+    "level": 4,
+    "label": "Drive-Thru Analytics & Bottleneck Detection",
+    "description": "AI-powered performance analytics with predictive bottleneck identification enabling 25-40% throughput improvement through data-driven operational insights and continuous optimization.",
+    "parentCapability": "capability-qsr-drive-thru-optimization",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Manager reviews weekly drive-thru report: 'Average time 5.8 minutes, 142 cars per hour'. 2. Basic averages don't reveal root causes or patterns. 3. Manager guesses at improvements: 'Maybe we need more staff?'. 4. No visibility into what specifically is slowing service. 5. Quarterly reviews too infrequent for rapid improvement.",
+      "constraints": [
+        "Weekly/monthly reporting too slow for actionable insights",
+        "Averages hide important patterns and outliers",
+        "Unknown root causes (speaker vs kitchen vs window delays)",
+        "No predictive capability (react after problems occur)",
+        "Gut-feel decision making vs data-driven",
+        "Can't quantify impact of operational changes"
+      ],
+      "metrics": ["Analysis frequency: Weekly", "Bottleneck identification: Manual guesswork", "Improvement: Reactive"]
+    },
+    "agentic": {
+      "workflow": "1. Analytics Engine processes every transaction: order time, kitchen time, payment time, total time by vehicle. 2. Bottleneck Detection Agent identifies constraints in real-time: 'Kitchen is current bottleneck (80% of delays), specifically grill station overloaded'. 3. Pattern Recognition finds insights: 'Payment delays spike 2-3pm daily when new shift starts (retraining needed)'. 4. Predictive Model forecasts issues: 'Lunch rush in 30 min, current staffing insufficient - add 1 kitchen expediter'. 5. Optimization Recommendations suggest fixes: 'Moving payment reader 2 feet closer saves avg 8 seconds per transaction'.",
+      "agents": {
+        "orchestrator": "QSR Drive-Thru Orchestration Agent",
+        "superAgents": ["Analytics Engine", "Bottleneck Detection Agent", "Pattern Recognition", "Predictive Model", "Optimization Recommendations"],
+        "utilityAgents": ["Data Warehouse", "ML Platform", "Reporting Dashboard", "Alert System"]
+      },
+      "dataSources": [
+        "Complete transaction data (times, items, staff, outcomes)",
+        "Vehicle flow through checkpoints",
+        "Order complexity and customizations",
+        "Staff schedules and positions",
+        "Equipment performance and downtime",
+        "Weather and external factors",
+        "Historical patterns and seasonality",
+        "Benchmarks and industry standards"
+      ],
+      "benefits": [
+        "25-40% throughput improvement through data-driven optimization",
+        "Real-time bottleneck identification enables immediate action",
+        "Predictive forecasting prevents issues before they occur",
+        "Quantified impact of operational changes",
+        "Continuous improvement through pattern recognition",
+        "Multi-location benchmarking and best practice sharing"
+      ],
+      "metrics": ["Analysis frequency: Real-time", "Bottleneck identification: AI-powered automated", "Improvement: Predictive proactive"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy analytics dashboard showing stage-level breakdowns", "Implement bottleneck alerts for managers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Complete transaction data capture", "Analytics platform and data warehouse", "ML models for prediction", "Manager dashboard and training"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "id": "concept-library",
+    "type": "concept",
+    "level": 1,
+    "label": "Library Model (Traditional Commerce)",
+    "description": "Traditional commerce operating model where systems store data and humans perform all analysis, decision-making, and orchestration. Characterized by manual workflows, human bottlenecks, and reactive processes.",
+    "icon": "book-open",
+    "color": "#64748B",
+    "characteristics": [
+      "Humans analyze data and make all decisions",
+      "Systems are passive repositories (databases, files, reports)",
+      "Reactive workflows triggered by human actions",
+      "Sequential processing with human handoffs",
+      "Manual orchestration across systems",
+      "Knowledge resides in employee expertise",
+      "Scaling requires proportional headcount growth"
+    ],
+    "limitations": [
+      "Human cognitive limits (7±2 items working memory)",
+      "Processing speed bottlenecks (hours/days for complex analysis)",
+      "Availability constraints (business hours, vacations, turnover)",
+      "Consistency issues (tribal knowledge, training gaps)",
+      "Scalability ceiling (diminishing returns with headcount)",
+      "High operational cost (labor = 20-35% of revenue)"
+    ],
+    "typicalMetrics": {
+      "decisionLatency": "Hours to days",
+      "processAutomation": "10-30%",
+      "humanDependency": "70-90% of critical paths",
+      "scaleModel": "Linear headcount growth",
+      "operationalCost": "20-35% of revenue (labor)",
+      "errorRate": "5-15% (manual processes)"
+    },
+    "industries": ["All"],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "concept-librarian",
+    "type": "concept",
+    "level": 1,
+    "label": "Librarian Model (Agentic Commerce)",
+    "description": "AI-native commerce operating model where autonomous agents perform analysis, make recommendations/decisions, and orchestrate workflows with human oversight. Characterized by proactive intelligence, agent collaboration, and continuous optimization.",
+    "icon": "cpu-chip",
+    "color": "#3B82F6",
+    "characteristics": [
+      "AI agents analyze data and recommend/execute decisions",
+      "Systems are intelligent actors (agents, orchestrators, super-agents)",
+      "Proactive workflows triggered by patterns, thresholds, predictions",
+      "Parallel processing with agent collaboration",
+      "Autonomous orchestration with human-in-the-loop governance",
+      "Knowledge encoded in models, patterns, and policies",
+      "Scaling through agent replication and capability expansion"
+    ],
+    "capabilities": [
+      "Sub-second decision latency (real-time optimization)",
+      "24/7 availability (continuous monitoring and response)",
+      "Consistent execution (policy-driven, reproducible)",
+      "Unlimited parallel processing (agent concurrency)",
+      "Learning and adaptation (pattern recognition, optimization)",
+      "Proactive intervention (predict and prevent issues)"
+    ],
+    "typicalMetrics": {
+      "decisionLatency": "Milliseconds to seconds",
+      "processAutomation": "60-90%",
+      "humanDependency": "10-30% (governance, exceptions)",
+      "scaleModel": "Exponential with agent replication",
+      "operationalCost": "10-20% of revenue (labor + AI)",
+      "errorRate": "1-3% (AI-driven processes)"
+    },
+    "industries": ["All"],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "concept-transformation",
+    "type": "concept",
+    "level": 1,
+    "label": "Transformation Journey (Crawl → Walk → Run)",
+    "description": "Phased approach to agentic commerce transformation, incrementally shifting from human-driven to AI-native operations while managing risk, building capability, and capturing value.",
+    "icon": "chart-line",
+    "color": "#10B981",
+    "phases": [
+      {
+        "phase": "Crawl",
+        "duration": "3-6 months",
+        "focus": "Agent-assisted workflows with human approval",
+        "characteristics": [
+          "AI provides recommendations, humans decide and execute",
+          "100% human-in-the-loop for all decisions",
+          "Focus on high-value, low-risk use cases",
+          "Build trust and familiarity with AI outputs",
+          "Validate accuracy and establish baselines"
+        ],
+        "automation": "20-40%",
+        "valueCapture": "10-20% efficiency gain",
+        "examples": [
+          "AI recommends markdowns, humans approve and execute",
+          "AI suggests inventory replenishment, planners review and adjust",
+          "AI identifies fraud patterns, analysts investigate and decide"
+        ]
+      },
+      {
+        "phase": "Walk",
+        "duration": "6-12 months",
+        "focus": "Agent-executed workflows with exception-based human oversight",
+        "characteristics": [
+          "AI executes decisions within policy guardrails",
+          "Human oversight for exceptions and edge cases",
+          "Expand to moderate-risk use cases",
+          "Continuous learning and policy refinement",
+          "Measure and optimize agent performance"
+        ],
+        "automation": "50-70%",
+        "valueCapture": "30-50% efficiency gain",
+        "examples": [
+          "AI auto-executes markdowns within policy bounds, alerts humans for outliers",
+          "AI auto-replenishes high-velocity SKUs, humans review slow movers",
+          "AI auto-blocks high-confidence fraud, humans review medium-confidence"
+        ]
+      },
+      {
+        "phase": "Run",
+        "duration": "12-24 months",
+        "focus": "Fully autonomous agent orchestration with strategic human governance",
+        "characteristics": [
+          "AI autonomously orchestrates end-to-end workflows",
+          "Humans focus on strategy, policy, and governance",
+          "Include high-risk, high-complexity use cases",
+          "Multi-agent collaboration and optimization",
+          "Continuous model improvement and expansion"
+        ],
+        "automation": "70-90%",
+        "valueCapture": "50-80% efficiency gain",
+        "examples": [
+          "AI fully manages pricing, promotions, and markdowns end-to-end",
+          "AI autonomously optimizes supply chain from forecast to delivery",
+          "AI orchestrates fraud prevention, detection, and resolution"
+        ]
+      }
+    ],
+    "safetyPath": {
+      "description": "5-step human-in-the-loop governance framework ensuring safe, controlled transformation",
+      "steps": [
+        "Recommend (AI suggests, human decides)",
+        "Review (AI decides, human approves before execution)",
+        "Monitor (AI executes, human monitors for intervention)",
+        "Exception (AI executes autonomously, alerts human for exceptions)",
+        "Govern (AI operates fully autonomously, human sets policy)"
+      ]
+    },
+    "industries": ["All"],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

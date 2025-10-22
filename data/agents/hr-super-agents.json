@@ -1,0 +1,1577 @@
+[
+  {
+    "id": "agent-resume-screening-matching",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Resume Screening & Matching Agent",
+    "description": "ML-based resume parsing and semantic matching against job requirements with bias detection, ranking algorithms, and skills extraction.",
+    "capabilities": [
+      "Parse resumes and extract skills, experience, education",
+      "Semantic matching of candidates against job requirements",
+      "Detect and mitigate bias in screening process",
+      "Rank candidates considering skills, experience, and culture fit",
+      "Learn from hiring outcomes to improve matching accuracy"
+    ],
+    "integrations": [
+      "Applicant Tracking System (ATS)",
+      "Resume Parsing APIs",
+      "Skills Taxonomy Databases",
+      "Bias Detection Tools",
+      "Machine Learning Platforms"
+    ],
+    "dataSources": [
+      "Resume and CV data",
+      "Job descriptions and requirements",
+      "Historical hiring decisions and outcomes",
+      "Skills ontologies and taxonomies",
+      "Candidate assessment scores"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "document-search",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-interview-scheduling-coordination",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Interview Scheduling & Coordination Agent",
+    "description": "Automated interview scheduling with calendar integration, room booking, video link generation, panel coordination, and intelligent rescheduling.",
+    "capabilities": [
+      "Integrate with calendars (Outlook, Google Calendar) for availability",
+      "Book conference rooms and generate video meeting links",
+      "Coordinate interview panels across multiple time zones",
+      "Send automated reminders to interviewers and candidates",
+      "Handle rescheduling requests with minimal manual intervention"
+    ],
+    "integrations": [
+      "Calendar APIs (Outlook, Google Calendar)",
+      "Room Booking Systems",
+      "Video Conferencing (Zoom, Teams, Google Meet)",
+      "Applicant Tracking System",
+      "Email and SMS Notification Services"
+    ],
+    "dataSources": [
+      "Interviewer calendar availability",
+      "Conference room availability",
+      "Candidate availability preferences",
+      "Interview panel requirements by role",
+      "Time zone data for distributed teams"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calendar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-candidate-experience",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Candidate Experience Agent",
+    "description": "Personalized candidate communication throughout hiring process with progress updates, FAQ chatbot, feedback collection, and sentiment analysis.",
+    "capabilities": [
+      "Send personalized status updates via email and SMS",
+      "Provide FAQ chatbot for common candidate questions",
+      "Collect feedback at each hiring stage",
+      "Analyze candidate sentiment and identify improvement areas",
+      "Personalize communication based on candidate profile and preferences"
+    ],
+    "integrations": [
+      "Applicant Tracking System",
+      "Email and SMS Gateways",
+      "Chatbot Platforms",
+      "Survey Tools",
+      "Sentiment Analysis APIs"
+    ],
+    "dataSources": [
+      "Candidate profile and contact information",
+      "Application status and stage transitions",
+      "Candidate feedback and survey responses",
+      "Communication history and preferences",
+      "Benchmark candidate experience data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chat",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-diversity-inclusion-tracking",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Diversity & Inclusion Agent",
+    "description": "Tracks diversity metrics throughout hiring funnel, flags potential bias in job descriptions, ensures diverse interview panels, and reports on hiring outcomes.",
+    "capabilities": [
+      "Track diversity metrics at each hiring stage",
+      "Analyze job descriptions for inclusive language",
+      "Ensure diverse representation on interview panels",
+      "Identify bias patterns in screening and selection",
+      "Generate diversity reports and goal tracking dashboards"
+    ],
+    "integrations": [
+      "Applicant Tracking System",
+      "Job Description Analysis Tools",
+      "Diversity Analytics Platforms",
+      "HRIS for organizational diversity data",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Candidate demographic data (self-reported)",
+      "Hiring funnel conversion rates by demographic",
+      "Job description language and requirements",
+      "Interview panel composition",
+      "Historical hiring diversity outcomes"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "users",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-reference-background-check",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Reference & Background Check Agent",
+    "description": "Automated reference request workflows, background check vendor integration, compliance verification (I-9, right-to-work), and red flag detection.",
+    "capabilities": [
+      "Send automated reference requests and follow-ups",
+      "Integrate with background check vendors (Sterling, HireRight)",
+      "Verify I-9 compliance and right-to-work documentation",
+      "Detect red flags and escalate to HR for review",
+      "Track completion status and deadline adherence"
+    ],
+    "integrations": [
+      "Background Check Vendors (Sterling, HireRight, Checkr)",
+      "Reference Check Platforms",
+      "E-Verify for I-9 compliance",
+      "Applicant Tracking System",
+      "Document Management Systems"
+    ],
+    "dataSources": [
+      "Candidate reference contact information",
+      "Background check results and status",
+      "I-9 and work authorization documentation",
+      "Criminal records and verification data",
+      "Reference feedback and ratings"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-it-provisioning-access",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "IT Provisioning & Access Agent",
+    "description": "Automated IT account creation, system provisioning, equipment ordering, and role-based access configuration for new hires.",
+    "capabilities": [
+      "Auto-create Active Directory accounts and email",
+      "Provision SSO access to business applications",
+      "Order laptops, phones, and monitors from IT vendors",
+      "Configure role-based access based on job function",
+      "Integrate with IT service management for ticket tracking"
+    ],
+    "integrations": [
+      "IT Service Management (ServiceNow, Jira)",
+      "Identity Management (Active Directory, Okta, Azure AD)",
+      "Email Systems (Exchange, Gmail)",
+      "SSO Platforms and App Provisioning",
+      "IT Asset Management for equipment"
+    ],
+    "dataSources": [
+      "New hire data (name, role, department, start date)",
+      "Role-based access matrix by job function",
+      "IT equipment inventory and availability",
+      "Application catalog and provisioning rules",
+      "IT service ticket history"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "server",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-benefits-enrollment",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Benefits Enrollment Agent",
+    "description": "Personalized benefits recommendations, chatbot Q&A, plan comparison tools, enrollment deadline reminders, and validation for new hires and life events.",
+    "capabilities": [
+      "Provide personalized benefits recommendations based on demographics",
+      "Offer 24/7 chatbot for benefits questions",
+      "Compare plans side-by-side with cost estimates",
+      "Send enrollment deadline reminders and alerts",
+      "Validate dependent eligibility and enrollment accuracy"
+    ],
+    "integrations": [
+      "Benefits Admin Platform (Workday, ADP, Benefitfocus)",
+      "Chatbot Platforms",
+      "HRIS for employee demographic data",
+      "Decision Support Tools",
+      "Communication Platforms (Email, SMS)"
+    ],
+    "dataSources": [
+      "Employee demographics (age, family status, location)",
+      "Benefits plan options and costs",
+      "Historical enrollment patterns",
+      "Benefits utilization data",
+      "Enrollment deadlines and life event triggers"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "heart",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-personalized-training",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Personalized Training Agent",
+    "description": "Role-based training curriculum, learning path recommendations, auto-enrollment in required courses, progress tracking, and manager visibility.",
+    "capabilities": [
+      "Generate role-based training curriculum and learning paths",
+      "Recommend courses based on skills gaps and career goals",
+      "Auto-enroll employees in required compliance and onboarding training",
+      "Track progress and send intelligent reminders",
+      "Provide managers visibility into team training completion"
+    ],
+    "integrations": [
+      "Learning Management System (LMS)",
+      "HRIS for role and employee data",
+      "Skills Assessment Tools",
+      "Content Platforms (LinkedIn Learning, Coursera)",
+      "Notification Systems"
+    ],
+    "dataSources": [
+      "Employee role and competency profile",
+      "Training curriculum by role and level",
+      "Learning completion and progress data",
+      "Skills gap analysis results",
+      "Career development goals"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "book-open",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-manager-enablement",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Manager Enablement Agent",
+    "description": "Manager onboarding checklists, new hire progress dashboards, suggested 1:1 topics, performance coaching resources, and escalation triggers.",
+    "capabilities": [
+      "Provide manager onboarding checklists and best practices",
+      "Show new hire progress dashboards with completion status",
+      "Suggest 1:1 meeting topics based on new hire stage",
+      "Offer performance coaching resources and templates",
+      "Trigger escalations for low engagement or missed milestones"
+    ],
+    "integrations": [
+      "HRIS for employee and manager data",
+      "Onboarding Platform",
+      "Performance Management System",
+      "Learning Management System for manager training",
+      "Communication Tools (Email, Slack, Teams)"
+    ],
+    "dataSources": [
+      "New hire onboarding completion data",
+      "Manager feedback and check-in notes",
+      "Performance coaching content library",
+      "Escalation rules and thresholds",
+      "Manager effectiveness metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-access-governance-offboarding",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Access Governance Agent",
+    "description": "Immediate revocation of critical access, staged access removal, compliance reporting (SOX, GDPR), and complete audit trail of access changes.",
+    "capabilities": [
+      "Immediately revoke critical access (VPN, production systems) on resignation",
+      "Stage access revocation (email retained 30 days, file access 90 days)",
+      "Generate compliance reports for SOX and GDPR audits",
+      "Maintain complete audit trail of all access changes",
+      "Integrate with identity management for automated deprovisioning"
+    ],
+    "integrations": [
+      "Identity Management (Active Directory, Okta)",
+      "IT Service Management (ServiceNow)",
+      "Security Information and Event Management (SIEM)",
+      "Audit and Compliance Platforms",
+      "Application Provisioning Systems"
+    ],
+    "dataSources": [
+      "Employee separation notifications",
+      "System access entitlements by employee",
+      "Access retention policies by system type",
+      "Compliance requirements (SOX, GDPR, HIPAA)",
+      "Audit logs of access changes"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "lock-closed",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-skills-assessment-gap-analysis",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Skills Assessment & Gap Analysis Agent",
+    "description": "Integrates with performance reviews, analyzes job postings for emerging skills, compares employee skills vs role requirements, identifies enterprise-wide skill gaps.",
+    "capabilities": [
+      "Assess employee skills from performance reviews and 360 feedback",
+      "Analyze job postings to identify emerging skill requirements",
+      "Compare employee skills against current role requirements",
+      "Identify enterprise-wide skill gaps by department and role",
+      "Recommend build vs buy strategies for skill acquisition"
+    ],
+    "integrations": [
+      "Performance Management System",
+      "Skills Assessment Tools",
+      "Job Board APIs for market skill trends",
+      "HRIS for employee profiles",
+      "Learning Management System"
+    ],
+    "dataSources": [
+      "Employee self-assessed and validated skills",
+      "Performance review feedback and ratings",
+      "Job descriptions and role requirements",
+      "Market skill trends from job postings",
+      "Skills taxonomy and ontology"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-personalized-learning-recommendation",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Personalized Learning Recommendation Agent",
+    "description": "ML-based content recommendations considering learning style, career goals, time availability, microlearning for busy employees, and peer learning matching.",
+    "capabilities": [
+      "Recommend content using ML based on skills gaps and career goals",
+      "Consider learning style preferences and time availability",
+      "Suggest microlearning modules (5-10 minutes) for busy schedules",
+      "Match employees with peers for mentorship and learning",
+      "Personalize learning paths for career progression"
+    ],
+    "integrations": [
+      "Learning Management System",
+      "Content Platforms (LinkedIn Learning, Coursera, Udemy)",
+      "Skills Gap Analysis Tools",
+      "Career Development Platforms",
+      "Mentorship Matching Systems"
+    ],
+    "dataSources": [
+      "Employee skills profile and gaps",
+      "Learning style preferences and engagement data",
+      "Career goals and development plans",
+      "Course catalog and content metadata",
+      "Peer skills and mentorship availability"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "light-bulb",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-content-curation-delivery",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Content Curation & Delivery Agent",
+    "description": "Aggregates content from multiple sources (LinkedIn Learning, Coursera, Udemy), manages in-house content, delivers via mobile, and supports gamification.",
+    "capabilities": [
+      "Aggregate learning content from multiple external providers",
+      "Manage and curate in-house training content library",
+      "Deliver mobile-friendly content for on-the-go learning",
+      "Implement gamification elements (badges, leaderboards, points)",
+      "Support social learning and peer collaboration"
+    ],
+    "integrations": [
+      "Learning Management System",
+      "Content Provider APIs (LinkedIn Learning, Coursera, Udemy)",
+      "Mobile Learning Apps",
+      "Gamification Platforms",
+      "Social Learning Tools"
+    ],
+    "dataSources": [
+      "External content catalogs and metadata",
+      "In-house training content repository",
+      "Content engagement and completion data",
+      "Learner feedback and ratings",
+      "Gamification points and achievements"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "collection",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-compliance-training",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Compliance Training Agent",
+    "description": "Auto-enrollment in required training (harassment, security, safety), deadline tracking and escalation, manager notifications, and audit reporting.",
+    "capabilities": [
+      "Auto-enroll employees in required compliance training by role",
+      "Track completion deadlines and send reminders",
+      "Escalate overdue training to managers and HR",
+      "Generate compliance audit reports by requirement",
+      "Support multi-language training for global workforce"
+    ],
+    "integrations": [
+      "Learning Management System",
+      "HRIS for employee role data",
+      "Compliance Management Platform",
+      "Notification Systems",
+      "Reporting and Audit Tools"
+    ],
+    "dataSources": [
+      "Compliance training requirements by role and location",
+      "Employee training completion status",
+      "Deadline calendars and escalation rules",
+      "Regulatory compliance mandates",
+      "Audit history and certification records"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-learning-impact-measurement",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Learning Impact Measurement Agent",
+    "description": "Correlates training with performance improvement, tracks promotion rates for learners vs non-learners, analyzes retention and engagement, calculates training ROI.",
+    "capabilities": [
+      "Correlate training completion with performance rating improvements",
+      "Track promotion rates comparing learners vs non-learners",
+      "Analyze retention differences between engaged and non-engaged learners",
+      "Calculate training ROI (investment vs business outcomes)",
+      "Identify most effective learning programs and content"
+    ],
+    "integrations": [
+      "Learning Management System",
+      "Performance Management System",
+      "HRIS for promotion and retention data",
+      "Financial Systems for training investment tracking",
+      "Analytics and BI Platforms"
+    ],
+    "dataSources": [
+      "Learning completion and engagement data",
+      "Performance ratings and feedback",
+      "Promotion and career progression data",
+      "Attrition data and exit reasons",
+      "Training investment costs by program"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-pie",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-continuous-feedback-recognition",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Continuous Feedback & Recognition Agent",
+    "description": "Prompts for timely feedback after projects, Slack/Teams integration for quick feedback, peer recognition and kudos, real-time feedback aggregation.",
+    "capabilities": [
+      "Prompt managers for feedback after projects and presentations",
+      "Enable quick feedback via Slack/Teams integration",
+      "Support peer-to-peer recognition and kudos",
+      "Aggregate real-time feedback throughout year (no annual surprise)",
+      "Analyze feedback themes and sentiment"
+    ],
+    "integrations": [
+      "Performance Management Platform",
+      "Collaboration Tools (Slack, Teams)",
+      "Recognition Platforms",
+      "Survey Tools",
+      "HRIS for employee and manager data"
+    ],
+    "dataSources": [
+      "Project completion milestones and deliverables",
+      "Feedback and recognition submitted by managers and peers",
+      "Performance goals and OKR progress",
+      "Sentiment analysis from feedback text",
+      "Recognition activity and engagement"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chat-alt",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-goal-setting-tracking",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Goal Setting & Tracking Agent",
+    "description": "OKR/KPI goal management, weekly progress check-ins, red/yellow/green status alerts, goal alignment across org hierarchy.",
+    "capabilities": [
+      "Manage OKR and KPI goal setting and updates",
+      "Facilitate weekly progress check-ins and status updates",
+      "Provide red/yellow/green status alerts for at-risk goals",
+      "Align goals across organizational hierarchy (cascade and rollup)",
+      "Recommend corrective actions for off-track goals"
+    ],
+    "integrations": [
+      "Performance Management Platform",
+      "Goal Tracking Tools (Asana, Monday.com, Lattice)",
+      "HRIS for org structure",
+      "Project Management Systems",
+      "Notification Systems"
+    ],
+    "dataSources": [
+      "Employee and team goals (OKRs, KPIs)",
+      "Progress updates and check-in data",
+      "Organizational goals and strategic priorities",
+      "Historical goal achievement rates",
+      "Goal status and risk indicators"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "target",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-360-feedback-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "360 Feedback Orchestration Agent",
+    "description": "Automated 360 review cycles (quarterly or biannual), peer nomination and selection, anonymous feedback collection, thematic analysis.",
+    "capabilities": [
+      "Automate 360 feedback cycles on quarterly or biannual schedule",
+      "Manage peer nomination and selection process",
+      "Collect anonymous feedback from multiple sources",
+      "Perform thematic analysis of qualitative feedback",
+      "Generate individual and team 360 reports"
+    ],
+    "integrations": [
+      "Performance Management Platform",
+      "Survey Tools (Qualtrics, SurveyMonkey)",
+      "HRIS for employee and org data",
+      "Text Analytics for theme extraction",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "360 feedback responses (manager, peer, direct report, self)",
+      "Feedback themes and sentiment",
+      "Historical 360 trends over time",
+      "Competency frameworks and rating scales",
+      "Peer nomination data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "refresh",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-performance-analytics-insights",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Performance Analytics & Insights Agent",
+    "description": "Identifies high performers (promotion candidates), flags low performers (PIP risk), predicts attrition risk, analyzes diversity in ratings fairness.",
+    "capabilities": [
+      "Identify high performers as promotion candidates",
+      "Flag low performers at risk for performance improvement plans",
+      "Predict attrition risk based on engagement and performance data",
+      "Analyze rating fairness across demographics (diversity equity)",
+      "Generate actionable insights for talent decisions"
+    ],
+    "integrations": [
+      "Performance Management Platform",
+      "HRIS for employee demographic data",
+      "Predictive Analytics Platforms",
+      "People Analytics Tools (Visier, OneModel)",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Performance ratings and feedback history",
+      "Engagement survey data and pulse results",
+      "Promotion and attrition history",
+      "Demographic data for equity analysis",
+      "Goal achievement and competency assessments"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-square-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-development-career-planning",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Development & Career Planning Agent",
+    "description": "Generates development plans from feedback, suggests stretch assignments, identifies mentorship opportunities, tracks career progression.",
+    "capabilities": [
+      "Generate personalized development plans from performance feedback",
+      "Suggest stretch assignments and project opportunities",
+      "Identify mentorship matches based on skills and goals",
+      "Track career progression and readiness for next level",
+      "Recommend training and experiences for career advancement"
+    ],
+    "integrations": [
+      "Performance Management Platform",
+      "Learning Management System",
+      "Career Development Tools",
+      "Mentorship Platforms",
+      "HRIS for career history and succession data"
+    ],
+    "dataSources": [
+      "Performance feedback and development areas",
+      "Employee career goals and aspirations",
+      "Skills gap analysis results",
+      "Mentorship matching criteria",
+      "Career progression pathways and requirements"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "trending-up",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-market-intelligence-benchmarking",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Market Intelligence & Benchmarking Agent",
+    "description": "Integrates with salary survey providers (Radford, Mercer, Payscale), provides real-time market data by role, location, industry, identifies below-market employees.",
+    "capabilities": [
+      "Integrate with salary survey providers for market data",
+      "Provide real-time market pay ranges by role, location, industry",
+      "Identify below-market employees at retention risk",
+      "Analyze competitive positioning for offers and adjustments",
+      "Forecast market trends and recommend proactive adjustments"
+    ],
+    "integrations": [
+      "Market Data Providers (Payscale, Salary.com, Radford, Mercer)",
+      "HRIS / Payroll System",
+      "Compensation Planning Tools",
+      "Analytics and Reporting Platforms",
+      "Financial Systems"
+    ],
+    "dataSources": [
+      "Market salary data by role, location, industry",
+      "Employee compensation data (salary, bonus, equity)",
+      "Job architecture and leveling frameworks",
+      "Promotion and adjustment history",
+      "Attrition data for retention risk analysis"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-line",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-pay-equity-compliance",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Pay Equity & Compliance Agent",
+    "description": "Regression analysis for pay gaps, flags statistically significant disparities, FLSA classification compliance (exempt vs non-exempt), EEO-1 reporting automation.",
+    "capabilities": [
+      "Perform regression analysis to identify pay gaps by demographics",
+      "Flag statistically significant pay disparities requiring investigation",
+      "Ensure FLSA classification compliance (exempt vs non-exempt)",
+      "Automate EEO-1 reporting with accurate demographic data",
+      "Monitor state and local pay equity law compliance"
+    ],
+    "integrations": [
+      "HRIS / Payroll System",
+      "Pay Equity Analysis Tools",
+      "Compliance Management Platforms",
+      "EEO-1 Reporting Systems",
+      "Legal and Regulatory Databases"
+    ],
+    "dataSources": [
+      "Employee compensation and demographic data",
+      "Job descriptions and role requirements",
+      "Performance ratings and tenure data",
+      "FLSA classification criteria",
+      "Pay equity law requirements by jurisdiction"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "scale",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-compensation-planning",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Compensation Planning Agent",
+    "description": "Manager dashboard with team comp data, promotion and adjustment recommendations, budget tracking and alerts, scenario modeling (what-if analysis).",
+    "capabilities": [
+      "Provide managers with team compensation dashboards",
+      "Recommend promotions and salary adjustments based on data",
+      "Track budget utilization and send alerts for overages",
+      "Enable scenario modeling for what-if compensation analysis",
+      "Support merit, bonus, and equity allocation workflows"
+    ],
+    "integrations": [
+      "HRIS / Payroll System",
+      "Compensation Planning Tools",
+      "Financial Planning and Budgeting Systems",
+      "Performance Management Platform",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Employee compensation history",
+      "Performance ratings and potential assessments",
+      "Compensation budgets by department",
+      "Market data for benchmarking",
+      "Promotion guidelines and salary ranges"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calculator",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-benefits-selection-optimization",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Benefits Selection & Optimization Agent",
+    "description": "Personalized benefits recommendations, plan comparison and cost calculator, dependent eligibility verification, HSA/FSA contribution optimization.",
+    "capabilities": [
+      "Recommend benefits plans based on employee demographics and needs",
+      "Provide side-by-side plan comparison with cost calculators",
+      "Verify dependent eligibility and prevent enrollment errors",
+      "Optimize HSA/FSA contributions for tax advantages",
+      "Predict benefits costs and guide employee decisions"
+    ],
+    "integrations": [
+      "Benefits Admin Platform (Workday, ADP, Benefitfocus)",
+      "HRIS for employee demographic data",
+      "Decision Support and Recommendation Engines",
+      "Tax Optimization Tools",
+      "Eligibility Verification Services"
+    ],
+    "dataSources": [
+      "Employee demographics and family status",
+      "Benefits plan details (coverage, costs, networks)",
+      "Historical claims and utilization data",
+      "Tax rules for HSA/FSA contributions",
+      "Dependent eligibility documentation"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "heart",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-benefits-communication-engagement",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Benefits Communication & Engagement Agent",
+    "description": "Multi-channel benefits education (email, SMS, chatbot), video explainers for complex benefits (HSA vs FSA), open enrollment reminders, total rewards statement generation.",
+    "capabilities": [
+      "Deliver multi-channel benefits education (email, SMS, chatbot)",
+      "Provide video explainers for complex benefits concepts",
+      "Send open enrollment reminders and deadline alerts",
+      "Generate personalized total rewards statements",
+      "Measure benefits communication effectiveness"
+    ],
+    "integrations": [
+      "Benefits Admin Platform",
+      "Communication Platforms (Email, SMS, Chatbot)",
+      "Video Content Management",
+      "Total Rewards Statement Tools",
+      "Analytics for engagement tracking"
+    ],
+    "dataSources": [
+      "Employee contact preferences",
+      "Benefits plan enrollment and utilization",
+      "Communication engagement metrics (opens, clicks)",
+      "Total compensation data (salary, bonus, benefits value)",
+      "Open enrollment calendar and deadlines"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "speakerphone",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-intelligent-time-capture",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Intelligent Time Capture Agent",
+    "description": "Biometric time clocks (facial recognition, fingerprint), mobile geofencing for field workers, auto-punch based on computer login, exception detection.",
+    "capabilities": [
+      "Capture time via biometric clocks (eliminates buddy punching)",
+      "Support mobile geofencing for field worker time tracking",
+      "Auto-punch time based on computer login for office workers",
+      "Detect exceptions (missed punch, unusual hours, location anomalies)",
+      "Ensure accurate time data flows to payroll"
+    ],
+    "integrations": [
+      "Biometric Time Clocks",
+      "Mobile Time Tracking Apps",
+      "Geolocation and GPS Services",
+      "Computer Login Tracking Systems",
+      "Time & Attendance Platform (Kronos, ADP, UKG)"
+    ],
+    "dataSources": [
+      "Biometric clock-in/out data",
+      "Mobile GPS location data",
+      "Computer login/logout timestamps",
+      "Employee schedules and shifts",
+      "Exception thresholds and rules"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "finger-print",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-overtime-management-compliance",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Overtime Management & Compliance Agent",
+    "description": "Real-time overtime alerts (approaching 40 hours), manager approval for overtime before incurred, FLSA compliance (meal breaks, rest periods), state-specific labor law rules.",
+    "capabilities": [
+      "Send real-time alerts when employees approach 40-hour threshold",
+      "Require manager approval before overtime is incurred",
+      "Ensure FLSA compliance with meal breaks and rest periods",
+      "Apply state-specific labor law rules (CA, NY, etc.)",
+      "Generate compliance reports for audit and legal review"
+    ],
+    "integrations": [
+      "Time & Attendance System",
+      "Notification Systems (Email, SMS, Mobile Push)",
+      "Approval Workflow Platforms",
+      "Labor Law Compliance Databases",
+      "Reporting and Audit Tools"
+    ],
+    "dataSources": [
+      "Employee time punch data and schedules",
+      "Overtime thresholds and approval rules",
+      "FLSA classification (exempt vs non-exempt)",
+      "State and federal labor law requirements",
+      "Meal break and rest period compliance data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "clock",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-pto-leave-management",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "PTO & Leave Management Agent",
+    "description": "Self-service PTO requests via mobile, auto-approval based on rules (blackout dates, coverage), PTO accrual calculations, FMLA and leave of absence tracking.",
+    "capabilities": [
+      "Enable self-service PTO requests via mobile and web",
+      "Auto-approve requests based on business rules (coverage, blackouts)",
+      "Calculate PTO accruals based on tenure and policy",
+      "Track FMLA and leave of absence requests with compliance",
+      "Provide real-time PTO balance visibility to employees"
+    ],
+    "integrations": [
+      "Time & Attendance System",
+      "HRIS for PTO policies and balances",
+      "Mobile Apps for self-service",
+      "Approval Workflow Systems",
+      "Leave Management and FMLA Tracking Tools"
+    ],
+    "dataSources": [
+      "Employee PTO balances and accrual rates",
+      "PTO request and approval history",
+      "Blackout dates and coverage requirements",
+      "FMLA eligibility and usage tracking",
+      "State and federal leave law requirements"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calendar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-workforce-scheduling",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Workforce Scheduling Agent",
+    "description": "Shift scheduling based on demand forecasts, employee preference consideration, swap and coverage management, shift compliance (minimum rest between shifts).",
+    "capabilities": [
+      "Generate shift schedules based on demand forecasts",
+      "Consider employee availability and shift preferences",
+      "Enable shift swaps and coverage requests with approval",
+      "Ensure compliance with minimum rest between shifts",
+      "Optimize labor costs while meeting service level requirements"
+    ],
+    "integrations": [
+      "Workforce Management Platforms",
+      "Demand Forecasting Systems",
+      "Employee Self-Service Portals",
+      "Time & Attendance System",
+      "Labor Law Compliance Tools"
+    ],
+    "dataSources": [
+      "Demand forecasts (sales, traffic, reservations)",
+      "Employee availability and shift preferences",
+      "Labor budget and cost constraints",
+      "Shift compliance rules (rest periods, consecutive days)",
+      "Historical schedule effectiveness data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calendar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-labor-analytics-forecasting",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Labor Analytics & Forecasting Agent",
+    "description": "Real-time labor cost dashboard, forecasts labor needs based on sales/demand, identifies labor inefficiencies, benchmarks across locations.",
+    "capabilities": [
+      "Provide real-time labor cost dashboards by location and department",
+      "Forecast future labor needs based on demand and growth plans",
+      "Identify labor inefficiencies (overstaffing, high overtime)",
+      "Benchmark labor productivity across locations",
+      "Recommend labor optimization strategies"
+    ],
+    "integrations": [
+      "Time & Attendance System",
+      "Payroll System for cost data",
+      "Demand Forecasting Systems",
+      "Business Intelligence and Analytics Tools",
+      "Financial Planning Systems"
+    ],
+    "dataSources": [
+      "Time and attendance data",
+      "Labor costs (wages, overtime, benefits)",
+      "Sales and demand data",
+      "Productivity metrics by location",
+      "Budget and forecast data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-demand-forecasting-capacity-planning",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Demand Forecasting & Capacity Planning Agent",
+    "description": "Predicts headcount needs based on revenue/growth plans, identifies capacity constraints by department/role, recommends hiring priorities, integrates with financial planning.",
+    "capabilities": [
+      "Predict future headcount needs based on business growth plans",
+      "Identify capacity constraints by department and role",
+      "Recommend hiring priorities and sequencing",
+      "Integrate with financial planning (FP&A) for budget alignment",
+      "Model workforce scenarios for different growth trajectories"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform",
+      "Financial Planning System (Anaplan, Adaptive Insights)",
+      "Business Planning and Strategy Tools",
+      "Applicant Tracking System for pipeline visibility",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Revenue and growth forecasts",
+      "Current headcount and capacity data",
+      "Historical hiring and attrition trends",
+      "Department workload and project pipeline",
+      "Budget and financial constraints"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chart-pie",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-attrition-prediction-retention",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Attrition Prediction & Retention Agent",
+    "description": "ML model predicts attrition risk by employee, identifies factors (compensation, manager, tenure, engagement), triggers retention interventions, calculates cost of attrition.",
+    "capabilities": [
+      "Predict attrition risk for each employee using ML models",
+      "Identify attrition factors (pay, manager, engagement, tenure)",
+      "Trigger retention interventions (stay conversations, adjustments)",
+      "Calculate cost of attrition and replacement",
+      "Track retention intervention effectiveness"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform",
+      "Engagement Survey Tools",
+      "Compensation Systems",
+      "Performance Management Platform",
+      "Machine Learning Platforms"
+    ],
+    "dataSources": [
+      "Employee demographics and tenure",
+      "Compensation relative to market",
+      "Manager effectiveness and team attrition",
+      "Engagement survey responses",
+      "Historical attrition patterns"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "user-remove",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-skills-competency-analytics",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Skills & Competency Analytics Agent",
+    "description": "Maps current skills across workforce, identifies future skills needed (strategic initiatives), pinpoints skill gaps (build vs buy analysis), recommends reskilling vs hiring.",
+    "capabilities": [
+      "Map current skills across entire workforce",
+      "Identify future skills needed for strategic initiatives",
+      "Pinpoint skill gaps with build vs buy analysis",
+      "Recommend reskilling programs vs external hiring",
+      "Track skills development progress over time"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform",
+      "Skills Assessment Tools",
+      "Learning Management System",
+      "Job Board APIs for market skill trends",
+      "Business Strategy and Planning Tools"
+    ],
+    "dataSources": [
+      "Employee skills profiles and assessments",
+      "Role requirements and competency frameworks",
+      "Strategic business initiatives and projects",
+      "Market skill trends and emerging technologies",
+      "Training program effectiveness data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-succession-talent-mobility",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Succession & Talent Mobility Agent",
+    "description": "Identifies high-potential employees, creates succession plans for critical roles, tracks internal mobility (promotions, lateral moves), recommends stretch assignments.",
+    "capabilities": [
+      "Identify high-potential employees for leadership development",
+      "Create succession plans for critical roles with readiness assessment",
+      "Track internal mobility patterns (promotions, lateral moves)",
+      "Recommend stretch assignments for development",
+      "Monitor succession bench strength and gaps"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform",
+      "Performance Management System",
+      "Learning and Development Platforms",
+      "Talent Review Tools",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Performance ratings and potential assessments",
+      "Career history and promotion data",
+      "Critical role definitions and requirements",
+      "Development plans and readiness indicators",
+      "Internal mobility and retention data"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-diversity-equity-inclusion-analytics",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Diversity, Equity & Inclusion Agent",
+    "description": "Tracks representation across levels, departments, identifies promotion equity gaps, pay equity analysis integration, forecasts diversity outcomes under current trends.",
+    "capabilities": [
+      "Track diversity representation across all levels and departments",
+      "Identify promotion equity gaps by demographic groups",
+      "Integrate pay equity analysis for compensation fairness",
+      "Forecast diversity outcomes under current hiring and promotion trends",
+      "Recommend interventions to achieve diversity goals"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform",
+      "Diversity Analytics Tools",
+      "Applicant Tracking System for hiring funnel data",
+      "Compensation and Pay Equity Tools",
+      "Reporting and Dashboard Tools"
+    ],
+    "dataSources": [
+      "Employee demographic data (self-reported)",
+      "Representation by level, department, and role",
+      "Promotion and hiring rates by demographic",
+      "Pay equity analysis results",
+      "Diversity goals and targets"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "users",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-pulse-survey-feedback",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Pulse Survey & Feedback Agent",
+    "description": "Weekly/biweekly pulse surveys (3-5 questions), question rotation (avoid fatigue), anonymous feedback channel, team-level and manager-level insights, trend analysis.",
+    "capabilities": [
+      "Deliver weekly or biweekly pulse surveys with 3-5 rotating questions",
+      "Provide anonymous feedback channel for employee concerns",
+      "Generate team-level and manager-level engagement insights",
+      "Analyze engagement trends and trajectory over time",
+      "Benchmark engagement across teams and departments"
+    ],
+    "integrations": [
+      "Engagement Platform (Culture Amp, Glint, Peakon)",
+      "HRIS for employee and org data",
+      "Survey Distribution Tools (Email, SMS, Slack)",
+      "Analytics and Reporting Platforms",
+      "Action Planning Tools"
+    ],
+    "dataSources": [
+      "Pulse survey responses and participation rates",
+      "Survey question library and rotation schedule",
+      "Team and manager assignment data",
+      "Historical engagement trends",
+      "Benchmark engagement data by industry"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "annotation",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-sentiment-text-analytics",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Sentiment & Text Analytics Agent",
+    "description": "NLP analysis of survey comments, sentiment analysis of Slack/Teams messages (opt-in), exit interview theme extraction, identifies emerging issues (pay concerns, workload, culture).",
+    "capabilities": [
+      "Analyze survey comments using NLP for theme extraction",
+      "Perform sentiment analysis on Slack/Teams messages (with consent)",
+      "Extract themes from exit interview feedback",
+      "Identify emerging issues before they become widespread",
+      "Track sentiment trends over time and by team"
+    ],
+    "integrations": [
+      "Engagement Survey Platforms",
+      "NLP and Text Analytics Tools",
+      "Communication Platforms (Slack, Teams)",
+      "Exit Interview Tools",
+      "Sentiment Analysis APIs"
+    ],
+    "dataSources": [
+      "Survey open-ended comments",
+      "Communication platform messages (opt-in)",
+      "Exit interview transcripts and responses",
+      "Sentiment scores and theme categories",
+      "Historical sentiment trends"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "chat-alt-2",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-manager-effectiveness",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Manager Effectiveness Agent",
+    "description": "Manager scorecards (team engagement, attrition, performance), identifies high-performing and struggling managers, recommends manager coaching, tracks manager development over time.",
+    "capabilities": [
+      "Generate manager scorecards with team health metrics",
+      "Identify high-performing and struggling managers",
+      "Recommend targeted coaching for manager development",
+      "Track manager improvement trends over time",
+      "Provide early warning for toxic manager behaviors"
+    ],
+    "integrations": [
+      "Engagement Platform",
+      "Performance Management System",
+      "HRIS for org hierarchy and attrition data",
+      "Learning Management System for manager training",
+      "360 Feedback Tools"
+    ],
+    "dataSources": [
+      "Team engagement scores by manager",
+      "Team attrition rates by manager",
+      "Manager 360 feedback and ratings",
+      "Team performance metrics",
+      "Manager coaching and development history"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "user-circle",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-employee-relations-case-management",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Employee Relations Case Management Agent",
+    "description": "Centralized case intake (harassment, discrimination, grievances), case routing and assignment, investigation workflow and deadlines, compliance reporting (EEOC, state agencies), audit trail.",
+    "capabilities": [
+      "Centralize intake for all ER cases (harassment, discrimination, grievances)",
+      "Route cases to appropriate investigators based on type and severity",
+      "Manage investigation workflows with deadline tracking",
+      "Generate compliance reports for EEOC and state agencies",
+      "Maintain complete audit trail for legal defense"
+    ],
+    "integrations": [
+      "Case Management System (ServiceNow, Salesforce)",
+      "HRIS for employee data",
+      "Document Management for investigation evidence",
+      "Compliance Reporting Tools",
+      "Communication Platforms for case updates"
+    ],
+    "dataSources": [
+      "ER case intake data (type, severity, parties involved)",
+      "Investigation notes and evidence",
+      "Case resolution outcomes",
+      "EEOC and state agency reporting requirements",
+      "Audit logs and legal holds"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "clipboard-list",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-crisis-detection-intervention",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Crisis Detection & Intervention Agent",
+    "description": "Flags concerning language (suicide, violence, extreme distress), immediate escalation to HR + security, Employee Assistance Program (EAP) referrals, follow-up and case closure.",
+    "capabilities": [
+      "Detect concerning language indicating crisis (suicide, violence, distress)",
+      "Immediately escalate to HR, security, and crisis response team",
+      "Facilitate EAP referrals and mental health support",
+      "Track follow-up and case closure with care",
+      "Maintain confidentiality while ensuring employee safety"
+    ],
+    "integrations": [
+      "Communication Platforms (Email, Slack, Teams)",
+      "NLP and Crisis Detection Tools",
+      "Case Management System",
+      "Employee Assistance Program (EAP)",
+      "Security and Emergency Response Systems"
+    ],
+    "dataSources": [
+      "Communication content (with privacy safeguards)",
+      "Survey responses with distress indicators",
+      "Crisis language patterns and keywords",
+      "EAP referral and follow-up data",
+      "Incident reports and outcomes"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "exclamation",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-compliance-calendar-tracking",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Compliance Calendar & Tracking Agent",
+    "description": "Centralized compliance calendar (all requirements), auto-reminders for upcoming deadlines, status tracking (compliant, at-risk, overdue), executive dashboard (compliance posture).",
+    "capabilities": [
+      "Maintain centralized compliance calendar for all HR requirements",
+      "Send automated reminders for upcoming compliance deadlines",
+      "Track status (compliant, at-risk, overdue) for each requirement",
+      "Generate executive dashboard showing overall compliance posture",
+      "Escalate overdue requirements to HR leadership"
+    ],
+    "integrations": [
+      "Compliance Management Platform",
+      "Calendar and Task Management Systems",
+      "HRIS for employee and organizational data",
+      "Notification Systems (Email, SMS)",
+      "Executive Dashboard and Reporting Tools"
+    ],
+    "dataSources": [
+      "Compliance requirement calendar (federal, state, local)",
+      "Completion status for each requirement",
+      "Responsible parties and escalation paths",
+      "Historical compliance performance",
+      "Risk ratings by requirement"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "calendar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-regulatory-intelligence-change-management",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Regulatory Intelligence & Change Management Agent",
+    "description": "Monitors federal register, state legislation, court rulings, assesses impact on organization (location, industry), recommends policy updates, tracks implementation of changes.",
+    "capabilities": [
+      "Monitor federal register, state legislation, and court rulings",
+      "Assess regulatory changes for organizational impact",
+      "Recommend policy updates to ensure compliance",
+      "Track implementation of policy changes across organization",
+      "Provide legal briefings on complex regulatory changes"
+    ],
+    "integrations": [
+      "Regulatory Intelligence Services (Thomson Reuters, Bloomberg Law)",
+      "Compliance Management Platform",
+      "Policy Management Systems",
+      "Document Management Systems",
+      "Legal Research Tools"
+    ],
+    "dataSources": [
+      "Federal, state, and local regulatory databases",
+      "Court rulings and legal precedents",
+      "Industry-specific regulations",
+      "Organizational locations and business activities",
+      "Policy change implementation tracking"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "document-text",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-training-certification-management",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Training & Certification Management Agent",
+    "description": "Auto-enrollment in required training, deadline tracking by employee and requirement, manager escalation for overdue training, compliance reporting (who's certified, who's not).",
+    "capabilities": [
+      "Auto-enroll employees in required compliance training",
+      "Track completion deadlines by employee and requirement",
+      "Escalate overdue training to managers and HR",
+      "Generate compliance reports showing certification status",
+      "Support recertification requirements and expiration tracking"
+    ],
+    "integrations": [
+      "Learning Management System",
+      "HRIS for employee role and location data",
+      "Compliance Management Platform",
+      "Notification Systems",
+      "Reporting and Audit Tools"
+    ],
+    "dataSources": [
+      "Training requirements by role and location",
+      "Employee training completion and certification status",
+      "Deadline calendars and escalation rules",
+      "Recertification schedules",
+      "Compliance audit history"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "badge-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-audit-management-documentation",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Audit Management & Documentation Agent",
+    "description": "Maintains audit trail (all HR actions logged), document repository (policies, training records, complaints), audit request response automation, legal hold and retention policies.",
+    "capabilities": [
+      "Maintain comprehensive audit trail of all HR actions",
+      "Manage document repository for policies and records",
+      "Automate response to audit requests with instant documentation",
+      "Implement legal holds and retention policies",
+      "Generate audit reports for internal and external auditors"
+    ],
+    "integrations": [
+      "Document Management Systems",
+      "HRIS for transaction logging",
+      "Compliance Management Platform",
+      "Legal Hold and eDiscovery Tools",
+      "Audit and Reporting Tools"
+    ],
+    "dataSources": [
+      "HR transaction logs and audit trails",
+      "Policy documents and version history",
+      "Training records and certifications",
+      "Employee relations case documentation",
+      "Legal holds and retention schedules"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "folder-open",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-automated-reporting-filing",
+    "type": "agent",
+    "level": 6,
+    "role": "super",
+    "label": "Automated Reporting & Filing Agent",
+    "description": "EEO-1 report auto-generation, VETS-4212, AAP, OSHA 300 reports, state-specific reports (California, NY, etc.), e-filing integration (EEOC, DOL portals).",
+    "capabilities": [
+      "Auto-generate EEO-1 reports from HRIS demographic data",
+      "Create VETS-4212, AAP, and OSHA 300 reports automatically",
+      "Generate state-specific compliance reports (CA, NY, etc.)",
+      "Integrate with e-filing portals (EEOC, DOL) for submission",
+      "Track submission confirmations and filing history"
+    ],
+    "integrations": [
+      "HRIS for employee census and demographic data",
+      "Compliance Reporting Tools",
+      "E-Filing Portals (EEOC, DOL, state agencies)",
+      "Data Validation and Quality Tools",
+      "Reporting History and Audit Logs"
+    ],
+    "dataSources": [
+      "Employee census and demographic data",
+      "Job categories and EEO classifications",
+      "Veteran status and disability data",
+      "Workplace injury and illness data (OSHA)",
+      "State-specific reporting requirements"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "document-report",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

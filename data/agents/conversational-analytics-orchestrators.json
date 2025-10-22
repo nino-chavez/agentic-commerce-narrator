@@ -1,0 +1,420 @@
+[
+  {
+    "id": "agent-voice-commerce-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Voice Commerce Orchestration Agent",
+    "description": "Enables full voice shopping by coordinating voice intent recognition, catalog optimization, personalization, and secure transaction management.",
+    "capabilities": [
+      "Orchestrate voice shopping workflows",
+      "Coordinate NLU intent recognition for shopping",
+      "Manage voice catalog presentation",
+      "Handle voice personalization and recommendations",
+      "Process secure voice authentication and payments",
+      "Track voice commerce performance"
+    ],
+    "integrations": [
+      "Alexa Skills Kit / Google Actions",
+      "Voice Platform (DialogFlow, Alexa Voice Service)",
+      "Product Catalog API",
+      "Payment API",
+      "Customer Profile System",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Voice interaction transcripts",
+      "Product catalog with voice-optimized descriptions",
+      "Customer voice history and preferences",
+      "Voice payment and authentication data",
+      "Voice commerce conversion metrics",
+      "Voice-first customer segments"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-conversational-ai-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Conversational AI Orchestration Agent",
+    "description": "Delivers 80%+ chatbot containment by coordinating deep learning NLU, multi-turn dialog, slot filling, transaction execution, and intelligent handoff.",
+    "capabilities": [
+      "Orchestrate conversational AI workflows",
+      "Coordinate NLU and intent classification",
+      "Manage multi-turn dialog state",
+      "Handle transaction execution via chat",
+      "Trigger intelligent human handoff",
+      "Continuous learning from interactions"
+    ],
+    "integrations": [
+      "Conversational AI Platform (Dialogflow, Rasa)",
+      "LLM API (GPT-4, Claude)",
+      "CRM System",
+      "Order Management System",
+      "Knowledge Base CMS",
+      "Live Agent Platform"
+    ],
+    "dataSources": [
+      "Chat transcripts and interaction history",
+      "Intent and entity training data",
+      "Customer context and profile",
+      "Order and account data",
+      "Containment rate and handoff metrics",
+      "Customer satisfaction feedback"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-ai-shopping-assistant-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "AI Shopping Assistant Orchestration Agent",
+    "description": "Transforms product discovery by coordinating conversational guidance, visual search, style matching, and intelligent product comparisons.",
+    "capabilities": [
+      "Orchestrate guided product discovery",
+      "Coordinate conversational clarification questions",
+      "Manage visual search and image matching",
+      "Handle style preference learning",
+      "Generate product comparisons and trade-off analysis",
+      "Track discovery effectiveness and conversion"
+    ],
+    "integrations": [
+      "Conversational AI Platform",
+      "Visual Search API (Google Cloud Vision, Clarifai)",
+      "Recommendation Engine",
+      "Product Catalog with rich attributes",
+      "Customer Behavior Analytics",
+      "E-commerce Platform"
+    ],
+    "dataSources": [
+      "Conversational discovery interactions",
+      "Visual search queries and results",
+      "Style preference data",
+      "Product comparison requests",
+      "Discovery-to-purchase conversion data",
+      "Customer feedback on recommendations"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-proactive-engagement-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Proactive Engagement Orchestration Agent",
+    "description": "Delivers timely, relevant notifications by coordinating trigger detection, message personalization, channel selection, and frequency management.",
+    "capabilities": [
+      "Orchestrate trigger-based engagement workflows",
+      "Coordinate real-time trigger detection",
+      "Manage message personalization per customer",
+      "Handle optimal channel and timing selection",
+      "Enforce frequency capping and preferences",
+      "Track engagement performance and opt-out rates"
+    ],
+    "integrations": [
+      "Customer Data Platform",
+      "Message Router (Braze, Iterable, Customer.io)",
+      "Campaign Automation",
+      "Channel APIs (email, SMS, push, in-app)",
+      "Analytics Platform",
+      "Preference Management System"
+    ],
+    "dataSources": [
+      "Real-time behavioral events (cart abandon, browse abandon)",
+      "Customer profiles and preferences",
+      "Message engagement history",
+      "Channel performance data",
+      "Frequency cap rules and settings",
+      "Opt-out and unsubscribe data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-knowledge-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Knowledge Management Orchestration Agent",
+    "description": "Transforms knowledge base by coordinating semantic search, AI answer generation, knowledge gap detection, and continuous improvement.",
+    "capabilities": [
+      "Orchestrate semantic knowledge search",
+      "Coordinate AI answer generation with citations",
+      "Identify knowledge gaps from unanswered queries",
+      "Trigger knowledge base updates from interactions",
+      "Manage content versioning and approval",
+      "Track self-service success and deflection"
+    ],
+    "integrations": [
+      "Vector Database (Pinecone, Weaviate)",
+      "LLM (GPT-4, Claude)",
+      "Knowledge Base CMS",
+      "Search Analytics",
+      "Support Ticket System",
+      "Content Approval Workflow"
+    ],
+    "dataSources": [
+      "Knowledge base content and metadata",
+      "Search queries and click-through data",
+      "Unanswered question logs",
+      "Support ticket themes",
+      "Answer quality feedback",
+      "Content usage and effectiveness metrics"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-predictive-analytics-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Predictive Analytics Orchestration Agent",
+    "description": "Accelerates ML model development by coordinating AutoML, model deployment, real-time prediction serving, and automated retraining.",
+    "capabilities": [
+      "Orchestrate end-to-end ML model lifecycle",
+      "Coordinate AutoML feature engineering and training",
+      "Manage model deployment with versioning",
+      "Serve real-time and batch predictions at scale",
+      "Monitor model performance and trigger retraining",
+      "Track model impact and business value"
+    ],
+    "integrations": [
+      "ML Platform (DataRobot, H2O.ai, AWS SageMaker)",
+      "MLflow for model lifecycle",
+      "Model Serving (SageMaker, Vertex AI, Seldon)",
+      "Monitoring Platform",
+      "Data Warehouse",
+      "Feature Store"
+    ],
+    "dataSources": [
+      "Training data with features and labels",
+      "Model performance metrics",
+      "Prediction serving logs",
+      "Model drift detection data",
+      "Business KPIs impacted by models",
+      "Retraining schedules and triggers"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-marketing-attribution-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Marketing Attribution Orchestration Agent",
+    "description": "Provides data-driven attribution by coordinating multi-touch modeling, incrementality testing, budget optimization, and performance reporting.",
+    "capabilities": [
+      "Orchestrate multi-touch attribution modeling",
+      "Coordinate incrementality experiments",
+      "Generate optimal budget allocation recommendations",
+      "Manage attribution reporting and insights",
+      "Balance last-click vs data-driven attribution",
+      "Track marketing efficiency and ROI"
+    ],
+    "integrations": [
+      "Attribution Platform (Rockerbox, Neustar, Google Analytics 4)",
+      "Experimentation Framework",
+      "BI Tool (Tableau, Looker)",
+      "Marketing Data Warehouse",
+      "Campaign Management Platforms",
+      "CRM System"
+    ],
+    "dataSources": [
+      "Cross-channel marketing touchpoint data",
+      "Conversion and revenue data",
+      "Incrementality test results",
+      "Media spend by channel",
+      "Customer journey data",
+      "Attribution model parameters"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-marketing-mix-modeling-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Marketing Mix Modeling Orchestrator",
+    "description": "Enables continuous MMM by coordinating econometric modeling, scenario planning, external factor integration, and optimization recommendations.",
+    "capabilities": [
+      "Orchestrate continuous MMM model refresh",
+      "Coordinate econometric model building",
+      "Manage scenario planning and what-if analysis",
+      "Integrate external factors (seasonality, competitors, economy)",
+      "Generate optimal media mix recommendations",
+      "Track MMM-driven decision impact"
+    ],
+    "integrations": [
+      "Statistical Modeling Platform (R, Python)",
+      "Data Warehouse with marketing and sales data",
+      "External Data APIs (weather, competitors, economic)",
+      "Scenario Planning Tool",
+      "Visualization Platform (Tableau, Power BI)",
+      "Marketing Planning Tools"
+    ],
+    "dataSources": [
+      "Marketing spend by channel (24+ months)",
+      "Sales and revenue data",
+      "External factors (weather, seasonality, competitors)",
+      "Pricing and promotion data",
+      "MMM model parameters and coefficients",
+      "Scenario assumptions and outcomes"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-churn-prevention-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Churn Prevention Orchestration Agent",
+    "description": "Reduces churn by 20-40% through coordinating churn risk scoring, reason detection, retention strategy selection, and proactive interventions.",
+    "capabilities": [
+      "Orchestrate churn prediction and prevention workflows",
+      "Coordinate churn risk scoring and monitoring",
+      "Identify likely churn reasons per customer",
+      "Select optimal retention tactic per customer",
+      "Trigger proactive intervention campaigns",
+      "Track churn reduction and program ROI"
+    ],
+    "integrations": [
+      "ML Platform for churn model serving",
+      "Customer Data Platform",
+      "Campaign Automation",
+      "CRM System",
+      "Customer Success Platform (Gainsight, ChurnZero)",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Customer churn history",
+      "Behavioral engagement data",
+      "Support and service interactions",
+      "Product usage and adoption metrics",
+      "Churn risk scores (real-time)",
+      "Retention campaign response data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-demand-intelligence-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Demand Intelligence Orchestration Agent",
+    "description": "Achieves 80-90% forecast accuracy by coordinating statistical forecasting, external signal integration, promotional impact modeling, and consensus.",
+    "capabilities": [
+      "Orchestrate demand forecasting workflows",
+      "Coordinate statistical and ML forecasting",
+      "Integrate external signals (weather, trends, social)",
+      "Model promotional lift and cannibalization",
+      "Facilitate consensus forecasting",
+      "Monitor forecast accuracy and bias"
+    ],
+    "integrations": [
+      "Forecasting Platform (Anaplan, o9, Blue Yonder)",
+      "External Data APIs (weather, economic, social)",
+      "ML Models for time-series and promotion",
+      "Collaboration Tool for consensus",
+      "ERP System",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Historical sales data (24+ months)",
+      "Causal factors (promotions, holidays, events)",
+      "External signals (weather, trends, economics)",
+      "Judgmental forecast overrides",
+      "Forecast accuracy metrics",
+      "Plan vs actual execution data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-intelligent-dashboard-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Intelligent Dashboard Orchestration Agent",
+    "description": "Delivers real-time insights by coordinating metric monitoring, ML-based anomaly detection, automated root cause analysis, and smart alerting.",
+    "capabilities": [
+      "Orchestrate real-time dashboard monitoring",
+      "Coordinate anomaly detection across all KPIs",
+      "Trigger automated root cause analysis",
+      "Manage smart alerting with noise reduction",
+      "Balance alert sensitivity vs specificity",
+      "Track insight consumption and action taken"
+    ],
+    "integrations": [
+      "BI Platform (Tableau, Looker, Power BI)",
+      "Streaming Analytics Platform",
+      "Anomaly Detection Engine",
+      "Alert Routing System",
+      "Collaboration Tools (Slack, Teams)",
+      "Incident Management Platform"
+    ],
+    "dataSources": [
+      "Real-time business metrics and KPIs",
+      "Historical metric baselines",
+      "Alert definitions and thresholds",
+      "Root cause analysis rules",
+      "Alert response and resolution data",
+      "User interaction and dashboard usage"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,444 @@
+[
+  {
+    "id": "function-points-rewards-accrual",
+    "type": "function",
+    "level": 4,
+    "label": "Points & Rewards Accrual",
+    "description": "Real-time points crediting with dynamic accrual rates and behavior-based bonus multipliers delivering 15-30% engagement increase through immediate gratification.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer completes purchase at POS or online checkout. 2. Transaction data batched overnight in loyalty system. 3. Points calculated using simple formula (1 point per $1 spent). 4. Points credited to account in batch process (1-2 day lag). 5. Customer sees points balance update days after purchase.",
+      "constraints": [
+        "1-2 day lag between purchase and points credit reduces gratification",
+        "Simple points formula (1pt/$1) lacks intelligence and differentiation",
+        "No bonus multipliers for strategic behaviors (reviews, referrals, social sharing)",
+        "Batch processing causes delays and customer confusion",
+        "No real-time visibility for customers or store associates",
+        "Static earning rates don't adapt to inventory or promotional goals"
+      ],
+      "metrics": ["Points crediting lag: 1-2 days", "Accrual formula: Fixed 1pt/$1", "Bonus multipliers: None"]
+    },
+    "agentic": {
+      "workflow": "1. Customer completes purchase at POS/online. 2. Points Accrual Agent instantly calculates points using dynamic rules: base rate + category bonuses + behavior multipliers. 3. Dynamic Multiplier Agent applies: 2x for first purchase this week, 3x for reviews, 5x for referrals, seasonal category bonuses. 4. Real-Time Processing Engine credits points immediately (within seconds). 5. Customer sees instant confirmation via app notification, receipt, or in-store display.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Points Accrual Agent", "Dynamic Multiplier Agent"],
+        "utilityAgents": ["Loyalty Platform API", "POS Integration", "Real-Time Processing Engine", "Rules Engine"]
+      },
+      "dataSources": [
+        "Real-time transaction data from POS and e-commerce",
+        "Customer purchase history and patterns",
+        "Product category and margin data",
+        "Promotional and bonus multiplier rules",
+        "Customer engagement actions (reviews, referrals)",
+        "Inventory and promotional priorities"
+      ],
+      "benefits": [
+        "Real-time gratification vs 1-2 day lag (instant dopamine hit)",
+        "15-30% engagement increase through immediate feedback",
+        "Dynamic earning rates optimize for business goals (inventory clearance, margins)",
+        "Behavior-based bonuses incentivize strategic actions (reviews 3x engagement)",
+        "Customer sees points accumulate instantly (gamification effect)",
+        "100% transaction accuracy vs batch processing errors"
+      ],
+      "metrics": ["Points crediting lag: <5 seconds", "Accrual formula: Dynamic multi-factor", "Bonus multipliers: 5-10 active rules"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time points crediting for online purchases", "Add bonus multipliers for reviews and referrals"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Real-time POS and e-commerce integration", "Loyalty platform with API", "Rules engine for dynamic multipliers", "Mobile app or notification system"]
+    },
+    "icon": "gift",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-personalized-rewards-offers",
+    "type": "function",
+    "level": 4,
+    "label": "Personalized Rewards & Offers",
+    "description": "AI-recommended rewards with 35-50% redemption rates vs 10-20% generic catalogs, plus 1:1 personalized offers delivering 2-3x response rates.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loyalty team creates generic rewards catalog (gift cards, merchandise, discounts). 2. All members see same catalog regardless of preferences. 3. Member must browse 100+ rewards to find something relevant. 4. Most rewards require high point thresholds (50K+ points). 5. Low redemption rate (10-20%) due to irrelevant or unattainable rewards.",
+      "constraints": [
+        "Generic catalog doesn't match individual preferences (book lover sees electronics)",
+        "10-20% redemption rate means points liability grows",
+        "High point thresholds discourage redemption (50K points for $50 reward)",
+        "No personalized offers based on purchase behavior",
+        "Static catalog doesn't adapt to seasonal or inventory needs",
+        "Mass promotional offers (same 10% off for everyone)"
+      ],
+      "metrics": ["Redemption rate: 10-20%", "Personalization: Generic catalog", "Offer response rate: 3-5%"]
+    },
+    "agentic": {
+      "workflow": "1. Reward Personalization Agent analyzes customer purchase history, category preferences, redemption patterns. 2. Agent curates personalized rewards catalog: prioritizes relevant categories, right point thresholds, aspirational items. 3. Redemption Optimization Agent recommends 3-5 'perfect for you' rewards prominently. 4. Agent generates 1:1 personalized offers: 'Spend $50 on coffee get 500 bonus points' for coffee buyer. 5. Agent optimizes offer timing, channel, and discount level per customer.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Reward Personalization Agent", "Redemption Optimization Agent"],
+        "utilityAgents": ["Recommendation Engine", "Customer Purchase History", "Offer Management System"]
+      },
+      "dataSources": [
+        "Customer purchase history and category affinity",
+        "Redemption history and preferences",
+        "Customer points balance and earning rate",
+        "Rewards catalog with attributes (category, brand, value)",
+        "Offer performance data (response rates by segment)",
+        "Inventory and margin data for targeted offers"
+      ],
+      "benefits": [
+        "35-50% redemption rate vs 10-20% (15-30 pt improvement)",
+        "Personalized catalog shows relevant rewards first (coffee lover sees coffee)",
+        "Right point thresholds per customer (attainable goals)",
+        "1:1 personalized offers deliver 2-3x response rate (12-15% vs 3-5%)",
+        "Reduced points liability through higher redemption",
+        "Targeted offers drive strategic behaviors (category penetration, margin mix)"
+      ],
+      "metrics": ["Redemption rate: 35-50%", "Personalization: Individual 1:1", "Offer response rate: 12-15%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement personalized reward recommendations", "Create category-specific bonus point offers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Customer purchase history data", "Recommendation engine or ML capability", "Offer management system", "Rewards catalog with metadata"]
+    },
+    "icon": "sparkles",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tier-status-management",
+    "type": "function",
+    "level": 4,
+    "label": "Tier & Status Management",
+    "description": "Rolling tier windows with dynamic benefits and predictive achievement alerts driving 20-35% increase in spend-to-next-tier through proactive engagement.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loyalty program has 3-4 tiers (Silver, Gold, Platinum). 2. Tier qualification based on annual spend (calendar year). 3. Customer discovers tier status on statement or email. 4. No proactive communication about progress to next tier. 5. Benefits static and generic (10% discount, free shipping).",
+      "constraints": [
+        "Annual evaluation means customer forgets tier status 10 months of year",
+        "Calendar year qualification creates cliff (reset Jan 1 demotivates Q4 spend)",
+        "No proactive alerts about tier achievement opportunity",
+        "Static benefits don't adapt to customer preferences",
+        "Customer doesn't know how close they are to next tier",
+        "12-month qualification period too long to motivate behavior"
+      ],
+      "metrics": ["Tier awareness: Low", "Qualification window: Annual calendar", "Proactive engagement: None"]
+    },
+    "agentic": {
+      "workflow": "1. Tier Management Agent tracks customer spend on rolling 12-month window (not calendar year). 2. Agent sends proactive alerts: 'Spend $150 more this month to reach Gold status!'. 3. Benefit Optimization Agent personalizes tier benefits: free shipping for online shopper, early access for trend follower. 4. Agent predicts tier achievement: 'Based on your spending pattern, you'll reach Platinum in 3 months'. 5. Agent triggers special challenges to accelerate tier progress.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Tier Management Agent", "Benefit Optimization Agent"],
+        "utilityAgents": ["Loyalty Platform API", "Customer Analytics", "Communication APIs", "Tier Rules Engine"]
+      },
+      "dataSources": [
+        "Customer transaction history (rolling 12-month)",
+        "Tier qualification rules and thresholds",
+        "Customer engagement and channel preferences",
+        "Benefit usage and redemption patterns",
+        "Predictive spend models",
+        "Tier achievement and retention rates"
+      ],
+      "benefits": [
+        "20-35% increase in spend-to-next-tier through proactive engagement",
+        "Rolling windows eliminate 'cliff effect' (smooth progression)",
+        "Proactive alerts drive incremental purchases (gamification)",
+        "Personalized benefits increase perceived value",
+        "Predictive alerts create urgency and motivation",
+        "Tier retention improves through ongoing communication"
+      ],
+      "metrics": ["Tier awareness: High (proactive alerts)", "Qualification window: Rolling 12-month", "Proactive engagement: Weekly/monthly"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement rolling tier qualification windows", "Send proactive tier progress alerts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Loyalty platform with tier logic", "Customer transaction data", "Communication platform (email, push, SMS)", "Tier analytics and reporting"]
+    },
+    "icon": "badge-check",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-coalition-partner-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Coalition & Partner Integration",
+    "description": "Real-time partner transactions with daily settlements and unified partner experiences driving 30-50% partner transaction growth through seamless integration.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer earns points at partner merchant (airline, hotel, credit card). 2. Partner sends transaction file to loyalty program operator (weekly/monthly). 3. Loyalty team manually reconciles partner transactions. 4. Points credited 30-60 days after earning. 5. Financial settlement processed monthly with manual reconciliation.",
+      "constraints": [
+        "30-60 day lag for partner points credit frustrates customers",
+        "Weekly/monthly batch files cause reconciliation issues",
+        "Manual settlement process error-prone and slow",
+        "No real-time visibility into partner transaction status",
+        "Limited partner offers (generic, not personalized)",
+        "Difficult to add new partners (long integration cycles)"
+      ],
+      "metrics": ["Partner points lag: 30-60 days", "Settlement cycle: Monthly", "Integration time: 6-12 months"]
+    },
+    "agentic": {
+      "workflow": "1. Customer earns points at partner merchant. 2. Coalition Integration Agent receives real-time transaction via API. 3. Agent validates transaction and credits points immediately. 4. Partner Reconciliation Agent tracks transactions and prepares daily settlements. 5. Agent settles partner accounts daily with automated reconciliation. 6. Unified partner portal shows real-time transaction status and performance.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Coalition Integration Agent", "Partner Reconciliation Agent"],
+        "utilityAgents": ["Partner APIs", "Loyalty Platform", "Settlement Engine", "Partner Portal"]
+      },
+      "dataSources": [
+        "Real-time partner transaction feeds",
+        "Partner contract terms and earning rates",
+        "Customer loyalty account data",
+        "Settlement and reconciliation data",
+        "Partner performance metrics",
+        "Financial accounting data"
+      ],
+      "benefits": [
+        "Real-time points credit vs 30-60 day lag (instant gratification)",
+        "Daily settlements vs monthly (improved cash flow for partners)",
+        "Automated reconciliation eliminates manual errors",
+        "30-50% partner transaction growth through seamless experience",
+        "Fast partner onboarding (weeks vs 6-12 months)",
+        "Unified customer experience across coalition partners"
+      ],
+      "metrics": ["Partner points lag: <5 seconds", "Settlement cycle: Daily", "Integration time: 2-4 weeks"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time API for top 2-3 partners", "Automate daily settlement reconciliation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Loyalty platform with partner API capability", "Real-time transaction processing", "Automated settlement engine", "Partner portal and reporting"]
+    },
+    "icon": "link",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-gamification-engagement-mechanics",
+    "type": "function",
+    "level": 4,
+    "label": "Gamification & Engagement Mechanics",
+    "description": "Challenges, badges, streaks, and leaderboards increasing active member rate from 20-30% to 50-70% with 2-3x app engagement through game mechanics.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loyalty program is transactional only (earn and burn points). 2. No gamification or engagement mechanics. 3. Customer interacts only when making purchase. 4. 20-30% active member rate (making 1+ purchase per year). 5. No emotional connection or program stickiness.",
+      "constraints": [
+        "Static points program lacks excitement and engagement",
+        "No incentive to interact with program between purchases",
+        "20-30% active member rate means 70-80% dormant members",
+        "Low app engagement (members only open app for balance check)",
+        "No differentiation from competitors' loyalty programs",
+        "Missed opportunities for non-transactional engagement"
+      ],
+      "metrics": ["Active member rate: 20-30%", "App engagement: Low (1-2x/month)", "Gamification: None"]
+    },
+    "agentic": {
+      "workflow": "1. Gamification Agent designs personalized challenges: 'Visit 3x this week for bonus', 'Try new category for badge'. 2. Challenge Design Agent tailors challenges to customer behavior and goals. 3. Agent tracks progress and sends motivational alerts: 'You're halfway to your challenge!'. 4. Agent awards badges, maintains streaks, and updates leaderboards. 5. Agent creates limited-time events (double points weekend, flash challenges).",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Gamification Agent", "Challenge Design Agent"],
+        "utilityAgents": ["Gamification Platform", "Mobile App API", "Push Notification", "Progress Tracking"]
+      },
+      "dataSources": [
+        "Customer transaction and visit history",
+        "Challenge completion and performance data",
+        "Customer engagement patterns",
+        "Badge and achievement library",
+        "Leaderboard and competition data",
+        "Mobile app usage data"
+      ],
+      "benefits": [
+        "50-70% active member rate vs 20-30% (20-40 pt improvement)",
+        "2-3x app engagement (daily opens vs monthly)",
+        "Challenges drive incremental visits (15-25% visit frequency increase)",
+        "Badges and streaks create emotional connection and stickiness",
+        "Leaderboards drive friendly competition and social engagement",
+        "Non-transactional engagement keeps brand top-of-mind"
+      ],
+      "metrics": ["Active member rate: 50-70%", "App engagement: High (10-20x/month)", "Gamification: 5-10 active mechanics"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch simple challenges (visit frequency, category trial)", "Implement streak tracking for consecutive visits"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Mobile app with push notifications", "Gamification platform or custom build", "Customer transaction tracking", "Challenge design and management tools"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-churn-prediction-winback",
+    "type": "function",
+    "level": 4,
+    "label": "Churn Prediction & Win-Back Campaigns",
+    "description": "Predictive churn models identify at-risk members 30-60 days ahead with proactive retention achieving 40-60% prevention rate vs 10-20% reactive win-back.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Member stops transacting for 6+ months (churned). 2. Marketing team identifies inactive members in quarterly report. 3. Generic win-back campaign sent to all inactive members ('We miss you, here's 10% off'). 4. 10-20% win-back rate with low ROI. 5. No proactive retention before churn occurs.",
+      "constraints": [
+        "Reactive approach waits until after churn (too late)",
+        "Generic win-back offers not tailored to churn reason",
+        "10-20% win-back rate means 80% lost forever",
+        "Quarterly identification means 3-month delay",
+        "No differentiation by customer value (VIP vs low-value treated same)",
+        "Missed opportunity for proactive retention"
+      ],
+      "metrics": ["Churn prediction: None (reactive)", "Win-back rate: 10-20%", "Prevention rate: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Churn Prediction Agent continuously scores members using ML: declining visit frequency, reduced basket size, engagement drop, category abandonment. 2. Agent flags at-risk members 30-60 days before likely churn. 3. Win-Back Campaign Agent triggers proactive retention: personalized offers, surprise rewards, re-engagement challenges. 4. Agent tailors intervention by value segment: VIP gets personal outreach, regular gets bonus offer. 5. Agent tracks effectiveness and adjusts models based on outcomes.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Churn Prediction Agent", "Win-Back Campaign Agent"],
+        "utilityAgents": ["Predictive Model", "Customer Analytics", "Campaign Management", "Offer Engine"]
+      },
+      "dataSources": [
+        "Customer transaction history and trends",
+        "Visit frequency and recency data",
+        "Engagement metrics (app usage, email opens)",
+        "Points earning and redemption patterns",
+        "Customer value and lifetime value data",
+        "Historical churn and win-back outcome data"
+      ],
+      "benefits": [
+        "40-60% churn prevention rate through proactive intervention",
+        "30-60 day advance warning enables timely action",
+        "Personalized retention offers 3x more effective than generic",
+        "60-80% overall churn reduction (prevention + win-back)",
+        "Higher ROI on retention vs acquisition spend",
+        "VIP customer retention maximizes lifetime value protection"
+      ],
+      "metrics": ["Churn prediction: 30-60 days ahead", "Win-back rate: 30-40%", "Prevention rate: 40-60%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build simple recency/frequency churn model", "Launch proactive retention campaign for VIP segment"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["12-24 months customer transaction data", "ML modeling capability or platform", "Campaign management system", "Customer value segmentation"]
+    },
+    "icon": "user-add",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-loyalty-analytics-roi-measurement",
+    "type": "function",
+    "level": 4,
+    "label": "Loyalty Analytics & ROI Measurement",
+    "description": "Member lifetime value analysis with incremental revenue attribution and program ROI dashboards showing 2-5x ROI for mature programs with data-driven optimization.",
+    "parentCapability": "capability-loyalty-program-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loyalty team tracks basic metrics: total members, active rate, points issued/redeemed. 2. Finance tracks points liability (accounting requirement). 3. Annual report shows program costs (discounts, rewards) vs revenue. 4. No incremental revenue attribution (can't isolate loyalty impact). 5. Program ROI unclear - is it profitable or not?",
+      "constraints": [
+        "Basic metrics don't show business impact (members doesn't equal profit)",
+        "No visibility into member lifetime value or value creation",
+        "Can't measure incremental revenue (what revenue is because of loyalty?)",
+        "Program costs visible but benefits unclear",
+        "Executives question loyalty investment without ROI proof",
+        "No data-driven optimization (which elements drive ROI?)"
+      ],
+      "metrics": ["Member LTV tracking: No", "Incremental revenue: Unknown", "Program ROI: Unclear"]
+    },
+    "agentic": {
+      "workflow": "1. Loyalty Analytics Agent calculates member lifetime value: current value, predicted future value, loyalty lift. 2. ROI Attribution Agent measures incremental revenue: matched control group analysis, loyalty vs non-loyalty spend. 3. Agent attributes revenue lift to program elements: points, tiers, gamification, personalization. 4. Agent quantifies program ROI: (incremental revenue - program costs) / program costs. 5. Real-time dashboards show program health, member value, and ROI trends.",
+      "agents": {
+        "orchestrator": "Loyalty Program Orchestration Agent",
+        "superAgents": ["Loyalty Analytics Agent", "ROI Attribution Agent"],
+        "utilityAgents": ["Analytics Platform", "BI Dashboard", "Financial System", "Attribution Model"]
+      },
+      "dataSources": [
+        "Member transaction history and lifetime value",
+        "Matched control group (non-members for comparison)",
+        "Program cost data (rewards, discounts, operations)",
+        "Member acquisition and retention costs",
+        "Engagement and behavioral metrics",
+        "Program element participation and impact"
+      ],
+      "benefits": [
+        "Clear program ROI visibility (2-5x for mature programs)",
+        "Member LTV analysis quantifies value creation",
+        "Incremental revenue attribution proves loyalty impact",
+        "Data-driven optimization of program elements",
+        "Executive confidence in loyalty investment",
+        "Identify high-ROI tactics and double down"
+      ],
+      "metrics": ["Member LTV tracking: Yes (real-time)", "Incremental revenue: Quantified", "Program ROI: 2-5x"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement member LTV dashboard", "Create matched control group for incremental analysis"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer transaction data with member/non-member flag", "Program cost tracking", "Analytics platform and BI tools", "Statistical analysis capability for incrementality"]
+    },
+    "icon": "trending-up",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

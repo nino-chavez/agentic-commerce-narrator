@@ -1,0 +1,395 @@
+[
+  {
+    "id": "function-intelligent-alert-correlation-noise-reduction",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Alert Correlation & Noise Reduction",
+    "description": "ML-powered alert correlation with 90% noise reduction grouping root-cause alerts from alert storms of 10,000+ down to 1,000 actionable alerts reducing false positive rate from 95% to 20%.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Monitoring tools (APM, infrastructure monitoring, log aggregation, synthetic monitoring) generate thousands of alerts when issues occur. 2. Database server fails triggering 10,000+ alerts: database unreachable, application errors, API timeouts, load balancer health checks failing, customer-facing errors. 3. On-call engineer receives 500+ alert emails, SMS, Slack messages in 10 minutes (alert storm, cannot process). 4. Engineer logs into 5-10 different monitoring tools attempting to correlate alerts and identify root cause. 5. 95% of alerts are symptoms, not root cause (database failure is root cause, all other alerts are cascading effects). 6. Engineer spends 1-2 hours triaging alert storm, finally identifies database failure as root cause. 7. Alert fatigue leads to ignoring alerts (95% false positives, boy-who-cried-wolf syndrome).",
+      "constraints": [
+        "Alert storms generate 10,000+ alerts during outages overwhelming teams",
+        "95% false positive rate (symptoms flagged as incidents, not root cause)",
+        "1-2 hours triage time to identify root cause among alert noise",
+        "On-call engineers burned out from pager fatigue (3am alerts for false positives)",
+        "Multiple monitoring tools not integrated (log into 5-10 dashboards manually)",
+        "Alert fatigue causes teams to ignore alerts (desensitized to noise)"
+      ],
+      "metrics": ["Alert volume: 10,000-50,000/day", "False positive rate: 95%", "Triage time: 1-2 hours", "On-call burnout: High"]
+    },
+    "agentic": {
+      "workflow": "1. AIOps Platform Agent ingests alerts from all monitoring tools into unified observability platform: APM, infrastructure, logs, synthetic, security. 2. Alert Correlation Agent detects database failure alert, immediately correlates 10,000 cascading alerts to single root-cause incident: 'Database server DB-PROD-01 failed at 2:15am causing 9,847 downstream alerts - root cause incident created'. 3. Noise Reduction Agent suppresses symptom alerts, sends single grouped alert to on-call engineer: 'Database failure affecting 15 applications, 120 API endpoints, estimated customer impact 50,000 users'. 4. Agent provides correlated context: timeline of events, affected services (dependency map), similar historical incidents, recommended runbooks. 5. 90% noise reduction (10,000 alerts → 1,000 actionable grouped incidents) reduces alert fatigue. 6. False positive rate drops from 95% to 20% through ML-based filtering (learns what's real issue vs noise). 7. On-call engineer receives single Slack alert with full context, starts remediation immediately (no 1-2 hour triage).",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Alert Correlation Agent", "Noise Reduction Agent"],
+        "utilityAgents": ["APM Tools (Datadog, New Relic)", "Log Aggregation (Splunk, ELK)", "Monitoring Platforms", "Service Dependency Mapper"]
+      },
+      "dataSources": [
+        "Alerts from all monitoring tools (APM, infra, logs, synthetic, security)",
+        "Service dependency topology (which services depend on what)",
+        "Historical incident patterns and alert correlations",
+        "Alert metadata (severity, timestamp, source, affected component)",
+        "ML models for alert classification and false positive detection",
+        "Runbook library for common incident types"
+      ],
+      "benefits": [
+        "90% noise reduction (10,000 → 1,000 actionable alerts) eliminates alert fatigue",
+        "95% → 20% false positive rate improvement through ML filtering",
+        "1-2 hours → 5-10 minutes triage time (immediate root cause identification)",
+        "Single grouped alert vs 500+ individual alerts (on-call engineer sanity)",
+        "Correlated context (timeline, dependencies, runbooks) accelerates remediation",
+        "On-call engineer burnout reduced (fewer false alarms, better signal-to-noise)"
+      ],
+      "metrics": ["Alert volume: 1,000-5,000/day (actionable)", "False positive rate: 20%", "Triage time: 5-10 minutes", "On-call burnout: Low"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AIOps platform for unified alert ingestion from top 5 monitoring tools", "Implement basic alert deduplication and grouping by affected component", "Enable service dependency mapping for topology-aware correlation"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["AIOps platform (Moog, BigPanda, Dynatrace, Datadog)", "Integration with all monitoring tools (APM, infrastructure, logs)", "Service dependency topology mapping (manual or auto-discovered)", "Historical alert and incident data (6-12 months) for ML training", "Alert classification taxonomy (infrastructure, application, security)", "Incident management platform integration (PagerDuty, Opsgenie)", "On-call team training on AIOps workflows"]
+    },
+    "icon": "filter",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-anomaly-detection-pattern-recognition",
+    "type": "function",
+    "level": 4,
+    "label": "Anomaly Detection & Pattern Recognition",
+    "description": "ML baseline learning with auto-anomaly detection achieving 95% faster issue detection reducing mean time to detect from 2-4 hours to <5 minutes through predictive versus reactive monitoring.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Monitoring configured with static thresholds: CPU >80% alert, memory >90% alert, API latency >2 seconds alert. 2. Application performance degrades slowly over 2-4 hours (latency increases from 500ms to 1.8 seconds). 3. No alert triggered because latency below 2-second threshold (degradation invisible). 4. Customers complain about slow website via support tickets, social media. 5. On-call engineer investigates customer complaints 2-4 hours after issue started. 6. Engineer discovers latency increased 300% (500ms → 1.8 seconds) but below static threshold. 7. Static thresholds miss gradual performance degradations, only catch hard failures (all-or-nothing monitoring).",
+      "constraints": [
+        "Static thresholds create 2-4 hour detection delay (miss gradual degradation)",
+        "All-or-nothing alerting (CPU >80% fires, CPU 79% silent even if abnormal)",
+        "Manual threshold tuning required for each metric (thousands of metrics impossible)",
+        "Seasonal patterns ignored (Black Friday traffic spike alerts as anomaly)",
+        "No pattern recognition (can't detect unusual combinations of normal metrics)",
+        "Customer complaints first indicator of issues (reactive detection)"
+      ],
+      "metrics": ["Mean time to detect: 2-4 hours", "Detection method: Static thresholds", "False negatives: High (miss gradual issues)", "Threshold tuning: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Anomaly Detection Agent learns normal baselines for all metrics automatically: API latency normally 500ms during business hours, 300ms overnight, 800ms during Black Friday. 2. Agent monitors metrics in real-time, detects API latency increased to 1.5 seconds (300% above baseline). 3. Agent triggers anomaly alert within 5 minutes: 'API latency anomaly detected - 1.5s current vs 500ms baseline (200% deviation), gradual increase over 30 minutes'. 4. Pattern Recognition Agent analyzes correlated metrics: 'Database query time increased 250%, memory cache hit rate dropped from 95% to 60% - likely database performance issue'. 5. Agent compares to historical patterns: 'Similar pattern occurred 6 months ago during schema migration - database index missing?'. 6. Agent provides context: time-series charts showing baseline vs current, correlated metrics, similar past incidents. 7. 95% faster detection (5 min vs 2-4 hours) through ML-based anomaly detection vs static thresholds.",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Anomaly Detection Agent", "Pattern Recognition Agent"],
+        "utilityAgents": ["Time-Series Database", "ML Platform", "APM Integration", "Metrics Aggregation"]
+      },
+      "dataSources": [
+        "Time-series metrics (CPU, memory, latency, throughput, error rates)",
+        "Historical metric baselines by time of day, day of week, seasonality",
+        "Metric correlation data (which metrics change together)",
+        "Incident history with root cause and metric signatures",
+        "Application topology and dependencies",
+        "Business event calendar (Black Friday, product launches, maintenance)"
+      ],
+      "benefits": [
+        "95% faster detection (5 min vs 2-4 hours) through ML baselines",
+        "Gradual degradation detected before customer impact (300% latency increase caught)",
+        "Automatic threshold tuning for thousands of metrics (no manual configuration)",
+        "Seasonal awareness (Black Friday spike expected, not anomaly)",
+        "Pattern recognition identifies multi-metric issues (database + cache correlation)",
+        "Proactive detection vs reactive customer complaints"
+      ],
+      "metrics": ["Mean time to detect: <5 minutes", "Detection method: ML baselines", "False negatives: Low (catch gradual issues)", "Threshold tuning: Automatic"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML anomaly detection for top 10 critical application metrics (latency, error rate)", "Implement automatic baseline learning for business hours vs off-hours patterns", "Enable multi-metric correlation analysis for database + application performance"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Time-series database for metric storage (InfluxDB, Prometheus)", "ML platform for anomaly detection models (Datadog, Dynatrace, or custom)", "APM integration for application metrics", "Historical metric data (3-6 months minimum) for baseline learning", "Business event calendar for seasonal pattern exclusions", "Incident history for pattern matching", "Integration with alerting system for anomaly notifications"]
+    },
+    "icon": "trending-up",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-auto-remediation-self-healing",
+    "type": "function",
+    "level": 4,
+    "label": "Auto-Remediation & Self-Healing",
+    "description": "Automated runbooks with self-healing scripts achieving 70-80% auto-resolution rate and 85-95% MTTR reduction from 2-8 hours to 10-30 minutes with HITL gates for high-risk production changes.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Alert triggered: web server health check failing, users seeing 503 errors. 2. On-call engineer paged via PagerDuty at 2am, wakes up, logs into VPN. 3. Engineer investigates: checks server logs, discovers web service crashed due to out-of-memory error. 4. Engineer manually restarts web service via command line: 'systemctl restart nginx'. 5. Service recovers, health checks pass, users can access website again. 6. Total incident duration 2-8 hours (detection 30 min, investigation 1-2 hours, remediation 5 min, validation 30 min). 7. Same issue recurs next week, engineer manually restarts again (no automation, repetitive toil).",
+      "constraints": [
+        "Manual remediation requires human intervention (on-call engineer woken at 2am)",
+        "2-8 hour MTTR due to human response time and investigation",
+        "Repetitive toil (same incidents resolved manually each time)",
+        "Runbooks documented but not automated (engineer follows steps manually)",
+        "No self-healing (system cannot fix itself, requires human)",
+        "Downtime impacts customers while waiting for human response"
+      ],
+      "metrics": ["Mean time to resolution: 2-8 hours", "Auto-resolution rate: 0%", "Incident recurrence: High (same issues repeat)", "On-call interventions: 10-20/month"]
+    },
+    "agentic": {
+      "workflow": "1. Alert triggered: web server health check failing, Auto-Remediation Agent receives alert. 2. Agent checks confidence score: 'Web service crash due to out-of-memory - known issue, 95% confidence, auto-remediate approved'. 3. Self-Healing Agent executes runbook automatically: restart nginx service, validate health checks, verify customer traffic recovered. 4. Remediation completes in 10-30 minutes (detect 5 min, auto-restart 2 min, validation 5 min) vs 2-8 hours manual. 5. Agent logs actions: 'Incident auto-resolved: nginx restarted, service recovered, no human intervention needed'. 6. For high-risk scenarios (production database restart, customer-facing service changes), agent requires human approval before executing. 7. 70-80% auto-resolution rate (no human needed), 85-95% MTTR reduction, on-call engineer only paged for complex issues.",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Auto-Remediation Agent", "Self-Healing Agent"],
+        "utilityAgents": ["Runbook Automation Platform", "Infrastructure APIs (Kubernetes, AWS)", "Orchestration Engine", "Validation Service"]
+      },
+      "dataSources": [
+        "Incident alerts with root cause classification",
+        "Runbook library with remediation steps and automation scripts",
+        "Confidence scores for remediation actions (success likelihood)",
+        "Infrastructure APIs for service restarts, scaling, configuration",
+        "Validation checks (health checks, traffic recovery, error rates)",
+        "HITL approval policies for high-risk actions",
+        "Incident history with remediation outcomes"
+      ],
+      "benefits": [
+        "85-95% MTTR reduction (10-30 min vs 2-8 hours) through automation",
+        "70-80% auto-resolution rate eliminates human intervention for common issues",
+        "On-call engineer only paged for complex issues (10-20/month → 2-4/month)",
+        "Self-healing reduces customer-facing downtime (immediate response vs human delay)",
+        "Runbook automation ensures consistent remediation (no human error)",
+        "HITL gates prevent unsafe auto-remediation of high-risk production changes"
+      ],
+      "metrics": ["Mean time to resolution: 10-30 minutes", "Auto-resolution rate: 70-80%", "Incident recurrence: Low (auto-remediated immediately)", "On-call interventions: 2-4/month"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Production database restarts, customer-facing service configuration changes, infrastructure scaling affecting >10,000 users",
+      "policy": "Auto-remediation agent must request human approval via Slack/PagerDuty before executing high-risk actions. On-call engineer reviews proposed action, approves or rejects within 5 minutes. If no response in 10 minutes, escalate to secondary on-call."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate top 5 common incident runbooks (service restart, cache clear, scale up)", "Implement confidence scoring for remediation actions (auto-execute if >90% confidence)", "Enable HITL approval workflow for production database and high-risk changes"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Runbook automation platform (Ansible, Rundeck, StackStorm)", "Infrastructure APIs for service control (Kubernetes, AWS, Azure)", "Runbook library documented with remediation steps", "Confidence scoring model for remediation success prediction", "Validation checks for remediation outcomes (health checks, traffic monitoring)", "HITL approval workflow and escalation policies", "Rollback capability for failed remediation attempts"]
+    },
+    "icon": "refresh",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-capacity-planning-forecasting",
+    "type": "function",
+    "level": 4,
+    "label": "Capacity Planning & Forecasting",
+    "description": "ML-powered demand forecasting with auto-scaling recommendations achieving 30-50% infrastructure cost reduction and predictive versus reactive scaling eliminating over-provisioning waste.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Application deployed with fixed infrastructure: 10 web servers, 5 application servers, 2 database servers. 2. Quarterly capacity review meeting: infrastructure team reviews CPU/memory utilization reports. 3. Utilization averages 40-60% (over-provisioned for peak capacity, wasted during normal periods). 4. Black Friday approaching, team manually adds 20 more web servers 'to be safe' (guess-based scaling). 5. Black Friday traffic spike occurs, infrastructure handles load but grossly over-provisioned (30% utilization). 6. Post-Black Friday, team forgets to scale down servers for 2-3 weeks (paying for unused capacity). 7. 40-60% over-provisioning waste due to reactive scaling and lack of forecasting.",
+      "constraints": [
+        "Quarterly capacity reviews too infrequent (miss emerging issues)",
+        "40-60% over-provisioning waste (sized for peak, idle during normal periods)",
+        "Manual scaling for events (Black Friday) guess-based and inefficient",
+        "No demand forecasting (can't predict future capacity needs)",
+        "Scale-down forgotten after events (2-3 weeks of wasted spend)",
+        "Reactive scaling (add capacity after performance degrades, not proactively)"
+      ],
+      "metrics": ["Infrastructure utilization: 40-60%", "Over-provisioning waste: 40-60%", "Scaling approach: Reactive (manual)", "Capacity planning: Quarterly reviews"]
+    },
+    "agentic": {
+      "workflow": "1. Capacity Forecasting Agent analyzes historical traffic patterns: learns Black Friday traffic 5x normal, Cyber Monday 3x, summer months 20% lower than winter. 2. Agent forecasts demand 30-90 days ahead: 'Black Friday traffic projected at 500K requests/min (vs 100K normal) - recommend scaling web servers from 10 to 35 units starting Nov 20'. 3. Auto-Scaling Recommendation Agent provides optimal infrastructure configuration: 'Current: 10 web servers at 45% utilization ($5K/month), Recommended: 6 web servers at 70% utilization ($3K/month) - save $2K/month'. 4. Agent implements auto-scaling policies: scale up when CPU >70% for 5 min, scale down when CPU <40% for 30 min (prevent over-provisioning). 5. Agent monitors cost optimization opportunities: 'Application servers can move from c5.2xlarge to c5.xlarge instances - save 40% ($8K/month) with no performance impact'. 6. Agent auto-scales for Black Friday (10 → 35 servers at peak), auto-scales down after event (35 → 12 servers) - optimal utilization 65-75%. 7. 30-50% infrastructure cost reduction through ML-powered forecasting and auto-scaling vs manual quarterly reviews.",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Capacity Forecasting Agent", "Auto-Scaling Recommendation Agent"],
+        "utilityAgents": ["Cloud Provider APIs", "Metrics Platform", "Cost Management Tools", "Forecasting Engine"]
+      },
+      "dataSources": [
+        "Historical traffic and resource utilization patterns",
+        "Seasonal trends and business event calendar (Black Friday, product launches)",
+        "Current infrastructure configuration and costs",
+        "Cloud provider pricing and instance type performance data",
+        "Application performance requirements and SLA targets",
+        "Growth projections and business forecasts",
+        "Auto-scaling policy configurations and history"
+      ],
+      "benefits": [
+        "30-50% infrastructure cost reduction through rightsizing and auto-scaling",
+        "ML forecasting predicts demand 30-90 days ahead (proactive vs reactive)",
+        "Auto-scaling eliminates manual scale-up/scale-down operations",
+        "Optimal utilization 65-75% (vs 40-60% over-provisioning waste)",
+        "Event scaling automated (Black Friday, Cyber Monday) with post-event scale-down",
+        "Instance type optimization (move to smaller instances when appropriate)"
+      ],
+      "metrics": ["Infrastructure utilization: 65-75%", "Over-provisioning waste: 10-20%", "Scaling approach: Predictive (auto-scaling)", "Capacity planning: Continuous (ML forecasting)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy auto-scaling for web tier based on CPU/memory thresholds", "Implement ML demand forecasting for top 3 business events (Black Friday, Cyber Monday, holidays)", "Enable infrastructure rightsizing recommendations from cloud cost management tools"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Cloud provider APIs for auto-scaling (AWS Auto Scaling, Azure VMSS)", "Historical traffic and utilization data (12-24 months) for ML training", "Metrics platform for real-time resource monitoring", "Cost management tools (AWS Cost Explorer, Azure Cost Management)", "Business event calendar for seasonal pattern modeling", "ML forecasting platform or custom models", "Auto-scaling policy framework and testing procedures"]
+    },
+    "icon": "chart-square-bar",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-incident-prediction-prevention",
+    "type": "function",
+    "level": 4,
+    "label": "Incident Prediction & Prevention",
+    "description": "ML models predicting failures 4-24 hours ahead with 60-80% accuracy achieving 40-60% incident prevention through proactive intervention versus reactive response.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Infrastructure and applications monitored for failures after they occur. 2. Database server runs out of disk space at 3am, crashes, takes down customer-facing website. 3. On-call engineer paged, investigates, discovers disk full (100% utilization). 4. Engineer increases disk capacity, restarts database, website recovers after 2-4 hour outage. 5. Post-incident review: 'Disk utilization growing 5GB/day, would have filled in 10 days - should have been predicted'. 6. No predictive capability (all incidents reactive, fix after failure occurs). 7. Same pattern repeats for other failure modes (memory leaks, connection pool exhaustion, certificate expiration).",
+      "constraints": [
+        "Reactive incident response (fix after failure, no prevention)",
+        "No failure prediction (incidents discovered when they happen)",
+        "Preventable incidents cause customer-facing outages",
+        "Post-incident reviews identify predictable issues (disk growth, memory leaks)",
+        "Manual monitoring can't track thousands of potential failure indicators",
+        "No proactive intervention (wait for failure before acting)"
+      ],
+      "metrics": ["Incident prediction: None (reactive)", "Preventable incidents: 40-60% (discovered in post-mortems)", "Advance warning: None", "Proactive interventions: 0"]
+    },
+    "agentic": {
+      "workflow": "1. Incident Prediction Agent monitors thousands of failure indicators: disk utilization growth, memory leak patterns, certificate expiration dates, API error rate trends, database connection pool saturation. 2. Agent predicts database disk space failure 7 days in advance: 'DB-PROD-01 disk utilization 85%, growing 5GB/day, will reach 100% in 7 days - recommend disk expansion before failure'. 3. Preventive Action Agent creates proactive work order: 'Expand DB-PROD-01 disk from 500GB to 1TB before failure projected Nov 15'. 4. Infrastructure team expands disk capacity during maintenance window Nov 10 (5 days before predicted failure). 5. Incident prevented - database never runs out of space, no customer-facing outage. 6. Agent tracks prediction accuracy: 'Last 30 days - 25 incidents predicted, 18 prevented (72% prevention rate), 5 false positives, 2 still occurred (88% accuracy)'. 7. 40-60% incident prevention through ML-powered prediction and proactive intervention vs reactive response.",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Incident Prediction Agent", "Preventive Action Agent"],
+        "utilityAgents": ["Historical Incident Data", "Log Analytics", "Performance Metrics", "Prediction Models"]
+      },
+      "dataSources": [
+        "Historical incident data with failure signatures and precursors",
+        "Time-series metrics (disk growth, memory usage, connection pools)",
+        "Application and infrastructure logs with error patterns",
+        "Certificate expiration data and renewal tracking",
+        "API error rates and latency trends",
+        "Database connection pool utilization",
+        "Network traffic patterns and anomalies"
+      ],
+      "benefits": [
+        "40-60% incident prevention through proactive intervention",
+        "4-24 hour advance warning enables preventive action before failure",
+        "ML models identify failure patterns humans miss (disk growth, memory leaks)",
+        "Proactive work orders created automatically (no manual monitoring required)",
+        "Customer-facing outages avoided (prevention vs reactive response)",
+        "Prediction accuracy tracking enables continuous model improvement"
+      ],
+      "metrics": ["Incident prediction: 4-24 hours advance", "Preventable incidents: 40-60% prevented", "Advance warning: 4-24 hours", "Proactive interventions: 20-40/month"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy disk space growth prediction for top 10 critical databases", "Implement SSL certificate expiration monitoring with 30-day advance alerts", "Enable memory leak detection for application servers with predictive restart recommendations"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Historical incident data (12-24 months) for ML training", "Time-series database for metric trend analysis", "Log analytics platform for error pattern detection", "ML platform for prediction model development and training", "Infrastructure APIs for proactive remediation actions", "Work order system integration for preventive maintenance", "Accuracy tracking and feedback loop for model improvement"]
+    },
+    "icon": "shield-exclamation",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-service-dependency-mapping-impact-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Service Dependency Mapping & Impact Analysis",
+    "description": "Auto-discovery of service dependencies with real-time topology and instant blast radius analysis replacing manual outdated documentation enabling accurate impact assessment.",
+    "parentCapability": "capability-aiops-monitoring",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Application architecture documented in PowerPoint slides or Visio diagrams 2 years ago (outdated). 2. Microservices architecture evolves: new services added, dependencies changed, documentation not updated. 3. Database maintenance scheduled for Saturday 2am, assumed to impact only Billing application. 4. Database taken offline, Billing, Orders, Inventory, Shipping applications all fail (unknown dependencies). 5. Customer-facing website completely down, emergency rollback of maintenance. 6. Post-incident review discovers 15 applications depend on database (only 1 documented). 7. No real-time dependency visibility (rely on tribal knowledge or outdated docs).",
+      "constraints": [
+        "Manual dependency documentation outdated (last updated 2+ years ago)",
+        "Unknown dependencies discovered during outages (blast radius surprise)",
+        "Change impact analysis inaccurate (maintenance affects more than expected)",
+        "Tribal knowledge (only senior engineers know true dependencies)",
+        "Microservices complexity (hundreds of services, thousands of dependencies)",
+        "No automated discovery (manual documentation impossible to maintain)"
+      ],
+      "metrics": ["Dependency accuracy: 30-50% (outdated docs)", "Impact analysis: Manual (tribal knowledge)", "Discovery method: Manual documentation", "Update frequency: Annual (if at all)"]
+    },
+    "agentic": {
+      "workflow": "1. Service Dependency Agent auto-discovers dependencies in real-time: analyzes network traffic, service mesh data, API calls, database connections. 2. Agent builds dynamic topology map: 'Billing application depends on: Payment Gateway API, Customer DB, Tax Calculation Service, Email Notification Service'. 3. Agent detects dependency changes automatically: 'New dependency added: Billing → Fraud Detection Service (deployed yesterday, not documented)'. 4. Impact Analysis Agent receives change request: 'Database maintenance scheduled Saturday 2am - analyze blast radius'. 5. Agent performs instant impact analysis: 'Customer DB maintenance will affect: Billing, Orders, Inventory, Shipping, Customer Portal (15 services total), estimated customer impact 100K users, recommend notify application owners'. 6. Agent provides mitigation recommendations: 'Enable read-replica failover, schedule maintenance during 3am-5am lowest traffic window, send advance notification to affected teams'. 7. Real-time dependency visibility enables accurate impact assessment vs manual outdated documentation.",
+      "agents": {
+        "orchestrator": "AIOps Orchestration Agent",
+        "superAgents": ["Service Dependency Agent", "Impact Analysis Agent"],
+        "utilityAgents": ["Service Mesh Integration (Istio, Linkerd)", "APM Tools", "CMDB API", "Network Discovery"]
+      },
+      "dataSources": [
+        "Network traffic analysis (TCP connections, API calls)",
+        "Service mesh observability data (Istio, Linkerd)",
+        "APM distributed tracing (service-to-service calls)",
+        "Database connection logs and query patterns",
+        "CMDB configuration items and relationships",
+        "Cloud provider metadata (AWS, Azure, GCP resources)",
+        "Application deployment manifests (Kubernetes, Docker)"
+      ],
+      "benefits": [
+        "Real-time dependency discovery vs 2-year outdated documentation",
+        "Instant blast radius analysis (15 affected services identified in seconds)",
+        "Auto-update as dependencies change (new services, API integrations)",
+        "Accurate change impact assessment prevents surprise outages",
+        "Mitigation recommendations based on dependency analysis",
+        "Service mesh integration provides continuous visibility"
+      ],
+      "metrics": ["Dependency accuracy: 95%+ (real-time auto-discovery)", "Impact analysis: Automated (instant)", "Discovery method: Auto-discovery (network, service mesh)", "Update frequency: Real-time (continuous)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy service mesh (Istio, Linkerd) for microservices dependency visibility", "Implement network traffic analysis for database connection discovery", "Enable APM distributed tracing for service-to-service call mapping"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Service mesh deployment (Istio, Linkerd, Consul) for microservices", "APM tools with distributed tracing capability", "Network discovery tools for TCP connection mapping", "CMDB integration for infrastructure relationships", "Cloud provider APIs for resource metadata", "Kubernetes/container platform integration for application topology", "Change management integration for impact analysis automation"]
+    },
+    "icon": "view-grid-add",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

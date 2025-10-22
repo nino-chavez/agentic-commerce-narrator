@@ -1,0 +1,443 @@
+[
+  {
+    "id": "function-email-campaign-creation-scheduling",
+    "type": "function",
+    "level": 4,
+    "label": "Email Campaign Creation & Scheduling",
+    "description": "AI-assisted email creation with automated content generation, template selection, and intelligent scheduling reducing campaign creation time by 60-75%.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing coordinator manually builds email campaign (select template, write copy, add images, configure links). 2. Designer creates custom graphics for campaign (1-2 days). 3. Coordinator manually segments audience by uploading CSV lists. 4. Schedule campaign for fixed send time (e.g., Tuesday 10am for everyone). 5. Campaign creation takes 6-10 hours total across 3-5 days.",
+      "constraints": [
+        "Manual email building requires 4-6 hours of coordinator time",
+        "Designer bottleneck adds 1-2 day delays for custom graphics",
+        "CSV-based segmentation error-prone and limited in sophistication",
+        "Fixed send time ignores customer time zones and engagement patterns",
+        "No content personalization beyond mail merge fields",
+        "Campaign creation limited by human bandwidth (1-2 campaigns/week max)"
+      ],
+      "metrics": ["Creation time: 6-10 hours", "Campaign velocity: 1-2/week", "Personalization: Basic merge fields"]
+    },
+    "agentic": {
+      "workflow": "1. Campaign Creation Agent receives campaign brief (objective, audience, product/offer). 2. Content Generation Agent creates email copy using brand guidelines, product data, and past top-performing messaging. 3. Design Agent selects optimal template and generates on-brand creative using product images and brand assets. 4. Audience Segmentation Agent builds sophisticated segments using CDP data and behavioral criteria. 5. Schedule Optimization Agent determines optimal send time per customer based on engagement history.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Campaign Creation Agent", "Content Generation Agent", "Design Agent"],
+        "utilityAgents": ["Email Platform", "CDP", "DAM System", "Send Time Optimization"]
+      },
+      "dataSources": [
+        "Brand guidelines and approved messaging",
+        "Product catalog and inventory data",
+        "Historical email performance by segment",
+        "Customer behavioral data and preferences",
+        "Digital asset library (images, templates)",
+        "Engagement patterns by time of day and day of week"
+      ],
+      "benefits": [
+        "60-75% reduction in campaign creation time (6-10 hours to 1.5-2.5 hours)",
+        "3-5x campaign velocity (6-10 campaigns/week vs 1-2)",
+        "Automated content generation maintains brand voice consistency",
+        "Sophisticated audience segmentation using CDP vs manual CSV uploads",
+        "Personalized send times improve open rates by 15-25%",
+        "Designer freed from routine campaign work to focus on strategic creative"
+      ],
+      "metrics": ["Creation time: 1.5-2.5 hours", "Campaign velocity: 6-10/week", "Personalization: Dynamic content + timing"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement send time optimization", "Deploy AI-assisted subject line generation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Email marketing platform", "Content generation tools", "Customer Data Platform", "Historical engagement data"]
+    },
+    "icon": "mail",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-email-personalization-dynamic-content",
+    "type": "function",
+    "level": 4,
+    "label": "Email Personalization & Dynamic Content",
+    "description": "1:1 email personalization with dynamic content blocks, product recommendations, and behavioral targeting delivering 40-70% engagement improvement vs batch-and-blast.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing creates single email version for entire audience. 2. Basic personalization limited to first name and maybe product category. 3. Same hero image, products, and offers shown to all recipients. 4. Manual segmentation creates 2-3 email variants at most (e.g., Men vs Women). 5. No product recommendations or behavioral personalization.",
+      "constraints": [
+        "Batch-and-blast approach yields 15-25% open rates, 2-4% click rates",
+        "Personalization limited to mail merge (first name, company)",
+        "Manual segmentation limits to 2-3 variants (operational complexity)",
+        "Generic product displays not tailored to individual preferences",
+        "No dynamic content rendering (what you load at send time is what everyone sees)",
+        "High unsubscribe rates due to irrelevant content (3-5%)"
+      ],
+      "metrics": ["Open rate: 15-25%", "Click rate: 2-4%", "Personalization: Segment-level (2-3 variants)"]
+    },
+    "agentic": {
+      "workflow": "1. Personalization Engine analyzes each recipient's behavioral data, purchase history, and preferences. 2. Content Selection Agent dynamically chooses: hero image/offer based on predicted interest, product recommendations tailored to browsing/purchase history, personalized messaging based on lifecycle stage. 3. Dynamic Content Rendering inserts 1:1 content at open time (not send time) for real-time inventory and pricing. 4. Fallback Logic ensures graceful degradation if personalization data unavailable. 5. Agent learns from engagement to improve future personalization.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Personalization Engine", "Content Selection Agent"],
+        "utilityAgents": ["Recommendation Engine", "CDP", "Dynamic Content Renderer", "Email Platform"]
+      },
+      "dataSources": [
+        "Customer purchase history and product affinity",
+        "Browsing behavior and product views",
+        "Email engagement history (opens, clicks, conversions)",
+        "Customer lifecycle stage and value tier",
+        "Real-time inventory and pricing data",
+        "Propensity models (predicted product interest)"
+      ],
+      "benefits": [
+        "40-70% engagement improvement (25-35% opens, 6-10% clicks vs baseline)",
+        "1:1 personalization vs segment-level (every email unique)",
+        "Dynamic content at open-time ensures real-time inventory/pricing",
+        "Product recommendations increase AOV by 20-35%",
+        "Behavioral targeting reduces unsubscribes by 40-60%",
+        "Automated personalization scales to millions without manual effort"
+      ],
+      "metrics": ["Open rate: 25-35%", "Click rate: 6-10%", "Personalization: 1:1 individual"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement product recommendations in top campaigns", "Deploy dynamic content for hero offers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Email platform with dynamic content capability", "Customer Data Platform", "Recommendation engine", "Behavioral tracking data"]
+    },
+    "icon": "sparkles",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-send-time-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Send Time Optimization",
+    "description": "ML-powered send time optimization delivering emails when each customer is most likely to engage improving open rates by 15-30% vs fixed batch sends.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager selects single send time for entire campaign based on industry best practices (e.g., Tuesday 10am). 2. Email batch sent to all recipients simultaneously at that fixed time. 3. Time zones handled manually by creating duplicate campaigns per region. 4. No consideration of individual customer engagement patterns. 5. Sub-optimal timing causes many emails buried in crowded inboxes.",
+      "constraints": [
+        "Fixed send time ignores 80% of audience's peak engagement windows",
+        "Batch sends create inbox crowding (everyone gets email same time)",
+        "Manual time zone handling error-prone and operationally complex",
+        "Industry 'best practices' don't account for customer-specific patterns",
+        "Early birds and night owls get emails at sub-optimal times",
+        "No learning or optimization based on individual engagement history"
+      ],
+      "metrics": ["Send strategy: Fixed batch", "Time zone handling: Manual duplicates", "Open rate lift: 0% (baseline)"]
+    },
+    "agentic": {
+      "workflow": "1. Engagement Analysis Agent analyzes each customer's historical email engagement patterns: time of day, day of week, engagement velocity. 2. Predictive Send Time Agent calculates optimal send window per customer using ML model trained on their behavior. 3. Scheduling Agent orchestrates sends across 24-hour window to hit each customer's optimal time. 4. Time Zone Intelligence automatically adjusts for recipient location. 5. Agent continuously learns and refines predictions based on open/click outcomes.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Engagement Analysis Agent", "Predictive Send Time Agent"],
+        "utilityAgents": ["Email Platform", "ML Prediction Engine", "Time Zone Service", "Engagement Analytics"]
+      },
+      "dataSources": [
+        "Historical email open and click data by customer",
+        "Engagement patterns by time of day and day of week",
+        "Customer time zone and location data",
+        "Device usage patterns (mobile vs desktop by time)",
+        "Inbox activity signals (if available from email platform)",
+        "Seasonal and event-based timing patterns"
+      ],
+      "benefits": [
+        "15-30% open rate improvement through optimal individual timing",
+        "Emails delivered during each customer's engagement window",
+        "Automatic time zone handling eliminates manual campaign duplication",
+        "Reduced inbox crowding improves deliverability and visibility",
+        "Night owls get emails at 9pm, early birds at 6am (personalized)",
+        "Continuous ML learning improves predictions over time"
+      ],
+      "metrics": ["Send strategy: Predictive individual", "Time zone handling: Automatic", "Open rate lift: 15-30%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable send time optimization for promotional emails", "Test on high-volume campaign first"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Email platform with send time optimization capability", "6+ months engagement history per customer", "ML prediction capability", "API integration for scheduled sends"]
+    },
+    "icon": "clock",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-email-deliverability-management",
+    "type": "function",
+    "level": 4,
+    "label": "Email Deliverability Management",
+    "description": "AI-powered deliverability optimization with sender reputation monitoring, spam trap detection, and inbox placement maximization achieving 95%+ inbox rates.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Email campaign sent with no deliverability pre-checks. 2. High bounce rates (5-10%) and spam complaints go unnoticed until post-campaign analysis. 3. Sender reputation degrades over time due to poor list hygiene. 4. Emails increasingly land in spam folders (30-40% spam placement). 5. Manual investigation after deliverability crisis already impacted sender score.",
+      "constraints": [
+        "No proactive deliverability monitoring or prevention",
+        "5-10% bounce rates due to poor list hygiene (invalid emails, spam traps)",
+        "30-40% of emails land in spam folder due to reputation issues",
+        "Reactive troubleshooting only after sender reputation damaged",
+        "Manual list cleaning infrequent (quarterly at best)",
+        "No inbox placement monitoring across ISPs (Gmail, Yahoo, Outlook)"
+      ],
+      "metrics": ["Inbox placement rate: 60-70%", "Bounce rate: 5-10%", "List hygiene: Quarterly manual"]
+    },
+    "agentic": {
+      "workflow": "1. Deliverability Monitoring Agent continuously tracks sender reputation across ISPs (Gmail, Yahoo, Outlook). 2. List Hygiene Agent identifies and suppresses risky addresses: invalid emails, spam traps, chronic non-openers, complainers. 3. Content Analysis Agent scans email content for spam triggers before send. 4. Warm-up Orchestration Agent gradually increases send volume for new IPs or domains. 5. Inbox Placement Agent monitors where emails land (inbox vs spam) and triggers corrective actions.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Deliverability Monitoring Agent", "List Hygiene Agent", "Inbox Placement Agent"],
+        "utilityAgents": ["Email Platform", "Deliverability Service", "Spam Filter Testing", "Reputation Monitoring"]
+      },
+      "dataSources": [
+        "Sender reputation scores across ISPs",
+        "Bounce data (hard bounces, soft bounces, block bounces)",
+        "Spam complaint and unsubscribe rates",
+        "Engagement metrics (opens, clicks) for list health",
+        "Blacklist monitoring (RBLs, URIBLs)",
+        "Inbox placement monitoring data"
+      ],
+      "benefits": [
+        "95%+ inbox placement rate vs 60-70% traditional",
+        "Bounce rates reduced to <1% through continuous list hygiene",
+        "Proactive reputation monitoring prevents deliverability crises",
+        "Automated spam trap detection and suppression",
+        "Content scanning prevents spam-triggering language before send",
+        "ISP-specific optimization (e.g., Gmail vs Yahoo strategies)"
+      ],
+      "metrics": ["Inbox placement rate: 95%+", "Bounce rate: <1%", "List hygiene: Continuous real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated list hygiene and suppression", "Deploy spam content scanning"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Deliverability monitoring service", "Email platform with list management API", "Historical bounce and engagement data", "Content analysis tools"]
+    },
+    "icon": "inbox-in",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-automated-reengagement-campaigns",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Re-Engagement Campaigns",
+    "description": "Intelligent win-back campaigns that automatically identify dormant customers and deploy personalized re-engagement strategies recovering 15-25% of churned subscribers.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst manually pulls list of customers with no opens in 90 days (once per quarter). 2. Generic 'We Miss You' email sent to entire list with 20% discount. 3. No segmentation by customer value or churn reason. 4. One-time send with no follow-up sequence. 5. Low response rates (2-5%) and most customers remain dormant.",
+      "constraints": [
+        "Quarterly cadence misses optimal re-engagement window (should be 30-60 days)",
+        "Generic discount offer not tailored to churn reason or customer value",
+        "No engagement-based segmentation (90-day definition arbitrary)",
+        "One-and-done approach lacks nurture sequence",
+        "2-5% re-engagement rate due to poor targeting and generic messaging",
+        "No automated suppression of truly dead contacts (wasting sends)"
+      ],
+      "metrics": ["Re-engagement rate: 2-5%", "Detection time: Quarterly manual", "Segmentation: None (generic)"]
+    },
+    "agentic": {
+      "workflow": "1. Churn Prediction Agent identifies customers at risk of disengagement using engagement decay patterns. 2. Segmentation Agent groups dormant customers by: value tier (VIP vs casual), churn reason (price sensitivity, product availability, competitor switch), engagement history. 3. Campaign Orchestration Agent deploys tailored re-engagement sequence: VIPs get exclusive offers, price-sensitive get discounts, product-focused get new arrivals. 4. Multi-Touch Sequence progressively increases incentive if no engagement. 5. Agent automatically suppresses truly dead contacts after final attempt.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Churn Prediction Agent", "Segmentation Agent", "Campaign Orchestration Agent"],
+        "utilityAgents": ["CDP", "Email Platform", "Propensity Modeling", "Offer Management"]
+      },
+      "dataSources": [
+        "Email engagement history (opens, clicks, conversions)",
+        "Purchase history and recency",
+        "Customer lifetime value and segment",
+        "Churn predictive signals (website visits, cart abandons)",
+        "Competitive intelligence (if available)",
+        "Historical win-back campaign performance"
+      ],
+      "benefits": [
+        "15-25% re-engagement rate vs 2-5% through targeted personalization",
+        "Proactive engagement at 30-60 days vs reactive quarterly campaigns",
+        "Segmented strategies maximize relevance (VIP vs casual treatment)",
+        "Multi-touch sequences improve recovery rates 2-3x vs one-time sends",
+        "Automated suppression of dead contacts improves deliverability",
+        "Churn prevention through early-stage intervention (before fully dormant)"
+      ],
+      "metrics": ["Re-engagement rate: 15-25%", "Detection time: Continuous (30-60 day trigger)", "Segmentation: Value + behavior"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build engagement-based segments (30/60/90 day dormancy)", "Create VIP-specific win-back offer"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Customer Data Platform with engagement tracking", "Churn prediction models", "Segmentation capability", "Multi-touch campaign workflows"]
+    },
+    "icon": "refresh",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-email-analytics-attribution",
+    "type": "function",
+    "level": 4,
+    "label": "Email Analytics & Attribution",
+    "description": "Real-time email performance analytics with multi-touch attribution revealing true email contribution to revenue and enabling data-driven optimization.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst manually pulls email metrics from ESP platform (opens, clicks, bounces). 2. Last-click attribution used to assign revenue (only email immediately before purchase gets credit). 3. Weekly or monthly reports compiled in spreadsheets and emailed to stakeholders. 4. Limited visibility into email's contribution to broader customer journey. 5. No cohort analysis or longitudinal performance tracking.",
+      "constraints": [
+        "Last-click attribution undervalues email's nurturing role in customer journey",
+        "Manual reporting creates 1-2 week lag before insights available",
+        "Siloed ESP analytics don't integrate with broader marketing mix",
+        "No visibility into email's impact on in-store or offline conversions",
+        "Limited ability to compare campaign performance across segments",
+        "Spreadsheet-based analysis prone to errors and version control issues"
+      ],
+      "metrics": ["Attribution model: Last-click only", "Reporting frequency: Weekly/monthly", "Cross-channel visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Analytics Agent continuously tracks email performance across all campaigns in real-time. 2. Attribution Modeling Agent applies multi-touch attribution: position-based, time-decay, algorithmic models credit email's true contribution. 3. Journey Analysis Agent shows email's role in broader customer journey (e.g., 'Email influenced 35% of in-store purchases'). 4. Cohort Analysis Agent tracks long-term performance of email-engaged customers. 5. Real-time dashboards show campaign performance, trends, and recommendations.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Analytics Agent", "Attribution Modeling Agent", "Journey Analysis Agent"],
+        "utilityAgents": ["Email Platform", "Attribution Platform", "CDP", "BI Dashboard"]
+      },
+      "dataSources": [
+        "Email engagement metrics (opens, clicks, conversions)",
+        "Customer journey data across all touchpoints",
+        "Transaction data (online and offline)",
+        "Marketing spend by campaign",
+        "Customer lifetime value data",
+        "Historical campaign performance database"
+      ],
+      "benefits": [
+        "Multi-touch attribution reveals email drives 20-40% more revenue than last-click shows",
+        "Real-time dashboards vs weekly/monthly manual reports",
+        "Cross-channel journey visibility shows email's nurturing impact",
+        "Cohort analysis reveals long-term value of email engagement",
+        "Automated insights and recommendations accelerate optimization",
+        "Unified view across email, social, paid, organic for holistic marketing ROI"
+      ],
+      "metrics": ["Attribution model: Multi-touch algorithmic", "Reporting frequency: Real-time", "Cross-channel visibility: Complete"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement position-based attribution for email", "Build real-time performance dashboard"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Attribution platform or capability", "Customer Data Platform with journey tracking", "Integrated analytics across channels", "BI/dashboard tool"]
+    },
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-list-segmentation-hygiene",
+    "type": "function",
+    "level": 4,
+    "label": "List Segmentation & Hygiene",
+    "description": "AI-driven audience segmentation with continuous list hygiene maintaining 98%+ list quality and enabling sophisticated behavioral targeting.",
+    "parentCapability": "capability-email-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing coordinator manually creates segments in ESP by uploading CSV files (e.g., 'Purchased in last 30 days'). 2. Segments static and not updated as customer behavior changes. 3. List hygiene performed quarterly: remove hard bounces manually. 4. Limited to 5-10 pre-defined segments due to operational complexity. 5. Segment definitions inconsistent across campaigns and teams.",
+      "constraints": [
+        "CSV-based segmentation error-prone and labor-intensive",
+        "Static segments become stale (customers move in/out but segment doesn't update)",
+        "Quarterly list hygiene allows bad addresses to damage sender reputation",
+        "Limited to 5-10 basic segments (can't do sophisticated behavioral targeting)",
+        "No real-time segmentation based on current customer behavior",
+        "Manual processes don't scale beyond basic demographics and purchase recency"
+      ],
+      "metrics": ["Segment count: 5-10 static", "List quality: 90-95%", "Update frequency: Quarterly manual"]
+    },
+    "agentic": {
+      "workflow": "1. Segmentation Agent continuously builds and maintains dynamic segments using CDP data: behavioral triggers (cart abandoners, category browsers), lifecycle stage (new, active, at-risk, churned), predicted propensity (likely to convert, upsell candidates), engagement level (highly engaged, dormant). 2. List Hygiene Agent automatically suppresses: hard bounces, spam traps, chronic non-openers (180+ days), complainers and unsubscribes. 3. Segments update in real-time as customer behavior changes. 4. Agent recommends new segment opportunities based on campaign performance.",
+      "agents": {
+        "orchestrator": "Email Marketing Orchestration Agent",
+        "superAgents": ["Segmentation Agent", "List Hygiene Agent"],
+        "utilityAgents": ["CDP", "Email Platform", "Engagement Scoring", "Deliverability Service"]
+      },
+      "dataSources": [
+        "Customer behavioral data (browsing, purchase, engagement)",
+        "Email engagement history (opens, clicks, conversions)",
+        "Lifecycle stage and customer value data",
+        "Propensity scores (predicted behavior)",
+        "Bounce and complaint data",
+        "Real-time event stream for trigger-based segments"
+      ],
+      "benefits": [
+        "50-100+ dynamic segments vs 5-10 static (sophisticated behavioral targeting)",
+        "98%+ list quality through continuous automated hygiene vs 90-95%",
+        "Real-time segment updates vs stale quarterly refreshes",
+        "Behavioral and propensity-based segments improve relevance 3-5x",
+        "Automated suppression prevents deliverability issues proactively",
+        "Consistent segment definitions across all campaigns and teams"
+      ],
+      "metrics": ["Segment count: 50-100+ dynamic", "List quality: 98%+", "Update frequency: Real-time continuous"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated hard bounce suppression", "Create dynamic engagement-based segments"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Customer Data Platform", "Email platform with API integration", "Behavioral tracking and engagement data", "Automated list management capability"]
+    },
+    "icon": "users",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

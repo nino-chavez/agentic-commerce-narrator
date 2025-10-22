@@ -1,0 +1,373 @@
+[
+  {
+    "id": "persona-chro",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Chief Human Resources Officer (CHRO)",
+    "label": "Chief Human Resources Officer (CHRO)",
+    "description": "Executive responsible for enterprise HR strategy, workforce planning, talent management, and organizational culture. Reports to CEO and partners with CFO on workforce investments.",
+    "responsibilities": [
+      "Define HR strategy aligned with business objectives",
+      "Lead workforce planning and organizational design",
+      "Oversee talent acquisition, development, and retention",
+      "Ensure compliance with labor laws and regulations",
+      "Manage HR budget and demonstrate ROI on people investments",
+      "Drive culture, diversity, equity, and inclusion initiatives"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Review quarterly HR metrics in spreadsheets and presentations",
+      "React to attrition surprises when key employees resign",
+      "Annual workforce planning during budget cycle only",
+      "Manual compliance tracking with periodic legal reviews",
+      "Rely on gut feel and anecdotal feedback for culture assessment"
+    ],
+    "agenticWorkflow": [
+      "Real-time HR dashboards with predictive workforce analytics",
+      "Proactive attrition alerts 60-90 days before likely departures",
+      "Continuous workforce scenario modeling tied to business plans",
+      "Automated compliance monitoring with regulatory change alerts",
+      "Data-driven culture insights from pulse surveys and sentiment analysis"
+    ],
+    "painPointsAddressed": [
+      "Predictive workforce intelligence vs reactive surprises",
+      "Real-time diversity and engagement metrics",
+      "Measurable HR ROI (training, retention, productivity)",
+      "Strategic workforce planning becomes continuous",
+      "Proactive compliance vs audit scrambles"
+    ],
+    "kpis": [
+      "Employee Turnover Rate (voluntary and involuntary)",
+      "Time to Fill for Critical Roles",
+      "Cost per Hire",
+      "Employee Engagement Score",
+      "Diversity Representation by Level",
+      "HR Operating Expense as % of Revenue",
+      "Training ROI and Skills Gap Closure"
+    ],
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-hr-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "HR Operations Manager",
+    "label": "HR Operations Manager",
+    "description": "Manages day-to-day HR operations including HRIS administration, employee data management, compliance reporting, and process optimization.",
+    "responsibilities": [
+      "Administer HRIS (Workday, ADP, BambooHR) and ensure data accuracy",
+      "Manage HR compliance reporting (EEO-1, VETS-4212, AAP)",
+      "Oversee employee onboarding and offboarding processes",
+      "Coordinate benefits administration and open enrollment",
+      "Generate HR reports and analytics for leadership",
+      "Optimize HR processes and implement automation"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually compile compliance reports from HRIS exports",
+      "Track onboarding tasks in spreadsheets with manual follow-ups",
+      "Respond reactively to employee data errors and system issues",
+      "Quarterly reporting cycles with weeks of manual data preparation",
+      "Manual benefits enrollment with error correction cycles"
+    ],
+    "agenticWorkflow": [
+      "Automated compliance report generation from real-time HRIS data",
+      "Orchestrated onboarding with automated task tracking and alerts",
+      "Proactive data quality monitoring with anomaly detection",
+      "Self-service reporting with AI-generated insights",
+      "Intelligent benefits enrollment with auto-validation and recommendations"
+    ],
+    "painPointsAddressed": [
+      "80% reduction in compliance reporting time",
+      "95%+ onboarding completion vs 60-70% manual tracking",
+      "Real-time data quality vs quarterly cleanup cycles",
+      "Self-service analytics vs manual report requests",
+      "Benefits enrollment errors reduced from 5-10% to <1%"
+    ],
+    "kpis": [
+      "HRIS Data Accuracy",
+      "Compliance Reporting Timeliness",
+      "Onboarding Completion Rate",
+      "Benefits Enrollment Error Rate",
+      "Employee Self-Service Adoption Rate",
+      "HR Process Automation Percentage",
+      "Time to Resolve HR Service Requests"
+    ],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-talent-acquisition-lead",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Talent Acquisition Lead",
+    "label": "Talent Acquisition Lead",
+    "description": "Leads recruiting function, manages recruiting team, owns candidate pipeline strategy, and drives hiring velocity and quality.",
+    "responsibilities": [
+      "Manage recruiting team (corporate and agency recruiters)",
+      "Develop sourcing strategies and employer brand",
+      "Monitor recruiting metrics (time-to-fill, cost-per-hire, quality-of-hire)",
+      "Partner with hiring managers on workforce planning",
+      "Negotiate with recruiting agencies and job board vendors",
+      "Drive diversity recruiting initiatives"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually review recruiter pipelines in weekly meetings",
+      "React to hiring manager complaints about slow time-to-fill",
+      "Quarterly vendor negotiations based on limited performance data",
+      "Annual diversity reports with limited actionable insights",
+      "Recruiter burnout from excessive administrative workload"
+    ],
+    "agenticWorkflow": [
+      "Real-time pipeline dashboards with bottleneck identification",
+      "Proactive capacity planning based on hiring forecasts",
+      "Data-driven vendor optimization with automated performance tracking",
+      "Continuous diversity funnel tracking with intervention alerts",
+      "Recruiters focus on relationship-building vs admin tasks"
+    ],
+    "painPointsAddressed": [
+      "45% reduction in time-to-fill through automation",
+      "3x increase in recruiter capacity (more reqs per recruiter)",
+      "Data-driven sourcing decisions vs gut feel",
+      "Real-time diversity tracking vs annual reports",
+      "Recruiter satisfaction improves with less admin burden"
+    ],
+    "kpis": [
+      "Time to Fill (by role level and department)",
+      "Cost per Hire",
+      "Candidate Quality (hiring manager satisfaction)",
+      "Offer Acceptance Rate",
+      "Recruiter Productivity (reqs per recruiter)",
+      "Diversity Hiring Metrics (representation by stage)",
+      "Candidate Net Promoter Score (NPS)"
+    ],
+    "icon": "user-add",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-learning-development-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Learning & Development Manager",
+    "label": "Learning & Development Manager",
+    "description": "Designs and delivers employee training programs, manages LMS, assesses skills gaps, and measures learning effectiveness.",
+    "responsibilities": [
+      "Develop training curriculum and learning paths",
+      "Manage LMS platform and content library",
+      "Assess organizational skills gaps and training needs",
+      "Measure training effectiveness and ROI",
+      "Partner with business leaders on capability development",
+      "Oversee compliance training (harassment, safety, security)"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Annual training needs assessment via manager surveys",
+      "Build one-size-fits-all training calendar for year",
+      "Manually track training completion in spreadsheets",
+      "No measurement of skill improvement or business impact",
+      "React to skill gaps when projects fail due to lack of capability"
+    ],
+    "agenticWorkflow": [
+      "Continuous skills assessment vs role requirements",
+      "AI-powered personalized learning recommendations",
+      "Automated training enrollment and progress tracking",
+      "Learning impact measurement (performance, retention, promotions)",
+      "Proactive skill gap alerts with reskilling recommendations"
+    ],
+    "painPointsAddressed": [
+      "85-90% training completion vs 60-70% manual tracking",
+      "40% skills gap reduction within 12 months",
+      "Measurable training ROI vs unmeasured traditional approach",
+      "Personalized learning vs one-size-fits-all",
+      "Proactive skill development vs reactive gap discovery"
+    ],
+    "kpis": [
+      "Training Completion Rate",
+      "Skills Gap Closure (before/after measurement)",
+      "Time to Competency for New Skills",
+      "Training ROI (performance improvement)",
+      "Employee Satisfaction with Learning Programs",
+      "Compliance Training Completion",
+      "Learning Platform Engagement Rate"
+    ],
+    "icon": "book-open",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-compensation-benefits-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Compensation & Benefits Manager",
+    "label": "Compensation & Benefits Manager",
+    "description": "Designs compensation structures, manages benefits programs, ensures pay equity, and administers open enrollment.",
+    "responsibilities": [
+      "Design salary structures and incentive programs",
+      "Conduct market benchmarking and pay equity analysis",
+      "Manage annual merit and bonus cycles",
+      "Administer benefits programs (health, retirement, perks)",
+      "Oversee open enrollment and benefits communication",
+      "Ensure compliance with compensation regulations (FLSA, pay equity laws)"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Annual merit cycle with weeks of spreadsheet allocation",
+      "Manual market benchmarking once per year",
+      "Annual pay equity audit with manual analysis",
+      "Open enrollment chaos with 5-10% error rates",
+      "Reactive retention through counteroffers after resignations"
+    ],
+    "agenticWorkflow": [
+      "Automated merit planning with AI recommendations",
+      "Continuous market benchmarking with real-time alerts",
+      "Proactive pay equity monitoring with gap alerts",
+      "Intelligent benefits recommendations with chatbot support",
+      "Proactive retention interventions for below-market employees"
+    ],
+    "painPointsAddressed": [
+      "70% faster compensation planning (1-2 weeks vs 4-6 weeks)",
+      "Continuous pay equity monitoring vs annual audits",
+      "80% reduction in benefits enrollment errors",
+      "40% increase in benefits utilization through education",
+      "Proactive retention vs reactive counteroffers"
+    ],
+    "kpis": [
+      "Pay Equity Gaps (by gender, race, department)",
+      "Compensation Competitiveness (% at/above market)",
+      "Benefits Utilization Rate",
+      "Benefits Enrollment Accuracy",
+      "Merit Budget Utilization",
+      "Retention Rate of Below-Market Employees",
+      "Employee Satisfaction with Compensation & Benefits"
+    ],
+    "icon": "currency-dollar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-hr-business-partner",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "HR Business Partner (HRBP)",
+    "label": "HR Business Partner (HRBP)",
+    "description": "Strategic HR advisor to business unit leaders, providing workforce planning, talent management, and organizational effectiveness consulting.",
+    "responsibilities": [
+      "Partner with business unit leaders on workforce strategy",
+      "Advise on organizational design and restructuring",
+      "Support talent review and succession planning",
+      "Coach managers on performance and employee relations",
+      "Drive engagement and culture initiatives",
+      "Identify workforce risks and opportunities"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "React to manager escalations (performance issues, attrition)",
+      "Annual talent review meetings with limited data",
+      "Quarterly engagement surveys with slow action planning",
+      "Manual tracking of employee issues in email and notes",
+      "Limited visibility into team-level metrics and trends"
+    ],
+    "agenticWorkflow": [
+      "Proactive alerts for team-level attrition and engagement risks",
+      "Real-time talent review dashboards with succession readiness",
+      "Continuous pulse surveys with action recommendations",
+      "Centralized case management with trend analysis",
+      "Manager scorecards with team health metrics"
+    ],
+    "painPointsAddressed": [
+      "Proactive intervention vs reactive firefighting",
+      "Data-driven coaching vs anecdotal manager feedback",
+      "Real-time team health visibility vs quarterly snapshots",
+      "Early identification of toxic managers",
+      "Strategic advising vs administrative tasks"
+    ],
+    "kpis": [
+      "Business Unit Turnover Rate",
+      "Team Engagement Score",
+      "Manager Effectiveness Score",
+      "Succession Plan Coverage for Critical Roles",
+      "Time to Fill for Business Unit Roles",
+      "Employee Relations Case Resolution Time",
+      "HRBP Strategic vs Tactical Time Allocation"
+    ],
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-workforce-analyst",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Workforce Analyst",
+    "label": "Workforce Analyst",
+    "description": "Analyzes workforce data to identify trends, build predictive models, and provide insights for strategic workforce decisions.",
+    "responsibilities": [
+      "Build predictive models (attrition, performance, skills gaps)",
+      "Generate workforce analytics and dashboards",
+      "Conduct ad-hoc analysis for HR and business leaders",
+      "Maintain people analytics data warehouse",
+      "Ensure data quality and governance",
+      "Translate data insights into actionable recommendations"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually extract data from HRIS into Excel",
+      "Spend 70% of time on data wrangling vs analysis",
+      "React to ad-hoc report requests from leadership",
+      "Limited predictive modeling due to data quality issues",
+      "Quarterly reporting cycles with outdated insights"
+    ],
+    "agenticWorkflow": [
+      "Automated data extraction and transformation pipelines",
+      "Self-service analytics with AI-generated insights",
+      "Proactive insight delivery vs reactive report requests",
+      "ML model deployment for attrition and performance prediction",
+      "Real-time dashboards vs quarterly reporting"
+    ],
+    "painPointsAddressed": [
+      "70% time spent on analysis vs 30% on data wrangling",
+      "Predictive insights vs historical reporting only",
+      "Self-service analytics reduces report requests 50%",
+      "Real-time insights vs quarterly lag",
+      "Strategic value delivery vs manual report generation"
+    ],
+    "kpis": [
+      "Attrition Prediction Model Accuracy",
+      "Insight Delivery Timeliness",
+      "Self-Service Analytics Adoption Rate",
+      "Data Quality Score",
+      "Ad-Hoc Report Request Volume (lower is better)",
+      "Business Impact from Analytics Recommendations",
+      "Time Spent on Analysis vs Data Preparation"
+    ],
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

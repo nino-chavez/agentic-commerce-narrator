@@ -1,0 +1,539 @@
+{
+  "capability": {
+    "id": "customer-analytics",
+    "name": "Customer Analytics",
+    "description": "Advanced customer intelligence including segmentation, journey analysis, attribution modeling, and profitability measurement to drive customer-centric strategies",
+    "category": "Analytics & Data Management",
+    "subcategory": "Advanced Commerce Analytics",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "tier": "Advanced",
+    "industryVertical": "Retail & E-commerce",
+    "maturityLevel": "Transformative",
+    "priority": "High",
+    "icon": "users-cog",
+    "color": "#EC4899"
+  },
+  "functions": [
+    {
+      "id": "customer-segmentation-clustering",
+      "name": "Customer Segmentation & Clustering",
+      "description": "ML-based behavioral segmentation beyond demographics to identify distinct customer groups for targeted strategies and personalization",
+      "traditionalWorkflow": "Marketing teams manually create customer segments in Excel using simple demographic criteria (age, gender, geography) or basic RFM bucketing. They analyze aggregate statistics for each segment and develop one-size-fits-all strategies. Segments are static, updated infrequently (annually or quarterly), and lack behavioral nuance. The segmentation doesn't account for multi-dimensional customer behaviors, channel preferences, or predictive propensity models. Cross-functional teams struggle to operationalize segments in campaigns and merchandising decisions.",
+      "agenticWorkflow": "A Customer Intelligence Orchestrator coordinates sophisticated ML-based segmentation across all customer touchpoints. A Behavioral Clustering Agent applies unsupervised learning algorithms (k-means, hierarchical clustering, DBSCAN) to identify natural customer groupings based on purchase behavior, engagement patterns, and preferences. A Segment Profiling Agent enriches segments with demographic, attitudinal, and value characteristics to create actionable personas. A Segment Evolution Tracker monitors how customers migrate between segments over time and identifies at-risk movement patterns. An Activation Engine translates segment insights into targeted strategies across channels and functions.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Customer Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end customer segmentation process", "Manages data pipelines from all customer touchpoints", "Prioritizes segmentation applications by business value", "Ensures segment consistency across organization"]
+        },
+        "superAgents": [
+          {
+            "agent": "Behavioral Clustering Agent",
+            "responsibilities": ["Applies ML clustering algorithms to identify customer segments", "Determines optimal number of segments using statistical methods", "Uses multi-dimensional behavioral features beyond demographics", "Validates segment stability and separability"]
+          },
+          {
+            "agent": "Segment Profiling Agent",
+            "responsibilities": ["Creates comprehensive segment profiles and personas", "Quantifies segment size, value, and growth potential", "Identifies key differentiating characteristics", "Generates segment narratives for business understanding"]
+          },
+          {
+            "agent": "Segment Evolution Tracker",
+            "responsibilities": ["Monitors customer movement between segments over time", "Identifies segment migration patterns and drivers", "Detects at-risk customers moving to lower-value segments", "Tracks segment stability and lifecycle"]
+          },
+          {
+            "agent": "Activation Engine Agent",
+            "responsibilities": ["Translates segment insights into actionable strategies", "Recommends segment-specific offers, messaging, and experiences", "Enables segment targeting in marketing and merchandising", "Measures segment-level campaign performance"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Feature Engineering Agent",
+            "responsibilities": ["Creates behavioral features from raw transaction data", "Calculates segment-relevant metrics and scores", "Handles missing data and outliers"]
+          },
+          {
+            "agent": "Predictive Propensity Agent",
+            "responsibilities": ["Adds predictive propensity scores to segment profiles", "Models lifetime value, churn risk, next purchase", "Enables predictive segment refinement"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates segment visualization dashboards", "Generates persona cards and profiles", "Produces segment migration flow diagrams"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Months for manual demographic segmentation vs. hours for ML behavioral clustering with weekly refreshes",
+        "accuracyImprovement": "Crude demographic buckets vs. sophisticated behavioral micro-segments with 3-5x better predictive power",
+        "efficiency": "90% reduction in segmentation development time, automated refresh vs. annual manual updates",
+        "businessImpact": "15-30% improvement in campaign response rates, 20-40% better targeting precision, 10-15% increase in customer lifetime value",
+        "decisionQuality": "Multi-dimensional behavioral insights vs. one-dimensional demographics, dynamic vs. static segments"
+      },
+      "dataSources": [
+        "Transaction history by customer",
+        "Loyalty program data and point accrual/redemption",
+        "Channel engagement (web, mobile, store visits)",
+        "Product category preferences and basket composition",
+        "Demographic data (where available)",
+        "Email and marketing response data",
+        "Customer service interactions",
+        "Social media engagement and sentiment"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with RFM-enhanced behavioral clustering on loyalty program customers; create 5-8 actionable segments; implement segment tagging in marketing automation platform; pilot targeted campaigns to prove value.",
+        "investmentRequired": "Medium - requires customer data platform, ML clustering tools, data science resources, segment activation capabilities. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for initial segmentation and profiling, 6-9 months for full activation across channels and continuous refresh",
+        "prerequisites": "Unified customer view with transaction history, loyalty program or customer identification mechanism, marketing automation platform, cross-functional alignment on segmentation strategy"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Data science/ML", "Customer analytics", "Marketing strategy", "Data engineering", "Segmentation methodology"],
+        "complianceConsiderations": ["GDPR/CCPA for customer data use", "Sensitive attribute usage restrictions", "Segment-based pricing fairness"],
+        "technologyStack": ["Customer data platform (CDP)", "ML platforms (Python scikit-learn)", "BI tools", "Marketing automation", "Data warehouse"]
+      }
+    },
+    {
+      "id": "rfm-analysis",
+      "name": "RFM Analysis",
+      "description": "Recency, frequency, monetary value scoring with predictive lifetime value modeling to identify best customers and prioritize retention efforts",
+      "traditionalWorkflow": "Analysts manually export customer transaction data to Excel and calculate RFM scores using simple quintile bucketing formulas. They create static RFM segments (e.g., \"Champions,\" \"At-Risk\") using predefined scoring thresholds. The analysis is backward-looking, providing no predictive insight into future customer value. Lifetime value calculations are crude, using simple average order value multiplied by estimated purchase frequency. The RFM analysis is refreshed infrequently (monthly or quarterly) and lacks integration with marketing activation tools.",
+      "agenticWorkflow": "An RFM Intelligence Orchestrator coordinates sophisticated customer value analysis combining descriptive RFM with predictive lifetime value. An RFM Scoring Agent calculates granular recency, frequency, and monetary scores with intelligent bucketing that adapts to business dynamics. A Predictive CLV Agent applies ML models to forecast customer lifetime value, accounting for time horizon, retention probability, and margin contribution. A Customer Lifecycle Agent maps customers to lifecycle stages and recommends stage-appropriate strategies. An Action Prioritization Agent ranks customers by value potential and recommends specific retention, development, or win-back actions.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "RFM Intelligence Orchestrator",
+          "responsibilities": ["Coordinates RFM and CLV analysis across customer base", "Manages automated scoring refresh workflows", "Integrates RFM insights with marketing and CRM systems", "Prioritizes customer actions by ROI potential"]
+        },
+        "superAgents": [
+          {
+            "agent": "RFM Scoring Agent",
+            "responsibilities": ["Calculates recency, frequency, and monetary scores", "Applies adaptive bucketing based on customer distribution", "Creates RFM segments with business-friendly labels", "Tracks RFM score evolution over time"]
+          },
+          {
+            "agent": "Predictive CLV Agent",
+            "responsibilities": ["Builds ML models to forecast customer lifetime value", "Predicts retention probability and churn risk", "Estimates future purchase frequency and order value", "Provides confidence intervals for CLV predictions"]
+          },
+          {
+            "agent": "Customer Lifecycle Agent",
+            "responsibilities": ["Maps customers to lifecycle stages (new, active, at-risk, dormant)", "Tracks lifecycle progression and transition probabilities", "Recommends lifecycle-appropriate marketing strategies", "Identifies customers at key transition points"]
+          },
+          {
+            "agent": "Action Prioritization Agent",
+            "responsibilities": ["Ranks customers by intervention priority and ROI", "Recommends specific actions (retain, develop, reactivate, acquire-alike)", "Calculates expected value of customer interventions", "Creates prioritized customer contact lists"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Benchmarking Agent",
+            "responsibilities": ["Provides RFM benchmarks by industry and segment", "Tracks performance vs. goals and historical norms", "Identifies outlier customers for special attention"]
+          },
+          {
+            "agent": "Campaign Integration Agent",
+            "responsibilities": ["Pushes RFM segments to marketing automation tools", "Enables RFM-based campaign targeting", "Tracks campaign performance by RFM segment"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Monthly manual RFM analysis vs. daily automated scoring with real-time customer prioritization",
+        "accuracyImprovement": "Crude historic RFM vs. predictive CLV with 70-85% accuracy in future value forecasting",
+        "efficiency": "95% reduction in RFM analysis time, automated customer prioritization vs. manual list creation",
+        "businessImpact": "10-20% improvement in retention program ROI, 15-30% better customer acquisition efficiency through lookalike targeting, 20-35% lift in high-value customer development",
+        "decisionQuality": "Predictive future value vs. backward-looking scores, sophisticated lifecycle strategies vs. generic retention programs"
+      },
+      "dataSources": [
+        "Customer transaction history with dates and amounts",
+        "Customer registration and profile data",
+        "Product category and margin data",
+        "Marketing response and engagement data",
+        "Customer service interaction history",
+        "Churn/cancellation data",
+        "Payment method and preferences",
+        "Channel usage patterns"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated RFM scoring for existing customers with weekly refresh; create top 10% high-value customer list for VIP treatment; build at-risk customer alerts for retention team; establish RFM reporting dashboard.",
+        "investmentRequired": "Low-Medium - leverages existing customer data, requires analytics tooling and ML model development for CLV. Typical investment $75K-$200K.",
+        "timeToValue": "2-3 months for RFM scoring and segmentation, 4-6 months for predictive CLV and full lifecycle management",
+        "prerequisites": "Customer transaction history (12-24 months), customer identification across channels, defined retention and acquisition strategies, CRM or marketing automation platform"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "3-6 months",
+        "integrationEffort": "Low-Medium",
+        "skillsRequired": ["Customer analytics", "Data science", "Marketing strategy", "CRM management"],
+        "complianceConsiderations": ["Customer data privacy", "GDPR/CCPA compliance for scoring and targeting"],
+        "technologyStack": ["Customer data warehouse", "ML platforms for CLV", "BI dashboards", "Marketing automation", "CRM systems"]
+      }
+    },
+    {
+      "id": "customer-journey-analytics",
+      "name": "Customer Journey Analytics",
+      "description": "Cross-channel path analysis, drop-off identification, and conversion attribution to optimize customer experiences and reduce friction",
+      "traditionalWorkflow": "Digital analysts manually analyze web analytics data in Google Analytics or Adobe Analytics, creating funnel reports for key conversion paths. They export clickstream data to Excel to identify drop-off points but lack visibility into cross-channel journeys. Store and call center interactions are analyzed separately in different systems with no unified view. Attribution is typically last-click or first-click using basic web analytics rules. The analysis provides limited understanding of complex multi-channel journeys or offline-to-online (and vice versa) transitions.",
+      "agenticWorkflow": "A Journey Intelligence Orchestrator coordinates comprehensive cross-channel journey analysis from awareness through purchase and beyond. A Path Discovery Agent uses sequence mining and process mining algorithms to identify common and high-value customer journeys across all touchpoints. A Drop-Off Detector pinpoints friction points where customers abandon journeys, quantifying abandonment impact and identifying root causes. A Channel Transition Analyzer models how customers move between channels (web, mobile, store, call center) and identifies optimal channel orchestration. An Experience Optimizer recommends specific journey improvements and tests hypotheses through A/B experimentation.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Journey Intelligence Orchestrator",
+          "responsibilities": ["Coordinates journey analytics across all channels and touchpoints", "Manages unified customer journey data pipelines", "Prioritizes journey optimization opportunities by impact", "Integrates journey insights with experience design"]
+        },
+        "superAgents": [
+          {
+            "agent": "Path Discovery Agent",
+            "responsibilities": ["Identifies common customer journey patterns using sequence mining", "Maps actual vs. intended journey flows", "Discovers unexpected or emerging journey paths", "Quantifies journey frequency and value contribution"]
+          },
+          {
+            "agent": "Drop-Off Detector Agent",
+            "responsibilities": ["Identifies friction points and abandonment in journeys", "Quantifies abandonment impact (revenue, customers)", "Analyzes root causes of drop-offs (technical, content, UX)", "Tracks drop-off trends and improvement opportunities"]
+          },
+          {
+            "agent": "Channel Transition Analyzer",
+            "responsibilities": ["Models customer movement across channels", "Identifies preferred channel sequences for different goals", "Detects channel integration gaps and friction", "Recommends optimal channel orchestration strategies"]
+          },
+          {
+            "agent": "Experience Optimizer Agent",
+            "responsibilities": ["Recommends journey improvements based on analytics", "Designs A/B tests to validate journey optimizations", "Simulates impact of journey changes", "Tracks journey performance metrics over time"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Attribution Modeler",
+            "responsibilities": ["Applies multi-touch attribution to journey data", "Credits touchpoints appropriately in conversion journeys", "Calculates channel effectiveness and ROI"]
+          },
+          {
+            "agent": "Segment Journey Agent",
+            "responsibilities": ["Analyzes journey differences by customer segment", "Personalizes journey recommendations", "Identifies segment-specific friction points"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates journey flow diagrams and Sankey charts", "Builds interactive journey exploration tools", "Produces journey performance dashboards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weeks for manual funnel analysis vs. real-time journey monitoring with automated alerts",
+        "accuracyImprovement": "Single-channel web funnels vs. complete cross-channel journey visibility with 90%+ touchpoint capture",
+        "efficiency": "85% reduction in journey analysis time, automated drop-off detection vs. manual investigation",
+        "businessImpact": "15-30% improvement in conversion rates through friction removal, 20-40% better channel investment allocation, 10-15% reduction in customer service costs",
+        "decisionQuality": "Cross-channel journey optimization vs. siloed channel analysis, data-driven friction removal vs. anecdotal improvements"
+      },
+      "dataSources": [
+        "Web analytics and clickstream data",
+        "Mobile app analytics and event tracking",
+        "Store point-of-sale transactions",
+        "Call center interaction records",
+        "Email and marketing engagement data",
+        "Customer service ticket data",
+        "Chat and messaging transcripts",
+        "Customer identification and login data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with high-value journeys (e.g., purchase, account creation); implement cross-channel customer ID resolution for logged-in users; create journey flow visualizations for top 5 paths; establish weekly journey performance reviews.",
+        "investmentRequired": "Medium-High - requires customer data platform for journey stitching, advanced analytics tools, cross-channel tracking implementation. Typical investment $200K-$500K.",
+        "timeToValue": "4-6 months for unified journey data and initial analytics, 9-12 months for full cross-channel optimization and attribution",
+        "prerequisites": "Customer identification mechanism across channels, tracking implementation on all digital properties, CRM integration, data governance for customer journey data"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Customer analytics", "UX research", "Data engineering", "Digital analytics", "Marketing strategy"],
+        "complianceConsiderations": ["Cross-device tracking consent", "Cookie policies and GDPR", "Data retention policies"],
+        "technologyStack": ["Customer data platform (CDP)", "Journey analytics tools", "Web/mobile analytics", "Process mining software", "BI dashboards"]
+      }
+    },
+    {
+      "id": "attribution-modeling",
+      "name": "Attribution Modeling",
+      "description": "Multi-touch attribution, marketing mix modeling, and channel effectiveness measurement to optimize marketing spend and ROI",
+      "traditionalWorkflow": "Marketing analysts use default last-click or first-click attribution rules in Google Analytics or ad platforms, which severely under-credit upper-funnel awareness and consideration touchpoints. They create manual spreadsheets attempting to calculate multi-touch attribution using crude heuristics (linear, time-decay) without statistical rigor. Channel effectiveness is measured in silos, leading to suboptimal budget allocation. Marketing mix modeling, if attempted, is an infrequent (annual) exercise conducted by external consultants using simplified regression models. The lack of sophisticated attribution leads to over-investment in last-click channels and under-investment in brand-building activities.",
+      "agenticWorkflow": "An Attribution Intelligence Orchestrator coordinates sophisticated multi-touch attribution and marketing mix modeling. A Multi-Touch Attribution Agent applies data-driven attribution algorithms (Shapley value, Markov chains, ML-based) to credit touchpoints based on their true incremental contribution. A Marketing Mix Modeler uses advanced econometric techniques to quantify the impact of media spend, promotions, pricing, and external factors on sales. A Channel Effectiveness Agent synthesizes insights from attribution and MMM to provide holistic channel performance measurement. An Optimization Engine recommends budget reallocation to maximize marketing ROI, accounting for saturation effects and diminishing returns.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Attribution Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-method attribution analysis", "Integrates attribution with marketing performance management", "Manages data pipelines from all marketing channels", "Prioritizes attribution insights for budget decisions"]
+        },
+        "superAgents": [
+          {
+            "agent": "Multi-Touch Attribution Agent",
+            "responsibilities": ["Applies data-driven MTA algorithms (Shapley, Markov, ML)", "Credits touchpoints based on incremental contribution", "Provides attribution at campaign, channel, and tactic levels", "Validates attribution models using hold-out tests"]
+          },
+          {
+            "agent": "Marketing Mix Modeler",
+            "responsibilities": ["Builds econometric models linking marketing inputs to sales", "Quantifies media effectiveness, saturation, and carryover", "Incorporates pricing, promotions, and seasonality", "Provides confidence intervals and scenario modeling"]
+          },
+          {
+            "agent": "Channel Effectiveness Agent",
+            "responsibilities": ["Synthesizes MTA and MMM insights for holistic view", "Measures true channel ROI accounting for interaction effects", "Identifies complementary vs. substitutable channels", "Benchmarks performance vs. industry standards"]
+          },
+          {
+            "agent": "Optimization Engine Agent",
+            "responsibilities": ["Recommends budget reallocation to maximize ROI", "Models saturation curves and diminishing returns", "Simulates impact of budget scenarios", "Provides optimal channel mix recommendations"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Data Unification Agent",
+            "responsibilities": ["Integrates marketing data from all platforms", "Resolves customer identity across touchpoints", "Ensures data quality for attribution models"]
+          },
+          {
+            "agent": "Incrementality Testing Agent",
+            "responsibilities": ["Designs and analyzes geo tests, hold-out tests", "Validates attribution model accuracy", "Provides ground truth for model calibration"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates attribution dashboards and reports", "Visualizes customer journeys with attribution credit", "Produces channel effectiveness scorecards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Annual MMM studies vs. continuous attribution measurement with monthly model updates",
+        "accuracyImprovement": "Biased last-click attribution vs. statistically rigorous multi-touch and MMM with 70-85% accuracy",
+        "efficiency": "90% reduction in attribution analysis time, automated model updates vs. manual consultant engagements",
+        "businessImpact": "15-30% improvement in marketing ROI through better budget allocation, 20-40% reallocation from over-credited to under-credited channels, 10-20% reduction in wasted spend",
+        "decisionQuality": "Data-driven incremental contribution vs. rules-based last-click, holistic channel view vs. siloed measurement"
+      },
+      "dataSources": [
+        "Marketing spend data by channel, campaign, and tactic",
+        "Customer journey and touchpoint data",
+        "Conversion and sales data",
+        "Web and mobile analytics",
+        "Ad platform data (Google, Facebook, etc.)",
+        "Email and marketing automation data",
+        "External factors (seasonality, economy, weather)",
+        "Competitive marketing activity"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement data-driven attribution in Google Analytics 360 or Adobe Analytics; compare last-click vs. data-driven to quantify bias; start with digital-only attribution before adding offline channels; pilot incrementality tests in 2-3 channels.",
+        "investmentRequired": "Medium-High - requires unified marketing data, attribution platform or modeling expertise, MMM statistical tools. Typical investment $200K-$500K including data/measurement strategy.",
+        "timeToValue": "4-6 months for multi-touch attribution, 9-12 months for full MMM integration and optimization",
+        "prerequisites": "Unified customer journey data, comprehensive marketing spend tracking, conversion tracking across channels, data science expertise in econometrics and ML"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Econometrics", "Data science/ML", "Marketing analytics", "Statistics", "Marketing strategy"],
+        "complianceConsiderations": ["User consent for cross-device tracking", "Data sharing with attribution platforms", "Privacy-preserving measurement in cookieless future"],
+        "technologyStack": ["Attribution platforms (Google Attribution, Adobe, custom)", "MMM tools (R, Python)", "Customer data platform", "Data warehouse", "BI tools"]
+      }
+    },
+    {
+      "id": "cohort-analysis",
+      "name": "Cohort Analysis",
+      "description": "Retention curves, behavior evolution over time, and generational comparisons to understand customer lifecycle dynamics and improve retention strategies",
+      "traditionalWorkflow": "Analysts manually create cohort analysis in Excel by grouping customers by acquisition month and calculating retention rates period-by-period using complex formulas. They struggle with data manipulation to reshape transaction data into cohort formats. The analysis is time-consuming to refresh, limiting it to quarterly or annual exercises. Cohort comparisons are limited to a few dimensions (typically just time), missing insights from behavioral, channel, or campaign-based cohorts. Visualization is static (Excel heat maps) and difficult to explore interactively.",
+      "agenticWorkflow": "A Cohort Intelligence Orchestrator coordinates comprehensive cohort analysis across multiple dimensions and behaviors. A Cohort Builder Agent automatically constructs cohorts based on acquisition time, channel, campaign, product, or any customer characteristic. A Retention Tracker calculates retention curves, churn rates, and lifecycle metrics for each cohort with statistical confidence intervals. A Behavior Evolution Agent analyzes how customer behaviors (purchase frequency, basket size, category mix) change over the customer lifecycle within and across cohorts. A Cohort Comparator identifies significant differences between cohorts, revealing which acquisition sources or strategies produce superior long-term customer value.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Cohort Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional cohort analysis", "Manages automated cohort refresh workflows", "Prioritizes cohort insights by strategic importance", "Integrates cohort learnings with acquisition and retention strategies"]
+        },
+        "superAgents": [
+          {
+            "agent": "Cohort Builder Agent",
+            "responsibilities": ["Constructs cohorts by acquisition time, channel, campaign, behavior", "Handles complex cohort definitions and nested groupings", "Ensures statistical validity of cohort sizes", "Creates dynamic cohorts based on evolving criteria"]
+          },
+          {
+            "agent": "Retention Tracker Agent",
+            "responsibilities": ["Calculates retention rates and curves for all cohorts", "Measures churn rates and half-life metrics", "Provides confidence intervals for retention estimates", "Tracks retention vs. benchmarks and goals"]
+          },
+          {
+            "agent": "Behavior Evolution Agent",
+            "responsibilities": ["Analyzes how customer behaviors change over lifecycle", "Tracks purchase frequency, AOV, category penetration evolution", "Identifies behavioral milestones and engagement peaks", "Detects behavior degradation signals"]
+          },
+          {
+            "agent": "Cohort Comparator Agent",
+            "responsibilities": ["Compares cohorts across retention and behavior dimensions", "Identifies statistically significant cohort differences", "Attributes performance variance to cohort characteristics", "Recommends acquisition and retention strategies by cohort type"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Predictive Cohort Agent",
+            "responsibilities": ["Forecasts future cohort retention and value", "Projects mature-state behavior from early signals", "Enables early intervention for underperforming cohorts"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates interactive cohort heat maps and charts", "Enables self-service cohort exploration", "Produces cohort analysis reports and dashboards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Quarterly manual cohort analysis vs. daily automated cohort tracking with self-service exploration",
+        "accuracyImprovement": "Simple time cohorts vs. multi-dimensional behavioral cohorts revealing 3-5x more actionable insights",
+        "efficiency": "90% reduction in cohort analysis time, automated refresh vs. manual Excel manipulation",
+        "businessImpact": "15-25% improvement in retention rates through cohort-specific strategies, 20-30% better acquisition channel selection based on long-term cohort value, 10-20% reduction in early churn",
+        "decisionQuality": "Comprehensive lifecycle understanding vs. point-in-time snapshots, predictive cohort trajectories vs. backward-looking retention rates"
+      },
+      "dataSources": [
+        "Customer transaction history with timestamps",
+        "Customer acquisition source and campaign data",
+        "Registration and profile data",
+        "Product category purchase history",
+        "Engagement data (web visits, email opens)",
+        "Customer service interaction data",
+        "Subscription and payment data",
+        "Churn and cancellation records"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated monthly acquisition cohort analysis with 12-month retention tracking; compare retention across top 5 acquisition channels; create cohort dashboard with heat map visualizations; establish monthly cohort review process.",
+        "investmentRequired": "Low-Medium - leverages existing customer data, requires analytics tooling and cohort analysis templates. Typical investment $50K-$150K.",
+        "timeToValue": "2-3 months for basic cohort analysis and dashboards, 4-6 months for multi-dimensional behavioral cohorts and predictive capabilities",
+        "prerequisites": "Customer transaction history (24+ months for mature cohorts), acquisition source tracking, customer lifecycle data, defined retention metrics"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "3-6 months",
+        "integrationEffort": "Low-Medium",
+        "skillsRequired": ["Customer analytics", "Statistics", "Data analysis", "Retention strategy", "Data visualization"],
+        "complianceConsiderations": ["Customer data retention policies", "Anonymization for cohort analysis"],
+        "technologyStack": ["Customer data warehouse", "BI tools with cohort capabilities", "Python/R for advanced analysis", "Visualization platforms"]
+      }
+    },
+    {
+      "id": "voice-of-customer-analytics",
+      "name": "Voice of Customer Analytics",
+      "description": "Sentiment analysis, topic modeling, and closed-loop feedback integration to systematically capture, analyze, and act on customer feedback",
+      "traditionalWorkflow": "Customer service teams manually read and categorize survey responses, reviews, and feedback tickets, tagging comments with subjective codes in spreadsheets. They create Word Cloud visualizations and manually excerpt representative quotes for reports. Sentiment assessment is binary (positive/negative) rather than nuanced. Feedback from different channels (surveys, reviews, social, call center) is siloed in separate systems. Insights are anecdotal and selectively reported rather than systematically analyzed. The feedback loop is rarely closed—customers don't know their input drove changes, and teams don't track resolution of feedback themes.",
+      "agenticWorkflow": "A Voice of Customer Orchestrator coordinates comprehensive feedback analysis across all channels and touchpoints. A Sentiment Analysis Agent applies NLP models to assess sentiment (positive, negative, neutral) with confidence scores and emotional dimensions (frustrated, delighted, confused). A Topic Modeling Agent uses unsupervised learning (LDA, NMF) to automatically discover themes and issues without predefined categories. A Feedback Prioritization Agent ranks issues by frequency, sentiment intensity, and customer impact to focus improvement efforts. A Closed-Loop Engine ensures feedback insights drive action and communicates resolutions back to customers, tracking completion rates.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Voice of Customer Orchestrator",
+          "responsibilities": ["Coordinates feedback analysis across all sources", "Manages unified feedback data pipelines", "Prioritizes issues by customer impact and frequency", "Ensures closed-loop resolution and communication"]
+        },
+        "superAgents": [
+          {
+            "agent": "Sentiment Analysis Agent",
+            "responsibilities": ["Applies NLP sentiment models to all feedback text", "Classifies sentiment (positive, negative, neutral) with confidence", "Detects emotional dimensions (frustrated, satisfied, angry)", "Tracks sentiment trends over time and by segment"]
+          },
+          {
+            "agent": "Topic Modeling Agent",
+            "responsibilities": ["Discovers feedback themes using unsupervised ML", "Clusters similar feedback into topics without predefined categories", "Labels topics with representative terms and phrases", "Tracks topic prevalence and evolution"]
+          },
+          {
+            "agent": "Feedback Prioritization Agent",
+            "responsibilities": ["Ranks issues by frequency, intensity, and impact", "Identifies emerging issues requiring urgent attention", "Calculates estimated customer impact of resolving issues", "Creates prioritized improvement roadmaps"]
+          },
+          {
+            "agent": "Closed-Loop Engine Agent",
+            "responsibilities": ["Routes prioritized issues to responsible teams", "Tracks resolution progress and completion", "Communicates resolutions back to affected customers", "Measures customer satisfaction with resolution"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Multi-Channel Integration Agent",
+            "responsibilities": ["Aggregates feedback from surveys, reviews, social, call center", "Normalizes feedback across channels", "Provides channel-specific insights"]
+          },
+          {
+            "agent": "Customer Context Agent",
+            "responsibilities": ["Links feedback to customer profiles and value", "Prioritizes feedback from high-value customers", "Analyzes feedback patterns by segment"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates feedback dashboards with topic and sentiment views", "Generates word clouds and trend charts", "Produces executive VoC reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weeks for manual survey analysis vs. real-time feedback processing and alerting for critical issues",
+        "accuracyImprovement": "Subjective manual coding vs. consistent ML-based sentiment and topic classification with 80-90% accuracy",
+        "efficiency": "95% reduction in feedback analysis time, 100% coverage vs. selective manual review",
+        "businessImpact": "20-40% improvement in issue resolution rates, 15-25% increase in customer satisfaction through closed-loop, 10-15% reduction in repeat complaints",
+        "decisionQuality": "Data-driven issue prioritization vs. anecdotal loudest-voice bias, systematic action vs. ad hoc responses"
+      },
+      "dataSources": [
+        "Survey responses (NPS, CSAT, post-transaction)",
+        "Product and service reviews",
+        "Social media mentions and comments",
+        "Call center transcripts and notes",
+        "Live chat and messaging transcripts",
+        "Email feedback and complaints",
+        "Community forum posts",
+        "App store reviews"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement sentiment analysis on existing survey open-ends; create automated topic discovery for top feedback sources; establish weekly VoC dashboard review; pilot closed-loop process for top 5 issue themes.",
+        "investmentRequired": "Medium - requires NLP/text analytics platform, multi-channel feedback integration, closed-loop workflow tooling. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for sentiment and topic analysis, 6-9 months for full closed-loop integration and multi-channel coverage",
+        "prerequisites": "Feedback data from multiple sources, text data quality and volume sufficient for ML, defined issue resolution workflows, cross-functional commitment to closed-loop"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["NLP/text analytics", "Customer experience", "Data engineering", "Change management", "Customer service operations"],
+        "complianceConsiderations": ["Customer consent for feedback use", "PII handling in feedback text", "Right to be forgotten in feedback systems"],
+        "technologyStack": ["NLP platforms (Python NLTK, spaCy, transformers)", "Text analytics tools", "Survey platforms", "Social listening tools", "BI dashboards"]
+      }
+    },
+    {
+      "id": "customer-profitability-analysis",
+      "name": "Customer Profitability Analysis",
+      "description": "True profit by customer including cost-to-serve, CLV optimization, and profitability-based segmentation to maximize portfolio value",
+      "traditionalWorkflow": "Finance teams calculate aggregate profitability by product or channel but rarely at the customer level due to complexity. When attempted, customer profitability analysis in Excel uses crude allocation methods that assign costs proportionally rather than using activity-based approaches. Cost-to-serve is oversimplified or ignored entirely, failing to account for differences in channel mix, service intensity, returns, and discounts. High-revenue customers are assumed to be profitable, missing cases where high-maintenance, discount-seeking, or high-return customers actually destroy value. Strategic decisions (retention investments, acquisition targets) are made without true profitability insights.",
+      "agenticWorkflow": "A Customer Profitability Orchestrator coordinates sophisticated customer-level P&L analysis with activity-based costing. A Revenue Attribution Agent calculates gross revenue by customer, accounting for returns, discounts, and promotions. A Cost Allocation Agent assigns costs to customers using activity-based costing principles, considering fulfillment channel, service interactions, return rates, and payment methods. A Profitability Analyzer synthesizes revenue and costs to compute true customer profit and margins. A Strategy Optimizer uses profitability insights to recommend customer treatment strategies—investing in profitable customers, improving or divesting unprofitable ones—and models CLV scenarios to optimize long-term portfolio value.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Customer Profitability Orchestrator",
+          "responsibilities": ["Coordinates end-to-end customer profitability analysis", "Manages data pipelines from revenue and cost systems", "Integrates profitability with customer strategy and segmentation", "Prioritizes profitability improvement opportunities"]
+        },
+        "superAgents": [
+          {
+            "agent": "Revenue Attribution Agent",
+            "responsibilities": ["Calculates gross revenue by customer and transaction", "Accounts for returns, discounts, promotions, and allowances", "Computes net revenue and gross margin contribution", "Tracks revenue trends and growth by customer"]
+          },
+          {
+            "agent": "Cost Allocation Agent",
+            "responsibilities": ["Assigns costs to customers using activity-based costing", "Allocates fulfillment, service, returns, payment costs", "Accounts for channel-specific cost-to-serve differences", "Provides cost driver analysis (what makes customers expensive)"]
+          },
+          {
+            "agent": "Profitability Analyzer Agent",
+            "responsibilities": ["Calculates customer profit and margin metrics", "Segments customers by profitability tiers", "Identifies high-value vs. value-destroying customers", "Tracks profitability evolution over customer lifecycle"]
+          },
+          {
+            "agent": "Strategy Optimizer Agent",
+            "responsibilities": ["Recommends customer treatment strategies by profitability tier", "Models scenarios for improving unprofitable customer economics", "Optimizes acquisition targeting toward profitable lookalikes", "Simulates CLV impact of profitability initiatives"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Benchmarking Agent",
+            "responsibilities": ["Provides profitability benchmarks by industry and customer type", "Identifies profitability outliers for investigation", "Tracks performance vs. goals"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates customer profitability dashboards and scorecards", "Generates profitability distribution charts", "Produces customer P&L reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Annual profitability studies (if at all) vs. quarterly automated customer P&L analysis",
+        "accuracyImprovement": "Crude proportional cost allocation vs. activity-based costing with 60-80% more accurate profitability measurement",
+        "efficiency": "90% reduction in profitability analysis time, scalable to entire customer base vs. small samples",
+        "businessImpact": "15-30% improvement in overall customer portfolio profitability through better treatment strategies, 10-20% better acquisition efficiency targeting profitable segments, identification of 10-20% of customers destroying value",
+        "decisionQuality": "True profit vs. revenue-based decisions, sophisticated cost-to-serve understanding vs. blind spots"
+      },
+      "dataSources": [
+        "Customer revenue and transaction data",
+        "Product costs and margin data",
+        "Fulfillment and shipping costs by channel",
+        "Customer service interaction costs",
+        "Returns and reverse logistics costs",
+        "Payment processing fees",
+        "Marketing and acquisition costs by channel",
+        "Discount and promotion costs"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with top 20% of customers by revenue; implement basic cost allocation (fulfillment, returns, service); create profitability segmentation (high/medium/low profit); pilot retention strategy for high-profit at-risk customers.",
+        "investmentRequired": "Medium-High - requires activity-based costing model development, cost system integration, finance-marketing collaboration. Typical investment $200K-$400K.",
+        "timeToValue": "4-6 months for initial profitability analysis and segmentation, 9-12 months for full activity-based costing and strategy optimization",
+        "prerequisites": "Integrated customer transaction and cost data, finance support for cost allocation methodology, defined customer treatment strategies, cross-functional alignment"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Managerial accounting", "Activity-based costing", "Customer analytics", "Finance", "Customer strategy"],
+        "complianceConsiderations": ["Cost allocation methodology defensibility", "Fair treatment regardless of profitability tier"],
+        "technologyStack": ["ERP/finance systems", "Customer data warehouse", "Cost allocation tools", "BI platforms", "Profitability analytics software"]
+      }
+    }
+  ]
+}

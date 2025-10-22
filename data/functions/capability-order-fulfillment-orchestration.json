@@ -1,0 +1,516 @@
+[
+  {
+    "id": "function-ofs-order-routing-allocation",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Order Routing & Allocation",
+    "description": "AI-driven order orchestration determining optimal fulfillment location and method across DCs, stores, and 3PLs to minimize cost and maximize speed.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Simple rule-based order routing (ship from closest DC with inventory, default to primary DC). No consideration of fulfillment costs, capacity constraints, or SLA optimization. Manual split shipment decisions. Limited ability to route to stores or alternative fulfillment locations. Batch processing (hourly or less frequent) delays routing decisions.",
+      "constraints": [
+        "Rule-based routing (proximity only, ignoring costs/capacity)",
+        "10-20% suboptimal routing (not lowest cost or fastest)",
+        "Limited split shipment optimization (avoid rather than optimize)",
+        "Batch processing creates 30-60 minute routing delays",
+        "No dynamic re-allocation after initial routing"
+      ],
+      "metrics": [
+        "Routing optimization: 80-90% vs optimal",
+        "Split shipment rate: <5% (avoiding complexity)",
+        "Fulfillment cost variance: 15-25% vs optimal"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI order routing orchestrator receives every order in real-time and evaluates all possible fulfillment options (DCs, stores, drop-ship vendors, 3PLs) across multiple dimensions: inventory availability, fulfillment cost, transportation cost, delivery speed, capacity constraints, and customer preferences. Machine learning optimizes for total landed cost while meeting promised delivery dates. System intelligently creates split shipments when cost/speed benefits outweigh complexity (e.g., in-stock item from local store + backordered item from DC). Continuous re-optimization monitors orders pre-allocation and dynamically re-routes based on cancellations, stockouts, or priority changes. Predictive inventory allocation reserves high-velocity items at optimal nodes.",
+      "agents": {
+        "orchestrator": "Order Routing & Allocation Orchestrator",
+        "superAgents": [
+          "Multi-Node Optimization Agent",
+          "Split Shipment Analysis Agent",
+          "Cost Optimization Agent",
+          "Capacity Management Agent"
+        ],
+        "utilityAgents": [
+          "Inventory Visibility Agent",
+          "Transportation Rating Agent",
+          "Fulfillment Cost Agent",
+          "OMS Integration Agent"
+        ]
+      },
+      "dataSources": [
+        "Real-time inventory across all fulfillment nodes",
+        "Fulfillment costs by node (labor, overhead, shipping)",
+        "Transportation costs by origin-destination pair",
+        "Node capacity and throughput constraints",
+        "Promised delivery dates and service levels",
+        "Customer preferences (split shipment acceptance, sustainability)",
+        "Historical routing performance and costs"
+      ],
+      "benefits": [
+        "95-99% routing optimization vs theoretical optimal",
+        "12-20% reduction in total fulfillment costs",
+        "15-25% improvement in on-time delivery through optimal node selection",
+        "30-50% increase in store fulfillment utilization (BOPIS, ship-from-store)",
+        "5-10% increase in split shipment rate with net cost savings"
+      ],
+      "metrics": [
+        "Routing optimization: 95-99% vs optimal",
+        "Split shipment rate: 8-12% (when beneficial)",
+        "Fulfillment cost variance: <5% vs optimal"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable real-time inventory visibility across top 80% fulfillment nodes (20% routing improvement)",
+        "Implement cost-based routing for shipments >$100 (10% fulfillment cost reduction)",
+        "Deploy store fulfillment for fast-moving SKUs (15% faster delivery)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Distributed Order Management System (DOM/OMS)",
+        "Real-time inventory visibility across all nodes",
+        "Fulfillment and transportation cost data",
+        "Order promising engine with delivery date calculation"
+      ]
+    },
+    "icon": "sitemap",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ofs-order-promising-atp",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Order Promising & Available-to-Promise",
+    "description": "Accurate delivery date commitments using real-time ATP calculations, capacity modeling, and demand forecasting to balance customer expectations with operational feasibility.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Static lead time commitments based on simple rules (e.g., 'in-stock ships in 3-5 business days'). No real-time consideration of fulfillment capacity, carrier transit times, or inventory allocation. ATP calculated from on-hand inventory without considering existing demand commitments or inbound receipts. Frequent promise date misses leading to customer dissatisfaction. Over-promising to win orders creates operational strain.",
+      "constraints": [
+        "Static lead times ignore capacity constraints (10-15% promise miss rate)",
+        "ATP based on inventory snapshot, not reserved/committed inventory",
+        "No carrier transit time integration (3-5 day estimates often wrong)",
+        "Weekly or daily ATP refresh (not real-time)",
+        "Unable to promise against inbound inventory (future ATP)"
+      ],
+      "metrics": [
+        "Promise accuracy: 85-90%",
+        "ATP accuracy: 80-85%",
+        "Promise miss rate: 10-15%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered order promising engine calculates precise delivery dates in real-time by orchestrating multiple data sources: current inventory positions, reserved/allocated inventory, in-transit inbound receipts, fulfillment node capacity, carrier service levels, and expected processing times. Machine learning predicts fulfillment throughput and identifies capacity constraints 24-48 hours in advance. System performs capable-to-promise (CTP) analysis considering future inventory from production or inbound shipments. Dynamic safety stock calculations protect against demand volatility while maximizing sellable ATP. Automated promise optimization balances aggressive promises (conversion) vs. conservative promises (operational buffer). Real-time promise updates displayed to customers during checkout.",
+      "agents": {
+        "orchestrator": "Order Promising Orchestrator",
+        "superAgents": [
+          "ATP Calculation Agent",
+          "Capable-to-Promise (CTP) Agent",
+          "Capacity Modeling Agent",
+          "Delivery Date Prediction Agent"
+        ],
+        "utilityAgents": [
+          "Inventory Reservation Agent",
+          "Transportation Transit Time Agent",
+          "Demand Forecasting Agent",
+          "Safety Stock Optimization Agent"
+        ]
+      },
+      "dataSources": [
+        "Real-time inventory (on-hand, reserved, allocated, in-transit)",
+        "Fulfillment node capacity and throughput",
+        "Order queue and processing times",
+        "Carrier service levels and transit times",
+        "Demand forecasts by SKU",
+        "Historical promise vs. actual delivery performance",
+        "Production schedules (for make-to-order or CTP)"
+      ],
+      "benefits": [
+        "95-98% promise accuracy (vs 85-90%)",
+        "95-99% ATP accuracy through real-time reservation",
+        "70-85% reduction in promise miss rate (2-4% vs 10-15%)",
+        "10-15% conversion improvement from accurate fast-delivery promises",
+        "20-30% reduction in safety stock through dynamic optimization"
+      ],
+      "metrics": [
+        "Promise accuracy: 95-98%",
+        "ATP accuracy: 95-99%",
+        "Promise miss rate: 2-4%"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Integrate carrier transit times into promise calculation (20% promise accuracy improvement)",
+        "Enable real-time inventory reservation at checkout (30% ATP accuracy gain)",
+        "Deploy capacity-aware promising for peak periods (50% promise miss reduction)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Real-time inventory visibility across network",
+        "Order Management System with ATP/CTP capability",
+        "Carrier service level data and transit time APIs",
+        "Historical order processing time data by fulfillment node"
+      ]
+    },
+    "icon": "calendar-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ofs-backorder-management",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Backorder & Allocation Management",
+    "description": "Automated backorder handling with fair allocation, partial fulfillment optimization, and proactive customer communication.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual backorder management via spreadsheets or basic OMS queues. First-come-first-served allocation when inventory arrives without considering order priority or customer value. Binary decision (fulfill entire order or hold entire order) missing partial fulfillment opportunities. Delayed customer communication about backorder status. Frequent backorder cancellations due to lack of proactive management.",
+      "constraints": [
+        "FIFO allocation ignores order priority/customer tier (lost VIP satisfaction)",
+        "No partial fulfillment (ship available items now, backorder rest)",
+        "Backorder visibility limited (no ETA communication to customers)",
+        "15-30% backorder cancellation rate",
+        "Manual allocation decisions when inventory arrives (hours to days delay)"
+      ],
+      "metrics": [
+        "Backorder fill rate: 70-85%",
+        "Time to allocate new inventory: 4-24 hours",
+        "Customer satisfaction (backorders): 60-70%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI backorder management system continuously monitors backorder queue and incoming inventory to optimize allocation decisions. Machine learning prioritizes orders based on customer lifetime value, order profitability, promised delivery dates, and backorder age. System automatically determines when partial fulfillment is beneficial (ship available items immediately vs. hold entire order) based on shipping costs, customer preferences, and item urgency. Predictive inventory allocation reserves incoming inventory for high-priority backorders before it arrives. Automated customer communications provide accurate ETAs based on inbound inventory schedules. Alternative product recommendations offered for chronic backorders.",
+      "agents": {
+        "orchestrator": "Backorder Management Orchestrator",
+        "superAgents": [
+          "Priority Allocation Agent",
+          "Partial Fulfillment Optimization Agent",
+          "ETA Prediction Agent",
+          "Alternative Product Agent"
+        ],
+        "utilityAgents": [
+          "Inbound Inventory Tracking Agent",
+          "Customer Communication Agent",
+          "Customer Value Agent (CLV/tier)",
+          "Cancellation Prediction Agent"
+        ]
+      },
+      "dataSources": [
+        "Backorder queue with order details and age",
+        "Inbound inventory (POs, transfers, production)",
+        "Customer segmentation and lifetime value",
+        "Historical backorder fulfillment and cancellation rates",
+        "Partial shipment cost models",
+        "Alternative product recommendations (substitutes)",
+        "Customer communication preferences"
+      ],
+      "benefits": [
+        "90-95% backorder fill rate (vs 70-85%)",
+        "70-85% reduction in cancellation rate (3-5% vs 15-30%)",
+        "Real-time allocation (seconds vs 4-24 hours)",
+        "25-35% improvement in customer satisfaction through proactive communication",
+        "15-25% faster inventory turnover for backordered items"
+      ],
+      "metrics": [
+        "Backorder fill rate: 90-95%",
+        "Time to allocate new inventory: Seconds (automated)",
+        "Customer satisfaction (backorders): 85-90%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement automated ETA communication for backorders (40% satisfaction improvement)",
+        "Enable priority allocation for VIP customers (20% retention impact)",
+        "Deploy partial fulfillment for multi-item orders (15% faster delivery)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "OMS with backorder management capability",
+        "Inbound inventory visibility (PO tracking)",
+        "Customer segmentation data",
+        "Automated customer communication platform"
+      ]
+    },
+    "icon": "hourglass-half",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ofs-order-exception-management",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Order Exception Handling",
+    "description": "Proactive exception detection and resolution for payment failures, inventory shortages, address issues, and fraud using AI-driven decisioning.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual review of exception queues (payment failures, invalid addresses, fraud holds) by customer service or fraud teams. Orders sit in exception status for hours or days waiting for human review. Email/phone outreach to customers for resolution. Binary decisions (approve or cancel) without intelligent retry strategies. High exception volumes overwhelm teams during peak periods causing order delays.",
+      "constraints": [
+        "12-48 hour exception resolution time",
+        "5-10% order volume stuck in exceptions during peak",
+        "Manual review required for most exceptions (low automation)",
+        "15-25% exception orders canceled (could be saved with better handling)",
+        "Customer frustration from lack of proactive communication"
+      ],
+      "metrics": [
+        "Exception resolution time: 12-48 hours",
+        "Auto-resolution rate: 20-30%",
+        "Exception cancel rate: 15-25%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI exception management system continuously monitors order flow and proactively detects exceptions before they block fulfillment. Machine learning classifies exception types and routes to appropriate resolution workflow: payment retries (smart retry timing based on authorization patterns), address validation and correction (USPS API + ML fuzzy matching), fraud review (risk scoring with automated approval for low-risk). System auto-resolves 70-85% of exceptions without human intervention. For remaining exceptions, enriched case data and recommended actions presented to agents for fast resolution. Proactive customer communication via SMS/email with self-service resolution options (update payment method, confirm address). Real-time exception dashboards highlight trends and bottlenecks.",
+      "agents": {
+        "orchestrator": "Order Exception Orchestrator",
+        "superAgents": [
+          "Payment Retry Optimization Agent",
+          "Address Validation & Correction Agent",
+          "Fraud Risk Assessment Agent",
+          "Automated Resolution Agent"
+        ],
+        "utilityAgents": [
+          "Payment Gateway Agent",
+          "Address API Agent (USPS, Google)",
+          "Customer Communication Agent",
+          "Exception Analytics Agent"
+        ]
+      },
+      "dataSources": [
+        "Order details and exception reason codes",
+        "Payment authorization history and patterns",
+        "Address validation databases",
+        "Fraud risk scores and historical fraud patterns",
+        "Customer contact information and preferences",
+        "Historical exception resolution outcomes"
+      ],
+      "benefits": [
+        "85-95% reduction in resolution time (1-2 hours vs 12-48 hours)",
+        "70-85% auto-resolution rate (vs 20-30%)",
+        "60-75% reduction in exception cancel rate (4-6% vs 15-25%)",
+        "2-3% revenue recovery from saved orders",
+        "50-70% reduction in customer service exception volume"
+      ],
+      "metrics": [
+        "Exception resolution time: 1-2 hours",
+        "Auto-resolution rate: 70-85%",
+        "Exception cancel rate: 4-6%"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated address validation and correction (40% exception reduction)",
+        "Implement smart payment retry logic (25% payment failure recovery)",
+        "Enable self-service customer exception resolution portal"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "OMS with exception management workflows",
+        "Payment gateway with retry and authorization data",
+        "Address validation API access",
+        "Customer communication platform (email/SMS)"
+      ]
+    },
+    "icon": "triangle-exclamation",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ofs-multi-channel-inventory-sync",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Multi-Channel Inventory Synchronization",
+    "description": "Continuous inventory sync across all sales channels with dynamic ATP buffering to prevent oversells while maximizing sellable inventory.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Batch inventory synchronization (hourly or less frequent) from WMS to eCommerce, marketplace, and store systems. Static safety stock buffers reduce sellable inventory to prevent oversells. Frequent oversells during high-velocity periods due to sync lag. Manual inventory reconciliation to resolve discrepancies. No channel-specific ATP optimization (same buffer for all channels regardless of demand patterns).",
+      "constraints": [
+        "Inventory sync lag: 15-60 minutes (batch updates)",
+        "2-5% oversell rate during peak demand",
+        "20-30% inventory held as safety stock buffer (unsellable)",
+        "Manual reconciliation when oversells occur (hours to days)",
+        "Uniform buffers across channels (suboptimal)"
+      ],
+      "metrics": [
+        "Inventory accuracy (cross-channel): 92-95%",
+        "Oversell rate: 2-5%",
+        "Sellable inventory: 70-80% of on-hand"
+      ]
+    },
+    "agentic": {
+      "workflow": "Real-time inventory orchestration platform maintains a single source of truth for inventory positions and synchronizes updates to all sales channels (eCommerce, marketplaces, POS, B2B) within seconds of transactions. Machine learning dynamically adjusts ATP buffers by channel and SKU based on demand volatility, order velocity, sync latency, and cancellation rates—aggressive buffers for high-velocity flash sales, minimal buffers for stable demand. Predictive oversell prevention detects high-risk scenarios (trending product, low inventory) and temporarily reduces sellable quantities. Automated inventory reservation during checkout prevents race conditions. When oversells occur, AI determines optimal resolution (cancel, partial ship, expedite from alternate location) based on customer value and item availability.",
+      "agents": {
+        "orchestrator": "Inventory Synchronization Orchestrator",
+        "superAgents": [
+          "Real-Time Sync Agent",
+          "Dynamic Buffer Optimization Agent",
+          "Oversell Prevention Agent",
+          "Oversell Resolution Agent"
+        ],
+        "utilityAgents": [
+          "Channel Integration Agent (eComm, marketplace, POS)",
+          "Inventory Reservation Agent",
+          "Demand Velocity Monitoring Agent",
+          "Reconciliation Agent"
+        ]
+      },
+      "dataSources": [
+        "Real-time inventory transactions (sales, receipts, adjustments)",
+        "Order velocity and demand forecasts by SKU/channel",
+        "Historical cancellation rates",
+        "Channel sync latency metrics",
+        "WMS and OMS inventory positions",
+        "Marketplace and eCommerce platform inventory levels"
+      ],
+      "benefits": [
+        "Real-time sync (seconds vs 15-60 minutes)",
+        "90-95% reduction in oversells (0.2-0.5% vs 2-5%)",
+        "15-25% increase in sellable inventory (85-95% vs 70-80%)",
+        "99%+ inventory accuracy across channels",
+        "Automated oversell resolution (minutes vs hours)"
+      ],
+      "metrics": [
+        "Inventory accuracy (cross-channel): 99%+",
+        "Oversell rate: 0.2-0.5%",
+        "Sellable inventory: 85-95% of on-hand"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement real-time sync for top 20% SKUs (80% oversell reduction)",
+        "Deploy dynamic buffers by channel (10-15% sellable inventory increase)",
+        "Enable checkout inventory reservation (eliminate race conditions)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "OMS with real-time inventory visibility",
+        "API integrations to all sales channels",
+        "Event-driven architecture for real-time sync",
+        "Inventory reservation capability at checkout"
+      ]
+    },
+    "icon": "arrows-rotate",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ofs-fulfillment-performance-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Fulfillment Performance Analytics & Optimization",
+    "description": "Comprehensive fulfillment metrics tracking with AI-driven insights to optimize speed, cost, and accuracy across the fulfillment network.",
+    "parentCapability": "capability-order-fulfillment-orchestration",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Weekly or monthly fulfillment reports aggregating high-level metrics (order cycle time, fill rate, cost per order) from OMS and WMS extracts. Limited drill-down capability to identify root causes of performance issues. Siloed metrics across warehouses, channels, and carriers. Reactive problem-solving after SLA misses or cost overruns. No predictive capabilities for capacity planning or bottleneck identification.",
+      "constraints": [
+        "Reporting lag: 1-7 days",
+        "Aggregated metrics hide root cause issues",
+        "Manual analysis required for trend identification (days per investigation)",
+        "No predictive alerts for capacity or cost issues",
+        "Benchmarking limited to internal historical performance"
+      ],
+      "metrics": [
+        "Reporting frequency: Weekly to monthly",
+        "Time to insight: 1-7 days",
+        "Predictive capability: None"
+      ]
+    },
+    "agentic": {
+      "workflow": "Real-time fulfillment analytics platform ingests data from OMS, WMS, TMS, and carrier systems to provide comprehensive performance dashboards with drill-down to individual order level. Machine learning identifies anomalies, trends, and root causes automatically (e.g., 'DC3 pack times increased 15% yesterday due to new hires and product mix shift'). Predictive models forecast capacity constraints, cost overruns, and SLA risks 24-72 hours in advance. AI-generated recommendations for optimization opportunities (shift fulfillment mix, adjust labor, renegotiate carrier rates). Natural language query interface enables business users to ask questions ('Why did fulfillment costs spike last week?'). Continuous benchmarking against industry standards and best-in-class performers.",
+      "agents": {
+        "orchestrator": "Fulfillment Analytics Orchestrator",
+        "superAgents": [
+          "Anomaly Detection Agent",
+          "Root Cause Analysis Agent",
+          "Predictive Capacity Agent",
+          "Optimization Recommendation Agent",
+          "Benchmarking Agent"
+        ],
+        "utilityAgents": [
+          "Data Integration Agent (OMS, WMS, TMS)",
+          "Visualization Engine Agent",
+          "Natural Language Query Agent",
+          "Alert & Notification Agent"
+        ]
+      },
+      "dataSources": [
+        "OMS order lifecycle data",
+        "WMS transaction data (pick, pack, ship times)",
+        "TMS shipping data (carrier, cost, transit time)",
+        "Labor management data (headcount, productivity)",
+        "Customer feedback (delivery satisfaction, complaints)",
+        "Industry benchmark data"
+      ],
+      "benefits": [
+        "Real-time metrics visibility (vs 1-7 day lag)",
+        "80-90% faster root cause identification (hours vs days)",
+        "50-70% reduction in SLA misses through predictive alerts",
+        "10-20% fulfillment cost reduction from optimization insights",
+        "30-50% reduction in time spent on manual reporting and analysis"
+      ],
+      "metrics": [
+        "Reporting frequency: Real-time",
+        "Time to insight: Minutes to hours",
+        "Predictive capability: 24-72 hour forecasts with 85%+ accuracy"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy real-time dashboard for top 10 fulfillment KPIs (immediate visibility)",
+        "Implement automated daily performance summary (50% reporting time savings)",
+        "Enable anomaly detection for order cycle time and costs (proactive alerts)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "OMS/WMS with API or data export capability",
+        "Data warehouse or analytics platform",
+        "Historical fulfillment data (3-6 months minimum)",
+        "Defined KPIs and performance thresholds"
+      ]
+    },
+    "icon": "chart-line",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

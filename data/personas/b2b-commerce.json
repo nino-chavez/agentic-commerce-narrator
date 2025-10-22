@@ -1,0 +1,503 @@
+[
+  {
+    "id": "persona-b2b-sales-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "B2B Sales Director",
+    "label": "B2B Sales Director",
+    "description": "Leads B2B sales organization, responsible for revenue targets, sales team performance, and customer acquisition/retention.",
+    "responsibilities": [
+      "Set sales strategy, quotas, and territories",
+      "Manage sales team (account managers, inside sales, sales ops)",
+      "Monitor pipeline and forecast revenue",
+      "Approve large deals and non-standard pricing",
+      "Build relationships with strategic accounts"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Review weekly pipeline reports in spreadsheets",
+      "Manually approve high-value quotes via email",
+      "Quarterly forecast updates based on rep gut feel",
+      "Ad-hoc win/loss analysis when deals close",
+      "Monthly sales meetings to review metrics"
+    ],
+    "agenticWorkflow": [
+      "Real-time pipeline dashboards with AI-predicted close probabilities",
+      "Auto-approve quotes within policy, review exceptions only",
+      "Continuous forecast updates with ML predictions",
+      "Automated win/loss capture and trend analysis",
+      "Proactive alerts for at-risk deals and renewal opportunities"
+    ],
+    "painPointsAddressed": [
+      "Real-time visibility into pipeline vs quarterly forecasts",
+      "Data-driven win/loss insights improve sales strategy",
+      "Faster quote approvals unblock deals waiting for approval",
+      "Proactive renewal management protects existing revenue"
+    ],
+    "kpis": [
+      "Revenue vs Target",
+      "Quote Conversion Rate",
+      "Pipeline Coverage Ratio",
+      "Average Deal Size",
+      "Sales Cycle Length",
+      "Customer Acquisition Cost (CAC)",
+      "Customer Lifetime Value (CLV)"
+    ],
+    "icon": "briefcase",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-account-manager-b2b",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "Account Manager (B2B Sales Rep)",
+    "label": "Account Manager (B2B Sales Rep)",
+    "description": "Manages B2B customer relationships, drives sales within assigned accounts, negotiates pricing and terms.",
+    "responsibilities": [
+      "Build relationships with customer buying committees",
+      "Identify cross-sell and upsell opportunities",
+      "Create quotes and negotiate pricing/terms",
+      "Coordinate with internal teams (ops, finance, legal)",
+      "Meet individual sales quotas"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually build quotes in spreadsheets (8-20 hours per quote)",
+      "Email quote to customer, chase for feedback",
+      "Submit quote for approvals via email, wait days for response",
+      "Negotiate pricing via phone/email back-and-forth",
+      "Manually enter won orders into ERP system"
+    ],
+    "agenticWorkflow": [
+      "Use guided selling agents to configure products in minutes",
+      "AI generates professional quotes instantly with optimal pricing",
+      "Automated approval routing approves most quotes within hours",
+      "Negotiation assistant suggests counteroffer strategies",
+      "One-click order conversion from accepted quotes"
+    ],
+    "painPointsAddressed": [
+      "70-85% less time on manual quoting frees time for selling",
+      "Instant access to contract history and prior pricing",
+      "No more chasing approvals via email",
+      "Proactive alerts when customers at risk of churn"
+    ],
+    "kpis": [
+      "Individual Sales Quota Attainment",
+      "Quote Conversion Rate",
+      "Average Deal Size",
+      "Time Spent on Admin vs Selling",
+      "Customer Retention Rate",
+      "Cross-Sell/Upsell Success Rate"
+    ],
+    "icon": "user-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-channel-partner-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "Channel Partner Manager",
+    "label": "Channel Partner Manager",
+    "description": "Manages relationships with distributors, resellers, and franchisees, ensuring they're enabled to sell effectively and meeting performance targets.",
+    "responsibilities": [
+      "Recruit, onboard, and train channel partners",
+      "Provide marketing and sales support (co-op funds, MDF)",
+      "Monitor partner performance (sales, compliance)",
+      "Manage trade promotions, rebates, and SPIFFs",
+      "Resolve partner conflicts and disputes"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually calculate rebates in spreadsheets (prone to errors)",
+      "Email partners with promotion details and terms",
+      "Quarterly business reviews to assess partner performance",
+      "React to partner complaints about pricing or support",
+      "Manual tracking of partner compliance with programs"
+    ],
+    "agenticWorkflow": [
+      "Automated rebate calculations with real-time compliance tracking",
+      "Partner portal for self-service access to training and materials",
+      "Real-time partner scorecards with performance metrics",
+      "AI-powered promotion optimization maximizes ROI",
+      "Proactive alerts for partners missing targets or compliance issues"
+    ],
+    "painPointsAddressed": [
+      "Automated rebate calculations vs spreadsheet chaos",
+      "Real-time partner performance visibility",
+      "Self-service partner portal reduces inquiries",
+      "Proactive alerts for partners missing targets"
+    ],
+    "kpis": [
+      "Partner Revenue Contribution",
+      "Partner Profitability (Margin)",
+      "Trade Promotion ROI",
+      "Rebate Processing Accuracy",
+      "Partner Compliance Rate",
+      "Partner Satisfaction Score"
+    ],
+    "icon": "user-group",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-b2b-buyer",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "B2B Buyer (Customer-Side Procurement)",
+    "label": "B2B Buyer (Customer-Side Procurement)",
+    "description": "Works for customer company, responsible for sourcing products/services, negotiating pricing, and managing supplier relationships.",
+    "responsibilities": [
+      "Source suppliers and issue RFQs",
+      "Negotiate pricing, terms, and contracts",
+      "Approve requisitions from internal stakeholders",
+      "Manage supplier performance and scorecards",
+      "Optimize procurement costs"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Search supplier websites or email for product information",
+      "Manually enter orders into supplier systems",
+      "Call supplier for inventory availability and pricing",
+      "Track orders via email or phone calls",
+      "Manually reconcile invoices against purchase orders"
+    ],
+    "agenticWorkflow": [
+      "Browse supplier catalogs directly in procurement system via punchout",
+      "Real-time inventory and pricing visibility",
+      "Contract pricing automatically applied at checkout",
+      "Self-service order tracking with proactive status updates",
+      "Automated invoice reconciliation and payment processing"
+    ],
+    "painPointsAddressed": [
+      "B2C-like buying experience with search, filters, recommendations",
+      "Real-time inventory and pricing (no stale catalog data)",
+      "Contract pricing automatically applied (no manual checks)",
+      "Self-service order tracking (no phone calls)"
+    ],
+    "kpis": [
+      "Cost Savings vs Budget",
+      "Supplier On-Time Delivery Rate",
+      "Requisition Cycle Time",
+      "Maverick Spend Rate",
+      "Supplier Compliance Rate",
+      "Purchase Order Accuracy"
+    ],
+    "icon": "shopping-cart",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-procurement-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "Procurement Manager (Customer-Side)",
+    "label": "Procurement Manager (Customer-Side)",
+    "description": "Leads customer company's procurement function, sets sourcing strategy, manages supplier relationships, and controls spend.",
+    "responsibilities": [
+      "Develop procurement strategy and policies",
+      "Negotiate enterprise agreements with key suppliers",
+      "Manage procurement team (buyers, analysts)",
+      "Monitor spend and compliance with preferred suppliers",
+      "Supplier risk management"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Negotiate supplier contracts over weeks/months",
+      "Manually onboard suppliers (EDI setup takes months)",
+      "Review spend reports in spreadsheets quarterly",
+      "React to maverick spend and policy violations",
+      "Annual supplier performance reviews"
+    ],
+    "agenticWorkflow": [
+      "Accelerated contract negotiations with AI-powered terms analysis",
+      "Supplier integration in days via standardized punchout",
+      "Real-time spend dashboards with compliance alerts",
+      "Automated enforcement of preferred supplier policies",
+      "Continuous supplier performance monitoring with predictive analytics"
+    ],
+    "painPointsAddressed": [
+      "Supplier integration in days (vs months) via punchout",
+      "Real-time spend visibility across suppliers",
+      "Automated compliance with preferred supplier contracts",
+      "Data-driven supplier performance management"
+    ],
+    "kpis": [
+      "Total Cost Reduction",
+      "Supplier Integration Time",
+      "Preferred Supplier Compliance",
+      "Contract Compliance Rate",
+      "Supplier Risk Score",
+      "Procurement Efficiency Ratio"
+    ],
+    "icon": "clipboard-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-credit-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "Credit Manager",
+    "label": "Credit Manager",
+    "description": "Manages B2B seller's credit policies, evaluates customer creditworthiness, sets payment terms, and oversees collections.",
+    "responsibilities": [
+      "Evaluate credit applications and set credit limits",
+      "Define payment terms policies (Net 30, Net 60, COD)",
+      "Monitor AR aging and manage collections",
+      "Minimize bad debt write-offs",
+      "Report DSO and bad debt to CFO"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually review credit applications (3-5 days per customer)",
+      "Pull D&B reports and call references",
+      "Set static credit limits rarely updated",
+      "React to missed payments 30+ days overdue",
+      "Monthly aging report reviews with AR team"
+    ],
+    "agenticWorkflow": [
+      "AI credit scoring provides instant approvals for low-risk customers",
+      "Automated credit limit adjustments based on payment behavior",
+      "Proactive collections with late payment predictions",
+      "Real-time portfolio risk monitoring and alerts",
+      "Dynamic payment terms based on customer risk profile"
+    ],
+    "painPointsAddressed": [
+      "95% faster credit decisions (seconds vs days)",
+      "Proactive collections predict late payments before they happen",
+      "30-50% reduction in bad debt",
+      "Real-time portfolio risk visibility"
+    ],
+    "kpis": [
+      "Days Sales Outstanding (DSO)",
+      "Bad Debt Write-Off %",
+      "Collection Recovery Rate",
+      "Credit Approval Cycle Time",
+      "Credit Utilization by Customer",
+      "Portfolio Risk Score"
+    ],
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-trade-marketing-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "Trade Marketing Manager",
+    "label": "Trade Marketing Manager",
+    "description": "Develops and executes trade promotions (discounts, rebates, co-op advertising) to drive sales through distributors and retail partners.",
+    "responsibilities": [
+      "Design trade promotion programs (rebates, SPIFFs, co-op)",
+      "Allocate trade spend budget across partners",
+      "Track promotion performance and ROI",
+      "Calculate rebates and process claims",
+      "Analyze promotion effectiveness"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually design promotion programs in spreadsheets",
+      "Email promotion details to partners",
+      "Track partner compliance manually (prone to errors)",
+      "Calculate rebates in spreadsheets (15-25% errors)",
+      "Quarterly post-mortem analysis of promotion ROI"
+    ],
+    "agenticWorkflow": [
+      "AI-powered promotion design optimizes discount levels and tiers",
+      "Automated partner communication via portal",
+      "Real-time compliance tracking with automated alerts",
+      "Automated rebate calculations with discrepancy flagging",
+      "Continuous promotion performance monitoring with optimization recommendations"
+    ],
+    "painPointsAddressed": [
+      "Automated rebate calculations vs spreadsheet errors",
+      "Real-time promotion tracking vs quarterly post-mortems",
+      "20-40% higher trade spend ROI through optimization",
+      "Eliminates 15-25% wasted trade spend from poor tracking"
+    ],
+    "kpis": [
+      "Trade Promotion ROI",
+      "Rebate Processing Accuracy",
+      "Partner Compliance Rate",
+      "Trade Spend as % of Revenue",
+      "Incremental Revenue from Promotions",
+      "Promotion Participation Rate"
+    ],
+    "icon": "megaphone",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-b2b-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "B2B Operations Manager",
+    "label": "B2B Operations Manager",
+    "description": "Ensures B2B orders are fulfilled accurately and on time, manages inventory allocation, and coordinates with logistics/warehouse teams.",
+    "responsibilities": [
+      "Order processing, validation, and fulfillment",
+      "Inventory allocation (prioritize high-value customers)",
+      "Coordinate with warehouse, logistics, and finance",
+      "Resolve order issues (errors, shortages, damages)",
+      "Track order cycle time and on-time delivery"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually enter orders from email, phone, fax",
+      "Validate inventory availability by calling warehouse",
+      "Check customer credit limits manually",
+      "Resolve order errors through phone calls and emails",
+      "Manual exception handling for out-of-stock items"
+    ],
+    "agenticWorkflow": [
+      "Automated order capture from punchout, EDI, API",
+      "Real-time inventory and credit validation",
+      "Intelligent order routing and fulfillment optimization",
+      "Proactive exception alerts with resolution recommendations",
+      "Automated shipment notifications and tracking updates"
+    ],
+    "painPointsAddressed": [
+      "80-90% fewer order errors (real-time inventory, contract pricing)",
+      "5-10% manual intervention (vs 30-50% with stale catalogs)",
+      "Automated EDI orders (vs manual entry)",
+      "Proactive exception handling (inventory shortages, credit holds)"
+    ],
+    "kpis": [
+      "Order Error Rate",
+      "On-Time In-Full (OTIF) %",
+      "Order Cycle Time",
+      "Manual Intervention Rate",
+      "Backorder Rate",
+      "Perfect Order Rate"
+    ],
+    "icon": "truck",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-edi-integration-specialist",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "EDI/Integration Specialist",
+    "label": "EDI/Integration Specialist",
+    "description": "Manages electronic data interchange (EDI) and API integrations between B2B seller's systems and customer procurement platforms.",
+    "responsibilities": [
+      "Configure EDI connections (850 PO, 810 Invoice, 856 ASN)",
+      "Troubleshoot integration errors and data mapping issues",
+      "Onboard new trading partners (EDI setup)",
+      "Monitor integration health and error rates",
+      "Coordinate with customer IT teams"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually configure EDI connections for each trading partner (6-12 weeks)",
+      "Custom coding for each customer's EDI requirements",
+      "React to integration errors when customers complain",
+      "Manually test EDI transactions before go-live",
+      "Maintain separate integration code for each partner"
+    ],
+    "agenticWorkflow": [
+      "Self-service punchout configuration via standardized connectors",
+      "Automated EDI testing and validation",
+      "AI self-healing detects and auto-corrects common errors",
+      "Proactive monitoring with alerts before customers notice issues",
+      "Standardized integration templates reduce setup time 90%"
+    ],
+    "painPointsAddressed": [
+      "90-95% faster integration setup (days vs months)",
+      "Self-healing error handling (80% of errors auto-resolved)",
+      "Proactive monitoring (detect issues before customers complain)",
+      "Standardized approach (vs custom code for each partner)"
+    ],
+    "kpis": [
+      "Trading Partner Integration Time",
+      "Integration Error Rate",
+      "Self-Healing Success Rate",
+      "Integration Uptime %",
+      "Transaction Processing Volume",
+      "Time to Resolve Integration Issues"
+    ],
+    "icon": "server",
+    "color": "#64748B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-b2b-customer-service-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "b2b",
+    "title": "B2B Customer Service Manager",
+    "label": "B2B Customer Service Manager",
+    "description": "Leads customer service team supporting B2B customers with order inquiries, returns, disputes, and account management.",
+    "responsibilities": [
+      "Manage customer service team (CSRs, order management)",
+      "Handle escalations (order issues, pricing disputes)",
+      "Track CSAT, NPS, and response times",
+      "Process returns, credits, and adjustments",
+      "Coordinate with sales, ops, and finance"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Answer repetitive phone calls about order status",
+      "Manually look up contract terms to resolve pricing disputes",
+      "Email back-and-forth with customers for returns and credits",
+      "React to customer complaints after issues escalate",
+      "Monthly CSAT surveys with limited actionable insights"
+    ],
+    "agenticWorkflow": [
+      "Self-service portal deflects 40-60% of routine inquiries",
+      "Instant access to contract terms and order history for CSRs",
+      "Proactive alerts for order issues (inventory shortages, delays)",
+      "Automated returns processing and credit approvals",
+      "Real-time CSAT tracking with trend analysis and root cause identification"
+    ],
+    "painPointsAddressed": [
+      "40-60% inquiry deflection via self-service reduces call volume",
+      "Instant access to contract terms and order history (faster resolution)",
+      "Proactive alerts for order issues (vs reactive complaints)",
+      "Data-driven insights into top customer pain points"
+    ],
+    "kpis": [
+      "Customer Satisfaction (CSAT)",
+      "Net Promoter Score (NPS)",
+      "First Contact Resolution Rate",
+      "Average Response Time",
+      "Self-Service Deflection Rate",
+      "Issue Resolution Time"
+    ],
+    "icon": "support",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

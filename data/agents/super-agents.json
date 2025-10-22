@@ -1,0 +1,7316 @@
+[
+  {
+    "id": "agent-super-demand-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Demand Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-supply-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Supply Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-financial-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Financial Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-scenario",
+    "type": "agent",
+    "level": 6,
+    "label": "Scenario",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-consensus",
+    "type": "agent",
+    "level": 6,
+    "label": "Consensus",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing",
+      "capability-sales-operations-planning-s-op"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "ensemble",
+      "decision": "ensemble"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-multi-tier-visibility",
+    "type": "agent",
+    "level": 6,
+    "label": "Multi-Tier Visibility",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-exception-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Exception Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-impact-analysis",
+    "type": "agent",
+    "level": 6,
+    "label": "Impact Analysis",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-resolution-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Resolution Orchestration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supply-chain-control-tower"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-demand-pattern",
+    "type": "agent",
+    "level": 6,
+    "label": "Demand Pattern",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-cost-modeling",
+    "type": "agent",
+    "level": 6,
+    "label": "Cost Modeling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-scenario-testing",
+    "type": "agent",
+    "level": 6,
+    "label": "Scenario Testing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-recommendation",
+    "type": "agent",
+    "level": 6,
+    "label": "Recommendation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-network-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-demand-driven-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Demand-Driven Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-replenishment",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Replenishment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-transfer-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Transfer Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-safety-stock",
+    "type": "agent",
+    "level": 6,
+    "label": "Safety Stock",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-allocation-replenishment-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-forecast-sharing",
+    "type": "agent",
+    "level": 6,
+    "label": "Forecast Sharing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-po-management",
+    "type": "agent",
+    "level": 6,
+    "label": "PO Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-performance-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Performance Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-issue-resolution",
+    "type": "agent",
+    "level": 6,
+    "label": "Issue Resolution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-supplier-collaboration-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-eligibility",
+    "type": "agent",
+    "level": 6,
+    "label": "Eligibility",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dock-scheduling",
+    "type": "agent",
+    "level": 6,
+    "label": "Dock Scheduling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-sortation",
+    "type": "agent",
+    "level": 6,
+    "label": "Sortation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-performance",
+    "type": "agent",
+    "level": 6,
+    "label": "Performance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cross-docking-flow-through"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-bnpl-eligibility",
+    "type": "agent",
+    "level": 6,
+    "label": "BNPL Eligibility",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-installment-presentation",
+    "type": "agent",
+    "level": 6,
+    "label": "Installment Presentation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-risk-assessment",
+    "type": "agent",
+    "level": 6,
+    "label": "Risk Assessment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-collection-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Collection Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-buy-now-pay-later-bnpl"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crypto-payment",
+    "type": "agent",
+    "level": 6,
+    "label": "Crypto Payment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-wallet-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Wallet Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-currency-conversion",
+    "type": "agent",
+    "level": 6,
+    "label": "Currency Conversion",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-volatility-protection",
+    "type": "agent",
+    "level": 6,
+    "label": "Volatility Protection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-cryptocurrency-digital-wallet-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-gateway-routing",
+    "type": "agent",
+    "level": 6,
+    "label": "Gateway Routing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-failover",
+    "type": "agent",
+    "level": 6,
+    "label": "Failover",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-retry-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Retry Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-cost-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Cost Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-payment-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-billing-cycle",
+    "type": "agent",
+    "level": 6,
+    "label": "Billing Cycle",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-usage-metering",
+    "type": "agent",
+    "level": 6,
+    "label": "Usage Metering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dunning-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Dunning Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-subscription-lifecycle",
+    "type": "agent",
+    "level": 6,
+    "label": "Subscription Lifecycle",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-subscription-billing-recurring-payments"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-revenue-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Revenue Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-deferred-revenue",
+    "type": "agent",
+    "level": 6,
+    "label": "Deferred Revenue",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-revenue-reporting",
+    "type": "agent",
+    "level": 6,
+    "label": "Revenue Reporting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Compliance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-recognition-automation"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ai-demand-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "AI Demand Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-dynamic-pricing-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Pricing Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-length-of-stay-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Length-of-Stay Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-group-business-evaluation",
+    "type": "agent",
+    "level": 6,
+    "label": "Group Business Evaluation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-distribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Distribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-personalized-pricing",
+    "type": "agent",
+    "level": 6,
+    "label": "Personalized Pricing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-ancillary-revenue-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Ancillary Revenue Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-pms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PMS Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-housekeeping-operations-optimization",
+      "capability-pharmacy-operations-management",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 4 capabilities."
+  },
+  {
+    "id": "agent-super-channel-manager",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Manager",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-competitive-intelligence",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitive Intelligence",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-price-management-optimization",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 3 capabilities."
+  },
+  {
+    "id": "agent-super-booking-pace",
+    "type": "agent",
+    "level": 6,
+    "label": "Booking Pace",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-market-event-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Market Event Calendar",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-loyalty-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-f-b-reservation",
+    "type": "agent",
+    "level": 6,
+    "label": "F&B Reservation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-web-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Web Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-cancellation-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "Cancellation Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-rm-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "RM Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing",
+      "capability-revenue-management-dynamic-pricing-hotels"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-360-guest-profile",
+    "type": "agent",
+    "level": 6,
+    "label": "360\u00b0 Guest Profile",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-room-assignment",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Room Assignment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pre-arrival-personalization",
+    "type": "agent",
+    "level": 6,
+    "label": "Pre-Arrival Personalization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-in-stay-personalization",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic In-Stay Personalization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ai-concierge-chatbot",
+    "type": "agent",
+    "level": 6,
+    "label": "AI Concierge/Chatbot",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-sentiment-analysis-service-recovery",
+    "type": "agent",
+    "level": 6,
+    "label": "Sentiment Analysis & Service Recovery",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-post-stay-engagement",
+    "type": "agent",
+    "level": 6,
+    "label": "Post-Stay Engagement",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-loyalty-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty System",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-mobile-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Mobile App",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-guest-experience-personalization-crm",
+      "capability-housekeeping-operations-optimization",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 5 capabilities."
+  },
+  {
+    "id": "agent-super-spa-reservation",
+    "type": "agent",
+    "level": 6,
+    "label": "Spa Reservation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-review-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Review Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "reflection"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-social-media",
+    "type": "agent",
+    "level": 6,
+    "label": "Social Media",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling",
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-email-sms",
+    "type": "agent",
+    "level": 6,
+    "label": "Email/SMS",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm",
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-survey",
+    "type": "agent",
+    "level": 6,
+    "label": "Survey",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-personalization-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Personalization Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-guest-experience-personalization-crm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intelligent-room-assignment",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Room Assignment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-status-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Status Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-computer-vision-quality-inspection",
+    "type": "agent",
+    "level": 6,
+    "label": "Computer Vision Quality Inspection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "reflection"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-staffing",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Staffing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-automated-supply-replenishment",
+    "type": "agent",
+    "level": 6,
+    "label": "Automated Supply Replenishment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-performance-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Performance Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-continuous-improvement",
+    "type": "agent",
+    "level": 6,
+    "label": "Continuous Improvement",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-camera-vision",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera/Vision",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-labor-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-inventory",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-iot-sensor",
+    "type": "agent",
+    "level": 6,
+    "label": "IoT Sensor",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-housekeeping-operations-optimization",
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 3 capabilities."
+  },
+  {
+    "id": "agent-super-maintenance-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Maintenance Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-guest-complaint",
+    "type": "agent",
+    "level": 6,
+    "label": "Guest Complaint",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-quality-checklist",
+    "type": "agent",
+    "level": 6,
+    "label": "Quality Checklist",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "reflection"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-housekeeping-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Housekeeping Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-housekeeping-operations-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intelligent-overbooking",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Overbooking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-competitive-intelligence",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Competitive Intelligence",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pss-pms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PSS/PMS Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-gds-connection",
+    "type": "agent",
+    "level": 6,
+    "label": "GDS Connection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ota-api",
+    "type": "agent",
+    "level": 6,
+    "label": "OTA API",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management",
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-search-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Search Data",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-event-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Event Data",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-weather-api",
+    "type": "agent",
+    "level": 6,
+    "label": "Weather API",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 4 capabilities."
+  },
+  {
+    "id": "agent-super-economic-indicators",
+    "type": "agent",
+    "level": 6,
+    "label": "Economic Indicators",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-competitor-scraping",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitor Scraping",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-regulatory-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Regulatory Compliance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management",
+      "capability-revenue-management-dynamic-pricing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-unified-inventory-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Unified Inventory Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-channel-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Channel Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-rate-parity-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Rate Parity Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-steering",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Steering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-synchronization",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Synchronization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-performance-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Performance Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-direct-booking-conversion",
+    "type": "agent",
+    "level": 6,
+    "label": "Direct Booking Conversion",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-gds-api",
+    "type": "agent",
+    "level": 6,
+    "label": "GDS API",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-metasearch-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Metasearch Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-website-mobile-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Website/Mobile App",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-rate-parity-scraping",
+    "type": "agent",
+    "level": 6,
+    "label": "Rate Parity Scraping",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Attribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-payment-gateway",
+    "type": "agent",
+    "level": 6,
+    "label": "Payment Gateway",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-cost",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Cost",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-inventory-distribution-channel-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-member-lifetime-value-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "Member Lifetime Value Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-earning-rate",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Earning Rate",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-redemption-pricing",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Redemption Pricing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-churn",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Churn",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-hyper-personalized-communication",
+    "type": "agent",
+    "level": 6,
+    "label": "Hyper-Personalized Communication",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-partner-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Partner Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-gamification-engagement",
+    "type": "agent",
+    "level": 6,
+    "label": "Gamification & Engagement",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-loyalty-platform-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Platform Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-reservation-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Reservation System",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-credit-card-partner",
+    "type": "agent",
+    "level": 6,
+    "label": "Credit Card Partner",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-partner-api",
+    "type": "agent",
+    "level": 6,
+    "label": "Partner API",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-push-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Push Notification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-liability-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Liability Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fraud-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Fraud Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-member-portal",
+    "type": "agent",
+    "level": 6,
+    "label": "Member Portal",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-loyalty-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-loyalty-program-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ai-pairing-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "AI Pairing Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-rostering",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Rostering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-crew-availability",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Crew Availability",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-disruption-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Disruption Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crew-qualification-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Qualification Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crew-preference-learning",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Preference Learning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-mobile-crew-communication",
+    "type": "agent",
+    "level": 6,
+    "label": "Mobile Crew Communication",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-flight-schedule-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Flight Schedule Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crew-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-payroll-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Payroll Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines",
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-training-system",
+    "type": "agent",
+    "level": 6,
+    "label": "Training System",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-medical-records",
+    "type": "agent",
+    "level": 6,
+    "label": "Medical Records",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-union-contract",
+    "type": "agent",
+    "level": 6,
+    "label": "Union Contract",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-reserve-callout",
+    "type": "agent",
+    "level": 6,
+    "label": "Reserve Callout",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-trip-trade",
+    "type": "agent",
+    "level": 6,
+    "label": "Trip Trade",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fatigue-risk-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Fatigue Risk Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crew-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-crew-scheduling-optimization-airlines-cruise-lines"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-demand-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "Demand Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-new-product-success-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "New Product Success Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-localized-assortment",
+    "type": "agent",
+    "level": 6,
+    "label": "Localized Assortment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-size-curve-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Size Curve Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-markdown-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-vendor-collaboration",
+    "type": "agent",
+    "level": 6,
+    "label": "Vendor Collaboration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pos-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "POS Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization",
+      "capability-automated-replenishment-center-store",
+      "capability-clienteling-personal-styling",
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
+      "capability-kitchen-production-management-kds",
+      "capability-labor-scheduling-management-qsr-specific",
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 8 capabilities."
+  },
+  {
+    "id": "agent-super-inventory-accuracy",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Accuracy",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-social-listening",
+    "type": "agent",
+    "level": 6,
+    "label": "Social Listening",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-plm-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "PLM Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-store-clustering",
+    "type": "agent",
+    "level": 6,
+    "label": "Store Clustering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-size-curve-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Size Curve Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-markdown-simulator",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Simulator",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-assortment-performance",
+    "type": "agent",
+    "level": 6,
+    "label": "Assortment Performance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-assortment-planning-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-planogram-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Planogram Generation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ar-visualization",
+    "type": "agent",
+    "level": 6,
+    "label": "AR Visualization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-computer-vision-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Computer Vision Compliance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-traffic-pattern-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Traffic Pattern Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-display-performance-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Display Performance Attribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fixture-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Fixture Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-virtual-store-design",
+    "type": "agent",
+    "level": 6,
+    "label": "Virtual Store Design",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-planogram-software-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Planogram Software Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-camera-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pos-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "POS Attribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-wifi-beacon",
+    "type": "agent",
+    "level": 6,
+    "label": "WiFi/Beacon",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-space-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Space Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ar-vr-rendering",
+    "type": "agent",
+    "level": 6,
+    "label": "AR/VR Rendering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-lighting-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Lighting Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-signage-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Signage Generation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-merchandising-benchmark",
+    "type": "agent",
+    "level": 6,
+    "label": "Merchandising Benchmark",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-remodel-roi",
+    "type": "agent",
+    "level": 6,
+    "label": "Remodel ROI",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-visual-merchandising-store-design"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-360-customer-profile",
+    "type": "agent",
+    "level": 6,
+    "label": "360\u00b0 Customer Profile",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-outreach",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Outreach",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-virtual-styling",
+    "type": "agent",
+    "level": 6,
+    "label": "Virtual Styling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ai-product-recommendation",
+    "type": "agent",
+    "level": 6,
+    "label": "AI Product Recommendation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-omnichannel-coordination",
+    "type": "agent",
+    "level": 6,
+    "label": "Omnichannel Coordination",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-relationship-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Relationship Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-clienteling-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Clienteling Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crm-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "CRM Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ecommerce-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Ecommerce Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-clienteling-tool",
+    "type": "agent",
+    "level": 6,
+    "label": "Clienteling Tool",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-sms-email",
+    "type": "agent",
+    "level": 6,
+    "label": "SMS/Email",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Calendar",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-virtual-try-on",
+    "type": "agent",
+    "level": 6,
+    "label": "Virtual Try-On",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-locator",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Locator",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-performance-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Performance Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-clienteling-personal-styling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-unified-inventory",
+    "type": "agent",
+    "level": 6,
+    "label": "Unified Inventory",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intelligent-order-routing",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Order Routing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds",
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-bopis-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "BOPIS Orchestration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-ship-from-store",
+    "type": "agent",
+    "level": 6,
+    "label": "Ship-from-Store",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-curbside-pickup",
+    "type": "agent",
+    "level": 6,
+    "label": "Curbside Pickup",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-balancing",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Balancing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-fulfillment",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Fulfillment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-oms-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "OMS Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds",
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-shipping-carrier",
+    "type": "agent",
+    "level": 6,
+    "label": "Shipping Carrier",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-store-labor",
+    "type": "agent",
+    "level": 6,
+    "label": "Store Labor",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-rfid",
+    "type": "agent",
+    "level": 6,
+    "label": "RFID",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-customer-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Customer Notification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-geolocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Geolocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-packaging",
+    "type": "agent",
+    "level": 6,
+    "label": "Packaging",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fresh-demand-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "Fresh Demand Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-automated-ordering",
+    "type": "agent",
+    "level": 6,
+    "label": "Automated Ordering",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-markdown",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Markdown",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-cross-department-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Cross-Department Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-food-safety-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Food Safety Compliance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fresh-labor-scheduling",
+    "type": "agent",
+    "level": 6,
+    "label": "Fresh Labor Scheduling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-supplier-collaboration",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier Collaboration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-markdown-label",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Label",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-donation-coordination",
+    "type": "agent",
+    "level": 6,
+    "label": "Donation Coordination",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-recall-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Recall Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-vendor-portal",
+    "type": "agent",
+    "level": 6,
+    "label": "Vendor Portal",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-quality-inspection",
+    "type": "agent",
+    "level": 6,
+    "label": "Quality Inspection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "reflection"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-fresh-performance-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Fresh Performance Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-fresh-department-management-produce-meat-seafood-bakery-deli"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-center-store-demand-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "Center Store Demand Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-automated-order-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Automated Order Generation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-promotion-coordination",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Coordination",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-vendor-managed-inventory",
+    "type": "agent",
+    "level": 6,
+    "label": "Vendor-Managed Inventory",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-shelf-capacity-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Shelf Capacity Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-health",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Health",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-supplier-performance",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier Performance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-sync",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Sync",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-promotion-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Calendar",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-supplier-edi",
+    "type": "agent",
+    "level": 6,
+    "label": "Supplier EDI",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-planogram",
+    "type": "agent",
+    "level": 6,
+    "label": "Planogram",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-warehouse-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Warehouse Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pack-size",
+    "type": "agent",
+    "level": 6,
+    "label": "Pack Size",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-order-approval-workflow",
+    "type": "agent",
+    "level": 6,
+    "label": "Order Approval Workflow",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-inventory-transfer",
+    "type": "agent",
+    "level": 6,
+    "label": "Inventory Transfer",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-replenishment-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Replenishment Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-automated-replenishment-center-store"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-e-prescribing-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "E-Prescribing Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intelligent-insurance-verification",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Insurance Verification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-clinical-decision-support",
+    "type": "agent",
+    "level": 6,
+    "label": "Clinical Decision Support",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-automated-dispensing",
+    "type": "agent",
+    "level": 6,
+    "label": "Automated Dispensing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-patient-engagement",
+    "type": "agent",
+    "level": 6,
+    "label": "Patient Engagement",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pharmacy-inventory-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Pharmacy Inventory Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-surescripts",
+    "type": "agent",
+    "level": 6,
+    "label": "Surescripts",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-insurance-clearinghouse",
+    "type": "agent",
+    "level": 6,
+    "label": "Insurance Clearinghouse",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-wholesaler-edi",
+    "type": "agent",
+    "level": 6,
+    "label": "Wholesaler EDI",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-robotic-dispenser",
+    "type": "agent",
+    "level": 6,
+    "label": "Robotic Dispenser",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-patient-app",
+    "type": "agent",
+    "level": 6,
+    "label": "Patient App",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-drug-database",
+    "type": "agent",
+    "level": 6,
+    "label": "Drug Database",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dea-reporting",
+    "type": "agent",
+    "level": 6,
+    "label": "DEA Reporting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pharmacy-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Pharmacy Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-pharmacy-operations-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-pricing",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Pricing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-promotion-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-electronic-shelf-label-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Electronic Shelf Label Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-personalized-offer",
+    "type": "agent",
+    "level": 6,
+    "label": "Personalized Offer",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-zone-pricing",
+    "type": "agent",
+    "level": 6,
+    "label": "Zone Pricing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-markdown-automation",
+    "type": "agent",
+    "level": 6,
+    "label": "Markdown Automation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-competitive-data",
+    "type": "agent",
+    "level": 6,
+    "label": "Competitive Data",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-promotion-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotion Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-esl-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "ESL Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-loyalty-crm",
+    "type": "agent",
+    "level": 6,
+    "label": "Loyalty/CRM",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-elasticity-modeling",
+    "type": "agent",
+    "level": 6,
+    "label": "Elasticity Modeling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-margin-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Margin Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-price-change-approval",
+    "type": "agent",
+    "level": 6,
+    "label": "Price Change Approval",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-label-printing",
+    "type": "agent",
+    "level": 6,
+    "label": "Label Printing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-pricing-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Pricing Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-price-management-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-voice-intent-recognition",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Intent Recognition",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-voice-catalog",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Catalog",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-voice-personalization",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Personalization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-voice-transaction",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Transaction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-commerce-alexa-google-assistant"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-nlu-intent",
+    "type": "agent",
+    "level": 6,
+    "label": "NLU Intent",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dialog-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Dialog Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-slot-filling",
+    "type": "agent",
+    "level": 6,
+    "label": "Slot Filling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-action-execution",
+    "type": "agent",
+    "level": 6,
+    "label": "Action Execution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-human-handoff",
+    "type": "agent",
+    "level": 6,
+    "label": "Human Handoff",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-conversational-ai-chatbot"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-conversational-discovery",
+    "type": "agent",
+    "level": 6,
+    "label": "Conversational Discovery",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-visual-search",
+    "type": "agent",
+    "level": 6,
+    "label": "Visual Search",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-style-matching",
+    "type": "agent",
+    "level": 6,
+    "label": "Style Matching",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-comparison",
+    "type": "agent",
+    "level": 6,
+    "label": "Comparison",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-shopping-assistant-product-discovery"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-trigger-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Trigger Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-message-personalization",
+    "type": "agent",
+    "level": 6,
+    "label": "Message Personalization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-selection",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Selection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba",
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-frequency-capping",
+    "type": "agent",
+    "level": 6,
+    "label": "Frequency Capping",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-semantic-search",
+    "type": "agent",
+    "level": 6,
+    "label": "Semantic Search",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-answer-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Answer Generation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-knowledge-gap-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Knowledge Gap Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-auto-update",
+    "type": "agent",
+    "level": 6,
+    "label": "Auto-Update",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-ai-powered-knowledge-management"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-conversational-ai-order-taking",
+    "type": "agent",
+    "level": 6,
+    "label": "Conversational AI Order-Taking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intelligent-upselling",
+    "type": "agent",
+    "level": 6,
+    "label": "Intelligent Upselling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-kitchen-positioning",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Kitchen Positioning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-computer-vision-vehicle-tracking",
+    "type": "agent",
+    "level": 6,
+    "label": "Computer Vision Vehicle Tracking",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-lane-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Lane Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-order-accuracy-verification",
+    "type": "agent",
+    "level": 6,
+    "label": "Order Accuracy Verification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-performance-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Performance Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-kds-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "KDS Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai",
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 2 capabilities."
+  },
+  {
+    "id": "agent-super-payment-terminal",
+    "type": "agent",
+    "level": 6,
+    "label": "Payment Terminal",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-camera-sensor",
+    "type": "agent",
+    "level": 6,
+    "label": "Camera/Sensor",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-menu-board-display",
+    "type": "agent",
+    "level": 6,
+    "label": "Menu Board Display",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-weather-integration",
+    "type": "agent",
+    "level": 6,
+    "label": "Weather Integration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-voice-synthesis",
+    "type": "agent",
+    "level": 6,
+    "label": "Voice Synthesis",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-audio-clarity",
+    "type": "agent",
+    "level": 6,
+    "label": "Audio Clarity",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-drive-thru-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Drive-Thru Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-drive-thru-optimization-voice-ai"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-dynamic-prioritization",
+    "type": "agent",
+    "level": 6,
+    "label": "Dynamic Prioritization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-prep-timing",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Prep Timing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-station-load-balancing",
+    "type": "agent",
+    "level": 6,
+    "label": "Station Load Balancing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-computer-vision-quality-control",
+    "type": "agent",
+    "level": 6,
+    "label": "Computer Vision Quality Control",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "reflection"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-performance",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Performance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-continuous-learning",
+    "type": "agent",
+    "level": 6,
+    "label": "Continuous Learning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-recipe-management",
+    "type": "agent",
+    "level": 6,
+    "label": "Recipe Management",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-temperature-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Temperature Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-timer",
+    "type": "agent",
+    "level": 6,
+    "label": "Timer",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-audio-alert",
+    "type": "agent",
+    "level": 6,
+    "label": "Audio Alert",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-kitchen-analytics-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Kitchen Analytics Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-kitchen-production-management-kds"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-15-minute-demand-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "15-Minute Demand Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-automated-schedule-generation",
+    "type": "agent",
+    "level": 6,
+    "label": "Automated Schedule Generation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-crew-self-service",
+    "type": "agent",
+    "level": 6,
+    "label": "Crew Self-Service",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-predictive-callout",
+    "type": "agent",
+    "level": 6,
+    "label": "Predictive Callout",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-real-time-labor-adjustment",
+    "type": "agent",
+    "level": 6,
+    "label": "Real-Time Labor Adjustment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-turnover-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "Turnover Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-labor-analytics",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Analytics",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-time-clock",
+    "type": "agent",
+    "level": 6,
+    "label": "Time Clock",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-event-calendar",
+    "type": "agent",
+    "level": 6,
+    "label": "Event Calendar",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-labor-law-compliance",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Law Compliance",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-notification",
+    "type": "agent",
+    "level": 6,
+    "label": "Notification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-shift-marketplace",
+    "type": "agent",
+    "level": 6,
+    "label": "Shift Marketplace",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-labor-dashboard",
+    "type": "agent",
+    "level": 6,
+    "label": "Labor Dashboard",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-labor-scheduling-management-qsr-specific"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-auto-discovery",
+    "type": "agent",
+    "level": 6,
+    "label": "Auto-Discovery",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-friction-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Friction Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-opportunity-scoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Opportunity Scoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-journey-visualization",
+    "type": "agent",
+    "level": 6,
+    "label": "Journey Visualization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-journey-mapping"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-context-handoff",
+    "type": "agent",
+    "level": 6,
+    "label": "Context Handoff",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "memory": "semantic"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-channel-routing",
+    "type": "agent",
+    "level": 6,
+    "label": "Channel Routing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-unified-messaging",
+    "type": "agent",
+    "level": 6,
+    "label": "Unified Messaging",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-cross-channel-personalization",
+    "type": "agent",
+    "level": 6,
+    "label": "Cross-Channel Personalization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-omnichannel-orchestration"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-test-design",
+    "type": "agent",
+    "level": 6,
+    "label": "Test Design",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-traffic-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Traffic Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-bayesian-analysis",
+    "type": "agent",
+    "level": 6,
+    "label": "Bayesian Analysis",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-rollout",
+    "type": "agent",
+    "level": 6,
+    "label": "Rollout",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-experience-testing-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-sentiment-analysis",
+    "type": "agent",
+    "level": 6,
+    "label": "Sentiment Analysis",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-theme-extraction",
+    "type": "agent",
+    "level": 6,
+    "label": "Theme Extraction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-impact-quantification",
+    "type": "agent",
+    "level": 6,
+    "label": "Impact Quantification",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-insight-distribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Insight Distribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-voice-of-customer-voc-intelligence"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-propensity-modeling",
+    "type": "agent",
+    "level": 6,
+    "label": "Propensity Modeling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-offer-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Offer Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-treatment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Treatment Orchestration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-next-best-action-nba"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-clv-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "CLV Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-churn-prediction",
+    "type": "agent",
+    "level": 6,
+    "label": "Churn Prediction",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-win-back",
+    "type": "agent",
+    "level": 6,
+    "label": "Win-Back",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-growth-opportunity",
+    "type": "agent",
+    "level": 6,
+    "label": "Growth Opportunity",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-customer-lifetime-value-clv-optimization"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-auto-ml",
+    "type": "agent",
+    "level": 6,
+    "label": "Auto-ML",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-model-deployment",
+    "type": "agent",
+    "level": 6,
+    "label": "Model Deployment",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-prediction-serving",
+    "type": "agent",
+    "level": 6,
+    "label": "Prediction Serving",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-model-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Model Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-predictive-analytics-platform"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-multi-touch-attribution",
+    "type": "agent",
+    "level": 6,
+    "label": "Multi-Touch Attribution",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-incrementality-testing",
+    "type": "agent",
+    "level": 6,
+    "label": "Incrementality Testing",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-budget-allocation",
+    "type": "agent",
+    "level": 6,
+    "label": "Budget Allocation",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-attribution-reporting",
+    "type": "agent",
+    "level": 6,
+    "label": "Attribution Reporting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-attribution-modeling"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-econometric-modeling",
+    "type": "agent",
+    "level": 6,
+    "label": "Econometric Modeling",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-scenario-planning",
+    "type": "agent",
+    "level": 6,
+    "label": "Scenario Planning",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-external-factor",
+    "type": "agent",
+    "level": 6,
+    "label": "External Factor",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-optimization",
+    "type": "agent",
+    "level": 6,
+    "label": "Optimization",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-marketing-mix-modeling-mmm"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "optimization"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-churn-risk-scoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Churn Risk Scoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-reason-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Reason Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-retention-strategy",
+    "type": "agent",
+    "level": 6,
+    "label": "Retention Strategy",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-intervention-orchestration",
+    "type": "agent",
+    "level": 6,
+    "label": "Intervention Orchestration",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-churn-prediction-prevention"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-statistical-forecasting",
+    "type": "agent",
+    "level": 6,
+    "label": "Statistical Forecasting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react",
+      "modelType": "simulation"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-external-signal",
+    "type": "agent",
+    "level": 6,
+    "label": "External Signal",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-promotional-impact",
+    "type": "agent",
+    "level": 6,
+    "label": "Promotional Impact",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-demand-forecasting-sensing"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-metric-monitoring",
+    "type": "agent",
+    "level": 6,
+    "label": "Metric Monitoring",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-anomaly-detection",
+    "type": "agent",
+    "level": 6,
+    "label": "Anomaly Detection",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-root-cause-analysis",
+    "type": "agent",
+    "level": 6,
+    "label": "Root Cause Analysis",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  },
+  {
+    "id": "agent-super-smart-alerting",
+    "type": "agent",
+    "level": 6,
+    "label": "Smart Alerting",
+    "role": "super",
+    "icon": "robot",
+    "color": "#3B82F6",
+    "supportingCapabilities": [
+      "capability-real-time-dashboards-alerts"
+    ],
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0",
+    "patterns": {
+      "primary": "react"
+    },
+    "description": "Performs 1 capability."
+  }
+]

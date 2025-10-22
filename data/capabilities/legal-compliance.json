@@ -1,0 +1,877 @@
+[
+  {
+    "id": "capability-contract-lifecycle-management-legal",
+    "type": "capability",
+    "level": 3,
+    "label": "Contract Lifecycle Management (CLM)",
+    "description": "AI-powered contract management from drafting through execution and obligation tracking with automated risk analysis and renewal management.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 8,
+    "keyFunctions": [
+      "AI Contract Drafting & Assembly",
+      "AI Contract Review & Risk Analysis",
+      "Approval Workflow & Routing",
+      "Obligation & Renewal Management",
+      "Contract Search & Analytics",
+      "E-Signature Integration",
+      "Repository Management",
+      "Playbook Integration"
+    ],
+    "traditionalApproach": {
+      "description": "Manual contract creation with email-based negotiations requiring significant time investment and limited repository visibility",
+      "characteristics": [
+        "Attorney drafts contracts in Word from templates (time-intensive process)",
+        "Redlines negotiated via email (version control nightmare)",
+        "Email-based approval chains (lengthy process)",
+        "Executed contracts filed in shared drives or cabinets",
+        "Renewal dates tracked manually in Excel (limited coverage)",
+        "Manual search through files to find contract provisions"
+      ],
+      "constraints": [
+        "No centralized repository (contracts scattered across multiple locations)",
+        "Contract drafting is time-intensive and resource-heavy",
+        "Version control chaos (multiple redline versions via email)",
+        "Renewal/expiration dates frequently missed (auto-renewals, unfavorable terms)",
+        "Post-signature obligations not tracked systematically",
+        "Contract search is difficult and time-consuming"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-clm-001",
+          "metric": "Contract Drafting Time",
+          "value": "2-10 hours per contract",
+          "source": "TBD: [SME to provide source, e.g., 'ACC Legal Operations Survey 2023' or 'Client Internal Time Study']"
+        },
+        {
+          "id": "bench-clm-002",
+          "metric": "Approval Cycle Duration",
+          "value": "5-15 days",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-clm-003",
+          "metric": "Repository Coverage",
+          "value": "20-40% findable",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-clm-004",
+          "metric": "Renewal Tracking Coverage",
+          "value": "10-30%",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-orchestrated contract lifecycle with instant generation, automated review, and proactive renewal management",
+      "characteristics": [
+        "Auto-Drafting Agent generates contracts from templates rapidly",
+        "AI Review Agent analyzes counterparty redlines, flags risky provisions",
+        "Smart Routing Agent routes to appropriate approvers automatically",
+        "Obligation Tracking Agent creates calendar reminders automatically",
+        "Contract Intelligence Agent enables natural language search",
+        "Comprehensive repository coverage with AI metadata extraction"
+      ],
+      "benefits": [
+        "Contract drafting time dramatically reduced",
+        "Approval cycle significantly accelerated",
+        "Complete repository coverage achieved",
+        "Full renewal tracking implemented",
+        "High obligation compliance maintained",
+        "Substantial attorney time saved on routine contracts",
+        "Contract search becomes instant"
+      ],
+      "agents": [
+        "Contract Lifecycle Orchestration Agent",
+        "AI Contract Drafting & Assembly Agent",
+        "AI Contract Review & Risk Analysis Agent",
+        "Approval Workflow & Routing Agent",
+        "Obligation & Renewal Management Agent",
+        "Contract Search & Analytics Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Contract Drafting Time",
+          "value": "-80% (to 20-40 min from 2-10 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI template assembly for 90% of standard contracts with auto-populated fields from CRM/ERP']",
+          "sourceBenchmark": "bench-clm-001"
+        },
+        {
+          "metric": "Approval Cycle Duration",
+          "value": "-60% (to 2-6 days from 5-15 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent routing, parallel approvals, and auto-escalation for non-responsive approvers']",
+          "sourceBenchmark": "bench-clm-002"
+        },
+        {
+          "metric": "Repository Coverage",
+          "value": "100% (vs 20-40%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on centralized CLM system with mandatory storage and AI-powered backfill of legacy contracts']",
+          "sourceBenchmark": "bench-clm-003"
+        },
+        {
+          "metric": "Renewal Tracking Coverage",
+          "value": "100% (vs 10-30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated metadata extraction and calendar integration for all contracts']",
+          "sourceBenchmark": "bench-clm-004"
+        },
+        {
+          "metric": "Obligation Compliance",
+          "value": "95%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated obligation tracking with stakeholder notifications']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Attorney Time Saved",
+          "value": "30-50% on routine contracts",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI handling 70% of standard contracts with minimal attorney oversight']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "E-signature for all contracts (eliminate wet signatures)",
+        "Central contract repository (even without AI)",
+        "Renewal calendar (track expiration dates)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Executive sponsorship (General Counsel + CFO)",
+        "Contract inventory (catalog existing contracts)",
+        "Template standardization",
+        "Playbook documentation",
+        "Attorney willingness to adopt AI assistance"
+      ]
+    },
+    "icon": "document-text",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-regulatory-compliance-monitoring",
+    "type": "capability",
+    "level": 3,
+    "label": "Regulatory Compliance Monitoring",
+    "description": "Continuous monitoring of regulatory changes with automated impact analysis, policy management, and compliance tracking.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Regulatory Intelligence & Change Detection",
+      "Regulatory Impact Assessment",
+      "Policy & Procedure Management",
+      "Compliance Training & Certification",
+      "Continuous Compliance Monitoring",
+      "Audit & Remediation Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual regulatory tracking with limited coverage and reactive violation discovery",
+      "characteristics": [
+        "Compliance officer manually tracks regulations (Federal Register, state laws)",
+        "Compliance calendar managed in Excel with variable accuracy",
+        "Annual compliance training with inconsistent completion",
+        "Policy updates communicated via email (no acknowledgment tracking)",
+        "Audits periodic (annual or biennial)",
+        "Violations discovered during audits (reactive)"
+      ],
+      "constraints": [
+        "Manual regulatory tracking struggles to keep pace with regulatory changes",
+        "No automated impact analysis (which regulations apply?)",
+        "Compliance calendar becomes outdated (missed deadlines)",
+        "Training completion not effectively tracked",
+        "Policy acknowledgments not captured",
+        "Violations discovered late (during audits or after incidents)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-rcm-001",
+          "metric": "Regulatory Change Detection Rate",
+          "value": "60-70% of changes detected",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-rcm-002",
+          "metric": "Compliance Calendar Accuracy",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-rcm-003",
+          "metric": "Training Completion Rate",
+          "value": "70-85%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-rcm-004",
+          "metric": "Policy Acknowledgment Tracking",
+          "value": "0-30%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-rcm-005",
+          "metric": "Proactive Violation Detection",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered continuous compliance with 24/7 regulatory monitoring and proactive violation detection",
+      "characteristics": [
+        "Regulatory Intelligence Agent monitors regulations continuously",
+        "Impact Analysis Agent assesses which regulations apply",
+        "Policy Management Agent auto-updates policies, tracks acknowledgments",
+        "Training Management Agent auto-enrolls, tracks completion",
+        "Continuous Monitoring Agent scans for violations in real-time",
+        "Remediation Workflow Agent creates corrective action plans"
+      ],
+      "benefits": [
+        "Regulatory changes detected with high accuracy",
+        "Impact assessment fully automated",
+        "Policy acknowledgment tracking becomes comprehensive",
+        "Training completion significantly improved",
+        "Proactive violation detection dramatically increased",
+        "Compliance calendar fully automated",
+        "Audit prep time substantially reduced"
+      ],
+      "agents": [
+        "Regulatory Compliance Orchestration Agent",
+        "Regulatory Intelligence & Change Detection Agent",
+        "Regulatory Impact Assessment Agent",
+        "Policy & Procedure Management Agent",
+        "Compliance Training & Certification Agent",
+        "Continuous Compliance Monitoring Agent",
+        "Audit & Remediation Management Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Regulatory Change Detection Rate",
+          "value": "99% (vs 60-70%, +30 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI monitoring of 50+ federal and state regulatory sources with NLP change detection']",
+          "sourceBenchmark": "bench-rcm-001"
+        },
+        {
+          "metric": "Policy Acknowledgment Tracking",
+          "value": "100% (vs 0-30%, +70-100 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on digital acknowledgment workflow with automated follow-up']",
+          "sourceBenchmark": "bench-rcm-004"
+        },
+        {
+          "metric": "Training Completion Rate",
+          "value": "95%+ (vs 70-85%, +10-25 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated enrollment, reminders, and escalation for non-completion']",
+          "sourceBenchmark": "bench-rcm-003"
+        },
+        {
+          "metric": "Proactive Violation Detection",
+          "value": "70-80% (vs 10-20%, +60-70 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous AI monitoring of transactions, communications, and operations against compliance rules']",
+          "sourceBenchmark": "bench-rcm-005"
+        },
+        {
+          "metric": "Compliance Calendar Accuracy",
+          "value": "100% accuracy",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated calendar sync with regulatory deadlines from monitoring system']",
+          "sourceBenchmark": "bench-rcm-002"
+        },
+        {
+          "metric": "Audit Prep Time",
+          "value": "-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated evidence collection and audit trail generation']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Regulatory intelligence service (automate monitoring)",
+        "Policy acknowledgment tracking",
+        "Compliance calendar automation"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "GRC platform selection",
+        "Compliance obligation inventory",
+        "Regulatory intelligence service",
+        "Integration with LMS, HRIS",
+        "Compliance team training"
+      ]
+    },
+    "icon": "shield-check",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-legal-operations-matter-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Legal Operations & Matter Management",
+    "description": "Centralizes legal matter tracking with AI-powered e-billing, outside counsel management, and analytics.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Matter Intake & Triage",
+      "Resource Allocation & Workload Management",
+      "Outside Counsel Management",
+      "E-Billing & Legal Spend Management",
+      "Document & Information Management",
+      "Legal Analytics & Insights",
+      "Knowledge Management"
+    ],
+    "traditionalApproach": {
+      "description": "Fragmented matter tracking with manual invoice review and delayed spend visibility",
+      "characteristics": [
+        "Legal matters tracked in Excel or disparate systems (partial coverage)",
+        "Outside counsel engaged via email (no formal panel)",
+        "Outside counsel bills submitted via email (PDF invoices)",
+        "Invoice review is manual (time-consuming process)",
+        "Matter status updates via email (no central dashboard)",
+        "No matter analytics (spend by type, counsel performance unknown)"
+      ],
+      "constraints": [
+        "Matter tracking is fragmented across systems",
+        "Outside counsel not systematically managed (no panel, no negotiated rates)",
+        "Invoice review is time-consuming",
+        "No real-time spend visibility",
+        "No outside counsel performance metrics",
+        "Document collection is reactive (scramble for litigation discovery)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-lom-001",
+          "metric": "Matter Tracking Coverage",
+          "value": "50-70% visibility",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-lom-002",
+          "metric": "Invoice Review Time",
+          "value": "1-3 hours per invoice",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Centralized matter management with automated e-billing and comprehensive spend analytics",
+      "characteristics": [
+        "Matter Intake Agent captures new matters via web form/email",
+        "Matter Triage Agent assesses type, priority, resource needs",
+        "Resource Allocation Agent assigns to attorneys or outside counsel",
+        "E-Billing Agent reviews invoices, flags anomalies automatically",
+        "Document Management Agent organizes matter files, litigation hold",
+        "Analytics Agent provides spend insights in real-time"
+      ],
+      "benefits": [
+        "Matter tracking becomes comprehensive",
+        "Outside counsel spend visibility achieved in real-time",
+        "Invoice review time dramatically reduced",
+        "Outside counsel performance measured and managed",
+        "Legal spend optimized through better management",
+        "Matter resolution time improved",
+        "General Counsel gains real-time legal department dashboard"
+      ],
+      "agents": [
+        "Legal Operations & Matter Management Orchestration Agent",
+        "Matter Intake & Triage Agent",
+        "Resource Allocation & Workload Management Agent",
+        "Outside Counsel Management Agent",
+        "E-Billing & Legal Spend Management Agent",
+        "Document & Information Management Agent",
+        "Legal Analytics & Insights Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Matter Tracking Coverage",
+          "value": "100% (vs 50-70%, +30-50 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on centralized matter management system with mandatory intake process']",
+          "sourceBenchmark": "bench-lom-001"
+        },
+        {
+          "metric": "Invoice Review Time",
+          "value": "-70% (auto-validation)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI validation of LEDES billing codes, rate tables, and duplicate detection']",
+          "sourceBenchmark": "bench-lom-002"
+        },
+        {
+          "metric": "Legal Spend Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on rate negotiation, matter budgeting, and early settlement opportunities from analytics']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Matter Resolution Time",
+          "value": "+20-30% improvement",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on better resource allocation and workload balancing']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "E-billing for all outside counsel (spend visibility)",
+        "Central matter repository (track all legal work)",
+        "Outside counsel panel (negotiate rates)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Legal matter management platform",
+        "E-billing standard (LEDES format)",
+        "Outside counsel willing to e-bill",
+        "Historical matter data (for analytics)"
+      ]
+    },
+    "icon": "briefcase",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-risk-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Risk Management",
+    "description": "Transforms risk management from periodic assessments to continuous real-time monitoring with predictive analytics and proactive mitigation.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Risk Identification & Discovery",
+      "Risk Assessment & Quantification",
+      "Key Risk Indicator (KRI) Monitoring",
+      "Mitigation Planning & Execution",
+      "Incident Response & Crisis Management",
+      "Risk Reporting & Analytics",
+      "Third-Party Risk Management"
+    ],
+    "traditionalApproach": {
+      "description": "Periodic risk register updates with qualitative scoring and reactive incident management",
+      "characteristics": [
+        "Risk register in Excel (list of risks, likelihood, impact)",
+        "Risk assessment annual or biennial (snapshot in time)",
+        "Risk owners assigned but no accountability tracking",
+        "Mitigation plans in Word documents (not linked to risks)",
+        "Risk reporting quarterly (static PowerPoint to board)",
+        "Incident management reactive (after incident occurs)"
+      ],
+      "constraints": [
+        "Risk register becomes stale between updates",
+        "No early warning indicators (discover risks when they materialize)",
+        "Risk quantification is qualitative (H/M/L, not dollar impact)",
+        "Mitigation plans not systematically tracked",
+        "No aggregated risk view (enterprise risk portfolio)",
+        "Incident response is ad-hoc (no established playbooks)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-rm-001",
+          "metric": "Proactive Incident Detection",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-rm-002",
+          "metric": "Mitigation Plan Execution Tracking",
+          "value": "20-40%",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous risk monitoring with predictive analytics, automated KRI tracking, and proactive intervention",
+      "characteristics": [
+        "Risk Identification Agent continuously scans for new risks",
+        "Risk Assessment Agent quantifies likelihood and impact (monte carlo)",
+        "Risk Monitoring Agent tracks KRIs in real-time",
+        "Mitigation Tracking Agent ensures plans executed",
+        "Incident Response Agent orchestrates response automatically",
+        "Risk Reporting Agent generates dynamic dashboards"
+      ],
+      "benefits": [
+        "Risk identification becomes continuous",
+        "Risk quantification becomes data-driven with dollar impact",
+        "Early warning system provides proactive incident detection",
+        "Mitigation tracking becomes comprehensive",
+        "Incident response time substantially reduced",
+        "Board reporting becomes real-time and dynamic",
+        "Measurable risk prevention achieved"
+      ],
+      "agents": [
+        "Enterprise Risk Management Orchestration Agent",
+        "Risk Identification & Discovery Agent",
+        "Risk Assessment & Quantification Agent",
+        "Key Risk Indicator (KRI) Monitoring Agent",
+        "Mitigation Planning & Execution Agent",
+        "Incident Response & Crisis Management Agent",
+        "Risk Reporting & Analytics Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Proactive Incident Detection",
+          "value": "60-70% (vs 10-20%, +50-60 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous KRI monitoring with ML anomaly detection and predictive analytics']",
+          "sourceBenchmark": "bench-rm-001"
+        },
+        {
+          "metric": "Mitigation Plan Execution Tracking",
+          "value": "90%+ (vs 20-40%, +50-70 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated task assignment, progress tracking, and escalation for overdue mitigations']",
+          "sourceBenchmark": "bench-rm-002"
+        },
+        {
+          "metric": "Incident Response Time",
+          "value": "-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated playbook execution and AI-powered triage']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Central risk register (digitize Excel)",
+        "KRI dashboard (early warning indicators)",
+        "Incident response playbooks (top 5 risks)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "ERM platform selection",
+        "Risk taxonomy definition",
+        "KRI identification",
+        "Executive sponsorship (CEO + Board)",
+        "Risk culture (everyone owns risk)"
+      ]
+    },
+    "icon": "exclamation-triangle",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-data-privacy-security-compliance",
+    "type": "capability",
+    "level": 3,
+    "label": "Data Privacy & Security Compliance",
+    "description": "Automates GDPR/CCPA compliance with AI-powered data discovery, consent management, and data subject rights fulfillment.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Data Discovery & Classification",
+      "Consent & Preference Management",
+      "Data Subject Rights Automation",
+      "Vendor Privacy & Security Assessment",
+      "Data Breach Detection & Response",
+      "Privacy by Design & Impact Assessment"
+    ],
+    "traditionalApproach": {
+      "description": "Manual data inventory with Excel-based consent tracking and lengthy data subject request fulfillment",
+      "characteristics": [
+        "Data inventory maintained in Excel (incomplete coverage)",
+        "Privacy policies published on website (rarely updated)",
+        "Cookie consent banners (basic implementation)",
+        "Data subject requests handled manually via email (lengthy process)",
+        "Vendor privacy assessments via questionnaires (incomplete coverage)",
+        "Breach response reactive (delayed discovery)"
+      ],
+      "constraints": [
+        "Data inventory is incomplete (don't know all personal data locations)",
+        "No automated consent management (can't honor opt-outs at scale)",
+        "DSR fulfillment requires manual search across multiple systems",
+        "Vendor assessments are manual (questionnaires not systematically analyzed)",
+        "Breach detection is significantly delayed",
+        "No privacy by design (privacy considerations added after product development)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dpsc-001",
+          "metric": "Data Inventory Completeness",
+          "value": "40-60%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-dpsc-002",
+          "metric": "DSR Fulfillment Time",
+          "value": "15-30 days",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-dpsc-003",
+          "metric": "Vendor Assessment Completion",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-dpsc-004",
+          "metric": "Privacy Impact Assessments",
+          "value": "<30% of projects",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated privacy compliance with AI data discovery, consent management, and rapid DSR fulfillment",
+      "characteristics": [
+        "Data Discovery Agent continuously scans for personal data",
+        "Consent Management Agent captures and honors consent/opt-outs",
+        "Data Subject Rights Agent automates GDPR/CCPA requests",
+        "Vendor Risk Agent assesses third-party practices automatically",
+        "Breach Detection Agent identifies potential breaches in real-time",
+        "Privacy by Design Agent embeds requirements in development"
+      ],
+      "benefits": [
+        "Data inventory completeness dramatically improved",
+        "DSR fulfillment time substantially reduced",
+        "Consent management fully automated",
+        "Vendor assessments achieve high completion rate",
+        "Breach detection becomes near-real-time",
+        "Privacy impact assessments become standard practice",
+        "Regulatory fines avoided through proactive compliance"
+      ],
+      "agents": [
+        "Privacy & Security Compliance Orchestration Agent",
+        "Data Discovery & Classification Agent",
+        "Consent & Preference Management Agent",
+        "Data Subject Rights Automation Agent",
+        "Vendor Privacy & Security Assessment Agent",
+        "Data Breach Detection & Response Agent",
+        "Privacy by Design & Impact Assessment Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Data Inventory Completeness",
+          "value": "90-95% (vs 40-60%, +30-55 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous AI scanning of all systems, databases, and file stores with ML classification']",
+          "sourceBenchmark": "bench-dpsc-001"
+        },
+        {
+          "metric": "DSR Fulfillment Time",
+          "value": "1-3 days (vs 15-30 days, -85%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated data discovery, extraction, and secure delivery workflow']",
+          "sourceBenchmark": "bench-dpsc-002"
+        },
+        {
+          "metric": "Vendor Assessment Completion",
+          "value": "95%+ (vs 50-70%, +25-45 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated questionnaire distribution, AI-powered risk scoring, and follow-up workflows']",
+          "sourceBenchmark": "bench-dpsc-003"
+        },
+        {
+          "metric": "Breach Detection Speed",
+          "value": "Hours (vs days/weeks, -90%+)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous monitoring of data access patterns with ML anomaly detection']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Privacy Impact Assessments",
+          "value": "80%+ of projects (vs <30%, +50 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated PIA triggers in project management system with guided assessment workflow']",
+          "sourceBenchmark": "bench-dpsc-004"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Consent management platform (cookie consent, email opt-outs)",
+        "Data subject request portal (automate intake)",
+        "Data discovery scan (identify personal data)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Privacy management platform selection",
+        "Data inventory (systems with personal data)",
+        "Privacy policies updated",
+        "Legal counsel (privacy attorney)",
+        "Cross-functional privacy team (IT, legal, security, product)"
+      ]
+    },
+    "icon": "lock-closed",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-legal-spend-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Legal Spend Management",
+    "description": "Provides real-time legal spend visibility with AI invoice review, budget tracking, and outside counsel performance management.",
+    "parentDomain": "domain-governance-risk",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "E-Billing & Invoice Ingestion",
+      "AI Invoice Review & Validation",
+      "Budget Management & Tracking",
+      "Rate Benchmarking & Optimization",
+      "Legal Spend Forecasting",
+      "Accrual & Unbilled Work",
+      "Outside Counsel Scorecard"
+    ],
+    "traditionalApproach": {
+      "description": "Manual invoice entry with limited budget tracking and delayed spend visibility",
+      "characteristics": [
+        "Outside counsel invoices received via email (PDF)",
+        "Legal admin manually enters into accounting system",
+        "No structured budget tracking by matter or counsel",
+        "No systematic rate benchmarking",
+        "No spend forecasting capability",
+        "Accruals done manually at quarter-end"
+      ],
+      "constraints": [
+        "No real-time spend visibility",
+        "Outside counsel not actively managed (no rate negotiations, no AFAs)",
+        "Invoice review is manual and time-consuming",
+        "No spend forecasting (reactive approach)",
+        "Legal budget overruns are common (no alerts)",
+        "CFO/GC relationship strained by spend surprises"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-lsm-001",
+          "metric": "Invoice Review Time",
+          "value": "1-3 hours per invoice",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-lsm-002",
+          "metric": "Budget Adherence",
+          "value": "60-80%",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-lsm-003",
+          "metric": "Budget Overruns",
+          "value": "20-40% over budget",
+          "source": "TBD: [SME to provide source]"
+        },
+        {
+          "id": "bench-lsm-004",
+          "metric": "Accrual Accuracy",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source]"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Real-time spend visibility with automated invoice validation and predictive forecasting",
+      "characteristics": [
+        "E-Billing Agent ingests invoices from all counsel (LEDES format)",
+        "Invoice Review Agent validates rates, flags anomalies automatically",
+        "Budget Tracking Agent tracks spend vs budget in real-time",
+        "Rate Benchmarking Agent compares to market data",
+        "Spend Forecasting Agent predicts future spend",
+        "Accrual Agent calculates unbilled legal spend automatically",
+        "Scorecard Agent evaluates outside counsel performance"
+      ],
+      "benefits": [
+        "Spend visibility becomes real-time",
+        "Budget adherence significantly improved",
+        "Invoice review time dramatically reduced",
+        "Legal spend optimized through better management",
+        "Accrual accuracy substantially improved",
+        "Outside counsel performance systematically measured and managed",
+        "CFO/GC partnership strengthened through transparency"
+      ],
+      "agents": [
+        "Legal Spend Management Orchestration Agent",
+        "E-Billing & Invoice Ingestion Agent",
+        "AI Invoice Review & Validation Agent",
+        "Budget Management & Tracking Agent",
+        "Rate Benchmarking & Optimization Agent",
+        "Legal Spend Forecasting Agent",
+        "Accrual & Unbilled Work Agent",
+        "Outside Counsel Scorecard Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Budget Adherence",
+          "value": "90-95% (vs 60-80%, +15-30 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time spend tracking with automated alerts at 75%, 90%, and 100% thresholds']",
+          "sourceBenchmark": "bench-lsm-002"
+        },
+        {
+          "metric": "Invoice Review Time",
+          "value": "-80% (auto-approval)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI auto-approval for 80% of invoices under $10k with no anomalies']",
+          "sourceBenchmark": "bench-lsm-001"
+        },
+        {
+          "metric": "Legal Spend Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI rate negotiation insights, duplicate invoice detection, and matter budgeting']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Accrual Accuracy",
+          "value": "95%+ (vs 70-80%, +15-25 pts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time WIP data from all e-billing platforms with automated calculation']",
+          "sourceBenchmark": "bench-lsm-004"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "E-billing for all outside counsel (spend visibility)",
+        "Budget tracking by matter",
+        "Rate benchmarking (data-driven negotiations)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Legal spend management platform",
+        "E-billing standard (LEDES format)",
+        "Outside counsel onboarding (e-billing)",
+        "Rate benchmarking data subscription",
+        "Budget creation (annual legal budget)"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

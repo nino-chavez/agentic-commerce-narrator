@@ -1,0 +1,459 @@
+{
+  "capability": {
+    "id": "supply-chain-analytics",
+    "name": "Supply Chain Analytics",
+    "description": "Advanced supply chain intelligence covering inventory performance, supplier scorecards, transportation optimization, warehouse productivity, and fulfillment analytics",
+    "category": "Analytics & Data Management",
+    "subcategory": "Advanced Commerce Analytics",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "tier": "Advanced",
+    "industryVertical": "Retail & E-commerce",
+    "maturityLevel": "Transformative",
+    "priority": "High",
+    "icon": "truck",
+    "color": "#10B981"
+  },
+  "functions": [
+    {
+      "id": "inventory-performance-analytics",
+      "name": "Inventory Performance Analytics",
+      "description": "Turn rates, aging analysis, stockout/overstock identification, and inventory health monitoring to optimize working capital and service levels",
+      "traditionalWorkflow": "Supply chain analysts manually extract inventory data from ERP systems into Excel and calculate basic metrics like turn rates and days-on-hand using spreadsheet formulas. They create aging reports by bucketing inventory into 30-60-90 day categories. Stockout and overstock identification relies on simple threshold rules (e.g., flag items with 0 units or >180 days supply). The analysis is periodic (weekly or monthly), provides limited root cause insights, and lacks predictive capabilities to prevent future issues. Multi-location inventory optimization is nearly impossible with manual methods.",
+      "agenticWorkflow": "An Inventory Intelligence Orchestrator coordinates comprehensive inventory performance analysis across the entire network. A Turnover Analysis Agent calculates granular inventory turn rates by SKU, location, and time period, identifying slow-moving and fast-moving items with trend analysis. An Aging Monitor tracks inventory age distributions and flags at-risk obsolete inventory before it becomes unsellable. A Stockout Predictor uses ML to forecast impending stockouts based on demand patterns and lead times, enabling proactive replenishment. An Overstock Detector identifies excess inventory considering seasonality and planned promotions, recommending redistribution or markdown actions.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Inventory Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional inventory performance analysis", "Manages data pipelines from ERP, WMS, and demand systems", "Prioritizes inventory issues by financial impact", "Integrates insights with replenishment and merchandising"]
+        },
+        "superAgents": [
+          {
+            "agent": "Turnover Analysis Agent",
+            "responsibilities": ["Calculates inventory turn rates at SKU and aggregate levels", "Benchmarks turns vs. category targets and historical norms", "Identifies turn rate degradation trends", "Segments inventory by velocity (fast/medium/slow movers)"]
+          },
+          {
+            "agent": "Aging Monitor Agent",
+            "responsibilities": ["Tracks inventory age by SKU and location", "Identifies aging inventory at risk of obsolescence", "Calculates write-down and markdown risk exposure", "Provides early warning alerts for aging acceleration"]
+          },
+          {
+            "agent": "Stockout Predictor Agent",
+            "responsibilities": ["Forecasts stockout probability using demand and supply signals", "Identifies stockout risks before they occur", "Prioritizes replenishment by revenue/margin impact", "Tracks stockout frequency and lost sales estimation"]
+          },
+          {
+            "agent": "Overstock Detector Agent",
+            "responsibilities": ["Identifies excess inventory using forward-looking demand forecasts", "Accounts for seasonality and promotional plans", "Recommends redistribution, markdown, or liquidation actions", "Calculates carrying cost implications"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Root Cause Analyzer",
+            "responsibilities": ["Diagnoses drivers of inventory issues (demand forecast error, supply delays)", "Identifies systematic vs. one-time problems", "Recommends process improvements"]
+          },
+          {
+            "agent": "Financial Impact Agent",
+            "responsibilities": ["Calculates working capital tied up in inventory", "Quantifies carrying costs and opportunity costs", "Tracks cash flow impact of inventory decisions"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates inventory performance dashboards", "Generates aging and turn rate heat maps", "Produces executive inventory health scorecards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weekly manual reports vs. daily automated monitoring with real-time alerts",
+        "accuracyImprovement": "Reactive threshold rules vs. predictive ML models with 75-90% accuracy in issue identification",
+        "efficiency": "90% reduction in reporting time, automated issue detection vs. manual investigation",
+        "businessImpact": "10-20% reduction in inventory carrying costs, 15-30% improvement in turn rates, 20-40% reduction in stockouts and lost sales, 15-25% reduction in aged inventory write-offs",
+        "decisionQuality": "Proactive predictive intervention vs. reactive issue response, root cause understanding vs. symptom treatment"
+      },
+      "dataSources": [
+        "Inventory positions by SKU and location",
+        "Inventory receipts and shipments",
+        "Demand forecasts and actuals",
+        "Product costs and margin data",
+        "Supplier lead times and reliability",
+        "Sales and order data",
+        "Promotional and seasonality calendars",
+        "Product lifecycle and discontinuation data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated inventory turn and aging dashboards with weekly refresh; establish stockout and overstock alert thresholds; create monthly inventory health review process; pilot predictive stockout alerts on top 100 SKUs.",
+        "investmentRequired": "Medium - requires inventory data integration, analytics platform, ML model development for predictions. Typical investment $150K-$300K.",
+        "timeToValue": "3-4 months for dashboards and basic analytics, 6-9 months for predictive capabilities and automated recommendations",
+        "prerequisites": "Real-time inventory visibility across network, historical inventory and sales data (12-24 months), demand forecasting system, defined inventory KPIs and targets"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Supply chain analytics", "Inventory management", "Data science", "Demand planning"],
+        "complianceConsiderations": ["Inventory valuation accuracy for financial reporting", "GAAP/IFRS inventory accounting standards"],
+        "technologyStack": ["ERP/inventory management systems", "WMS", "Demand planning systems", "ML platforms", "BI tools"]
+      }
+    },
+    {
+      "id": "supplier-performance-scorecards",
+      "name": "Supplier Performance Scorecards",
+      "description": "On-time delivery, quality metrics, risk scoring, and cost performance measurement to optimize supplier relationships and sourcing decisions",
+      "traditionalWorkflow": "Procurement teams manually compile supplier performance data from disparate systems (ERP, quality, logistics) into Excel spreadsheets. They calculate basic metrics like on-time delivery percentage and cost variance using pivot tables and formulas. Scorecards are created quarterly or annually with significant time lag, limiting their utility for supplier management. Quality data is often incomplete or subjective. Risk assessment is informal and anecdotal rather than systematic. Suppliers rarely receive timely performance feedback, and poor performers continue without intervention until major issues arise.",
+      "agenticWorkflow": "A Supplier Performance Orchestrator coordinates comprehensive multi-dimensional supplier evaluation and management. A Delivery Performance Agent tracks on-time and in-full delivery metrics by supplier and SKU, identifying reliability patterns and degradation trends. A Quality Metrics Agent aggregates defect rates, return rates, and compliance issues to assess quality consistency. A Cost Performance Analyzer evaluates pricing competitiveness, cost trends, and adherence to negotiated terms. A Risk Scoring Agent assesses supplier financial health, geopolitical exposure, capacity constraints, and concentration risk using both internal data and external signals. A Supplier Action Engine generates automated scorecards and recommendations for supplier development, renegotiation, or disengagement.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Supplier Performance Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional supplier performance measurement", "Manages data pipelines from procurement, quality, and logistics systems", "Prioritizes supplier interventions by impact and risk", "Integrates scorecards with sourcing strategy and supplier relationship management"]
+        },
+        "superAgents": [
+          {
+            "agent": "Delivery Performance Agent",
+            "responsibilities": ["Tracks on-time delivery, in-full delivery, and OTIF metrics", "Identifies delivery reliability patterns and trends", "Benchmarks supplier performance vs. targets and peers", "Calculates delivery performance scores"]
+          },
+          {
+            "agent": "Quality Metrics Agent",
+            "responsibilities": ["Aggregates defect rates, return rates, and quality incidents", "Tracks quality trends and identifies degradation", "Measures compliance with specifications and standards", "Calculates quality performance scores"]
+          },
+          {
+            "agent": "Cost Performance Analyzer",
+            "responsibilities": ["Evaluates pricing vs. negotiated terms and market benchmarks", "Tracks cost trends and inflation pass-through", "Measures total cost of ownership including quality/delivery impact", "Calculates cost competitiveness scores"]
+          },
+          {
+            "agent": "Risk Scoring Agent",
+            "responsibilities": ["Assesses supplier financial stability using external data", "Evaluates geopolitical and natural disaster exposure", "Identifies capacity constraints and concentration risks", "Produces composite supplier risk scores"]
+          },
+          {
+            "agent": "Supplier Action Engine Agent",
+            "responsibilities": ["Generates automated supplier scorecards", "Recommends supplier development, negotiation, or exit actions", "Prioritizes suppliers for strategic relationship investment", "Tracks supplier improvement plan progress"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "External Data Agent",
+            "responsibilities": ["Integrates third-party supplier financial and risk data", "Monitors news and events affecting suppliers", "Provides market benchmarks for cost and performance"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates supplier performance dashboards", "Generates executive supplier scorecards", "Produces supplier review presentations"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Quarterly manual scorecards vs. continuous real-time supplier performance monitoring",
+        "accuracyImprovement": "Incomplete subjective assessments vs. comprehensive multi-dimensional quantitative metrics",
+        "efficiency": "85% reduction in scorecard creation time, automated tracking vs. manual data compilation",
+        "businessImpact": "15-30% improvement in supplier on-time delivery, 20-40% reduction in quality issues, 10-20% cost savings through performance-driven negotiations and sourcing optimization",
+        "decisionQuality": "Data-driven supplier decisions vs. relationship-based intuition, proactive risk mitigation vs. reactive crisis management"
+      },
+      "dataSources": [
+        "Purchase order and receipt data from ERP",
+        "Supplier delivery dates vs. promised dates",
+        "Quality inspection and defect data",
+        "Return and reject rates by supplier",
+        "Cost and pricing data",
+        "Supplier financial data (D&B, credit reports)",
+        "Supplier capacity and lead time data",
+        "Geopolitical and risk intelligence"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated on-time delivery tracking for top 20 suppliers; create quarterly supplier scorecards combining delivery, quality, and cost; establish supplier business reviews with data-driven agendas; pilot risk scoring on strategic suppliers.",
+        "investmentRequired": "Medium - requires procurement data integration, quality system integration, external data subscriptions, analytics platform. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for basic scorecards and dashboards, 6-9 months for comprehensive risk scoring and supplier action recommendations",
+        "prerequisites": "Integrated procurement and quality data, supplier master data management, defined supplier performance KPIs, supplier relationship management processes"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Procurement/sourcing", "Supply chain analytics", "Supplier relationship management", "Risk management", "Data integration"],
+        "complianceConsiderations": ["Supplier diversity reporting", "Conflict minerals and ESG compliance", "Anti-corruption due diligence"],
+        "technologyStack": ["ERP/procurement systems", "Quality management systems", "Supplier risk platforms (Dun & Bradstreet, Riskmethods)", "BI dashboards", "SRM software"]
+      }
+    },
+    {
+      "id": "transportation-cost-analysis",
+      "name": "Transportation Cost Analysis",
+      "description": "Freight spend analytics, carrier performance measurement, and route optimization opportunities to reduce transportation costs and improve service",
+      "traditionalWorkflow": "Logistics teams manually consolidate freight invoices from multiple carriers into Excel spreadsheets, categorizing costs by lane, mode, and carrier. They calculate basic metrics like cost per shipment or cost per unit but lack sophisticated analysis of cost drivers. Carrier performance is assessed informally based on recent experience rather than systematic data. Route optimization opportunities are identified anecdotally when drivers or planners notice inefficiencies. Rate benchmarking relies on sporadic RFP processes rather than continuous market monitoring. The lack of sophisticated analytics leaves significant cost optimization opportunities unrealized.",
+      "agenticWorkflow": "A Transportation Intelligence Orchestrator coordinates comprehensive freight spend and performance analysis. A Freight Spend Analyzer dissects transportation costs by lane, carrier, mode, shipment size, and service level, identifying high-cost areas and cost drivers. A Carrier Performance Agent tracks on-time delivery, damage rates, and cost per mile by carrier, enabling data-driven carrier selection and negotiation. A Route Optimization Detector uses ML to identify consolidation opportunities, mode shift possibilities, and network design improvements. A Rate Benchmarking Agent continuously monitors market rates and identifies opportunities for renegotiation or carrier switching.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Transportation Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end transportation analytics", "Manages data pipelines from TMS, carriers, and freight audit systems", "Prioritizes cost reduction opportunities by impact", "Integrates insights with logistics strategy and carrier management"]
+        },
+        "superAgents": [
+          {
+            "agent": "Freight Spend Analyzer",
+            "responsibilities": ["Dissects freight costs by lane, carrier, mode, and shipment characteristics", "Identifies high-cost lanes and cost drivers", "Tracks cost trends and variance vs. budget", "Benchmarks costs vs. historical and industry standards"]
+          },
+          {
+            "agent": "Carrier Performance Agent",
+            "responsibilities": ["Tracks carrier on-time delivery and service quality", "Measures cost per mile and cost per shipment by carrier", "Identifies carrier performance trends and issues", "Calculates carrier performance scores for selection"]
+          },
+          {
+            "agent": "Route Optimization Detector",
+            "responsibilities": ["Identifies shipment consolidation opportunities", "Detects mode shift opportunities (LTL to FTL, truck to rail)", "Recommends network design improvements", "Quantifies savings potential of optimization opportunities"]
+          },
+          {
+            "agent": "Rate Benchmarking Agent",
+            "responsibilities": ["Monitors market freight rates by lane and mode", "Compares contracted rates vs. market benchmarks", "Identifies rate renegotiation opportunities", "Provides competitive intelligence for carrier negotiations"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Invoice Audit Agent",
+            "responsibilities": ["Validates freight invoices vs. contracted rates", "Identifies billing errors and overcharges", "Automates freight claims recovery"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates freight spend dashboards", "Generates lane and carrier cost visualizations", "Produces transportation cost reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Monthly manual freight reports vs. daily automated cost monitoring and optimization alerts",
+        "accuracyImprovement": "High-level cost categories vs. granular lane/carrier/mode analysis with 85-95% invoice accuracy",
+        "efficiency": "90% reduction in freight analysis time, automated cost tracking vs. manual invoice consolidation",
+        "businessImpact": "10-20% reduction in freight costs through optimization and carrier management, 15-25% improvement in carrier performance, 5-10% savings from invoice audit recovery",
+        "decisionQuality": "Data-driven carrier selection and network design vs. informal relationships and legacy lanes"
+      },
+      "dataSources": [
+        "Freight invoices and payments by carrier",
+        "Transportation management system (TMS) data",
+        "Shipment details (origin, destination, weight, mode)",
+        "Carrier contracted rates and accessorial charges",
+        "Delivery performance data (on-time, damage)",
+        "Market rate benchmarks (DAT, Freightos)",
+        "Network design and lane data",
+        "Fuel surcharge indices"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated freight spend dashboards by lane and carrier; establish invoice audit process to recover overcharges; create carrier scorecards combining cost and service; identify top 10 lane optimization opportunities.",
+        "investmentRequired": "Medium - requires TMS integration or freight data consolidation, analytics platform, rate benchmarking data. Typical investment $150K-$300K.",
+        "timeToValue": "3-4 months for freight spend analytics and carrier scorecards, 6-9 months for route optimization and continuous rate benchmarking",
+        "prerequisites": "Freight invoice and shipment data, TMS or carrier integration, contracted rate data, defined logistics KPIs"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Transportation management", "Logistics analytics", "Carrier negotiation", "Network optimization"],
+        "complianceConsiderations": ["Freight payment accuracy for tax/customs", "Carrier liability and insurance documentation"],
+        "technologyStack": ["Transportation management system (TMS)", "Freight audit and payment systems", "Rate benchmarking platforms", "BI dashboards", "Network optimization tools"]
+      }
+    },
+    {
+      "id": "warehouse-productivity-analytics",
+      "name": "Warehouse Productivity Analytics",
+      "description": "Labor efficiency, space utilization, throughput bottleneck identification, and productivity benchmarking to optimize warehouse operations",
+      "traditionalWorkflow": "Warehouse managers manually track labor hours and units processed in spreadsheets, calculating basic productivity metrics like units per hour. They walk the warehouse floor to assess space utilization visually and document observations in reports. Throughput bottlenecks are identified reactively when problems arise rather than proactively through data analysis. Benchmarking is limited to internal historical comparisons without external industry context. The manual approach provides limited insight into root causes of productivity variations or systematic improvement opportunities.",
+      "agenticWorkflow": "A Warehouse Intelligence Orchestrator coordinates comprehensive warehouse performance analytics across all operational dimensions. A Labor Productivity Agent analyzes units processed per hour by function (receiving, putaway, picking, packing, shipping), shift, and individual worker, identifying efficiency patterns and outliers. A Space Utilization Monitor tracks cubic utilization, slot occupancy, and layout effectiveness, recommending slotting and layout improvements. A Throughput Analyzer identifies bottlenecks in warehouse flow using process mining and queuing theory, quantifying constraint impact. A Benchmarking Engine compares performance against industry standards and best-practice warehouses, identifying improvement opportunities.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Warehouse Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional warehouse performance analysis", "Manages data pipelines from WMS, LMS, and other warehouse systems", "Prioritizes improvement opportunities by operational impact", "Integrates analytics with warehouse management and continuous improvement"]
+        },
+        "superAgents": [
+          {
+            "agent": "Labor Productivity Agent",
+            "responsibilities": ["Tracks units per hour by function, shift, and worker", "Identifies productivity variations and root causes", "Benchmarks labor performance vs. standards and goals", "Recommends training, process, or staffing improvements"]
+          },
+          {
+            "agent": "Space Utilization Monitor",
+            "responsibilities": ["Tracks cubic space utilization and slot occupancy", "Identifies underutilized or congested areas", "Evaluates slotting effectiveness (fast movers accessible)", "Recommends layout and slotting improvements"]
+          },
+          {
+            "agent": "Throughput Analyzer Agent",
+            "responsibilities": ["Identifies flow bottlenecks using process mining", "Quantifies constraint impact on overall throughput", "Models queue times and wait states", "Recommends process flow improvements"]
+          },
+          {
+            "agent": "Benchmarking Engine Agent",
+            "responsibilities": ["Compares warehouse KPIs vs. industry benchmarks", "Identifies best-practice gaps and opportunities", "Tracks performance trends and improvement trajectories", "Provides competitive context for performance assessment"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Equipment Utilization Agent",
+            "responsibilities": ["Tracks utilization of material handling equipment", "Identifies underutilized or over-constrained assets", "Recommends equipment investments or reallocation"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates warehouse performance dashboards", "Generates heat maps of space and labor productivity", "Produces warehouse operations reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weekly manual reports vs. real-time dashboards with hourly productivity tracking",
+        "accuracyImprovement": "Aggregate facility metrics vs. granular function/shift/worker analysis with 90%+ data accuracy",
+        "efficiency": "85% reduction in reporting time, automated performance tracking vs. manual observation and data collection",
+        "businessImpact": "10-25% improvement in labor productivity, 15-30% increase in space utilization, 20-40% reduction in throughput bottlenecks, 5-10% reduction in warehouse operating costs",
+        "decisionQuality": "Data-driven continuous improvement vs. anecdotal observations, systematic benchmarking vs. internal-only comparison"
+      },
+      "dataSources": [
+        "Warehouse management system (WMS) transaction data",
+        "Labor management system (LMS) time and productivity data",
+        "Inventory locations and space allocation",
+        "Order and shipment volume data",
+        "Material handling equipment utilization",
+        "Warehouse layout and slot configurations",
+        "Industry benchmark data (WERC, CSCMP)",
+        "Time stamps for process milestones (receive to putaway, pick to ship)"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated labor productivity dashboards by function and shift; create space utilization heat maps; establish daily productivity review process; benchmark top 3-5 KPIs against industry standards.",
+        "investmentRequired": "Medium - requires WMS/LMS integration, analytics platform, slotting and layout analysis tools, benchmark data subscriptions. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for productivity dashboards and space analysis, 6-9 months for throughput bottleneck analysis and benchmarking",
+        "prerequisites": "WMS with detailed transaction tracking, labor time tracking (LMS or timekeeping system), warehouse layout data, defined warehouse KPIs and targets"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Warehouse operations", "Industrial engineering", "Process improvement", "Data analysis", "Labor management"],
+        "complianceConsiderations": ["Labor law compliance in productivity tracking", "Worker privacy in individual performance monitoring", "OSHA safety standards"],
+        "technologyStack": ["Warehouse management system (WMS)", "Labor management system (LMS)", "Process mining tools", "BI dashboards", "Slotting optimization software"]
+      }
+    },
+    {
+      "id": "order-fulfillment-performance",
+      "name": "Order Fulfillment Performance",
+      "description": "Cycle time analysis, perfect order percentage measurement, and cost per order tracking to improve fulfillment speed, accuracy, and efficiency",
+      "traditionalWorkflow": "Operations teams manually track fulfillment metrics in Excel, calculating order cycle times from order receipt to shipment by subtracting timestamps. They tally up order errors (wrong item, wrong quantity, damage) to calculate accuracy rates. Cost per order is estimated using crude allocation of labor and overhead rather than activity-based costing. The analysis is performed weekly or monthly with significant lag, limiting real-time performance management. Root cause analysis of fulfillment issues is ad hoc, and improvement initiatives lack data-driven prioritization.",
+      "agenticWorkflow": "A Fulfillment Intelligence Orchestrator coordinates comprehensive order fulfillment performance measurement and optimization. A Cycle Time Analyzer tracks elapsed time for each fulfillment milestone (order receipt, picking, packing, shipping), identifying delays and bottlenecks. A Perfect Order Agent measures order accuracy across multiple dimensions (item, quantity, condition, documentation, on-time delivery), calculating perfect order percentage and root-causing defects. A Cost Tracker applies activity-based costing to calculate true cost per order by channel, product, and service level. An Improvement Engine prioritizes fulfillment enhancements by impact on customer experience and operational cost.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Fulfillment Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end fulfillment performance analytics", "Manages data pipelines from OMS, WMS, and shipping systems", "Prioritizes fulfillment improvements by customer and financial impact", "Integrates metrics with fulfillment operations and continuous improvement"]
+        },
+        "superAgents": [
+          {
+            "agent": "Cycle Time Analyzer",
+            "responsibilities": ["Tracks order cycle time from receipt to shipment", "Breaks down cycle time by milestone (pick, pack, ship)", "Identifies delays and bottlenecks in fulfillment flow", "Benchmarks cycle time vs. SLAs and competition"]
+          },
+          {
+            "agent": "Perfect Order Agent",
+            "responsibilities": ["Measures order accuracy across all quality dimensions", "Calculates perfect order percentage", "Root causes order defects and errors", "Tracks quality trends and improvement progress"]
+          },
+          {
+            "agent": "Cost Tracker Agent",
+            "responsibilities": ["Calculates cost per order using activity-based costing", "Breaks down costs by labor, materials, overhead", "Analyzes cost variation by channel, product, service level", "Identifies cost reduction opportunities"]
+          },
+          {
+            "agent": "Improvement Engine Agent",
+            "responsibilities": ["Prioritizes fulfillment enhancements by ROI and impact", "Recommends process, technology, and staffing improvements", "Simulates impact of improvement initiatives", "Tracks initiative implementation and results"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Customer Impact Agent",
+            "responsibilities": ["Links fulfillment performance to customer satisfaction", "Tracks NPS and complaints by fulfillment issues", "Quantifies customer lifetime value impact of fulfillment quality"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates fulfillment performance dashboards", "Generates cycle time and quality trend charts", "Produces operations review reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weekly manual fulfillment reports vs. real-time dashboards with hourly updates and alerts",
+        "accuracyImprovement": "Sample-based quality checks vs. 100% order tracking with automated defect detection",
+        "efficiency": "90% reduction in reporting time, automated performance tracking vs. manual data collection and calculation",
+        "businessImpact": "20-40% reduction in order cycle time, 30-50% improvement in perfect order rate, 10-20% reduction in cost per order, 15-25% improvement in customer satisfaction",
+        "decisionQuality": "Granular root cause analysis vs. aggregate metrics, data-driven improvement prioritization vs. intuition"
+      },
+      "dataSources": [
+        "Order management system (OMS) data",
+        "Warehouse management system (WMS) transaction data",
+        "Shipping and carrier tracking data",
+        "Order timestamps for all fulfillment milestones",
+        "Order accuracy and error data",
+        "Returns and customer complaint data",
+        "Labor and operational cost data",
+        "Customer satisfaction (NPS, CSAT) by order"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement real-time cycle time dashboards by fulfillment milestone; track perfect order percentage with automated error detection; establish daily fulfillment performance reviews; pilot cost-per-order calculation on representative sample.",
+        "investmentRequired": "Medium - requires OMS/WMS integration, automated quality tracking, activity-based costing model. Typical investment $150K-$300K.",
+        "timeToValue": "3-4 months for cycle time and quality dashboards, 6-9 months for comprehensive cost tracking and improvement prioritization",
+        "prerequisites": "Integrated order and fulfillment systems, timestamp tracking at all milestones, quality and error tracking, defined fulfillment SLAs and targets"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Fulfillment operations", "Process improvement", "Quality management", "Data analysis", "Cost accounting"],
+        "complianceConsiderations": ["Shipping documentation accuracy", "Hazmat and regulated product handling", "Customer data privacy in order tracking"],
+        "technologyStack": ["Order management system (OMS)", "Warehouse management system (WMS)", "Shipping systems", "BI dashboards", "Process mining tools"]
+      }
+    },
+    {
+      "id": "returns-reverse-logistics-analysis",
+      "name": "Returns & Reverse Logistics Analysis",
+      "description": "Return reason analysis, reverse logistics cost tracking, and restocking rate optimization to reduce return costs and improve product quality",
+      "traditionalWorkflow": "Returns teams manually categorize return reasons using subjective codes entered into spreadsheets or basic RMA systems. They calculate aggregate return rates and costs but lack detailed analysis of root causes or cost drivers. Reverse logistics costs are treated as overhead rather than precisely tracked by product, channel, or return reason. Restocking rates and salability assessments are subjective, leading to inconsistent inventory disposition decisions. The absence of systematic analysis prevents identification of product quality issues, policy abuse, or process improvement opportunities.",
+      "agenticWorkflow": "A Returns Intelligence Orchestrator coordinates comprehensive returns and reverse logistics analytics. A Return Reason Analyzer applies NLP to customer-provided return reasons, automatically categorizing and identifying patterns (quality defects, sizing issues, buyer's remorse). A Reverse Logistics Cost Tracker precisely allocates costs (shipping, inspection, restocking, disposal) to each return, enabling product and channel profitability analysis. A Restocking Optimizer assesses product condition and market demand to recommend optimal disposition (restock, markdown, liquidate, dispose). An Improvement Engine identifies systematic issues requiring action—product quality problems, misleading descriptions, policy abuse—and recommends corrective actions.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Returns Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end returns analytics", "Manages data pipelines from returns, WMS, and customer service systems", "Prioritizes improvement opportunities by cost and customer impact", "Integrates insights with product, merchandising, and operations"]
+        },
+        "superAgents": [
+          {
+            "agent": "Return Reason Analyzer",
+            "responsibilities": ["Categorizes return reasons using NLP and ML", "Identifies return reason patterns and trends", "Links return reasons to product, channel, and customer attributes", "Flags systematic issues requiring investigation"]
+          },
+          {
+            "agent": "Reverse Logistics Cost Tracker",
+            "responsibilities": ["Tracks all reverse logistics costs (shipping, processing, disposal)", "Allocates costs to products, channels, and return reasons", "Calculates true cost of returns by dimension", "Identifies high-cost return categories"]
+          },
+          {
+            "agent": "Restocking Optimizer Agent",
+            "responsibilities": ["Assesses product condition and salability", "Recommends optimal disposition (restock, markdown, liquidate)", "Maximizes recovery value from returns", "Tracks restocking rates and disposition outcomes"]
+          },
+          {
+            "agent": "Improvement Engine Agent",
+            "responsibilities": ["Identifies systematic return drivers requiring action", "Recommends product quality improvements", "Detects policy abuse and fraud patterns", "Proposes return policy and process improvements"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Quality Feedback Agent",
+            "responsibilities": ["Routes product quality signals to merchandising and suppliers", "Tracks issue resolution and improvement", "Measures quality improvement impact on return rates"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates returns analytics dashboards", "Generates return reason and cost visualizations", "Produces executive returns performance reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Monthly manual returns reports vs. daily automated analysis with real-time issue alerts",
+        "accuracyImprovement": "Subjective return reason codes vs. NLP-powered automated categorization with 85-95% accuracy",
+        "efficiency": "85% reduction in returns analysis time, automated cost tracking vs. manual allocation",
+        "businessImpact": "15-30% reduction in return rates through root cause elimination, 20-40% improvement in restocking rates, 10-20% reduction in reverse logistics costs, faster product quality issue identification",
+        "decisionQuality": "Systematic root cause analysis vs. anecdotal observation, data-driven disposition vs. subjective restocking decisions"
+      },
+      "dataSources": [
+        "Return authorization and receipt data",
+        "Customer-provided return reasons",
+        "Product condition assessments",
+        "Reverse logistics costs (shipping, processing, disposal)",
+        "Restocking and disposition outcomes",
+        "Original order and product data",
+        "Customer return history and patterns",
+        "Product quality and defect data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated return reason categorization using NLP; create returns dashboards by product and reason; track reverse logistics costs by category; establish monthly returns review process with merchandising and quality teams.",
+        "investmentRequired": "Medium - requires returns system integration, NLP for reason analysis, cost tracking system, restocking optimization tools. Typical investment $150K-$300K.",
+        "timeToValue": "3-4 months for return reason analysis and cost dashboards, 6-9 months for restocking optimization and closed-loop improvement process",
+        "prerequisites": "Returns management system or process, customer return reason capture, reverse logistics cost data, integration with inventory and merchandising systems"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Reverse logistics", "Returns management", "NLP/text analytics", "Quality management", "Data analysis"],
+        "complianceConsiderations": ["Return policy legal compliance", "Hazmat and disposal regulations", "Customer refund processing accuracy"],
+        "technologyStack": ["Returns management system", "NLP platforms for reason analysis", "WMS", "Cost accounting systems", "BI dashboards"]
+      }
+    }
+  ]
+}

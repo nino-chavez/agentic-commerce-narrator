@@ -1,0 +1,535 @@
+{
+  "capability": {
+    "id": "merchandising-analytics",
+    "name": "Merchandising Analytics",
+    "description": "AI-powered merchandising analytics for assortment optimization, pricing strategy, promotion effectiveness, and space productivity across retail operations",
+    "category": "Analytics & Data Management",
+    "subcategory": "Advanced Commerce Analytics",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "tier": "Advanced",
+    "industryVertical": "Retail & E-commerce",
+    "maturityLevel": "Transformative",
+    "priority": "High",
+    "icon": "chart-line",
+    "color": "#8B5CF6"
+  },
+  "functions": [
+    {
+      "id": "assortment-performance-analysis",
+      "name": "Assortment Performance Analysis",
+      "description": "AI-driven analysis of SKU performance by category, attribute, and price tier to optimize product mix and identify underperforming items",
+      "traditionalWorkflow": "Merchandisers manually export sales data by SKU into Excel spreadsheets, create pivot tables to analyze performance by category and attribute, and manually identify slow-moving items. They compare sell-through rates across price tiers using basic formulas and create PowerPoint presentations with findings. The analysis typically covers 10-20% of the assortment due to time constraints and relies heavily on historical averages rather than predictive insights.",
+      "agenticWorkflow": "An Assortment Intelligence Orchestrator coordinates analysis across the entire product catalog in real-time. A Performance Analysis Agent applies ML models to identify performance patterns across all SKUs, considering seasonality, trends, and external factors. An Attribute Intelligence Agent analyzes performance by product attributes (color, size, material, brand) to identify winning combinations. A Price Tier Agent segments products into micro-tiers and evaluates elasticity and margin contribution. A Recommendation Engine Agent generates specific actionable recommendations for assortment optimization, including items to add, remove, or reposition.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Assortment Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional assortment analysis", "Prioritizes analysis based on business impact", "Synthesizes insights across SKU performance dimensions", "Manages data pipelines from POS, inventory, and product catalogs"]
+        },
+        "superAgents": [
+          {
+            "agent": "Performance Analysis Agent",
+            "responsibilities": ["Analyzes sales velocity, sell-through, and margin by SKU", "Identifies top/bottom performers using ML ranking algorithms", "Detects performance anomalies and trend changes", "Segments products by lifecycle stage and performance tier"]
+          },
+          {
+            "agent": "Attribute Intelligence Agent",
+            "responsibilities": ["Analyzes performance patterns by product attributes", "Identifies winning attribute combinations using association rules", "Detects attribute trends across categories", "Recommends attribute mix optimization"]
+          },
+          {
+            "agent": "Price Tier Agent",
+            "responsibilities": ["Segments assortment into meaningful price tiers", "Analyzes performance and gap opportunities by tier", "Evaluates price architecture effectiveness", "Identifies tier saturation or white space opportunities"]
+          },
+          {
+            "agent": "Recommendation Engine Agent",
+            "responsibilities": ["Generates specific SKU-level recommendations", "Prioritizes actions by financial impact", "Creates assortment optimization roadmaps", "Simulates impact of assortment changes"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Category Context Agent",
+            "responsibilities": ["Provides category-specific benchmarks and norms", "Applies category lifecycle and seasonal patterns", "Maintains category taxonomy and hierarchies"]
+          },
+          {
+            "agent": "Competitive Intelligence Agent",
+            "responsibilities": ["Integrates competitive assortment data", "Identifies gaps vs. competition", "Tracks market share by category and attribute"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates interactive assortment performance dashboards", "Generates heat maps by category and attribute", "Produces executive-ready reports and scorecards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "3 weeks manual analysis vs. real-time continuous monitoring",
+        "accuracyImprovement": "Manual 15-20% sample coverage vs. AI 100% SKU analysis",
+        "efficiency": "95% reduction in analysis time, 40% improvement in assortment productivity",
+        "businessImpact": "3-7% sales lift from optimized assortment, 15-25% reduction in slow-moving inventory",
+        "decisionQuality": "Predictive insights vs. reactive historical analysis, 60% faster assortment decisions"
+      },
+      "dataSources": [
+        "Point-of-sale transaction data by SKU",
+        "Product master data with attributes and hierarchies",
+        "Inventory levels and stock positions",
+        "Pricing and promotion history",
+        "Store clustering and attributes",
+        "Competitive assortment intelligence",
+        "Customer demographics and preferences",
+        "Seasonality and calendar data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with top categories representing 50% of sales; implement automated SKU performance scorecards with weekly refreshes; focus on identifying clear bottom 10% underperformers for immediate action.",
+        "investmentRequired": "Medium - requires POS data integration, product attribute cleansing, ML model development for performance prediction, and BI dashboard creation. Typical investment $150K-$300K.",
+        "timeToValue": "2-3 months for initial dashboards and insights, 4-6 months for full predictive capabilities and automated recommendations",
+        "prerequisites": "Clean product master data with consistent attribute taxonomy, historical sales data (12-24 months), inventory data integration, defined category management structure"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "3-6 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Data science", "Category management", "BI/analytics", "Product taxonomy"],
+        "complianceConsiderations": ["Data privacy for customer-linked transactions", "Competitive intelligence sourcing legality"],
+        "technologyStack": ["ML platforms for clustering and ranking", "BI tools (Tableau, Power BI)", "Data warehouse", "Product MDM system"]
+      }
+    },
+    {
+      "id": "category-brand-performance",
+      "name": "Category & Brand Performance",
+      "description": "Cross-category trend analysis, brand health scoring, and competitive insights to optimize category strategy and brand portfolio management",
+      "traditionalWorkflow": "Category managers manually compile sales reports by category and brand from ERP systems into Excel. They calculate basic metrics like sales growth, market share, and margin contribution using spreadsheet formulas. Managers create separate analyses for each category, making cross-category comparison difficult. Brand health assessment relies on subjective judgment and limited quantitative metrics. Competitive insights come from sporadic market research reports rather than continuous monitoring.",
+      "agenticWorkflow": "A Category Intelligence Orchestrator coordinates comprehensive multi-brand and cross-category analysis. A Category Performance Agent analyzes trends, growth drivers, and performance patterns across all categories simultaneously. A Brand Health Agent applies sophisticated scoring models that combine financial performance, customer sentiment, market share trends, and brand equity metrics. A Cross-Category Insight Agent identifies opportunities for category adjacencies, bundle optimization, and shopper trip analysis. A Competitive Benchmark Agent continuously monitors competitive positioning and identifies share gain/loss drivers.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Category Intelligence Orchestrator",
+          "responsibilities": ["Coordinates category and brand analytics across organization", "Prioritizes insights based on strategic importance", "Integrates category performance with broader business metrics", "Manages multi-source data pipelines and quality"]
+        },
+        "superAgents": [
+          {
+            "agent": "Category Performance Agent",
+            "responsibilities": ["Analyzes sales, margin, and traffic trends by category", "Identifies category lifecycle stage and maturity", "Detects emerging trends and growth opportunities", "Benchmarks performance vs. historical patterns and goals"]
+          },
+          {
+            "agent": "Brand Health Agent",
+            "responsibilities": ["Calculates comprehensive brand health scores", "Integrates financial metrics with sentiment and NPS data", "Tracks brand equity evolution over time", "Identifies at-risk brands requiring intervention"]
+          },
+          {
+            "agent": "Cross-Category Insight Agent",
+            "responsibilities": ["Identifies basket affinity and cross-category purchase patterns", "Analyzes category role (destination, routine, seasonal)", "Recommends category adjacency and layout optimization", "Detects cannibalization across categories"]
+          },
+          {
+            "agent": "Competitive Benchmark Agent",
+            "responsibilities": ["Tracks competitive category and brand performance", "Calculates market share and share of wallet", "Identifies competitive threats and opportunities", "Provides win/loss analysis for key categories"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Shopper Insight Agent",
+            "responsibilities": ["Links category performance to shopper behavior", "Provides trip mission and basket analysis", "Segments shoppers by category preference"]
+          },
+          {
+            "agent": "External Data Agent",
+            "responsibilities": ["Integrates syndicated data (Nielsen, IRI)", "Incorporates economic and demographic trends", "Monitors industry benchmarks and best practices"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "2-4 weeks manual category reviews vs. daily automated insights",
+        "accuracyImprovement": "Single-category view vs. holistic cross-category and brand portfolio optimization",
+        "efficiency": "90% reduction in reporting time, 50% faster category decision-making",
+        "businessImpact": "2-5% category sales lift, 10-20% improvement in brand ROI, better portfolio rationalization decisions",
+        "decisionQuality": "Comprehensive brand health scoring vs. fragmented financial-only metrics, proactive competitive response"
+      },
+      "dataSources": [
+        "Category sales and margin data by period",
+        "Brand performance metrics across categories",
+        "Market basket analysis data",
+        "Customer satisfaction and NPS by brand",
+        "Syndicated market share data (Nielsen, IRI)",
+        "Competitive pricing and promotion intelligence",
+        "Social media sentiment by brand",
+        "Store traffic and conversion by category"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated category performance dashboards with top 10 categories; create brand health scorecards combining financial and customer metrics; establish monthly automated category review packs.",
+        "investmentRequired": "Medium-High - requires syndicated data subscriptions, advanced analytics platform, brand health modeling, cross-category analysis tools. Typical investment $200K-$400K.",
+        "timeToValue": "3-4 months for dashboards and brand scorecards, 6-9 months for full cross-category optimization and predictive capabilities",
+        "prerequisites": "Integrated category and brand sales data, customer loyalty data, syndicated market data subscriptions, defined category management processes"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Category management", "Brand strategy", "Advanced analytics", "Competitive intelligence", "Market research"],
+        "complianceConsiderations": ["Syndicated data usage agreements", "Competitive intelligence ethical guidelines"],
+        "technologyStack": ["Advanced analytics platform", "Market basket analysis tools", "Syndicated data platforms", "Social listening tools", "BI dashboards"]
+      }
+    },
+    {
+      "id": "pricing-elasticity-analysis",
+      "name": "Pricing Elasticity Analysis",
+      "description": "ML-powered price sensitivity modeling and optimal price point recommendations to maximize revenue and margin across product portfolio",
+      "traditionalWorkflow": "Pricing analysts manually extract historical sales and pricing data into Excel to calculate basic elasticity using simple regression formulas. They analyze a small sample of items due to computational limitations and create static elasticity estimates that quickly become outdated. The analysis ignores cross-item effects, competitive dynamics, and customer segmentation. Optimal pricing recommendations are based on simplified assumptions and rule-of-thumb markup strategies rather than sophisticated optimization.",
+      "agenticWorkflow": "A Pricing Intelligence Orchestrator coordinates sophisticated elasticity analysis across the entire catalog. An Elasticity Modeling Agent applies advanced ML techniques (Bayesian hierarchical models, random forests) to estimate price sensitivity at SKU level, accounting for seasonality, trends, and competitive effects. A Cross-Price Effect Agent identifies complementary and substitute relationships to model cannibalization and halo effects. A Customer Segment Agent estimates elasticity differences across customer segments to enable personalized pricing strategies. An Optimization Engine Agent solves constrained optimization problems to recommend prices that maximize objectives (revenue, margin, volume) while respecting business rules.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Pricing Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end elasticity analysis workflow", "Manages model training and deployment pipelines", "Prioritizes pricing decisions by revenue impact", "Integrates elasticity insights with pricing strategy"]
+        },
+        "superAgents": [
+          {
+            "agent": "Elasticity Modeling Agent",
+            "responsibilities": ["Builds and maintains ML elasticity models at SKU level", "Estimates own-price elasticity coefficients", "Accounts for seasonality, trends, and external factors", "Validates model accuracy and recalibrates regularly"]
+          },
+          {
+            "agent": "Cross-Price Effect Agent",
+            "responsibilities": ["Models cross-elasticity between related products", "Identifies substitutes and complements", "Quantifies cannibalization and halo effects", "Provides bundle pricing optimization insights"]
+          },
+          {
+            "agent": "Customer Segment Agent",
+            "responsibilities": ["Estimates elasticity variation across customer segments", "Enables segment-specific pricing strategies", "Identifies price-sensitive vs. value-seeking customers", "Models willingness-to-pay distributions"]
+          },
+          {
+            "agent": "Optimization Engine Agent",
+            "responsibilities": ["Solves pricing optimization problems at scale", "Recommends optimal prices for revenue/margin/volume objectives", "Respects pricing rules, constraints, and guardrails", "Simulates scenarios and what-if analyses"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Competitive Pricing Agent",
+            "responsibilities": ["Monitors competitive price changes", "Incorporates competitive response into elasticity models", "Provides competitive positioning context"]
+          },
+          {
+            "agent": "Testing & Learning Agent",
+            "responsibilities": ["Designs pricing A/B tests and experiments", "Analyzes test results to refine elasticity estimates", "Builds continuous learning feedback loops"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates elasticity curve visualizations", "Produces pricing recommendation reports", "Generates what-if scenario dashboards"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "4-8 weeks manual analysis vs. daily automated elasticity updates",
+        "accuracyImprovement": "Simple regression on 5-10% of items vs. advanced ML on 100% of catalog with 40% better prediction accuracy",
+        "efficiency": "95% reduction in analysis time, 60% faster pricing decision cycles",
+        "businessImpact": "1-3% margin improvement, 2-4% revenue lift, 10-15% reduction in pricing errors and suboptimal decisions",
+        "decisionQuality": "Sophisticated multi-item optimization vs. item-by-item rules of thumb, segment-specific insights vs. one-size-fits-all"
+      },
+      "dataSources": [
+        "Historical pricing data by SKU and time period",
+        "Sales volume and revenue data",
+        "Promotional and markdown history",
+        "Competitive pricing intelligence",
+        "Customer transaction data with segments",
+        "Inventory and stock levels",
+        "Cost data for margin calculations",
+        "Market basket and purchase sequence data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with top 20% of revenue-generating items; implement basic own-price elasticity models; create price sensitivity scorecards; establish A/B testing framework for validation.",
+        "investmentRequired": "High - requires advanced ML modeling capabilities, optimization solvers, significant computational resources, data science expertise. Typical investment $300K-$600K.",
+        "timeToValue": "4-6 months for initial elasticity models and insights, 9-12 months for full optimization engine and automated pricing recommendations",
+        "prerequisites": "2+ years of pricing and sales history with variation, clean transactional data, defined pricing governance, competitive price monitoring capability"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Data science/ML", "Econometrics", "Pricing strategy", "Optimization", "Python/R programming"],
+        "complianceConsiderations": ["Price discrimination regulations", "Antitrust considerations", "Dynamic pricing disclosure requirements"],
+        "technologyStack": ["ML platforms (Python, R, TensorFlow)", "Optimization solvers (Gurobi, CPLEX)", "Cloud computing for model training", "A/B testing platforms"]
+      }
+    },
+    {
+      "id": "promotion-effectiveness-measurement",
+      "name": "Promotion Effectiveness Measurement",
+      "description": "ROI analysis, incremental lift calculation, and cannibalization detection to optimize promotional strategy and spending allocation",
+      "traditionalWorkflow": "Marketing teams manually compile promotion performance reports in Excel, comparing promoted sales to prior periods using simple before/after analysis. They calculate basic metrics like sales lift and discount depth but struggle to isolate true incremental impact from baseline sales, seasonality, and halo effects. ROI calculations are crude, often ignoring cannibalization, forward-buying, and long-term customer value impacts. Cross-promotion comparison is limited, and insights are typically available weeks after promotions end.",
+      "agenticWorkflow": "A Promotion Analytics Orchestrator coordinates comprehensive promotion effectiveness measurement. An Incrementality Agent applies causal inference techniques (difference-in-differences, synthetic control, matched markets) to isolate true incremental lift from confounding factors. A Cannibalization Detector identifies cross-SKU and temporal cannibalization effects to calculate net impact. An ROI Calculator computes comprehensive financial returns accounting for discounts, costs, and downstream effects. A Learning Engine continuously improves promotion forecasts by comparing predicted vs. actual results and identifying success patterns.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Promotion Analytics Orchestrator",
+          "responsibilities": ["Coordinates promotion measurement across all campaigns", "Prioritizes high-value promotions for deep-dive analysis", "Integrates promotion insights with planning systems", "Manages automated reporting and alerting"]
+        },
+        "superAgents": [
+          {
+            "agent": "Incrementality Agent",
+            "responsibilities": ["Applies causal inference methods to measure true lift", "Separates incremental from baseline and pulled-forward sales", "Accounts for seasonality, trends, and external factors", "Provides confidence intervals and statistical significance"]
+          },
+          {
+            "agent": "Cannibalization Detector",
+            "responsibilities": ["Identifies cross-item cannibalization using market basket shifts", "Detects temporal cannibalization (forward buying, pull-forward)", "Calculates net incremental impact across product portfolio", "Recommends promotion combinations to minimize cannibalization"]
+          },
+          {
+            "agent": "ROI Calculator",
+            "responsibilities": ["Computes comprehensive promotion ROI and ROMI", "Accounts for discount costs, operational costs, and margin impact", "Incorporates customer lifetime value for acquisition promotions", "Compares promotion efficiency across mechanics and channels"]
+          },
+          {
+            "agent": "Learning Engine Agent",
+            "responsibilities": ["Builds predictive models for promotion response", "Identifies promotion best practices and success patterns", "Continuously improves forecasts based on actuals", "Generates promotion optimization recommendations"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Customer Behavior Agent",
+            "responsibilities": ["Analyzes promotion sensitivity by customer segment", "Tracks promotion fatigue and frequency effects", "Identifies promotion-driven new customer acquisition"]
+          },
+          {
+            "agent": "Competitive Promotion Agent",
+            "responsibilities": ["Monitors competitive promotional activity", "Assesses defensive vs. offensive promotion effectiveness", "Provides competitive promotion response recommendations"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "3-4 weeks post-promotion manual analysis vs. real-time daily tracking and end-of-promotion reports",
+        "accuracyImprovement": "Basic before/after with 30-40% error vs. causal inference methods with 85-95% accuracy in incrementality",
+        "efficiency": "90% reduction in promotion analysis time, 50% more promotions analyzed with equal resources",
+        "businessImpact": "15-30% improvement in promotional ROI through better targeting and mechanics, 10-20% reduction in ineffective promotions",
+        "decisionQuality": "True incrementality vs. misleading total sales metrics, sophisticated cannibalization detection vs. blind spots"
+      },
+      "dataSources": [
+        "Promotion calendar with mechanics and terms",
+        "Daily sales data by SKU and store/channel",
+        "Customer transaction and loyalty data",
+        "Promotional discount and funding amounts",
+        "Market basket and purchase sequence data",
+        "Competitive promotion intelligence",
+        "Advertising and media spend by promotion",
+        "Inventory and out-of-stock data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Start with high-value promotions (top 20% of spend); implement automated promotion scorecards with lift and ROI; establish control groups for key promotions to enable clean measurement.",
+        "investmentRequired": "Medium-High - requires advanced analytics capabilities, causal inference expertise, data integration across POS/loyalty/finance systems. Typical investment $200K-$450K.",
+        "timeToValue": "3-5 months for automated promotion reporting and basic incrementality analysis, 6-9 months for sophisticated causal inference and optimization",
+        "prerequisites": "Detailed promotion tracking data, customer loyalty data, ability to establish control groups or matched markets, 12-24 months of promotion history"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-9 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Causal inference", "Promotional analytics", "Data science", "Marketing strategy", "Statistics"],
+        "complianceConsiderations": ["Promotional terms and conditions accuracy", "Price discrimination in personalized promotions"],
+        "technologyStack": ["Causal inference tools (Python causalml, R)", "ML platforms", "BI tools", "Marketing mix modeling software"]
+      }
+    },
+    {
+      "id": "markdown-optimization-analytics",
+      "name": "Markdown Optimization Analytics",
+      "description": "Aging inventory analysis, optimal markdown timing and depth recommendations to maximize sell-through while preserving margin",
+      "traditionalWorkflow": "Merchants manually review aging inventory reports and make subjective markdown decisions based on intuition and historical rules of thumb. They track inventory age in Excel and apply standard markdown schedules (e.g., 25% off after 60 days, 50% off after 90 days) regardless of item-specific characteristics. Analysis of markdown effectiveness is limited to comparing final clearance rates, missing opportunities to optimize timing and depth. The process is reactive rather than predictive, often resulting in premature deep markdowns or delayed actions that force salvage liquidation.",
+      "agenticWorkflow": "A Markdown Intelligence Orchestrator coordinates data-driven markdown optimization across the inventory lifecycle. An Aging Inventory Agent continuously monitors inventory age, velocity deceleration, and fashion/seasonal obsolescence risk. A Price Optimization Agent uses ML to recommend optimal markdown depth considering demand elasticity, competitive positioning, and remaining selling season. A Timing Engine Agent determines optimal markdown trigger points balancing sell-through probability against margin preservation. A Performance Tracker evaluates markdown outcomes against predictions and refines models through continuous learning.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Markdown Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end markdown optimization process", "Prioritizes markdown actions by inventory value and risk", "Integrates markdown strategy with inventory planning", "Manages automated markdown execution workflows"]
+        },
+        "superAgents": [
+          {
+            "agent": "Aging Inventory Agent",
+            "responsibilities": ["Monitors inventory age and velocity trends by SKU", "Identifies at-risk inventory requiring markdown intervention", "Calculates markdown urgency scores", "Forecasts inventory disposition without intervention"]
+          },
+          {
+            "agent": "Price Optimization Agent",
+            "responsibilities": ["Recommends optimal markdown depth by item and time", "Applies elasticity models to balance volume and margin", "Considers competitive markdown positioning", "Optimizes for revenue or margin objectives"]
+          },
+          {
+            "agent": "Timing Engine Agent",
+            "responsibilities": ["Determines optimal markdown initiation timing", "Balances early markdown (higher margin, lower urgency) vs. late (lower margin, higher certainty)", "Accounts for remaining selling season and calendar effects", "Creates markdown schedules with multiple price points"]
+          },
+          {
+            "agent": "Performance Tracker Agent",
+            "responsibilities": ["Monitors markdown sell-through vs. predictions", "Calculates markdown effectiveness metrics (salvage rate, margin recovery)", "Identifies underperforming markdowns for intervention", "Provides continuous learning to refine recommendations"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Inventory Liquidation Agent",
+            "responsibilities": ["Evaluates alternative disposition channels (outlets, liquidators, donations)", "Calculates optimal channel allocation", "Manages end-of-life inventory strategy"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates markdown opportunity dashboards", "Generates markdown recommendations in merchant workflow tools", "Produces markdown performance reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weekly manual aging reviews vs. daily automated risk identification and recommendations",
+        "accuracyImprovement": "Rules-of-thumb markdown schedules vs. ML-optimized item-specific timing and depth with 30-50% better margin outcomes",
+        "efficiency": "85% reduction in manual markdown planning time, automated execution for 70-80% of markdowns",
+        "businessImpact": "20-40% improvement in markdown margin dollars, 15-25% reduction in inventory liquidation/salvage, 10-15% fewer sellouts",
+        "decisionQuality": "Proactive predictive intervention vs. reactive rules-based markdowns, item-level optimization vs. batch treatment"
+      },
+      "dataSources": [
+        "Inventory positions by SKU, store, and age",
+        "Historical sales velocity and trends",
+        "Prior markdown history and effectiveness",
+        "Product lifecycle and seasonal calendars",
+        "Competitive markdown intelligence",
+        "Cost and margin data",
+        "Store clustering and demand patterns",
+        "Liquidation channel economics"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated aging inventory alerts for top categories; create markdown effectiveness scorecards; pilot ML markdown recommendations on test category with 200-500 SKUs.",
+        "investmentRequired": "Medium - requires inventory data integration, demand forecasting models, markdown optimization algorithms, merchant workflow integration. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for automated aging reports and basic markdown analytics, 6-9 months for ML optimization and automated recommendations",
+        "prerequisites": "Real-time inventory visibility, historical markdown and sales data, defined markdown approval workflows, merchant adoption and change management"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium",
+        "skillsRequired": ["Inventory management", "Pricing analytics", "ML/data science", "Merchandising strategy"],
+        "complianceConsiderations": ["Price advertising accuracy", "Fair pricing practices"],
+        "technologyStack": ["Inventory management systems", "ML platforms", "Optimization engines", "Merchant workflow tools", "Pricing systems"]
+      }
+    },
+    {
+      "id": "space-productivity-analysis",
+      "name": "Space Productivity Analysis",
+      "description": "Sales per square foot analysis, planogram effectiveness measurement, and store clustering to optimize space allocation and layout productivity",
+      "traditionalWorkflow": "Store planning teams manually calculate sales per square foot by department using Excel, dividing total sales by estimated space allocation. They review planogram compliance through physical store walks and photos, documenting findings in spreadsheets. Space productivity analysis is periodic (quarterly or annual) rather than continuous. Store clustering relies on simple demographics and size/format classifications rather than sophisticated performance-based segmentation. The analysis provides limited guidance on how to reallocate space or improve layouts.",
+      "agenticWorkflow": "A Space Intelligence Orchestrator coordinates comprehensive space productivity analytics across all stores and categories. A Productivity Metrics Agent calculates granular space performance (sales/SF, margin/SF, units/SF) by category, subcategory, and fixture using precise space measurements and transaction data. A Planogram Effectiveness Agent analyzes item placement, adjacencies, and shelf positions against sales outcomes to identify optimal layouts. A Store Clustering Agent segments stores into meaningful clusters based on space productivity profiles, shopper behaviors, and local market characteristics. A Space Reallocation Agent simulates space optimization scenarios and recommends category space adjustments to maximize store-level productivity.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Space Intelligence Orchestrator",
+          "responsibilities": ["Coordinates space productivity analytics across store portfolio", "Integrates space data with sales, traffic, and customer insights", "Prioritizes space optimization opportunities by ROI", "Manages space planning workflows and recommendations"]
+        },
+        "superAgents": [
+          {
+            "agent": "Productivity Metrics Agent",
+            "responsibilities": ["Calculates comprehensive space productivity metrics by location and category", "Tracks trends and identifies productivity outliers", "Benchmarks performance across store clusters", "Generates space productivity scorecards"]
+          },
+          {
+            "agent": "Planogram Effectiveness Agent",
+            "responsibilities": ["Analyzes correlation between planogram design and sales outcomes", "Evaluates shelf position effectiveness (eye level, end caps)", "Identifies optimal product adjacencies and cross-merchandising", "Measures planogram compliance impact on sales"]
+          },
+          {
+            "agent": "Store Clustering Agent",
+            "responsibilities": ["Segments stores using ML clustering algorithms", "Creates productivity-based typologies beyond demographics", "Identifies prototypical stores for format development", "Enables cluster-specific space planning"]
+          },
+          {
+            "agent": "Space Reallocation Agent",
+            "responsibilities": ["Simulates space reallocation scenarios", "Recommends category space increases/decreases by store", "Optimizes space to maximize store-level objectives", "Estimates financial impact of space changes"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Traffic & Shopper Agent",
+            "responsibilities": ["Integrates foot traffic and path analysis", "Links space productivity to shopper flow patterns", "Identifies high/low traffic zones"]
+          },
+          {
+            "agent": "Market Context Agent",
+            "responsibilities": ["Incorporates local market demographics and competition", "Provides market-specific space benchmarks", "Identifies market-driven space opportunities"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates heat maps of space productivity", "Generates store layout optimization visualizations", "Produces space planning recommendation reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Quarterly manual space reviews vs. continuous real-time space productivity monitoring",
+        "accuracyImprovement": "Rough department-level estimates vs. precise fixture/category-level metrics with 50-70% better accuracy",
+        "efficiency": "90% reduction in space analysis time, 60% faster space planning cycles",
+        "businessImpact": "3-8% sales lift from optimized space allocation, 10-20% improvement in category space ROI, better new store format decisions",
+        "decisionQuality": "Data-driven space allocation vs. intuition-based, sophisticated store clustering vs. simple size/demo groupings"
+      },
+      "dataSources": [
+        "Store layout and space allocation data (CAD, planograms)",
+        "Point-of-sale data by category and store",
+        "Planogram compliance audit data",
+        "Store traffic and shopper path data",
+        "Store attributes and clustering variables",
+        "Category sales and margin by fixture",
+        "Market demographics and competitive data",
+        "Inventory density by category and store"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Digitize space allocation data for top 50-100 stores; implement automated sales per square foot dashboards by category and store; establish quarterly space productivity review process.",
+        "investmentRequired": "Medium-High - requires space measurement technology, planogram digitization, analytics platform, store clustering models. Typical investment $200K-$500K.",
+        "timeToValue": "4-6 months for space productivity dashboards and store clustering, 9-12 months for planogram effectiveness analysis and space optimization engine",
+        "prerequisites": "Digitized space allocation data, accurate category sales attribution, planogram management system, store layout data (CAD or equivalent)"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Space planning", "Store operations", "Data science", "Retail analytics", "Store design"],
+        "complianceConsiderations": ["ADA accessibility requirements", "Safety and fire code compliance"],
+        "technologyStack": ["Planogram software", "Space planning tools", "ML platforms for clustering", "BI dashboards", "Computer vision for space measurement"]
+      }
+    },
+    {
+      "id": "new-product-performance-tracking",
+      "name": "New Product Performance Tracking",
+      "description": "Launch velocity analysis, comparison to forecast, and cannibalization impact assessment to optimize new product introductions and portfolio management",
+      "traditionalWorkflow": "Product managers manually track new item sales in Excel, comparing weekly sales to pre-launch forecasts using simple variance calculations. They create PowerPoint reports with launch performance summaries weeks after introduction. Analysis of cannibalization on existing products is anecdotal or ignored entirely. Success criteria are vague, and post-launch learning is captured inconsistently. The lack of systematic tracking makes it difficult to improve forecasting or make rapid course corrections on underperforming launches.",
+      "agenticWorkflow": "A Launch Analytics Orchestrator coordinates comprehensive new product performance tracking from day one. A Velocity Tracker Agent monitors launch sales trajectory, comparing actual performance to forecast and historical launch benchmarks with daily granularity. A Cannibalization Analyst Agent identifies sales displacement on existing SKUs using market basket shifts and control group analysis. A Forecast Calibration Agent continuously compares predictions to actuals, identifies forecast error patterns, and improves future launch forecasts. An Intervention Engine recommends rapid corrective actions (additional promotion, placement changes, expanded distribution) for underperforming launches.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Launch Analytics Orchestrator",
+          "responsibilities": ["Coordinates tracking across all new product launches", "Prioritizes launches for deep-dive analysis based on strategic importance", "Manages automated launch performance reporting", "Integrates launch insights with innovation pipeline"]
+        },
+        "superAgents": [
+          {
+            "agent": "Velocity Tracker Agent",
+            "responsibilities": ["Monitors daily/weekly sales velocity for new products", "Compares actual vs. forecast with statistical alerts", "Benchmarks against historical launch curves", "Identifies acceleration, deceleration, and plateau patterns"]
+          },
+          {
+            "agent": "Cannibalization Analyst Agent",
+            "responsibilities": ["Measures sales displacement on existing portfolio", "Calculates net incremental revenue (new sales minus cannibalization)", "Identifies most-affected SKUs requiring intervention", "Compares cannibalization to pre-launch estimates"]
+          },
+          {
+            "agent": "Forecast Calibration Agent",
+            "responsibilities": ["Tracks forecast accuracy for all new product launches", "Identifies systematic forecast biases and error patterns", "Improves demand planning models using launch learnings", "Provides confidence intervals for future launch forecasts"]
+          },
+          {
+            "agent": "Intervention Engine Agent",
+            "responsibilities": ["Identifies underperforming launches requiring action", "Recommends specific interventions (promotions, distribution, messaging)", "Simulates impact of potential corrective actions", "Triggers automated alerts to cross-functional teams"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Customer Adoption Agent",
+            "responsibilities": ["Analyzes new vs. repeat purchase patterns", "Tracks trial, repeat, and repurchase rates", "Identifies customer segments adopting new products"]
+          },
+          {
+            "agent": "Market Context Agent",
+            "responsibilities": ["Incorporates competitive new product activity", "Tracks market share for new product categories", "Provides external benchmarks for launch performance"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "3-4 weeks post-launch manual analysis vs. daily automated tracking from day one",
+        "accuracyImprovement": "Unclear cannibalization impacts vs. precise measurement of net incrementality and portfolio effects",
+        "efficiency": "85% reduction in launch tracking effort, 100% coverage of launches vs. selective manual tracking",
+        "businessImpact": "20-35% improvement in new product forecast accuracy, 15-25% faster identification and correction of underperforming launches, better innovation portfolio decisions",
+        "decisionQuality": "Rapid data-driven interventions vs. slow reactive responses, systematic learning vs. ad hoc post-mortems"
+      },
+      "dataSources": [
+        "Daily sales data for new products by SKU and location",
+        "New product launch forecasts and plans",
+        "Historical sales for existing products (for cannibalization)",
+        "Market basket and purchase sequence data",
+        "Distribution and placement data",
+        "Promotional support and marketing spend",
+        "Customer trial and repeat purchase data",
+        "Competitive new product intelligence"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Create standardized launch tracking dashboards for all major new products; establish weekly launch review cadence with automated variance alerts; implement cannibalization measurement for top 5-10 strategic launches.",
+        "investmentRequired": "Low-Medium - leverages existing sales data infrastructure, requires launch tracking templates and dashboards, cannibalization analysis methods. Typical investment $75K-$200K.",
+        "timeToValue": "2-3 months for automated launch dashboards and velocity tracking, 4-6 months for cannibalization analysis and forecast calibration",
+        "prerequisites": "New product identification in POS systems, launch forecast documentation, historical launch data for benchmarking, cross-functional launch review process"
+      },
+      "metadata": {
+        "complexity": "Medium",
+        "roiTimeframe": "3-6 months",
+        "integrationEffort": "Low-Medium",
+        "skillsRequired": ["Product management", "Demand planning", "Marketing analytics", "Data analysis"],
+        "complianceConsiderations": ["Product launch timing disclosure (if publicly traded)", "Competitive intelligence ethical boundaries"],
+        "technologyStack": ["BI dashboards", "Demand planning systems", "Market basket analysis tools", "Analytics platforms"]
+      }
+    }
+  ]
+}

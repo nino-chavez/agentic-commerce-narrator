@@ -1,0 +1,755 @@
+{
+  "capability": {
+    "id": "capability-quality-management-system",
+    "name": "Quality Management System",
+    "description": "Comprehensive quality planning, inspection execution, non-conformance management, CAPA workflows, and quality analytics for continuous improvement",
+    "category": "supply-chain-planning",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "functions": [
+      {
+        "id": "func-quality-inspection-planning-execution",
+        "name": "Quality Inspection Planning & Execution",
+        "description": "Risk-based inspection planning with automated sampling plans, mobile inspection apps with AI-assisted defect identification, and real-time results capture",
+        "traditional": {
+          "approach": "Quality inspectors follow paper-based inspection plans with fixed sampling frequencies regardless of supplier performance or material criticality. Sampling plans are manually calculated using AQL tables and adjusted infrequently. Inspectors record results on paper forms or clipboards, which are later transcribed into quality management systems. Defect identification relies entirely on inspector expertise and judgment. Photos of defects are taken with cameras and uploaded separately. Inspection results are available only after data entry is complete, delaying response to quality issues.",
+          "limitations": [
+            "Fixed inspection frequencies waste resources on low-risk suppliers while under-sampling high-risk ones",
+            "Manual sampling calculations are time-consuming and error-prone",
+            "Paper-based inspection creates data entry delays of 2-8 hours",
+            "Inconsistent defect identification depends on individual inspector expertise",
+            "Photos and notes are not linked directly to inspection records"
+          ],
+          "tooling": ["Paper inspection forms", "AQL tables", "Clipboards", "Cameras", "Manual QMS data entry", "Excel sampling plans"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates intelligent inspection planning and mobile-enabled execution. Risk assessment agents analyze supplier performance, material criticality, and defect history to dynamically adjust inspection frequencies and sampling intensities. Sampling agents automatically calculate optimal sample sizes using statistical methods and generate mobile-ready inspection checklists. Mobile execution agents provide inspectors with tablet/smartphone apps featuring guided workflows, AI-assisted defect identification using computer vision, and integrated photo capture. Real-time data agents immediately upload results to QMS, triggering automated containment actions for failures and updating supplier scorecards.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates risk-based inspection planning, automated sampling, mobile execution, AI-assisted defect detection, and real-time results processing"
+            },
+            "superAgents": [
+              {
+                "name": "Risk Assessment Agent",
+                "role": "Analyzes supplier quality history, material criticality, and defect patterns to dynamically adjust inspection frequencies and sampling intensity"
+              },
+              {
+                "name": "Sampling Plan Agent",
+                "role": "Automatically calculates optimal sample sizes using AQL and statistical methods, generates inspection checklists, and adapts plans based on results"
+              },
+              {
+                "name": "Mobile Execution Agent",
+                "role": "Provides inspectors with mobile apps featuring guided workflows, digital checklists, barcode scanning, and integrated photo/video capture"
+              },
+              {
+                "name": "AI Vision Agent",
+                "role": "Assists defect identification using computer vision to detect visual defects (scratches, dents, color variations), improving consistency and speed"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Real-Time Data Agent",
+                "role": "Immediately uploads inspection results to QMS, triggers containment workflows for failures, updates supplier scorecards, and notifies stakeholders"
+              }
+            ]
+          },
+          "benefits": [
+            "Risk-based sampling reduces inspection hours by 30-40% while improving defect detection",
+            "Mobile execution eliminates 2-8 hour data entry delay with real-time results",
+            "AI-assisted defect identification improves consistency and reduces inspector training time by 50%",
+            "Automated sampling calculations reduce planning time from 30 minutes to <2 minutes",
+            "Immediate containment of defective materials prevents downstream quality issues"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of AI-identified defects for confirmation before rejection decisions",
+              "reason": "Quality inspectors should validate AI-detected defects and make final accept/reject decisions based on specifications and experience"
+            },
+            {
+              "gate": "Approval of inspection plan changes for critical materials or suppliers",
+              "reason": "Quality managers should approve significant changes to inspection frequency or sampling intensity based on AI risk assessments"
+            },
+            {
+              "gate": "Disposition of non-conforming materials (reject, use-as-is, rework)",
+              "reason": "Quality engineers must determine appropriate disposition for failed inspections considering impact, alternatives, and supplier relationships"
+            }
+          ],
+          "dataSources": [
+            "Supplier quality history and defect trends",
+            "Material criticality and risk classifications",
+            "Incoming shipment notifications and quantities",
+            "Quality specifications and acceptance criteria",
+            "Historical inspection results and sampling data",
+            "Defect images for AI training and comparison",
+            "Production impact data for failed materials"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires historical inspection data, supplier performance records, and material specifications. Defect image library needed to train AI vision models.",
+            "integrationComplexity": "Medium - requires mobile device deployment, QMS integration, and computer vision AI for defect detection. Barcode scanning integration improves efficiency.",
+            "changeManagement": "Inspectors adapt to mobile devices and AI-assisted workflows. Quality engineers shift from fixed plans to dynamic risk-based planning. Requires initial AI model training period."
+          },
+          "implementation": {
+            "phase1": "Deploy mobile inspection apps with digital checklists and real-time data upload for pilot materials/suppliers",
+            "phase2": "Add risk-based sampling and automated plan generation for high-volume inspection activities",
+            "phase3": "Implement AI-assisted defect identification using computer vision for visual quality attributes"
+          },
+          "roi": {
+            "timeToValue": "2-3 months for mobile execution, 5-7 months for AI vision",
+            "keyMetrics": [
+              "Inspection hour reduction: 30-40% through risk-based sampling",
+              "Data entry delay elimination: 2-8 hours → real-time",
+              "Defect identification consistency: 50% improvement with AI",
+              "Sampling plan time: 30 min → <2 min",
+              "Downstream quality issues: 60-70% reduction"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "manufacturing", "automotive", "healthcare"],
+          "complianceImpact": "medium",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-non-conformance-management-ncr",
+        "name": "Non-Conformance Management (NCR)",
+        "description": "Automated defect logging, root cause analysis workflows, containment action tracking, and quality issue resolution management",
+        "traditional": {
+          "approach": "Non-conformances are documented manually on paper NCR forms or basic electronic forms, describing the defect, quantity affected, and immediate containment actions. NCRs are routed through email for review by quality engineers and managers. Root cause analysis is performed manually through 5-Why or Fishbone exercises during meetings with stakeholders. Containment actions are tracked in spreadsheets with manual follow-up on completion status. Disposition decisions (scrap, rework, use-as-is) require multiple approvals via email. NCR closure requires manual verification that corrective actions are complete.",
+          "limitations": [
+            "Manual NCR creation and routing delays response by 1-2 days",
+            "Root cause analysis is inconsistent and often superficial",
+            "Containment action tracking relies on manual follow-up",
+            "NCR status visibility is limited, frustrating stakeholders",
+            "Difficult to identify recurring issues across multiple NCRs"
+          ],
+          "tooling": ["Paper NCR forms", "Email routing", "Excel tracking sheets", "Manual root cause meetings", "Spreadsheet-based 5-Why"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates end-to-end NCR management from defect detection through closure. NCR creation agents auto-populate defect details from inspection results, production reports, or customer complaints with integrated photos and measurements. Root cause agents guide structured RCA workflows (5-Why, Fishbone, Fault Tree) with AI-suggested potential causes based on similar historical issues. Containment agents automatically assign and track containment actions (sort, quarantine, supplier notification) with deadline monitoring and escalation. Disposition agents route materials to appropriate decision-makers based on rules and provide impact analysis. Analytics agents identify recurring defect patterns across suppliers, parts, and processes to prioritize systemic improvements.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates NCR creation, root cause analysis, containment tracking, disposition workflow, and pattern analysis for continuous improvement"
+            },
+            "superAgents": [
+              {
+                "name": "NCR Creation Agent",
+                "role": "Auto-populates NCR details from inspection results or production reports, captures photos and measurements, assigns to quality engineers based on expertise"
+              },
+              {
+                "name": "Root Cause Analysis Agent",
+                "role": "Guides structured RCA workflows, suggests potential causes based on similar historical issues, validates completeness of analysis before closure"
+              },
+              {
+                "name": "Containment Action Agent",
+                "role": "Automatically assigns containment tasks (sort, quarantine, supplier notification), tracks completion, monitors deadlines, and escalates overdue items"
+              },
+              {
+                "name": "Disposition Workflow Agent",
+                "role": "Routes materials for disposition decisions based on rules, provides cost/risk impact analysis, tracks approvals, and updates inventory systems"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Pattern Recognition Agent",
+                "role": "Identifies recurring defects across suppliers, parts, and processes using machine learning to prioritize systemic improvement opportunities"
+              }
+            ]
+          },
+          "benefits": [
+            "Automated NCR creation eliminates 1-2 day creation and routing delays",
+            "AI-guided root cause analysis improves quality and completeness by 60-70%",
+            "Containment action completion rates improve from 70% to 95%+ with automated tracking",
+            "Disposition decision time reduces by 50% with impact analysis and automated routing",
+            "Pattern recognition identifies systemic issues 4-6 weeks earlier than manual review"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review and validation of root cause analysis before CAPA creation",
+              "reason": "Quality engineers must verify that RCA has identified the true root cause rather than symptoms before committing to corrective actions"
+            },
+            {
+              "gate": "Disposition decisions for non-conforming materials (scrap, use-as-is, rework)",
+              "reason": "Quality engineers or managers must make material disposition decisions considering specifications, risk, cost, and customer impact"
+            },
+            {
+              "gate": "Closure approval after verifying containment and corrective actions are complete",
+              "reason": "Quality managers should approve NCR closure after confirming that all actions have been completed effectively and issue is resolved"
+            }
+          ],
+          "dataSources": [
+            "Inspection results and quality test data",
+            "Production defect and scrap reports",
+            "Customer complaints and return authorizations",
+            "Historical NCR data and root cause patterns",
+            "Material specifications and acceptance criteria",
+            "Inventory and work-in-process status",
+            "Cost data for disposition impact analysis"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires historical NCR data with root causes for AI pattern recognition. Integration with inspection, production, and customer service systems for automated NCR creation.",
+            "integrationComplexity": "Medium - requires QMS workflow engine, integration with inspection/production systems, and AI for pattern recognition. Mobile access improves field NCR creation.",
+            "changeManagement": "Quality staff adapt to structured digital workflows vs. ad-hoc paper processes. Production and procurement teams must respond promptly to automated containment notifications."
+          },
+          "implementation": {
+            "phase1": "Implement digital NCR creation and workflow management with automated routing and tracking",
+            "phase2": "Add AI-guided root cause analysis and automated containment action management",
+            "phase3": "Deploy pattern recognition for recurring defect identification and predictive quality analytics"
+          },
+          "roi": {
+            "timeToValue": "2-3 months for workflow automation, 5-7 months for AI capabilities",
+            "keyMetrics": [
+              "NCR creation and routing delay: 1-2 days → real-time",
+              "RCA quality improvement: 60-70%",
+              "Containment completion rate: 70% → 95%+",
+              "Disposition decision time: 50% reduction",
+              "Systemic issue identification: 4-6 weeks earlier"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium",
+          "industryRelevance": ["grocery", "manufacturing", "automotive", "healthcare"],
+          "complianceImpact": "medium",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-corrective-preventive-actions-capa",
+        "name": "Corrective & Preventive Actions (CAPA)",
+        "description": "Automated CAPA workflow management, effectiveness verification through data analysis, and trend-based preventive action identification",
+        "traditional": {
+          "approach": "CAPA requests are manually created in response to quality failures, audits, or regulatory requirements. Action plans are documented in spreadsheets or basic workflow systems with assigned owners and due dates. Progress tracking relies on manual status updates during periodic review meetings. Effectiveness verification is subjective, based on qualitative assessments rather than data analysis. Preventive actions are reactive, initiated only after problems occur. CAPA completion rates are low (50-60%) due to competing priorities and lack of accountability. Regulatory compliance requires manual compilation of CAPA records for audits.",
+          "limitations": [
+            "Manual CAPA creation and tracking leads to low completion rates (50-60%)",
+            "Effectiveness verification is subjective without data-driven validation",
+            "Preventive actions are reactive rather than proactive and predictive",
+            "Limited visibility into CAPA status creates accountability gaps",
+            "Difficult to link CAPA outcomes to quality performance improvements"
+          ],
+          "tooling": ["Excel CAPA trackers", "Email-based updates", "Manual effectiveness assessments", "Periodic review meetings", "Paper documentation for audits"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates systematic CAPA management with predictive analytics. CAPA initiation agents automatically generate requests from NCRs, audit findings, or quality trend analysis with pre-populated background data. Action planning agents guide structured root cause analysis and action development, suggesting proven solutions from historical CAPA database. Workflow agents manage action assignments, deadline tracking, automated reminders, and escalation of overdue items. Effectiveness agents verify CAPA success through before/after data analysis of quality metrics (defect rates, customer complaints). Preventive analytics agents identify emerging quality trends and proactively suggest preventive actions before failures occur.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates CAPA initiation, action planning, workflow management, data-driven effectiveness verification, and predictive preventive action identification"
+            },
+            "superAgents": [
+              {
+                "name": "CAPA Initiation Agent",
+                "role": "Automatically generates CAPA requests from NCRs, audits, or quality trends with pre-populated context and assigns to appropriate quality engineers"
+              },
+              {
+                "name": "Action Planning Agent",
+                "role": "Guides root cause analysis and corrective action development, suggests proven solutions from historical CAPA database, validates action adequacy"
+              },
+              {
+                "name": "Workflow Management Agent",
+                "role": "Manages action assignments, tracks deadlines, sends automated reminders, escalates overdue items, and provides real-time status dashboards"
+              },
+              {
+                "name": "Effectiveness Verification Agent",
+                "role": "Validates CAPA effectiveness through before/after analysis of quality metrics (defect rates, customer complaints, process capability)"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Preventive Analytics Agent",
+                "role": "Identifies emerging quality trends and proactively suggests preventive actions before failures occur using predictive analytics"
+              }
+            ]
+          },
+          "benefits": [
+            "CAPA completion rates improve from 50-60% to 90-95% with automated tracking and escalation",
+            "Data-driven effectiveness verification ensures CAPA actions actually resolve issues",
+            "Preventive analytics identify opportunities 4-8 weeks before traditional reactive approach",
+            "CAPA cycle time reduces by 40-50% with workflow automation",
+            "Regulatory audit preparation time reduces by 70% with automated documentation"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review and approval of root cause analysis and proposed corrective actions",
+              "reason": "Quality engineers and managers must validate that proposed actions will effectively address root causes before implementation"
+            },
+            {
+              "gate": "Verification of CAPA effectiveness before closure",
+              "reason": "Quality managers should review data analysis and confirm that actions have successfully resolved the issue before closing CAPA"
+            },
+            {
+              "gate": "Approval of preventive actions identified by AI analytics",
+              "reason": "Quality leadership should review AI-recommended preventive actions and prioritize implementation based on risk and resource availability"
+            }
+          ],
+          "dataSources": [
+            "Non-conformance reports and quality failures",
+            "Audit findings and regulatory observations",
+            "Historical CAPA records with action outcomes",
+            "Quality metrics (defect rates, PPM, customer complaints)",
+            "Process capability and control chart data",
+            "Root cause analysis results and patterns",
+            "Supplier quality performance trends"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires historical CAPA data with outcomes for AI recommendations. Quality metric data needed for effectiveness verification. Integration with NCR and audit systems for automated initiation.",
+            "integrationComplexity": "Medium - requires workflow engine, QMS integration, and statistical analysis capabilities for effectiveness verification. API connections to quality data sources.",
+            "changeManagement": "Quality staff adapt to structured CAPA workflows with automated accountability. Operations teams must execute corrective actions promptly. Management embraces data-driven effectiveness verification."
+          },
+          "implementation": {
+            "phase1": "Implement digital CAPA workflow with automated tracking, reminders, and status visibility",
+            "phase2": "Add AI-powered action recommendations based on historical CAPA database and effectiveness verification through data analysis",
+            "phase3": "Deploy predictive analytics for proactive preventive action identification and automated regulatory compliance documentation"
+          },
+          "roi": {
+            "timeToValue": "3-4 months for workflow automation, 6-9 months for predictive capabilities",
+            "keyMetrics": [
+              "CAPA completion rate: 50-60% → 90-95%",
+              "Effectiveness verification: subjective → data-driven",
+              "Preventive action timing: 4-8 weeks earlier",
+              "CAPA cycle time: 40-50% reduction",
+              "Audit preparation time: 70% reduction"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "manufacturing", "healthcare", "automotive"],
+          "complianceImpact": "high",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-quality-audit-management",
+        "name": "Quality Audit Management",
+        "description": "Automated audit scheduling, digital execution with mobile apps, finding tracking with corrective actions, and audit program analytics",
+        "traditional": {
+          "approach": "Quality audits are scheduled manually based on annual calendars, with limited risk-based prioritization. Audit checklists are printed on paper, and auditors manually record findings during site visits. Audit reports are typed in Word or PowerPoint after the audit, causing delays of 1-2 weeks. Findings are tracked in Excel spreadsheets with manual follow-up on corrective actions. Audit effectiveness is assessed subjectively based on auditor experience. No systematic analysis of audit trends or recurring findings across facilities or suppliers.",
+          "limitations": [
+            "Calendar-based scheduling misses emerging risks between scheduled audits",
+            "Paper-based execution delays audit reports by 1-2 weeks",
+            "Manual finding tracking has low closure rates (60-70%)",
+            "Limited visibility into audit status frustrates audited parties",
+            "No systematic identification of recurring findings across locations"
+          ],
+          "tooling": ["Excel audit schedules", "Paper checklists", "Word/PowerPoint audit reports", "Excel finding trackers", "Email follow-up"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive audit program management. Scheduling agents use risk-based algorithms to prioritize audits based on performance trends, incident history, and regulatory requirements. Mobile execution agents provide auditors with tablet/smartphone apps featuring digital checklists, photo/video capture, and real-time finding documentation. Report generation agents automatically compile findings into standardized reports with supporting evidence immediately after audits. Finding management agents track corrective actions with automated reminders, escalation, and effectiveness verification. Analytics agents identify recurring findings across locations and generate insights for systemic improvements.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates risk-based audit scheduling, mobile execution, automated report generation, finding tracking, and audit program analytics"
+            },
+            "superAgents": [
+              {
+                "name": "Audit Scheduling Agent",
+                "role": "Uses risk-based algorithms to prioritize audits based on quality trends, incidents, and regulatory requirements; manages audit calendar and resource allocation"
+              },
+              {
+                "name": "Mobile Execution Agent",
+                "role": "Provides auditors with digital checklists, photo/video capture, offline capability, and real-time finding documentation during site visits"
+              },
+              {
+                "name": "Report Generation Agent",
+                "role": "Automatically compiles audit findings into standardized reports with ratings, evidence, and recommendations immediately after audit completion"
+              },
+              {
+                "name": "Finding Management Agent",
+                "role": "Tracks corrective actions, sends automated reminders, escalates overdue items, verifies effectiveness, and manages finding closure workflow"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Audit Analytics Agent",
+                "role": "Identifies recurring findings across locations, analyzes audit trends, measures program effectiveness, and recommends systemic improvements"
+              }
+            ]
+          },
+          "benefits": [
+            "Risk-based scheduling focuses audit resources on highest-risk areas",
+            "Mobile execution eliminates 1-2 week report delay with immediate digital reports",
+            "Finding closure rates improve from 60-70% to 95%+ with automated tracking",
+            "Audit efficiency improves by 30-40% with digital checklists and mobile tools",
+            "Systemic issue identification across locations drives enterprise-wide improvements"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review and validation of audit findings before report finalization",
+              "reason": "Lead auditors should review findings for accuracy, classify severity appropriately, and validate recommendations before issuing reports"
+            },
+            {
+              "gate": "Approval of corrective action plans for major audit findings",
+              "reason": "Quality managers must approve proposed corrective actions for significant findings to ensure adequacy and resource allocation"
+            },
+            {
+              "gate": "Closure approval after verifying corrective actions are complete and effective",
+              "reason": "Audit managers should approve finding closure after confirming that corrective actions have been completed and verified effective"
+            }
+          ],
+          "dataSources": [
+            "Quality performance metrics and defect trends",
+            "Incident and non-conformance history",
+            "Regulatory inspection observations",
+            "Audit schedules and historical audit results",
+            "Finding corrective action status and outcomes",
+            "Facility and supplier risk ratings",
+            "Industry standards and audit protocols"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires historical audit data, quality performance metrics for risk-based scheduling. Digital checklist library and audit protocols needed for mobile execution.",
+            "integrationComplexity": "Medium - requires mobile device deployment, audit management system, and integration with quality data sources for risk assessment. Photo/video storage and management.",
+            "changeManagement": "Auditors adapt to mobile devices and digital workflows. Audited facilities/suppliers adjust to faster audit cycles and immediate finding communication. Quality leadership embraces risk-based prioritization."
+          },
+          "implementation": {
+            "phase1": "Deploy mobile audit execution with digital checklists and automated report generation for internal audits",
+            "phase2": "Add risk-based scheduling algorithms and automated finding tracking with corrective action workflows",
+            "phase3": "Implement audit analytics for recurring finding identification and expand to supplier audit programs"
+          },
+          "roi": {
+            "timeToValue": "2-3 months for mobile execution, 5-7 months for risk-based scheduling",
+            "keyMetrics": [
+              "Report generation delay: 1-2 weeks → immediate",
+              "Finding closure rate: 60-70% → 95%+",
+              "Audit efficiency: 30-40% improvement",
+              "Risk-based prioritization: focuses resources on highest-risk areas"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium",
+          "industryRelevance": ["grocery", "manufacturing", "healthcare", "automotive"],
+          "complianceImpact": "high",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-quality-analytics-trending",
+        "name": "Quality Analytics & Trending",
+        "description": "Real-time quality dashboards, defect pattern recognition using machine learning, predictive quality alerts, and Pareto analysis for improvement prioritization",
+        "traditional": {
+          "approach": "Quality metrics are manually compiled from inspection results, NCRs, and production reports into monthly Excel dashboards or PowerPoint presentations. Statistical analysis is performed manually using spreadsheets for basic control charts and Pareto diagrams. Trends are identified through visual inspection of historical charts, often missing subtle patterns. Quality reviews happen monthly or quarterly, providing lagging indicators that prevent timely intervention. Defect pattern analysis is ad-hoc and limited to obvious recurring issues. No predictive capability to anticipate quality degradation before defects occur.",
+          "limitations": [
+            "Monthly reporting lag prevents timely quality intervention",
+            "Manual data compilation is time-consuming (20-30 hours/month)",
+            "Limited statistical analysis misses subtle quality trends",
+            "Reactive identification of issues after quality has degraded",
+            "Difficult to prioritize improvement efforts across multiple issues"
+          ],
+          "tooling": ["Excel dashboards", "Manual control charts", "PowerPoint quality reviews", "Basic Pareto charts", "Ad-hoc SQL queries"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive quality analytics with real-time monitoring and predictive capabilities. Data collection agents continuously aggregate quality data from inspection systems, NCRs, production reports, and customer complaints. Analytics agents calculate real-time quality metrics (PPM, DPMO, FPY, Cpk) with statistical process control and automated out-of-control detection. Pattern recognition agents use machine learning to identify subtle defect correlations, supplier-specific trends, and seasonal variations. Predictive agents forecast quality degradation 2-4 weeks in advance based on leading indicators. Visualization agents generate dynamic dashboards with drill-down capability and Pareto analysis to prioritize improvement initiatives.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates real-time quality data aggregation, statistical analysis, pattern recognition, predictive alerts, and interactive visualization"
+            },
+            "superAgents": [
+              {
+                "name": "Data Aggregation Agent",
+                "role": "Continuously collects quality data from inspection, NCR, production, and customer complaint systems; normalizes and validates data quality"
+              },
+              {
+                "name": "Statistical Analysis Agent",
+                "role": "Calculates quality metrics in real-time, performs statistical process control (SPC), detects out-of-control conditions, and generates control charts"
+              },
+              {
+                "name": "Pattern Recognition Agent",
+                "role": "Uses machine learning to identify defect correlations, supplier-specific trends, seasonal patterns, and root cause relationships"
+              },
+              {
+                "name": "Predictive Quality Agent",
+                "role": "Forecasts quality degradation 2-4 weeks in advance using leading indicators (supplier performance changes, process shifts, environmental factors)"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Visualization Agent",
+                "role": "Generates dynamic dashboards with drill-down capability, Pareto analysis, and prioritized improvement recommendations for different user roles"
+              }
+            ]
+          },
+          "benefits": [
+            "Real-time quality monitoring replaces monthly lagging reports",
+            "Automated data collection eliminates 20-30 hours of manual compilation per month",
+            "Machine learning pattern recognition identifies 40-50% more quality trends than manual analysis",
+            "Predictive alerts provide 2-4 weeks advance warning of quality degradation",
+            "Pareto analysis focuses improvement efforts on highest-impact opportunities"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of predictive quality alerts before preventive actions",
+              "reason": "Quality engineers should validate AI-predicted quality risks and determine appropriate preventive actions based on business context"
+            },
+            {
+              "gate": "Approval of improvement priorities based on Pareto analysis",
+              "reason": "Quality leadership must approve resource allocation for improvement initiatives recommended by AI-driven prioritization"
+            }
+          ],
+          "dataSources": [
+            "Inspection results from receiving and in-process quality checks",
+            "Non-conformance reports and CAPA records",
+            "Production defect, scrap, and rework data",
+            "Customer complaints and warranty claims",
+            "Supplier quality performance metrics",
+            "Process parameters and control chart data",
+            "Environmental conditions (temperature, humidity) affecting quality"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires integrated quality data from inspection, NCR, production, and customer service systems. Historical data (12+ months) enables pattern recognition and predictive modeling.",
+            "integrationComplexity": "Medium-High - requires API connections to quality data sources, statistical analysis engine, and machine learning platform for pattern recognition. Real-time data pipelines needed.",
+            "changeManagement": "Quality teams shift from reactive monthly reviews to proactive daily monitoring. Leadership adapts to predictive alerts and AI-recommended priorities. Training needed on interpreting advanced analytics."
+          },
+          "implementation": {
+            "phase1": "Implement automated data collection and real-time quality dashboards with basic metrics and SPC",
+            "phase2": "Add machine learning for pattern recognition and automated Pareto analysis for improvement prioritization",
+            "phase3": "Deploy predictive quality alerts and advanced correlation analysis for root cause identification"
+          },
+          "roi": {
+            "timeToValue": "3-4 months for dashboards, 6-9 months for predictive capabilities",
+            "keyMetrics": [
+              "Reporting cycle: monthly → real-time",
+              "Data compilation time: 20-30 hours → automated",
+              "Quality trend identification: 40-50% increase",
+              "Predictive lead time: 2-4 weeks advance warning",
+              "Improvement focus: data-driven prioritization"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "manufacturing", "automotive", "healthcare"],
+          "complianceImpact": "low",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-supplier-quality-management",
+        "name": "Supplier Quality Management",
+        "description": "Supplier quality audits, certification tracking, quality agreement management, and collaborative quality improvement programs",
+        "traditional": {
+          "approach": "Supplier quality audits are scheduled manually based on new supplier qualification or periodic re-certification. Audit teams travel to supplier facilities with paper checklists and manually document observations. Audit reports are compiled after site visits and shared via email. Supplier certifications (ISO 9001, food safety) are tracked in spreadsheets with manual renewal monitoring. Quality agreements are static documents stored in shared drives, rarely reviewed or updated. Supplier quality improvement is ad-hoc, typically reactive to quality failures rather than proactive and collaborative.",
+          "limitations": [
+            "Manual audit scheduling misses high-risk suppliers between periodic cycles",
+            "Paper-based audits delay reports and corrective action tracking",
+            "Certification expiration monitoring relies on manual calendar checks",
+            "Quality agreements become outdated without systematic review",
+            "Limited collaboration on quality improvement with supplier partners"
+          ],
+          "tooling": ["Excel audit schedules", "Paper audit checklists", "Email report distribution", "Spreadsheet certification tracking", "Shared drive document storage"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive supplier quality management. Risk assessment agents prioritize supplier audits based on performance trends, commodity criticality, and certification status. Audit management agents coordinate scheduling, provide mobile digital checklists, and generate automated reports with finding tracking. Certification agents monitor expiration dates, automatically request renewal documentation, and alert buyers to certification gaps. Quality agreement agents manage contract lifecycle including periodic reviews, performance-based updates, and change notifications. Collaboration agents facilitate joint quality improvement projects with suppliers, tracking initiatives and measuring outcomes.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates risk-based supplier audit prioritization, certification monitoring, quality agreement management, and collaborative improvement programs"
+            },
+            "superAgents": [
+              {
+                "name": "Supplier Audit Agent",
+                "role": "Prioritizes audits using risk-based scoring, coordinates scheduling, provides mobile audit execution, generates reports, and tracks corrective actions"
+              },
+              {
+                "name": "Certification Management Agent",
+                "role": "Tracks supplier certifications (ISO, food safety, industry-specific), monitors expiration dates, requests renewals, and alerts to gaps or lapses"
+              },
+              {
+                "name": "Quality Agreement Agent",
+                "role": "Manages quality agreement lifecycle including creation, periodic review, performance-based updates, supplier acknowledgment, and version control"
+              },
+              {
+                "name": "Collaboration Agent",
+                "role": "Facilitates joint quality improvement projects, tracks initiative progress, measures outcomes, and shares best practices across supplier base"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Risk Scoring Agent",
+                "role": "Calculates dynamic supplier quality risk scores based on performance, audit findings, certification status, and commodity criticality"
+              }
+            ]
+          },
+          "benefits": [
+            "Risk-based audit prioritization focuses resources on highest-risk suppliers",
+            "Automated certification monitoring prevents lapses that could disrupt supply",
+            "Digital audit execution improves efficiency by 30-40% and accelerates corrective actions",
+            "Quality agreement management ensures terms remain current and performance-aligned",
+            "Collaborative improvement programs drive 20-30% quality improvement at key suppliers"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review and approval of supplier audit plans and findings",
+              "reason": "Quality managers should approve audit scope for strategic suppliers and review major findings before issuing formal audit reports"
+            },
+            {
+              "gate": "Decision to approve suppliers with certification gaps or audit findings",
+              "reason": "Category managers must determine whether to continue sourcing from suppliers with quality issues based on risk assessment and alternatives"
+            },
+            {
+              "gate": "Approval of quality improvement project investments and resource allocation",
+              "reason": "Procurement leadership should approve investments in supplier development programs considering ROI and strategic supplier relationships"
+            }
+          ],
+          "dataSources": [
+            "Supplier quality performance metrics (PPM, OTD, responsiveness)",
+            "Audit schedules, reports, and finding status",
+            "Supplier certification documents and expiration dates",
+            "Quality agreements and contract terms",
+            "Commodity criticality and risk classifications",
+            "Supplier quality improvement project outcomes",
+            "Industry certification databases and requirements"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires supplier quality data, audit history, certification repository, and quality agreements. Risk scoring benefits from integrated performance data across quality, delivery, and financial dimensions.",
+            "integrationComplexity": "Medium - requires supplier management system integration, audit management platform, document management for certifications/agreements, and supplier portal for collaboration.",
+            "changeManagement": "Quality teams adopt risk-based supplier management vs. calendar-based approaches. Suppliers adapt to digital audits, proactive certification renewal, and collaborative improvement culture."
+          },
+          "implementation": {
+            "phase1": "Implement supplier audit management with digital execution and certification expiration tracking",
+            "phase2": "Add risk-based audit prioritization, quality agreement lifecycle management, and supplier scorecarding",
+            "phase3": "Deploy collaborative improvement programs, supplier quality portals, and predictive risk assessment"
+          },
+          "roi": {
+            "timeToValue": "3-5 months for audit and certification management, 9-12 months for collaborative programs",
+            "keyMetrics": [
+              "Audit efficiency: 30-40% improvement with digital execution",
+              "Certification lapse prevention: proactive monitoring",
+              "Risk-based prioritization: focuses on highest-risk suppliers",
+              "Supplier quality improvement: 20-30% at key suppliers"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "manufacturing", "automotive", "healthcare"],
+          "complianceImpact": "high",
+          "technologyReadiness": "medium"
+        }
+      },
+      {
+        "id": "func-quality-documentation-records",
+        "name": "Quality Documentation & Records",
+        "description": "Electronic document control, automated version management, digital signatures, audit trails, and regulatory record retention",
+        "traditional": {
+          "approach": "Quality documents (procedures, work instructions, specifications) are stored in shared network drives or document management systems with manual version control. Document changes require physical signatures or email approvals before release. Revision tracking is maintained in spreadsheets or within document headers. Training records documenting employee review of procedures are collected on paper and filed manually. Audit trails for regulatory compliance are reconstructed manually when needed. Document retrieval for audits or investigations is time-consuming, requiring searches across multiple locations and file systems.",
+          "limitations": [
+            "Manual version control leads to confusion about current vs. obsolete documents",
+            "Paper signatures delay document approval and release by days or weeks",
+            "Training records are incomplete with no verification of understanding",
+            "Difficult to prove document access and acknowledgment for regulatory compliance",
+            "Audit preparation requires manual compilation of records from multiple sources"
+          ],
+          "tooling": ["Shared network drives", "Manual version tracking", "Paper signatures", "Excel training logs", "Manual record searches"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive quality document lifecycle management. Document control agents manage creation, review, approval workflow with electronic signatures, version control, and automated obsolete document removal. Access control agents enforce role-based permissions, track document views/downloads, and capture acknowledgment. Training agents automatically assign required reading to employees when procedures change, track completion, and verify understanding through quizzes. Audit trail agents maintain complete revision history, approval chains, and access logs with timestamps for regulatory compliance. Search agents enable rapid retrieval of current and historical documents with advanced filtering and content search.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates document lifecycle management, electronic approvals, access control, training assignment, audit trail maintenance, and regulatory compliance"
+            },
+            "superAgents": [
+              {
+                "name": "Document Control Agent",
+                "role": "Manages document creation, review workflow, electronic signature approvals, version control, and automated distribution/removal of obsolete versions"
+              },
+              {
+                "name": "Access Management Agent",
+                "role": "Enforces role-based permissions, tracks who viewed/downloaded documents, captures acknowledgments, and manages document distribution lists"
+              },
+              {
+                "name": "Training Management Agent",
+                "role": "Automatically assigns required reading when procedures change, tracks completion, verifies understanding through assessments, and maintains training records"
+              },
+              {
+                "name": "Audit Trail Agent",
+                "role": "Maintains complete revision history, approval chains, access logs with timestamps, and generates compliance reports for regulatory audits"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Search & Retrieval Agent",
+                "role": "Enables rapid document retrieval using advanced search, filters by status/version/department, and provides current vs. historical document access"
+              }
+            ]
+          },
+          "benefits": [
+            "Electronic signatures reduce document approval cycle time from days/weeks to hours",
+            "Automated version control eliminates confusion and ensures only current documents are accessible",
+            "Complete audit trails for regulatory compliance reduce audit preparation time by 70-80%",
+            "Training completion tracking improves from 60-70% to 98%+ with automated assignments",
+            "Rapid document retrieval reduces search time from hours to minutes"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review and approval of quality documents before release",
+              "reason": "Quality managers and subject matter experts must review and approve procedure changes to ensure technical accuracy and regulatory compliance"
+            },
+            {
+              "gate": "Assessment of training effectiveness and employee understanding",
+              "reason": "Quality trainers should review quiz results and determine whether additional training or clarification is needed for complex procedures"
+            },
+            {
+              "gate": "Approval of document retirement or archival decisions",
+              "reason": "Quality managers must approve permanent removal of obsolete documents while ensuring regulatory retention requirements are met"
+            }
+          ],
+          "dataSources": [
+            "Quality procedures, work instructions, and specifications",
+            "Document approval workflows and electronic signatures",
+            "User access logs and document view/download history",
+            "Training assignment and completion records",
+            "Assessment results and competency verification",
+            "Regulatory requirements for document retention periods",
+            "Audit observations related to documentation"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires migration of existing quality documents to electronic system with proper categorization. User roles and permissions must be defined. Electronic signature capability needed for regulatory compliance.",
+            "integrationComplexity": "Medium - requires document management system with workflow engine, electronic signature capability, learning management system for training, and integration with HR systems for user roles.",
+            "changeManagement": "Quality staff adapt to structured electronic workflows vs. ad-hoc paper processes. All employees must adopt digital document access and acknowledge reading. Cultural shift to electronic records."
+          },
+          "implementation": {
+            "phase1": "Implement electronic document repository with version control and electronic signature workflow for critical quality documents",
+            "phase2": "Add automated training assignment when documents change, access tracking, and audit trail capabilities",
+            "phase3": "Deploy advanced features: automated compliance reporting, AI-powered content search, and integration with quality event systems"
+          },
+          "roi": {
+            "timeToValue": "3-4 months for basic document control, 6-8 months for training integration",
+            "keyMetrics": [
+              "Approval cycle time: days/weeks → hours",
+              "Version control errors: eliminated",
+              "Audit preparation time: 70-80% reduction",
+              "Training completion: 60-70% → 98%+",
+              "Document search time: hours → minutes"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium",
+          "industryRelevance": ["grocery", "manufacturing", "healthcare", "pharmaceutical"],
+          "complianceImpact": "high",
+          "technologyReadiness": "high"
+        }
+      }
+    ]
+  }
+}

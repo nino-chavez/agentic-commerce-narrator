@@ -1,0 +1,397 @@
+[
+  {
+    "id": "function-influencer-discovery-vetting",
+    "type": "function",
+    "level": 4,
+    "label": "Influencer Discovery & Vetting",
+    "description": "AI-powered influencer identification with audience authenticity analysis and brand alignment scoring improving campaign performance by 40-70% through data-driven partner selection.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager manually searches Instagram for influencers in brand category. 2. Evaluate influencers based primarily on follower count. 3. Limited vetting (review recent posts, check basic engagement). 4. No systematic analysis of audience authenticity or fake followers. 5. Work with same 5-10 influencers repeatedly (limited discovery of new talent).",
+      "constraints": [
+        "Manual search limited to 5-10 influencers (miss micro-influencer opportunities)",
+        "Follower count poor proxy for engagement (fake followers common)",
+        "No audience authenticity verification (bot followers, engagement pods)",
+        "Can't assess brand alignment systematically",
+        "Miss emerging creators with high engagement but lower follower counts",
+        "No database of vetted influencers for future campaigns"
+      ],
+      "metrics": ["Influencer pool: 5-10 recurring", "Vetting: Manual follower count review", "Fake follower detection: None"]
+    },
+    "agentic": {
+      "workflow": "1. Influencer Discovery Agent searches across platforms using: category and content relevance, audience demographics match (age, location, interests), engagement rate thresholds (not just follower count), content quality and production value. 2. Audience Analysis Agent evaluates authenticity: fake follower detection (bot patterns, inactive accounts), engagement quality (comments vs generic reactions), audience demographics and psychographics, follower growth patterns (organic vs purchased). 3. Brand Alignment Agent scores fit: content topics and values alignment, past brand partnerships (competing vs complementary), audience sentiment toward influencer, controversy and risk screening. 4. Performance Prediction estimates campaign ROI based on historical data. 5. Database Agent maintains vetted influencer profiles for future campaigns.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Influencer Discovery Agent", "Audience Analysis Agent", "Brand Alignment Agent"],
+        "utilityAgents": ["Influencer Platform", "Audience Analytics", "Fake Follower Detection", "Risk Screening"]
+      },
+      "dataSources": [
+        "Social media influencer profiles across platforms",
+        "Audience demographics and engagement metrics",
+        "Follower authenticity and bot detection signals",
+        "Content topics and brand safety analysis",
+        "Historical campaign performance data",
+        "Competitor influencer partnerships",
+        "Engagement rate benchmarks by category",
+        "Brand guidelines and values"
+      ],
+      "benefits": [
+        "40-70% campaign performance improvement through data-driven selection",
+        "100-500 vetted influencer pool vs 5-10 manual relationships",
+        "Fake follower detection prevents wasted spend (20-30% savings)",
+        "Micro-influencer discovery yields 3-5x higher engagement rates",
+        "Brand alignment scoring reduces partnership risks",
+        "Audience authenticity ensures real reach and impact"
+      ],
+      "metrics": ["Influencer pool: 100-500 vetted", "Vetting: AI multi-factor analysis", "Fake follower detection: 90-95% accuracy"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement fake follower detection tool", "Build influencer database with engagement metrics"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Influencer marketing platform", "Audience analytics and authenticity tools", "Social media data access", "Brand alignment framework", "Performance database", "Risk screening capability"]
+    },
+    "icon": "user-check",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-campaign-management-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Campaign Management & Tracking",
+    "description": "AI-assisted campaign workflow with content approval and performance tracking reducing campaign management time by 60-80% while ensuring brand compliance and measuring ROI.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager manually creates campaign brief in document. 2. Email brief to 5-10 influencers individually. 3. Influencers send draft content via email or DM for approval. 4. Manually review each piece of content for brand compliance. 5. Track campaign performance by manually checking posts and recording metrics in spreadsheet.",
+      "constraints": [
+        "Manual brief creation doesn't scale beyond 5-10 influencers",
+        "Email-based workflow creates version control issues",
+        "Content approval bottleneck (2-3 days per review cycle)",
+        "Manual performance tracking limited to post-level metrics",
+        "Can't track traffic, conversions, or revenue attribution",
+        "Campaign management takes 15-20 hours per campaign"
+      ],
+      "metrics": ["Management time: 15-20 hrs/campaign", "Influencer capacity: 5-10", "ROI tracking: Post metrics only"]
+    },
+    "agentic": {
+      "workflow": "1. Brief Generation Agent creates campaign briefs using: brand guidelines and messaging, product information and key features, campaign goals and deliverables, legal requirements (FTC disclosure, rights). 2. Collaboration Agent manages influencer workflow: distribute briefs through platform, track deliverable submissions, manage revision requests. 3. Content Approval Agent pre-screens submissions: brand guideline compliance check, FTC disclosure verification, prohibited content detection, sentiment and tone analysis. 4. Performance Tracking Agent monitors: content engagement (likes, comments, shares), traffic driven to brand sites, conversion and revenue attribution, cost per acquisition and ROI. 5. Reporting Agent creates campaign performance dashboards.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Brief Generation Agent", "Content Approval Agent", "Performance Tracking Agent"],
+        "utilityAgents": ["Campaign Management Platform", "Brand Compliance", "Attribution System", "Analytics Dashboard"]
+      },
+      "dataSources": [
+        "Campaign briefs and guidelines",
+        "Product information and assets",
+        "Brand guidelines and compliance rules",
+        "Influencer content submissions",
+        "Social media engagement metrics",
+        "Website traffic and conversion data",
+        "Attribution and tracking links",
+        "Campaign budget and spend data"
+      ],
+      "benefits": [
+        "60-80% reduction in campaign management time (3-5 hrs vs 15-20 hrs)",
+        "Scaled influencer capacity (50-100 vs 5-10 manual)",
+        "Automated brand compliance checking reduces approval time to hours",
+        "Full attribution tracking shows traffic, conversions, and revenue",
+        "Centralized workflow eliminates email/spreadsheet chaos",
+        "Real-time performance dashboards vs manual spreadsheet tracking"
+      ],
+      "metrics": ["Management time: 3-5 hrs/campaign", "Influencer capacity: 50-100", "ROI tracking: Full attribution"]
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Content flagged for brand guideline or legal issues",
+      "policy": "Human review required for content approval before posting"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement campaign management platform", "Automate FTC disclosure checking"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Influencer campaign management platform", "Brand compliance automation", "Content approval workflow", "Attribution tracking and links", "Analytics and reporting", "Legal and FTC guidelines integration"]
+    },
+    "icon": "briefcase",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-affiliate-network-management",
+    "type": "function",
+    "level": 4,
+    "label": "Affiliate Network Management",
+    "description": "AI-powered affiliate recruitment with automated link generation and tiered commission structures scaling affiliate program from 50 to 500+ partners while maintaining program quality.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Affiliate manager manually reviews affiliate applications (20-30 per month). 2. Manually generate tracking links for each approved affiliate. 3. Single flat commission rate for all affiliates (no performance tiers). 4. Send monthly email newsletter to all affiliates with promotions. 5. Limited to 50-100 active affiliates due to manual management constraints.",
+      "constraints": [
+        "Manual application review limits intake to 20-30/month",
+        "Flat commission doesn't reward top performers or incentivize growth",
+        "Manual link generation creates bottleneck and errors",
+        "One-size-fits-all communication doesn't engage diverse affiliate types",
+        "Can't scale beyond 50-100 affiliates with manual management",
+        "No systematic affiliate performance analysis or optimization"
+      ],
+      "metrics": ["Affiliate count: 50-100", "Commission structure: Flat rate", "Recruitment: 20-30/month manual"]
+    },
+    "agentic": {
+      "workflow": "1. Affiliate Recruitment Agent evaluates applications using: website traffic and content quality, audience demographics and relevance, content topics and brand alignment, historical performance indicators (if available). 2. Auto-Approval Agent accepts qualified affiliates instantly based on scoring thresholds. 3. Link Generation Agent creates unique tracking links: product-specific deep links, campaign-specific promotions, custom vanity URLs. 4. Tiered Commission Agent assigns commission levels: bronze tier (5% for new affiliates), silver tier (8% for $10K+ monthly sales), gold tier (12% for $50K+ monthly sales), bonus incentives for growth milestones. 5. Segmentation Agent personalizes affiliate communications by: content type (bloggers vs YouTubers vs social), audience demographics, performance level.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Affiliate Recruitment Agent", "Link Generation Agent", "Tiered Commission Agent"],
+        "utilityAgents": ["Affiliate Platform", "Scoring Engine", "Link Management", "Communication Platform"]
+      },
+      "dataSources": [
+        "Affiliate applications and profiles",
+        "Website traffic and content analysis",
+        "Historical performance data",
+        "Commission tier rules and thresholds",
+        "Tracking link database",
+        "Affiliate segmentation attributes",
+        "Campaign promotions and assets",
+        "Affiliate communication preferences"
+      ],
+      "benefits": [
+        "10x affiliate recruitment capacity (200-300/month vs 20-30 manual)",
+        "500+ active affiliates vs 50-100 manual management limit",
+        "Tiered commissions reward top performers and incentivize growth",
+        "Automated link generation eliminates bottleneck and errors",
+        "Segmented communication increases affiliate engagement 40-60%",
+        "Top-performing affiliates drive 60-80% of affiliate revenue"
+      ],
+      "metrics": ["Affiliate count: 500+", "Commission structure: Performance-based tiers", "Recruitment: 200-300/month automated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement tiered commission structure", "Automate affiliate link generation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Affiliate marketing platform", "Application scoring and auto-approval", "Link generation and tracking", "Commission management system", "Affiliate segmentation capability", "Communication automation"]
+    },
+    "icon": "link",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-commission-payout-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Commission & Payout Automation",
+    "description": "AI-powered sales tracking with automated commission calculation and payouts reducing processing time by 90% and eliminating manual errors in affiliate payments.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Affiliate manager manually exports sales report from e-commerce platform. 2. Match sales to affiliate tracking codes in spreadsheet. 3. Manually calculate commission for each affiliate based on tier and sales volume. 4. Create payout batch in PayPal or accounting system. 5. Process takes 3-5 days monthly, prone to calculation errors and disputes.",
+      "constraints": [
+        "Manual sales matching time-consuming and error-prone",
+        "Commission calculation errors create affiliate disputes",
+        "3-5 day processing time frustrates top performers",
+        "Can't handle complex commission structures (product-specific rates, bonuses)",
+        "Difficult to reconcile returns and refunds",
+        "Limited to monthly payout cycles (can't do more frequent payouts)"
+      ],
+      "metrics": ["Processing time: 3-5 days/month", "Error rate: 5-10% disputes", "Payout frequency: Monthly only"]
+    },
+    "agentic": {
+      "workflow": "1. Sales Tracking Agent monitors conversions in real-time: track affiliate-attributed purchases, capture order details (products, revenue, customer), handle return and refund adjustments. 2. Commission Calculation Agent applies complex rules: tiered commission rates by performance, product-specific commission rates, bonus incentives and milestones, promotional period multipliers. 3. Validation Agent reconciles: verify tracking accuracy, identify duplicate transactions, flag suspicious activity patterns. 4. Payout Orchestration Agent automates disbursement: batch payouts by payment threshold ($100 minimum), multiple payment methods (PayPal, direct deposit, wire), automated payout scheduling (weekly, bi-weekly, monthly). 5. Reporting Agent provides affiliate dashboards showing real-time earnings.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Sales Tracking Agent", "Commission Calculation Agent", "Payout Orchestration Agent"],
+        "utilityAgents": ["Affiliate Platform", "Payment Gateway", "Order Management System", "Accounting Integration"]
+      },
+      "dataSources": [
+        "Affiliate-attributed sales and conversions",
+        "Order management system data",
+        "Commission tier and rate rules",
+        "Return and refund transactions",
+        "Affiliate payment preferences",
+        "Payout thresholds and schedules",
+        "Tax and compliance requirements",
+        "Historical payout data"
+      ],
+      "benefits": [
+        "90% reduction in processing time (hours vs 3-5 days)",
+        "Automated calculation eliminates 5-10% error rate",
+        "Real-time earnings visibility for affiliates",
+        "Complex commission structures handled automatically",
+        "Flexible payout frequency (weekly, bi-weekly, monthly)",
+        "Automated return/refund reconciliation"
+      ],
+      "metrics": ["Processing time: Hours (automated)", "Error rate: <1% disputes", "Payout frequency: Flexible (weekly+)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate sales tracking and commission calculation", "Implement real-time affiliate earnings dashboard"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Affiliate tracking platform", "Commission calculation engine", "Payment gateway integration", "Order management system integration", "Accounting system connection", "Return/refund handling", "Compliance and tax management"]
+    },
+    "icon": "dollar-sign",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-performance-analytics-attribution",
+    "type": "function",
+    "level": 4,
+    "label": "Performance Analytics & Attribution",
+    "description": "AI-powered attribution modeling with incrementality testing measuring true influencer and affiliate ROI improving marketing spend efficiency by 30-50%.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Affiliate manager reviews last-click attribution in affiliate platform. 2. Calculate basic ROI (commission paid vs revenue attributed). 3. No visibility into cross-channel influence (influencer drives awareness, customer converts via search). 4. Can't measure incrementality (would customer have purchased anyway?). 5. Attribution window fixed at 30 days (miss longer customer journeys).",
+      "constraints": [
+        "Last-click attribution misses influencer role in customer journey",
+        "Can't differentiate incremental sales from baseline conversions",
+        "Fixed 30-day window doesn't match actual purchase behavior",
+        "No cross-channel view (social, search, direct interaction)",
+        "Over-credit bottom-funnel affiliates (coupon sites, loyalty portals)",
+        "Under-credit top-funnel influencers driving awareness and consideration"
+      ],
+      "metrics": ["Attribution: Last-click only", "Incrementality: Unknown", "Cross-channel visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Multi-Touch Attribution Agent tracks full customer journey: influencer content exposure (impressions, views), engagement signals (clicks, site visits), cross-channel touchpoints (social, search, email), final conversion attribution. 2. Incrementality Analysis Agent measures true lift: test groups (exposed to influencer/affiliate) vs control, compare conversion rates and basket sizes, identify incremental revenue (vs baseline). 3. Channel Contribution Agent allocates credit: position-based model (40% first touch, 20% middle, 40% last), data-driven model (ML-based credit allocation), time-decay model (recent interactions weighted higher). 4. ROI Optimization Agent recommends budget allocation across partners. 5. Lifetime Value Agent measures long-term customer value from different channels.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Multi-Touch Attribution Agent", "Incrementality Analysis Agent", "ROI Optimization Agent"],
+        "utilityAgents": ["Attribution Platform", "Analytics System", "Testing Framework", "ML Models"]
+      },
+      "dataSources": [
+        "Customer journey touchpoints across channels",
+        "Influencer and affiliate interaction data",
+        "Conversion and purchase data",
+        "Incrementality test results (treatment vs control)",
+        "Customer lifetime value data",
+        "Marketing spend and commission data",
+        "Cross-channel engagement signals",
+        "Attribution model parameters"
+      ],
+      "benefits": [
+        "30-50% improvement in marketing spend efficiency",
+        "Multi-touch attribution reveals true influencer impact vs last-click",
+        "Incrementality testing identifies which channels drive new sales",
+        "Budget optimization allocates spend to highest ROI partners",
+        "Lifetime value measurement shows long-term channel effectiveness",
+        "Data-driven attribution models vs fixed last-click rules"
+      ],
+      "metrics": ["Attribution: Multi-touch ML model", "Incrementality: Tested and measured", "Cross-channel visibility: Full journey"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement multi-touch attribution tracking", "Run incrementality test on top influencers"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Attribution platform with multi-touch modeling", "Cross-channel data integration", "Testing framework for incrementality", "ML models for attribution", "Customer lifetime value tracking", "Analytics and reporting infrastructure"]
+    },
+    "icon": "trending-up",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-fraud-detection-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Fraud Detection & Compliance",
+    "description": "AI-powered click fraud detection with FTC disclosure monitoring and brand safety screening preventing 15-25% revenue loss from fraud and protecting brand reputation.",
+    "parentCapability": "capability-influencer-affiliate-marketing",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Affiliate manager manually reviews suspicious activity only when flagged. 2. Check for FTC disclosure compliance by manually reviewing sample of influencer posts. 3. Limited ability to detect click fraud or cookie stuffing. 4. No systematic brand safety monitoring of affiliate websites. 5. Discover fraud after significant commission payouts (difficult to recover).",
+      "constraints": [
+        "Reactive fraud detection after payouts made (10-20% revenue loss)",
+        "Manual FTC compliance review covers <10% of content",
+        "Click fraud and bots inflate metrics and commission costs",
+        "Cookie stuffing creates false attribution and overpayment",
+        "No brand safety screening (affiliates on inappropriate sites)",
+        "Limited recourse after fraudulent commissions paid"
+      ],
+      "metrics": ["Fraud detection: Reactive", "FTC compliance: <10% coverage", "Revenue loss: 10-20%"]
+    },
+    "agentic": {
+      "workflow": "1. Click Fraud Detection Agent identifies suspicious patterns: bot traffic and non-human clicks, click farms and VPN networks, unusual click-to-conversion ratios, duplicate transactions and cookie stuffing. 2. FTC Compliance Agent monitors disclosure requirements: verify proper disclosure language ('#ad', 'sponsored'), check disclosure placement (visible and clear), flag non-compliant content for correction, track historical compliance by influencer. 3. Brand Safety Agent screens affiliate content: identify inappropriate content or sites, detect competitor brand bidding violations, monitor trademark and policy compliance. 4. Risk Scoring Agent rates affiliates by fraud and compliance risk. 5. Enforcement Agent automatically: withhold payments for suspicious activity, send compliance reminders, terminate fraudulent affiliates.",
+      "agents": {
+        "orchestrator": "Influencer & Affiliate Marketing Orchestration Agent",
+        "superAgents": ["Click Fraud Detection Agent", "FTC Compliance Agent", "Brand Safety Agent"],
+        "utilityAgents": ["Fraud Detection ML Model", "Content Analysis", "Risk Scoring Engine", "Compliance Monitoring"]
+      },
+      "dataSources": [
+        "Click and traffic patterns",
+        "Conversion and transaction data",
+        "IP addresses and device fingerprints",
+        "Influencer and affiliate content",
+        "FTC disclosure requirements and guidelines",
+        "Brand safety and policy rules",
+        "Historical fraud patterns",
+        "Risk scores and affiliate ratings"
+      ],
+      "benefits": [
+        "15-25% reduction in revenue loss from fraud prevention",
+        "100% FTC compliance monitoring vs <10% manual sampling",
+        "Proactive click fraud detection prevents overpayment",
+        "Brand safety screening protects reputation",
+        "Automated enforcement (payment holds, terminations)",
+        "Risk scoring identifies high-risk affiliates before issues"
+      ],
+      "metrics": ["Fraud detection: Proactive real-time", "FTC compliance: 100% coverage", "Revenue loss: <5%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement click fraud detection on top affiliates", "Deploy automated FTC disclosure checking"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Fraud detection ML model", "FTC compliance monitoring tools", "Brand safety content analysis", "Risk scoring framework", "Payment hold and enforcement workflows", "Historical fraud data for training"]
+    },
+    "icon": "shield",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

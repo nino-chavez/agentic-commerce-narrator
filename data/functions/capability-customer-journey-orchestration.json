@@ -1,0 +1,444 @@
+[
+  {
+    "id": "function-journey-mapping-visualization",
+    "type": "function",
+    "level": 4,
+    "label": "Journey Mapping & Visualization",
+    "description": "Real-time journey analytics that auto-generate visual journey maps from behavioral data with automated friction point detection and weekly updates based on actual customer paths.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Schedule quarterly journey mapping workshop with cross-functional teams. 2. Facilitate 2-day workshop with sticky notes and whiteboards. 3. Manually consolidate journey maps into PowerPoint/Visio diagrams. 4. Distribute static journey maps to stakeholders via email. 5. Maps become outdated within weeks as customer behavior changes.",
+      "constraints": [
+        "Quarterly updates mean maps are stale 9 out of 12 months",
+        "Journey maps based on assumptions not actual behavioral data",
+        "Manual workshop process requires 40-60 hours of cross-functional time",
+        "No visibility into actual customer paths vs designed journeys",
+        "Friction points identified through anecdotal feedback not data",
+        "Static diagrams don't adapt to seasonal or market changes"
+      ],
+      "metrics": ["Update frequency: Quarterly", "Time to create map: 40-60 hours", "Data-driven accuracy: 30-40%"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Mapping Agent continuously analyzes clickstream, transaction, and cross-channel behavioral data. 2. Agent auto-generates journey maps showing actual customer paths (not just designed flows). 3. Behavioral Analytics Agent identifies drop-off points, delays, and friction with ML scoring. 4. Visualization Tool renders interactive journey maps with drill-down capability. 5. Agent auto-updates maps weekly based on evolving customer behavior patterns.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Journey Mapping Agent", "Behavioral Analytics Agent"],
+        "utilityAgents": ["Customer Data Platform (CDP)", "Journey Analytics Platform", "Visualization Tool", "Behavioral Tracking"]
+      },
+      "dataSources": [
+        "Clickstream and web analytics data",
+        "Mobile app behavioral data",
+        "Transaction and order data",
+        "Cross-channel interaction history",
+        "Session replay recordings",
+        "Customer support interaction logs"
+      ],
+      "benefits": [
+        "Weekly updates vs quarterly (50x faster refresh)",
+        "Data-driven journey maps vs assumption-based (90%+ accuracy)",
+        "Auto-discovery of actual paths vs designed-only journeys",
+        "95% reduction in manual effort (2-3 hours vs 40-60 hours)",
+        "Real-time friction detection enables rapid optimization",
+        "Interactive dashboards vs static PowerPoint diagrams"
+      ],
+      "metrics": ["Update frequency: Weekly", "Time to create map: 2-3 hours", "Data-driven accuracy: 90%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy journey analytics on top 3 customer journeys", "Auto-generate weekly journey maps from existing analytics"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Customer Data Platform or analytics warehouse", "Clickstream tracking implemented", "Cross-channel identity resolution", "Behavioral analytics tool"]
+    },
+    "icon": "map",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-touchpoint-experience-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Touchpoint Experience Optimization",
+    "description": "AI-powered scoring of every customer touchpoint with cross-channel optimization recommendations and continuous improvement cycles to maximize conversion.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager manually analyzes touchpoint performance in Google Analytics. 2. Identify top 3-5 problematic touchpoints based on bounce/exit rates. 3. Create optimization project backlog and prioritize based on intuition. 4. Design team creates mockups, engineering implements changes (3-6 months). 5. Measure impact post-launch with limited before/after comparison.",
+      "constraints": [
+        "Siloed optimization by channel (web team doesn't coordinate with mobile team)",
+        "3-6 month improvement cycles from identification to deployment",
+        "Manual analysis limited to top 10-20 touchpoints (missing long-tail issues)",
+        "No cross-touchpoint optimization (e.g., optimizing checkout without considering cart)",
+        "Impact measurement relies on simple before/after (no control groups)",
+        "Prioritization based on gut feel not quantified opportunity"
+      ],
+      "metrics": ["Improvement cycle time: 3-6 months", "Touchpoints analyzed: 10-20", "Conversion improvement: 5-10%"]
+    },
+    "agentic": {
+      "workflow": "1. Touchpoint Optimization Agent continuously scores all customer touchpoints using conversion, engagement, and satisfaction metrics. 2. Experience Scoring Agent identifies underperforming touchpoints with quantified impact (e.g., 'Fixing checkout step 2 could lift conversion 8%'). 3. Agent recommends specific improvements using A/B test results, heatmaps, and session replay insights. 4. Agent prioritizes optimizations by impact × effort score. 5. Agent monitors post-optimization performance and triggers follow-up tests.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Touchpoint Optimization Agent", "Experience Scoring Agent"],
+        "utilityAgents": ["CDP", "A/B Testing Platform", "Heatmap Analytics", "Session Replay"]
+      },
+      "dataSources": [
+        "Conversion funnel data by touchpoint",
+        "Engagement metrics (time on page, scroll depth, clicks)",
+        "Heatmap and session replay data",
+        "A/B test historical results",
+        "Customer satisfaction scores by touchpoint",
+        "Cross-channel touchpoint sequence data"
+      ],
+      "benefits": [
+        "15-30% conversion improvement at key touchpoints through data-driven optimization",
+        "Continuous optimization vs 3-6 month cycles",
+        "100% touchpoint coverage vs manual top 10-20",
+        "Cross-channel optimization ensures consistent experience",
+        "Quantified ROI for every optimization investment",
+        "Automatic prioritization by business impact"
+      ],
+      "metrics": ["Improvement cycle time: 2-4 weeks", "Touchpoints analyzed: 100% coverage", "Conversion improvement: 15-30%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement touchpoint scoring dashboard", "Deploy heatmap analytics on top 10 pages"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["A/B testing platform deployed", "Heatmap/session replay tool", "CDP with touchpoint attribution", "Analytics warehouse"]
+    },
+    "icon": "cursor-click",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-next-best-action-recommendations",
+    "type": "function",
+    "level": 4,
+    "label": "Next Best Action (NBA) Recommendations",
+    "description": "ML-powered recommendations for the next best action per customer in real-time context with 8-15% engagement rates vs 2-5% for rule-based approaches.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates rule-based triggers (e.g., 'If cart abandonment, send email in 24 hours'). 2. Same email sent to all cart abandoners regardless of context. 3. No consideration of customer preferences, channel, or timing. 4. Batch campaigns sent overnight (not real-time). 5. Generic offers not personalized to individual customers.",
+      "constraints": [
+        "Rule-based triggers lack intelligence (same action for everyone)",
+        "2-5% engagement rate due to generic, non-personalized actions",
+        "Batch processing means 12-24 hour delays for time-sensitive actions",
+        "No cross-channel orchestration (customer gets duplicate messages)",
+        "No learning or optimization based on outcomes",
+        "Limited to 5-10 pre-defined scenarios (cart abandon, browse abandon, etc.)"
+      ],
+      "metrics": ["Engagement rate: 2-5%", "Response time: 12-24 hours", "Personalization: Segment-level"]
+    },
+    "agentic": {
+      "workflow": "1. Next Best Action Agent continuously evaluates every customer's current state and context. 2. Context Analysis Agent assesses: recent behavior, purchase history, engagement patterns, predicted propensity scores. 3. Agent recommends optimal action from 50+ possibilities: product recommendations, offers, content, service actions. 4. Real-Time Decision Engine selects best channel (email, SMS, push, in-app) and timing. 5. Agent learns from outcomes: adjusts models based on engagement, conversion, satisfaction.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Next Best Action Agent", "Context Analysis Agent"],
+        "utilityAgents": ["Recommendation Engine", "CDP", "Real-Time Decision Engine", "Channel Orchestration"]
+      },
+      "dataSources": [
+        "Real-time customer behavior stream",
+        "Customer purchase history and preferences",
+        "Propensity models (churn, upsell, engagement)",
+        "Channel engagement history by customer",
+        "Inventory and offer availability",
+        "Historical NBA outcome data for learning"
+      ],
+      "benefits": [
+        "8-15% engagement rate vs 2-5% for rule-based (3-10 pt improvement)",
+        "Real-time decisioning vs 12-24 hour batch delays",
+        "1:1 personalized actions vs segment-level generic actions",
+        "50+ action types vs 5-10 pre-defined scenarios",
+        "Cross-channel orchestration prevents duplicate/conflicting messages",
+        "Continuous learning improves recommendations over time"
+      ],
+      "metrics": ["Engagement rate: 8-15%", "Response time: Real-time (<1 min)", "Personalization: Individual 1:1"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy propensity models for top 3 actions (churn, upsell, engagement)", "Implement real-time decisioning for cart abandonment"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Customer Data Platform with real-time streaming", "ML platform for propensity modeling", "12+ months behavioral data", "Real-time decision engine", "Channel orchestration platform"]
+    },
+    "icon": "lightbulb",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-journey-anomaly-detection-recovery",
+    "type": "function",
+    "level": 4,
+    "label": "Journey Anomaly Detection & Recovery",
+    "description": "Real-time detection of journey friction with proactive recovery offers to reduce churn at friction points by 50-70% through immediate intervention.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer encounters friction (checkout error, out of stock, payment failure). 2. Customer calls support or abandons journey (30-50% churn at friction points). 3. Support agent reacts to customer complaint after the fact. 4. Agent offers generic apology and discount if customer complains loudly. 5. No systematic tracking or prevention of friction patterns.",
+      "constraints": [
+        "Reactive response only after customer contacts support (if they do)",
+        "30-50% churn rate when customers encounter friction",
+        "No proactive detection or intervention before customer abandons",
+        "Generic recovery offers not tailored to specific friction type",
+        "No learning to prevent similar friction in the future",
+        "Support agents overwhelmed with friction-related contacts"
+      ],
+      "metrics": ["Friction churn rate: 30-50%", "Detection: Reactive (after contact)", "Recovery rate: 10-20%"]
+    },
+    "agentic": {
+      "workflow": "1. Anomaly Detection Agent monitors customer journeys in real-time for friction signals: repeated page refreshes, error messages, extended time on step, rage clicks. 2. Agent classifies friction type and severity (payment error, out of stock, technical issue). 3. Recovery Orchestration Agent immediately triggers appropriate intervention: proactive chat offer, discount code, alternative product suggestion, expedited shipping. 4. Agent tracks recovery outcome and learns which interventions work for each friction type. 5. Insights routed to product teams to fix root causes.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Anomaly Detection Agent", "Recovery Orchestration Agent"],
+        "utilityAgents": ["Behavioral Analytics", "CDP", "Offer Management System", "Communication APIs"]
+      },
+      "dataSources": [
+        "Real-time behavioral stream (clicks, scrolls, errors)",
+        "Application error logs and monitoring",
+        "Inventory and product availability data",
+        "Customer value and segment data",
+        "Historical friction and recovery outcome data",
+        "Support ticket and contact data"
+      ],
+      "benefits": [
+        "50-70% reduction in churn at friction points through proactive intervention",
+        "Real-time detection vs reactive response after abandonment",
+        "10-20% friction churn vs 30-50% traditional",
+        "Tailored recovery offers maximize effectiveness (discount vs alternative product vs help)",
+        "Continuous learning improves friction prevention",
+        "30-40% reduction in support contacts due to proactive resolution"
+      ],
+      "metrics": ["Friction churn rate: 10-20%", "Detection: Real-time (<30 sec)", "Recovery rate: 40-60%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy error monitoring and proactive chat for checkout errors", "Implement rage click detection with recovery offers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Real-time behavioral analytics", "Error monitoring and alerting", "Offer management system", "Proactive chat/communication platform", "Customer value data"]
+    },
+    "icon": "shield-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cross-channel-journey-continuity",
+    "type": "function",
+    "level": 4,
+    "label": "Cross-Channel Journey Continuity",
+    "description": "Seamless handoff and context preservation across channels to reduce journey abandonment by 20-35% through unified cross-channel experiences.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer browses products on mobile app during commute. 2. Customer switches to desktop website at home to complete purchase. 3. Cart doesn't sync - customer must search for products again. 4. Customer's browsing history, preferences, and session state lost. 5. Customer frustrated by disjointed experience, abandons journey (25-40% abandonment on channel switch).",
+      "constraints": [
+        "Siloed channel systems with no cross-channel state management",
+        "Cart doesn't sync across channels (web, mobile, in-store)",
+        "Customer must restart journey from scratch when switching channels",
+        "No context transfer (browsing history, preferences, intent)",
+        "25-40% journey abandonment when customers switch channels",
+        "Separate logins and authentication required per channel"
+      ],
+      "metrics": ["Channel switch abandonment: 25-40%", "Context preservation: 0%", "Cart sync: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Continuity Agent maintains unified customer session across all channels (web, mobile, in-store, voice). 2. Context Management Agent preserves: cart contents, browsing history, search queries, preferences, payment methods. 3. Agent detects channel switch (e.g., mobile to desktop) and seamlessly transfers state. 4. Identity Resolution links customer across devices and channels. 5. Customer continues journey exactly where they left off with full context.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Journey Continuity Agent", "Context Management Agent"],
+        "utilityAgents": ["CDP", "Session Management", "Cross-Channel Platform", "Identity Resolution"]
+      },
+      "dataSources": [
+        "Cross-channel session data",
+        "Customer identity graph (email, device IDs, cookies)",
+        "Shopping cart data across channels",
+        "Browsing and search history",
+        "Customer preferences and saved data",
+        "Channel transition events"
+      ],
+      "benefits": [
+        "20-35% reduction in journey abandonment through seamless transitions",
+        "100% context preservation vs 0% (cart, history, preferences sync instantly)",
+        "Unified authentication across channels (single sign-on)",
+        "Real-time cart sync across web, mobile, in-store",
+        "Customers can start journey on any channel and finish on another",
+        "Consistent personalized experience across all touchpoints"
+      ],
+      "metrics": ["Channel switch abandonment: 5-10%", "Context preservation: 100%", "Cart sync: Real-time (<5 sec)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time cart sync between web and mobile", "Deploy cross-device identity resolution"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer Data Platform with cross-channel profiles", "Identity resolution capability", "Unified commerce platform or API integration", "Session management system"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-persona-based-journey-customization",
+    "type": "function",
+    "level": 4,
+    "label": "Persona-Based Journey Customization",
+    "description": "Adaptive journeys tailored to customer personas with behavioral segmentation delivering 25-45% engagement improvement through relevant experiences.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Design single generic journey for all customers (one-size-fits-all). 2. All customers see same navigation, content, product recommendations. 3. No personalization based on customer type, preferences, or behavior. 4. High-value customers get same experience as first-time browsers. 5. Frequent shoppers see same onboarding flow as new customers.",
+      "constraints": [
+        "Generic journeys don't resonate with diverse customer segments",
+        "No differentiation by customer value (VIP vs new customer treated same)",
+        "One-size-fits-all approach leads to poor engagement (15-30% engagement)",
+        "High-intent customers forced through unnecessary steps",
+        "New customers overwhelmed by features designed for power users",
+        "No journey adaptation based on customer learning"
+      ],
+      "metrics": ["Journey personalization: Generic", "Customer engagement: 15-30%", "Journey variants: 1 (one-size-fits-all)"]
+    },
+    "agentic": {
+      "workflow": "1. Persona Analysis Agent segments customers using behavioral data: purchase frequency, browsing patterns, engagement level, price sensitivity. 2. Journey Customization Agent creates persona-specific journey variants: VIP fast-track, new customer onboarding, deal seeker, research-heavy buyer. 3. Agent adapts journey in real-time based on signals: first-time visitor gets guided tour, frequent buyer gets quick reorder. 4. Content Personalization tailors messaging, product placement, and offers per persona. 5. Agent learns and refines persona definitions based on journey performance.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Persona Analysis Agent", "Journey Customization Agent"],
+        "utilityAgents": ["CDP", "Segmentation Engine", "Journey Orchestration Platform", "Content Personalization"]
+      },
+      "dataSources": [
+        "Customer behavioral data (purchase history, browse patterns)",
+        "Engagement metrics by customer segment",
+        "Customer value and lifetime value data",
+        "Product affinity and category preferences",
+        "Channel and device preferences",
+        "Persona performance metrics"
+      ],
+      "benefits": [
+        "25-45% engagement improvement through relevant experiences",
+        "5-10 persona-specific journey variants vs 1 generic journey",
+        "VIP customers get fast-track experiences (3 steps vs 8 steps)",
+        "New customers get onboarding and education",
+        "Deal seekers prioritize promotions, research-heavy get comparisons",
+        "Continuous persona refinement based on journey performance"
+      ],
+      "metrics": ["Journey personalization: Persona-specific", "Customer engagement: 40-60%", "Journey variants: 5-10 personas"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create VIP fast-track journey for top 10% customers", "Implement new customer onboarding flow"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Customer Data Platform with behavioral segmentation", "Journey orchestration capability", "Content personalization engine", "A/B testing platform for journey variants"]
+    },
+    "icon": "user-group",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-journey-performance-analytics-attribution",
+    "type": "function",
+    "level": 4,
+    "label": "Journey Performance Analytics & Attribution",
+    "description": "Multi-touch attribution at journey level with real-time ROI dashboards enabling data-driven journey investment decisions and accurate performance measurement.",
+    "parentCapability": "capability-customer-journey-orchestration",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst runs monthly report on journey performance in Google Analytics. 2. Attribution limited to last-touch (credit goes to final touchpoint before conversion). 3. No visibility into multi-touch journey contribution. 4. Journey ROI unclear - can't quantify investment impact. 5. Report created in spreadsheet, shared via email, used for retrospective analysis only.",
+      "constraints": [
+        "Last-touch attribution ignores 80% of customer journey (all touchpoints before last)",
+        "Monthly reporting means decisions made on stale data",
+        "No journey-level ROI measurement (only channel-level)",
+        "Can't quantify value of journey improvements",
+        "Spreadsheet-based analysis limited to basic metrics",
+        "No real-time visibility into journey performance"
+      ],
+      "metrics": ["Attribution model: Last-touch", "Report frequency: Monthly", "Journey ROI visibility: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Journey Analytics Agent tracks customer through entire multi-touch journey across channels. 2. Attribution Modeling Agent applies advanced models: position-based, time-decay, algorithmic attribution. 3. Agent calculates journey-level metrics: conversion rate, time to convert, touchpoint contribution, drop-off analysis. 4. Agent quantifies ROI of journey improvements: 'Checkout optimization increased revenue $2.5M/year'. 5. Real-time dashboards show journey performance, attribution, and ROI for immediate decision-making.",
+      "agents": {
+        "orchestrator": "Customer Journey Orchestration Agent",
+        "superAgents": ["Journey Analytics Agent", "Attribution Modeling Agent"],
+        "utilityAgents": ["Attribution Platform", "CDP", "Analytics Dashboard", "BI System"]
+      },
+      "dataSources": [
+        "Complete customer journey paths across touchpoints",
+        "Conversion and revenue data by journey",
+        "Marketing spend by touchpoint/channel",
+        "Journey optimization test results",
+        "Customer lifetime value data",
+        "Touchpoint engagement metrics"
+      ],
+      "benefits": [
+        "Multi-touch attribution reveals true touchpoint value vs last-touch bias",
+        "Real-time dashboards vs monthly retrospective reports",
+        "Journey-level ROI quantification enables data-driven investments",
+        "Accurate attribution improves marketing budget allocation",
+        "Identifies high-value journey paths for optimization priority",
+        "Business case for journey improvements backed by ROI data"
+      ],
+      "metrics": ["Attribution model: Multi-touch algorithmic", "Report frequency: Real-time", "Journey ROI visibility: High"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement position-based attribution for top 3 journeys", "Create real-time journey performance dashboard"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Customer Data Platform with journey tracking", "Attribution modeling platform or capability", "BI/analytics dashboard tool", "Complete journey data across channels"]
+    },
+    "icon": "chart-pie",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

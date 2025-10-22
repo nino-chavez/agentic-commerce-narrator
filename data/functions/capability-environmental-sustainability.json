@@ -1,0 +1,643 @@
+{
+  "capability": {
+    "id": "capability-environmental-sustainability",
+    "name": "Environmental Sustainability",
+    "description": "Carbon footprint tracking, sustainable sourcing verification, waste reduction programs, energy monitoring, sustainability scorecards, and ESG reporting",
+    "category": "supply-chain-planning",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "functions": [
+      {
+        "id": "func-carbon-footprint-tracking-reporting",
+        "name": "Carbon Footprint Tracking & Reporting",
+        "description": "Scope 1/2/3 emissions calculation across supply chain, GHG protocol reporting, reduction target tracking, and carbon accounting by product and supplier",
+        "traditional": {
+          "approach": "Carbon footprint tracking is performed manually once per year during sustainability report preparation. Scope 1 emissions (direct operations) are calculated from fuel consumption and refrigerant usage data compiled from spreadsheets. Scope 2 emissions (purchased electricity) are estimated from utility bills. Scope 3 emissions (supply chain) are roughly estimated using industry averages due to lack of supplier-specific data. Emissions calculations rely on manual application of conversion factors from EPA and IPCC guidelines. Carbon reduction targets are tracked informally with annual progress reviews. No systematic product-level carbon footprint calculation for consumer transparency or low-carbon sourcing decisions.",
+        "limitations": [
+          "Annual carbon accounting provides no visibility into monthly trends or reduction progress",
+          "Manual calculations from spreadsheets are time-consuming (40-60 hours) and error-prone",
+          "Scope 3 supply chain emissions estimated using averages lack accuracy for sourcing decisions",
+          "No product-level carbon footprint for consumer labeling or portfolio optimization",
+          "Limited ability to track reduction initiatives and measure actual impact"
+        ],
+        "tooling": ["Excel spreadsheets", "Manual utility bill compilation", "Industry average emission factors", "Annual sustainability reports", "EPA/IPCC conversion factor tables"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive carbon accounting across all scopes. Scope 1/2 agents automatically collect operational data (fuel consumption, electricity, refrigerants) from facilities, vehicles, and utility systems with monthly calculation using current emission factors. Scope 3 agents gather supplier-specific emissions data through supplier portals, calculate transportation emissions from logistics systems, and estimate other indirect emissions (waste, business travel, purchased goods). Product carbon agents calculate product-level footprints using life cycle assessment (LCA) methodology linking ingredients to supplier emissions. Target tracking agents monitor reduction progress against goals, identify high-impact opportunities, and forecast trajectory. Reporting agents automatically generate GHG Protocol reports, CDP disclosures, and regulatory filings with audit trails.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates Scope 1/2/3 emissions data collection, carbon calculation, product-level footprinting, reduction tracking, and automated reporting"
+            },
+            "superAgents": [
+              {
+                "name": "Scope 1/2 Emissions Agent",
+                "role": "Automatically collects operational data (fuel, electricity, refrigerants) from facilities and utilities, calculates monthly emissions using current factors, and trends Scope 1/2 over time"
+              },
+              {
+                "name": "Scope 3 Supply Chain Agent",
+                "role": "Gathers supplier-specific emissions data, calculates transportation emissions from logistics, estimates indirect emissions (waste, travel), and aggregates total Scope 3"
+              },
+              {
+                "name": "Product Carbon Agent",
+                "role": "Calculates product-level carbon footprints using LCA methodology, links ingredient emissions to suppliers, and enables low-carbon product labeling and portfolio decisions"
+              },
+              {
+                "name": "Reduction Tracking Agent",
+                "role": "Monitors progress against carbon reduction targets, identifies high-impact opportunities (energy efficiency, transport optimization, supplier engagement), and forecasts trajectory"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Reporting Agent",
+                "role": "Automatically generates GHG Protocol reports, CDP climate disclosures, regulatory filings, and sustainability report carbon sections with complete audit trails"
+              }
+            ]
+          },
+          "benefits": [
+            "Monthly carbon tracking enables timely intervention vs. annual retrospective reporting",
+            "Automated data collection reduces calculation time from 40-60 hours to <2 hours",
+            "Supplier-specific Scope 3 data improves accuracy for sourcing decisions vs. industry averages",
+            "Product-level carbon footprints enable consumer transparency and portfolio optimization",
+            "Reduction initiative tracking demonstrates measurable impact and ROI of sustainability investments"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of carbon calculation methodology and assumptions",
+              "reason": "Sustainability experts should validate emission factor selections, allocation methodologies, and boundary definitions ensuring compliance with GHG Protocol standards"
+            },
+            {
+              "gate": "Approval of carbon reduction targets and initiatives",
+              "reason": "Executive leadership must approve carbon reduction commitments, associated investments, and strategic initiatives based on feasibility and business impact"
+            },
+            {
+              "gate": "Verification of external carbon disclosures and reports before submission",
+              "reason": "Sustainability leadership and legal teams must review CDP responses, regulatory filings, and public sustainability reports for accuracy and consistency"
+            }
+          ],
+          "dataSources": [
+            "Facility energy consumption (electricity, natural gas, fuel oil)",
+            "Vehicle fuel consumption and mileage data",
+            "Refrigerant usage and leak records",
+            "Supplier emissions data and environmental questionnaires",
+            "Transportation logistics (miles, modes, fuel type)",
+            "Product formulations and ingredient quantities",
+            "Waste generation and recycling data",
+            "Business travel and employee commuting data"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires automated data collection from utilities, vehicles, refrigeration systems. Supplier emissions data collection through portals. Product formulation data for product-level footprints.",
+            "integrationComplexity": "Medium-High - requires integration with utility systems, fleet management, supplier portals, ERP for product data, and logistics systems for transportation emissions. Emission factor databases needed.",
+            "changeManagement": "Sustainability teams shift from annual manual reporting to monthly data-driven management. Procurement engages suppliers on emissions data sharing. Operations teams support data collection infrastructure."
+          },
+          "implementation": {
+            "phase1": "Implement automated Scope 1/2 data collection and monthly emissions calculation with basic Scope 3 estimation",
+            "phase2": "Add supplier-specific Scope 3 data collection, transportation emissions calculation, and reduction initiative tracking",
+            "phase3": "Deploy product-level carbon footprints, automated GHG reporting, and predictive modeling for carbon reduction planning"
+          },
+          "roi": {
+            "timeToValue": "4-6 months for Scope 1/2 automation, 9-12 months for comprehensive Scope 3",
+            "keyMetrics": [
+              "Reporting cycle: annual → monthly",
+              "Calculation time: 40-60 hours → <2 hours",
+              "Scope 3 accuracy: industry averages → supplier-specific",
+              "Product footprints: enables consumer transparency",
+              "Reduction tracking: measurable initiative impact"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "distribution"],
+          "complianceImpact": "medium",
+          "technologyReadiness": "medium"
+        }
+      },
+      {
+        "id": "func-sustainable-sourcing-verification",
+        "name": "Sustainable Sourcing Verification",
+        "description": "Supplier sustainability scoring, certification tracking (organic, fair trade, MSC, FSC), ethical sourcing verification, and sustainable sourcing goals",
+        "traditional": {
+          "approach": "Sustainable sourcing verification is performed manually during new supplier qualification or periodic reviews. Procurement teams request sustainability certifications (organic, fair trade, Rainforest Alliance, MSC, FSC) via email and manually file PDF certificates. Verification of certification validity involves manually checking certification body websites. Supplier sustainability assessments use email questionnaires with subjective scoring. Ethical sourcing audits for labor practices are conducted periodically with paper checklists. Sustainable sourcing goals (e.g., 50% certified sustainable seafood) are tracked manually in spreadsheets with annual reviews. No systematic monitoring of certification expirations or supplier sustainability performance over time.",
+        "limitations": [
+          "Manual certification collection and verification is time-consuming and incomplete",
+          "Certificate expiration monitoring relies on sporadic checks, risking claims violations",
+          "Subjective sustainability scoring lacks consistency across commodity teams",
+          "Difficult to measure progress toward sustainable sourcing goals in real-time",
+          "Limited visibility into supplier sustainability performance trends"
+          ],
+        "tooling": ["Email certification requests", "PDF file storage", "Manual certification body website checks", "Excel questionnaires", "Spreadsheet goal tracking"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive sustainable sourcing management. Certification agents automatically collect and verify supplier certifications (organic, fair trade, MSC, FSC, Rainforest Alliance) through digital portals with certification body API validation. Scoring agents assess supplier sustainability performance using standardized frameworks (EcoVadis, Sedex) with automated data collection and consistent evaluation. Monitoring agents track certification expiration dates with 90-day advance alerts and renewal workflows. Goal tracking agents measure progress toward sustainable sourcing commitments (percentage certified, volume, spend) in real-time dashboards. Verification agents perform periodic audits of ethical sourcing practices with digital checklists and finding management. Analytics agents identify opportunities to expand sustainable sourcing and quantify environmental impact.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates certification collection/verification, sustainability scoring, expiration monitoring, goal tracking, ethical sourcing audits, and impact analytics"
+            },
+            "superAgents": [
+              {
+                "name": "Certification Management Agent",
+                "role": "Automatically collects supplier certifications (organic, fair trade, MSC, FSC), verifies with certification body APIs, stores digitally, and tracks expiration dates"
+              },
+              {
+                "name": "Sustainability Scoring Agent",
+                "role": "Assesses supplier sustainability performance using standardized frameworks (EcoVadis, Sedex), collects data through portals, and generates consistent scores"
+              },
+              {
+                "name": "Goal Tracking Agent",
+                "role": "Monitors progress toward sustainable sourcing commitments (certified volume, spend percentage) in real-time, identifies gaps, and recommends sourcing shifts"
+              },
+              {
+                "name": "Ethical Sourcing Agent",
+                "role": "Conducts supplier audits for labor practices, human rights, and ethical standards using digital checklists with finding management and corrective action tracking"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Impact Analytics Agent",
+                "role": "Quantifies environmental and social impact of sustainable sourcing (deforestation prevented, livelihoods supported), identifies expansion opportunities"
+              }
+            ]
+          },
+          "benefits": [
+            "Automated certification verification reduces manual effort by 80% and improves data completeness",
+            "90-day expiration alerts prevent certification lapses that would disrupt supply and violate claims",
+            "Consistent sustainability scoring enables objective supplier comparison and development prioritization",
+            "Real-time goal tracking enables proactive sourcing shifts vs. annual retrospective reviews",
+            "Ethical sourcing audit efficiency improves 30-40% with digital execution and finding management"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of supplier sustainability scores before strategic sourcing decisions",
+              "reason": "Category managers should validate AI-generated sustainability assessments and consider scores alongside price, quality, and delivery in sourcing decisions"
+            },
+            {
+              "gate": "Approval of sustainable sourcing goal targets and timelines",
+              "reason": "Procurement leadership must approve sustainability commitments considering feasibility, cost impact, and alignment with corporate ESG strategy"
+            },
+            {
+              "gate": "Decision to de-source suppliers with ethical sourcing violations",
+              "reason": "Senior leadership must approve supplier exits based on audit findings of labor violations or ethical issues considering legal, reputational, and operational impacts"
+            }
+          ],
+          "dataSources": [
+            "Supplier certification documents (organic, fair trade, MSC, FSC, Rainforest Alliance)",
+            "Certification body databases and APIs for validation",
+            "Supplier sustainability questionnaires and assessments (EcoVadis, Sedex)",
+            "Spend data by supplier and commodity",
+            "Ethical sourcing audit results and findings",
+            "Sustainable sourcing policy requirements and goals",
+            "Industry certification standards and criteria"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires supplier certification repository with expiration dates. Sustainability assessment framework and questionnaires. Spend data by commodity for goal tracking. Ethical sourcing audit protocols.",
+            "integrationComplexity": "Medium - requires supplier portal for certification upload, API connections to certification bodies for validation, spend analytics integration, and audit management system.",
+            "changeManagement": "Procurement teams adopt data-driven sustainable sourcing vs. ad-hoc approaches. Suppliers adapt to digital certification submission and sustainability assessments. Leadership embraces ESG metrics in sourcing."
+          },
+          "implementation": {
+            "phase1": "Implement certification collection and expiration monitoring with basic sustainability scoring for strategic suppliers",
+            "phase2": "Add automated certification verification, consistent scoring framework, and real-time goal tracking",
+            "phase3": "Deploy ethical sourcing audit programs, impact analytics, and supplier sustainability development initiatives"
+          },
+          "roi": {
+            "timeToValue": "3-5 months for certification management, 6-9 months for comprehensive scoring",
+            "keyMetrics": [
+              "Certification verification effort: 80% reduction",
+              "Expiration lapses: 90-day prevention alerts",
+              "Scoring consistency: standardized framework",
+              "Goal visibility: annual → real-time",
+              "Audit efficiency: 30-40% improvement"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "apparel"],
+          "complianceImpact": "medium",
+          "technologyReadiness": "medium"
+        }
+      },
+      {
+        "id": "func-waste-reduction-recycling-programs",
+        "name": "Waste Reduction & Recycling Programs",
+        "description": "Waste stream tracking by type, diversion rate calculation, recycling program management, circular economy initiatives, and waste reduction analytics",
+        "traditional": {
+          "approach": "Waste management is tracked manually through monthly invoices from waste haulers showing dumpster pickups and tonnage. Waste is broadly categorized as trash, recycling, or organics with limited granularity. Waste reduction initiatives are ad-hoc and driven by cost savings rather than systematic analytics. Recycling programs rely on employee compliance with limited visibility into contamination rates or diversion effectiveness. Diversion rates (percentage of waste diverted from landfill) are calculated manually once per year for sustainability reports. Circular economy initiatives (reusable packaging, product take-back) are isolated pilots without systematic tracking. No visibility into waste generation drivers or opportunities for source reduction.",
+        "limitations": [
+          "Monthly waste hauler invoices provide limited detail on waste composition and sources",
+          "Annual diversion rate calculation prevents timely waste reduction intervention",
+          "Ad-hoc initiatives lack systematic prioritization based on waste generation drivers",
+          "No real-time visibility into recycling contamination or program effectiveness",
+          "Difficult to measure ROI of waste reduction investments or circular economy pilots"
+        ],
+        "tooling": ["Waste hauler invoices", "Excel waste tracking", "Annual sustainability report calculations", "Manual recycling audits", "Ad-hoc initiative tracking"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive waste management programs. Waste tracking agents collect detailed data from haulers, scales, and facility sensors on waste generation by type (cardboard, plastic, organics, landfill) and source (production, warehouse, offices). Diversion agents calculate real-time diversion rates by facility and waste stream, identify contamination issues, and track progress toward zero-waste goals. Recycling agents monitor program compliance, conduct digital waste audits, and provide feedback to improve sorting. Circular economy agents track reusable packaging loops, product take-back programs, and material recovery initiatives with financial and environmental metrics. Analytics agents identify waste generation drivers (production processes, packaging, product damage) and recommend source reduction opportunities with ROI projections.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates waste tracking, diversion rate calculation, recycling program management, circular economy initiatives, and waste reduction analytics"
+            },
+            "superAgents": [
+              {
+                "name": "Waste Tracking Agent",
+                "role": "Collects detailed waste data from haulers, scales, and sensors by type (cardboard, plastic, organics, landfill) and source (production, warehouse, offices)"
+              },
+              {
+                "name": "Diversion Rate Agent",
+                "role": "Calculates real-time diversion rates by facility and waste stream, tracks progress toward zero-waste goals, and identifies contamination issues"
+              },
+              {
+                "name": "Recycling Program Agent",
+                "role": "Monitors employee compliance, conducts digital waste audits with photo documentation, provides contamination feedback, and measures program effectiveness"
+              },
+              {
+                "name": "Circular Economy Agent",
+                "role": "Tracks reusable packaging loops, product take-back programs, and material recovery initiatives with financial savings and environmental impact metrics"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Waste Reduction Analytics Agent",
+                "role": "Identifies waste generation drivers (production scrap, packaging, damage), recommends source reduction opportunities, and projects ROI of waste reduction initiatives"
+              }
+            ]
+          },
+          "benefits": [
+            "Real-time waste tracking enables proactive management vs. monthly retrospective reports",
+            "Diversion rate monitoring improves from annual to continuous with faster goal progress",
+            "Waste reduction analytics identify source reduction opportunities saving 15-25% of waste disposal costs",
+            "Recycling program effectiveness improves 20-30% through contamination feedback and employee engagement",
+            "Circular economy initiative tracking quantifies financial and environmental ROI"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of waste reduction opportunity recommendations before investment",
+              "reason": "Operations and sustainability teams should validate AI-identified waste drivers and approve capital or process investments for source reduction"
+            },
+            {
+              "gate": "Approval of circular economy program expansions and commitments",
+              "reason": "Leadership must approve reusable packaging programs or product take-back initiatives considering operational complexity, costs, and customer acceptance"
+            }
+          ],
+          "dataSources": [
+            "Waste hauler invoices and pickup schedules",
+            "Facility scale data for waste and recycling tonnage",
+            "Waste stream composition audits",
+            "Production scrap and yield loss data",
+            "Packaging materials and quantities by product",
+            "Reusable packaging tracking and return rates",
+            "Employee recycling compliance and contamination rates"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires detailed waste data by type and source. Scale data or hauler system integration for automated tracking. Production scrap data linked to processes. Packaging specifications by product.",
+            "integrationComplexity": "Medium - requires integration with waste hauler systems or facility scales, production execution systems for scrap data, and ERP for packaging specifications. IoT sensors optional for real-time monitoring.",
+            "changeManagement": "Facility teams adopt detailed waste tracking and separation vs. single-stream disposal. Employees engage with recycling feedback and contamination reduction. Operations embrace waste reduction as efficiency opportunity."
+          },
+          "implementation": {
+            "phase1": "Implement detailed waste tracking by type and facility with monthly diversion rate reporting",
+            "phase2": "Add real-time monitoring, recycling program management with contamination feedback, and basic waste reduction analytics",
+            "phase3": "Deploy circular economy tracking, advanced source reduction analytics, and zero-waste goal management"
+          },
+          "roi": {
+            "timeToValue": "3-4 months for tracking, 6-9 months for analytics",
+            "keyMetrics": [
+              "Waste visibility: monthly → real-time",
+              "Diversion tracking: annual → continuous",
+              "Waste disposal cost savings: 15-25%",
+              "Recycling effectiveness: 20-30% improvement",
+              "Circular economy: quantified ROI"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "distribution"],
+          "complianceImpact": "low",
+          "technologyReadiness": "medium"
+        }
+      },
+      {
+        "id": "func-energy-consumption-monitoring",
+        "name": "Energy Consumption Monitoring",
+        "description": "Facility-level energy tracking by source, efficiency improvement identification, renewable energy management, and energy cost optimization",
+        "traditional": {
+          "approach": "Energy consumption is tracked manually through monthly utility bills showing total electricity, natural gas, and other fuel usage. Energy data is compiled in spreadsheets and compared year-over-year for sustainability reporting. Energy efficiency projects are identified through infrequent facility audits (every 3-5 years) by external consultants. Renewable energy generation (solar, wind) is monitored separately through inverter dashboards with manual data export. No real-time visibility into energy consumption patterns or peak demand drivers. Energy cost optimization relies on negotiating utility rates rather than consumption management. Difficult to benchmark energy intensity across facilities or identify best practices.",
+        "limitations": [
+          "Monthly utility bills provide no visibility into daily or hourly consumption patterns",
+          "Infrequent energy audits miss continuous improvement opportunities",
+          "No real-time peak demand management leading to unnecessary demand charges",
+          "Renewable energy tracking is disconnected from total facility consumption",
+          "Difficult to identify energy waste or inefficient equipment without sub-metering"
+        ],
+        "tooling": ["Utility bills", "Excel spreadsheets", "Periodic energy audits", "Separate renewable energy dashboards", "Annual sustainability reports"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive energy management across facilities. Consumption agents collect real-time energy data from utility meters, sub-meters, and building management systems showing usage by source (electricity, gas) and area (production, refrigeration, lighting, HVAC). Analytics agents identify consumption patterns, detect anomalies indicating equipment inefficiency, and benchmark facilities. Peak demand agents monitor real-time demand, predict peak periods, and recommend load shifting to reduce demand charges. Renewable energy agents track solar/wind generation, optimize usage vs. grid export, and calculate renewable percentage of total consumption. Efficiency agents identify improvement opportunities (equipment upgrades, schedule optimization, setpoint changes) with ROI calculations. Cost optimization agents analyze time-of-use rates and recommend consumption shifting to lower-cost periods.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates real-time energy monitoring, consumption analytics, peak demand management, renewable energy tracking, efficiency identification, and cost optimization"
+            },
+            "superAgents": [
+              {
+                "name": "Energy Monitoring Agent",
+                "role": "Collects real-time energy data from meters, sub-meters, and building systems by source and area; detects anomalies indicating equipment issues or inefficiency"
+              },
+              {
+                "name": "Peak Demand Agent",
+                "role": "Monitors real-time demand, predicts peak periods based on production schedules and weather, recommends load shifting to reduce demand charges"
+              },
+              {
+                "name": "Renewable Energy Agent",
+                "role": "Tracks solar/wind generation, optimizes on-site consumption vs. grid export, calculates renewable percentage of total consumption, and monitors renewable energy credits"
+              },
+              {
+                "name": "Efficiency Identification Agent",
+                "role": "Analyzes consumption patterns, identifies improvement opportunities (equipment upgrades, schedule optimization, setpoints), and calculates ROI for efficiency projects"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Cost Optimization Agent",
+                "role": "Analyzes time-of-use utility rates, recommends consumption shifting to lower-cost periods, and quantifies savings from demand response programs"
+              }
+            ]
+          },
+          "benefits": [
+            "Real-time energy monitoring enables immediate response to inefficiencies vs. monthly retrospective analysis",
+            "Peak demand management reduces demand charges by 15-25% through load shifting",
+            "Automated anomaly detection identifies equipment issues weeks earlier than utility bill reviews",
+            "Renewable energy optimization increases on-site consumption by 20-30% vs. grid export",
+            "Continuous efficiency identification finds 10-15% additional energy savings vs. periodic audits"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of efficiency improvement recommendations before capital investment",
+              "reason": "Facilities and engineering teams should validate AI-identified opportunities and approve energy efficiency projects based on ROI and operational impact"
+            },
+            {
+              "gate": "Approval of renewable energy expansion plans and investments",
+              "reason": "Executive leadership must approve solar, wind, or renewable energy purchase commitments considering financial returns and corporate sustainability goals"
+            }
+          ],
+          "dataSources": [
+            "Utility meters and smart meter data (electricity, natural gas)",
+            "Sub-metering data by equipment or area",
+            "Building management system (BMS) data",
+            "Production schedules and equipment run times",
+            "Solar and wind generation data from inverters",
+            "Utility rate structures (time-of-use, demand charges)",
+            "Historical energy consumption and weather data"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires smart meter or sub-meter data for real-time monitoring. BMS integration for HVAC and lighting control. Renewable energy inverter data. Utility rate structures for cost optimization.",
+            "integrationComplexity": "Medium-High - requires meter data collection, BMS integration, renewable energy system connectivity, and analytics platform for pattern detection and recommendations.",
+            "changeManagement": "Facilities teams shift from reactive utility bill management to proactive energy optimization. Operations adapt to load shifting recommendations. Finance approves efficiency investments based on data-driven ROI."
+          },
+          "implementation": {
+            "phase1": "Implement real-time energy monitoring at main utility meters with monthly consumption analytics and benchmarking",
+            "phase2": "Add sub-metering for major loads, peak demand management, and renewable energy tracking",
+            "phase3": "Deploy advanced efficiency analytics, predictive equipment maintenance, and automated load shifting for cost optimization"
+          },
+          "roi": {
+            "timeToValue": "3-5 months for monitoring, 6-12 months for optimization",
+            "keyMetrics": [
+              "Energy visibility: monthly → real-time",
+              "Demand charge reduction: 15-25%",
+              "Equipment issue detection: weeks earlier",
+              "Renewable utilization: 20-30% increase",
+              "Additional efficiency savings: 10-15%"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "cold-storage", "distribution"],
+          "complianceImpact": "low",
+          "technologyReadiness": "high"
+        }
+      },
+      {
+        "id": "func-sustainability-scorecards",
+        "name": "Sustainability Scorecards",
+        "description": "Product and supplier sustainability ratings, ESG metrics aggregation, stakeholder reporting, and sustainability performance trending",
+        "traditional": {
+          "approach": "Sustainability scorecards are created manually once per year for sustainability reports combining data from various sources. Product sustainability is assessed subjectively based on limited attributes (organic certification, recyclable packaging) without comprehensive scoring. Supplier sustainability is evaluated through periodic questionnaires with inconsistent follow-up. ESG metrics (environmental, social, governance) are compiled manually from disconnected systems and external reports. Stakeholder reporting involves creating custom presentations and reports for investors, customers, and NGOs. No real-time visibility into sustainability performance or trends. Difficult to compare sustainability across products or suppliers to guide strategic decisions.",
+        "limitations": [
+          "Annual scorecard creation prevents timely sustainability performance management",
+          "Manual data compilation from multiple sources is time-consuming (60-80 hours) and error-prone",
+          "Subjective product and supplier assessments lack consistency and comparability",
+          "No real-time ESG metrics for board reporting or investor inquiries",
+          "Limited ability to demonstrate sustainability improvements or track initiative effectiveness"
+        ],
+        "tooling": ["Excel spreadsheets", "Manual data collection", "PowerPoint presentations", "Annual sustainability reports", "Ad-hoc investor responses"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive sustainability performance management. Product scoring agents assess sustainability across multiple dimensions (carbon footprint, water usage, packaging recyclability, certifications, social impact) using standardized methodologies. Supplier scoring agents aggregate environmental and social performance data from assessments, audits, certifications, and operational metrics. ESG metrics agents continuously collect data across environmental (emissions, waste, energy), social (labor practices, safety, community), and governance (ethics, compliance, diversity) dimensions. Reporting agents automatically generate sustainability scorecards, ESG reports, CDP disclosures, and custom stakeholder reports with real-time data. Trending agents track performance over time, identify improvement opportunities, and forecast progress toward sustainability goals. Benchmarking agents compare performance against industry peers and best practices.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates product scoring, supplier assessment, ESG metrics aggregation, automated reporting, performance trending, and peer benchmarking"
+            },
+            "superAgents": [
+              {
+                "name": "Product Sustainability Agent",
+                "role": "Scores products across carbon footprint, water usage, packaging, certifications, and social impact using standardized methodology; enables portfolio optimization"
+              },
+              {
+                "name": "Supplier Sustainability Agent",
+                "role": "Aggregates supplier environmental and social performance from assessments, audits, certifications, and operations; provides supplier comparison and development priorities"
+              },
+              {
+                "name": "ESG Metrics Agent",
+                "role": "Continuously collects ESG data across environmental (emissions, waste, energy), social (labor, safety, community), and governance (ethics, compliance, diversity) dimensions"
+              },
+              {
+                "name": "Reporting Agent",
+                "role": "Automatically generates sustainability scorecards, ESG reports, CDP disclosures, investor presentations, and custom stakeholder reports with current data"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Trending & Benchmarking Agent",
+                "role": "Tracks performance trends over time, identifies improvement opportunities, forecasts goal progress, and compares against industry benchmarks"
+              }
+            ]
+          },
+          "benefits": [
+            "Real-time sustainability scorecards enable proactive management vs. annual retrospective reporting",
+            "Automated data collection reduces scorecard compilation time from 60-80 hours to <2 hours",
+            "Standardized product and supplier scoring enables objective comparison and portfolio optimization",
+            "Continuous ESG metrics provide board and investors with current performance vs. outdated annual reports",
+            "Trending and benchmarking demonstrate improvement progress and competitive positioning"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of sustainability scoring methodology and weighting",
+              "reason": "Sustainability experts should validate scoring frameworks, attribute weights, and data sources ensuring alignment with corporate strategy and stakeholder expectations"
+            },
+            {
+              "gate": "Approval of external sustainability disclosures and reports",
+              "reason": "Executive leadership and legal teams must review sustainability reports, CDP disclosures, and investor communications for accuracy, consistency, and strategic messaging"
+            }
+          ],
+          "dataSources": [
+            "Product-level environmental data (carbon, water, packaging)",
+            "Product certifications and sustainability attributes",
+            "Supplier sustainability assessments and scores",
+            "Operational ESG data (emissions, waste, energy, safety, diversity)",
+            "Supplier audit results and certifications",
+            "Sustainability initiative outcomes and progress",
+            "Industry sustainability benchmarks and best practices"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires integrated data from carbon tracking, supplier management, operations (energy, waste, safety), and HR (diversity). Product-level environmental attributes. Industry benchmark data.",
+            "integrationComplexity": "Medium-High - requires integration across environmental monitoring, supplier management, HR, safety systems, and product data. Sustainability scoring frameworks and calculation engines needed.",
+            "changeManagement": "Sustainability teams shift from annual manual reporting to continuous data management. Leadership embraces real-time ESG dashboards. Product and procurement teams adopt sustainability metrics in decisions."
+          },
+          "implementation": {
+            "phase1": "Implement automated ESG data collection and basic sustainability scorecard generation for annual reporting",
+            "phase2": "Add product and supplier sustainability scoring with monthly performance trending",
+            "phase3": "Deploy real-time ESG dashboards, automated stakeholder reporting, predictive goal forecasting, and benchmarking analytics"
+          },
+          "roi": {
+            "timeToValue": "4-6 months for basic scorecards, 9-12 months for real-time capabilities",
+            "keyMetrics": [
+              "Scorecard compilation: 60-80 hours → <2 hours",
+              "Performance visibility: annual → real-time",
+              "Product/supplier comparison: standardized scoring",
+              "Stakeholder reporting: automated vs. manual",
+              "Competitive positioning: benchmarking insights"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "medium-high",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "consumer-goods"],
+          "complianceImpact": "medium",
+          "technologyReadiness": "medium"
+        }
+      },
+      {
+        "id": "func-esg-reporting-compliance",
+        "name": "ESG Reporting & Compliance",
+        "description": "Automated ESG report generation, framework compliance (GRI, SASB, TCFD), investor reporting, regulatory disclosure preparation, and audit trail management",
+        "traditional": {
+          "approach": "ESG reporting is a highly manual annual process involving cross-functional data collection, compilation, and report writing. Sustainability teams distribute Excel templates to departments requesting data on environmental, social, and governance metrics. Responses are manually reviewed, validated, and aggregated over 2-3 months. Report writing requires interpreting framework requirements (GRI, SASB, TCFD) and mapping data to disclosure standards. External assurance involves providing auditors with source documents and evidence through email and shared drives. Investor ESG questionnaires (CDP, DJSI, MSCI) are answered separately with significant duplication. Regulatory disclosures (EU CSRD, SEC climate) require additional manual preparation. Version control and audit trails are maintained in file folders and email chains.",
+        "limitations": [
+          "Manual data collection takes 2-3 months annually delaying report publication",
+          "Framework interpretation is subjective and inconsistent year-over-year",
+          "Separate investor questionnaire responses create duplication and inconsistency",
+          "Difficult to provide audit trails and evidence efficiently during assurance",
+          "Regulatory disclosure preparation is rushed and error-prone under tight deadlines"
+        ],
+        "tooling": ["Excel data collection templates", "Word report drafting", "Email data requests", "Shared drive documentation", "Manual framework mapping"]
+        },
+        "agentic": {
+          "approach": "An orchestrator agent coordinates comprehensive ESG reporting automation. Data collection agents automatically gather ESG metrics from integrated source systems (environmental monitoring, HR, safety, governance) eliminating manual templates. Framework mapping agents interpret reporting requirements (GRI, SASB, TCFD, CDP) and automatically map collected data to disclosure standards with completeness checking. Report generation agents create draft ESG reports, investor questionnaires, and regulatory disclosures using templates and natural language generation. Assurance agents maintain complete audit trails linking reported data to source systems with evidence documentation. Compliance agents monitor evolving ESG reporting regulations and alert to new requirements. Version control agents manage report drafts, reviews, and approvals with complete change history.",
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "description": "Coordinates automated data collection, framework mapping, report generation, audit trail management, regulatory monitoring, and version control"
+            },
+            "superAgents": [
+              {
+                "name": "Data Collection Agent",
+                "role": "Automatically gathers ESG metrics from integrated source systems (environmental, HR, safety, governance) with validation and completeness checking"
+              },
+              {
+                "name": "Framework Mapping Agent",
+                "role": "Interprets reporting framework requirements (GRI, SASB, TCFD, CDP), maps collected data to disclosure standards, and identifies data gaps"
+              },
+              {
+                "name": "Report Generation Agent",
+                "role": "Creates draft ESG reports, investor questionnaires (CDP, DJSI, MSCI), and regulatory disclosures using templates and natural language generation"
+              },
+              {
+                "name": "Assurance Support Agent",
+                "role": "Maintains audit trails linking reported data to source systems, organizes evidence documentation, and facilitates external assurance process"
+              }
+            ],
+            "utilityAgents": [
+              {
+                "name": "Regulatory Monitoring Agent",
+                "role": "Tracks evolving ESG reporting regulations (EU CSRD, SEC climate rules), alerts to new requirements, and assesses compliance readiness"
+              }
+            ]
+          },
+          "benefits": [
+            "Data collection time reduces from 2-3 months to days with automated integration",
+            "Framework mapping ensures consistent, complete disclosures aligned with standards",
+            "Report generation efficiency improves by 70-80% with templates and NLG",
+            "Audit trail management reduces external assurance time and cost by 40-50%",
+            "Regulatory compliance improved through proactive monitoring and gap identification"
+          ],
+          "hitlGates": [
+            {
+              "gate": "Review of automated data mappings to reporting frameworks",
+              "reason": "Sustainability experts should validate that AI-mapped data correctly addresses framework requirements and disclosure intent"
+            },
+            {
+              "gate": "Review and approval of draft ESG reports before publication",
+              "reason": "Sustainability leadership, legal, and executive teams must review report content, messaging, and disclosures before public release"
+            },
+            {
+              "gate": "Approval of responses to investor ESG questionnaires",
+              "reason": "Investor relations and sustainability teams should review CDP, DJSI, and MSCI responses for accuracy and strategic consistency before submission"
+            }
+          ],
+          "dataSources": [
+            "Environmental data (emissions, energy, water, waste)",
+            "Social data (employee safety, diversity, community engagement)",
+            "Governance data (board composition, ethics, compliance)",
+            "Sustainability initiative outcomes and investments",
+            "Supply chain sustainability metrics",
+            "ESG reporting framework requirements (GRI, SASB, TCFD)",
+            "Previous ESG reports and investor questionnaire responses"
+          ]
+        },
+        "transformationGuidance": {
+          "readiness": {
+            "dataRequirements": "Requires integrated ESG data from environmental, HR, safety, and governance systems. Framework requirement databases. Historical ESG reports for AI learning and consistency.",
+            "integrationComplexity": "High - requires integration across multiple ESG data sources, framework requirement interpretation, natural language generation for reporting, and audit trail/evidence management.",
+            "changeManagement": "Sustainability teams shift from manual data collection to data management and strategic reporting. Cross-functional departments adapt to automated data requests. Leadership reviews AI-generated drafts."
+          },
+          "implementation": {
+            "phase1": "Implement automated data collection from primary ESG systems and basic framework mapping for GRI/SASB",
+            "phase2": "Add automated report generation for annual sustainability reports and investor questionnaires with audit trail management",
+            "phase3": "Deploy advanced natural language generation, regulatory monitoring, and predictive compliance for emerging ESG disclosure requirements"
+          },
+          "roi": {
+            "timeToValue": "6-9 months for data automation, 12-18 months for full report generation",
+            "keyMetrics": [
+              "Data collection time: 2-3 months → days",
+              "Framework compliance: consistent and complete",
+              "Report generation: 70-80% efficiency gain",
+              "Assurance time/cost: 40-50% reduction",
+              "Regulatory readiness: proactive vs. reactive"
+            ]
+          }
+        },
+        "metadata": {
+          "complexity": "high",
+          "industryRelevance": ["grocery", "food-manufacturing", "retail", "public-companies"],
+          "complianceImpact": "high",
+          "technologyReadiness": "medium"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "function-mobile-app-ordering-customization",
+    "type": "function",
+    "level": 4,
+    "label": "Mobile App Ordering & Customization",
+    "description": "Personalized mobile ordering with visual customization and saved favorites delivering 35-50% higher order values and 90%+ accuracy through intuitive digital interfaces.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer stands at counter and verbally orders: 'Big Mac with no pickles, extra sauce'. 2. Cashier manually enters order with 10-15% error rate on customizations. 3. Customer repeats order for clarification. 4. Customer pays and waits in lobby for order. 5. No order history or personalization for repeat customers.",
+      "constraints": [
+        "10-15% order error rate from verbal miscommunication",
+        "No visual confirmation of customizations",
+        "Queue wait time 3-8 minutes during peak",
+        "No saved favorites or order history",
+        "Average ticket $8-12 without upsell",
+        "Counter interaction intimidates customization requests"
+      ],
+      "metrics": ["Order accuracy: 85-90%", "Average ticket: $8-12", "Order time: 3-8 min"]
+    },
+    "agentic": {
+      "workflow": "1. Mobile Ordering Agent loads customer's past orders and favorites for quick reorder. 2. Visual Customization Interface shows burger with toggles for toppings, sauces, and modifications. 3. Recommendation Engine suggests upsells based on order: 'Add fries and drink for $3 more (save $2)'. 4. Order Confirmation displays visual summary with all customizations clearly shown. 5. Customer schedules pickup time or curbside delivery, pays in app, bypasses counter completely.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Mobile Ordering Agent", "Visual Customization Interface", "Recommendation Engine"],
+        "utilityAgents": ["Customer Profile", "Menu Management", "Payment Gateway", "Order Routing"]
+      },
+      "dataSources": [
+        "Customer order history and favorites",
+        "Menu items with customization options",
+        "Real-time item availability",
+        "Personalized recommendations and offers",
+        "Nutritional and allergen information",
+        "Store location and pickup options",
+        "Payment methods on file",
+        "Order preparation time estimates"
+      ],
+      "benefits": [
+        "99%+ order accuracy vs 85-90% verbal orders",
+        "35-50% higher average ticket through upsell and bundling",
+        "60-70% faster ordering (1-2 min vs 3-8 min)",
+        "Visual customization encourages personalization",
+        "Saved favorites drive repeat visits",
+        "Zero counter queue time (mobile order ahead)"
+      ],
+      "metrics": ["Order accuracy: 99%+", "Average ticket: $13-18", "Order time: 1-2 min"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch mobile app with one-tap reorder of favorites", "Implement visual burger builder with real-time preview"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Mobile app development", "Menu digitization with modifiers", "Payment integration", "Order routing to kitchen/POS"]
+    },
+    "icon": "device-mobile",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-kiosk-ordering-experience",
+    "type": "function",
+    "level": 4,
+    "label": "Kiosk Ordering Experience",
+    "description": "Self-service kiosks with intuitive navigation and upsell optimization increasing order values 20-35% and reducing counter labor by 40-60% through automated ordering.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer waits in line for cashier availability (3-5 min wait during peak). 2. Cashier takes order verbally, manually enters into POS. 3. Cashier asks scripted upsell: 'Would you like to make that a combo?'. 4. Customer pays at counter and receives receipt. 5. One cashier handles 8-12 customers per hour.",
+      "constraints": [
+        "Limited cashier throughput (8-12 orders/hour per station)",
+        "Inconsistent upsell execution (cashiers forget or feel awkward)",
+        "Labor cost $12-18/hour per cashier",
+        "Peak hour queues frustrate customers",
+        "Training required for new menu items and promotions",
+        "Language barriers create order errors"
+      ],
+      "metrics": ["Orders per hour: 8-12", "Upsell rate: 15-25%", "Labor cost: $12-18/hr"]
+    },
+    "agentic": {
+      "workflow": "1. Kiosk Interface greets customer with visual menu and current promotions. 2. Smart Navigation guides customer through categories with large product images and descriptions. 3. Upsell Engine automatically suggests combos and add-ons: 'Make it a meal for $2.50 more?' with one-tap acceptance. 4. Accessibility Features provide multi-language support, large text mode, voice assistance. 5. Payment processed via card tap/insert, order sent directly to kitchen with unique number for pickup.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Kiosk Interface", "Smart Navigation", "Upsell Engine"],
+        "utilityAgents": ["Menu Management", "Payment Terminal", "Kitchen Integration", "Accessibility Service"]
+      },
+      "dataSources": [
+        "Digital menu with images and descriptions",
+        "Real-time item availability and 86'd items",
+        "Promotional offers and limited-time items",
+        "Upsell rules and combo definitions",
+        "Multi-language content libraries",
+        "Payment processing APIs",
+        "Kitchen display system integration",
+        "Order accuracy and timing metrics"
+      ],
+      "benefits": [
+        "20-35% higher average ticket through automated upsell",
+        "40-60% reduction in counter labor needs",
+        "18-25 orders per hour per kiosk (2x cashier throughput)",
+        "100% consistent upsell execution (never forgets)",
+        "Multi-language support eliminates barriers",
+        "Customers report higher satisfaction (no line pressure)"
+      ],
+      "metrics": ["Orders per hour: 18-25", "Upsell rate: 45-65%", "Labor cost: Equipment amortization"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy 2 kiosks per store to handle 40-50% of orders", "Configure smart upsell for top 5 combo opportunities"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Kiosk hardware procurement", "POS integration", "Menu digitization", "Payment terminal certification"]
+    },
+    "icon": "desktop-computer",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-online-ordering-delivery-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Online Ordering & Delivery Integration",
+    "description": "First-party web ordering with delivery partner integration capturing 15-25% higher margins vs third-party platforms while maintaining direct customer relationships.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer orders via DoorDash or Uber Eats (only delivery option). 2. Third-party platform takes 25-35% commission on order. 3. Customer data owned by delivery platform, not restaurant. 4. Brand can't market directly to customer or build loyalty. 5. Menu pricing marked up 15-20% to cover commission, hurting competitiveness.",
+      "constraints": [
+        "25-35% commission to delivery platforms erodes margins",
+        "Zero first-party customer data or relationship",
+        "Can't build loyalty or retarget customers",
+        "Menu pricing inflated to offset fees (customer pays more)",
+        "Inconsistent brand experience via third-party apps",
+        "Delivery issues blamed on restaurant despite platform fault"
+      ],
+      "metrics": ["First-party orders: 0%", "Commission cost: 25-35%", "Customer data: None"]
+    },
+    "agentic": {
+      "workflow": "1. First-Party Ordering Platform enables web and app orders directly from restaurant brand. 2. Delivery Partner Integration connects to DoorDash Drive, Uber Direct for fulfillment only (10-15% fee vs 25-35%). 3. Customer Data Capture builds owned database: email, phone, preferences, order history. 4. Loyalty Integration awards points and offers for first-party orders (incentivize direct ordering). 5. Smart Routing selects optimal delivery partner based on availability, cost, and customer location.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["First-Party Ordering Platform", "Delivery Partner Integration", "Customer Data Capture", "Smart Routing"],
+        "utilityAgents": ["Website/App", "DoorDash Drive API", "Uber Direct API", "CRM System"]
+      },
+      "dataSources": [
+        "Customer account and profile data",
+        "Order history and preferences",
+        "Menu and pricing (direct, not marked up)",
+        "Delivery partner availability by location",
+        "Real-time delivery cost quotes",
+        "Customer location and address",
+        "Loyalty points balance and offers",
+        "Delivery time estimates by partner"
+      ],
+      "benefits": [
+        "15-25% higher margins (10-15% delivery fee vs 25-35% marketplace)",
+        "First-party customer data enables retargeting and loyalty",
+        "Lower menu pricing (no markup needed) improves competitiveness",
+        "Consistent brand experience across all channels",
+        "Loyalty program drives repeat orders",
+        "40-60% of orders shift from third-party to first-party over 12 months"
+      ],
+      "metrics": ["First-party orders: 40-60%", "Commission cost: 10-15%", "Customer data: 100% owned"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch branded web ordering with DoorDash Drive integration", "Offer 2x loyalty points for first-party orders"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["E-commerce platform or ordering system", "DoorDash Drive/Uber Direct contracts", "CRM for customer data", "Loyalty program integration"]
+    },
+    "icon": "globe",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-order-ahead-pickup",
+    "type": "function",
+    "level": 4,
+    "label": "Order Ahead & Pickup",
+    "description": "Scheduled ordering with curbside and in-store pickup reducing customer wait time by 70-85% and driving 25-35% increase in order frequency through convenience.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer calls restaurant to place order for pickup (phone line often busy). 2. Order taken manually with potential errors. 3. Customer told 'it'll be ready in 15 minutes' with no precision. 4. Customer arrives and waits in line to pick up and pay. 5. Order may not be ready or was prepared too early (cold food).",
+      "constraints": [
+        "Phone ordering inefficient (busy signals, manual entry)",
+        "Imprecise timing leads to cold food or customer waiting",
+        "Customer must queue to pick up and pay",
+        "No visibility into order status",
+        "Staff distracted by phone orders during peak",
+        "Payment at pickup creates bottleneck"
+      ],
+      "metrics": ["Customer wait: 8-15 min", "Order frequency: Baseline", "Cold food complaints: 15-20%"]
+    },
+    "agentic": {
+      "workflow": "1. Order Scheduling Agent allows customer to schedule pickup time: 'Order now for 6:30pm pickup' or 'ASAP in 12 minutes'. 2. Kitchen Timing Agent optimizes preparation start time to ensure food ready exactly at scheduled pickup. 3. Arrival Detection uses geofencing or 'I'm here' button to alert staff when customer arrives. 4. Curbside Coordination Agent sends staff out with order within 90 seconds of customer arrival. 5. Pre-Payment ensures zero waiting - customer grabs order and goes.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Order Scheduling Agent", "Kitchen Timing Agent", "Arrival Detection", "Curbside Coordination Agent"],
+        "utilityAgents": ["Mobile App", "Geofencing Service", "Kitchen Display System", "Staff Alert System"]
+      },
+      "dataSources": [
+        "Customer order and scheduled pickup time",
+        "Kitchen preparation time by item",
+        "Real-time kitchen capacity and queue",
+        "Customer location and arrival status",
+        "Staff availability for curbside delivery",
+        "Historical order accuracy and timing",
+        "Weather and traffic conditions",
+        "Store layout and curbside parking spots"
+      ],
+      "benefits": [
+        "70-85% reduction in customer wait time (2-3 min vs 8-15 min)",
+        "25-35% increase in order frequency (convenience drives usage)",
+        "99%+ on-time readiness vs 60-70% traditional",
+        "Near-zero cold food complaints (optimized timing)",
+        "Labor efficiency (no phone interruptions)",
+        "Higher customer satisfaction scores"
+      ],
+      "metrics": ["Customer wait: 2-3 min", "Order frequency: +25-35%", "Cold food complaints: <2%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch ASAP pickup with 12-15 min time estimates", "Add geofencing for 'I'm 5 min away' alerts"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Mobile app or web ordering", "Kitchen display system integration", "Geofencing capability", "Staff alert system"]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-menu-personalization-recommendations",
+    "type": "function",
+    "level": 4,
+    "label": "Menu Personalization & Recommendations",
+    "description": "AI-driven menu recommendations based on preferences and history increasing average order value 15-30% and customer satisfaction through relevant personalized suggestions.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer views generic menu board with 50+ items. 2. Customer overwhelmed by choices, defaults to usual order. 3. No recommendations based on time of day, preferences, or dietary needs. 4. Customer unaware of new items or limited-time offers. 5. Missed upsell opportunities (customer would have added drink if suggested).",
+      "constraints": [
+        "Static menu same for all customers regardless of preferences",
+        "Choice overload leads to default orders (no exploration)",
+        "New items buried in menu (low trial rate)",
+        "No time-based recommendations (breakfast items shown at dinner)",
+        "Dietary needs not accommodated (vegetarians see meat-heavy menu)",
+        "15-25% of customers would order more if prompted"
+      ],
+      "metrics": ["Menu personalization: None", "New item trial: 5-10%", "Upsell capture: 15-25%"]
+    },
+    "agentic": {
+      "workflow": "1. Personalization Engine analyzes customer: frequent breakfast visitor at 7am gets 'Your usual? Coffee + Egg McMuffin' at top of menu. 2. Dietary Filter automatically surfaces vegetarian options for known vegetarian customer. 3. Recommendation Agent suggests items: 'Try our new Spicy Chicken Sandwich (similar to your favorite Crispy Chicken)'. 4. Contextual Offers present relevant upsells: ordering sandwich triggers 'Add fries and drink for $3?'. 5. Limited-Time Promotion highlights new items customer hasn't tried yet.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Personalization Engine", "Dietary Filter", "Recommendation Agent", "Contextual Offers"],
+        "utilityAgents": ["Customer Profile", "Menu Management", "ML Recommendation Model", "Promotion Engine"]
+      },
+      "dataSources": [
+        "Customer order history and favorites",
+        "Dietary preferences and allergies",
+        "Time of day and day of week patterns",
+        "Similar customer purchase patterns",
+        "New menu items and LTOs",
+        "Item affinity and complement data",
+        "Promotional campaigns and offers",
+        "Customer satisfaction and ratings"
+      ],
+      "benefits": [
+        "15-30% increase in average order value through personalized upsell",
+        "25-40% new item trial rate vs 5-10% traditional",
+        "Higher customer satisfaction (relevant menu, less overwhelm)",
+        "Dietary needs automatically accommodated",
+        "Quick reorder of favorites (convenience)",
+        "Effective promotion of limited-time offers"
+      ],
+      "metrics": ["Menu personalization: 1:1 individual", "New item trial: 25-40%", "Upsell capture: 45-60%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement one-tap reorder of last 3 orders", "Add 'Recommended for You' section based on order history"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Customer profiles with order history", "Recommendation ML models", "Menu item tagging (vegetarian, spicy, etc.)", "Promotion management system"]
+    },
+    "icon": "sparkles",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-nutritional-information-allergen-filtering",
+    "type": "function",
+    "level": 4,
+    "label": "Nutritional Information & Allergen Filtering",
+    "description": "Real-time nutritional data with allergen alerts and dietary filtering preventing 95%+ of allergen incidents and enabling health-conscious ordering with transparency.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer with peanut allergy asks counter staff about allergens. 2. Staff checks binder or calls manager (2-3 min delay). 3. Information may be outdated or incomplete. 4. Customer guesses safe items, risks allergic reaction. 5. No calorie visibility for health-conscious customers.",
+      "constraints": [
+        "Allergen information not readily accessible",
+        "Staff knowledge inconsistent or outdated",
+        "Customer anxiety about allergen safety",
+        "2-5% allergen incident rate due to poor information",
+        "No nutritional transparency (calorie, protein, sodium)",
+        "Health-conscious customers avoid QSR due to lack of data"
+      ],
+      "metrics": ["Allergen incidents: 2-5%", "Nutritional transparency: Low", "Health-conscious orders: 10-15%"]
+    },
+    "agentic": {
+      "workflow": "1. Allergen Profile Agent prompts customer to set dietary restrictions: peanuts, gluten, dairy, shellfish. 2. Menu Filtering automatically removes or flags unsafe items with clear warnings. 3. Nutritional Display shows calories, protein, carbs, sodium for every item and customization. 4. Safe Customization suggests modifications: 'Remove sauce to make this gluten-free'. 5. Alert System warns at checkout: 'Attention: Your order contains dairy (your listed allergen)' with confirmation required.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Allergen Profile Agent", "Menu Filtering", "Nutritional Display", "Alert System"],
+        "utilityAgents": ["Allergen Database", "Nutritional Calculator", "Customer Profile", "Safety Alert Service"]
+      },
+      "dataSources": [
+        "Complete ingredient and allergen database",
+        "Customer dietary restrictions and allergies",
+        "Nutritional information per item and modifier",
+        "Cross-contamination risk data",
+        "Safe customization alternatives",
+        "Regulatory compliance requirements",
+        "Ingredient sourcing and supplier data",
+        "Real-time menu and recipe changes"
+      ],
+      "benefits": [
+        "95%+ reduction in allergen incidents through proactive filtering and alerts",
+        "100% nutritional transparency builds trust",
+        "30-40% increase in health-conscious customer orders",
+        "Regulatory compliance (calorie posting laws)",
+        "Customer confidence drives loyalty",
+        "Liability reduction from allergen incidents"
+      ],
+      "metrics": ["Allergen incidents: <0.5%", "Nutritional transparency: 100%", "Health-conscious orders: 35-50%"]
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "Order contains customer's listed allergen",
+      "policy": "Require explicit customer confirmation and acknowledgment before allowing order submission"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add calorie counts to all menu items", "Implement allergen filter toggle for top 8 allergens"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Complete allergen database", "Nutritional data per item", "Customer profile system", "Real-time menu updates"]
+    },
+    "icon": "shield-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-order-modification-reordering",
+    "type": "function",
+    "level": 4,
+    "label": "Order Modification & Reordering",
+    "description": "Seamless order editing and one-tap reordering reducing friction by 60-80% and increasing repeat order frequency 40-60% through convenience and saved preferences.",
+    "parentCapability": "capability-qsr-digital-ordering",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer places order, then realizes they forgot to add extra sauce. 2. Customer must cancel entire order and start over. 3. For repeat orders, customer must manually browse menu and rebuild order from scratch. 4. Frequent customers order same meal weekly but re-enter every time. 5. No order history or saved favorites.",
+      "constraints": [
+        "Can't modify order after submission (must cancel and restart)",
+        "No order history to reference past orders",
+        "No saved favorites or quick reorder",
+        "Repeat customers waste time rebuilding same order",
+        "Forgotten items require new order or counter visit",
+        "Poor experience drives customers to competitors with better features"
+      ],
+      "metrics": ["Modification friction: High", "Repeat order frequency: Baseline", "Order history: None"]
+    },
+    "agentic": {
+      "workflow": "1. Order Modification Agent allows editing before kitchen prep starts: 'Add extra sauce' or 'Change drink to Diet Coke'. 2. Order History maintains last 20 orders with full customization details. 3. One-Tap Reorder enables instant ordering of past meals: 'Order your usual? Big Mac meal, no pickles, extra Mac sauce'. 4. Favorite Save allows customer to name and save custom orders: 'My Lunch' or 'Kids Meal Friday'. 5. Family Orders save multi-person orders for quick reordering.",
+      "agents": {
+        "orchestrator": "QSR Digital Ordering Orchestration Agent",
+        "superAgents": ["Order Modification Agent", "Order History", "One-Tap Reorder", "Favorite Save"],
+        "utilityAgents": ["Kitchen Integration", "Customer Profile", "Order Database", "Notification Service"]
+      },
+      "dataSources": [
+        "Customer order history with full customizations",
+        "Saved favorite orders and preferences",
+        "Kitchen prep status (modification window)",
+        "Menu availability for reordering",
+        "Family/household shared orders",
+        "Modification rules (what can/can't change)",
+        "Pricing for modified orders",
+        "Reorder frequency and patterns"
+      ],
+      "benefits": [
+        "60-80% reduction in order friction through modification and reorder",
+        "40-60% increase in repeat order frequency (convenience drives usage)",
+        "One-tap reorder completes in <30 seconds vs 3-5 min manual",
+        "Saved favorites eliminate customization re-entry",
+        "Family orders simplify multi-person ordering",
+        "Higher customer satisfaction and loyalty"
+      ],
+      "metrics": ["Modification friction: Low (seamless)", "Repeat order frequency: +40-60%", "Order history: Full access"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement order history with one-tap reorder", "Allow modifications within 5-min window after submission"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Customer accounts and profiles", "Order database with history", "Kitchen integration for modification timing", "Mobile app or web platform"]
+    },
+    "icon": "refresh",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

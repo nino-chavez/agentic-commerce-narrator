@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-skills-assessment-gap-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Skills Assessment & Gap Analysis",
+    "description": "Continuous AI-powered skills inference from projects, certifications, and work activities with automated gap analysis against role requirements providing real-time organizational skills visibility and targeted development recommendations.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR sends annual skills self-assessment survey to all employees (10-20% response rate). 2. Employees manually rate themselves on 20-30 skills using 1-5 scale (self-reported, inflated ratings). 3. Manager reviews employee self-assessments during annual review, adjusts ratings based on observation. 4. HR consolidates responses in spreadsheets to identify organizational skill gaps (3-4 weeks after survey). 5. Skills data becomes stale within months as employees learn new skills or change roles. 6. No real-time visibility into organizational skills inventory or gap analysis.",
+      "constraints": [
+        "Annual assessment provides 0-20% skills visibility (low response rate, stale data)",
+        "Self-reported ratings inflated and unreliable (everyone rates themselves 4-5)",
+        "No skills inference from actual work (projects, certifications, tools used)",
+        "Skills data stale within 3-6 months (no continuous update mechanism)",
+        "Gap analysis manual and infrequent (annual review only)",
+        "No role-based skills requirements for comparison (what skills should role have?)"
+      ],
+      "metrics": ["Skills visibility: 0-20% (annual self-assessment)", "Data freshness: Annual (stale)", "Skills inference: None (self-reported only)", "Gap analysis: Annual (manual)"]
+    },
+    "agentic": {
+      "workflow": "1. Skills Assessment & Gap Analysis Agent continuously infers employee skills from multiple data sources: completed projects (project management tools), certifications earned (LMS, external platforms), tools and technologies used (software licenses, code commits), training completed (LMS transcripts). 2. Agent validates inferred skills through peer endorsements, manager confirmations, and skills assessments (technical tests, coding challenges). 3. Agent compares employee skills profile against role-based skills requirements: 'Software Engineer II requires Python, AWS, Docker - Employee has Python (expert), AWS (intermediate), Docker (missing)'. 4. Agent calculates skills gap score by role and priority: critical gaps (required skills missing), development gaps (skills below expected proficiency), growth gaps (skills for next level). 5. Agent aggregates to organizational level: 'Engineering has 40% gap in cloud infrastructure skills, recommend training investment'. 6. Agent provides real-time skills inventory dashboard for workforce planning, project staffing, and succession planning.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Skills Assessment & Gap Analysis Agent", "Skills Inference Agent"],
+        "utilityAgents": ["HRIS API", "Learning Management System API", "Project Management System APIs", "Certification Verification APIs"]
+      },
+      "dataSources": [
+        "Employee project assignments and completion history",
+        "Training and certification records from LMS",
+        "External certification platforms (LinkedIn Learning, Coursera, Udemy)",
+        "Software license and tool usage data",
+        "Role-based skills requirements and competency models",
+        "Peer endorsements and manager skill validations",
+        "Skills assessment test results and coding challenges"
+      ],
+      "benefits": [
+        "100% skills visibility (vs 0-20%) through continuous inference from work activities",
+        "Real-time skills inventory enables workforce planning and project staffing",
+        "Accurate skills profiles (validated vs self-reported) for talent decisions",
+        "Targeted development recommendations based on actual gaps vs generic training",
+        "Organizational skills gap analysis identifies strategic training investments",
+        "Succession planning informed by real-time skills readiness"
+      ],
+      "metrics": ["Skills visibility: 100% (continuous inference)", "Data freshness: Real-time (continuous)", "Skills inference: Automated (multi-source)", "Gap analysis: Real-time (automated)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy skills inference from LMS training completions and certifications", "Define role-based skills requirements for top 50 job families", "Implement skills gap dashboard for organizational visibility"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Skills taxonomy and competency model definition", "Role-based skills requirements documented", "HRIS integration for employee and role data", "LMS integration for training and certification records", "Project management system integration for work activity inference", "Machine learning capability for skills inference algorithms"]
+    },
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-personalized-learning-recommendations",
+    "type": "function",
+    "level": 4,
+    "label": "Personalized Learning Recommendations",
+    "description": "AI-driven personalized learning paths based on skills gaps, career goals, learning style preferences, and peer success patterns delivering 40-60% higher course completion and 30% faster skill acquisition.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee logs into LMS and browses generic course catalog (1000+ courses with no personalization). 2. Employee searches by keyword or browses by category to find relevant courses. 3. Manager suggests training during annual review based on performance gaps (generic recommendations). 4. Employee enrolls in 2-3 courses, completes 1 (50-60% completion rate due to low relevance). 5. No consideration of learning style, career goals, or skills gap priorities. 6. Employee frustrated by lack of relevant recommendations and overwhelming course catalog.",
+      "constraints": [
+        "Generic course catalog browsing with 1000+ courses (overwhelming, low relevance)",
+        "50-60% course completion rate due to poor personalization",
+        "No skills gap-driven recommendations (what should I learn based on my gaps?)",
+        "No career goal consideration (courses aligned with career aspirations)",
+        "Manager recommendations generic and infrequent (annual review only)",
+        "Learning style preferences not considered (video vs reading vs hands-on)"
+      ],
+      "metrics": ["Course completion rate: 50-60%", "Recommendation relevance: Low (generic catalog)", "Skills gap alignment: None", "Career goal alignment: None"]
+    },
+    "agentic": {
+      "workflow": "1. Personalized Learning Recommendation Agent analyzes employee skills profile, identifies priority gaps: 'You need Docker containerization skills for current Software Engineer II role and Kubernetes for promotion to Senior Engineer'. 2. Agent considers employee career goals: 'You've expressed interest in cloud architecture - recommend AWS certification path aligned with this goal'. 3. Agent recommends learning paths based on peer success: 'Employees in similar roles who completed this 3-course sequence improved Docker proficiency 80% faster than alternative paths'. 4. Agent personalizes content format based on learning style preferences: 'You prefer hands-on labs over video lectures - recommend Interactive Docker course vs lecture-based alternative'. 5. Agent sequences learning path from foundational to advanced: 'Complete Docker basics (1 hour) before Kubernetes orchestration (3 hours) for optimal learning progression'. 6. Agent provides weekly nudges and progress tracking: 'You're 60% through Docker basics - complete the final module this week to stay on track'.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Personalized Learning Recommendation Agent", "Learning Path Agent"],
+        "utilityAgents": ["Learning Management System API", "Content Platform APIs (LinkedIn Learning, Coursera, Udemy)", "Career Site API", "Skills Platform API"]
+      },
+      "dataSources": [
+        "Employee skills gaps from continuous assessment",
+        "Career goals and development plans from HRIS",
+        "Learning style preferences and content format ratings",
+        "Peer learning paths and success patterns (what worked for similar employees)",
+        "Course catalog from LMS and external content platforms",
+        "Course completion rates and skill mastery outcomes",
+        "Learning velocity and time availability data"
+      ],
+      "benefits": [
+        "40-60% higher course completion rate through relevance and personalization",
+        "30% faster time-to-competency through optimized learning paths",
+        "Skills gap-driven recommendations ensure learning addresses business needs",
+        "Career goal alignment increases employee engagement and retention",
+        "Peer success pattern learning reduces trial-and-error course selection",
+        "Learning style personalization improves knowledge retention"
+      ],
+      "metrics": ["Course completion rate: 85-90%", "Recommendation relevance: High (AI-personalized)", "Skills gap alignment: 100%", "Career goal alignment: Integrated"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI recommendations for top priority skills gaps identified in assessment", "Implement learning paths for high-demand technical skills (cloud, data, ML)", "Enable career goal capture and course alignment for professional development"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Skills gap analysis in place (from previous function)", "Career goal data collection mechanism", "LMS integration with recommendation engine capability", "Course catalog metadata (skills taught, prerequisites, difficulty level)", "Learning analytics data (completion rates, skill mastery outcomes)", "Machine learning recommendation algorithms"]
+    },
+    "icon": "light-bulb",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-content-curation-delivery",
+    "type": "function",
+    "level": 4,
+    "label": "Content Curation & Delivery",
+    "description": "AI-curated learning content aggregation from multiple sources (LinkedIn Learning, Coursera, internal) with quality scoring, freshness validation, and microlearning delivery expanding content library 5-10x with always-current material.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. L&D team manually creates 50-100 internal training courses per year (instructor-led, video, e-learning). 2. Courses hosted in company LMS, updated annually if at all (content becomes stale). 3. No external content integration (employees don't have access to LinkedIn Learning, Coursera, Udemy). 4. Long-form courses only (1-8 hours) with no microlearning options for busy employees. 5. Content quality varies widely (no systematic review or rating system). 6. Limited content library (100-200 courses) doesn't cover emerging skills or niche topics.",
+      "constraints": [
+        "Limited internal content library (100-200 courses) with annual creation capacity",
+        "Stale content (courses updated annually or never) misses emerging skills",
+        "No external content platforms (no LinkedIn Learning, Coursera access)",
+        "Long-form courses only (1-8 hours) don't fit busy employee schedules",
+        "Manual content creation expensive and slow (6-12 months per course)",
+        "No quality scoring or freshness validation (outdated courses remain in catalog)"
+      ],
+      "metrics": ["Content library size: 100-200 courses", "Content freshness: Annual updates", "External platform access: None", "Microlearning: Not available"]
+    },
+    "agentic": {
+      "workflow": "1. Content Curation & Delivery Agent aggregates learning content from multiple sources: internal LMS, LinkedIn Learning (20,000+ courses), Coursera (5,000+ courses), Udemy (100,000+ courses), YouTube technical channels, industry publications. 2. Agent curates content based on organizational skills needs: filters 100,000+ external courses to 5,000-10,000 most relevant for company skills taxonomy. 3. Agent validates content quality and freshness: reviews course ratings, last updated date, instructor credentials, learner outcomes - archives outdated content, promotes high-quality recent additions. 4. Agent breaks long-form content into microlearning modules: 1-hour course chunked into 6x 10-minute modules for busy employees to complete during breaks. 5. Agent delivers personalized content recommendations: surfaces curated content aligned with employee skills gaps and learning style preferences. 6. Agent tracks content effectiveness: monitors completion rates, skill mastery outcomes, learner ratings to continuously refine curation.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Content Curation & Delivery Agent", "Content Aggregation Agent"],
+        "utilityAgents": ["Learning Management System API", "External Content Platform APIs (LinkedIn Learning, Coursera, Udemy)", "Content Quality Scoring Engine", "Microlearning Chunking Engine"]
+      },
+      "dataSources": [
+        "Internal LMS course catalog and content",
+        "External content platform catalogs (LinkedIn Learning, Coursera, Udemy)",
+        "Course metadata (skills taught, prerequisites, duration, ratings)",
+        "Course freshness and last updated dates",
+        "Instructor credentials and subject matter expertise",
+        "Learner completion rates and skill mastery outcomes",
+        "Organizational skills taxonomy for content filtering"
+      ],
+      "benefits": [
+        "5-10x content library expansion (1,000-2,000 curated courses vs 100-200 internal)",
+        "Always-current content through external platform integration and freshness validation",
+        "Microlearning delivery enables busy employees to learn in 10-minute increments",
+        "Quality scoring ensures only high-rated effective content surfaced",
+        "Multi-source aggregation provides diverse learning formats and styles",
+        "Reduced L&D content creation burden (curate vs create)"
+      ],
+      "metrics": ["Content library size: 1,000-2,000 curated courses", "Content freshness: Continuous (real-time)", "External platform access: LinkedIn, Coursera, Udemy", "Microlearning: Available (10-min modules)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Subscribe to LinkedIn Learning and Coursera for Business for content access", "Deploy AI content curation filtering 100,000+ courses to top 1,000 most relevant", "Enable microlearning chunking for top 100 most-popular courses"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["External content platform subscriptions (LinkedIn Learning, Coursera, Udemy)", "LMS integration with external content platforms", "Skills taxonomy for content filtering and relevance scoring", "Content quality scoring algorithm or ratings data", "Microlearning chunking capability (manual or automated)", "Usage analytics to track content effectiveness"]
+    },
+    "icon": "collection",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-compliance-training-management",
+    "type": "function",
+    "level": 4,
+    "label": "Compliance Training Management",
+    "description": "Automated compliance training assignment by role with AI-powered reminders, escalation workflows, and completion enforcement achieving 95%+ completion rates versus 70-80% manual tracking.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR manually assigns annual compliance training (harassment, security, safety) to all employees via email. 2. Email contains LMS link and due date (30 days), no automated reminders. 3. HR tracks completion in Excel spreadsheet, manually checking LMS daily for updates. 4. HR sends manual reminder emails at 2 weeks and 1 week before deadline (if time permits). 5. 70-80% completion rate by deadline, 20-30% late or incomplete requiring follow-up. 6. HR manually escalates non-compliant employees to managers via email (1-2 weeks after deadline).",
+      "constraints": [
+        "Manual assignment and tracking takes 8-20 hours per year per compliance course",
+        "70-80% on-time completion rate due to lack of automated reminders",
+        "No role-based assignment (all employees get same training regardless of role requirements)",
+        "Manual escalation delayed 1-2 weeks after deadline (compliance gap)",
+        "Spreadsheet tracking error-prone and labor-intensive",
+        "No certification expiration tracking (annual renewals missed)"
+      ],
+      "metrics": ["On-time completion rate: 70-80%", "Assignment: Manual (email-based)", "Reminders: Manual (if time permits)", "Escalation: Manual (1-2 week delay)"]
+    },
+    "agentic": {
+      "workflow": "1. Compliance Training Agent automatically assigns role-based training upon hire or role change: all employees get security awareness, managers get harassment prevention, store employees get safety training, finance team gets SOX compliance. 2. Agent monitors completion progress and sends AI-powered reminder sequence: friendly reminder at 21 days until due, urgent reminder at 7 days, final notice at 3 days, daily reminders in final 48 hours. 3. Agent personalizes reminders based on employee engagement patterns: send SMS reminders to employees who ignore email, send Slack messages to developers who live in chat, call phone for critical high-risk non-compliance. 4. Agent automatically escalates non-completion: at deadline, notifies manager and director with list of non-compliant employees and business risk impact. 5. Agent tracks certification expiration and triggers renewal workflows: 90 days before harassment training expires, auto-assign refresher course. 6. Agent generates compliance reporting dashboards: completion rates by department, role, location with drill-down to individual non-compliant employees.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Compliance Training Agent", "Certification Tracking Agent"],
+        "utilityAgents": ["Learning Management System API", "Compliance Management Platform API", "Email/SMS Gateway", "Employee Communication Platform APIs (Slack, Teams)"]
+      },
+      "dataSources": [
+        "Role-based compliance training requirements matrix",
+        "Employee role, hire date, and role change history",
+        "LMS training assignment and completion data",
+        "Certification expiration dates and renewal schedules",
+        "Employee communication preferences and engagement patterns",
+        "Manager hierarchy for escalation routing",
+        "Compliance reporting requirements and deadlines"
+      ],
+      "benefits": [
+        "95%+ on-time completion rate (vs 70-80%) through automated reminders and escalation",
+        "Role-based assignment ensures employees only take required training (no over-assignment)",
+        "Zero manual tracking effort (vs 8-20 hours per course) through automation",
+        "Instant escalation at deadline (vs 1-2 week manual delay) reduces compliance risk",
+        "Automated certification expiration tracking prevents gaps in compliance",
+        "Real-time compliance dashboards provide audit readiness"
+      ],
+      "metrics": ["On-time completion rate: 95%+", "Assignment: Automated (role-based)", "Reminders: AI-powered (multi-channel)", "Escalation: Instant (automated)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated compliance training assignment for new hires", "Implement reminder escalation workflow for annual harassment training", "Enable manager escalation reporting for non-compliant employees"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Role-based compliance training requirements documented", "LMS integration for assignment and completion tracking", "Email/SMS gateway for multi-channel reminders", "Manager hierarchy data for escalation routing", "Certification expiration tracking capability", "Compliance reporting dashboard or BI platform"]
+    },
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-learning-impact-measurement",
+    "type": "function",
+    "level": 4,
+    "label": "Learning Impact Measurement",
+    "description": "Skills mastery tracking and on-the-job application measurement with business impact correlation providing ROI visibility for L&D investments and evidence-based training decisions.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee completes training course in LMS (1-8 hours). 2. Employee takes end-of-course quiz or survey rating course satisfaction (Level 1 Kirkpatrick evaluation). 3. Training completion recorded in LMS, no further measurement or follow-up. 4. No assessment of skill mastery or on-the-job application (did learning transfer to work?). 5. No correlation of training to business outcomes (performance improvement, productivity, quality). 6. L&D investments justified by completion metrics only (courses completed, hours of training) with no ROI visibility.",
+      "constraints": [
+        "Training measurement stops at completion (Level 1 Kirkpatrick - did they like it?)",
+        "No skill mastery assessment (Level 2 - did they learn it?)",
+        "No on-the-job application tracking (Level 3 - are they using it?)",
+        "No business impact correlation (Level 4 - did it improve outcomes?)",
+        "L&D ROI unknown - can't justify investments or optimize portfolio",
+        "No data on which training programs actually improve performance"
+      ],
+      "metrics": ["Measurement level: 1 (course satisfaction only)", "Skills mastery tracking: None", "On-the-job application: Not measured", "Business impact: Unknown"]
+    },
+    "agentic": {
+      "workflow": "1. Learning Impact Measurement Agent tracks course completion and immediate skill assessment: employee completes Docker training and takes skill validation test (Level 2 - learning). 2. Agent monitors on-the-job skill application: tracks employee's use of Docker in projects 30-90 days post-training via code commits, project assignments, tool usage (Level 3 - behavior change). 3. Agent measures skill mastery progression: initial assessment score (40/100 before training), post-training score (75/100), 90-day mastery score (85/100 after practice). 4. Agent correlates training to business outcomes: employees who completed Docker training deploy containerized applications 60% faster than those who didn't, improving developer productivity. 5. Agent calculates training ROI: Docker course cost $50K (licenses + employee time), productivity improvement valued at $200K annually (4x ROI). 6. Agent provides evidence-based recommendations: 'Docker training shows strong ROI - expand to all engineering teams. Kubernetes training shows low application rate - investigate barriers or eliminate'.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Learning Impact Measurement Agent", "Skills Validation Agent"],
+        "utilityAgents": ["Learning Management System API", "Performance Management System API", "Analytics Platform", "Skills Assessment Platform", "Project Management APIs"]
+      },
+      "dataSources": [
+        "LMS training completion and course satisfaction data",
+        "Pre-training and post-training skill assessment scores",
+        "On-the-job skill application indicators (tool usage, project assignments, code commits)",
+        "Performance review ratings and goal achievement data",
+        "Business outcome metrics (productivity, quality, revenue, customer satisfaction)",
+        "Training investment costs (course licenses, employee time)",
+        "Peer performance comparisons (trained vs untrained employees)"
+      ],
+      "benefits": [
+        "Complete learning impact visibility (Level 1-4 Kirkpatrick evaluation)",
+        "Skills mastery tracking shows learning retention and progression over time",
+        "On-the-job application measurement identifies training transfer barriers",
+        "Business impact correlation provides L&D ROI justification",
+        "Evidence-based training decisions (expand high-ROI, eliminate low-impact programs)",
+        "Manager visibility into team skill development and training effectiveness"
+      ],
+      "metrics": ["Measurement level: 4 (business impact)", "Skills mastery tracking: Continuous (pre/post/90-day)", "On-the-job application: Measured", "Business impact: Quantified ROI"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement pre/post skill assessments for technical training programs", "Track on-the-job application indicators (tool usage, project assignments)", "Correlate training completion to performance review ratings for pilot group"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Skills assessment platform or capability", "Performance management system integration", "Project management and work activity tracking data", "Business outcome metrics and KPI data", "Training cost and investment tracking", "Analytics platform for impact correlation", "12-24 months historical data for meaningful ROI analysis"]
+    },
+    "icon": "chart-square-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-career-pathing-development-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Career Pathing & Development Planning",
+    "description": "Dynamic career path recommendations based on skills, interests, and internal mobility opportunities with AI-suggested development experiences driving 2-3x internal mobility rate and 30-50% retention improvement.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee asks manager about career path during annual review. 2. Manager provides generic advice: 'Keep doing good work, promotion opportunities come up occasionally'. 3. No structured career path visibility (what roles can I grow into?). 4. No skills-based career recommendations (what should I learn for next role?). 5. Employee discovers internal job postings on career site by accident (no proactive matching). 6. Most career progression happens through external job search (15-25% attrition rate due to lack of internal opportunities).",
+      "constraints": [
+        "No career path visibility (employees don't know growth options)",
+        "Annual career discussions only (no continuous career planning)",
+        "Generic manager advice (not data-driven or skills-based)",
+        "Low internal mobility rate (5-10%) - employees leave for external opportunities",
+        "No proactive matching to internal opportunities based on skills and interests",
+        "15-25% attrition rate partially due to perceived lack of career growth"
+      ],
+      "metrics": ["Internal mobility rate: 5-10%", "Career path visibility: Low (ad-hoc manager advice)", "Skills-based recommendations: None", "Attrition rate: 15-25%"]
+    },
+    "agentic": {
+      "workflow": "1. Career Pathing Agent analyzes employee's current role, skills, interests, and career aspirations: 'Software Engineer II interested in cloud architecture and people management'. 2. Agent identifies possible career paths: lateral move to Cloud Solutions Architect (leverage technical skills), promotion to Senior Engineer (technical depth), transition to Engineering Manager (people leadership). 3. Agent calculates skills gaps for each path: Cloud Architect needs AWS certifications and customer-facing skills, Engineering Manager needs leadership training and project management. 4. Agent recommends development experiences: 'Complete AWS certification, volunteer for customer POC project, shadow current Cloud Architect for 3 months'. 5. Agent monitors internal job postings and proactively notifies employee of relevant opportunities: 'New Cloud Architect role posted - you have 75% skills match and manager recommends you apply'. 6. Agent tracks career progression and adjusts recommendations: employee completes AWS cert and customer project, readiness score increases from 60% to 85% for Cloud Architect role.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Career Pathing Agent", "Development Planning Agent"],
+        "utilityAgents": ["HRIS API", "Skills Platform API", "Organizational Chart API", "Internal Career Site API", "Job Recommendation Engine"]
+      },
+      "dataSources": [
+        "Employee skills profile and proficiency levels",
+        "Career interests and aspirations from employee surveys",
+        "Organizational role taxonomy and career path mappings",
+        "Skills requirements by role for gap analysis",
+        "Internal job postings and mobility opportunities",
+        "Historical career progression patterns and timelines",
+        "Manager career path recommendations and succession plans"
+      ],
+      "benefits": [
+        "2-3x internal mobility rate (15-25% vs 5-10%) through proactive opportunity matching",
+        "30-50% retention improvement from visible career growth opportunities",
+        "Skills-based career recommendations provide actionable development plans",
+        "Proactive job matching surfaces internal opportunities employees wouldn't discover",
+        "Reduced external recruiting costs through internal talent pipeline",
+        "Improved employee engagement and satisfaction through career clarity"
+      ],
+      "metrics": ["Internal mobility rate: 15-25%", "Career path visibility: High (AI-recommended paths)", "Skills-based recommendations: Automated", "Attrition rate: 10-15%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy career path mapping for top 20 job families with progression options", "Implement skills gap analysis for promotion readiness", "Enable proactive internal job matching based on skills and interests"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Organizational role taxonomy and career path definitions", "Skills requirements documented by role", "Skills profile data from continuous assessment (earlier function)", "Internal career site with job posting data", "Career interests and aspirations data collection", "Historical career progression and mobility data", "Job recommendation engine or ML algorithms"]
+    },
+    "icon": "trending-up",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-certification-credential-management",
+    "type": "function",
+    "level": 4,
+    "label": "Certification & Credential Management",
+    "description": "Automated tracking of professional certifications and credentials with expiration alerts, renewal workflows, and external certification platform integration achieving 100% certification currency versus 70-80% manual tracking.",
+    "parentCapability": "capability-learning-development",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee earns professional certification (PMP, SHRM-CP, AWS Certified, etc.) and emails certificate to HR. 2. HR manually enters certification in HRIS spreadsheet with expiration date. 3. No systematic tracking or reminder system for renewals. 4. 20-30% of certifications lapse due to missed renewal deadlines (discovered when employee or manager realizes cert expired). 5. Employee must research renewal requirements, submit to external certification body, and notify HR of renewal. 6. Compliance roles (security, finance, healthcare) face audit risks from lapsed required certifications.",
+      "constraints": [
+        "Manual certification tracking in spreadsheets (70-80% visibility at best)",
+        "20-30% of certifications lapse due to missed renewal deadlines",
+        "No automated expiration alerts or renewal workflows",
+        "Employee responsibility to track and renew (often forgotten)",
+        "Compliance risks from lapsed required certifications (audit findings)",
+        "No integration with external certification platforms (manual certificate upload)"
+      ],
+      "metrics": ["Certification tracking coverage: 70-80%", "Lapsed certifications: 20-30%", "Renewal alerts: Manual (if at all)", "External platform integration: None"]
+    },
+    "agentic": {
+      "workflow": "1. Certification Management Agent integrates with external certification platforms (PMI, SHRM, AWS, Microsoft, Cisco, etc.) to automatically import employee certifications earned with expiration dates. 2. Agent tracks all certifications in centralized system: role-required certifications (compliance), optional professional development certifications, and in-progress certification paths. 3. Agent sends proactive renewal alerts: 90 days before expiration friendly reminder, 60 days educational resources about renewal requirements, 30 days urgent notice with action plan, 15 days escalation to manager and HR. 4. Agent provides renewal workflow guidance: links to continuing education credits needed, study resources, exam scheduling, reimbursement request forms. 5. Agent validates renewal completion: queries external certification platform API to confirm renewal, updates internal record automatically. 6. Agent generates compliance reporting: all employees with required certifications current, at-risk expiring in 60 days, lapsed requiring immediate action.",
+      "agents": {
+        "orchestrator": "Learning & Development Orchestration Agent",
+        "superAgents": ["Certification Management Agent", "Credential Verification Agent"],
+        "utilityAgents": ["Learning Management System API", "External Certification Platform APIs (PMI, SHRM, AWS, Microsoft)", "Alert Notification Service", "Compliance Reporting Engine"]
+      },
+      "dataSources": [
+        "External certification platform APIs for earned certifications and expiration dates",
+        "Role-based certification requirements matrix",
+        "Employee certification inventory and renewal history",
+        "Certification renewal requirements and continuing education credits",
+        "Study resources and exam preparation materials",
+        "Reimbursement policies and approval workflows",
+        "Compliance reporting requirements and audit schedules"
+      ],
+      "benefits": [
+        "100% certification currency (vs 70-80%) through automated tracking and alerts",
+        "Zero lapsed required certifications (vs 20-30%) eliminates compliance risk",
+        "Proactive renewal workflows 90 days advance prevent last-minute scrambles",
+        "External platform integration eliminates manual certificate upload and tracking",
+        "Compliance reporting provides audit readiness and risk visibility",
+        "Employee experience improved through guided renewal process and reminders"
+      ],
+      "metrics": ["Certification tracking coverage: 100%", "Lapsed certifications: 0% (required), <5% (optional)", "Renewal alerts: Automated (90/60/30/15 days)", "External platform integration: Automated"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate with top external certification platforms (AWS, Microsoft, PMI)", "Implement automated expiration alerts for all tracked certifications", "Deploy compliance reporting dashboard for required certifications"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Role-based certification requirements documented", "External certification platform API integrations (PMI, SHRM, AWS, Microsoft)", "LMS or HRIS system to store certification data", "Alert notification infrastructure (email, SMS, push)", "Renewal workflow guidance and resources", "Compliance reporting requirements defined"]
+    },
+    "icon": "badge-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

@@ -1,0 +1,514 @@
+[
+  {
+    "id": "function-realtime-catalog-generation-publishing",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Catalog Generation & Publishing",
+    "description": "Dynamic API-driven catalog generation from ERP inventory and pricing systems with real-time updates, eliminating stale data and batch export processes for instant customer-specific catalog freshness.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT team runs nightly batch job to export product catalog from ERP to CSV/Excel files (12-24 hour cycle). 2. Catalog team manually adds customer-specific pricing and assortment rules to spreadsheets (4-8 hours per customer). 3. Files uploaded to FTP server or emailed to customers (manual distribution). 4. Customer procurement systems import files weekly or monthly. 5. Data becomes stale within hours but takes 24+ hours to refresh, causing order errors from outdated pricing and inventory.",
+      "constraints": [
+        "Nightly batch exports create 24-hour data latency (pricing changes, inventory updates)",
+        "Manual customer-specific customization limits to 10-20% of customers",
+        "30-50% of orders have errors from stale pricing or out-of-stock items",
+        "FTP/email distribution requires manual coordination per customer",
+        "No real-time visibility for customers into current inventory availability",
+        "Catalog updates require full regeneration and redistribution cycle"
+      ],
+      "metrics": ["Catalog refresh cycle: 24 hours (nightly batch)", "Customer-specific catalogs: 10-20%", "Order error rate: 30-50%", "Update latency: 24-48 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Real-Time Catalog Generation Agent continuously monitors ERP inventory, pricing, and PIM data for changes. 2. Agent detects product updates (price change, inventory level, new SKU) and triggers catalog refresh via event-driven architecture (<1 second latency). 3. Agent queries customer-specific contract pricing, assortment rules, and preference data from contract management system. 4. Agent generates customer-specific catalog API response with personalized pricing, available inventory, and product recommendations in real-time (<500ms response). 5. Customer procurement systems consume catalog via standard API (no file exchange required), always accessing current data.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Real-Time Catalog Generation Agent", "Catalog Publishing Agent"],
+        "utilityAgents": ["ERP Integration Agent", "PIM Integration Agent", "CDN Distribution Agent", "Contract Pricing Agent"]
+      },
+      "dataSources": [
+        "ERP inventory and pricing data (real-time change data capture)",
+        "Product Information Management (PIM) system for product specs and images",
+        "Customer contract pricing and terms from CRM/CPQ",
+        "Customer assortment rules (approved/restricted product lists)",
+        "Warehouse inventory availability by fulfillment node",
+        "Customer purchase history and preferences"
+      ],
+      "benefits": [
+        "Real-time catalog freshness (<1 second update latency vs 24 hours)",
+        "80-90% reduction in order errors through accurate pricing and inventory data",
+        "100% customer-specific personalization vs 10-20% manual customization",
+        "Zero manual catalog distribution effort (API replaces file exchange)",
+        "Customers always see current inventory availability preventing backorders",
+        "Event-driven architecture eliminates batch processing overhead"
+      ],
+      "metrics": ["Update latency: <1 second (event-driven)", "Customer-specific catalogs: 100%", "Order error rate: 5-10%", "Distribution effort: Zero (API-driven)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time API catalog for top 20% of B2B customers", "Implement change data capture from ERP for price and inventory updates", "Replace nightly batch with event-driven catalog refresh"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["ERP integration with real-time change data capture capability", "Product Information Management (PIM) system or clean ERP product data", "Customer contract pricing data in structured format", "API infrastructure (REST/GraphQL) for catalog distribution", "CDN for catalog API performance and scalability"]
+    },
+    "icon": "refresh",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-punchout-cxml-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Punchout & cXML Integration",
+    "description": "Self-service punchout integration with customer e-procurement systems (SAP Ariba, Coupa, Oracle) using standardized protocols (cXML, OCI) for seamless supplier catalog browsing within buyer's procurement workflow.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer requests punchout integration to their e-procurement system (Ariba, Coupa, etc.). 2. Sales team opens integration project ticket with IT (4-12 week timeline). 3. IT manually configures punchout endpoint, tests data mapping, coordinates with customer IT (8-20 hours per customer). 4. Customer IT tests integration in sandbox environment, reports errors via email. 5. Back-and-forth debugging and configuration changes (3-5 iteration cycles, 2-3 weeks). 6. Final production deployment requires customer IT approval and scheduling (1-2 week delay).",
+      "constraints": [
+        "4-12 weeks per customer punchout integration (manual IT project)",
+        "Manual configuration doesn't scale beyond 20-30 punchout customers",
+        "30-50% of punchout sessions have data errors requiring rework",
+        "No self-service setup for customers (requires supplier IT involvement)",
+        "Each e-procurement platform requires custom integration work",
+        "Integration maintenance breaks when customer upgrades procurement system"
+      ],
+      "metrics": ["Integration time: 4-12 weeks per customer", "Punchout capacity: 20-30 customers", "Session error rate: 30-50%", "Setup automation: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Punchout Integration Agent provides self-service configuration portal for customers to input their e-procurement system details (Ariba network ID, Coupa supplier ID, etc.). 2. Agent automatically provisions standardized punchout endpoint (cXML, OCI protocols) using pre-built connectors for major platforms (<1 hour setup). 3. Agent validates customer configuration, runs automated test scenarios, and provides sandbox testing credentials. 4. Agent monitors punchout session health in real-time, detects errors (mapping issues, timeout failures), and auto-retries with logging. 5. Agent manages session state, shopping cart serialization, and order punch-out back to customer's procurement system with <500ms response time for seamless buyer experience.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Punchout Integration Agent", "cXML Protocol Agent"],
+        "utilityAgents": ["E-Procurement Platform APIs (SAP Ariba, Coupa, Oracle)", "Session Management Agent", "Authentication & Authorization Agent"]
+      },
+      "dataSources": [
+        "Customer e-procurement system credentials and endpoint URLs",
+        "Standardized punchout protocol specifications (cXML, OCI, Ariba Network)",
+        "Customer catalog configuration (pricing, assortment, approval rules)",
+        "Punchout session logs and error tracking data",
+        "Shopping cart state and order data for serialization",
+        "Customer authentication tokens and API keys"
+      ],
+      "benefits": [
+        "95% faster punchout setup (days vs 4-12 weeks) through self-service",
+        "Unlimited punchout customer scalability (vs 20-30 manual limit)",
+        "90-95% session success rate through automated testing and error handling",
+        "99.9% uptime with real-time monitoring and auto-retry",
+        "<500ms punchout response time for seamless buyer experience",
+        "Zero ongoing maintenance burden with standardized connectors"
+      ],
+      "metrics": ["Integration time: 1-3 days (self-service)", "Punchout capacity: Unlimited (API-driven)", "Session success rate: 90-95%", "Response time: <500ms"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy pre-built Ariba cXML connector for pilot customers", "Implement self-service configuration portal for punchout setup", "Enable real-time session monitoring and error alerting"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Catalog API infrastructure in place (from real-time catalog function)", "Standardized cXML/OCI protocol implementation", "Session management and state persistence capability", "Customer authentication and authorization framework", "Integration partnerships with major e-procurement platforms (Ariba, Coupa, Oracle)"]
+    },
+    "icon": "link",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-customer-specific-catalog-personalization",
+    "type": "function",
+    "level": 4,
+    "label": "Customer-Specific Catalog Personalization",
+    "description": "AI-powered catalog personalization delivering contract-priced, assortment-filtered, and recommendation-enhanced product catalogs tailored to each customer's purchase history, contracts, and preferences.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. All B2B customers see same generic catalog with standard list prices. 2. Customer service manually applies contract pricing after customer contacts sales rep via email or phone. 3. No product recommendations or assortment filtering (customers see all 10,000+ SKUs including non-approved items). 4. Customers must manually search and filter catalog to find relevant products. 5. No visibility into frequently ordered items, recommended reorders, or substitution suggestions.",
+      "constraints": [
+        "Generic catalog provides poor customer experience (no personalization)",
+        "Customers see list prices requiring manual price lookup for contract rates",
+        "No assortment filtering means customers see restricted or non-approved products",
+        "No intelligent recommendations (customers must know SKUs to order)",
+        "Manual contract pricing application takes 15-30 minutes per quote",
+        "80-90% of catalog SKUs irrelevant to typical customer"
+      ],
+      "metrics": ["Catalog personalization: 0% (generic for all)", "Contract pricing visibility: 0% (manual lookup)", "Product recommendations: None", "Customer ordering time: 20-30 minutes avg"]
+    },
+    "agentic": {
+      "workflow": "1. Catalog Personalization Agent retrieves customer profile: contract pricing tiers, approved assortment, purchase history, industry, and preferences. 2. Agent filters catalog to show only customer-approved products based on contract terms, compliance rules, and assortment agreements. 3. Agent applies customer-specific contract pricing, volume discounts, and promotional offers automatically (no manual lookup). 4. Agent generates AI-powered product recommendations: frequently ordered items, recommended reorders based on usage patterns, suggested bundles, and cross-sell opportunities. 5. Agent displays personalized catalog with contract pricing, filtered assortment, and recommendations in <500ms for seamless browsing experience.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Catalog Personalization Agent", "Customer Contract Agent"],
+        "utilityAgents": ["Pricing Engine API", "Contract Management System API", "Product Recommendation Engine", "Purchase History Analytics Agent"]
+      },
+      "dataSources": [
+        "Customer contract pricing tiers and volume discount rules",
+        "Customer approved assortment lists (whitelists, blacklists)",
+        "Purchase history and order frequency data",
+        "Customer industry, segment, and preference data",
+        "Product cross-sell and bundle recommendations",
+        "Inventory availability by customer fulfillment preferences"
+      ],
+      "benefits": [
+        "100% contract pricing visibility (no manual lookup required)",
+        "15-25% average order value (AOV) lift from personalized recommendations",
+        "40-60% faster ordering time (8-12 minutes vs 20-30 minutes)",
+        "Automated assortment compliance (customers only see approved products)",
+        "Improved customer satisfaction through relevant, personalized experience",
+        "Higher win rates against competitors with generic catalogs"
+      ],
+      "metrics": ["Personalization: 100% of customers", "Contract pricing visibility: 100% (automatic)", "AOV lift: 15-25%", "Ordering time: 8-12 minutes avg"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automatic contract pricing application for top 100 customers", "Implement product recommendation engine based on purchase history", "Enable customer-specific assortment filtering for compliance"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Customer contract pricing data in structured format (CPQ or CRM)", "Purchase history data warehouse for recommendation engine", "Customer assortment rules documented and codified", "Product recommendation algorithm or ML model", "Catalog API infrastructure with personalization capability"]
+    },
+    "icon": "user-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ai-product-discovery-search",
+    "type": "function",
+    "level": 4,
+    "label": "AI Product Discovery & Search",
+    "description": "Natural language processing search with visual search, intelligent filters, synonym recognition, and find-similar recommendations transforming B2B catalog browsing into intuitive consumer-grade discovery experience.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer searches catalog using basic keyword search (exact SKU or product name match only). 2. No synonym recognition (searching 'wrench' doesn't find 'spanner'). 3. Filters limited to category and price range (no intelligent faceted search). 4. Search returns 0 results if keyword doesn't match SKU or product name exactly. 5. No visual search, find-similar, or recommendation capabilities. 6. Customers must know exact product names or browse entire catalog manually.",
+      "constraints": [
+        "Basic keyword search with exact match only (low relevance)",
+        "No synonym or natural language understanding ('wrench' vs 'spanner')",
+        "50-70% of searches return zero results due to exact match requirement",
+        "No visual search for customers who have product images but not SKU",
+        "No find-similar or recommendation features for discovery",
+        "Search-to-order conversion rate: 10-20% (poor relevance)"
+      ],
+      "metrics": ["Search relevance: Low (exact match only)", "Zero-result searches: 50-70%", "Search-to-order conversion: 10-20%", "Visual search: Not available"]
+    },
+    "agentic": {
+      "workflow": "1. AI Product Discovery Agent receives natural language search query ('need stainless steel fasteners for outdoor deck'). 2. Agent applies NLP to understand intent, extract attributes (material, use case), and expand with synonyms ('fastener' = 'screw', 'bolt', 'nail'). 3. Agent searches product index (Elasticsearch/Algolia) with fuzzy matching, relevance ranking, and faceted filtering (material, size, application). 4. Agent provides visual search capability: customer uploads product image, agent performs image recognition to find matching or similar products. 5. Agent displays results with intelligent filters, find-similar recommendations, and product comparison tools. 6. Agent learns from customer interactions to improve search relevance over time (click-through, conversion tracking).",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["AI Product Discovery Agent", "Search Relevance Agent"],
+        "utilityAgents": ["Search Index (Elasticsearch/Algolia)", "NLP Processing Agent", "Image Recognition API", "Recommendation Engine"]
+      },
+      "dataSources": [
+        "Product catalog with attributes, specifications, and descriptions",
+        "Product images and visual features for image recognition",
+        "Search query logs and click-through data for relevance tuning",
+        "Customer purchase history for personalized ranking",
+        "Product taxonomy and category hierarchy",
+        "Synonym dictionaries and industry terminology mappings"
+      ],
+      "benefits": [
+        "30-50% improvement in search-to-order conversion through better relevance",
+        "80-90% reduction in zero-result searches via NLP and synonym expansion",
+        "Visual search enables ordering when customer has image but not SKU",
+        "Natural language understanding improves customer self-service",
+        "Find-similar recommendations drive cross-sell and substitution revenue",
+        "Consumer-grade search experience differentiates from competitors"
+      ],
+      "metrics": ["Search relevance: High (NLP + ML ranking)", "Zero-result searches: 5-10%", "Search-to-order conversion: 30-50%", "Visual search: Available"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy intelligent search index (Elasticsearch/Algolia) with synonym expansion", "Implement faceted filtering for key product attributes", "Enable natural language search with NLP preprocessing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Product catalog with structured attributes and specifications", "Search index platform (Elasticsearch, Algolia, or similar)", "Product images for visual search capability", "Search analytics data collection for relevance tuning", "NLP/ML capabilities for query understanding and image recognition"]
+    },
+    "icon": "search",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-realtime-availability-promise",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Availability Promise",
+    "description": "Real-time available-to-promise (ATP) checks across all fulfillment nodes during catalog browsing and checkout to eliminate backorders, oversells, and order errors from stale inventory data.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Catalog displays cached inventory data from nightly ERP batch export (12-24 hours stale). 2. Customer adds items to cart based on displayed 'in stock' status. 3. Customer submits order to supplier. 4. Order entry clerk manually checks actual ERP inventory availability (3-5 hours later). 5. Clerk discovers 10-20% of line items out of stock, contacts customer via email to remove or substitute items. 6. Back-and-forth negotiation on alternatives delays order fulfillment by 2-5 days.",
+      "constraints": [
+        "Cached inventory data 12-24 hours stale causes 10-20% oversell rate",
+        "No real-time ATP check across warehouses, stores, or distribution centers",
+        "Customers don't know true availability until after order submission",
+        "10-20% of orders require manual intervention to resolve inventory issues",
+        "Backorders and substitutions damage customer trust and satisfaction",
+        "Sales lost when inventory shown as unavailable despite other locations having stock"
+      ],
+      "metrics": ["Inventory accuracy: 80-90% (stale data)", "Oversell rate: 10-20%", "Order changes required: 10-20%", "ATP check: Batch (nightly)"]
+    },
+    "agentic": {
+      "workflow": "1. Availability Promise Agent receives customer product view or cart add request. 2. Agent queries real-time inventory across all fulfillment nodes: warehouses, distribution centers, stores, and supplier partners. 3. Agent calculates available-to-promise (ATP) quantity considering on-hand inventory, committed orders, inbound shipments, and safety stock policies. 4. Agent displays real-time availability status to customer: 'In stock (50+ units)', 'Low stock (3 units)', 'Out of stock - Available Feb 15', or 'Special order (3-5 day lead time)'. 5. Agent reserves inventory upon cart add (soft allocation for 30 minutes) to prevent oversells during checkout. 6. Agent validates final ATP at checkout before order submission to guarantee fulfillment.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Availability Promise Agent", "Multi-Node Inventory Agent"],
+        "utilityAgents": ["Inventory System API", "Warehouse Management System API", "Supplier Inventory API", "Allocation Engine"]
+      },
+      "dataSources": [
+        "Real-time warehouse inventory by SKU and location",
+        "Committed order allocations and reservations",
+        "Inbound purchase order and transfer shipment data",
+        "Store inventory for ship-from-store fulfillment options",
+        "Supplier partner inventory for drop-ship items",
+        "Safety stock policies and lead time data"
+      ],
+      "benefits": [
+        "10-15% revenue capture from accurate availability enabling orders",
+        "80-90% reduction in backorders through real-time ATP validation",
+        "Zero oversells with inventory reservation during checkout",
+        "Improved customer trust through accurate availability promises",
+        "Multi-node inventory visibility enables ship-from-store and drop-ship fulfillment",
+        "Reduced customer service time from eliminated inventory disputes"
+      ],
+      "metrics": ["Inventory accuracy: 98-100% (real-time)", "Oversell rate: <1%", "Order changes required: <2%", "ATP check: Real-time (<500ms)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time inventory API integration for top-selling SKUs", "Deploy soft allocation at cart add to prevent oversells", "Display ATP status in catalog ('In stock', 'Low stock', 'Out of stock')"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Real-time inventory visibility from ERP/WMS", "Multi-node inventory data (warehouses, stores, DCs)", "Inventory allocation engine for soft and hard reservations", "Order management system integration for committed quantity tracking", "Supplier inventory APIs for drop-ship and special order items"]
+    },
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-bulk-ordering-upload",
+    "type": "function",
+    "level": 4,
+    "label": "Bulk Ordering & Upload",
+    "description": "CSV/Excel bulk order upload with AI-powered product matching, validation, pricing, and smart substitution suggestions enabling customers to reorder hundreds of line items in minutes instead of hours.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer receives reorder list from their internal system (100-500 line items). 2. Customer manually enters each SKU and quantity into supplier's web portal or punchout catalog (4-8 hours for 200 line items). 3. Customer discovers 10-20% of SKUs don't match supplier's catalog format (old SKUs, typos, synonym issues). 4. Customer emails supplier to request SKU mapping and product identification. 5. Customer service manually maps SKUs and responds via email (1-2 days). 6. Customer re-enters corrected SKUs and submits order.",
+      "constraints": [
+        "Manual line-by-line entry takes 4-8 hours for typical B2B reorder (200 lines)",
+        "No bulk upload capability forces customers to re-type from their system",
+        "10-20% of customer SKUs don't match supplier format (old SKUs, typos)",
+        "Manual SKU mapping resolution takes 1-2 days customer service time",
+        "No validation or error checking until order submission (late discovery)",
+        "Frustrating customer experience for routine high-volume reorders"
+      ],
+      "metrics": ["Bulk order entry time: 4-8 hours (manual)", "SKU match rate: 80-90%", "Error resolution time: 1-2 days", "Bulk upload: Not available"]
+    },
+    "agentic": {
+      "workflow": "1. Bulk Order Processing Agent provides CSV/Excel upload interface for customer reorder list. 2. Agent parses uploaded file, extracts SKUs and quantities, handles multiple formats (customer SKU, manufacturer part number, UPC, product description). 3. Agent performs AI-powered product matching: exact SKU match, fuzzy match for typos, synonym recognition, historical purchase mapping. 4. Agent validates each line item: availability check, contract pricing application, quantity validation, substitution suggestions for out-of-stock items. 5. Agent displays validation report: matched items (green), suggested matches for review (yellow), unable to match requiring attention (red). 6. Agent allows customer to review, accept substitutions, and submit bulk order in 5-10 minutes vs 4-8 hours.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Bulk Order Processing Agent", "Product Matching Agent"],
+        "utilityAgents": ["File Parser Agent", "Product Catalog API", "Inventory API", "Pricing Engine", "SKU Mapping Database"]
+      },
+      "dataSources": [
+        "Customer uploaded CSV/Excel reorder file",
+        "Product catalog with multiple SKU formats (supplier, manufacturer, UPC)",
+        "Historical customer purchase data for SKU mapping",
+        "Inventory availability data for validation",
+        "Customer contract pricing and volume discount rules",
+        "Product substitution and alternative mappings"
+      ],
+      "benefits": [
+        "90-95% time savings for bulk reorders (5-10 minutes vs 4-8 hours)",
+        "AI product matching achieves 85-95% auto-match rate (vs 80-90% manual)",
+        "Instant validation and error feedback (vs 1-2 day email round-trip)",
+        "Smart substitution suggestions for out-of-stock items prevent order delays",
+        "Seamless reorder experience drives customer loyalty and repeat business",
+        "Customer service time saved from eliminated manual SKU mapping requests"
+      ],
+      "metrics": ["Bulk order entry time: 5-10 minutes (upload)", "SKU match rate: 85-95% (AI)", "Error resolution time: Instant (real-time)", "Bulk upload: Available"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy bulk upload for pilot customers with frequent large reorders", "Implement AI product matching using historical purchase data", "Enable smart substitution suggestions for out-of-stock bulk order items"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Historical customer purchase data for SKU mapping", "Product catalog with multiple identifier formats (SKU, UPC, MPN)", "File parsing capability for CSV/Excel formats", "Real-time inventory and pricing APIs for validation", "Product substitution and alternative product mappings"]
+    },
+    "icon": "upload",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-smart-substitution-alternatives",
+    "type": "function",
+    "level": 4,
+    "label": "Smart Substitution & Alternatives",
+    "description": "AI-powered product substitution and alternative recommendations when items are out of stock, including compatibility scoring, price comparison, and automated customer notification to prevent lost sales and order delays.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer adds product to cart and submits order. 2. Order entry team discovers item out of stock when processing order (3-5 hours after submission). 3. Team manually searches catalog for potential substitutes or alternatives based on product category. 4. Team calls or emails customer with 2-3 substitution options and waits for customer response (1-2 days). 5. Customer reviews options, may request additional alternatives or cancel line item (another 1-2 days). 6. Order delayed by 2-5 days or line item removed resulting in lost revenue.",
+      "constraints": [
+        "Out-of-stock items discovered after order submission (reactive)",
+        "Manual substitution search by category only (limited product knowledge)",
+        "No compatibility scoring or specification comparison for substitutes",
+        "1-2 day customer response time delays order fulfillment",
+        "20-30% of out-of-stock line items result in order cancellation (lost sales)",
+        "Poor customer experience from order delays and manual coordination"
+      ],
+      "metrics": ["Out-of-stock handling: Reactive (post-order)", "Substitution suggestions: Manual (3-5 options)", "Response time: 1-2 days", "Conversion on OOS items: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Smart Substitution Agent detects out-of-stock or low-inventory item during catalog browsing or cart review (proactive). 2. Agent analyzes product specifications, attributes, and customer requirements to identify compatible alternatives. 3. Agent calculates compatibility score for each alternative: 100% match (exact specifications), 90%+ (minor differences), 70-89% (functional equivalent with tradeoffs). 4. Agent displays alternatives ranked by compatibility with side-by-side comparison: price difference, availability, lead time, specifications, customer ratings. 5. Customer reviews recommendations and selects preferred alternative inline during catalog browsing or checkout (no order delay). 6. Agent automatically notifies customer of substitution approval and reasoning for order audit trail.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Smart Substitution Agent", "Product Similarity Agent"],
+        "utilityAgents": ["Product Catalog API", "Inventory API", "Pricing Engine", "Specification Comparison Engine"]
+      },
+      "dataSources": [
+        "Product specifications and attribute data for compatibility analysis",
+        "Inventory availability data for substitution options",
+        "Customer contract pricing for substitute products",
+        "Historical substitution acceptance data for learning",
+        "Product cross-reference and alternative product mappings",
+        "Customer product ratings and reviews for alternatives"
+      ],
+      "benefits": [
+        "20-30% revenue recovery on out-of-stock items through substitution conversion",
+        "Proactive substitution at browsing/cart stage vs reactive post-order",
+        "Instant recommendation vs 1-2 day manual process",
+        "AI compatibility scoring ensures functional equivalence vs category-only matching",
+        "Zero order delays from out-of-stock substitution negotiations",
+        "Improved customer satisfaction through transparent comparison and choice"
+      ],
+      "metrics": ["Out-of-stock handling: Proactive (catalog/cart)", "Substitution suggestions: AI-powered (ranked)", "Response time: Instant (real-time)", "Conversion on OOS items: 90-95%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart substitution for top 20% of frequently ordered out-of-stock items", "Implement product similarity scoring based on specifications", "Enable proactive substitution recommendations during catalog browsing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Product catalog with detailed specifications and attributes", "Product cross-reference and alternative product mappings", "Real-time inventory availability data", "Historical substitution acceptance data for ML training", "Specification comparison and compatibility scoring algorithm"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-catalog-analytics-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Catalog Analytics & Optimization",
+    "description": "Real-time catalog performance analytics tracking search trends, zero-result queries, conversion gaps, pricing opportunities, and assortment optimization to drive data-driven catalog strategy and margin improvement.",
+    "parentCapability": "capability-b2b-catalog-punchout",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Catalog manager reviews quarterly sales report by product category from ERP. 2. Manager identifies top-selling and slow-moving SKUs manually in Excel. 3. Manager meets with merchandising team to discuss assortment decisions (no data-driven insights). 4. No visibility into customer search behavior, zero-result queries, or catalog usability issues. 5. Pricing decisions based on cost-plus or competitive benchmarking (no customer behavior analysis). 6. Catalog optimization happens annually during planning cycle (reactive).",
+      "constraints": [
+        "Quarterly sales review provides limited actionable catalog insights",
+        "No visibility into customer search behavior or catalog navigation patterns",
+        "Zero-result searches not tracked (missed product demand signals)",
+        "No conversion gap analysis (browsing but not buying = pricing issue?)",
+        "Assortment decisions based on gut feel vs customer demand data",
+        "Annual catalog optimization cycle misses seasonal and trend opportunities"
+      ],
+      "metrics": ["Catalog review frequency: Quarterly", "Search analytics: None", "Conversion gap analysis: None", "Assortment optimization: Annual"]
+    },
+    "agentic": {
+      "workflow": "1. Catalog Analytics Agent continuously monitors catalog performance: search queries, browse patterns, cart adds, conversion rates, abandonment points. 2. Agent tracks zero-result searches and identifies product demand gaps: 'Customers searching for [stainless steel metric bolts] 500 times/month but no matching products'. 3. Agent analyzes conversion gaps: products with high views but low conversion suggest pricing issues, poor images, or missing specifications. 4. Agent identifies pricing opportunities: products with high conversion and low price sensitivity qualify for price increases (margin expansion). 5. Agent recommends assortment optimization: add high-demand missing products, remove slow-moving SKUs, promote underperforming high-margin items. 6. Agent generates weekly insights dashboard for catalog manager with ranked action items and projected impact.",
+      "agents": {
+        "orchestrator": "B2B Catalog Orchestration Agent",
+        "superAgents": ["Catalog Analytics Agent", "Assortment Optimization Agent"],
+        "utilityAgents": ["Analytics Platform API", "BI Dashboard API", "Search Analytics Engine", "Pricing Optimization Engine"]
+      },
+      "dataSources": [
+        "Catalog search query logs and zero-result queries",
+        "Product view, cart add, and purchase conversion funnel data",
+        "Pricing data and customer price sensitivity analysis",
+        "Product margin and profitability data from ERP",
+        "Competitive pricing benchmarks from market data",
+        "Customer segment and behavior patterns"
+      ],
+      "benefits": [
+        "Real-time catalog performance visibility vs quarterly lag",
+        "Data-driven assortment decisions from customer demand signals",
+        "5-10% margin improvement through pricing optimization on low-sensitivity items",
+        "Revenue capture from adding products with high zero-result search demand",
+        "Improved conversion rates through addressing catalog usability gaps",
+        "Continuous optimization vs annual catalog planning cycle"
+      ],
+      "metrics": ["Catalog review: Real-time dashboards", "Search analytics: Full visibility", "Conversion gap analysis: Automated", "Assortment optimization: Continuous"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy search analytics to track zero-result queries and identify demand gaps", "Implement conversion funnel analysis to identify high-view low-conversion products", "Create catalog performance dashboard with weekly insights"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Catalog analytics and search query tracking", "Product view and conversion funnel data collection", "Business intelligence platform for dashboards and reporting", "Pricing and margin data from ERP for optimization analysis", "Historical sales and catalog performance data (12-24 months)"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

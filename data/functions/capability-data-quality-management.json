@@ -1,0 +1,464 @@
+[
+  {
+    "id": "function-automated-data-profiling-quality-scoring",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Data Profiling & Quality Scoring",
+    "description": "ML-powered data profiling with automated quality scoring achieving 90%+ data quality visibility and 70-85% reduction in manual profiling time enabling proactive data issue prevention.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Data analyst onboards new data source (customer data from acquired company): 500K records, 50 columns, manual profiling required. 2. Analyst writes SQL queries: checks null rates, distinct values, data types, value distributions column-by-column (8-12 hours work). 3. Analyst discovers issues reactively: 'Email column has 40% nulls, Phone column contains letters (data type violation), ZipCode has 5-digit and 9-digit formats mixed'. 4. Analyst creates Excel report: 'Data quality issues found - 15 columns have problems, estimated 30% of records unusable'. 5. Data integration team starts cleansing: writes ETL scripts to fix issues, 2-3 weeks development time. 6. Production reports using uncleansed data meanwhile: executives see duplicate customers, incorrect segmentation, bad analytics. 7. Data quality unknown until manually analyzed, reactive discovery of issues after production impact.",
+      "constraints": [
+        "8-12 hour manual profiling per data source",
+        "Reactive issue discovery (after production impact)",
+        "No ongoing monitoring (one-time analysis, issues creep back)",
+        "Limited coverage (analyst can only profile small subset of tables)",
+        "Excel-based documentation (quality scores not systematic)",
+        "2-3 week remediation lag (ETL development after issues found)"
+      ],
+      "metrics": ["Profiling time: 8-12 hours per source", "Data quality visibility: <10% of tables profiled", "Issue discovery: Reactive (post-production)", "Quality scoring: None (manual assessment)"]
+    },
+    "agentic": {
+      "workflow": "1. Data Profiling Agent automatically analyzes new data source: scans all 500K records, 50 columns, generates comprehensive profile in 15-30 minutes. 2. Agent calculates quality scores: 'Overall data quality: 65/100 (Fair), Email completeness 60/100 (40% nulls, CRITICAL), Phone validity 40/100 (data type violations, HIGH RISK), ZipCode consistency 70/100 (mixed formats, MEDIUM)'. 3. Agent identifies anomalies: 'Customer_ID has 2,500 duplicates (0.5% duplication rate), Address_Line2 95% null (expected for apartments, LOW RISK), Revenue_LTM negative values detected (5 records, DATA ERROR)'. 4. Agent provides recommendations: 'Priority 1: Fix email nulls (40% → target 95% complete), implement email validation. Priority 2: Standardize phone format (remove letters, consistent 10-digit). Priority 3: Normalize ZipCode to 5-digit format'. 5. Agent monitors quality continuously: profiles data weekly, tracks quality score trends, alerts on degradation: 'Email completeness dropped from 95% to 88% this week, investigate data feed'. 6. Data engineers receive automated quality reports: prioritized issue list, quality trend dashboards, 70-85% time savings vs manual profiling. 7. 90%+ table coverage (all tables profiled automatically), proactive monitoring prevents production issues.",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Data Profiling Agent", "Quality Scoring Agent", "Anomaly Detection Agent"],
+        "utilityAgents": ["Data Catalog API", "Statistical Engine", "ML Pattern Detector", "Alert Service"]
+      },
+      "dataSources": [
+        "Raw data tables and files (databases, data lake, cloud storage)",
+        "Data catalog metadata (table schemas, column definitions)",
+        "Historical data profiles for trend comparison",
+        "Data quality rules and thresholds (null limits, format standards)",
+        "Business glossary (expected value ranges, valid codes)",
+        "Statistical distribution models (detect outliers and anomalies)",
+        "Data lineage (upstream sources causing quality issues)",
+        "Quality improvement project tracking"
+      ],
+      "benefits": [
+        "70-85% time reduction (15-30 min vs 8-12 hours manual profiling)",
+        "90%+ table coverage (all tables profiled vs <10% manual)",
+        "Automated quality scoring (65/100 systematic score vs subjective)",
+        "Proactive monitoring (weekly profiles, trend alerts)",
+        "Prioritized recommendations (fix email nulls first, highest impact)",
+        "Continuous quality tracking (prevent degradation before production impact)"
+      ],
+      "metrics": ["Profiling time: 15-30 minutes per source", "Data quality visibility: 90%+ of tables profiled", "Issue discovery: Proactive (pre-production)", "Quality scoring: 0-100 automated scores"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated profiling for top 20 critical data sources", "Implement quality scoring dashboard with traffic-light alerts", "Enable weekly automated profiling with trend monitoring"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Data quality platform (Informatica DQ, Talend DQ, Great Expectations)", "Access to all data sources (databases, data lake, APIs)", "Data catalog for metadata management", "Quality rules and threshold definitions", "Business glossary with valid value ranges", "Alert and notification system", "Dashboarding for quality score visualization"]
+    },
+    "icon": "clipboard-check",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-data-cleansing-standardization",
+    "type": "function",
+    "level": 4,
+    "label": "Data Cleansing & Standardization",
+    "description": "AI-powered data cleansing with automated pattern learning achieving 80-95% cleansing automation and 60-80% reduction in ETL development time through intelligent transformation rules.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Data integration team receives customer data from 3 sources: CRM (US format: MM/DD/YYYY), ERP (European format: DD/MM/YYYY), Marketing (ISO: YYYY-MM-DD). 2. Developer writes custom ETL code: detects source system, applies format conversion logic, handles edge cases (leap years, invalid dates). 3. Developer discovers address variations: '123 Main St', '123 Main Street', '123 MAIN ST.' (same address, inconsistent format). 4. Developer writes more code: standardize street abbreviations (St → Street), uppercase conversion, remove trailing periods. 5. Phone number formats vary: '555-123-4567', '(555) 123-4567', '5551234567' - developer writes regex patterns. 6. Total ETL development: 2-3 weeks for data cleansing logic (40-60 hours), brittle code breaks on new edge cases. 7. Next data source requires starting over (each source unique, no reusable patterns).",
+      "constraints": [
+        "2-3 week ETL development per data source",
+        "Manual pattern coding (developer writes regex, if-then logic)",
+        "Brittle transformations (break on edge cases not anticipated)",
+        "No reusability (each source requires custom code)",
+        "40-60 hour development time for cleansing rules",
+        "Limited coverage (only handle known patterns, new variations fail)"
+      ],
+      "metrics": ["ETL development time: 2-3 weeks per source", "Cleansing automation: 40-50% (manual coding)", "Pattern coverage: 70-80% (miss edge cases)", "Reusability: Low (custom per source)"]
+    },
+    "agentic": {
+      "workflow": "1. Data Cleansing Agent analyzes new data source: learns patterns automatically from sample data (no manual coding required). 2. Agent detects date format variations: 'Detected 3 date formats: MM/DD/YYYY (60%), DD/MM/YYYY (30%), YYYY-MM-DD (10%) - recommend standardize to ISO format YYYY-MM-DD'. 3. Agent creates transformation rules automatically: 'Apply date format conversion: detect format by context (day > 12 → DD/MM, otherwise ambiguous → use source metadata), validate output, flag ambiguous cases for review (2% of records)'. 4. Agent standardizes addresses: learns common variations ('St' → 'Street', 'Ave' → 'Avenue'), applies USPS standardization rules, geocodes for validation. 5. Agent normalizes phone numbers: detects patterns, removes formatting, validates length (10 digits US, country code handling), flags invalid numbers (letters, wrong length). 6. Agent generates cleansing report: '98% of records cleansed automatically, 2% flagged for manual review (ambiguous dates, invalid phones), quality score improved 65 → 92'. 7. 80-95% cleansing automation (vs 40-50% manual), reusable patterns (agent learns from previous sources), 60-80% ETL time reduction.",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Data Cleansing Agent", "Pattern Learning Agent", "Standardization Agent"],
+        "utilityAgents": ["ML Platform", "USPS Address API", "Geocoding Service", "Data Validation Rules"]
+      },
+      "dataSources": [
+        "Raw uncleansed data (various formats, sources)",
+        "Reference data (valid country codes, state abbreviations, USPS standards)",
+        "Pattern libraries (learned from previous cleansing projects)",
+        "Validation rules (date ranges, phone number formats, email regex)",
+        "Geocoding services for address validation",
+        "Historical cleansing outcomes (feedback for ML learning)",
+        "Business glossary (standard formats, accepted values)",
+        "Data quality thresholds (acceptable error rates)"
+      ],
+      "benefits": [
+        "60-80% ETL time reduction (3-5 days vs 2-3 weeks)",
+        "80-95% cleansing automation (vs 40-50% manual coding)",
+        "Auto-learned patterns (no manual regex/transformation coding)",
+        "Reusable transformations (agent learns from each source)",
+        "98% automatic handling (2% flagged for review vs 20-30% manual)",
+        "Quality improvement (65 → 92 score after cleansing)"
+      ],
+      "metrics": ["ETL development time: 3-5 days per source", "Cleansing automation: 80-95% (AI-powered)", "Pattern coverage: 95%+ (ML learns edge cases)", "Reusability: High (patterns transfer across sources)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI cleansing for address standardization using USPS API", "Implement automated phone number normalization across all sources", "Enable pattern learning for date format detection and conversion"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Data quality platform with ML-powered cleansing", "Reference data sources (USPS, ISO standards)", "Pattern library and rule repository", "Validation services (geocoding, email verification)", "ETL platform integration for automated cleansing", "Manual review workflow for flagged records", "Quality metrics and success tracking"]
+    },
+    "icon": "sparkles",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-duplicate-detection-deduplication",
+    "type": "function",
+    "level": 4,
+    "label": "Duplicate Detection & Deduplication",
+    "description": "ML-powered fuzzy matching with probabilistic scoring achieving 90-95% duplicate detection accuracy and 75-85% reduction in manual merge time enabling clean golden records.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing team discovers customer duplicates: 'John Smith' appears 3 times in database with slight variations (Johathan Smith, J. Smith, Jon Smith). 2. Data analyst writes SQL query: 'SELECT * WHERE name LIKE John%' - finds 500 matches, must review manually. 3. Analyst compares records: John Smith, 123 Main St vs Johathan Smith, 123 Main Street (same person, different spelling). 4. Analyst identifies duplicates through manual review: checks name, address, email, phone across 500 records (8-12 hours). 5. Analyst finds 50 duplicate sets (150 total duplicates), creates merge recommendations in Excel: 'Merge Record 1 + Record 47 + Record 233'. 6. Database admin performs manual merges: updates records, handles conflicts (which email to keep?), 2-3 days work. 7. Process repeated quarterly, duplicates accumulate 10-15% of database (30K duplicates in 300K customer records).",
+      "constraints": [
+        "8-12 hour manual duplicate review per batch",
+        "Simple matching (exact name match only, miss variations)",
+        "2-3 day merge process (manual updates, conflict resolution)",
+        "Quarterly cleanup (duplicates accumulate between cycles)",
+        "10-15% duplicate rate (30K in 300K database)",
+        "High false positive rate (flags non-duplicates 20-30% of time)"
+      ],
+      "metrics": ["Duplicate detection accuracy: 60-70% (miss variations)", "Manual review time: 8-12 hours per batch", "Merge time: 2-3 days", "Duplicate rate: 10-15%"]
+    },
+    "agentic": {
+      "workflow": "1. Deduplication Agent scans customer database: analyzes 300K records using fuzzy matching algorithms (Levenshtein distance, phonetic matching, ML similarity scoring). 2. Agent identifies duplicates with confidence scores: 'John Smith + Johathan Smith = 95% match (name variation, same address/email), J. Smith + John Smith = 88% match (nickname, same phone), Jon Smith + Jean Smith = 45% match (low confidence, different person)'. 3. Agent creates duplicate clusters: Cluster #1 (John Smith, Johathan Smith, J. Smith) = merge recommended 95% confidence, Cluster #2 (Jon Smith, Jean Smith) = review required (low confidence). 4. Agent generates golden record: combines best data from each duplicate (most complete email, most recent address, validated phone), handles conflicts with business rules (prefer CRM data over marketing data). 5. Data steward reviews low-confidence matches: approves or rejects 200 flagged clusters (1-2 hours vs 8-12 hours full review). 6. Agent performs automatic merges: 2,500 high-confidence duplicates merged automatically (95%+ confidence), 200 manual review, total 2,700 duplicates removed. 7. 75-85% manual review time reduction, 90-95% detection accuracy, duplicate rate 2-3% (vs 10-15%).",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Deduplication Agent", "Fuzzy Matching Agent", "Golden Record Agent"],
+        "utilityAgents": ["ML Similarity Scorer", "Phonetic Matcher", "Address Validator", "Merge Conflict Resolver"]
+      },
+      "dataSources": [
+        "Customer master data (name, address, email, phone)",
+        "Transaction history (helps confirm same person via behavior)",
+        "Similarity scoring models (ML-trained on previous merges)",
+        "Phonetic algorithms (Soundex, Metaphone for name matching)",
+        "Address standardization service (detect same address variations)",
+        "Email/phone validation APIs (confirm contact info)",
+        "Business rules for conflict resolution (which data source trusted)",
+        "Data steward feedback (approve/reject matches for continuous learning)"
+      ],
+      "benefits": [
+        "75-85% manual review time reduction (1-2 hours vs 8-12 hours)",
+        "90-95% duplicate detection accuracy (catch name variations)",
+        "Automated merging (2,500 duplicates merged without manual work)",
+        "Duplicate rate reduction (2-3% vs 10-15%)",
+        "Confidence scoring (prioritize high-confidence merges)",
+        "Golden record creation (best data from each duplicate)"
+      ],
+      "metrics": ["Duplicate detection accuracy: 90-95% (fuzzy matching)", "Manual review time: 1-2 hours per batch", "Merge time: <1 day (automated)", "Duplicate rate: 2-3%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy fuzzy matching for customer name deduplication", "Implement probabilistic scoring for automated high-confidence merges", "Enable data steward review workflow for low-confidence matches"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Master data management (MDM) platform with deduplication capability", "ML-powered fuzzy matching algorithms", "Similarity scoring models (train on historical merges)", "Address standardization and phone validation services", "Business rules for golden record creation", "Data steward review workflow and UI", "Continuous learning from steward feedback"]
+    },
+    "icon": "duplicate",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-data-validation-rules-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Data Validation Rules & Monitoring",
+    "description": "Automated validation framework with real-time rule enforcement achieving 95%+ data quality at ingestion and 80-90% reduction in downstream data errors through prevention.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Data loaded into warehouse nightly: ETL process extracts from source systems, loads to staging tables (no validation at ingestion). 2. Business analyst runs morning reports: discovers data issues (negative revenue values, future-dated orders, invalid product codes). 3. Analyst reports issues to data team: 'Yesterday's load has 500 records with negative revenue, 200 orders dated 2025 (typo?), 100 invalid product SKUs'. 4. Data engineer investigates: traces back to source system (vendor file had corrupt records), creates fix in ETL. 5. Engineer reruns last night's load: corrects 500 records, takes 4-6 hours to identify root cause and reprocess. 6. Production reports delayed: business users wait until 2pm for corrected data (vs 8am SLA). 7. No preventive validation, issues discovered after loading (reactive fix vs proactive prevention).",
+      "constraints": [
+        "No ingestion-time validation (bad data loaded to warehouse)",
+        "4-6 hour investigation and reprocessing per incident",
+        "Production reports delayed (8am SLA missed, delivered 2pm)",
+        "Reactive issue discovery (analysts find errors in reports)",
+        "500-800 bad records per month slip through",
+        "Downstream impact (BI dashboards, ML models trained on bad data)"
+      ],
+      "metrics": ["Data validation coverage: <20% (no systematic validation)", "Bad records loaded: 500-800/month", "Investigation time: 4-6 hours per incident", "Report SLA attainment: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Validation Agent monitors data ingestion in real-time: applies 500+ validation rules (range checks, format validation, referential integrity, business logic). 2. Vendor file received overnight: agent scans 50K records, detects 500 violations (negative revenue, future dates, invalid SKUs). 3. Agent quarantines bad records: 'Validation failed: 500 records quarantined (1% of file), Revenue <0 (300 records), Order_Date > Today (200 records), Product_SKU not in catalog (100 records, overlapping)'. 4. Agent sends alert to data engineer: 'Vendor file XYZ has 500 invalid records, quarantine report attached, recommend notify vendor or apply default rules (set negative revenue to 0, set future dates to today)'. 5. Engineer reviews quarantine report at 7am: approves default fix for 400 records (safe corrections), rejects 100 (requires vendor correction). 6. Agent loads 49,500 clean records + 400 corrected: production reports run 8am on-time with 99% data quality, 100 records held for vendor follow-up. 7. 95%+ data quality at ingestion (vs <80% reactive), 80-90% reduction in downstream errors, production SLA 95%+ attainment.",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Validation Agent", "Quarantine Management Agent", "Rule Enforcement Agent"],
+        "utilityAgents": ["Rule Engine", "Reference Data Service", "Alert System", "Data Correction Tools"]
+      },
+      "dataSources": [
+        "Incoming data files and feeds (vendor data, API responses, manual uploads)",
+        "Validation rules library (500+ rules: range, format, referential integrity)",
+        "Reference data (valid product codes, customer IDs, country codes)",
+        "Business logic rules (order date <= today, revenue >= 0)",
+        "Historical validation patterns (common error types by source)",
+        "Quarantine database for failed records",
+        "Data correction policies (when to auto-fix vs manual review)",
+        "SLA tracking (report delivery time requirements)"
+      ],
+      "benefits": [
+        "95%+ data quality at ingestion (prevent bad data from entering)",
+        "80-90% reduction in downstream errors (BI, ML models protected)",
+        "Real-time validation (500 bad records caught before loading)",
+        "Automated quarantine (1% of records held, 99% loaded clean)",
+        "Production SLA 95%+ attainment (8am delivery vs 2pm delays)",
+        "Vendor feedback loop (quarantine reports inform data quality improvement)"
+      ],
+      "metrics": ["Data validation coverage: 95%+ (500+ rules enforced)", "Bad records loaded: <50/month (99% caught)", "Investigation time: 30-60 min (quarantine review)", "Report SLA attainment: 95%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy validation rules for top 10 critical data quality dimensions", "Implement automated quarantine for failed validation records", "Enable real-time alerting for validation rule violations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Data validation platform with rule engine", "Reference data management (valid codes, IDs)", "Quarantine database and workflow for failed records", "Alert and notification system", "Data correction policies and decision framework", "Integration with ETL/data pipeline", "Validation rule library and governance process"]
+    },
+    "icon": "shield-check",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-data-quality-dashboards-alerting",
+    "type": "function",
+    "level": 4,
+    "label": "Data Quality Dashboards & Alerting",
+    "description": "Real-time quality monitoring with predictive degradation alerts achieving 90%+ proactive issue detection and 60-80% reduction in data-related incident resolution time.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Data team has no systematic quality monitoring: relies on user complaints to discover issues ('Revenue report looks wrong'). 2. Business analyst emails data team: 'Sales numbers don't match last week, something wrong with data'. 3. Data engineer investigates: pulls quality metrics manually (null rates, record counts, duplicate checks), discovers customer table has 60% null email addresses (was 5% last month). 4. Engineer traces root cause: vendor data feed format changed 2 weeks ago, email column shifted to different position, ETL mapping incorrect. 5. Engineer fixes ETL, reruns 2 weeks of loads: 14 days of reports had incorrect customer segmentation (email-based campaigns affected). 6. Issue existed 2 weeks before discovery: marketing campaigns sent without proper email data, $50K wasted spend. 7. Reactive quality management (discover issues after business impact), no proactive monitoring or alerting.",
+      "constraints": [
+        "No systematic quality monitoring (rely on user complaints)",
+        "2-week issue discovery lag (reactive detection)",
+        "Manual quality checks (pull metrics when issue reported)",
+        "Business impact before detection ($50K wasted marketing spend)",
+        "No trend tracking (can't see quality degrading over time)",
+        "Root cause investigation 4-8 hours per incident"
+      ],
+      "metrics": ["Quality monitoring: Ad-hoc (no systematic tracking)", "Issue detection time: 2-4 weeks (reactive)", "Business impact: High ($50K per incident)", "Proactive alerts: None"]
+    },
+    "agentic": {
+      "workflow": "1. Quality Monitoring Agent tracks 200+ data quality metrics continuously: null rates, record counts, duplicate percentages, schema changes, value distributions. 2. Agent detects degradation early: 'Customer table email null rate increased from 5% to 15% over 48 hours (300% spike), threshold exceeded (>10% nulls)'. 3. Agent sends immediate alert to data team: 'CRITICAL: Customer email quality degraded, 15% nulls vs 5% baseline, likely data feed issue, investigate vendor file format'. 4. Data engineer receives alert within 2 hours of issue start (vs 2-week discovery): checks vendor file, confirms format change, fixes ETL mapping. 5. Only 2 days of data affected (vs 14 days): reprocessing limited to 2-day window, marketing campaigns corrected before major spend. 6. Agent provides quality dashboard: trend charts showing email null rate spike, anomaly detection highlighting change point, root cause suggestions (vendor feed format). 7. 90%+ proactive detection (alert before business impact), 60-80% faster resolution (2 hours vs 2 weeks), $45K impact avoided.",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Quality Monitoring Agent", "Anomaly Detection Agent", "Alert Prioritization Agent"],
+        "utilityAgents": ["Metrics Collector", "Trend Analyzer", "Notification Service", "Dashboard Platform"]
+      },
+      "dataSources": [
+        "Data quality metrics (null rates, record counts, duplicates, formats)",
+        "Historical quality baselines and trends",
+        "Data profiling results and statistics",
+        "Schema metadata and change logs",
+        "Validation rule pass/fail rates",
+        "Data lineage (trace issues to source systems)",
+        "Alert thresholds and escalation policies",
+        "Incident history and resolution patterns"
+      ],
+      "benefits": [
+        "90%+ proactive issue detection (alert before business impact)",
+        "93% faster detection (2 hours vs 2 weeks)",
+        "60-80% resolution time reduction (fix before widespread impact)",
+        "$45K impact avoided per incident (2 days affected vs 14 days)",
+        "Trend tracking (visualize quality degrading over time)",
+        "Root cause suggestions (vendor feed format change detected)"
+      ],
+      "metrics": ["Quality monitoring: Real-time (200+ metrics)", "Issue detection time: <2 hours (proactive)", "Business impact: Low (early detection)", "Proactive alerts: 90%+ of issues"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy quality monitoring dashboard for top 20 critical tables", "Implement automated alerting for null rate and record count anomalies", "Enable trend analysis to detect gradual quality degradation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Data quality monitoring platform (dashboards, metrics collection)", "Automated quality metric calculation (null rates, counts, duplicates)", "Historical baseline data for trend comparison", "Alert engine with threshold configuration", "Notification system (email, Slack, PagerDuty)", "Integration with data profiling and validation tools", "Root cause analysis workflows"]
+    },
+    "icon": "chart-bar",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-root-cause-analysis-data-issues",
+    "type": "function",
+    "level": 4,
+    "label": "Root Cause Analysis for Data Issues",
+    "description": "Automated data lineage tracing with ML-powered root cause identification achieving 70-85% reduction in investigation time and 80-90% first-time fix rate for data quality issues.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Revenue report shows $2M variance: 'November revenue $10M vs expected $12M, investigate discrepancy'. 2. Data analyst traces issue manually: revenue table sourced from orders table, orders from OMS system, OMS from POS and e-commerce. 3. Analyst queries each system: POS shows $7M, e-commerce $5M, total $12M (source systems correct, transformation issue). 4. Analyst reviews ETL code: discovers filter excludes orders with status='pending_fulfillment' (added last month for different report). 5. Filter inadvertently applies to revenue report: excludes $2M legitimate revenue (pending fulfillment still counts as revenue). 6. Total investigation: 8-12 hours tracing data lineage through 5 systems and 3 ETL jobs manually. 7. Fix applied: remove incorrect filter, rerun pipeline, but root cause analysis very time-consuming.",
+      "constraints": [
+        "8-12 hour manual investigation per data issue",
+        "Sequential lineage tracing (query each system one-by-one)",
+        "No automated dependency mapping (analyst must know architecture)",
+        "Hard to pinpoint transformation logic (ETL code review required)",
+        "Tribal knowledge dependent (senior analyst knows system flow)",
+        "Difficult to identify when issue introduced (code change history manual)"
+      ],
+      "metrics": ["Investigation time: 8-12 hours per issue", "Root cause accuracy: 60-70% (sometimes wrong hypothesis)", "First-time fix rate: 50-60%", "Documentation: Tribal knowledge"]
+    },
+    "agentic": {
+      "workflow": "1. Revenue variance detected: '$2M discrepancy in November revenue report', Root Cause Agent triggered automatically. 2. Agent traces data lineage: 'Revenue report sources from: revenue_summary table → orders table → OMS database → POS system + E-commerce platform'. 3. Agent compares values at each step: 'POS $7M + E-commerce $5M = $12M (source correct), orders table $12M (correct), revenue_summary $10M (transformation issue detected)'. 4. Agent analyzes transformation logic: 'revenue_summary ETL job applies filter: status != pending_fulfillment (added Nov 1 by engineer John Doe, change #1234)'. 5. Agent identifies root cause in 15-30 minutes: 'Filter excludes $2M pending_fulfillment orders, filter appropriate for operations report but not revenue report (over-applied), recommend create separate ETL path for revenue vs operations'. 6. Agent provides fix recommendation: 'Remove filter from revenue ETL, create operations-specific view with filter, estimated fix time 2 hours'. 7. 70-85% investigation time reduction (15-30 min vs 8-12 hours), 80-90% first-time fix rate (accurate root cause identification).",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Root Cause Agent", "Lineage Tracing Agent", "Transformation Analyzer Agent"],
+        "utilityAgents": ["Data Lineage Platform", "ETL Metadata", "Change History Tracker", "Code Analyzer"]
+      },
+      "dataSources": [
+        "Data lineage metadata (table dependencies, ETL jobs, data flows)",
+        "Transformation logic (ETL code, SQL queries, business rules)",
+        "Data values at each lineage step (for comparison and validation)",
+        "Change history (code commits, ETL modifications, schema changes)",
+        "Quality metrics at each transformation stage",
+        "Historical issue patterns (common root causes by symptom)",
+        "Documentation (table definitions, business logic descriptions)",
+        "System architecture diagrams and data flow maps"
+      ],
+      "benefits": [
+        "70-85% investigation time reduction (15-30 min vs 8-12 hours)",
+        "80-90% first-time fix rate (accurate root cause vs trial-and-error)",
+        "Automated lineage tracing (no manual query chaining required)",
+        "Transformation logic analysis (detect incorrect filters, joins)",
+        "Change impact identification (pinpoint when issue introduced)",
+        "Fix recommendations (suggest specific code changes)"
+      ],
+      "metrics": ["Investigation time: 15-30 minutes per issue", "Root cause accuracy: 80-90% (ML-powered)", "First-time fix rate: 80-90%", "Documentation: Automated lineage"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated data lineage tracking for critical data pipelines", "Implement ETL metadata collection for transformation logic visibility", "Enable change history integration for impact analysis"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Data lineage platform (Collibra, Alation, Apache Atlas)", "ETL metadata collection (job definitions, transformation logic)", "Code repository integration (Git for change history)", "Data profiling at each transformation stage", "ML models for pattern matching (symptoms to root causes)", "Integration with data quality monitoring", "Automated fix recommendation engine"]
+    },
+    "icon": "search-circle",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-continuous-data-quality-improvement",
+    "type": "function",
+    "level": 4,
+    "label": "Continuous Data Quality Improvement",
+    "description": "Closed-loop quality management with automated improvement recommendations achieving 40-60% year-over-year quality improvement and 70-85% reduction in recurring issues through preventive actions.",
+    "parentCapability": "capability-data-quality-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Data quality issues logged in spreadsheet: team tracks 50 open issues (duplicate customers, null emails, incorrect addresses). 2. Monthly data quality meeting: review issue list, discuss priorities, assign owners. 3. Issues linger for months: 'Duplicate customer issue reported Q1, still open Q4 - no capacity to address'. 4. Same root causes recur: 'Vendor file format issue caused null emails again (third time this year), same vendor, same problem'. 5. No systematic improvement process: issues fixed reactively, no prevention of recurrence. 6. Data quality score stagnant: 70/100 for 2 years (no improvement trend). 7. Continuous firefighting (fix same issues repeatedly), no root cause prevention or sustainable improvement.",
+      "constraints": [
+        "Spreadsheet-based issue tracking (manual, no workflow)",
+        "Monthly review cycle (slow progress on issue resolution)",
+        "Issues linger for months (backlog of 50+ open items)",
+        "Recurring root causes (same vendor issue 3 times/year)",
+        "No improvement trend (quality score flat 70/100)",
+        "Reactive fixes (no prevention or systematic improvement)"
+      ],
+      "metrics": ["Data quality score: 70/100 (flat)", "Recurring issues: 30-40% same problems repeat", "Issue resolution time: 3-6 months", "Improvement trend: None"]
+    },
+    "agentic": {
+      "workflow": "1. Quality Improvement Agent analyzes issue patterns: 'Top recurring issue: Vendor ABC file format causes 15 email null incidents/year (60% of all email issues), root cause: vendor sends CSV with inconsistent column order'. 2. Agent recommends preventive action: 'Priority 1: Implement header-based CSV parsing (vs positional), add validation rule to reject files missing email column, notify vendor of format standard - estimated 60% reduction in email null issues'. 3. Data steward approves recommendation, agent tracks implementation: ETL change deployed, validation rule added, vendor notified. 4. Agent monitors improvement: 'Email null issues reduced from 15/year to 3/year (80% reduction), quality score email dimension improved from 65 → 88'. 5. Agent identifies next opportunity: 'Top issue now: Duplicate customers (10 incidents/year), root cause: no real-time deduplication, recommend deploy fuzzy matching at ingestion - estimated 70% reduction'. 6. Continuous improvement cycle: quarterly review of top issues, implement preventive fixes, track results, move to next priority. 7. 40-60% year-over-year quality improvement (70 → 85 → 92 score over 2 years), 70-85% reduction in recurring issues.",
+      "agents": {
+        "orchestrator": "Data Governance Orchestration Agent",
+        "superAgents": ["Quality Improvement Agent", "Pattern Analysis Agent", "Recommendation Engine Agent"],
+        "utilityAgents": ["Issue Tracking System", "Trend Analyzer", "Workflow Automation", "Impact Calculator"]
+      },
+      "dataSources": [
+        "Data quality issue history (all incidents, root causes, resolutions)",
+        "Quality metrics trends over time (score improvements)",
+        "Root cause patterns and recurrence rates",
+        "Improvement project outcomes (before/after comparisons)",
+        "Cost of quality (business impact of issues)",
+        "Preventive action library (solutions that worked)",
+        "Resource availability for improvement projects",
+        "Quality goals and targets by dimension"
+      ],
+      "benefits": [
+        "40-60% year-over-year quality improvement (70 → 92 over 2 years)",
+        "70-85% reduction in recurring issues (15/year → 3/year)",
+        "Prioritized recommendations (focus on highest-impact improvements)",
+        "Preventive actions (fix root causes, not symptoms)",
+        "Closed-loop tracking (monitor improvement results)",
+        "Sustainable improvement (systematic vs firefighting)"
+      ],
+      "metrics": ["Data quality score: 85-92 (improving)", "Recurring issues: <10% (preventive fixes)", "Issue resolution time: <1 month", "Improvement trend: +10-15 points/year"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy issue tracking with pattern analysis for recurring problems", "Implement quarterly improvement reviews with prioritized recommendations", "Enable closed-loop monitoring of improvement project outcomes"],
+      "investmentRequired": "Medium",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Issue tracking system with root cause taxonomy", "Data quality metrics trending and visualization", "Pattern analysis capability (identify recurring issues)", "Recommendation engine for preventive actions", "Project tracking for improvement initiatives", "Change management for preventive fix implementation", "Executive sponsorship for quality improvement program"]
+    },
+    "icon": "trending-up",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

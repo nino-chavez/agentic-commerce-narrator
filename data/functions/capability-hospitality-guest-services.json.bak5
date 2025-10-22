@@ -1,0 +1,1118 @@
+{
+  "id": "capability-hospitality-guest-services",
+  "name": "Hospitality Guest Services",
+  "description": "AI-powered guest experience systems managing check-in/out, service requests, concierge services, in-room technology, feedback, and VIP recognition for hospitality properties",
+  "category": "industry-specific",
+  "industryVertical": "hospitality",
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "maturity": "production-ready",
+    "benchmarkStatus": "proven-roi"
+  },
+  "functions": [
+    {
+      "id": "fn-hosp-guest-digital-checkin",
+      "name": "Digital Check-In & Mobile Key",
+      "description": "Contactless check-in system with mobile room keys, digital room selection, and automated arrival processing reducing front desk queues and improving guest convenience",
+      "traditional_workflow": "Guests wait in front desk queues averaging 5-15 minutes during peak check-in times. Staff manually verify IDs, process payment authorizations, explain property amenities, and issue physical key cards. Room assignments are made at check-in, often without guest input on location or view preferences. High-touch arrival experiences for VIP guests require coordination between front desk and management. Late arrivals may find unstaffed front desks or limited service.",
+      "agentic_workflow": "Digital check-in agents enable guests to complete arrival formalities via mobile app or kiosk 24 hours before arrival. Guests select their preferred room from available inventory, view room photos and amenities, and receive mobile keys directly to their smartphones. Identity verification uses facial recognition or document scanning. Payment processing is automated with pre-authorized cards. Arrival agents notify housekeeping and operations teams in real-time as guests check in, ensuring rooms are ready. VIP recognition agents trigger personalized welcome messages and amenity delivery automatically upon arrival.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Digital Check-In Orchestrator",
+          "role": "Manages contactless arrival experience from pre-check-in through room access, coordinating identity verification, payment, room assignment, and operational readiness",
+          "responsibilities": [
+            "Coordinate check-in workflow stages",
+            "Manage identity and payment verification",
+            "Trigger room readiness confirmations",
+            "Enable mobile key distribution"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Self-Service Check-In Agent",
+            "role": "Facilitates mobile or kiosk-based check-in with room selection, upsell offers, and arrival confirmation",
+            "capabilities": [
+              "Pre-arrival check-in initiation",
+              "Interactive room selection with photos",
+              "Digital signature and terms acceptance",
+              "Arrival time confirmation"
+            ]
+          },
+          {
+            "name": "Identity Verification Agent",
+            "role": "Verifies guest identity using document scanning, facial recognition, or biometric authentication",
+            "capabilities": [
+              "ID document scanning and validation",
+              "Facial recognition matching",
+              "Fraud detection",
+              "Compliance with local ID requirements"
+            ]
+          },
+          {
+            "name": "Mobile Key Agent",
+            "role": "Generates and distributes digital room keys to guest smartphones with secure encryption",
+            "capabilities": [
+              "Secure mobile key generation",
+              "Bluetooth/NFC key distribution",
+              "Access control synchronization",
+              "Key expiration and revocation"
+            ]
+          },
+          {
+            "name": "Room Readiness Agent",
+            "role": "Confirms room is clean and ready before enabling check-in, coordinating with housekeeping",
+            "capabilities": [
+              "Real-time room status monitoring",
+              "Housekeeping coordination",
+              "Room inspection verification",
+              "Early check-in approval workflow"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Payment Authorization Agent",
+            "role": "Processes credit card authorizations and security deposits automatically"
+          },
+          {
+            "name": "Welcome Communication Agent",
+            "role": "Sends personalized welcome messages and property orientation information"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-identity-verification-failure",
+          "name": "Identity Verification Failure",
+          "trigger": "Automated ID verification fails or detects potential fraud",
+          "human_role": "Front Desk Agent",
+          "decision_criteria": "Document authenticity, guest explanation, booking legitimacy, risk assessment",
+          "auto_proceed_conditions": "Successful ID scan matching booking name and passing fraud checks",
+          "escalation_path": "Front Office Manager for complex fraud concerns or disputed identities"
+        ],
+        {
+          "gate_id": "gtg-early-checkin-requests",
+          "name": "Early Check-In Request",
+          "trigger": "Guest attempts check-in more than 2 hours before standard time and room not ready",
+          "human_role": "Front Desk Supervisor",
+          "decision_criteria": "Room availability, housekeeping status, guest tier, willingness to pay upgrade fee",
+          "auto_proceed_conditions": "Room ready and within 2 hours of standard check-in time",
+          "escalation_path": "Duty Manager for VIP early arrivals requiring expedited room prep"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Booking details, room assignments, guest profiles, arrival status, folios",
+          "integration_pattern": "Real-time bidirectional API"
+        ],
+        {
+          "source": "Mobile Key System",
+          "data_elements": "Key generation, distribution status, access logs, lock compatibility",
+          "integration_pattern": "API integration with door lock system"
+        ],
+        {
+          "source": "Housekeeping System",
+          "data_elements": "Room status (clean, dirty, inspected), readiness time, cleaning schedule",
+          "integration_pattern": "Real-time status updates, event-driven"
+        ],
+        {
+          "source": "Identity Verification Service",
+          "data_elements": "ID document scans, verification results, facial recognition matches, fraud scores",
+          "integration_pattern": "Third-party API integration"
+        ],
+        {
+          "source": "Payment Gateway",
+          "data_elements": "Credit card authorizations, deposit holds, payment methods, transaction status",
+          "integration_pattern": "Real-time API, PCI-compliant tokenization"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Loyalty status, preferences, past stays, communication history",
+          "integration_pattern": "Profile lookup, enrichment"
+        ],
+        {
+          "source": "Mobile App Platform",
+          "data_elements": "App usage, check-in completion, mobile key activation, user feedback",
+          "integration_pattern": "App analytics, push notification service"
+        }
+      ],
+      "quantified_benefits": {
+        "check_in_time": "5-15 minutes at front desk → 2-3 minutes self-service or completely bypassed",
+        "front_desk_labor": "30-40% reduction in front desk staffing needs during peak times",
+        "guest_satisfaction": "70-75% CSAT with traditional check-in → 85-90% with digital check-in",
+        "mobile_key_adoption": "60-70% of tech-savvy guests when properly promoted",
+        "upsell_conversion": "5-10% room upgrade conversion through digital room selection",
+        "queue_elimination": "90%+ reduction in check-in queue times during high-volume arrivals"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Enable basic mobile check-in with room assignment (Week 1-2)",
+          "Deploy kiosks in lobby for self-service check-in (Week 2-3)",
+          "Implement mobile key distribution for compatible locks (Week 4-6)"
+        ],
+        "investment_required": "Medium-High - Mobile app development or white-label solution, door lock upgrades (if needed), kiosk hardware, PMS integration",
+        "time_to_value": "8-12 weeks for basic digital check-in, 16-24 weeks for full mobile key deployment across property",
+        "prerequisites": [
+          "PMS with API capabilities for remote check-in",
+          "Compatible door lock system (Bluetooth/NFC capable) or upgrade budget",
+          "Mobile app platform or partnership",
+          "Guest communication infrastructure for mobile key instructions",
+          "Staff training on exception handling",
+          "Legal review of digital signature and ID verification compliance"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-request-management",
+      "name": "Guest Request Management",
+      "description": "AI-powered service request system handling housekeeping needs, amenity orders, maintenance issues, and concierge services with automated routing and real-time tracking",
+      "traditional_workflow": "Guests call the front desk or housekeeping for requests, describing needs to staff who manually write notes or enter tickets. Requests are relayed via phone calls, walkie-talkies, or paper slips to appropriate departments. There is no centralized tracking of request status, and guests must call back for updates. Priority is determined by who answers the phone, not by request urgency or guest value. Maintenance issues may go unreported for hours if guests don't want to bother calling. Completion is not consistently confirmed or tracked.",
+      "agentic_workflow": "Guest request agents enable submission via mobile app, in-room tablet, voice command, or chat, using NLP to understand and categorize requests automatically. Routing agents assign tasks to appropriate staff based on request type, location, priority, and workload balancing. Tracking agents monitor request status in real-time, sending automatic updates to guests. Priority scoring agents consider guest tier, request urgency, and operational constraints to optimize fulfillment order. Follow-up agents confirm completion and capture satisfaction ratings, feeding data into service quality analytics.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Guest Request Orchestrator",
+          "role": "Manages end-to-end service request lifecycle from submission through fulfillment and confirmation, coordinating multiple departments and tracking satisfaction",
+          "responsibilities": [
+            "Route requests to appropriate departments",
+            "Prioritize requests based on urgency and guest value",
+            "Track fulfillment status and timing",
+            "Confirm completion and capture feedback"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Request Intake Agent",
+            "role": "Captures guest requests via multiple channels using NLP to understand and categorize needs",
+            "capabilities": [
+              "Multi-channel request capture (app, voice, chat, tablet)",
+              "Natural language understanding",
+              "Request categorization and tagging",
+              "Clarification questions for ambiguous requests"
+            ]
+          },
+          {
+            "name": "Intelligent Routing Agent",
+            "role": "Assigns requests to optimal staff members based on type, location, workload, and skills",
+            "capabilities": [
+              "Department routing (housekeeping, maintenance, concierge)",
+              "Staff workload balancing",
+              "Location-based assignment",
+              "SLA management by request type"
+            ]
+          },
+          {
+            "name": "Priority Scoring Agent",
+            "role": "Calculates request priority based on urgency, guest tier, request type, and operational impact",
+            "capabilities": [
+              "Dynamic priority scoring",
+              "VIP request escalation",
+              "Safety/maintenance urgency detection",
+              "Queue optimization"
+            ]
+          },
+          {
+            "name": "Status Tracking Agent",
+            "role": "Monitors request fulfillment progress and provides real-time updates to guests",
+            "capabilities": [
+              "Real-time status monitoring",
+              "Automated guest notifications",
+              "SLA breach alerting",
+              "Completion confirmation"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Guest Communication Agent",
+            "role": "Sends updates and confirmations via guest's preferred channel"
+          },
+          {
+            "name": "Analytics Agent",
+            "role": "Tracks request volumes, response times, satisfaction, and identifies service trends"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-complex-requests",
+          "name": "Complex or Unusual Request",
+          "trigger": "Request cannot be categorized by NLP or requires non-standard resources/coordination",
+          "human_role": "Guest Services Agent",
+          "decision_criteria": "Feasibility, resource availability, cost, sourcing needs, execution complexity",
+          "auto_proceed_conditions": "Standard requests (extra towels, pillow menu, ice, minibar items, housekeeping)",
+          "escalation_path": "Guest Services Manager for high-cost or difficult-to-fulfill requests"
+        ],
+        {
+          "gate_id": "gtg-urgent-maintenance",
+          "name": "Urgent Maintenance or Safety Issue",
+          "trigger": "Request indicates safety concern (gas smell, electrical issue, security problem)",
+          "human_role": "Maintenance Supervisor or Duty Manager",
+          "decision_criteria": "Safety risk severity, guest relocation needs, immediate remediation requirements",
+          "auto_proceed_conditions": "Minor maintenance (lightbulb, remote control, cosmetic issues)",
+          "escalation_path": "General Manager and Security for serious safety concerns"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Guest Service Request System",
+          "data_elements": "Request details, status, assignment, completion time, guest satisfaction ratings",
+          "integration_pattern": "Real-time event database"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Guest location (room number), loyalty status, length of stay, booking value",
+          "integration_pattern": "API lookup for guest context"
+        ],
+        {
+          "source": "Housekeeping Management",
+          "data_elements": "Staff locations, current tasks, workload, shift schedules, room assignments",
+          "integration_pattern": "Real-time staff tracking, task management system"
+        ],
+        {
+          "source": "Maintenance Work Order System",
+          "data_elements": "Work orders, technician availability, parts inventory, issue history",
+          "integration_pattern": "Bidirectional integration for ticket creation and status updates"
+        ],
+        {
+          "source": "Mobile App/In-Room Technology",
+          "data_elements": "Request submissions, guest interactions, voice commands, chat transcripts",
+          "integration_pattern": "API integration, event streams"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Historical requests, preferences (pillow type, room temperature), past satisfaction",
+          "integration_pattern": "Profile enrichment, preference lookup"
+        ],
+        {
+          "source": "Staff Management System",
+          "data_elements": "Staff schedules, skills, languages spoken, performance metrics",
+          "integration_pattern": "Workforce management integration"
+        }
+      ],
+      "quantified_benefits": {
+        "response_time": "15-30 minutes average → 5-10 minutes with automated routing and prioritization",
+        "request_tracking": "Manual follow-up required → 95%+ automated status updates",
+        "guest_satisfaction": "70-75% for service requests → 85-90% with visibility and speed",
+        "staff_efficiency": "20-30% time on coordination calls → 80%+ on fulfillment",
+        "request_volume_handling": "50-60% more requests handled with same staffing",
+        "completion_rate": "85-90% → 98%+ with tracking and accountability"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement in-app request submission with basic categories (Week 1-2)",
+          "Deploy automated routing to housekeeping and maintenance (Week 2-3)",
+          "Enable status notifications via SMS or app push (Week 3-4)"
+        ],
+        "investment_required": "Medium - Mobile app or in-room tablet platform, work order system integration, staff mobile devices",
+        "time_to_value": "6-10 weeks for core request management, 12-16 weeks for advanced NLP and analytics",
+        "prerequisites": [
+          "Mobile app or in-room technology platform",
+          "Work order/task management system for housekeeping and maintenance",
+          "Staff mobile devices or tablets for receiving assignments",
+          "Guest CRM with preference tracking",
+          "Standard operating procedures for common request types",
+          "Staff training on digital tools and accountability"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-concierge-services",
+      "name": "Concierge Services & Recommendations",
+      "description": "AI-powered virtual concierge providing personalized local recommendations, restaurant reservations, activity bookings, and destination guidance with 24/7 availability",
+      "traditional_workflow": "Human concierges handle requests during business hours, relying on personal knowledge and relationships with local vendors. After-hours guests have limited access to concierge services. Recommendations are based on concierge preferences rather than guest profile data. Booking confirmations require phone calls and manual tracking. Popular restaurant reservations may not be available due to limited vendor relationships. Information about local attractions, events, and logistics is shared verbally without follow-up materials.",
+      "agentic_workflow": "AI concierge agents provide 24/7 personalized recommendations based on guest preferences, past behavior, reviews, and real-time availability. NLP chatbots answer common questions about property amenities, local area, transportation, and events instantly. Booking agents automatically reserve restaurants, tours, and activities through integrated partner networks, confirming in real-time. Recommendation engines personalize suggestions based on guest demographics, stay purpose, weather, and trending experiences. Local intelligence agents monitor events, closures, and special opportunities to proactively notify guests of relevant happenings.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Concierge Services Orchestrator",
+          "role": "Manages guest experience enhancement through personalized recommendations, bookings, and local intelligence, coordinating AI and human concierge resources",
+          "responsibilities": [
+            "Route concierge inquiries to AI or human agents",
+            "Personalize recommendations based on guest profile",
+            "Coordinate third-party bookings and confirmations",
+            "Track guest satisfaction with recommendations"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Virtual Concierge Agent",
+            "role": "Provides 24/7 conversational assistance via chat or voice for common concierge inquiries",
+            "capabilities": [
+              "Natural language conversation",
+              "Property information and amenity guidance",
+              "Local area FAQs",
+              "Transportation and directions assistance"
+            ]
+          },
+          {
+            "name": "Recommendation Engine Agent",
+            "role": "Generates personalized restaurant, activity, and attraction recommendations based on guest preferences",
+            "capabilities": [
+              "Preference-based filtering",
+              "Review aggregation and ranking",
+              "Distance and transportation consideration",
+              "Budget-appropriate suggestions"
+            ]
+          },
+          {
+            "name": "Booking Automation Agent",
+            "role": "Handles reservations and bookings at restaurants, tours, activities, and transportation with automated confirmations",
+            "capabilities": [
+              "Real-time availability checking",
+              "Automated reservation placement",
+              "Confirmation tracking and delivery",
+              "Modification and cancellation handling"
+            ]
+          },
+          {
+            "name": "Local Intelligence Agent",
+            "role": "Monitors local events, weather, closures, and opportunities to proactively inform guests",
+            "capabilities": [
+              "Event calendar monitoring",
+              "Weather impact alerts",
+              "Closure and disruption notifications",
+              "Trending experience identification"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Translation Agent",
+            "role": "Provides multilingual support for international guests"
+          },
+          {
+            "name": "Human Concierge Escalation Agent",
+            "role": "Routes complex or VIP requests to human concierge staff"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-complex-concierge",
+          "name": "Complex Concierge Request",
+          "trigger": "Request requires unique sourcing, negotiation, or relationship leverage beyond automated capabilities",
+          "human_role": "Chief Concierge",
+          "decision_criteria": "Request complexity, vendor relationships required, customization needs, VIP status",
+          "auto_proceed_conditions": "Standard bookings (restaurant reservations, popular tours, transportation)",
+          "escalation_path": "Guest Relations Manager for ultra-high-net-worth guests with extraordinary requests"
+        ],
+        {
+          "gate_id": "gtg-guest-dissatisfaction",
+          "name": "Negative Feedback on Recommendation",
+          "trigger": "Guest reports poor experience from AI recommendation or booking",
+          "human_role": "Concierge Supervisor",
+          "decision_criteria": "Service recovery needs, refund/compensation decisions, vendor relationship management",
+          "auto_proceed_conditions": "Positive feedback and successful bookings",
+          "escalation_path": "Guest Services Manager for significant service recovery situations"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Guest CRM & Preferences",
+          "data_elements": "Dining preferences, activity interests, past bookings, feedback on recommendations, budget indicators",
+          "integration_pattern": "Profile enrichment, preference learning"
+        ],
+        {
+          "source": "Local Business Database",
+          "data_elements": "Restaurants, attractions, tours, entertainment venues, operating hours, pricing",
+          "integration_pattern": "Content management system, partner APIs"
+        ],
+        {
+          "source": "Reservation Platforms",
+          "data_elements": "Real-time availability, booking confirmations, cancellation policies, reviews",
+          "integration_pattern": "API integrations (OpenTable, Viator, etc.)"
+        ],
+        {
+          "source": "Review Aggregation",
+          "data_elements": "Restaurant and attraction reviews, ratings, trending experiences, guest feedback",
+          "integration_pattern": "Third-party review APIs (Google, TripAdvisor, Yelp)"
+        ],
+        {
+          "source": "Event Calendars",
+          "data_elements": "Concerts, sports, festivals, conferences, exhibitions, local happenings",
+          "integration_pattern": "Event API feeds, manual curation"
+        ],
+        {
+          "source": "Weather Services",
+          "data_elements": "Forecasts, precipitation, temperature, severe weather alerts",
+          "integration_pattern": "Weather API, daily updates"
+        ],
+        {
+          "source": "Transportation Services",
+          "data_elements": "Ride-share availability, public transit schedules, car rental options, airport transfers",
+          "integration_pattern": "Transportation APIs, partner integrations"
+        ],
+        {
+          "source": "Chatbot Interactions",
+          "data_elements": "Conversation transcripts, common questions, resolution success, escalation reasons",
+          "integration_pattern": "NLP platform, analytics"
+        }
+      ],
+      "quantified_benefits": {
+        "concierge_availability": "8-12 hours/day → 24/7 instant response via AI",
+        "response_time": "5-15 minutes for human concierge → instant for common inquiries",
+        "booking_efficiency": "10-20 minutes per reservation → 2-3 minutes automated",
+        "personalization_accuracy": "70-75% relevance with manual recommendations → 85-90% with AI personalization",
+        "guest_satisfaction": "75-80% CSAT → 85-90% with instant, personalized assistance",
+        "concierge_productivity": "60% time on routine inquiries → 80% on high-value VIP services"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy FAQ chatbot for common property and area questions (Week 1-2)",
+          "Integrate restaurant reservation platform (OpenTable, Resy) (Week 3-4)",
+          "Enable basic recommendation engine with popular local options (Week 4-6)"
+        ],
+        "investment_required": "Medium - Chatbot platform, reservation system integrations, content curation, recommendation engine",
+        "time_to_value": "8-12 weeks for basic virtual concierge, 16-24 weeks for advanced personalization",
+        "prerequisites": [
+          "Guest CRM with preference capture",
+          "Chatbot platform with hospitality training",
+          "Partnerships with local restaurants and activity providers",
+          "Content database of local attractions and experiences",
+          "Human concierge escalation workflows",
+          "Multi-language support for international properties"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-room-technology",
+      "name": "In-Room Technology & Controls",
+      "description": "Smart room system enabling guest control of temperature, lighting, entertainment, and services via mobile app, voice command, or in-room tablet with personalized automation",
+      "traditional_workflow": "Guests manually adjust thermostats, lights, and TV using physical controls that may be unfamiliar or inconvenient. Entertainment options are limited to hotel cable packages without streaming capability. Room preferences are not remembered between stays. Lighting, temperature, and entertainment settings are reset to defaults after checkout. Guests must call the front desk for service requests or information. Accessibility features for guests with disabilities are static and not easily customizable.",
+      "agentic_workflow": "Smart room agents enable guests to control all room features via mobile app, voice assistants (Alexa, Google), or in-room tablets. Preference agents remember guest settings (temperature, lighting scenes, alarm times) and automatically configure rooms before arrival. Entertainment agents provide streaming access to personal Netflix, Spotify, etc. through in-room TVs. Energy management agents optimize HVAC and lighting when rooms are unoccupied, reducing costs while maintaining comfort. Service request agents enable one-touch ordering of housekeeping, room service, or maintenance directly from room controls.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Smart Room Orchestrator",
+          "role": "Manages in-room technology ecosystem, coordinating environmental controls, entertainment, guest preferences, and energy optimization",
+          "responsibilities": [
+            "Coordinate device control and automation",
+            "Manage guest preference application",
+            "Optimize energy consumption",
+            "Enable service requests from room"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Environmental Control Agent",
+            "role": "Manages HVAC, lighting, window shades, and ambient settings based on guest preferences and occupancy",
+            "capabilities": [
+              "Temperature and humidity control",
+              "Lighting scene creation and automation",
+              "Motorized shade/curtain control",
+              "Occupancy-based automation"
+            ]
+          },
+          {
+            "name": "Entertainment & Streaming Agent",
+            "role": "Provides personalized entertainment including streaming service access, casting, and content recommendations",
+            "capabilities": [
+              "Personal streaming account integration",
+              "Mobile device casting",
+              "Content recommendation based on preferences",
+              "Automatic sign-out at checkout for privacy"
+            ]
+          },
+          {
+            "name": "Guest Preference Agent",
+            "role": "Learns and applies guest preferences for room settings, creating personalized environments",
+            "capabilities": [
+              "Preference learning and storage",
+              "Pre-arrival room configuration",
+              "Cross-property preference syncing",
+              "Custom scene creation"
+            ]
+          },
+          {
+            "name": "Voice Control Agent",
+            "role": "Enables voice commands for room control, information requests, and service orders",
+            "capabilities": [
+              "Natural language understanding",
+              "Multi-language voice recognition",
+              "Room control via voice",
+              "Property information via voice queries"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Energy Optimization Agent",
+            "role": "Reduces energy consumption when room is unoccupied while maintaining comfort"
+          },
+          {
+            "name": "Privacy & Security Agent",
+            "role": "Ensures guest data privacy and secure device control"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-technical-issues",
+          "name": "Room Technology Malfunction",
+          "trigger": "Guest reports device not responding, connectivity issues, or unexpected behavior",
+          "human_role": "IT Support or Engineering",
+          "decision_criteria": "Issue severity, remote resolution capability, guest impact, need for in-room troubleshooting",
+          "auto_proceed_conditions": "Normal operation with guest satisfaction",
+          "escalation_path": "IT Manager for systemic issues affecting multiple rooms"
+        ],
+        {
+          "gate_id": "gtg-privacy-concerns",
+          "name": "Guest Privacy or Data Concerns",
+          "trigger": "Guest expresses concerns about smart room data collection or device security",
+          "human_role": "Guest Services Manager",
+          "decision_criteria": "Privacy policy explanation, opt-out options, reassurance needs",
+          "auto_proceed_conditions": "Standard opt-in usage with privacy consent",
+          "escalation_path": "General Manager or Legal for serious privacy disputes"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "IoT Device Management Platform",
+          "data_elements": "Device status, connectivity, firmware versions, error logs, usage patterns",
+          "integration_pattern": "IoT platform, real-time telemetry"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Preference history, room settings from past stays, loyalty status, opt-in status",
+          "integration_pattern": "Profile lookup, preference sync"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Room occupancy, arrival/departure times, room assignments, service requests",
+          "integration_pattern": "API integration for occupancy-based automation"
+        ],
+        {
+          "source": "Building Management System",
+          "data_elements": "HVAC zones, lighting circuits, energy consumption, equipment status",
+          "integration_pattern": "BACnet, Modbus, or proprietary protocols"
+        ],
+        {
+          "source": "Entertainment Content Providers",
+          "data_elements": "Streaming services, content libraries, guest viewing history (ephemeral)",
+          "integration_pattern": "API integrations with Netflix, Hulu, etc."
+        ],
+        {
+          "source": "Mobile App Platform",
+          "data_elements": "Control commands, user interactions, app usage patterns, feedback",
+          "integration_pattern": "Mobile app backend, event tracking"
+        ],
+        {
+          "source": "Voice Assistant Platforms",
+          "data_elements": "Voice commands, intent recognition, response effectiveness, language preferences",
+          "integration_pattern": "Alexa Skills API, Google Assistant Actions"
+        }
+      ],
+      "quantified_benefits": {
+        "guest_satisfaction": "75-80% CSAT → 85-95% with smart room controls and personalization",
+        "energy_savings": "15-25% reduction in HVAC and lighting costs through occupancy-based optimization",
+        "service_request_efficiency": "50-60% of requests submitted via in-room controls vs phone calls",
+        "preference_accuracy": "90%+ guests find rooms pre-configured to their liking on repeat stays",
+        "entertainment_engagement": "40-50% increase in in-room entertainment usage with streaming",
+        "maintenance_efficiency": "30-40% faster issue detection through IoT monitoring vs guest complaints"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy mobile app control for existing thermostats and lights (if compatible) (Week 1-4)",
+          "Enable casting to in-room TVs from guest mobile devices (Week 2-3)",
+          "Implement basic preference storage for temperature settings (Week 4-6)"
+        ],
+        "investment_required": "High - Smart room infrastructure (IoT devices, gateways), network upgrades, mobile app development, integration, installation labor",
+        "time_to_value": "6-12 months for phased rollout across property, 12-24 months for full smart room deployment",
+        "prerequisites": [
+          "Robust Wi-Fi infrastructure throughout property",
+          "IoT device management platform decision",
+          "Mobile app with room control capabilities",
+          "Privacy policy and guest consent framework",
+          "IT support capability for troubleshooting",
+          "Budget for device procurement and installation",
+          "Integration with PMS and BMS systems",
+          "Staff training on smart room technology support"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-feedback-recovery",
+      "name": "Guest Feedback & Service Recovery",
+      "description": "Real-time feedback system capturing guest sentiment during stays, detecting issues immediately, triggering automated service recovery, and tracking satisfaction trends",
+      "traditional_workflow": "Guest feedback is collected primarily through post-stay surveys sent via email, resulting in response rates of 10-20%. By the time feedback is received, the guest has already departed and negative experiences cannot be corrected. Complaints are lodged at checkout or on review sites, blindsiding management. Front desk staff inconsistently log issues in free-text notes. Service recovery is reactive and ad-hoc, often involving manager discretion without clear guidelines or tracking.",
+      "agentic_workflow": "Sentiment analysis agents monitor feedback from multiple touchpoints (app ratings, chat interactions, service request sentiment, IoT signals like do-not-disturb overuse) in real-time during the stay. Alert agents immediately notify managers of negative signals, enabling same-stay recovery. Automated recovery agents suggest appropriate compensation or gestures based on issue type, guest value, and past effectiveness. Post-stay agents send personalized surveys with optimal timing and format. Analytics agents identify recurring issues, staff training needs, and operational improvements from feedback trends.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Feedback & Recovery Orchestrator",
+          "role": "Manages guest satisfaction monitoring, issue detection, service recovery execution, and continuous improvement from feedback insights",
+          "responsibilities": [
+            "Monitor guest sentiment across all touchpoints",
+            "Trigger timely service recovery actions",
+            "Coordinate post-stay feedback collection",
+            "Analyze feedback for operational insights"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Real-Time Sentiment Agent",
+            "role": "Monitors guest interactions and behaviors for negative sentiment signals during the stay",
+            "capabilities": [
+              "Sentiment analysis of guest communications",
+              "Service request tone analysis",
+              "Behavioral anomaly detection (excessive DND, avoided amenities)",
+              "Social media mention monitoring"
+            ]
+          },
+          {
+            "name": "Service Recovery Agent",
+            "role": "Suggests and executes appropriate recovery actions based on issue type and guest profile",
+            "capabilities": [
+              "Issue severity scoring",
+              "Recovery action recommendations (upgrade, amenity, discount)",
+              "Personalized apology message generation",
+              "Compensation tracking and budget management"
+            ]
+          },
+          {
+            "name": "Post-Stay Survey Agent",
+            "role": "Optimizes survey delivery timing, format, and questions based on guest profile and stay characteristics",
+            "capabilities": [
+              "Optimal send time calculation",
+              "Dynamic survey question selection",
+              "Multi-language survey generation",
+              "Response rate optimization"
+            ]
+          },
+          {
+            "name": "Feedback Analytics Agent",
+            "role": "Analyzes feedback trends to identify operational issues, training needs, and improvement opportunities",
+            "capabilities": [
+              "Topic extraction and categorization",
+              "Trend identification across time and departments",
+              "Staff performance correlation",
+              "ROI tracking for recovery actions"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Manager Alert Agent",
+            "role": "Notifies appropriate managers immediately of negative feedback requiring intervention"
+          },
+          {
+            "name": "Review Response Agent",
+            "role": "Drafts responses to online reviews with appropriate tone and service recovery offers"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-service-recovery-approval",
+          "name": "High-Value Service Recovery",
+          "trigger": "AI recommends compensation exceeding threshold ($100+, room upgrade, comp night)",
+          "human_role": "Duty Manager or Guest Services Manager",
+          "decision_criteria": "Issue severity, guest lifetime value, recovery effectiveness likelihood, budget constraints",
+          "auto_proceed_conditions": "Minor gestures (amenity, points, small discount) within approved parameters",
+          "escalation_path": "General Manager for comp nights or >$500 recovery packages"
+        ],
+        {
+          "gate_id": "gtg-serious-complaints",
+          "name": "Serious Complaint or Safety Issue",
+          "trigger": "Feedback indicates serious dissatisfaction, safety concern, or legal risk",
+          "human_role": "Guest Services Manager",
+          "decision_criteria": "Incident investigation needs, guest communication approach, legal risk mitigation",
+          "auto_proceed_conditions": "Minor service issues with standard recovery",
+          "escalation_path": "General Manager and Legal for incidents with liability concerns"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Guest Communication Channels",
+          "data_elements": "Chat transcripts, email exchanges, app messages, voice call recordings (where permitted)",
+          "integration_pattern": "NLP analysis, sentiment scoring"
+        ],
+        {
+          "source": "Service Request System",
+          "data_elements": "Request content, urgency indicators, resolution time, follow-up interactions",
+          "integration_pattern": "Text analysis, metadata extraction"
+        ],
+        {
+          "source": "Mobile App Interactions",
+          "data_elements": "In-app ratings, feature usage, session duration, abandonment patterns",
+          "integration_pattern": "App analytics, event tracking"
+        ],
+        {
+          "source": "IoT & Room Systems",
+          "data_elements": "Do-not-disturb usage, temperature adjustments, amenity usage patterns",
+          "integration_pattern": "Behavioral signal aggregation"
+        ],
+        {
+          "source": "Social Media Monitoring",
+          "data_elements": "Real-time mentions, sentiment, complaints, photos, check-ins",
+          "integration_pattern": "Social listening tools, API monitoring"
+        ],
+        {
+          "source": "Survey Platforms",
+          "data_elements": "Post-stay survey responses, NPS scores, comment text, response rates",
+          "integration_pattern": "Survey tool API, response ingestion"
+        ],
+        {
+          "source": "Review Sites",
+          "data_elements": "Online reviews (TripAdvisor, Google, Booking.com), ratings, review sentiment",
+          "integration_pattern": "Review aggregation APIs, web scraping"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Complaint history, lifetime value, loyalty tier, compensation tracking",
+          "integration_pattern": "Profile enrichment, history lookup"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Stay details, spending, extensions/early departures, billing disputes",
+          "integration_pattern": "Transaction and stay behavior analysis"
+        }
+      ],
+      "quantified_benefits": {
+        "issue_detection_speed": "Post-departure discovery → real-time detection during stay",
+        "service_recovery_rate": "20-30% of issues addressed → 70-80% with real-time intervention",
+        "guest_retention": "15-25% improvement in likelihood to return after effective recovery",
+        "review_scores": "0.3-0.5 point improvement in online ratings from proactive recovery",
+        "survey_response_rate": "10-20% baseline → 30-40% with optimized timing and personalization",
+        "operational_improvement_speed": "Quarterly trend identification → weekly actionable insights"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement sentiment analysis on existing guest communications (Week 1-2)",
+          "Deploy manager alert system for negative feedback (Week 2-3)",
+          "Enable automated post-stay survey with optimal timing (Week 3-4)"
+        ],
+        "investment_required": "Medium - Sentiment analysis tools, survey platform, alert system, integration development",
+        "time_to_value": "6-10 weeks for real-time monitoring, 12-16 weeks for full analytics and optimization",
+        "prerequisites": [
+          "Centralized guest communication history",
+          "Manager notification infrastructure (mobile app, SMS)",
+          "Service recovery policies and budget allocation",
+          "Staff training on recovery best practices",
+          "Integration with CRM for guest history context",
+          "Review site API access or monitoring tools",
+          "Clear escalation paths for serious issues"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-vip-loyalty-recognition",
+      "name": "VIP & Loyalty Recognition",
+      "description": "AI-powered recognition system identifying high-value guests, orchestrating personalized experiences, delivering tier-appropriate benefits, and driving loyalty program engagement",
+      "traditional_workflow": "Front desk staff manually review arrival lists to identify VIP and loyalty guests, often missing recognition opportunities. Welcome amenities are ordered reactively, sometimes arriving after guest arrival. Room upgrades are subjective based on availability and staff memory of guest status. Loyalty benefits (late checkout, lounge access) are communicated inconsistently. High-value guests may go unrecognized if booking through OTAs or using different names. Personalization is limited to what staff remember from previous stays.",
+      "agentic_workflow": "VIP identification agents automatically flag high-value guests based on loyalty tier, spend history, lifetime value, and stay frequency. Recognition orchestrators coordinate personalized welcome amenities, room upgrades, and special touches before arrival. Benefit delivery agents automatically enable tier-appropriate perks (late checkout, lounge access, bonus points) without guest needing to ask. Engagement agents proactively communicate loyalty status, points balance, and exclusive offers through preferred channels. Surprise and delight agents suggest personalized gestures based on stay purpose and guest preferences.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "VIP Recognition Orchestrator",
+          "role": "Manages end-to-end VIP and loyalty guest experience, coordinating identification, benefit delivery, personalization, and engagement",
+          "responsibilities": [
+            "Identify and flag VIP and loyalty guests",
+            "Coordinate recognition and benefit delivery",
+            "Personalize experiences based on profile",
+            "Track recognition effectiveness and guest satisfaction"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Guest Value Scoring Agent",
+            "role": "Calculates guest lifetime value, identifies VIP status, and predicts future value potential",
+            "capabilities": [
+              "Lifetime value calculation",
+              "Stay frequency and recency analysis",
+              "Spend pattern recognition",
+              "Churn risk identification"
+            ]
+          },
+          {
+            "name": "Personalized Recognition Agent",
+            "role": "Designs and coordinates personalized recognition experiences (amenities, upgrades, touches)",
+            "capabilities": [
+              "Preference-based amenity selection",
+              "Upgrade opportunity identification",
+              "Special occasion recognition (birthday, anniversary)",
+              "Personalized welcome message creation"
+            ]
+          },
+          {
+            "name": "Benefits Automation Agent",
+            "role": "Automatically enables tier-appropriate benefits without guest needing to request",
+            "capabilities": [
+              "Late checkout approval",
+              "Lounge access activation",
+              "Bonus points/miles crediting",
+              "Complimentary service enablement"
+            ]
+          },
+          {
+            "name": "Loyalty Engagement Agent",
+            "role": "Drives ongoing loyalty program engagement through targeted communications and exclusive offers",
+            "capabilities": [
+              "Points balance and status updates",
+              "Tier progression tracking and communication",
+              "Exclusive offer targeting",
+              "Gamification and milestone celebration"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Surprise & Delight Agent",
+            "role": "Suggests unexpected gestures to exceed VIP guest expectations"
+          },
+          {
+            "name": "Cross-Property Recognition Agent",
+            "role": "Syncs VIP and preference data across multi-property portfolios"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-high-value-recognition",
+          "name": "Ultra-High-Value Guest Recognition",
+          "trigger": "Top-tier VIP or ultra-high-net-worth guest arrival requiring personalized touch",
+          "human_role": "General Manager or Guest Relations Manager",
+          "decision_criteria": "Relationship importance, personalization opportunities, memorable experience design",
+          "auto_proceed_conditions": "Standard loyalty tier recognition within defined parameters",
+          "escalation_path": "Regional VP or Brand Leadership for celebrity or UHNW guests"
+        ],
+        {
+          "gate_id": "gtg-upgrade-decisions",
+          "name": "Suite or Premium Upgrade",
+          "trigger": "AI recommends suite upgrade for loyal guest, impacting premium inventory availability",
+          "human_role": "Front Office Manager",
+          "decision_criteria": "Inventory constraints, revenue displacement, guest value, alternative options",
+          "auto_proceed_conditions": "Standard room category upgrades with minimal revenue impact",
+          "escalation_path": "Revenue Manager for decisions affecting sellable premium inventory"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Loyalty Program Database",
+          "data_elements": "Tier status, points balance, stay history, tier progression, enrollment date",
+          "integration_pattern": "Real-time API lookup, status sync"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Lifetime value, total spend, stay frequency, recency, preferences, complaints",
+          "integration_pattern": "Profile enrichment, predictive scoring"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Current and past bookings, room nights, ADR, ancillary spend, upgrades received",
+          "integration_pattern": "Booking and spend data aggregation"
+        ],
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Upgrade inventory availability, revenue displacement costs, optimal recognition timing",
+          "integration_pattern": "Inventory and pricing API"
+        ],
+        {
+          "source": "Amenity & Service Systems",
+          "data_elements": "Spa bookings, dining reservations, golf tee times, activity participation",
+          "integration_pattern": "Ancillary system integration"
+        ],
+        {
+          "source": "Feedback & Satisfaction Data",
+          "data_elements": "Survey responses, review ratings, complaint history, service recovery effectiveness",
+          "integration_pattern": "Satisfaction trend analysis"
+        ],
+        {
+          "source": "Marketing Automation",
+          "data_elements": "Email engagement, offer response rates, communication preferences, unsubscribe status",
+          "integration_pattern": "Marketing platform API"
+        ],
+        {
+          "source": "Social Media & Public Data",
+          "data_elements": "Influencer status, social following, public profile (if available and permitted)",
+          "integration_pattern": "Social data enrichment (privacy-compliant)"
+        }
+      ],
+      "quantified_benefits": {
+        "recognition_rate": "60-70% VIP guests recognized manually → 98%+ with automated flagging",
+        "guest_retention": "20-30% improvement in loyalty member retention through consistent recognition",
+        "lifetime_value": "15-25% increase in LTV from top-tier guests with excellent recognition",
+        "benefit_delivery": "Manual benefit requests → 90%+ proactive automatic enablement",
+        "loyalty_program_engagement": "30-40% active engagement → 60-70% with personalized communications",
+        "staff_efficiency": "1-2 hours daily on VIP coordination → automated with exception handling"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement automated VIP flagging in PMS for arriving guests (Week 1)",
+          "Deploy automated welcome amenity ordering for top tiers (Week 2)",
+          "Enable proactive benefit delivery (late checkout, lounge access) (Week 3-4)"
+        ],
+        "investment_required": "Medium - CRM enhancement, loyalty program integration, benefit automation workflows, recognition coordination tools",
+        "time_to_value": "6-10 weeks for core recognition automation, 12-16 weeks for advanced personalization",
+        "prerequisites": [
+          "Loyalty program database with real-time API access",
+          "Guest CRM with lifetime value scoring capability",
+          "Clear VIP/loyalty tier definitions and benefit matrices",
+          "Amenity ordering and delivery workflows",
+          "Staff training on recognition standards",
+          "Budget allocation for recognition amenities",
+          "Cross-department coordination (FD, F&B, Housekeeping)",
+          "Multi-property data sync for chain/brand portfolios"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-guest-digital-checkout",
+      "name": "Digital Check-Out & Express Departure",
+      "description": "Automated checkout system enabling instant departure via mobile app with electronic receipt delivery, final billing review, and post-stay engagement",
+      "traditional_workflow": "Guests queue at front desk during morning rush (6-11 AM) to review folios, settle incidentals, and return keys. This creates long wait times and staffing pressure. Guests often find surprise charges and dispute bills at checkout, requiring time-consuming investigations. Key card return is mandatory, and guests without time to stop at desk leave keys in room or drop boxes. Final receipts are printed, and follow-up is limited to generic satisfaction surveys sent days later.",
+      "agentic_workflow": "Digital checkout agents enable guests to review and approve final bills via mobile app from their room or en route to airport. Billing transparency agents push real-time folio updates throughout stay, preventing surprise charges. Dispute resolution agents automatically flag questionable charges for pre-departure review. Mobile key systems eliminate need for key return. Automated checkout agents process departure at guest's convenience, sending electronic receipts instantly. Post-departure agents trigger personalized thank-you messages and targeted retention offers based on stay characteristics.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Digital Checkout Orchestrator",
+          "role": "Manages seamless departure experience from folio review through post-stay engagement, eliminating front desk bottlenecks",
+          "responsibilities": [
+            "Enable mobile folio review and approval",
+            "Process instant checkout and payment",
+            "Coordinate digital receipt delivery",
+            "Trigger post-stay engagement"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Digital Checkout Agent",
+            "role": "Facilitates mobile or kiosk-based checkout with folio review, dispute handling, and instant processing",
+            "capabilities": [
+              "Mobile folio presentation",
+              "Itemized charge explanations",
+              "One-click checkout approval",
+              "Electronic receipt generation and delivery"
+            ]
+          },
+          {
+            "name": "Billing Transparency Agent",
+            "role": "Pushes real-time folio updates throughout stay to prevent surprise charges at departure",
+            "capabilities": [
+              "Real-time charge posting notifications",
+              "Daily folio summaries",
+              "Proactive charge explanations",
+              "Pre-departure balance alerts"
+            ]
+          },
+          {
+            "name": "Dispute Resolution Agent",
+            "role": "Identifies potential billing disputes and routes them for resolution before checkout",
+            "capabilities": [
+              "Anomalous charge detection",
+              "Common dispute pattern recognition",
+              "Automated adjustments for clear errors",
+              "Dispute escalation to appropriate staff"
+            ]
+          },
+          {
+            "name": "Post-Departure Engagement Agent",
+            "role": "Sends personalized thank-you messages, requests feedback, and delivers retention offers",
+            "capabilities": [
+              "Personalized thank-you message generation",
+              "Optimal survey timing calculation",
+              "Retention offer targeting",
+              "Next booking incentive delivery"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Payment Processing Agent",
+            "role": "Handles final payment settlement, split payments, and loyalty points redemption"
+          },
+          {
+            "name": "Loyalty Points Agent",
+            "role": "Credits stay points, confirms tier status changes, highlights new benefits"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-billing-disputes",
+          "name": "Billing Dispute Resolution",
+          "trigger": "Guest disputes charges on final bill that cannot be auto-resolved",
+          "human_role": "Front Desk Agent or Night Auditor",
+          "decision_criteria": "Charge validity, supporting documentation, guest explanation, goodwill considerations",
+          "auto_proceed_conditions": "Clean folio with no disputes or minor automated adjustments (<$25)",
+          "escalation_path": "Front Office Manager for disputes >$100 or complex situations"
+        ],
+        {
+          "gate_id": "gtg-negative-checkout",
+          "name": "Negative Departure Experience",
+          "trigger": "Guest provides negative feedback or low rating during digital checkout process",
+          "human_role": "Duty Manager",
+          "decision_criteria": "Service recovery opportunity, guest retention value, issue resolution before departure",
+          "auto_proceed_conditions": "Positive feedback and smooth checkout",
+          "escalation_path": "Guest Services Manager for serious dissatisfaction requiring immediate intervention"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Guest folios, itemized charges, payment methods, stay details, loyalty status",
+          "integration_pattern": "Real-time folio API, charge posting events"
+        ],
+        {
+          "source": "Point of Sale Systems",
+          "data_elements": "Restaurant charges, spa services, minibar, parking, resort fees",
+          "integration_pattern": "Real-time charge posting to PMS"
+        ],
+        {
+          "source": "Mobile App Platform",
+          "data_elements": "Checkout initiation, folio review, payment approval, feedback submission",
+          "integration_pattern": "App backend API, user interaction tracking"
+        ],
+        {
+          "source": "Payment Gateway",
+          "data_elements": "Final charge processing, split payments, refunds, payment method updates",
+          "integration_pattern": "Secure payment API, PCI compliance"
+        ],
+        {
+          "source": "Mobile Key System",
+          "data_elements": "Key deactivation at checkout, access log for security",
+          "integration_pattern": "Automatic key expiration on checkout"
+        ],
+        {
+          "source": "Guest CRM",
+          "data_elements": "Stay history, dispute history, lifetime value, communication preferences",
+          "integration_pattern": "Profile lookup, post-stay engagement"
+        ],
+        {
+          "source": "Loyalty Program",
+          "data_elements": "Points earned, tier progression, benefit summary, next stay incentives",
+          "integration_pattern": "Points posting, status updates"
+        ],
+        {
+          "source": "Marketing Automation",
+          "data_elements": "Post-stay messaging templates, retention offer campaigns, survey deployment",
+          "integration_pattern": "Triggered campaigns, personalization"
+        }
+      ],
+      "quantified_benefits": {
+        "checkout_time": "5-15 minutes at front desk → instant via mobile app",
+        "front_desk_congestion": "60-80% reduction in morning checkout queues",
+        "billing_disputes": "5-10% of checkouts involve disputes → <2% with real-time transparency",
+        "electronic_receipt_adoption": "70-80% of guests prefer electronic receipts, reducing paper and printer costs",
+        "guest_satisfaction": "65-70% CSAT with traditional checkout → 85-90% with express digital checkout",
+        "staff_efficiency": "30-40% reduction in checkout-related front desk labor hours"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Enable email receipt delivery as default (Week 1)",
+          "Deploy basic digital folio review in mobile app (Week 2-3)",
+          "Implement one-click checkout for guests with no disputes (Week 4)"
+        ],
+        "investment_required": "Low-Medium - Mobile app enhancement, PMS API integration, payment processing setup, minimal hardware",
+        "time_to_value": "6-8 weeks for basic digital checkout, 12-16 weeks for full automation and post-stay engagement",
+        "prerequisites": [
+          "Mobile app with checkout functionality or development",
+          "PMS with real-time folio API",
+          "Mobile key system (for key-free departure) or key drop box process",
+          "Real-time charge posting from all POS systems",
+          "Clear folio presentation with itemized descriptions",
+          "Payment gateway integration for final charges",
+          "Staff training on dispute handling and escalation",
+          "Guest communication about digital checkout option"
+        ]
+      }
+    }
+  ]
+}

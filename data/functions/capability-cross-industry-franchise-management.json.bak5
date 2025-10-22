@@ -1,0 +1,978 @@
+{
+  "id": "capability-cross-industry-franchise-management",
+  "name": "Cross-Industry Franchise Management",
+  "description": "AI-powered franchise operations management for retail, QSR, and hospitality franchisors managing performance monitoring, compliance, training, marketing co-op, and supply chain across franchise networks",
+  "category": "industry-specific",
+  "industryVertical": "cross-industry",
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "maturity": "production-ready",
+    "benchmarkStatus": "proven-roi"
+  },
+  "functions": [
+    {
+      "id": "fn-franchise-performance-monitoring",
+      "name": "Franchise Performance Monitoring",
+      "description": "Real-time performance tracking system providing franchisors with comprehensive dashboards, KPI monitoring, benchmarking, and early warning alerts across franchise networks",
+      "traditional_workflow": "Franchisees submit monthly financial reports via email or portal with 15-30 day lag. Field consultants visit locations quarterly to assess performance through manual checklists and observation. Performance analysis is done in spreadsheets comparing individual units to system averages. Underperforming locations are identified reactively after prolonged poor results. Best practices from high-performing franchisees are shared informally through regional meetings. Comparative benchmarking requires manual data compilation across multiple franchisee reporting formats.",
+      "agentic_workflow": "Data integration agents automatically collect sales, labor, inventory, and operational data from franchisee POS, accounting, and operational systems in real-time. Dashboard agents provide franchisors with live visibility into all locations with drill-down to individual unit performance. Benchmarking agents compare each location against system averages, regional peers, and historical performance with automatic ranking. Early warning agents detect performance deterioration patterns and alert field support teams before critical issues develop. Best practice identification agents highlight top performers and recommend their strategies to underperforming units.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Franchise Performance Orchestrator",
+          "role": "Manages comprehensive franchise network performance monitoring, benchmarking, alerting, and best practice sharing",
+          "responsibilities": [
+            "Aggregate data across all franchise locations",
+            "Monitor KPIs and detect performance issues",
+            "Benchmark locations against network and peers",
+            "Identify and share best practices"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Data Integration Agent",
+            "role": "Collects operational and financial data from franchisee systems in standardized format",
+            "capabilities": [
+              "Multi-system data extraction (POS, accounting, operations)",
+              "Data standardization and quality validation",
+              "Real-time and batch data ingestion",
+              "Handling multiple POS/accounting platforms"
+            ]
+          },
+          {
+            "name": "Performance Dashboard Agent",
+            "role": "Provides real-time visibility into franchise network performance with customizable views by role",
+            "capabilities": [
+              "System-wide aggregated metrics",
+              "Individual location drill-down",
+              "Trend analysis and historical comparison",
+              "Mobile dashboard access for field teams"
+            ]
+          },
+          {
+            "name": "Benchmarking Agent",
+            "role": "Compares franchise performance across multiple dimensions with automatic ranking and quartile analysis",
+            "capabilities": [
+              "Peer group benchmarking (by size, market, maturity)",
+              "System average comparison",
+              "Same-store sales growth tracking",
+              "Quartile and percentile ranking"
+            ]
+          },
+          {
+            "name": "Early Warning Agent",
+            "role": "Detects performance deterioration patterns and alerts field support before critical issues develop",
+            "capabilities": [
+              "Multi-factor performance scoring",
+              "Trend-based decline detection",
+              "Financial distress indicators",
+              "Automated alert routing to field consultants"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Best Practice Agent",
+            "role": "Identifies high-performing strategies and recommends adoption to other franchisees"
+          },
+          {
+            "name": "Reporting Agent",
+            "role": "Generates automated performance reports for franchise advisory councils and ownership"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-performance-intervention",
+          "name": "Underperformance Intervention",
+          "trigger": "Location falls below critical performance thresholds or shows sustained decline",
+          "human_role": "Regional Franchise Consultant",
+          "decision_criteria": "Decline severity, franchisee receptiveness, support needs, termination risk",
+          "auto_proceed_conditions": "Performance within normal ranges or minor variance",
+          "escalation_path": "VP of Franchise Operations for locations at risk of closure or franchise agreement default"
+        ],
+        {
+          "gate_id": "gtg-best-practice-validation",
+          "name": "Best Practice Validation",
+          "trigger": "AI identifies operational practice from top performer for network-wide recommendation",
+          "human_role": "Operations Team",
+          "decision_criteria": "Scalability, brand alignment, cost implications, franchisee adoption likelihood",
+          "auto_proceed_conditions": "Standard performance reporting and benchmarking",
+          "escalation_path": "Chief Operating Officer for practices requiring system-wide rollout"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Franchisee POS Systems",
+          "data_elements": "Daily sales, transaction counts, product mix, average ticket, hourly sales patterns",
+          "integration_pattern": "API integration, nightly batch, or POS aggregator services"
+        ],
+        {
+          "source": "Franchisee Accounting Systems",
+          "data_elements": "P&L statements, cost of goods, labor costs, operating expenses, net profit margins",
+          "integration_pattern": "Accounting software API (QuickBooks, Xero, etc.) or financial reporting portal"
+        ],
+        {
+          "source": "Operational Compliance Systems",
+          "data_elements": "Audit scores, inspection results, training completion, food safety logs",
+          "integration_pattern": "Franchise management platform, inspection app data"
+        ],
+        {
+          "source": "Guest Feedback Platforms",
+          "data_elements": "Review ratings, NPS scores, sentiment analysis, complaint volumes by location",
+          "integration_pattern": "Review aggregation, survey platform APIs"
+        ],
+        {
+          "source": "Labor Management Systems",
+          "data_elements": "Labor hours, labor cost %, scheduling adherence, turnover rates",
+          "integration_pattern": "Time and attendance system integration"
+        ],
+        {
+          "source": "Inventory Management",
+          "data_elements": "Inventory turns, waste percentages, variance rates, ordering patterns",
+          "integration_pattern": "Inventory system API or manual reporting"
+        ],
+        {
+          "source": "Market Data",
+          "data_elements": "Local market conditions, competitive openings/closures, demographic trends",
+          "integration_pattern": "Third-party market intelligence, location analytics"
+        ],
+        {
+          "source": "Historical Performance Data",
+          "data_elements": "3-5 years of franchise performance for trending and predictive analysis",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "reporting_timeliness": "15-30 day lag → real-time daily visibility",
+        "underperformance_detection": "3-6 months delay → 2-4 weeks early warning",
+        "field_consultant_efficiency": "30-40% more locations covered with data-driven prioritization",
+        "network_performance_improvement": "5-10% same-store sales lift from best practice sharing and intervention",
+        "compliance_monitoring": "Quarterly manual audits → continuous automated monitoring",
+        "franchisee_success_rate": "10-15% improvement in franchisee profitability through earlier intervention"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement automated POS data collection from top 50% of network (Week 1-4)",
+          "Deploy basic performance dashboards for franchisor team (Week 4-6)",
+          "Enable automated weekly performance reports to franchisees (Week 6-8)"
+        ],
+        "investment_required": "Medium-High - Franchise management platform, data integration development, dashboard tools, franchisee onboarding",
+        "time_to_value": "12-16 weeks for core network visibility, 6-9 months for full benchmarking and predictive analytics",
+        "prerequisites": [
+          "Franchise management platform or BI tool",
+          "Contractual rights to franchisee data access",
+          "Standardized KPI definitions across network",
+          "Integration capabilities with major POS/accounting systems",
+          "Field consultant training on data interpretation",
+          "Franchisee communication and change management",
+          "Data privacy and security compliance",
+          "3+ years historical data for benchmarking"
+        ]
+      }
+    },
+    {
+      "id": "fn-franchise-royalty-fee",
+      "name": "Royalty & Fee Calculation",
+      "description": "Automated royalty and franchise fee calculation system managing revenue reporting, fee computation, payment processing, and discrepancy resolution",
+      "traditional_workflow": "Franchisees manually submit weekly or monthly sales reports via email, spreadsheet, or portal. Franchisor accounting staff manually calculate royalty fees (typically % of gross sales) using spreadsheets. Discrepancies between reported sales and actual POS data require investigation with back-and-forth communication. Late payments are tracked manually and follow-up is inconsistent. Marketing fund contributions are calculated separately. Fee adjustments, credits, and promotional rate periods require manual intervention. Reconciliation between reported sales and audited figures happens annually if at all.",
+      "agentic_workflow": "Revenue reporting agents automatically extract sales data directly from franchisee POS systems, eliminating manual reporting. Fee calculation agents compute royalties, marketing fees, and other charges automatically based on franchise agreement terms. Discrepancy detection agents compare reported sales (if any) against POS data and flag variances for investigation. Payment processing agents generate invoices, track payment status, and trigger automated reminders for late payments. Reconciliation agents continuously validate reported sales against independent data sources, identifying underreporting. Adjustment agents handle promotional periods, openings, and special circumstances based on agreement terms.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Royalty Management Orchestrator",
+          "role": "Manages end-to-end royalty lifecycle from revenue capture through payment collection and reconciliation",
+          "responsibilities": [
+            "Capture accurate sales data from franchisees",
+            "Calculate fees per franchise agreement terms",
+            "Process payments and manage collections",
+            "Detect and resolve discrepancies and underreporting"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Revenue Capture Agent",
+            "role": "Automatically extracts sales data from franchisee POS and accounting systems",
+            "capabilities": [
+              "Direct POS data extraction",
+              "Multi-system integration handling",
+              "Data validation and completeness checking",
+              "Fallback to manual reporting when needed"
+            ]
+          },
+          {
+            "name": "Fee Calculation Agent",
+            "role": "Computes royalties, marketing fees, and other charges based on franchise agreement terms",
+            "capabilities": [
+              "Agreement term parsing and application",
+              "Tiered royalty rate handling",
+              "Promotional period adjustments",
+              "Multiple fee type calculation (royalty, marketing, tech fee)"
+            ]
+          },
+          {
+            "name": "Discrepancy Detection Agent",
+            "role": "Identifies variances between reported sales and independent data sources, flagging potential underreporting",
+            "capabilities": [
+              "Cross-validation against POS data",
+              "Statistical anomaly detection",
+              "Historical pattern comparison",
+              "Third-party data validation (bank deposits, credit card processing)"
+            ]
+          },
+          {
+            "name": "Payment Processing Agent",
+            "role": "Generates invoices, processes payments, and manages collections with automated reminders",
+            "capabilities": [
+              "Automated invoice generation",
+              "ACH/credit card payment processing",
+              "Late payment tracking and reminders",
+              "Payment application and reconciliation"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Adjustment Agent",
+            "role": "Handles credits, promotional rates, opening periods per agreement terms"
+          },
+          {
+            "name": "Audit Support Agent",
+            "role": "Provides data and documentation for franchise agreement audits"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-significant-discrepancy",
+          "name": "Significant Revenue Discrepancy",
+          "trigger": "Reported sales vary from POS data by >5% or show patterns indicating underreporting",
+          "human_role": "Franchise Accountant",
+          "decision_criteria": "Discrepancy magnitude, pattern vs. isolated, franchisee history, investigation needs",
+          "auto_proceed_conditions": "Sales data matches within 2% variance threshold",
+          "escalation_path": "CFO or Legal for suspected systematic underreporting or fraud"
+        ],
+        {
+          "gate_id": "gtg-payment-default",
+          "name": "Repeated Payment Default",
+          "trigger": "Franchisee fails to pay royalties after automated reminders and grace period",
+          "human_role": "Franchise Collections Manager",
+          "decision_criteria": "Payment history, financial distress indicators, franchisee communication, legal action threshold",
+          "auto_proceed_conditions": "On-time payment within terms",
+          "escalation_path": "Legal and Executive Team for franchisees in material breach requiring termination consideration"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Franchisee POS Systems",
+          "data_elements": "Daily gross sales, transaction counts, payment methods, refunds, voids",
+          "integration_pattern": "Direct API, POS aggregator, or nightly batch extracts"
+        ],
+        {
+          "source": "Franchise Agreement Database",
+          "data_elements": "Royalty rates, fee structures, payment terms, promotional periods, opening date, territory",
+          "integration_pattern": "Franchise management system, contract database"
+        ],
+        {
+          "source": "Payment Processing Platform",
+          "data_elements": "Invoice generation, payment receipts, ACH/credit card transactions, payment status",
+          "integration_pattern": "Payment gateway integration, accounting system"
+        ],
+        {
+          "source": "Franchisee Self-Reported Data",
+          "data_elements": "Manual sales reports (for locations without automated integration), adjustments, explanations",
+          "integration_pattern": "Franchisee portal, email submission"
+        ],
+        {
+          "source": "Bank & Credit Card Data",
+          "data_elements": "Merchant deposits, credit card processing volumes for cross-validation",
+          "integration_pattern": "Banking API, credit card processor reports (with franchisee authorization)"
+        ],
+        {
+          "source": "Accounting System",
+          "data_elements": "Accounts receivable, aging reports, payment history, credits issued",
+          "integration_pattern": "Accounting software (QuickBooks, NetSuite, etc.)"
+        ],
+        {
+          "source": "Historical Royalty Data",
+          "data_elements": "3-5 years of royalty payments, discrepancy patterns, dispute resolutions",
+          "integration_pattern": "Data warehouse, audit trail"
+        }
+      ],
+      "quantified_benefits": {
+        "reporting_accuracy": "85-90% manual reporting accuracy → 98%+ with automated POS capture",
+        "underreporting_detection": "Annual audit discovery → real-time continuous monitoring",
+        "collection_time_savings": "10-15 hours weekly on invoicing/collections → 1-2 hours exception handling",
+        "payment_timeliness": "75-80% on-time payment → 90-95% with automated reminders",
+        "revenue_recovery": "2-5% additional royalty revenue from reduced underreporting",
+        "discrepancy_resolution_time": "2-4 weeks investigation → days with automated data cross-validation"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement automated POS data capture for largest franchisees (Week 1-4)",
+          "Deploy automated fee calculation and invoicing (Week 4-6)",
+          "Enable automated payment reminders and tracking (Week 6-8)"
+        ],
+        "investment_required": "Medium - Franchise management platform with royalty module, POS integrations, payment processing, development",
+        "time_to_value": "8-12 weeks for core automation, 6-9 months for full network coverage and discrepancy analytics",
+        "prerequisites": [
+          "Franchise management system with royalty calculation capability",
+          "Contractual rights to access franchisee POS data",
+          "POS integration strategy (direct API, aggregator, or hybrid)",
+          "Payment processing platform (ACH, credit card)",
+          "Franchise agreement database with all terms digitized",
+          "Accounting system integration for AR management",
+          "Legal review of data access and privacy compliance",
+          "Franchisee communication and onboarding plan",
+          "Collections and dispute resolution procedures"
+        ]
+      }
+    },
+    {
+      "id": "fn-franchise-compliance-audit",
+      "name": "Compliance & Brand Standards Audit",
+      "description": "AI-powered compliance monitoring system managing brand standard audits, automated compliance checks, remediation tracking, and certification management",
+      "traditional_workflow": "Field consultants conduct on-site audits quarterly or semi-annually using paper or tablet checklists covering brand standards (facility appearance, operations, service quality, food safety). Audits are time-consuming (3-5 hours per location) and subjective, with inconsistency between auditors. Results are compiled manually into reports sent to franchisees weeks later. Remediation tracking is manual with inconsistent follow-up. Non-compliance issues may persist for months between audits. Critical violations (food safety, safety hazards) may not be caught between scheduled visits.",
+      "agentic_workflow": "Continuous monitoring agents track compliance indicators remotely using IoT sensors (temperature logs, equipment status), transaction data (price compliance), and guest feedback (service standards). Digital audit agents guide field consultants through standardized checklists with photo requirements and AI-assisted scoring. Image recognition agents analyze facility photos for brand standard compliance (signage, cleanliness, layout). Issue tracking agents automatically route violations to franchisees with required remediation actions and deadlines. Re-inspection agents schedule follow-ups for critical issues. Analytics agents identify systemic compliance patterns and high-risk locations.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Compliance & Audit Orchestrator",
+          "role": "Manages franchise compliance monitoring, brand standard auditing, remediation tracking, and certification management",
+          "responsibilities": [
+            "Monitor compliance continuously via remote data",
+            "Coordinate on-site audit scheduling and execution",
+            "Track remediation of identified issues",
+            "Identify compliance trends and high-risk franchisees"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Continuous Monitoring Agent",
+            "role": "Tracks compliance indicators remotely using IoT, transaction data, and guest feedback between audits",
+            "capabilities": [
+              "IoT sensor monitoring (temperature, equipment)",
+              "Transaction data compliance checks (pricing, promotions)",
+              "Guest feedback sentiment analysis for service standards",
+              "Real-time alert generation for critical violations"
+            ]
+          },
+          {
+            "name": "Digital Audit Agent",
+            "role": "Guides auditors through standardized checklists with photo requirements and AI-assisted scoring",
+            "capabilities": [
+              "Standardized digital checklist execution",
+              "Photo documentation requirements",
+              "Conditional question logic",
+              "Real-time score calculation and reporting"
+            ]
+          },
+          {
+            "name": "Image Recognition Agent",
+            "role": "Analyzes facility photos using computer vision to detect brand standard compliance issues",
+            "capabilities": [
+              "Signage compliance verification",
+              "Cleanliness and maintenance assessment",
+              "Layout and merchandising compliance",
+              "Automated defect detection and flagging"
+            ]
+          },
+          {
+            "name": "Remediation Tracking Agent",
+            "role": "Routes violations to franchisees, tracks corrective actions, and schedules re-inspections",
+            "capabilities": [
+              "Automated violation notification",
+              "Corrective action plan management",
+              "Deadline tracking and escalation",
+              "Re-inspection scheduling for critical issues"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Certification Agent",
+            "role": "Manages training certifications, licenses, permits, and compliance documentation"
+          },
+          {
+            "name": "Analytics Agent",
+            "role": "Identifies systemic compliance issues, high-risk franchisees, and improvement trends"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-critical-violation",
+          "name": "Critical Safety or Brand Violation",
+          "trigger": "Audit or monitoring detects critical food safety, health, or brand standard violation",
+          "human_role": "Regional Franchise Consultant",
+          "decision_criteria": "Guest safety risk, brand reputation risk, legal compliance, immediate remediation requirements",
+          "auto_proceed_conditions": "Minor compliance issues with standard remediation timeline",
+          "escalation_path": "VP Franchise Operations and Legal for violations requiring immediate closure or franchise agreement action"
+        ],
+        {
+          "gate_id": "gtg-remediation-failure",
+          "name": "Failure to Remediate",
+          "trigger": "Franchisee fails to correct violations by deadline or shows pattern of non-compliance",
+          "human_role": "Regional Franchise Consultant",
+          "decision_criteria": "Violation severity, franchisee cooperation, pattern vs. isolated, brand risk",
+          "auto_proceed_conditions": "Timely remediation with verification",
+          "escalation_path": "Legal and Executive Team for franchisees in repeated material breach"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Audit Management Platform",
+          "data_elements": "Audit schedules, checklist results, photos, scores, violation history, remediation status",
+          "integration_pattern": "Franchise audit software, mobile app"
+        ],
+        {
+          "source": "IoT Sensors & Equipment Monitoring",
+          "data_elements": "Refrigeration temperatures, cooking equipment logs, safety system status (fire suppression, alarms)",
+          "integration_pattern": "IoT platform, sensor data feeds"
+        ],
+        {
+          "source": "POS & Transaction Data",
+          "data_elements": "Pricing compliance, promotional execution, product availability, sales mix",
+          "integration_pattern": "POS data integration, business rules engine"
+        ],
+        {
+          "source": "Guest Feedback",
+          "data_elements": "Reviews, ratings, sentiment analysis, complaint types indicating service or facility issues",
+          "integration_pattern": "Review aggregation, survey platform"
+        ],
+        {
+          "source": "Image Recognition Platform",
+          "data_elements": "Facility photos, signage images, interior/exterior shots for AI analysis",
+          "integration_pattern": "Computer vision API, photo storage"
+        ],
+        {
+          "source": "Certification & Licensing Database",
+          "data_elements": "Food handler certifications, business licenses, health permits, insurance certificates",
+          "integration_pattern": "Document management, compliance tracking"
+        ],
+        {
+          "source": "Brand Standards Documentation",
+          "data_elements": "Operations manual, facility standards, equipment specifications, service protocols",
+          "integration_pattern": "Content management system, brand guidelines"
+        ],
+        {
+          "source": "Historical Audit Data",
+          "data_elements": "3-5 years of audit results for trend analysis and risk scoring",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "audit_frequency_improvement": "Quarterly/semi-annual site visits → continuous remote monitoring + targeted on-site",
+        "audit_consistency": "70-75% inter-rater reliability → 90-95% with standardized digital checklists",
+        "critical_violation_detection": "Days to months lag → real-time alerts for food safety and safety issues",
+        "remediation_completion": "60-70% timely completion → 85-90% with automated tracking and escalation",
+        "field_consultant_efficiency": "40-50% more locations covered with risk-based audit scheduling",
+        "brand_standard_compliance": "10-15 point improvement in average audit scores across network"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy digital audit checklists on tablets for field consultants (Week 1-2)",
+          "Implement automated remediation tracking and franchisee notifications (Week 2-4)",
+          "Enable photo requirement enforcement for all audits (Week 1)"
+        ],
+        "investment_required": "Medium-High - Audit management platform, mobile devices, IoT sensors, image recognition AI, integration",
+        "time_to_value": "8-12 weeks for digital audits and remediation tracking, 6-12 months for IoT monitoring and image AI",
+        "prerequisites": [
+          "Franchise audit management software with mobile capability",
+          "Standardized brand standards and audit checklists",
+          "Mobile devices for field consultants (tablets or smartphones)",
+          "IoT infrastructure plan for continuous monitoring (optional but high-value)",
+          "Image recognition AI platform or development",
+          "Franchisee portal for violation notification and remediation tracking",
+          "Legal framework for compliance enforcement and franchise agreement remedies",
+          "Field consultant training on digital tools and consistent auditing",
+          "Photo storage infrastructure (cloud-based)"
+        ]
+      }
+    },
+    {
+      "id": "fn-franchise-support-training",
+      "name": "Franchisee Support & Training",
+      "description": "AI-powered franchisee enablement system managing onboarding, continuous training, knowledge management, best practice sharing, and support ticket resolution",
+      "traditional_workflow": "New franchisee training is conducted in-person at corporate training centers, requiring travel and time away from operations. Training materials are static manuals and videos that become outdated quickly. Support requests come via phone and email to limited support staff, with inconsistent response times and quality. Knowledge articles are scattered across multiple systems and hard to find. Best practices from successful franchisees are shared informally at annual conferences. Training completion is not systematically tracked, and skill gaps are identified through audit failures rather than proactively.",
+      "agentic_workflow": "Digital onboarding agents guide new franchisees through structured training programs with progress tracking and competency assessments. AI training assistants provide personalized learning paths based on role, location type, and performance needs. Knowledge agents provide instant access to operations manuals, troubleshooting guides, and FAQs via chat or search. Support ticket agents triage and route franchisee questions to appropriate specialists or provide automated answers. Best practice agents identify successful strategies from top performers and create training modules. Analytics agents track training completion, identify common pain points, and recommend targeted support interventions.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Franchisee Support Orchestrator",
+          "role": "Manages franchisee enablement from onboarding through ongoing support, training, and knowledge sharing",
+          "responsibilities": [
+            "Coordinate new franchisee onboarding and training",
+            "Provide ongoing support and knowledge access",
+            "Identify and share best practices",
+            "Track training effectiveness and support quality"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Digital Onboarding Agent",
+            "role": "Guides new franchisees through structured training with progress tracking and competency verification",
+            "capabilities": [
+              "Personalized training path creation",
+              "Progress tracking and milestone management",
+              "Competency assessments and certification",
+              "On-demand module access and mobile learning"
+            ]
+          },
+          {
+            "name": "AI Training Assistant",
+            "role": "Provides adaptive learning recommendations based on performance data and identified skill gaps",
+            "capabilities": [
+              "Performance-based training recommendations",
+              "Role-specific content curation",
+              "Microlearning module delivery",
+              "Certification and compliance training tracking"
+            ]
+          },
+          {
+            "name": "Knowledge Agent",
+            "role": "Provides instant access to operations knowledge via AI-powered search, chat, and contextual help",
+            "capabilities": [
+              "Natural language search across all documentation",
+              "Chatbot for instant answers to common questions",
+              "Contextual help within franchisee systems",
+              "Content recommendation based on role and situation"
+            ]
+          },
+          {
+            "name": "Support Ticket Agent",
+            "role": "Triages franchisee support requests, provides automated answers, or routes to specialists",
+            "capabilities": [
+              "Automatic categorization and priority assignment",
+              "FAQ-based automated responses",
+              "Intelligent routing to subject matter experts",
+              "SLA tracking and escalation management"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Best Practice Agent",
+            "role": "Identifies successful strategies from top performers and creates shareable content"
+          },
+          {
+            "name": "Community Agent",
+            "role": "Facilitates peer-to-peer knowledge sharing via franchisee forums and communities"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-complex-support",
+          "name": "Complex Support Request",
+          "trigger": "Support ticket cannot be resolved by automated systems and requires specialist expertise",
+          "human_role": "Franchise Support Specialist",
+          "decision_criteria": "Issue complexity, urgency, franchisee history, system capabilities",
+          "auto_proceed_conditions": "Standard questions answered by knowledge base or chatbot",
+          "escalation_path": "Subject matter experts (operations, technology, legal) for specialized issues"
+        ],
+        {
+          "gate_id": "gtg-training-failure",
+          "name": "Training Competency Failure",
+          "trigger": "Franchisee or staff member fails competency assessment multiple times",
+          "human_role": "Training Manager",
+          "decision_criteria": "Assessment difficulty, learning style needs, additional support requirements",
+          "auto_proceed_conditions": "Successful completion of training and competency assessments",
+          "escalation_path": "Regional Consultant for franchisees with systemic training challenges"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Learning Management System (LMS)",
+          "data_elements": "Training modules, completion status, assessment scores, certification records, learning paths",
+          "integration_pattern": "LMS platform with xAPI/SCORM"
+        ],
+        {
+          "source": "Knowledge Base",
+          "data_elements": "Operations manuals, FAQs, troubleshooting guides, video tutorials, policy documents",
+          "integration_pattern": "Content management system, document repository"
+        ],
+        {
+          "source": "Support Ticket System",
+          "data_elements": "Tickets, categories, resolution times, satisfaction ratings, common issues",
+          "integration_pattern": "Help desk platform (Zendesk, Freshdesk, etc.)"
+        ],
+        {
+          "source": "Franchise Performance Data",
+          "data_elements": "Location performance metrics, audit scores, compliance issues indicating training needs",
+          "integration_pattern": "Franchise management system, performance dashboards"
+        ],
+        {
+          "source": "Franchisee Community Platform",
+          "data_elements": "Forum posts, peer discussions, questions, best practice sharing",
+          "integration_pattern": "Community platform, social network"
+        ],
+        {
+          "source": "Best Practice Database",
+          "data_elements": "Documented strategies from top performers, case studies, success stories",
+          "integration_pattern": "Content repository, best practice library"
+        ],
+        {
+          "source": "Onboarding Milestones",
+          "data_elements": "New franchisee progress through onboarding stages, time to competency, early performance",
+          "integration_pattern": "Onboarding tracking system"
+        ],
+        {
+          "source": "User Analytics",
+          "data_elements": "Content access patterns, search queries, chatbot conversations, support ticket themes",
+          "integration_pattern": "Analytics platform, usage tracking"
+        }
+      ],
+      "quantified_benefits": {
+        "onboarding_time_reduction": "4-6 weeks traditional → 2-3 weeks with digital onboarding",
+        "support_response_time": "4-24 hours → instant for 60-70% of questions via chatbot/knowledge base",
+        "training_completion_rate": "70-75% → 90-95% with tracking and automated reminders",
+        "franchisee_satisfaction_with_support": "65-70% → 85-90% CSAT with faster, better answers",
+        "support_staff_efficiency": "50-60% time on repetitive questions → 80% on complex issues",
+        "knowledge_access_speed": "30-60 minutes searching manuals → seconds with AI search"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy FAQ chatbot for most common support questions (Week 1-4)",
+          "Digitize operations manual with AI-powered search (Week 2-4)",
+          "Implement support ticket system with automated routing (Week 3-5)"
+        ],
+        "investment_required": "Medium - LMS platform, knowledge management system, chatbot development, support ticket platform",
+        "time_to_value": "8-12 weeks for core support and knowledge systems, 16-24 weeks for full training digitization",
+        "prerequisites": [
+          "Learning Management System (LMS) selection",
+          "Content digitization of training materials and manuals",
+          "Knowledge base structure and taxonomy",
+          "Chatbot platform with franchise operations training",
+          "Support ticket system with SLA definitions",
+          "Integration with franchise performance data for targeted training",
+          "Franchisee portal or mobile app for learning access",
+          "Subject matter expert availability for complex support",
+          "Best practice documentation from top performers",
+          "Change management for franchisees adopting digital learning"
+        ]
+      }
+    },
+    {
+      "id": "fn-franchise-marketing-coop",
+      "name": "Marketing Co-Op Fund Management",
+      "description": "AI-powered marketing fund management system tracking contributions, managing fund allocation, approving campaigns, and measuring marketing ROI across franchise networks",
+      "traditional_workflow": "Marketing fund contributions (typically % of sales) are collected as part of royalty payments but tracked separately in spreadsheets. Local franchisees submit campaign proposals via email for approval, often with incomplete information. Approval process is manual and slow (1-2 weeks), requiring review by marketing team. Fund balances by region or franchisee are reconciled manually monthly or quarterly. National marketing campaigns are funded from co-op without systematic contribution or ROI tracking. Compliance with brand guidelines is checked manually, and non-compliant materials are discovered after launch.",
+      "agentic_workflow": "Contribution tracking agents automatically calculate and collect marketing fund contributions alongside royalties. Campaign proposal agents guide franchisees through structured submission with budget, creative, and targeting details. Approval workflow agents route proposals to appropriate reviewers with automated brand compliance checking. Fund management agents track balances by region/franchisee and allocate funds across local and national initiatives. Analytics agents measure campaign performance and ROI, providing data-driven insights for future approvals. Compliance agents scan submitted creative materials for brand guideline adherence using AI.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Marketing Co-Op Orchestrator",
+          "role": "Manages marketing fund lifecycle from contribution collection through campaign approval, execution, and ROI measurement",
+          "responsibilities": [
+            "Track contributions and fund balances",
+            "Route and approve campaign proposals",
+            "Ensure brand compliance in marketing materials",
+            "Measure and optimize marketing ROI"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Contribution Tracking Agent",
+            "role": "Calculates and collects marketing fund contributions alongside royalty payments",
+            "capabilities": [
+              "Automated contribution calculation (% of sales)",
+              "Integration with royalty payment processing",
+              "Fund balance tracking by franchisee and region",
+              "Contribution reconciliation and reporting"
+            ]
+          },
+          {
+            "name": "Campaign Proposal Agent",
+            "role": "Guides franchisees through structured campaign submission with required details and budget",
+            "capabilities": [
+              "Digital proposal form with required fields",
+              "Budget estimation and fund availability checking",
+              "Template library for common campaign types",
+              "Creative asset upload and management"
+            ]
+          },
+          {
+            "name": "Approval Workflow Agent",
+            "role": "Routes proposals to appropriate reviewers and tracks approval status with automated compliance checks",
+            "capabilities": [
+              "Role-based routing (brand compliance, budget, region)",
+              "Automated brand guideline compliance scanning",
+              "Parallel and sequential approval workflows",
+              "SLA tracking and escalation for delayed approvals"
+            ]
+          },
+          {
+            "name": "Campaign Analytics Agent",
+            "role": "Measures campaign performance, ROI, and provides data-driven insights for optimization",
+            "capabilities": [
+              "Multi-channel attribution (digital, traditional)",
+              "Sales lift analysis for campaign periods",
+              "ROI calculation and benchmarking",
+              "Best practice identification from top-performing campaigns"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Fund Allocation Agent",
+            "role": "Manages fund allocation across local franchisee campaigns and national brand initiatives"
+          },
+          {
+            "name": "Brand Compliance Agent",
+            "role": "Scans creative materials for logo usage, messaging, and brand guideline adherence"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-campaign-approval",
+          "name": "Marketing Campaign Approval",
+          "trigger": "Franchisee submits campaign proposal for co-op fund usage",
+          "human_role": "Brand Marketing Manager",
+          "decision_criteria": "Brand alignment, budget appropriateness, target audience fit, creative quality, ROI potential",
+          "auto_proceed_conditions": "Pre-approved campaign templates within budget using standard creative",
+          "escalation_path": "CMO for high-budget campaigns or innovative approaches requiring brand evaluation"
+        ],
+        {
+          "gate_id": "gtg-compliance-violations",
+          "name": "Brand Compliance Violation",
+          "trigger": "AI detects brand guideline violations in submitted creative materials",
+          "human_role": "Brand Compliance Manager",
+          "decision_criteria": "Violation severity, brand risk, franchisee intent, correction requirements",
+          "auto_proceed_conditions": "Materials passing automated brand compliance checks",
+          "escalation_path": "Legal for violations creating trademark or brand integrity risks"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Royalty & Fee System",
+          "data_elements": "Sales data for contribution calculation, royalty payment processing, franchisee accounts",
+          "integration_pattern": "Integration with royalty management system"
+        ],
+        {
+          "source": "Marketing Fund Accounting",
+          "data_elements": "Fund balances by franchisee and region, contribution history, disbursements, allocations",
+          "integration_pattern": "Accounting system, fund management platform"
+        ],
+        {
+          "source": "Campaign Proposal Platform",
+          "data_elements": "Proposal submissions, campaign details, budgets, creative assets, approval status",
+          "integration_pattern": "Marketing workflow platform, DAM (Digital Asset Management)"
+        ],
+        {
+          "source": "Brand Guidelines Repository",
+          "data_elements": "Logo usage rules, color palettes, messaging frameworks, creative standards",
+          "integration_pattern": "Brand portal, content management system"
+        ],
+        {
+          "source": "Campaign Performance Data",
+          "data_elements": "Digital ad metrics (impressions, clicks, conversions), sales lift, foot traffic, brand awareness",
+          "integration_pattern": "Marketing analytics platform, attribution tools"
+        ],
+        {
+          "source": "Franchisee Sales Data",
+          "data_elements": "Sales during and after campaign periods for lift analysis",
+          "integration_pattern": "POS data integration, performance monitoring system"
+        ],
+        {
+          "source": "Creative Asset Library",
+          "data_elements": "Approved templates, images, videos, messaging for franchisee use",
+          "integration_pattern": "Digital Asset Management (DAM) system"
+        ],
+        {
+          "source": "Approval Workflow History",
+          "data_elements": "Past approvals, rejection reasons, approval times, reviewer feedback",
+          "integration_pattern": "Workflow management system, audit trail"
+        }
+      ],
+      "quantified_benefits": {
+        "approval_cycle_time": "1-2 weeks manual review → 2-3 days with automated workflow and compliance checks",
+        "brand_compliance_rate": "70-80% compliant on first submission → 90-95% with AI-assisted checking",
+        "fund_transparency": "Monthly/quarterly reconciliation → real-time balance visibility",
+        "campaign_roi_visibility": "Limited tracking → comprehensive attribution and sales lift analysis",
+        "franchisee_marketing_participation": "20-30% active → 50-60% with simplified proposal process",
+        "marketing_team_efficiency": "60% time on approvals and compliance → 80% on strategy and creative development"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement digital campaign proposal forms with brand templates (Week 1-4)",
+          "Deploy automated contribution tracking alongside royalty collection (Week 2-4)",
+          "Enable real-time fund balance visibility for franchisees (Week 4-6)"
+        ],
+        "investment_required": "Medium - Marketing workflow platform, brand compliance AI, DAM system, integration with royalty/accounting",
+        "time_to_value": "8-12 weeks for core contribution tracking and approval workflow, 16-24 weeks for compliance AI and ROI analytics",
+        "prerequisites": [
+          "Marketing workflow and campaign management platform",
+          "Integration with royalty management for contribution collection",
+          "Digital Asset Management (DAM) system for creative library",
+          "Brand guidelines digitized with compliance rules",
+          "Brand compliance AI platform or development",
+          "Marketing analytics and attribution infrastructure",
+          "Franchisee portal for campaign submission and fund balance view",
+          "Approval workflow definitions (roles, thresholds, SLAs)",
+          "Creative templates library for common campaign types",
+          "Historical fund and campaign data for baseline analysis"
+        ]
+      }
+    },
+    {
+      "id": "fn-franchise-supply-chain-compliance",
+      "name": "Supply Chain Compliance",
+      "description": "AI-powered supply chain oversight system verifying approved vendor usage, monitoring purchasing compliance, tracking quality issues, and managing distributor performance",
+      "traditional_workflow": "Franchisees are provided with approved vendor lists and product specifications via PDF manuals or spreadsheets. Purchasing compliance is verified through periodic audits by field consultants reviewing invoices and inventory. Unauthorized vendor usage is discovered reactively through quality issues or brand inconsistency. Product quality problems are reported individually without systematic tracking or trend analysis. Vendor performance (pricing, delivery reliability, product quality) is assessed subjectively without data-driven metrics. New vendor approval is manual and slow.",
+      "agentic_workflow": "Vendor compliance agents monitor franchisee purchasing data in real-time, flagging unauthorized vendor usage instantly. Product specification agents verify that purchased items match approved specifications and detect substitutions. Quality tracking agents aggregate quality issues by product and vendor, identifying patterns requiring intervention. Vendor performance agents track pricing, delivery reliability, and quality metrics, benchmarking vendors against each other. Alert agents notify franchisees immediately of compliance issues with corrective action requirements. Analytics agents provide franchisor visibility into network-wide purchasing patterns and savings opportunities.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Supply Chain Compliance Orchestrator",
+          "role": "Manages franchise supply chain compliance, monitoring vendor usage, product quality, and distributor performance",
+          "responsibilities": [
+            "Verify approved vendor and product compliance",
+            "Monitor product quality across franchise network",
+            "Track vendor performance and benchmark",
+            "Identify cost savings and compliance improvements"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Vendor Compliance Agent",
+            "role": "Monitors franchisee purchasing to ensure approved vendor usage and flag unauthorized sources",
+            "capabilities": [
+              "Real-time purchase order monitoring",
+              "Approved vendor list validation",
+              "Unauthorized vendor detection and alerting",
+              "Compliance rate tracking by franchisee"
+            ]
+          },
+          {
+            "name": "Product Specification Agent",
+            "role": "Verifies purchased products match approved specifications and detects unauthorized substitutions",
+            "capabilities": [
+              "SKU-level specification matching",
+              "Substitution detection",
+              "Product authenticity verification",
+              "Specification variance alerting"
+            ]
+          },
+          {
+            "name": "Quality Tracking Agent",
+            "role": "Aggregates product quality issues across franchise network, identifying patterns by product and vendor",
+            "capabilities": [
+              "Quality issue reporting and aggregation",
+              "Trend analysis by product, vendor, franchisee",
+              "Root cause pattern identification",
+              "Vendor quality scoring"
+            ]
+          },
+          {
+            "name": "Vendor Performance Agent",
+            "role": "Tracks and benchmarks vendor performance on pricing, delivery, and quality metrics",
+            "capabilities": [
+              "Pricing compliance and benchmark tracking",
+              "On-time delivery rate monitoring",
+              "Product quality performance scoring",
+              "Vendor ranking and recommendation"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Cost Optimization Agent",
+            "role": "Identifies volume purchasing opportunities and negotiates better pricing"
+          },
+          {
+            "name": "New Vendor Approval Agent",
+            "role": "Streamlines vendor evaluation and approval workflow"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-compliance-violation",
+          "name": "Vendor Compliance Violation",
+          "trigger": "Franchisee purchases from unauthorized vendor or uses non-approved products",
+          "human_role": "Supply Chain Manager",
+          "decision_criteria": "Violation severity, brand impact, product quality risk, franchisee explanation, corrective action",
+          "auto_proceed_conditions": "Purchases from approved vendors meeting specifications",
+          "escalation_path": "VP Operations for repeated violations or franchisees refusing to comply"
+        ],
+        {
+          "gate_id": "gtg-quality-issues",
+          "name": "Systemic Product Quality Issue",
+          "trigger": "Quality tracking agent identifies pattern of issues across multiple locations for specific product/vendor",
+          "human_role": "Quality Assurance Manager",
+          "decision_criteria": "Issue severity, guest safety, frequency, vendor responsiveness, product alternatives",
+          "auto_proceed_conditions": "Isolated quality issues managed through standard vendor complaint process",
+          "escalation_path": "Executive Team for safety issues requiring product recall or vendor termination"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Franchisee Purchasing Data",
+          "data_elements": "Purchase orders, invoices, vendor information, product SKUs, quantities, pricing",
+          "integration_pattern": "Vendor data feeds, franchisee accounting system integration, distributor APIs"
+        ],
+        {
+          "source": "Approved Vendor Database",
+          "data_elements": "Authorized vendor list, distributor contacts, geographic coverage, product specifications",
+          "integration_pattern": "Vendor management system, supply chain platform"
+        ],
+        {
+          "source": "Product Specification Database",
+          "data_elements": "Approved SKUs, specifications, ingredient requirements, quality standards, brand standards",
+          "integration_pattern": "Product information management (PIM) system"
+        ],
+        {
+          "source": "Quality Issue Tracking",
+          "data_elements": "Product complaints, quality failures, franchisee-reported issues, guest complaints",
+          "integration_pattern": "Quality management system, ticketing platform"
+        ],
+        {
+          "source": "Vendor Performance Data",
+          "data_elements": "Delivery times, order accuracy, pricing compliance, quality scores, responsiveness",
+          "integration_pattern": "Vendor scorecard system, performance tracking"
+        ],
+        {
+          "source": "Audit Results",
+          "data_elements": "Field audit findings, product verification, unauthorized vendor discoveries",
+          "integration_pattern": "Audit management system"
+        ],
+        {
+          "source": "Inventory Systems",
+          "data_elements": "Product usage patterns, inventory turnover, stock levels by franchisee",
+          "integration_pattern": "Franchisee inventory management system integration"
+        ],
+        {
+          "source": "Contract & Pricing Database",
+          "data_elements": "Negotiated pricing agreements, volume discounts, contract terms, rebate programs",
+          "integration_pattern": "Contract management, procurement platform"
+        }
+      ],
+      "quantified_benefits": {
+        "compliance_visibility": "Quarterly audit discovery → real-time continuous monitoring",
+        "unauthorized_vendor_usage": "10-20% estimated non-compliance → <5% with automated detection",
+        "quality_issue_resolution": "Weeks to identify patterns → days with aggregated tracking",
+        "purchasing_cost_reduction": "3-7% savings through better compliance and volume negotiations",
+        "vendor_performance_transparency": "Subjective assessments → data-driven scorecards and benchmarking",
+        "audit_efficiency": "60-70% reduction in supply chain audit time with automated compliance monitoring"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement purchase data collection from top 3 distributors (Week 1-4)",
+          "Deploy approved vendor list checking with automated alerts (Week 4-6)",
+          "Enable quality issue reporting and aggregation (Week 6-8)"
+        ],
+        "investment_required": "Medium - Supply chain compliance platform, vendor data integrations, product specification database, quality tracking system",
+        "time_to_value": "10-14 weeks for core compliance monitoring, 6-9 months for full network coverage and vendor performance analytics",
+        "prerequisites": [
+          "Approved vendor list with distributor contact information",
+          "Product specification database with approved SKUs",
+          "Vendor data integration strategy (distributor APIs, franchisee accounting, or manual submission)",
+          "Quality issue reporting process and classification taxonomy",
+          "Vendor performance metrics definitions",
+          "Contractual requirements for franchisee purchase data sharing",
+          "Supply chain compliance policies and enforcement procedures",
+          "Field audit integration for verification and exception handling",
+          "Vendor relationship management for performance feedback",
+          "Communication plan for franchisees on compliance expectations"
+        ]
+      }
+    }
+  ]
+}

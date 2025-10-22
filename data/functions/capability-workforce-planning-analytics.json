@@ -1,0 +1,483 @@
+[
+  {
+    "id": "function-demand-forecasting-capacity-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Demand Forecasting & Capacity Planning",
+    "description": "ML-powered continuous workforce demand forecasting based on business growth plans, revenue targets, and operational metrics with capacity analysis by role, department, and skill to enable proactive hiring and resource allocation.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual headcount planning during budgeting cycle (once per year). 2. Department managers submit headcount requests in spreadsheets: 'Need 5 more engineers, 3 salespeople'. 3. Finance reviews requests, cuts 20-30% based on budget constraints. 4. HR receives approved headcount plan in January for entire year. 5. No adjustments during year: business changes but headcount plan remains static. 6. Hiring reactive: scramble to backfill unexpected departures or support unplanned initiatives.",
+      "constraints": [
+        "Annual planning cycle: headcount needs forecasted once per year, quickly outdated",
+        "Budget-driven vs business-driven: headcount cut to fit budget, not aligned to strategic growth",
+        "No continuous forecasting: can't adjust for business changes (new products, M&A, market shifts)",
+        "Capacity constraints discovered reactively: projects delayed due to lack of resources",
+        "No skill-based planning: know need '10 engineers' but not Java vs Python vs DevOps skills",
+        "Forecast accuracy: 60-70% (annual plan doesn't reflect reality)",
+        "No proactive hiring: always behind curve due to static annual plan"
+      ],
+      "metrics": ["Planning frequency: Annual", "Forecast accuracy: 60-70%", "Planning cycle time: 2-3 months", "Business alignment: Low (budget-driven)"]
+    },
+    "agentic": {
+      "workflow": "1. Demand Forecasting & Capacity Planning Agent continuously predicts workforce needs based on: revenue growth plans, product launch schedules, customer acquisition targets, operational metrics (sales per rep, customers per support agent). 2. Agent analyzes capacity constraints by department and role: 'Engineering at 95% capacity, bottleneck for Q3 product launches'. 3. Agent forecasts demand by skill: 'Need 8 Python engineers, 3 DevOps, 2 ML specialists in next 6 months'. 4. Agent integrates with financial planning (FP&A): aligns workforce plan to revenue forecast and budget. 5. Agent recommends hiring priorities: roles with highest business impact and longest lead time to fill. 6. Agent adjusts forecast monthly: incorporates business changes (deal wins, project delays, attrition). 7. Agent generates executive summary: headcount forecast, budget impact, hiring roadmap, capacity risks.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Demand Forecasting & Capacity Planning Agent"],
+        "utilityAgents": ["Business Metrics Integration Agent", "Financial Planning System API Agent", "Capacity Analysis Agent", "Skills Forecasting Agent", "HRIS API Agent", "Hiring Lead Time Calculator Agent"]
+      },
+      "dataSources": [
+        "Business growth plans and revenue targets",
+        "Product roadmaps and launch schedules",
+        "Operational metrics (sales per rep, support tickets per agent)",
+        "Current workforce data (headcount, roles, skills, capacity utilization)",
+        "Financial planning forecasts (FP&A)",
+        "Historical hiring data (time-to-fill, offer acceptance rates)",
+        "Skills inventory and gap analysis",
+        "Attrition predictions and backfill needs"
+      ],
+      "benefits": [
+        "85-90% forecast accuracy vs 60-70% traditional (continuous updates vs annual plan)",
+        "Proactive hiring: start recruiting 3-6 months ahead of need vs reactive backfilling",
+        "Business-aligned headcount: tied to revenue growth and product plans, not just budget cuts",
+        "Capacity visibility: identify bottlenecks before projects delayed",
+        "Skills-based planning: forecast Python engineers vs generic 'engineers' for targeted recruiting",
+        "Monthly forecast updates: adjust for business changes vs static annual plan",
+        "Executive alignment: CFO, COO, and CHRO aligned on workforce strategy"
+      ],
+      "metrics": ["Forecast accuracy: 85-90% (+20 pts)", "Planning frequency: Monthly continuous", "Capacity visibility: Real-time", "Business alignment: High (revenue-driven)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy continuous headcount forecasting for high-growth departments (engineering, sales)", "Integrate workforce planning with FP&A revenue forecasts", "Implement capacity analysis dashboards for executive visibility"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["HRIS integration with headcount and role data", "Financial planning system (FP&A) integration", "Business metrics (revenue, product roadmaps, operational KPIs)", "Skills inventory and taxonomy", "Executive sponsorship (CFO + CHRO + business leaders)"]
+    },
+    "icon": "chart-line",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-attrition-prediction-retention",
+    "type": "function",
+    "level": 4,
+    "label": "Attrition Prediction & Retention",
+    "description": "ML-powered prediction of voluntary turnover risk 60-90 days in advance with 70-80% accuracy, identifying flight risk factors, and triggering proactive retention interventions to reduce voluntary attrition by 20-40%.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee submits resignation: 2-week notice standard. 2. Manager surprised: had no warning employee was unhappy or job hunting. 3. HR conducts exit interview: asks why employee leaving (too late to retain). 4. HR analyzes attrition data quarterly: identifies trends 3-6 months after the fact. 5. Retention efforts reactive: only after key employees already resigned. 6. No prediction of which employees at risk of leaving.",
+      "constraints": [
+        "Reactive retention: employees already resigned before action taken",
+        "Exit interviews too late: capture reasons after departure decision made",
+        "No flight risk prediction: managers surprised when key employees leave",
+        "Quarterly attrition analysis: 3-6 months lag, patterns identified too late to intervene",
+        "Retention interventions ad-hoc: counter-offers made emotionally, not strategically",
+        "Cost of attrition: 1.5-2x salary to replace (recruiting, training, productivity loss)",
+        "Key talent loss: no prioritization of retention efforts by employee value"
+      ],
+      "metrics": ["Attrition prediction: 0% (reactive only)", "Voluntary turnover: 15-25%", "Retention intervention success: 20-30%", "Exit interview timing: After resignation"]
+    },
+    "agentic": {
+      "workflow": "1. Attrition Prediction & Retention Agent uses ML model to predict flight risk 60-90 days before resignation with 70-80% accuracy. 2. Agent analyzes predictive factors: declining engagement scores, reduced collaboration (email/Slack activity), no recent promotion or raise, manager relationship issues, below-market compensation, LinkedIn profile updates. 3. Agent scores employees 0-100 for flight risk: flags high-risk employees (score >70) for proactive intervention. 4. Agent recommends retention actions by risk factor: compensation adjustment (if below market), promotion/career development (if stalled), manager coaching (if relationship issue), flexible work (if work-life balance concern). 5. Agent triggers stay conversations: manager or HR meets with employee before resignation to address concerns. 6. Agent tracks retention intervention effectiveness: which actions work, refine model over time. 7. Agent calculates retention ROI: cost of retention actions vs cost of replacement.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Attrition Prediction & Retention Agent", "Flight Risk Agent"],
+        "utilityAgents": ["Engagement Analytics Agent", "Compensation Benchmarking Agent", "Manager Relationship Analysis Agent", "Collaboration Tracking Agent (Email, Slack)", "LinkedIn Activity Monitor Agent", "HRIS API Agent"]
+      },
+      "dataSources": [
+        "Employee engagement survey responses and trends",
+        "Performance review ratings and feedback",
+        "Compensation data and market benchmarks",
+        "Promotion and raise history",
+        "Manager relationship indicators (1:1 frequency, 360 feedback)",
+        "Collaboration activity (email, Slack, meeting attendance)",
+        "LinkedIn profile updates and activity",
+        "Historical attrition data (who left, when, why)"
+      ],
+      "benefits": [
+        "70-80% attrition prediction accuracy: identify flight risk 60-90 days before resignation",
+        "20-40% voluntary turnover reduction through proactive retention interventions",
+        "Retention intervention success: 60-70% vs 20-30% reactive counter-offers",
+        "Cost savings: avoid 1.5-2x salary replacement costs (recruiting, training, productivity loss)",
+        "Prioritized retention: focus on high-value employees vs scattershot approach",
+        "Manager coaching: equip managers with flight risk alerts and retention playbooks",
+        "Continuous learning: ML model improves over time, identifies new attrition patterns"
+      ],
+      "metrics": ["Prediction accuracy: 70-80%", "Voluntary turnover: 10-15% (-20-40%)", "Retention success: 60-70% (+40 pts)", "Advance warning: 60-90 days"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "Retention interventions for high-value employees (executives, key technical leaders)",
+      "policy": "HR leadership and executives must review and approve retention interventions for high-value employees including compensation adjustments, promotions, or equity grants; AI provides recommendations but humans make final decisions"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy attrition prediction model for high-value employees (executives, key technical roles)", "Integrate engagement survey data for flight risk signals", "Train managers on proactive stay conversations with at-risk employees"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months (requires 24+ months historical attrition data for ML training)",
+      "prerequisites": ["Historical attrition data (24+ months: who left, when, why)", "Engagement survey data and trends", "Compensation and promotion history", "Manager relationship data (1:1 frequency, 360 feedback)", "Executive sponsorship for proactive retention"]
+    },
+    "icon": "user-remove",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-skills-competency-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Skills & Competency Analytics",
+    "description": "Real-time skills graph mapping employee capabilities against current and future role requirements with AI-powered gap analysis, skills inference from work performed, and development recommendations for reskilling and upskilling.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual skills inventory: HR sends spreadsheet survey to all employees asking to list skills. 2. Employees self-report skills with no validation: inflated ratings, out-of-date information. 3. Skills data stored in spreadsheets or HRIS but rarely analyzed. 4. Skills gaps discovered when project staffing fails: 'Need Python developer but realize no one has this skill'. 5. Learning & development decisions made without skills data: generic training vs targeted reskilling. 6. Succession planning lacks skills visibility: don't know who can step into critical roles.",
+      "constraints": [
+        "Annual skills inventory: data 1-12 months out of date",
+        "Self-reported skills: inflated ratings, no validation, 0-20% accuracy",
+        "Skills data not analyzed: captured but not used for decision-making",
+        "Reactive skills gaps: discovered when projects stall or roles can't be filled",
+        "No skills-based development: training generic vs targeted to actual gaps",
+        "No skills inference: can't identify hidden skills from work performed",
+        "Skills taxonomy fragmented: different departments define skills differently"
+      ],
+      "metrics": ["Skills inventory frequency: Annual", "Skills data accuracy: 0-20% (self-reported)", "Skills visibility: Low (spreadsheet-based)", "Skills gap analysis: None"]
+    },
+    "agentic": {
+      "workflow": "1. Skills & Competency Analytics Agent maintains real-time skills graph for all employees: maps skills to roles, projects, teams, and individuals. 2. Agent infers skills from work performed: code commits (Python, Java), certifications earned, projects completed, training taken, tools used (Salesforce, Tableau). 3. Agent validates self-reported skills: compares to inferred skills, flags discrepancies for verification. 4. Agent analyzes skills gaps: compares current employee skills vs role requirements, identifies gaps by team and role. 5. Agent forecasts future skills needs: analyzes strategic initiatives (AI/ML projects, cloud migration), identifies required skills. 6. Agent recommends development: personalized learning plans, reskilling programs, external hiring vs internal training. 7. Agent enables skills-based talent mobility: matches employees to open roles and projects based on skills vs job titles.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Skills & Competency Analytics Agent", "Skills Graph Agent"],
+        "utilityAgents": ["Skills Inference Agent", "Learning Management System API Agent", "Project Management API Agent", "Code Repository Analysis Agent (GitHub, GitLab)", "Skills Gap Calculator Agent", "Skills Taxonomy Agent"]
+      },
+      "dataSources": [
+        "Employee-reported skills and proficiencies",
+        "Learning Management System data (courses completed, certifications)",
+        "Project management data (projects worked on, roles)",
+        "Code repository activity (GitHub, GitLab commits, languages used)",
+        "Performance reviews and skills assessments",
+        "Job postings and role requirements",
+        "Strategic initiatives and future skills needs",
+        "Skills taxonomy and ontology"
+      ],
+      "benefits": [
+        "100% skills visibility vs 0-20% traditional: know who has what skills in real-time",
+        "Skills-based development: targeted reskilling vs generic training (40% cost savings)",
+        "Proactive skills gap closure: identify and address gaps 6-12 months before critical",
+        "Skills inference: discover hidden employee capabilities from work performed",
+        "Validated skills data: inferred skills more accurate than self-reported",
+        "Skills-based talent mobility: match employees to roles by skills vs job titles",
+        "Build vs buy decisions: know when to reskill existing employees vs hire externally"
+      ],
+      "metrics": ["Skills visibility: 100% (vs 0-20%)", "Skills data accuracy: 85-90% (inferred + validated)", "Skills gap analysis: Real-time continuous", "Development ROI: +40%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy skills inference for technical roles (analyze code commits, certifications)", "Implement skills gap analysis for critical skills (AI/ML, cloud, data science)", "Create skills-based talent marketplace for internal mobility"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Skills taxonomy definition (company-specific + industry standard)", "Learning Management System integration", "Code repository access (GitHub, GitLab)", "Project management system integration", "HRIS integration with role and employee data"]
+    },
+    "icon": "puzzle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-succession-planning-talent-mobility",
+    "type": "function",
+    "level": 4,
+    "label": "Succession Planning & Talent Mobility",
+    "description": "AI-powered identification of high-potential employees and creation of dynamic succession plans for critical roles with 80%+ coverage, internal talent marketplace for mobility, and career pathing recommendations.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual succession planning exercise: HR identifies 20-30 critical executive roles. 2. Executives nominate potential successors: 1-2 names per role in spreadsheet. 3. Succession plan stored in spreadsheet or PowerPoint: updated annually if at all. 4. 20-30% of critical roles have identified successors (low coverage). 5. Internal mobility ad-hoc: employees hear about open roles via grapevine, not systematic. 6. When key executive leaves: scramble to backfill externally due to lack of prepared successors.",
+      "constraints": [
+        "Annual succession planning: plans outdated within months as people change roles",
+        "Low coverage: 20-30% of critical roles have successors identified",
+        "Static successor pools: don't adjust for employee development or departures",
+        "Executive-nominated successors: biased toward 'mini-me' selections, limited diversity",
+        "Internal mobility invisible: employees don't know about opportunities in other departments",
+        "Career pathing manual: employees ask 'How do I get promoted?' with no clear answer",
+        "External backfilling expensive: lack of succession planning forces costly external hires"
+      ],
+      "metrics": ["Succession coverage: 20-30% of critical roles", "Planning frequency: Annual", "Internal fill rate: 30-40%", "Career path visibility: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Succession & Talent Mobility Agent identifies high-potential employees using ML model: performance ratings, leadership competencies, skills breadth, learning agility, engagement. 2. Agent creates dynamic succession plans for critical roles: 3-5 potential successors per role, readiness assessment (ready now, 1-2 years, 2-3 years). 3. Agent monitors successor readiness: tracks development plans, skills growth, stretch assignments. 4. Agent recommends development actions: 'Successor A needs finance exposure, assign to budget committee'. 5. Agent maintains internal talent marketplace: matches employees to open roles across company based on skills, career interests, development goals. 6. Agent provides career pathing: shows employees how to progress from current role to target role (skills needed, typical timeline, development actions). 7. Agent tracks internal mobility: dashboards show internal fill rate, promotion rates, talent flow across departments.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Succession & Talent Mobility Agent", "Career Pathing Agent"],
+        "utilityAgents": ["High-Potential Identification Agent", "Readiness Assessment Agent", "Internal Marketplace Agent", "Skills Matching Agent", "Development Planning Agent", "Performance Management Platform API Agent"]
+      },
+      "dataSources": [
+        "Performance ratings and review history",
+        "Leadership competency assessments (360 feedback)",
+        "Skills profiles and development progress",
+        "Learning agility and growth potential indicators",
+        "Engagement scores and retention risk",
+        "Critical role definitions and requirements",
+        "Open positions and internal job postings",
+        "Career interests and aspirations (from development conversations)"
+      ],
+      "benefits": [
+        "80%+ succession coverage: 80-90% of critical roles have 3-5 identified successors vs 20-30% traditional",
+        "50-60 point increase in succession coverage: dramatically reduces external backfilling risk",
+        "Dynamic succession plans: update quarterly vs annually, adjust for employee changes",
+        "Data-driven successor identification: ML model reduces bias, identifies diverse successors",
+        "Internal fill rate increases 2-3x: 70-80% vs 30-40% through talent marketplace",
+        "Career path visibility: employees see clear progression paths, increasing engagement and retention",
+        "40-60% retention improvement: internal mobility reduces turnover (employees stay for new opportunities)"
+      ],
+      "metrics": ["Succession coverage: 80-90% (+50-60 pts)", "Internal fill rate: 70-80% (+2-3x)", "Retention improvement: +40-60%", "Career path visibility: High"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Identify high-potential employees using performance and leadership data", "Create succession plans for top 50 critical roles", "Launch internal talent marketplace for job postings and skills-based matching"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Critical role definitions (which roles are succession-critical)", "Performance and leadership competency data", "Skills profiles for employees", "Career interest data (development conversations, surveys)", "Executive sponsorship for internal mobility"]
+    },
+    "icon": "users",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-diversity-equity-inclusion-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Diversity, Equity & Inclusion Analytics",
+    "description": "Real-time diversity dashboards tracking representation across levels and departments, pay equity analysis with regression modeling, promotion equity monitoring, and forecasting to identify and close diversity gaps proactively.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual EEO-1 report: HR compiles diversity data once per year for compliance filing. 2. Diversity presented to board annually: high-level summary (% women, % underrepresented minorities). 3. Pay equity analysis ad-hoc: run every 2-3 years when legal/HR concerned about risk. 4. Promotion equity not tracked: don't know if diverse employees promoted at same rate. 5. Diversity goals set but not measured throughout year: discovered in December goals missed. 6. No root cause analysis: know representation low but don't know why (hiring, promotion, attrition).",
+      "constraints": [
+        "Annual diversity reporting: 12-month lag, can't course-correct mid-year",
+        "Compliance-focused: EEO-1 filing requirement, not strategic diversity management",
+        "Pay equity analysis rare: 2-3 year intervals, gaps exist undetected for years",
+        "Promotion equity blind spot: don't track if diverse employees promoted fairly",
+        "No representation forecasting: don't know if current trends will close diversity gaps",
+        "Root cause unknown: know diversity low but not whether hiring, promotion, or retention issue",
+        "Diversity goals aspirational: set but not measured or managed to achieve"
+      ],
+      "metrics": ["Reporting frequency: Annual", "Pay equity analysis: Every 2-3 years", "Promotion equity tracking: None", "Goal attainment visibility: Annual"]
+    },
+    "agentic": {
+      "workflow": "1. Diversity, Equity & Inclusion Agent generates real-time diversity dashboards: representation by gender, race, veteran status across levels (IC, manager, director, VP, executive) and departments. 2. Agent tracks hiring diversity: applicant demographics, offer rates, acceptance rates by demographic. 3. Agent analyzes promotion equity: compares promotion rates across demographics, flags statistically significant disparities. 4. Agent performs pay equity analysis using regression modeling: identifies pay gaps after controlling for role, level, tenure, location, performance. 5. Agent forecasts diversity trends: projects representation in 1-3 years based on current hiring, promotion, and attrition patterns. 6. Agent recommends actions: 'Women promotion rate 15% below men at manager level—investigate and address'. 7. Agent tracks progress toward diversity goals: monthly updates, alerts when off-track.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Diversity, Equity & Inclusion Agent", "Pay Equity Agent"],
+        "utilityAgents": ["Representation Tracking Agent", "Hiring Diversity Analysis Agent", "Promotion Equity Agent", "Pay Regression Model Agent", "Diversity Forecasting Agent", "HRIS API Agent"]
+      },
+      "dataSources": [
+        "Employee demographics (gender, race, ethnicity, veteran status, disability)",
+        "Representation by level, department, location",
+        "Hiring data (applicants, offers, acceptances by demographics)",
+        "Promotion rates and timing by demographics",
+        "Compensation data (salary, bonus, equity by demographics)",
+        "Attrition rates by demographics",
+        "Market data for pay equity benchmarking",
+        "Diversity goals and targets"
+      ],
+      "benefits": [
+        "Real-time diversity visibility: monthly dashboards vs annual reports enable proactive management",
+        "Pay equity compliance: proactive gap analysis vs reactive legal risk management",
+        "Promotion equity monitoring: identify and fix disparities before they compound",
+        "Diversity forecasting: know if current trends will achieve goals, adjust strategies accordingly",
+        "Root cause analysis: identify whether diversity gaps due to hiring, promotion, or retention",
+        "Data-driven DE&I strategy: move from aspirational goals to measurable actions",
+        "Legal risk reduction: proactive pay equity analysis reduces discrimination liability"
+      ],
+      "metrics": ["Reporting: Real-time monthly dashboards", "Pay equity: Quarterly regression analysis", "Promotion equity: Tracked continuously", "Goal attainment: Monthly tracking"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time diversity dashboard for executives", "Perform pay equity regression analysis quarterly", "Track promotion rates by demographics to identify disparities"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Clean employee demographic data (self-reported via EEOC forms)", "Compensation data (salary, bonus, equity)", "Promotion history and timing", "Diversity goals and targets defined", "Executive sponsorship (CHRO + CEO + board alignment)"]
+    },
+    "icon": "globe",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-talent-mobility-internal-marketplace",
+    "type": "function",
+    "level": 4,
+    "label": "Talent Mobility & Internal Marketplace",
+    "description": "AI-powered internal job marketplace with skills-based matching recommendations, career development opportunities, gig assignments, and talent visibility enabling 2-3x increase in internal fill rates and 40-60% retention improvement.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Internal job openings posted to company intranet: generic job board listing. 2. Employees learn about opportunities via word-of-mouth or browsing intranet. 3. Manager permission required: employees ask manager before applying internally. 4. Internal applicants compete with external: no preference or visibility for internal candidates. 5. Hiring managers often unaware of internal talent: default to external recruiting. 6. Internal mobility rate: 30-40% of roles filled internally. 7. Cross-functional opportunities hidden: employees siloed in departments, unaware of options elsewhere.",
+      "constraints": [
+        "Hidden opportunities: employees don't know about internal openings beyond their department",
+        "Manager gatekeeping: employees need permission to apply internally, limiting mobility",
+        "No skills-based matching: employees search by job title, miss roles matching their skills",
+        "Internal candidates invisible: hiring managers default to external recruiting, overlook internal talent",
+        "Low internal fill rate: 30-40% vs 70-80% potential with better talent mobility",
+        "Career stagnation: employees don't see growth opportunities internally, leave for external roles",
+        "Siloed talent: skills and experience trapped in departments, not leveraged across company"
+      ],
+      "metrics": ["Internal fill rate: 30-40%", "Career path visibility: Low", "Internal mobility barriers: Manager permission required", "Skills-based matching: None"]
+    },
+    "agentic": {
+      "workflow": "1. Talent Mobility Agent maintains internal talent marketplace: all open roles, gig projects, stretch assignments visible to all employees. 2. Agent recommends roles to employees: 'Based on your Python skills and product management experience, these 5 roles are a great fit'. 3. Agent recommends employees to hiring managers: 'These 8 internal candidates match your role requirements, consider interviewing before external search'. 4. Agent enables confidential job exploration: employees browse opportunities without alerting manager. 5. Agent facilitates gig assignments: short-term projects (2-6 months) for skill development without changing roles. 6. Agent tracks career interests: 'You said you want to move into data science—here are 3 stretch assignments to build skills'. 7. Agent measures internal mobility: dashboards show internal fill rate, promotion rates, talent flow across departments.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Talent Mobility Agent", "Internal Marketplace Agent"],
+        "utilityAgents": ["Skills Matching Agent", "Career Interest Agent", "Gig Assignment Platform Agent", "Hiring Manager Recommendation Agent", "Internal Recruiter Alert Agent", "HRIS API Agent"]
+      },
+      "dataSources": [
+        "Open internal job postings and role requirements",
+        "Employee skills profiles and career interests",
+        "Gig projects and stretch assignment opportunities",
+        "Hiring manager preferences and role criteria",
+        "Internal application and hire data",
+        "Employee career goals and development plans",
+        "Promotion and retention data",
+        "Skills gap and development needs"
+      ],
+      "benefits": [
+        "2-3x internal fill rate: 70-80% vs 30-40% through skills-based matching and talent visibility",
+        "40-60% retention improvement: employees stay for internal growth opportunities vs leaving externally",
+        "Faster time-to-productivity: internal hires 30-50% faster to ramp than external hires",
+        "Cost savings: internal hires cost $5K-$15K vs $50K-$100K external recruiting costs",
+        "Skills-based matching: employees discover roles they didn't know existed",
+        "Manager support: AI recommendations reduce manager fear of losing talent (backfill visibility)",
+        "Career development: gig assignments enable skill-building without role changes"
+      ],
+      "metrics": ["Internal fill rate: 70-80% (+2-3x)", "Retention: +40-60%", "Time-to-productivity: -30-50%", "Recruiting cost savings: $45K-$85K per internal hire"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch internal talent marketplace with all open roles visible", "Implement skills-based job recommendations for employees", "Enable confidential job exploration without manager gatekeeping"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Internal job posting system (ATS or HRIS)", "Employee skills profiles", "Career interest data (development conversations, surveys)", "Executive sponsorship for open internal mobility (no manager gatekeeping)", "Hiring manager training on internal candidate consideration"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-scenario-planning-what-if-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Scenario Planning & What-If Analysis",
+    "description": "Real-time workforce modeling and scenario analysis tools enabling executives to simulate impact of business changes (growth, reorganizations, M&A) on headcount, costs, skills, and capacity with sensitivity analysis on key drivers.",
+    "parentCapability": "capability-workforce-planning-analytics",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual budget scenario planning: CFO requests 3 scenarios (pessimistic, base, optimistic). 2. HR manually builds Excel models: projects headcount by scenario over 3-5 days. 3. Scenarios static: once built, not updated for business changes. 4. What-if questions ad-hoc: executive asks 'What if we acquire Company X?', HR scrambles to build model. 5. Limited sensitivity analysis: don't know impact of changing key assumptions (attrition, hiring speed). 6. Workforce model disconnected from financial model: HR headcount plan doesn't tie to CFO revenue/cost forecast.",
+      "constraints": [
+        "Static Excel models: built for annual budget, quickly outdated",
+        "Manual scenario building: 3-5 days to model each scenario",
+        "Limited scenario coverage: 3 scenarios per year vs continuous what-if exploration",
+        "No sensitivity analysis: don't know which assumptions most impact outcomes",
+        "Ad-hoc executive requests: scramble to answer 'what if?' questions in board meetings",
+        "Workforce-finance disconnect: HR plan doesn't integrate with CFO financial model",
+        "No real-time scenario comparison: can't quickly model multiple strategic options"
+      ],
+      "metrics": ["Scenario planning frequency: Annual (3 scenarios)", "Model build time: 3-5 days per scenario", "Sensitivity analysis: None", "Workforce-finance integration: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Scenario Planning Agent provides real-time workforce modeling tool for executives: self-service interface to build scenarios. 2. Agent models business scenarios: revenue growth (10%, 20%, 30%), acquisitions (add 500 employees from Company X), reorganizations (consolidate 3 departments into 2), market downturns (15% headcount reduction). 3. Agent calculates scenario impact: headcount by role and department, total labor cost, skills gaps, capacity constraints, hiring lead time. 4. Agent performs sensitivity analysis: shows which assumptions most impact outcomes (attrition rate, hiring speed, revenue per employee). 5. Agent integrates with financial planning: workforce costs tie directly to CFO revenue forecast and budget. 6. Agent compares scenarios side-by-side: helps executives choose optimal strategy. 7. Agent tracks scenario accuracy: compares forecasted vs actual outcomes, improves model over time.",
+      "agents": {
+        "orchestrator": "Workforce Planning & Analytics Orchestration Agent",
+        "superAgents": ["Scenario Planning Agent", "Workforce Modeling Agent"],
+        "utilityAgents": ["Financial Planning System API Agent", "Headcount Projection Agent", "Skills Gap Calculator Agent", "Capacity Analysis Agent", "Sensitivity Analysis Engine Agent", "HRIS API Agent"]
+      },
+      "dataSources": [
+        "Current workforce data (headcount, roles, skills, costs)",
+        "Business growth plans and revenue targets",
+        "Financial planning forecasts (FP&A)",
+        "Acquisition targets and integration plans",
+        "Attrition rates and hiring speeds",
+        "Labor cost assumptions (salaries, benefits, equity)",
+        "Historical scenario outcomes for model validation",
+        "Skills inventory and capacity utilization"
+      ],
+      "benefits": [
+        "Real-time scenario modeling: hours vs 3-5 days per scenario enables agile decision-making",
+        "Unlimited scenario exploration: executives model multiple strategic options before committing",
+        "Sensitivity analysis: identify critical assumptions (e.g., 'Attrition rate matters more than hiring speed')",
+        "Workforce-finance integration: labor costs tied to revenue forecast, CFO and CHRO aligned",
+        "Strategic agility: quickly evaluate M&A, reorganizations, market changes",
+        "Data-driven workforce strategy: move from gut-feel to quantitative scenario comparison",
+        "Board readiness: answer 'what if?' questions in real-time during board meetings"
+      ],
+      "metrics": ["Scenario modeling time: <1 hour vs 3-5 days", "Scenario coverage: Unlimited vs 3 per year", "Sensitivity analysis: Full driver analysis", "Workforce-finance integration: High"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build scenario planning tool for top 3 business scenarios (growth, downturn, M&A)", "Integrate workforce plan with financial planning (FP&A) system", "Perform sensitivity analysis on key assumptions (attrition, hiring speed)"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["HRIS integration with headcount and cost data", "Financial planning system (FP&A) integration", "Workforce modeling platform or custom tool development", "Historical data for model validation", "Executive sponsorship (CFO + CHRO + CEO)"]
+    },
+    "icon": "light-bulb",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

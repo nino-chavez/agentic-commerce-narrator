@@ -1,0 +1,443 @@
+[
+  {
+    "id": "function-multi-channel-campaign-orchestration",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Channel Campaign Orchestration",
+    "description": "AI-driven orchestration of campaigns across email, SMS, push, social, and display with unified messaging and optimal channel selection per customer achieving 3-5x engagement vs siloed campaigns.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager creates campaign brief and assigns channel teams (email team, social team, paid media team). 2. Each channel team independently creates their version of campaign with inconsistent messaging and timing. 3. Campaigns launched in silos with no cross-channel coordination (customer receives duplicate messages). 4. Post-campaign analysis done separately by channel with no unified view. 5. Campaign execution takes 3-6 weeks from brief to launch.",
+      "constraints": [
+        "Siloed channel execution leads to message fatigue and duplicate communications",
+        "No intelligence on optimal channel per customer (everyone gets all channels)",
+        "3-6 week campaign cycle time from planning to execution",
+        "Inconsistent messaging and creative across channels hurts brand",
+        "No unified customer view means can't suppress across channels",
+        "Post-campaign ROI analysis incomplete due to channel silos"
+      ],
+      "metrics": ["Campaign cycle time: 3-6 weeks", "Channel coordination: Siloed", "Engagement rate: 2-4%"]
+    },
+    "agentic": {
+      "workflow": "1. Campaign Orchestration Agent receives campaign objective and audience from marketer. 2. Channel Selection Agent analyzes each customer's channel preferences, engagement history, and response patterns to select optimal channel mix. 3. Message Consistency Agent ensures unified messaging and creative across all channels. 4. Timing Optimization Agent schedules messages per customer based on their engagement windows. 5. Cross-Channel Suppression prevents duplicate messages and manages frequency caps.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Campaign Orchestration Agent", "Channel Selection Agent", "Message Consistency Agent"],
+        "utilityAgents": ["CDP", "Email Platform", "SMS Gateway", "Push Notification Service", "Social Media APIs"]
+      },
+      "dataSources": [
+        "Customer channel preference and engagement history",
+        "Historical campaign response data by channel",
+        "Real-time customer interaction stream",
+        "Cross-channel message delivery and engagement logs",
+        "Customer communication frequency and fatigue signals",
+        "Channel performance metrics and costs"
+      ],
+      "benefits": [
+        "3-5x engagement improvement through optimal channel selection vs blast-all approach",
+        "80-95% reduction in campaign setup time (3-6 weeks to 2-3 days)",
+        "Unified customer experience with consistent messaging across channels",
+        "Intelligent frequency management reduces unsubscribes by 40-60%",
+        "Real-time cross-channel suppression prevents duplicate communications",
+        "Complete campaign attribution across all touchpoints"
+      ],
+      "metrics": ["Campaign cycle time: 2-3 days", "Channel coordination: Unified", "Engagement rate: 8-15%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement cross-channel suppression for top campaigns", "Deploy channel preference tracking and selection"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Customer Data Platform with unified profiles", "Marketing automation platform", "Channel integration APIs", "Historical engagement data"]
+    },
+    "icon": "broadcast",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-automated-drip-nurture-campaigns",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Drip & Nurture Campaigns",
+    "description": "AI-powered nurture programs that adapt content and cadence based on engagement signals delivering 30-50% higher conversion than static drip campaigns.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing ops builds static 5-7 email drip campaign with fixed schedule (Day 1, Day 3, Day 7, etc.). 2. All leads receive identical sequence regardless of engagement or behavior. 3. No adaptation if lead engages early or shows disinterest. 4. Manual A/B testing limited to subject lines only. 5. Leads who convert mid-sequence continue receiving irrelevant emails.",
+      "constraints": [
+        "Static sequence can't adapt to individual lead behavior",
+        "Fixed timing misses engagement windows (send Day 3 even if lead engaged Day 2)",
+        "All leads get same content regardless of industry, role, or interests",
+        "No automatic exit when lead converts (continues sending nurture emails)",
+        "Limited personalization beyond first name and company",
+        "Manual workflow updates require 2-4 weeks to modify sequence"
+      ],
+      "metrics": ["Conversion rate: 3-8%", "Personalization: Name/company only", "Adaptation: None (static)"]
+    },
+    "agentic": {
+      "workflow": "1. Nurture Orchestration Agent enrolls leads and monitors engagement signals (email opens, clicks, website visits, content downloads). 2. Behavior Analysis Agent detects engagement level and interest signals to adapt sequence. 3. Content Selection Agent dynamically chooses next message based on: engagement level, content consumed, time since last interaction, product interest signals. 4. Timing Optimization Agent sends next message when lead is most likely to engage (not fixed schedule). 5. Agent automatically exits leads who convert or show sustained disengagement.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Nurture Orchestration Agent", "Behavior Analysis Agent", "Content Selection Agent"],
+        "utilityAgents": ["Marketing Automation Platform", "CDP", "Engagement Scoring", "Send Time Optimization"]
+      },
+      "dataSources": [
+        "Email engagement data (opens, clicks, time spent)",
+        "Website behavioral data (page views, content downloads)",
+        "Lead scoring and qualification data",
+        "Historical nurture performance by segment",
+        "Product interest and intent signals",
+        "Conversion and sales data"
+      ],
+      "benefits": [
+        "30-50% higher conversion through adaptive sequencing vs static campaigns",
+        "Dynamic content selection based on real-time engagement signals",
+        "Optimal timing per lead vs fixed day schedule",
+        "Automatic exit on conversion prevents post-purchase nurture emails",
+        "Personalized content paths based on industry, role, and interests",
+        "Continuous optimization through ML-driven performance learning"
+      ],
+      "metrics": ["Conversion rate: 8-15%", "Personalization: Behavioral + contextual", "Adaptation: Real-time dynamic"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement engagement-based timing for top nurture campaign", "Add automatic exit on conversion"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Marketing automation platform", "Engagement tracking and scoring", "Behavioral data integration", "Content library for dynamic selection"]
+    },
+    "icon": "funnel",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-behavioral-trigger-marketing",
+    "type": "function",
+    "level": 4,
+    "label": "Behavioral Trigger-Based Marketing",
+    "description": "Real-time marketing triggers based on customer behavior with sub-second response delivering 5-8x engagement vs batch-processed triggers.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing ops defines 5-10 simple rule-based triggers (cart abandon, browse abandon, welcome series). 2. Triggers processed in overnight batch jobs with 12-24 hour delays. 3. Generic email sent to all customers who meet trigger condition. 4. No consideration of customer context, lifetime value, or engagement history. 5. Triggers operate independently with no coordination (customer can receive multiple conflicting messages).",
+      "constraints": [
+        "12-24 hour batch delays mean lost momentum on time-sensitive behaviors",
+        "Limited to 5-10 basic triggers due to manual setup complexity",
+        "Generic messages not personalized to customer value or context",
+        "No intelligent prioritization when multiple triggers fire simultaneously",
+        "Rule-based logic can't handle complex behavioral patterns",
+        "No learning or optimization based on trigger performance"
+      ],
+      "metrics": ["Response time: 12-24 hours", "Trigger types: 5-10", "Engagement rate: 2-5%"]
+    },
+    "agentic": {
+      "workflow": "1. Behavioral Streaming Agent monitors real-time customer event stream (page views, clicks, cart actions, searches). 2. Pattern Recognition Agent identifies complex behavioral signals: product research pattern, price sensitivity, urgency signals, abandonment risk. 3. Trigger Orchestration Agent evaluates 50+ trigger scenarios and selects optimal action based on customer context and predicted propensity. 4. Message Personalization Agent customizes content, offer, and channel based on customer segment and lifetime value. 5. Agent learns from outcomes and optimizes trigger logic continuously.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Behavioral Streaming Agent", "Pattern Recognition Agent", "Trigger Orchestration Agent"],
+        "utilityAgents": ["CDP Real-time Stream", "Propensity Scoring", "Offer Engine", "Multi-channel Execution"]
+      },
+      "dataSources": [
+        "Real-time behavioral event stream (clickstream, app events)",
+        "Customer purchase history and lifetime value",
+        "Product browsing and search behavior",
+        "Shopping cart and wishlist data",
+        "Historical trigger response rates by segment",
+        "Inventory and promotional availability"
+      ],
+      "benefits": [
+        "5-8x engagement improvement through real-time response vs batch delays",
+        "Sub-second trigger execution vs 12-24 hour batch processing",
+        "50+ intelligent triggers vs 5-10 simple rules",
+        "Personalized messages based on customer value and behavioral context",
+        "Smart coordination prevents conflicting messages when multiple triggers fire",
+        "Continuous ML optimization improves trigger performance over time"
+      ],
+      "metrics": ["Response time: <1 second", "Trigger types: 50+", "Engagement rate: 12-20%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Convert cart abandon to real-time trigger", "Implement price drop alerts for wishlist items"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Real-time event streaming infrastructure", "Customer Data Platform with streaming", "Propensity scoring models", "Multi-channel execution platform"]
+    },
+    "icon": "flash",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-lead-scoring-qualification",
+    "type": "function",
+    "level": 4,
+    "label": "Lead Scoring & Qualification",
+    "description": "ML-powered predictive lead scoring with real-time qualification delivering 40-60% improvement in sales team efficiency through accurate lead prioritization.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing ops creates simple point-based scoring model (job title +10 points, email open +5 points). 2. Leads manually scored weekly in batch process. 3. Fixed threshold (e.g., >50 points) triggers handoff to sales. 4. Sales team receives many unqualified leads (30-50% not ready to buy). 5. No predictive intelligence on purchase propensity or timing.",
+      "constraints": [
+        "Point-based scoring lacks intelligence (email open doesn't mean buying intent)",
+        "Weekly batch scoring means hot leads go cold before sales contact",
+        "Fixed thresholds don't account for product, segment, or seasonal variations",
+        "30-50% of 'qualified' leads not actually sales-ready (wasted effort)",
+        "No predictive modeling on likelihood to convert or timeline",
+        "Model updates require manual recalibration (done annually at best)"
+      ],
+      "metrics": ["Lead qualification accuracy: 50-60%", "Scoring frequency: Weekly batch", "Sales contact rate: 30-40%"]
+    },
+    "agentic": {
+      "workflow": "1. Predictive Scoring Agent builds ML models using historical conversion data to identify buying signals. 2. Real-time Qualification Agent scores every lead continuously based on: behavioral engagement, firmographic fit, intent signals, product interest, engagement velocity. 3. Agent generates propensity scores: likelihood to convert, estimated deal size, predicted timeline to purchase. 4. Routing Agent prioritizes leads for sales based on score + capacity. 5. Agent provides sales with context: key signals, recommended talking points, optimal contact timing.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Predictive Scoring Agent", "Real-time Qualification Agent", "Routing Agent"],
+        "utilityAgents": ["ML Platform", "CDP", "Lead Intelligence", "CRM Integration"]
+      },
+      "dataSources": [
+        "Historical lead conversion data and timelines",
+        "Behavioral engagement data (email, web, content)",
+        "Firmographic and demographic data",
+        "Intent signal data (product research, pricing page views)",
+        "Sales cycle and win/loss data",
+        "Product usage and trial engagement (if applicable)"
+      ],
+      "benefits": [
+        "40-60% improvement in sales team efficiency through accurate lead prioritization",
+        "70-85% lead qualification accuracy vs 50-60% traditional",
+        "Real-time scoring vs weekly batch (hot leads contacted immediately)",
+        "Predictive timeline helps sales time outreach optimally",
+        "Automatic model retraining improves accuracy continuously",
+        "Sales context and talking points increase conversion rates"
+      ],
+      "metrics": ["Lead qualification accuracy: 70-85%", "Scoring frequency: Real-time continuous", "Sales contact rate: 70-80%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build predictive model for top product/segment", "Implement behavioral engagement scoring"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["12+ months historical conversion data", "ML platform or data science capability", "Behavioral tracking and engagement data", "CRM integration for closed-loop reporting"]
+    },
+    "icon": "star",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-marketing-workflow-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Marketing Workflow Automation",
+    "description": "End-to-end automation of marketing operations from campaign creation to reporting reducing manual effort by 70-85% and campaign cycle time by 60-80%.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing coordinator manually creates campaign in email platform (build email, upload list, set schedule). 2. Manual approval workflow via email threads and meetings (3-5 days). 3. Manual QA checklist (test links, check creative, verify list). 4. Manual campaign launch at scheduled time. 5. Manual reporting pulled from multiple platforms and compiled in spreadsheets.",
+      "constraints": [
+        "Manual campaign creation takes 8-12 hours per campaign",
+        "Email-based approvals cause 3-5 day delays and version confusion",
+        "Human error in QA leads to broken links, wrong lists, timing mistakes",
+        "Reporting requires 4-6 hours manual data pulling and spreadsheet work",
+        "No standardization leads to quality inconsistencies across campaigns",
+        "Marketing team spends 60-70% time on operational tasks vs strategy"
+      ],
+      "metrics": ["Campaign creation time: 8-12 hours", "Approval cycle: 3-5 days", "Manual effort: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Workflow Automation Agent handles campaign setup: auto-creates campaigns from templates, populates content from CMS, builds audiences from segment definitions. 2. Approval Routing Agent manages stakeholder approvals with automated workflows and version control. 3. QA Validation Agent performs automated checks: link testing, creative validation, list verification, send time optimization. 4. Execution Agent launches campaigns at optimal time with performance monitoring. 5. Reporting Agent auto-generates performance reports with insights and recommendations.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Workflow Automation Agent", "Approval Routing Agent", "QA Validation Agent"],
+        "utilityAgents": ["Marketing Automation Platform", "CMS", "Approval Workflow System", "Analytics Platform"]
+      },
+      "dataSources": [
+        "Campaign templates and content library",
+        "Audience segments and targeting rules",
+        "Stakeholder approval hierarchies",
+        "Historical campaign performance data",
+        "QA checklist and validation rules",
+        "Multi-platform analytics data"
+      ],
+      "benefits": [
+        "70-85% reduction in manual effort (8-12 hours to 2-3 hours per campaign)",
+        "60-80% faster campaign cycle time (3-5 days approval to <1 day)",
+        "Automated QA eliminates 90% of human errors (broken links, wrong lists)",
+        "Real-time performance dashboards vs manual reporting (4-6 hours saved)",
+        "Standardized workflows ensure consistent quality across all campaigns",
+        "Marketing team refocused on strategy vs operational tasks"
+      ],
+      "metrics": ["Campaign creation time: 2-3 hours", "Approval cycle: <1 day", "Manual effort: 15-30%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate campaign creation from templates", "Implement automated link and creative QA"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Marketing automation platform", "Campaign templates and content library", "Approval workflow system", "Integrated analytics platform"]
+    },
+    "icon": "workflow",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ab-multivariate-testing",
+    "type": "function",
+    "level": 4,
+    "label": "A/B Testing & Multivariate Testing",
+    "description": "AI-powered experimentation with automated test design, multi-armed bandit optimization, and statistical significance detection delivering 25-40% faster learning cycles.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager manually designs A/B test (e.g., test 2 subject lines). 2. Split traffic 50/50 and run test for 2-4 weeks to reach statistical significance. 3. Analyst manually checks results and calculates significance in spreadsheet. 4. Winning variant selected and deployed manually. 5. Process repeated for next test (limited to 3-5 tests per quarter due to manual overhead).",
+      "constraints": [
+        "Simple A/B tests only (can't handle multivariate complexity)",
+        "Fixed traffic splits waste impressions on losing variants",
+        "Manual significance calculations prone to errors and false positives",
+        "2-4 week test duration means slow learning cycles",
+        "Limited testing capacity (3-5 tests per quarter)",
+        "No automated winner selection or deployment"
+      ],
+      "metrics": ["Test velocity: 3-5 tests/quarter", "Time to significance: 2-4 weeks", "Test complexity: A/B only"]
+    },
+    "agentic": {
+      "workflow": "1. Experimentation Agent designs tests including multivariate combinations (subject + CTA + content + send time). 2. Multi-Armed Bandit Algorithm dynamically allocates traffic to winning variants in real-time (more traffic to winners, less to losers). 3. Statistical Analysis Agent continuously monitors for significance using Bayesian methods. 4. Agent automatically declares winner when significance reached and deploys winning variant. 5. Learning Database captures insights and recommends next tests.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Experimentation Agent", "Statistical Analysis Agent"],
+        "utilityAgents": ["A/B Testing Platform", "Multi-Armed Bandit Engine", "Analytics Dashboard", "Campaign Deployment"]
+      },
+      "dataSources": [
+        "Historical test results and learnings",
+        "Campaign performance data (opens, clicks, conversions)",
+        "Audience segment characteristics",
+        "Bayesian prior distributions from past tests",
+        "Real-time engagement metrics during test",
+        "Statistical power and sample size calculations"
+      ],
+      "benefits": [
+        "25-40% faster learning cycles through dynamic traffic allocation",
+        "Multivariate testing vs simple A/B (test 10+ variants simultaneously)",
+        "Automated statistical analysis eliminates human error",
+        "Multi-armed bandit minimizes regret (exposure to losing variants)",
+        "4-10x test velocity (20+ tests per quarter vs 3-5)",
+        "Automatic winner deployment accelerates time to value"
+      ],
+      "metrics": ["Test velocity: 20+ tests/quarter", "Time to significance: 3-7 days", "Test complexity: Multivariate"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated significance detection", "Deploy multi-armed bandit for subject line testing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["A/B testing platform or capability", "Statistical analysis framework", "Sufficient traffic volume for testing", "Historical performance data"]
+    },
+    "icon": "beaker",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-campaign-performance-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Campaign Performance Optimization",
+    "description": "Real-time campaign optimization with automatic underperformance detection and corrective actions delivering 30-50% improvement in campaign ROI.",
+    "parentCapability": "capability-marketing-automation",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Campaign launched with target KPIs (e.g., 20% open rate, 3% click rate). 2. Campaign runs to completion over 3-5 days with no monitoring. 3. Post-campaign analysis reveals underperformance (15% open, 1.5% click). 4. Retrospective meeting to discuss what went wrong. 5. Learnings documented but campaign already completed (no opportunity to fix).",
+      "constraints": [
+        "No in-flight monitoring or optimization opportunity",
+        "Underperforming campaigns run to completion wasting budget",
+        "Post-mortem analysis only benefits future campaigns",
+        "Manual performance checks limited to daily snapshots at best",
+        "No automated alerts when campaigns underperform",
+        "Optimization requires manual intervention and reconfiguration"
+      ],
+      "metrics": ["Optimization opportunity: Post-campaign only", "Detection time: 3-5 days", "ROI improvement: 0% (no in-flight fixes)"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Monitoring Agent tracks campaign metrics in real-time (opens, clicks, conversions, bounce rates). 2. Anomaly Detection Agent identifies underperformance vs benchmarks within first 2-4 hours. 3. Root Cause Analysis Agent diagnoses issues: deliverability problem, poor subject line, audience mismatch, timing issues. 4. Optimization Agent automatically implements fixes: adjust send time for remaining audience, swap subject line, suppress unengaged segment. 5. Agent learns from every campaign to improve future performance predictions.",
+      "agents": {
+        "orchestrator": "Marketing Automation Orchestration Agent",
+        "superAgents": ["Performance Monitoring Agent", "Anomaly Detection Agent", "Optimization Agent"],
+        "utilityAgents": ["Analytics Platform", "Campaign Management", "Deliverability Tools", "ML Forecasting"]
+      },
+      "dataSources": [
+        "Real-time campaign performance metrics",
+        "Historical campaign benchmarks by segment and type",
+        "Deliverability and inbox placement data",
+        "Engagement patterns by time of day and day of week",
+        "Audience segment performance history",
+        "Competitive campaign performance data"
+      ],
+      "benefits": [
+        "30-50% improvement in campaign ROI through real-time optimization",
+        "Underperformance detected in 2-4 hours vs post-campaign (3-5 days)",
+        "Automatic corrective actions save 40-60% of underperforming campaigns",
+        "Real-time deliverability fixes prevent inbox issues from escalating",
+        "Continuous learning improves campaign setup and targeting over time",
+        "Proactive alerts enable marketer intervention before issues compound"
+      ],
+      "metrics": ["Optimization opportunity: Real-time in-flight", "Detection time: 2-4 hours", "ROI improvement: 30-50%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement real-time performance dashboards", "Deploy anomaly detection for key metrics"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Real-time analytics capability", "Campaign management API access", "Historical benchmark data", "Automated campaign modification capability"]
+    },
+    "icon": "chart-up",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

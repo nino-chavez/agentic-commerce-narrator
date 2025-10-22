@@ -1,0 +1,398 @@
+[
+  {
+    "id": "function-open-to-buy-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Open-to-Buy Planning",
+    "description": "Dynamic OTB calculation with real-time sales tracking achieving 20-30% inventory reduction and 95%+ in-stock on key items versus static monthly budgets.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Monthly OTB budget set at beginning of month: '$500K purchasing budget for September cereal category'. 2. Budget allocated across 250 SKUs based on planned sales: static allocation locked for entire month. 3. Mid-month: hot new keto cereal selling 3x forecast (stockout), but OTB budget already spent on slow-moving SKUs. 4. Buyer requests budget reallocation: 'Need $50K more for keto cereal, have $80K tied up in slow-movers'. 5. Manual approval process takes 1-2 weeks, by which time sales opportunity lost. 6. End of month: $80K excess inventory on slow-movers (markdowns needed), stockout on hot items (lost revenue), OTB effectiveness 70-75%.",
+      "constraints": [
+        "Static monthly OTB budget (can't reallocate mid-month easily)",
+        "70-75% OTB effectiveness (budget spent on wrong items)",
+        "Manual reallocation approval (1-2 week delay)",
+        "Excess inventory on slow-movers ($80K example)",
+        "Stockouts on hot items due to budget locked",
+        "No real-time sales tracking for dynamic adjustment"
+      ],
+      "metrics": ["OTB effectiveness: 70-75%", "Budget reallocation time: 1-2 weeks", "Excess inventory: 20-30%", "Key item in-stock: 85-90%"]
+    },
+    "agentic": {
+      "workflow": "1. OTB Planning Agent sets monthly budget $500K with dynamic reallocation rules: 'Automatically shift budget from SKUs selling <50% of forecast to SKUs selling >150% of forecast'. 2. Agent monitors sales daily: 'Day 10 of September - keto cereal SKU#456 selling 280% vs forecast, slow-mover SKU#789 selling 35% vs forecast'. 3. Agent triggers automatic reallocation: 'Reduce SKU#789 OTB by $60K (cancel pending orders), increase SKU#456 OTB by $60K (expedite orders), net budget unchanged at $500K'. 4. Reallocation happens within 24 hours (vs 1-2 week manual approval): purchase orders adjusted, suppliers notified, inventory optimized. 5. End of month results: $500K spent optimally (95%+ on right items), excess inventory reduced 20-30% ($80K → $56K), key item in-stock 95%+ vs 85-90%. 6. Working capital efficiency improved through dynamic OTB allocation vs static monthly budgets.",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["OTB Planning Agent", "Dynamic Reallocation Agent", "Sales Monitoring Agent"],
+        "utilityAgents": ["Purchase Order System", "Supplier Integration", "Inventory Tracker", "Budget Calculator"]
+      },
+      "dataSources": [
+        "Monthly OTB budget by category and SKU",
+        "Real-time daily sales vs forecast by SKU",
+        "Inventory positions and on-order quantities",
+        "Supplier lead times and order flexibility",
+        "Historical sales patterns and seasonality",
+        "Promotional calendar and expected demand changes",
+        "SKU profitability and strategic importance",
+        "Working capital constraints and cash flow"
+      ],
+      "benefits": [
+        "20-30% inventory reduction through dynamic reallocation (excess $80K → $56K)",
+        "95%+ key item in-stock vs 85-90% (capture sales opportunities)",
+        "24-hour reallocation vs 1-2 week manual approval",
+        "OTB effectiveness 90-95% vs 70-75% (budget spent on right items)",
+        "Automated purchase order adjustment (no buyer manual work)",
+        "Working capital optimization (spend $500K more effectively)"
+      ],
+      "metrics": ["OTB effectiveness: 90-95%", "Budget reallocation time: <24 hours", "Excess inventory: 15-20%", "Key item in-stock: 95%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy weekly OTB review and reallocation vs monthly static", "Implement automated alerts for SKUs selling >150% or <50% of forecast", "Enable purchase order adjustment workflow for fast reallocation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time sales vs forecast tracking by SKU", "OTB planning system with dynamic reallocation capability", "Purchase order system integration for automated adjustments", "Supplier agreements allowing order flexibility and changes", "Reallocation rules and thresholds configured", "Approval workflow for budget shifts within category"]
+    },
+    "icon": "cash",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sales-margin-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Sales & Margin Planning",
+    "description": "Integrated sales and margin forecasting with promotional impact modeling achieving 85-95% plan accuracy versus 70-75% and margin protection through mix optimization.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Annual planning: Finance sets $36M revenue target, 25% gross margin target. 2. Merchandising creates sales plan: monthly sales by category, assumes mix of products similar to last year. 3. Margin planning disconnected: Finance assumes 25% margin, but merchandising shifts mix toward lower-margin items to hit volume targets. 4. Mid-year review: sales on track at $18M (50% of annual), but margin only 22% (vs 25% plan) due to product mix shift. 5. Margin gap discovered too late: $540K margin shortfall ($18M × 3% margin gap). 6. Scramble to correct: reduce promotions, shift mix back to high-margin items (disrupts sales momentum). 7. 70-75% plan accuracy due to disconnected sales and margin planning.",
+      "constraints": [
+        "Sales and margin planning disconnected (separate processes)",
+        "70-75% plan accuracy (frequent mid-year corrections)",
+        "Product mix impact on margin not modeled",
+        "Promotional impact on margin ignored (volume focus)",
+        "Mid-year margin gap discovery ($540K shortfall example)",
+        "Reactive corrections disrupt sales momentum"
+      ],
+      "metrics": ["Sales plan accuracy: 70-75%", "Margin plan accuracy: 65-75%", "Mix impact modeling: None", "Correction frequency: Mid-year (reactive)"]
+    },
+    "agentic": {
+      "workflow": "1. Sales & Margin Planning Agent creates integrated plan: '$36M revenue, 25% margin, requires specific product mix (40% high-margin items 35% margin, 60% standard items 18% margin)'. 2. Agent models promotional impact: 'September promotion plan: 30% off cereal drives +150% volume but reduces category margin from 25% to 18% during promotion week - plan accordingly'. 3. Mix Optimization Agent balances volume and margin: 'Q3 target $9M revenue at 24% margin, recommend 42% high-margin mix (vs 40% planned) to offset promotional margin dilution'. 4. Agent monitors plan vs actual weekly: 'Week 10: sales on track $720K, but margin 22% (vs 24% plan) due to mix shift - alert buyer to rebalance toward high-margin items'. 5. Corrective action within weeks (vs mid-year): adjust promotional calendar, shift marketing emphasis to high-margin items. 6. Year-end results: $36.2M sales (101% of plan), 24.5% margin (98% of plan), 85-95% plan accuracy through integrated planning and weekly monitoring.",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["Sales & Margin Planning Agent", "Mix Optimization Agent", "Promotional Impact Agent"],
+        "utilityAgents": ["Financial Planning System", "Promotional Calendar", "Product Mix Analytics", "Weekly Performance Tracker"]
+      },
+      "dataSources": [
+        "Annual revenue and margin targets by category",
+        "Product mix and profitability by SKU (margin %)",
+        "Promotional calendar with discount levels and volume impact",
+        "Historical sales and margin performance",
+        "Weekly sales and margin actuals",
+        "Pricing and cost data (COGS, freight)",
+        "Competitive pricing and promotional activity",
+        "Customer segment profitability"
+      ],
+      "benefits": [
+        "85-95% plan accuracy vs 70-75% (sales and margin both hit targets)",
+        "Integrated planning (margin protected while hitting sales targets)",
+        "Promotional impact modeling (know 30% discount = -7% category margin)",
+        "Weekly monitoring vs mid-year review (corrective action early)",
+        "Mix optimization balances volume and profitability",
+        "Margin gap prevention ($540K shortfall avoided)"
+      ],
+      "metrics": ["Sales plan accuracy: 85-95%", "Margin plan accuracy: 85-95%", "Mix impact modeling: Automated", "Correction frequency: Weekly (proactive)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate sales and margin planning in single system vs separate", "Model promotional impact on category margin for major events", "Deploy weekly plan vs actual monitoring vs monthly"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Integrated financial planning system (sales + margin combined)", "SKU profitability data (margin % by product)", "Promotional impact modeling (historical promotion lift and margin data)", "Product mix analytics and optimization tools", "Weekly sales and margin reporting", "Corrective action workflow and approval process"]
+    },
+    "icon": "trending-up",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-investment-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Investment Optimization",
+    "description": "Working capital allocation across categories achieving 20-40% inventory reduction and 95%+ service level through ROII (Return on Inventory Investment) optimization.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Inventory budget set at $5M across 10 categories, allocated proportional to sales: 'Category A generates 30% sales, gets 30% inventory budget ($1.5M)'. 2. No consideration of inventory turns, profitability, or strategic importance: simple sales-based allocation. 3. Category A: slow-turning (2x/year), low margin (15%), gets $1.5M investment. Category B: fast-turning (12x/year), high margin (35%), gets $500K investment. 4. Total inventory $5M generates $10M annual gross profit ($5M avg inventory × 2 turns × 100% margin equivalent). 5. Suboptimal allocation: over-invested in slow-turning low-margin, under-invested in fast-turning high-margin. 6. Working capital tied up inefficiently, 85-90% service level (stockouts on under-invested categories).",
+      "constraints": [
+        "Sales-proportional allocation (ignores turns and profitability)",
+        "85-90% service level (under-invested categories stockout)",
+        "Suboptimal working capital allocation (slow-turning over-funded)",
+        "No ROII optimization (return on inventory investment)",
+        "$5M inventory generating $10M gross profit (200% ROII)",
+        "Manual allocation (no systematic optimization)"
+      ],
+      "metrics": ["Inventory allocation: Sales-proportional", "ROII: 200% (suboptimal)", "Service level: 85-90%", "Working capital efficiency: Low"]
+    },
+    "agentic": {
+      "workflow": "1. ROII Optimization Agent analyzes 10 categories: 'Category A: 2 turns, 15% margin, ROII 30% ($1.5M → $450K gross profit). Category B: 12 turns, 35% margin, ROII 420% ($500K → $2.1M gross profit)'. 2. Agent identifies optimization opportunity: 'Reallocate $500K from Category A (ROII 30%) to Category B (ROII 420%), increase total gross profit $1.65M annually'. 3. Agent optimizes allocation: 'Reduce Category A from $1.5M to $1M (-$500K), increase Category B from $500K to $1M (+$500K), total inventory unchanged at $5M'. 4. Agent validates service level impact: 'Category A still achieves 93% service level at $1M investment (acceptable), Category B improves from 88% to 97% (significant)'. 5. Optimized results: $5M inventory generates $13.2M gross profit (vs $10M baseline), 264% ROII vs 200%, 95%+ service level across categories. 6. 20-40% inventory reduction possible (reduce $5M to $3.5M while maintaining same gross profit $10M through ROII optimization).",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["ROII Optimization Agent", "Working Capital Agent", "Service Level Agent"],
+        "utilityAgents": ["Inventory Analytics", "Profitability Calculator", "Turn Rate Tracker", "Optimization Solver"]
+      },
+      "dataSources": [
+        "Inventory levels and investment by category",
+        "Inventory turn rates by category and SKU",
+        "Gross margin percentages by category",
+        "Service level targets and actual performance",
+        "Historical ROII by category",
+        "Working capital constraints and cost of capital",
+        "Sales forecasts and growth projections",
+        "Strategic importance and must-carry requirements"
+      ],
+      "benefits": [
+        "32% ROII improvement (200% → 264% in example)",
+        "20-40% inventory reduction possible while maintaining service level",
+        "95%+ service level through optimal allocation vs 85-90%",
+        "$3.2M incremental gross profit (same inventory, better allocation)",
+        "Working capital efficiency (invest in high-ROII categories)",
+        "Data-driven allocation vs sales-proportional gut-feel"
+      ],
+      "metrics": ["Inventory allocation: ROII-optimized", "ROII: 264% (+32%)", "Service level: 95%+", "Working capital efficiency: High"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Calculate ROII by category (turns × margin) for current inventory allocation", "Identify top 3 reallocation opportunities (low-ROII to high-ROII shifts)", "Pilot ROII-based allocation for 2-3 categories to validate approach"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Inventory turn rate tracking by category and SKU", "Gross margin data by category", "Service level measurement and targets", "ROII calculation and optimization models", "Working capital allocation and approval process", "Category rebalancing workflow and supplier coordination"]
+    },
+    "icon": "currency-dollar",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-receipt-flow-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Receipt Flow Planning",
+    "description": "Inbound logistics optimization with supplier delivery scheduling achieving 30-50% warehouse productivity improvement and 90%+ on-time delivery versus uncoordinated arrivals.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Buyers place purchase orders with 50 suppliers: delivery dates spread over month, no coordination. 2. Monday morning: 8 trucks arrive at warehouse simultaneously (only 4 dock doors available), 4 trucks wait 2-4 hours creating detention charges. 3. Tuesday: zero deliveries scheduled, warehouse staff idle (labor inefficiency). 4. Uncoordinated receipt flow: peaks and valleys in workload, detention charges $5K/month, overtime during peaks, idle time during valleys. 5. 60-70% on-time delivery due to warehouse capacity constraints and unplanned arrivals. 6. Suppliers frustrated by delays, warehouse productivity 70% due to uneven workload.",
+      "constraints": [
+        "Uncoordinated supplier deliveries (buyers place orders independently)",
+        "60-70% on-time delivery (warehouse capacity bottlenecks)",
+        "Detention charges $5K/month (trucks waiting for dock availability)",
+        "Uneven workload (Monday peaks, Tuesday valleys)",
+        "70% warehouse productivity (idle time and overtime both occur)",
+        "Supplier frustration (delays and detention)"
+      ],
+      "metrics": ["On-time delivery: 60-70%", "Detention charges: $5K/month", "Warehouse productivity: 70%", "Delivery coordination: None"]
+    },
+    "agentic": {
+      "workflow": "1. Receipt Flow Planning Agent receives all purchase orders, analyzes supplier lead times and delivery windows: '50 POs expected month of September, need to schedule across 4 dock doors, 8 hours/day, 20 working days = 640 dock-hours available'. 2. Agent optimizes delivery schedule: 'Monday: 4 deliveries (8am, 10am, 1pm, 3pm) using all 4 docks efficiently. Tuesday: 4 deliveries (same staggered schedule), no peaks or valleys'. 3. Supplier Coordination Agent sends delivery appointments to suppliers: 'Supplier A: deliver Monday Sept 5 at 8am dock #2, 2-hour window, late arrivals incur detention charge'. 4. Agent monitors arrival compliance: 'Monday: all 4 deliveries on-time, warehouse operating at 95% productivity (smooth flow, no waiting)'. 5. Results: 90%+ on-time delivery, detention charges $500/month (vs $5K, -90%), warehouse productivity 90-95% (vs 70%), labor costs optimized. 6. 30-50% warehouse productivity improvement through coordinated receipt flow vs uncoordinated arrivals.",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["Receipt Flow Planning Agent", "Supplier Coordination Agent", "Warehouse Optimization Agent"],
+        "utilityAgents": ["Purchase Order System", "Supplier Portal", "Warehouse Management System", "Dock Scheduling Tool"]
+      },
+      "dataSources": [
+        "Purchase orders with requested delivery dates",
+        "Supplier lead times and delivery windows",
+        "Warehouse dock capacity and operating hours",
+        "Warehouse labor scheduling and productivity",
+        "Historical delivery performance by supplier",
+        "Detention charge policies and costs",
+        "Seasonal demand patterns and receipt volume",
+        "Supplier delivery compliance tracking"
+      ],
+      "benefits": [
+        "30-50% warehouse productivity improvement (70% → 90-95%)",
+        "90%+ on-time delivery vs 60-70% (appointment scheduling)",
+        "90% detention charge reduction ($5K → $500/month)",
+        "Even workload distribution (no peaks and valleys)",
+        "Labor optimization (no overtime or idle time)",
+        "Supplier satisfaction improvement (clear delivery windows)"
+      ],
+      "metrics": ["On-time delivery: 90%+", "Detention charges: $500/month (-90%)", "Warehouse productivity: 90-95%", "Delivery coordination: Fully scheduled"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy dock appointment scheduling for top 20 suppliers (80% volume)", "Implement weekly receipt flow planning vs uncoordinated", "Create supplier delivery compliance tracking and scorecarding"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Purchase order visibility and delivery date management", "Dock scheduling system and appointment management", "Supplier portal for delivery appointment communication", "Warehouse management system integration", "Detention charge policy and enforcement", "Supplier collaboration agreements for scheduled deliveries"]
+    },
+    "icon": "truck",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-financial-target-allocation",
+    "type": "function",
+    "level": 4,
+    "label": "Financial Target Allocation (by Category/Region)",
+    "description": "Top-down to bottom-up target reconciliation achieving 90%+ plan buy-in and 85-95% target achievement versus 70-75% through collaborative goal-setting.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate finance sets annual target: $100M revenue, 25% margin for entire company. 2. Finance allocates to regions proportionally: 'Region A did 35% sales last year, gets $35M target this year'. 3. Regions allocate to categories: 'Cereal was 20% of region, gets $7M target'. 4. Category managers receive targets with no input: 'You have $7M cereal target - make it happen'. 5. Category managers push back: 'Market conditions changed, competitor opened, we can only deliver $6M'. 6. Negotiation takes weeks, final compromise $6.5M, but manager not bought in (externally imposed target). 7. Year-end: $6.2M actual (95% of $6.5M compromise, 88% of $7M original), 70-75% target achievement.",
+      "constraints": [
+        "Top-down target allocation (no bottom-up input)",
+        "70-75% target achievement (managers not bought in)",
+        "Multi-week negotiation process (delays planning)",
+        "Proportional allocation ignores market changes",
+        "Category manager resistance (externally imposed)",
+        "Compromise targets lack commitment"
+      ],
+      "metrics": ["Target achievement: 70-75%", "Manager buy-in: 40-50%", "Allocation method: Top-down only", "Negotiation time: 3-4 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Target Allocation Agent receives corporate target $100M revenue, creates bottom-up forecast: 'Based on category growth trends, market conditions, competitive dynamics, realistic forecast $95M (5% below target)'. 2. Agent identifies $5M gap, breaks down by opportunity: 'Category A: +$2M possible with marketing investment, Category B: +$1.5M through assortment expansion, Category C: +$1M via price optimization, remaining $500K gap unreconcilable'. 3. Collaborative Planning Agent facilitates reconciliation: 'Category A manager: I can deliver +$1.8M with $200K marketing (not full $2M), Category B: +$1.2M achievable, Category C: +$800K with pricing'. 4. Agent negotiates trade-offs: 'Total bottom-up with actions: $98.8M (vs $100M target), gap $1.2M. Options: reduce corporate target to $99M (accept $200K-$1M shortfall), invest additional $500K marketing for $1.5M revenue'. 5. Final plan: $99M target (1% reduction from $100M), 90%+ manager buy-in (they built the plan), category managers committed. 6. Year-end: $98.5M actual (99.5% achievement), 85-95% target achievement through collaborative process.",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["Target Allocation Agent", "Bottom-Up Forecast Agent", "Collaborative Planning Agent", "Gap Reconciliation Agent"],
+        "utilityAgents": ["Financial Planning System", "Market Intelligence", "Scenario Modeling", "Commitment Tracking"]
+      },
+      "dataSources": [
+        "Corporate financial targets (revenue, margin)",
+        "Historical performance by category and region",
+        "Bottom-up forecasts from category managers",
+        "Market growth trends and competitive intelligence",
+        "Investment options and ROI (marketing, assortment, pricing)",
+        "Gap reconciliation scenarios and trade-offs",
+        "Manager commitment and confidence levels",
+        "Plan vs actual tracking"
+      ],
+      "benefits": [
+        "85-95% target achievement vs 70-75% (higher commitment)",
+        "90%+ manager buy-in (collaborative vs imposed targets)",
+        "1-week reconciliation vs 3-4 week negotiation",
+        "Gap transparency ($5M gap identified with action plans)",
+        "Investment-linked growth (marketing, assortment ROI clear)",
+        "Realistic targets based on market conditions (not just prior year +X%)"
+      ],
+      "metrics": ["Target achievement: 85-95%", "Manager buy-in: 90%+", "Allocation method: Top-down + bottom-up", "Negotiation time: 1 week"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement bottom-up forecasting from category managers in parallel with top-down targets", "Create gap reconciliation workshop with investment options and scenarios", "Deploy collaborative planning platform for transparent target negotiation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Bottom-up forecasting capability from category/region managers", "Gap analysis and reconciliation tools", "Investment option modeling (marketing, assortment ROI)", "Collaborative planning platform and workflow", "Scenario planning for target trade-offs", "Commitment tracking and accountability system"]
+    },
+    "icon": "target",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-plan-vs-actual-variance-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Plan vs. Actual Variance Analysis",
+    "description": "Automated variance detection with root-cause attribution achieving 60-80% faster corrective action and 90%+ plan adherence through early exception identification.",
+    "parentCapability": "capability-merchandise-financial-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Monthly business review: finance team manually calculates plan vs actual variances in Excel. 2. September results: revenue $2.7M (vs $3M plan, -10% variance), margin 22% (vs 25% plan, -3% variance). 3. Finance asks merchandising: 'Why did we miss plan?'. 4. Merchandising spends days investigating: reviews sales reports, promotional performance, inventory levels, competitive activity. 5. Root cause identified week 2 of October: 'Competitor promotion drained traffic -15%, rainy weather reduced impulse buys -8%, new product delayed launch (lost $200K revenue)'. 6. By the time root cause known, October half over (too late for September corrective action, limited time for October). 7. 70-80% plan adherence due to slow variance detection and delayed corrective action.",
+      "constraints": [
+        "Monthly variance review (30-day detection lag)",
+        "Manual root-cause investigation (2 weeks to understand why)",
+        "70-80% plan adherence (variances compound over time)",
+        "Corrective action delayed (October half over before September understood)",
+        "Reactive analysis (forensic post-mortem vs real-time)",
+        "Multiple contributing factors hard to quantify manually"
+      ],
+      "metrics": ["Variance detection: Monthly (30-day lag)", "Root-cause time: 2 weeks", "Corrective action: Following month (reactive)", "Plan adherence: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Variance Analysis Agent monitors plan vs actual daily: 'Week 1 September: revenue $650K (vs $750K plan, -13% variance) - alert threshold exceeded'. 2. Root Cause Agent analyzes variance drivers automatically: 'Revenue variance -$100K attributed to: Competitor promotion -$60K (traffic -15%), Weather impact -$25K (rainy weekend), Product stockout -$15K (late supplier delivery)'. 3. Agent quantifies each factor: 'Competitor 30%-off promotion Sept 1-7 drove traffic shift (validated from POS data). Rainy weather Sept 3-4 reduced impulse category sales 40% (weather correlation model). SKU#456 stockout Sept 5-7 lost est. $15K revenue'. 4. Corrective Action Agent recommends responses: 'Counter competitor with flash sale Sept 8-10 (estimated $40K revenue recovery), expedite SKU#456 delivery (prevent week 2 stockout), increase umbrella/rain gear promotion (weather-responsive)'. 5. Actions implemented within days: flash sale recovers $35K, stockout resolved, weather promotion adds $8K. 6. Month-end results: revenue $2.88M (vs $3M plan, -4% vs -13% week 1 trend), 90%+ plan adherence through rapid variance detection and corrective action.",
+      "agents": {
+        "orchestrator": "Merchandise Financial Planning Orchestration Agent",
+        "superAgents": ["Variance Analysis Agent", "Root Cause Agent", "Corrective Action Agent"],
+        "utilityAgents": ["Daily Performance Tracking", "Competitive Intelligence", "Weather Data", "Promotional Modeling", "Inventory Alerts"]
+      },
+      "dataSources": [
+        "Daily sales and margin actuals vs plan",
+        "Competitive promotional activity and pricing",
+        "Weather data and impact correlations",
+        "Inventory levels and stockout incidents",
+        "Promotional performance and lift",
+        "Traffic and conversion rate data",
+        "External events and market disruptions",
+        "Historical variance patterns and root causes"
+      ],
+      "benefits": [
+        "60-80% faster corrective action (days vs weeks)",
+        "90%+ plan adherence vs 70-80% (early intervention)",
+        "Daily variance detection vs monthly (30-day lag eliminated)",
+        "Automated root-cause attribution (competitor, weather, stockout)",
+        "Week 1 variance trend reversed (-13% → -4% by month-end)",
+        "Quantified impact of each factor (competitor -$60K, weather -$25K)"
+      ],
+      "metrics": ["Variance detection: Daily (real-time)", "Root-cause time: <24 hours", "Corrective action: Same week (proactive)", "Plan adherence: 90%+"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy daily plan vs actual tracking for revenue and margin", "Integrate competitive intelligence and weather data for root-cause analysis", "Create automated variance alerts for >5% deviations with recommended actions"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Daily sales and margin actual data integration", "Plan data by day/week for comparison", "Competitive intelligence and weather data sources", "Root-cause attribution models (statistical correlation)", "Corrective action recommendation engine", "Approval workflow for mid-period plan adjustments"]
+    },
+    "icon": "chart-bar",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

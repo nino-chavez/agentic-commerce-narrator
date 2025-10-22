@@ -1,0 +1,1019 @@
+[
+  {
+    "id": "capability-customer-journey-orchestration",
+    "type": "capability",
+    "level": 3,
+    "label": "Customer Journey Orchestration",
+    "description": "Real-time customer journey mapping and orchestration with AI-driven next-best-action recommendations achieving significant improvement in conversion and customer satisfaction.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Real-time journey mapping",
+      "Next-best-action recommendations",
+      "Cross-channel orchestration",
+      "Journey analytics & optimization",
+      "Friction detection & resolution",
+      "Lifecycle stage management"
+    ],
+    "traditionalApproach": {
+      "description": "Siloed channel experiences with static journey maps and manual coordination",
+      "characteristics": [
+        "Channel-specific experiences (web, mobile, store operate independently)",
+        "Static journey maps created annually in workshops",
+        "Manual follow-up workflows via email/call lists",
+        "No real-time visibility into customer journey state",
+        "Disconnected touchpoints create friction",
+        "Reactive response to customer issues"
+      ],
+      "constraints": [
+        "Customers repeat information across channels",
+        "Journey maps outdated within weeks of creation",
+        "Significant drop-off due to channel friction",
+        "Manual workflows miss timely engagement opportunities",
+        "No visibility into journey progress or blockers",
+        "Inconsistent experiences across touchpoints"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cjo-001",
+          "metric": "Drop-off Rate Due to Channel Friction",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Multi-channel customer journey friction analysis']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered real-time journey orchestration with seamless cross-channel experiences and proactive engagement",
+      "characteristics": [
+        "Real-time journey state tracking across all touchpoints",
+        "AI recommends next-best-action based on journey stage and behavior",
+        "Seamless cross-channel hand-offs (web → mobile → store)",
+        "Automated friction detection and resolution",
+        "Proactive engagement at optimal moments",
+        "Continuous journey optimization through A/B testing"
+      ],
+      "benefits": [
+        "Significant improvement in conversion through optimized journeys",
+        "Seamless experiences increase customer satisfaction",
+        "Proactive engagement reduces drop-off",
+        "Real-time visibility enables agile journey improvements",
+        "Automated orchestration scales personalization",
+        "Continuous optimization vs static annual maps"
+      ],
+      "projections": [
+        {
+          "metric": "Conversion Rate Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered journey orchestration eliminating friction points and optimizing next-best-actions']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Satisfaction Increase",
+          "value": "25-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on seamless cross-channel experiences and proactive engagement']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Drop-off Rate Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated friction detection and real-time resolution']",
+          "sourceBenchmark": "bench-cjo-001"
+        }
+      ],
+      "agents": [
+        "Journey Orchestration Agent",
+        "Next-Best-Action Agent",
+        "Cross-Channel Coordination Agent",
+        "Friction Detection Agent",
+        "Lifecycle Management Agent",
+        "Journey Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement real-time journey tracking for purchase funnel",
+        "Deploy next-best-action for abandoned cart recovery",
+        "Enable cross-channel hand-off for BOPIS journeys"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Customer Data Platform (CDP) for unified customer view",
+        "Journey orchestration platform",
+        "Real-time behavioral tracking",
+        "Cross-channel integration (web, mobile, store, call center)",
+        "Defined customer journeys and key moments"
+      ]
+    },
+    "icon": "arrows-right-left",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-customer-service-support",
+    "type": "capability",
+    "level": 3,
+    "label": "Customer Service & Support",
+    "description": "AI-powered omnichannel customer service with intelligent routing, self-service automation, and sentiment-driven prioritization achieving high self-service resolution.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Omnichannel contact center",
+      "AI-powered self-service (chatbot, IVR, knowledge base)",
+      "Intelligent case routing",
+      "Sentiment analysis & prioritization",
+      "Agent assist & knowledge management",
+      "Service analytics & QA",
+      "Proactive support & outreach"
+    ],
+    "traditionalApproach": {
+      "description": "Phone-centric contact center with manual case routing and limited self-service",
+      "characteristics": [
+        "Phone-first support with long hold times",
+        "Manual case routing by supervisors",
+        "Basic FAQ self-service (low adoption)",
+        "No sentiment detection or prioritization",
+        "Agents search multiple systems for customer context",
+        "Reactive support only (customers must contact)"
+      ],
+      "constraints": [
+        "Long average hold times",
+        "Low self-service resolution rate with most escalating to agent",
+        "Manual routing delays urgent cases",
+        "Agents lack full customer context (repeat questions)",
+        "High cost per contact",
+        "No proactive issue detection"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-css-001",
+          "metric": "Average Hold Time",
+          "value": "10-25 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'Contact center industry benchmarks']"
+        },
+        {
+          "id": "bench-css-002",
+          "metric": "Self-Service Resolution Rate (Traditional)",
+          "value": "<20%",
+          "source": "TBD: [SME to provide source, e.g., 'Self-service effectiveness benchmarks']"
+        },
+        {
+          "id": "bench-css-003",
+          "metric": "Cost Per Contact (Traditional)",
+          "value": "$8-15",
+          "source": "TBD: [SME to provide source, e.g., 'Contact center cost benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven omnichannel support with intelligent automation, routing, and proactive engagement",
+      "characteristics": [
+        "Omnichannel support (phone, chat, email, social, messaging)",
+        "AI chatbot resolves majority of inquiries autonomously",
+        "Intelligent routing based on issue, sentiment, customer value",
+        "Real-time sentiment analysis for priority escalation",
+        "Agent assist with suggested responses and knowledge",
+        "Proactive outreach for detected issues (order delays, quality)"
+      ],
+      "benefits": [
+        "High self-service resolution rate",
+        "Average handle time significantly reduced",
+        "Sentiment-driven prioritization prevents churn",
+        "Agent productivity improves with AI assist",
+        "Cost per contact substantially reduced",
+        "Proactive support prevents significant portion of inbound contacts"
+      ],
+      "projections": [
+        {
+          "metric": "Self-Service Resolution Rate Improvement",
+          "value": "60-80% (vs <20%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI chatbot with NLU handling complex inquiries autonomously']",
+          "sourceBenchmark": "bench-css-002"
+        },
+        {
+          "metric": "Average Handle Time Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI agent assist with suggested responses and unified customer context']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Agent Productivity Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered knowledge suggestions and automated response drafting']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Cost Per Contact Reduction",
+          "value": "50-70% ($2-5 vs $8-15)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on high self-service resolution and improved agent efficiency']",
+          "sourceBenchmark": "bench-css-003"
+        },
+        {
+          "metric": "Inbound Contact Prevention",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive outreach for order delays, quality issues, and predictive support']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Customer Service Orchestration Agent",
+        "Self-Service Chatbot Agent",
+        "Intelligent Routing Agent",
+        "Sentiment Analysis Agent",
+        "Agent Assist Agent",
+        "Proactive Support Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI chatbot for top 10 FAQs",
+        "Implement sentiment analysis for escalation",
+        "Enable agent assist with suggested responses"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Omnichannel contact center platform",
+        "Conversational AI platform (chatbot)",
+        "Knowledge management system",
+        "CRM integration for customer context",
+        "Agent training on AI-assisted workflows"
+      ]
+    },
+    "icon": "chat-bubble-left-right",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-loyalty-program-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Loyalty Program Management",
+    "description": "AI-driven loyalty platform with personalized rewards, gamification, and predictive retention achieving significant increase in member lifetime value.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "Hybrid"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Points & rewards management",
+      "Personalized offers & incentives",
+      "Tiered membership programs",
+      "Gamification & engagement",
+      "Coalition & partner rewards",
+      "Loyalty analytics & segmentation",
+      "Churn prediction & retention"
+    ],
+    "traditionalApproach": {
+      "description": "Points-based program with generic rewards and manual tier management",
+      "characteristics": [
+        "Simple points accumulation (1 point per $1 spent)",
+        "Generic rewards catalog (same for all members)",
+        "Static tier thresholds (spend-based only)",
+        "Manual promotion targeting via email blasts",
+        "Quarterly statement mailings",
+        "Limited visibility into program engagement"
+      ],
+      "constraints": [
+        "Generic rewards have low perceived value",
+        "Static tiers don't recognize engagement behaviors",
+        "Low email blast promotion response rates",
+        "High program costs as percentage of revenue",
+        "High percentage of inactive members",
+        "No churn prediction or proactive retention"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-lpm-001",
+          "metric": "Email Blast Promotion Response Rate",
+          "value": "2-5%",
+          "source": "TBD: [SME to provide source, e.g., 'Loyalty program email effectiveness benchmarks']"
+        },
+        {
+          "id": "bench-lpm-002",
+          "metric": "Program Cost (% of Revenue)",
+          "value": "15-20%",
+          "source": "TBD: [SME to provide source, e.g., 'Loyalty program cost benchmarks']"
+        },
+        {
+          "id": "bench-lpm-003",
+          "metric": "Inactive Member Rate",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Loyalty program engagement benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered personalized loyalty with dynamic rewards, gamification, and predictive retention",
+      "characteristics": [
+        "Personalized reward recommendations based on preferences",
+        "Dynamic tier qualification (engagement + spend)",
+        "AI-driven personalized offers (vs generic email blasts)",
+        "Gamification with challenges and milestone rewards",
+        "Real-time points tracking and instant gratification",
+        "Predictive churn detection with retention campaigns"
+      ],
+      "benefits": [
+        "Significant increase in member lifetime value",
+        "Personalized rewards improve redemption rates",
+        "Dynamic tiers drive engagement behaviors (reviews, referrals)",
+        "AI offers dramatically increase response rates",
+        "Gamification boosts program interaction",
+        "Churn prediction enables proactive retention"
+      ],
+      "projections": [
+        {
+          "metric": "Member Lifetime Value Increase",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized engagement, gamification, and proactive retention']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Reward Redemption Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI recommending personalized rewards aligned with member preferences']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Offer Response Rate Improvement",
+          "value": "10-15x (vs generic blasts)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-driven personalized offers with behavioral targeting']",
+          "sourceBenchmark": "bench-lpm-001"
+        },
+        {
+          "metric": "Program Interaction Increase",
+          "value": "50-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on gamification with challenges, milestones, and social elements']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Churn Prevention Rate",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive churn detection enabling timely intervention']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Loyalty Program Orchestration Agent",
+        "Personalized Rewards Agent",
+        "Dynamic Tier Management Agent",
+        "Gamification Agent",
+        "Churn Prediction Agent",
+        "Offer Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement personalized reward recommendations",
+        "Deploy churn prediction for at-risk members",
+        "Add gamification challenges for top 20% of members"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Modern loyalty platform with API capabilities",
+        "Customer Data Platform integration",
+        "Recommendation engine",
+        "Mobile app for real-time engagement",
+        "Historical member transaction data (2+ years)"
+      ]
+    },
+    "icon": "gift",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-voice-of-customer-analytics",
+    "type": "capability",
+    "level": 3,
+    "label": "Voice of Customer (VoC) Analytics",
+    "description": "AI-powered customer feedback analysis with sentiment detection, topic modeling, and closed-loop action management achieving significant improvement in NPS.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Multi-channel feedback collection",
+      "AI sentiment analysis & topic modeling",
+      "Text analytics & trend detection",
+      "Closed-loop issue resolution",
+      "VoC insights & recommendations",
+      "NPS & CSAT tracking"
+    ],
+    "traditionalApproach": {
+      "description": "Manual survey analysis with spreadsheet-based reporting and limited action closure",
+      "characteristics": [
+        "Email surveys with low response rates",
+        "Manual reading and categorization of verbatims",
+        "Spreadsheet-based sentiment scoring",
+        "Monthly NPS reports (lagging indicator)",
+        "Limited follow-up on negative feedback",
+        "Insights shared via PowerPoint decks"
+      ],
+      "constraints": [
+        "Low survey response rates miss majority of feedback",
+        "Manual analysis limited to small sample sizes",
+        "Insights lag reality by weeks/months",
+        "No closed-loop follow-up on issues (customers feel unheard)",
+        "Topic categorization subjective and inconsistent",
+        "Insights don't drive action (PowerPoint graveyard)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-voc-001",
+          "metric": "Survey Response Rate",
+          "value": "5-15%",
+          "source": "TBD: [SME to provide source, e.g., 'Customer feedback survey response rate benchmarks']"
+        },
+        {
+          "id": "bench-voc-002",
+          "metric": "Manual Analysis Capacity",
+          "value": "100-200 responses",
+          "source": "TBD: [SME to provide source, e.g., 'Manual verbatim analysis capacity limits']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven real-time feedback analysis with automated topic detection and closed-loop resolution",
+      "characteristics": [
+        "Multi-channel feedback (surveys, reviews, social, support tickets, chat)",
+        "AI sentiment analysis on 100% of feedback (not samples)",
+        "Automated topic modeling and trend detection",
+        "Real-time alerts for negative sentiment spikes",
+        "Closed-loop workflows for issue resolution",
+        "Predictive analytics on NPS and satisfaction trends"
+      ],
+      "benefits": [
+        "Complete feedback coverage vs limited survey samples",
+        "Real-time insights enable agile response",
+        "AI topic detection reveals emerging issues weeks early",
+        "Closed-loop resolution significantly improves NPS",
+        "Automated analysis scales to millions of feedback points",
+        "Predictive trends inform proactive improvements"
+      ],
+      "projections": [
+        {
+          "metric": "Feedback Coverage Improvement",
+          "value": "100% (vs <15%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI analyzing all customer feedback across channels vs survey samples']",
+          "sourceBenchmark": "bench-voc-001"
+        },
+        {
+          "metric": "Early Issue Detection Window",
+          "value": "4-8 weeks early",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI topic modeling detecting emerging patterns before they become widespread']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "NPS Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on closed-loop resolution showing customers their feedback drives action']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Voice of Customer Orchestration Agent",
+        "Sentiment Analysis Agent",
+        "Topic Modeling Agent",
+        "Trend Detection Agent",
+        "Closed-Loop Resolution Agent",
+        "NPS Prediction Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI sentiment analysis on customer service tickets",
+        "Deploy real-time NPS alerts for detractor follow-up",
+        "Enable automated topic modeling on review data"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Voice of Customer platform or advanced text analytics tool",
+        "Integration with feedback sources (surveys, reviews, support, social)",
+        "Historical feedback data for model training",
+        "Closed-loop workflow system",
+        "Defined action owners for issue categories"
+      ]
+    },
+    "icon": "microphone",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-email-marketing",
+    "type": "capability",
+    "level": 3,
+    "label": "Email Marketing & Automation",
+    "description": "AI-driven email marketing with behavioral triggers, personalization, and send-time optimization achieving significant improvement in email ROI.",
+    "parentDomain": "domain-marketing",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Email campaign management",
+      "Behavioral trigger automation",
+      "AI personalization & content selection",
+      "Send-time optimization",
+      "A/B testing & optimization",
+      "Email performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Batch-and-blast email campaigns with manual segmentation and generic content",
+      "characteristics": [
+        "Weekly promotional email blasts to entire list",
+        "Manual segmentation (2-5 broad segments)",
+        "Generic email content (same for all recipients)",
+        "Fixed send time (Tuesday 10am for everyone)",
+        "Manual A/B testing (limited to 2 variants)",
+        "Basic open/click reporting"
+      ],
+      "constraints": [
+        "Low batch-and-blast engagement rates",
+        "Generic content irrelevant to most recipients",
+        "Fixed send times miss optimal engagement windows",
+        "Manual testing limits learning velocity",
+        "List fatigue from overuse (unsubscribes increase)",
+        "Limited behavioral triggering (abandoned cart only)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-em-001",
+          "metric": "Batch Email Open Rate",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Email marketing industry benchmarks']"
+        },
+        {
+          "id": "bench-em-002",
+          "metric": "Batch Email Click Rate",
+          "value": "2-5%",
+          "source": "TBD: [SME to provide source, e.g., 'Email marketing industry benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered 1:1 personalized email with behavioral automation and optimal send-time orchestration",
+      "characteristics": [
+        "Behavioral trigger automation (browse, cart, purchase, lapse)",
+        "1:1 personalization (product recs, content, offers)",
+        "AI send-time optimization per recipient",
+        "Automated A/B/n testing with multi-armed bandit",
+        "Dynamic content blocks based on customer data",
+        "Predictive analytics on email engagement and conversion"
+      ],
+      "benefits": [
+        "Significant improvement in email ROI",
+        "Behavioral triggers drive substantially higher conversion",
+        "1:1 personalization significantly increases click rates",
+        "Send-time optimization lifts open rates",
+        "Automated testing dramatically accelerates learning",
+        "Reduced unsubscribes with relevant, timely emails"
+      ],
+      "projections": [
+        {
+          "metric": "Email ROI Improvement",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on behavioral triggers, personalization, and send-time optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Behavioral Trigger Conversion Lift",
+          "value": "3-5x (vs batch)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on contextually relevant automated emails at optimal moments']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Click Rate Improvement via Personalization",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on 1:1 personalized product recommendations and content']",
+          "sourceBenchmark": "bench-em-002"
+        },
+        {
+          "metric": "Open Rate Lift via Send-Time Optimization",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI predicting optimal individual send times']",
+          "sourceBenchmark": "bench-em-001"
+        },
+        {
+          "metric": "Learning Velocity Acceleration",
+          "value": "10x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated multi-variant testing with machine learning']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Email Marketing Orchestration Agent",
+        "Behavioral Trigger Agent",
+        "Personalization Agent",
+        "Send-Time Optimization Agent",
+        "A/B Testing Agent",
+        "Email Performance Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement behavioral triggers (browse, cart, post-purchase)",
+        "Deploy AI product recommendations in emails",
+        "Enable send-time optimization for batch campaigns"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": [
+        "Marketing automation platform (ESP) with API capabilities",
+        "Customer Data Platform integration",
+        "Recommendation engine",
+        "Historical email engagement data",
+        "Dynamic content capability"
+      ]
+    },
+    "icon": "envelope",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-marketing-automation",
+    "type": "capability",
+    "level": 3,
+    "label": "Marketing Automation & Orchestration",
+    "description": "Multi-channel marketing automation with AI-driven campaign orchestration, lead nurturing, and attribution achieving significant improvement in marketing efficiency.",
+    "parentDomain": "domain-marketing",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Multi-channel campaign orchestration",
+      "Lead scoring & nurturing",
+      "Marketing workflow automation",
+      "Audience segmentation & targeting",
+      "Channel optimization & budget allocation",
+      "Marketing attribution & ROI",
+      "Campaign performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual campaign execution across disconnected channels with basic segmentation",
+      "characteristics": [
+        "Manual campaign setup in each channel (email, SMS, display)",
+        "Basic segmentation (2-5 static segments)",
+        "No lead scoring or nurturing workflows",
+        "Fixed budget allocation by channel",
+        "Last-touch attribution only",
+        "Monthly campaign performance reports"
+      ],
+      "constraints": [
+        "Manual cross-channel orchestration time-consuming",
+        "Static segments miss behavioral targeting opportunities",
+        "No lead prioritization or automated nurturing",
+        "Fixed budgets miss dynamic optimization opportunities",
+        "Last-touch attribution misrepresents channel value",
+        "Limited agility to shift tactics mid-campaign"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ma-001",
+          "metric": "Manual Campaign Setup Time",
+          "value": "2-4 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Marketing campaign orchestration time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered multi-channel orchestration with dynamic audience targeting and real-time optimization",
+      "characteristics": [
+        "Automated cross-channel orchestration (email, SMS, push, display, social)",
+        "AI-driven audience segmentation (100+ dynamic segments)",
+        "Predictive lead scoring and automated nurturing",
+        "Dynamic budget allocation based on channel performance",
+        "Multi-touch attribution with AI contribution modeling",
+        "Real-time campaign optimization and A/B testing"
+      ],
+      "benefits": [
+        "Substantial reduction in campaign setup time",
+        "Dynamic segmentation improves targeting relevance",
+        "Lead scoring increases sales efficiency",
+        "Dynamic budget allocation improves ROAS",
+        "Multi-touch attribution reveals true channel value",
+        "Real-time optimization enables agile campaign management"
+      ],
+      "projections": [
+        {
+          "metric": "Campaign Setup Time Reduction",
+          "value": "50-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated cross-channel orchestration and workflow automation']",
+          "sourceBenchmark": "bench-ma-001"
+        },
+        {
+          "metric": "Targeting Relevance Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-driven dynamic segmentation with behavioral signals']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Sales Efficiency Increase",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive lead scoring prioritizing high-value opportunities']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "ROAS Improvement via Dynamic Allocation",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time budget optimization shifting to best-performing channels']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Marketing Automation Orchestrator",
+        "Campaign Orchestration Agent",
+        "Lead Scoring Agent",
+        "Audience Segmentation Agent",
+        "Budget Allocation Agent",
+        "Attribution Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement lead scoring for nurture prioritization",
+        "Deploy multi-touch attribution model",
+        "Enable automated cross-channel campaign orchestration"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Marketing automation platform",
+        "Customer Data Platform integration",
+        "Multi-channel execution capabilities",
+        "Historical campaign and conversion data",
+        "Defined lead lifecycle and nurture strategies"
+      ]
+    },
+    "icon": "cog",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-paid-advertising-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Paid Advertising Management",
+    "description": "AI-driven paid media optimization across search, social, and display with automated bidding and creative optimization achieving significant improvement in ROAS.",
+    "parentDomain": "domain-marketing",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Cross-channel campaign management",
+      "AI-powered bidding & budget optimization",
+      "Audience targeting & lookalike modeling",
+      "Creative testing & optimization",
+      "Ad performance analytics",
+      "ROAS optimization & attribution"
+    ],
+    "traditionalApproach": {
+      "description": "Manual campaign management with rule-based bidding and limited testing",
+      "characteristics": [
+        "Manual bid adjustments based on weekly performance",
+        "Static audience targeting (demographics, keywords)",
+        "Limited creative testing (2-3 variants per campaign)",
+        "Fixed daily budgets per channel",
+        "Siloed optimization (each channel managed separately)",
+        "Monthly performance reviews and adjustments"
+      ],
+      "constraints": [
+        "Manual bidding reacts slowly to market changes",
+        "Static audiences miss dynamic behavior-based targeting",
+        "Limited creative testing slows learning velocity",
+        "Fixed budgets miss cross-channel optimization opportunities",
+        "Siloed management creates inefficiencies",
+        "Monthly reviews prevent agile optimization"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-pam-001",
+          "metric": "Manual Bidding Response Time",
+          "value": "Weekly lag",
+          "source": "TBD: [SME to provide source, e.g., 'Manual bid management response time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered cross-channel advertising with real-time bidding, dynamic audiences, and automated creative optimization",
+      "characteristics": [
+        "AI-powered real-time bidding optimization across all channels",
+        "Dynamic audience targeting with behavioral and lookalike modeling",
+        "Automated creative testing with multi-armed bandit",
+        "Cross-channel budget optimization based on ROAS",
+        "Real-time performance monitoring and alerts",
+        "Predictive analytics for campaign planning"
+      ],
+      "benefits": [
+        "Significant improvement in ROAS through AI bidding",
+        "Dynamic audiences increase conversion rates",
+        "Automated creative testing improves CTR",
+        "Cross-channel optimization lifts overall ROAS",
+        "Real-time optimization prevents budget waste",
+        "Predictive analytics improve campaign planning accuracy"
+      ],
+      "projections": [
+        {
+          "metric": "ROAS Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered real-time bidding optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Conversion Rate Increase",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic behavioral and lookalike audience targeting']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "CTR Improvement",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated creative testing with multi-armed bandit optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Cross-Channel ROAS Lift",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on unified budget optimization across all paid channels']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Paid Advertising Orchestrator",
+        "AI Bidding Agent",
+        "Audience Targeting Agent",
+        "Creative Optimization Agent",
+        "Budget Allocation Agent",
+        "ROAS Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable platform AI bidding (Google Smart Bidding, Meta Advantage+)",
+        "Implement automated creative testing",
+        "Deploy cross-channel budget optimization"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Advertising platform integrations (Google Ads, Meta, etc.)",
+        "Conversion tracking and attribution",
+        "Historical campaign performance data",
+        "Creative asset library",
+        "Defined ROAS targets by channel"
+      ]
+    },
+    "icon": "megaphone",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-marketing-attribution",
+    "type": "capability",
+    "level": 3,
+    "label": "Marketing Attribution & ROI Measurement",
+    "description": "AI-powered multi-touch attribution with incrementality testing and unified ROI measurement achieving significant improvement in marketing spend efficiency.",
+    "parentDomain": "domain-data-analytics",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Multi-touch attribution modeling",
+      "Incrementality testing & measurement",
+      "Unified marketing ROI dashboard",
+      "Channel performance analytics",
+      "Budget optimization recommendations"
+    ],
+    "traditionalApproach": {
+      "description": "Last-touch attribution with siloed channel reporting and no incrementality measurement",
+      "characteristics": [
+        "Last-touch attribution (100% credit to final click)",
+        "Siloed channel reporting (each platform in isolation)",
+        "No incrementality testing (can't measure true impact)",
+        "Manual ROI calculations in spreadsheets",
+        "Gut-feel budget allocation decisions",
+        "Quarterly or annual marketing mix modeling"
+      ],
+      "constraints": [
+        "Last-touch misattributes majority of conversion value",
+        "Siloed reporting prevents cross-channel optimization",
+        "No way to measure incremental impact (paid vs organic)",
+        "Manual calculations error-prone and incomplete",
+        "Budget decisions based on incomplete data",
+        "Annual MMM too slow for agile marketing"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-mra-001",
+          "metric": "Last-Touch Misattribution Rate",
+          "value": "60-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Multi-touch attribution studies showing last-touch limitations']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven multi-touch attribution with real-time incrementality measurement and unified ROI tracking",
+      "characteristics": [
+        "Multi-touch attribution with AI contribution modeling",
+        "Continuous incrementality testing (geo-lift, holdout tests)",
+        "Unified marketing ROI dashboard across all channels",
+        "Real-time channel performance analytics",
+        "AI-powered budget optimization recommendations",
+        "Marketing mix modeling with weekly refresh"
+      ],
+      "benefits": [
+        "Multi-touch attribution reveals true channel value",
+        "Incrementality testing quantifies actual impact (not correlation)",
+        "Unified ROI view enables cross-channel optimization",
+        "Significant improvement in marketing spend efficiency",
+        "Real-time insights enable agile budget shifts",
+        "Continuous MMM vs annual snapshots"
+      ],
+      "projections": [
+        {
+          "metric": "Marketing Spend Efficiency Improvement",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on multi-touch attribution and incrementality testing revealing true channel ROI']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Attribution Modeling Agent",
+        "Incrementality Testing Agent",
+        "ROI Calculation Agent",
+        "Channel Performance Agent",
+        "Budget Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement multi-touch attribution (data-driven model)",
+        "Run incrementality test on highest-spend channel",
+        "Deploy unified marketing ROI dashboard"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Unified data warehouse with all marketing and conversion data",
+        "Attribution platform or advanced analytics capability",
+        "Incrementality testing framework",
+        "Historical campaign and conversion data (2+ years)",
+        "Executive alignment on attribution methodology"
+      ]
+    },
+    "icon": "chart-pie",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

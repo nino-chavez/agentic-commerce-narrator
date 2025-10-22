@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-daily-opening-closing-procedures",
+    "type": "function",
+    "level": 4,
+    "label": "Daily Opening & Closing Procedures",
+    "description": "Digital checklists with GPS check-in and photo verification achieving 95%+ task completion versus 70-80% paper-based with 40-50% time savings reducing 30-45 minute process to 15-20 minutes.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Opening manager arrives at store, retrieves paper opening checklist from office (50-80 line items). 2. Manager manually completes tasks while checking off items: unlock doors, turn on lights, count cash drawer, verify alarm system, check temperatures (walk-in cooler, freezer), inspect facility for safety hazards. 3. Manager batch-signs checklist at end without completing all tasks (20-30% tasks skipped due to time pressure). 4. Closing manager repeats process with closing checklist: secure cash, lock doors, set alarm, verify all equipment off. 5. District Manager discovers incomplete tasks during monthly visit weeks later: 'Temperature log missing 3 days, walk-in cooler not verified 5 times this month'. 6. Total time 30-45 minutes per opening/closing, 70-80% completion rate estimated but not measured, no accountability or audit trail.",
+      "constraints": [
+        "Paper checklists with 70-80% estimated completion (20-30% tasks skipped)",
+        "Batch-signing at end without actually completing all tasks",
+        "30-45 minute opening/closing process due to manual paper tracking",
+        "No real-time visibility (DM discovers issues weeks later during visits)",
+        "No accountability (can't prove who completed or when)",
+        "No photo verification (task marked complete but not actually done)"
+      ],
+      "metrics": ["Task completion rate: 70-80% (estimated)", "Opening/closing time: 30-45 minutes", "Issue detection: 2-8 weeks (during DM visits)", "Audit trail: None (paper-based)"]
+    },
+    "agentic": {
+      "workflow": "1. Opening Checklist Agent sends manager digital checklist via mobile app at scheduled opening time with GPS geofencing verification: 'Confirm you are at store location to begin checklist'. 2. Manager completes tasks with step-by-step guidance and photo requirements: 'Verify walk-in cooler temperature 35-38°F - take photo of thermometer showing temperature'. 3. Photo Verification Agent uses computer vision to validate photo: extracts temperature reading from thermometer image confirming 36°F within range, auto-completes task. 4. Agent tracks completion in real-time: alerts manager if task incomplete after 10 minutes: 'Cash drawer count pending, complete within 5 minutes to stay on schedule'. 5. Closing Checklist Agent repeats process for closing procedures with photo verification of secured cash, locked doors, alarm set. 6. Task Management System provides District Manager with real-time dashboard showing 95%+ completion across all stores vs 70-80% traditional. 7. Total time reduced to 15-20 minutes (40-50% time savings) with 95%+ completion rate and full audit trail with GPS timestamps and photos.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Opening/Closing Checklist Agent", "Photo Verification Agent"],
+        "utilityAgents": ["Mobile App API", "Photo Storage (Amazon S3)", "GPS Geofencing Service", "Task Management System API"]
+      },
+      "dataSources": [
+        "Store opening/closing time schedules",
+        "Manager shift assignments and GPS location data",
+        "Photo verification requirements for each task type",
+        "Computer vision model for thermometer and equipment image recognition",
+        "Historical task completion patterns and time-to-complete data",
+        "District Manager audit dashboards and compliance reports",
+        "Task library with step-by-step instructions and photos"
+      ],
+      "benefits": [
+        "25 point completion improvement (95% vs 70-80%) through digital tracking",
+        "40-50% time savings (15-20 min vs 30-45 min) via guided execution",
+        "GPS check-in verification ensures manager physically at store",
+        "Photo verification provides proof of completion and audit trail",
+        "Real-time visibility enables same-day issue detection vs 2-8 weeks",
+        "95%+ completion reduces compliance gaps and brand inconsistency"
+      ],
+      "metrics": ["Task completion rate: 95%+", "Opening/closing time: 15-20 minutes", "Issue detection: Same day (real-time)", "Audit trail: Complete (GPS + photos + timestamps)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile task app at pilot stores for opening/closing checklists", "Enable GPS geofencing verification for store location check-in", "Implement photo verification for top 10 critical tasks (cash, temperature, security)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Store-level Wi-Fi or cellular connectivity for mobile app", "Mobile devices for opening/closing managers (tablets or smartphones)", "Photo storage infrastructure (cloud-based, Amazon S3 or Azure Blob)", "GPS geofencing service and location permissions", "Digital checklist library (convert paper checklists to digital)", "Computer vision API for photo verification (optional Phase 2)"]
+    },
+    "icon": "clipboard-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-merchandising-planogram-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Merchandising & Planogram Compliance",
+    "description": "Computer vision planogram verification with real-time compliance scoring achieving 95%+ compliance versus 50-70% manual photo audits with quarterly checks transformed to real-time monitoring.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate merchandising team creates planogram diagrams (shelf layout for product placement) and emails PDFs to store managers quarterly. 2. Store associates manually execute planogram during overnight reset: move products, adjust shelves, install signage based on printed diagram interpretation. 3. District Manager visits store quarterly and manually audits planogram compliance: walks aisles comparing shelf layout to planogram diagram finding 30-50% discrepancies (wrong product location, missing items, incorrect facings). 4. DM takes photos of non-compliant sections, emails correction list to store manager. 5. Store manager assigns associates to fix issues over next 2-3 days (if not forgotten). 6. No verification of corrections until next quarterly DM visit. 7. Planogram compliance 50-70% with quarterly detection cycle resulting in brand inconsistency and lost sales.",
+      "constraints": [
+        "Manual planogram execution with 50-70% compliance due to interpretation errors",
+        "Quarterly DM audits detect issues 30-90 days after occurrence",
+        "Photo audits by DM subjective and time-consuming (1-2 hours per store)",
+        "Correction verification delayed until next DM visit (90-120 days later)",
+        "No real-time compliance tracking or corporate visibility",
+        "Lost sales from out-of-stock or misplaced high-margin products"
+      ],
+      "metrics": ["Planogram compliance: 50-70%", "Audit frequency: Quarterly (90-day cycles)", "DM audit time: 1-2 hours per store", "Correction verification: 90-120 days (next DM visit)"]
+    },
+    "agentic": {
+      "workflow": "1. Planogram Compliance Agent delivers digital planogram to store associates via mobile app with step-by-step instructions: 'Aisle 5 Cereal Reset - move Frosted Flakes to shelf 3 position 4, add 2 facings'. 2. Associates execute reset following mobile guidance with product images and exact placement coordinates. 3. After execution, associate takes photo of completed section using mobile app. 4. Computer Vision Agent analyzes photo against master planogram: identifies products using image recognition, measures shelf position accuracy, counts facings, validates signage placement. 5. Agent generates real-time compliance score: 'Aisle 5 compliance 92% - Frosted Flakes correct position but only 1 facing instead of 2 - corrective task created'. 6. Corrective Task Agent auto-assigns associates to fix issues within 24 hours with targeted instructions and photo re-verification. 7. Corporate dashboard shows real-time compliance by store, category, planogram achieving 95%+ compliance vs 50-70% manual with same-day detection and correction vs quarterly.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Planogram Compliance Agent", "Computer Vision Agent"],
+        "utilityAgents": ["Computer Vision API (Google Vision, AWS Rekognition)", "Planogram Database", "Task Management System", "Mobile App API"]
+      },
+      "dataSources": [
+        "Master planogram diagrams with product images and shelf coordinates",
+        "Product catalog with UPC codes and image library for CV recognition",
+        "Store associate shift schedules and task assignments",
+        "Historical compliance scores and correction time-to-complete data",
+        "Photo verification images with metadata (store, aisle, timestamp)",
+        "Computer vision model trained on product packaging recognition",
+        "Corporate compliance dashboards and merchandising KPIs"
+      ],
+      "benefits": [
+        "45 point compliance improvement (95% vs 50-70%) through real-time monitoring",
+        "Quarterly → real-time audit cycle enables same-day correction",
+        "Computer vision auto-scoring eliminates DM subjective audits (1-2 hours saved per store)",
+        "Corrective tasks auto-generated and tracked to completion",
+        "Corporate visibility into compliance by store/category in real-time",
+        "Increased sales from proper product placement and availability"
+      ],
+      "metrics": ["Planogram compliance: 95%+", "Audit frequency: Real-time (continuous)", "DM audit time: 15-30 min exception review", "Correction verification: 24 hours (auto-tracked)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile planogram app at pilot stores for digital execution guidance", "Implement photo verification for compliance audits (manual scoring initially)", "Enable computer vision for top 10 highest-sales categories"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Mobile devices for store associates with camera capability", "Computer vision API (Google Vision API, AWS Rekognition)", "Planogram database with product images and shelf coordinates", "Product catalog with UPC codes and image library", "Computer vision model training on product packaging (requires data labeling)", "Integration with task management system for corrective actions", "Store-level Wi-Fi for photo upload and real-time sync"]
+    },
+    "icon": "view-grid",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-inventory-cycle-counts-adjustments",
+    "type": "function",
+    "level": 4,
+    "label": "Inventory Cycle Counts & Adjustments",
+    "description": "RFID/barcode daily cycle counts achieving 99%+ accuracy versus 95-97% quarterly physical inventory with 2-4 weeks completion time reduced to daily perpetual inventory.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store closes for annual or quarterly physical inventory: all associates count every product in store using paper count sheets and manual tally. 2. Associates count products by walking aisles writing quantities on paper: 'Aisle 1 Shelf 2 - Tide Pods 24ct = 15 units'. 3. Counting errors frequent due to manual process: miscounts, skipped items, illegible handwriting (3-5% error rate typical). 4. Paper count sheets manually entered into inventory system over 2-4 weeks post-count. 5. Inventory variances identified comparing system quantity to physical count: $50,000-$200,000 shrink discovered but root causes unknown. 6. Inventory accuracy 95-97% after physical count then decays over next 90-365 days until next count. 7. No daily cycle counting or perpetual inventory maintenance resulting in chronic out-of-stocks and overstock.",
+      "constraints": [
+        "Annual/quarterly physical inventory requires store closure (2-8 hours lost sales)",
+        "Manual counting with 3-5% error rate (95-97% accuracy) due to human mistakes",
+        "2-4 weeks to complete count and data entry process",
+        "No root cause analysis for shrink (variance discovered but not explained)",
+        "Inventory accuracy decays between physical counts (95-97% → 85-90%)",
+        "No daily cycle counting or perpetual inventory management"
+      ],
+      "metrics": ["Inventory accuracy: 95-97% post-count, decays to 85-90%", "Count frequency: Annual or quarterly", "Count completion time: 2-4 weeks", "Store closure required: 2-8 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Cycle Count Agent automatically schedules daily cycle counts for 5-10% of inventory categories rotating through all products monthly vs annual approach. 2. Store associate receives mobile task with targeted count list: 'Count Category: Laundry Detergent - 15 SKUs in Aisle 4'. 3. Associate scans barcodes or uses RFID reader to count products: handheld scanner beeps confirming each item counted with quantity auto-recorded. 4. Inventory Adjustment Agent compares scanned count to system quantity in real-time: 'System shows 20 Tide Pods, scan counted 18 - variance detected, create adjustment'. 5. Agent analyzes variance patterns using ML: 'Tide Pods consistently short 10-15% weekly - flagged for theft investigation or receiving audit'. 6. Agent auto-adjusts inventory system via API integration maintaining 99%+ perpetual accuracy vs 85-90% decay. 7. Daily cycle counting completed in 30-60 minutes per store (no closure required) with real-time inventory sync and root cause identification.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Cycle Count Agent", "Inventory Adjustment Agent"],
+        "utilityAgents": ["RFID Readers/Barcode Scanners", "Inventory Management System API", "POS Integration", "Mobile App API"]
+      },
+      "dataSources": [
+        "Inventory master data with SKU quantities by location",
+        "Cycle count schedules and category rotation calendars",
+        "Barcode/RFID scan data with product identification and quantity",
+        "Historical variance patterns and shrink trends by category",
+        "POS transaction data for sales velocity and expected inventory levels",
+        "Store associate task completion metrics",
+        "Inventory adjustment history with root cause codes"
+      ],
+      "benefits": [
+        "4-6 point accuracy improvement (99% vs 95-97%) through daily cycle counting",
+        "Perpetual inventory accuracy maintained vs decay to 85-90%",
+        "Daily 30-60 min counts vs 2-8 hour store closure (no sales loss)",
+        "Real-time variance detection enables immediate investigation vs quarterly",
+        "RFID/barcode scanning eliminates manual counting errors",
+        "ML pattern analysis identifies shrink root causes (theft, receiving errors)"
+      ],
+      "metrics": ["Inventory accuracy: 99%+ perpetual", "Count frequency: Daily (category rotation)", "Count completion time: 30-60 min daily", "Store closure required: None"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile cycle counting app for barcode scanning at pilot stores", "Implement daily cycle counts for top 20% highest-shrink categories", "Enable real-time inventory variance alerts for immediate investigation"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Handheld barcode scanners or RFID readers for store associates", "Mobile cycle counting app with inventory system integration", "Inventory management system with API for real-time adjustments", "POS integration for sales transaction data", "RFID tags on products (optional, for advanced RFID counting)", "Cycle count schedule and category rotation calendar", "Inventory variance investigation workflows and root cause tracking"]
+    },
+    "icon": "calculator",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-price-change-execution-verification",
+    "type": "function",
+    "level": 4,
+    "label": "Price Change Execution & Verification",
+    "description": "Digital shelf labels or mobile-guided price changes achieving 95%+ same-day completion versus 60-70% manual with 85% error reduction from 2-3% to <0.5%.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate pricing team sends weekly price change file to stores: 50-200 SKUs with new prices effective next day. 2. Store manager prints price change report (multi-page spreadsheet) and assigns associates to execute. 3. Associates manually print price labels using label printer: input UPC, verify price, print label, cut from roll. 4. Associates walk aisles finding products and replacing labels: search shelf for UPC match, remove old label, apply new label. 5. Process completed over 2-3 days due to workload with 60-70% same-day completion (30-40% missed or delayed). 6. Pricing errors frequent: wrong price printed, label applied to wrong product, POS price doesn't match label (2-3% error rate). 7. Customer complaints at checkout when POS price differs from shelf label requiring manager overrides and dissatisfaction.",
+      "constraints": [
+        "60-70% same-day completion due to manual workload (30-40% delayed)",
+        "2-3% pricing error rate from manual label printing and application",
+        "Manual label printing time-consuming (print, cut, apply each label)",
+        "Product search time finding SKUs on shelf (no location guidance)",
+        "No verification process (errors discovered by customer complaints)",
+        "POS price sync issues when label changed but system not updated"
+      ],
+      "metrics": ["Same-day completion: 60-70%", "Pricing error rate: 2-3%", "Label execution time: 2-3 days", "Customer complaints: Moderate (price mismatches)"]
+    },
+    "agentic": {
+      "workflow": "1. Price Change Agent receives corporate pricing file and distributes to stores via mobile app: '75 price changes effective tomorrow - priority by highest-sales SKUs'. 2. Digital Shelf Label System auto-updates electronic shelf labels wirelessly for stores with ESL: new prices displayed instantly at midnight without manual labor (60-80% labor elimination). 3. For paper labels, Label Verification Agent provides mobile-guided execution: associate scans product barcode, app displays new price and shelf location, associate applies pre-printed label. 4. Agent verifies price change completion: compares shelf label to POS price confirming sync, flags mismatches for immediate correction. 5. Agent tracks completion in real-time: alerts manager if high-priority items incomplete 2 hours before store opening: '10 price changes pending including top-5 sales items'. 6. Mobile guidance and POS verification achieve 95%+ same-day completion vs 60-70% manual with <0.5% error rate vs 2-3%. 7. Customer satisfaction improved through accurate pricing and checkout price match eliminating manager overrides.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Price Change Agent", "Label Verification Agent"],
+        "utilityAgents": ["Electronic Shelf Label System API", "Mobile App API", "Pricing Database", "POS Integration API"]
+      },
+      "dataSources": [
+        "Corporate pricing file with SKU, old price, new price, effective date",
+        "Product catalog with UPC codes and shelf location coordinates",
+        "Electronic shelf label system for automated price display",
+        "POS system pricing data for verification and sync",
+        "Store associate task assignments and completion tracking",
+        "Historical price change execution times and error rates",
+        "Customer complaint data related to pricing discrepancies"
+      ],
+      "benefits": [
+        "25-35 point same-day completion improvement (95% vs 60-70%)",
+        "85% error rate reduction (<0.5% vs 2-3%) through automation and verification",
+        "Electronic shelf labels eliminate 60-80% of manual label printing/application labor",
+        "Mobile guidance reduces product search time with shelf location coordinates",
+        "POS price verification ensures checkout price matches shelf label",
+        "Customer satisfaction improved through accurate pricing and fewer complaints"
+      ],
+      "metrics": ["Same-day completion: 95%+", "Pricing error rate: <0.5%", "Label execution time: Same day (4-8 hours)", "Customer complaints: Minimal (price accuracy)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile price change app for guided execution with shelf locations", "Implement POS price verification to flag mismatches before customer checkout", "Pilot electronic shelf labels in highest-velocity categories (10-20%)"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Electronic shelf label system (Pricer, SES-imagotag) for automated updates (optional)", "Mobile app for guided price change execution with barcode scanning", "POS system integration for price verification and sync", "Product catalog with shelf location coordinates", "Pricing database for corporate price change distribution", "Store-level Wi-Fi or cellular connectivity for ESL and mobile app", "Label printers and supplies for non-ESL products"]
+    },
+    "icon": "tag",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-promotional-setup-takedown",
+    "type": "function",
+    "level": 4,
+    "label": "Promotional Setup & Takedown",
+    "description": "Mobile task routing with step-by-step instructions and photo verification achieving 90%+ on-time execution versus 40-60% email-based with 20-30% display errors eliminated.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate marketing emails promotional setup instructions to store managers: 'Memorial Day Sale - setup promotional displays by Friday 5/24, takedown Monday 5/27 at close'. 2. Email includes PDF planogram showing display layout, product placement, signage location. 3. Store manager prints instructions and assigns associates to execute when time allows. 4. Associates interpret planogram and build display: assemble fixtures, stock products, hang signage often with 20-30% errors (wrong product placement, missing signage, incorrect pricing). 5. Promotional execution delayed due to competing priorities: 40-60% of stores complete setup on-time, 40-60% delayed by 1-3 days or incomplete. 6. Promotional takedown often missed: displays left up past end date (1-2 weeks) causing customer confusion and margin erosion. 7. District Manager discovers non-compliance during next visit weeks later but promotion already ended.",
+      "constraints": [
+        "40-60% on-time execution due to email-based instructions and competing priorities",
+        "20-30% display errors from PDF planogram interpretation mistakes",
+        "No real-time tracking of setup completion or quality verification",
+        "Promotional takedown frequently missed (1-2 weeks past end date)",
+        "District Manager discovers issues weeks after promotion ended",
+        "Lost sales and margin from incorrect execution or delayed setup"
+      ],
+      "metrics": ["On-time execution: 40-60%", "Display error rate: 20-30%", "Takedown on-time: 50-60%", "Compliance verification: Weeks later (DM visits)"]
+    },
+    "agentic": {
+      "workflow": "1. Promotion Execution Agent delivers mobile task to store associates with step-by-step setup instructions: 'Memorial Day Sale Display - 5 steps with photos and product list'. 2. Mobile app provides guided execution: 'Step 1: Assemble 4-tier display fixture - see assembly diagram. Step 2: Stock Tier 1 with Product A (12 facings) - scan barcodes to verify correct products'. 3. Associate completes each step and takes photo for verification: uploads photo of completed display with all products and signage visible. 4. Display Verification Agent analyzes photo using computer vision: validates correct products, signage placement, pricing accuracy, display quality. 5. Agent detects issues and creates corrective tasks: 'Signage missing on Tier 3 - add promotional sign showing 25% off'. 6. Promotional calendar triggers automatic takedown task at promotion end date: 'Memorial Day Sale ended 5/27 - remove display and return products to home location by 5/28 close'. 7. Real-time dashboard shows promotional compliance by store: 90%+ on-time setup vs 40-60% with photo verification ensuring brand consistency.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Promotion Execution Agent", "Display Verification Agent"],
+        "utilityAgents": ["Task Management System API", "Photo Verification Service", "Promotional Calendar", "Mobile App API"]
+      },
+      "dataSources": [
+        "Promotional calendar with setup and takedown dates by promotion",
+        "Planogram diagrams and step-by-step assembly instructions",
+        "Product catalog with UPC codes for barcode verification",
+        "Computer vision model for display quality and product recognition",
+        "Store associate task assignments and shift schedules",
+        "Photo verification images with metadata (store, promotion, timestamp)",
+        "Corporate compliance dashboards showing promotional execution rates"
+      ],
+      "benefits": [
+        "50 point on-time improvement (90% vs 40-60%) through mobile task delivery",
+        "20-30% display error elimination via step-by-step guidance and photo verification",
+        "Promotional takedown automated with calendar triggers (50-60% → 95% on-time)",
+        "Real-time compliance visibility vs weeks-later DM discovery",
+        "Computer vision validates display quality ensuring brand consistency",
+        "Increased sales from proper promotional execution and on-time setup"
+      ],
+      "metrics": ["On-time execution: 90%+", "Display error rate: <5%", "Takedown on-time: 95%+", "Compliance verification: Real-time (photo verification)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile task app for promotional execution with step-by-step instructions", "Enable photo verification for promotional setup quality audits", "Implement promotional calendar for automated takedown task creation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Mobile app for task delivery and photo capture", "Promotional calendar system with setup/takedown dates", "Task management system integration for task creation and tracking", "Photo storage and verification service (manual review initially)", "Computer vision API for display quality validation (optional Phase 2)", "Product catalog with UPC codes for barcode verification", "Store associate mobile devices (smartphones or tablets)"]
+    },
+    "icon": "gift",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-facility-maintenance-repairs",
+    "type": "function",
+    "level": 4,
+    "label": "Facility Maintenance & Repairs",
+    "description": "Predictive maintenance with IoT sensors and mobile work orders achieving 1-3 day resolution versus 5-10 days reactive with 40-60% equipment downtime reduction.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store manager discovers equipment failure reactively: 'Walk-in cooler not maintaining temperature, food safety risk' or 'HVAC not working, store uncomfortable'. 2. Manager calls facilities hotline or emails maintenance request describing issue: 'Cooler too warm, thermometer shows 50°F instead of 35°F'. 3. Facilities coordinator manually creates paper work order and calls preferred vendor to schedule service. 4. Vendor schedules technician visit 5-10 days later depending on availability and urgency assessment. 5. Technician diagnoses issue and orders parts if needed adding 3-7 more days delay. 6. Total resolution time 5-10 days (or longer) resulting in lost sales (spoiled food), customer dissatisfaction (uncomfortable store), equipment downtime costs. 7. No preventive maintenance performed until failure occurs (reactive-only approach).",
+      "constraints": [
+        "Reactive maintenance only after equipment failure (no prevention)",
+        "5-10 day resolution time from failure to fix due to manual processes",
+        "Paper work orders and phone calls slow vendor dispatch",
+        "No equipment health monitoring or predictive failure alerts",
+        "Lost sales and customer satisfaction from equipment downtime",
+        "No maintenance history tracking or vendor performance metrics"
+      ],
+      "metrics": ["Resolution time: 5-10 days", "Maintenance approach: Reactive (after failure)", "Equipment downtime: High (5-10 days per incident)", "Lost sales: Significant (spoiled food, store closures)"]
+    },
+    "agentic": {
+      "workflow": "1. Facility Maintenance Agent monitors IoT sensors on critical equipment: walk-in cooler temperature sensor detects rising temperature trend 45°F climbing toward 50°F over 24 hours. 2. Agent generates predictive maintenance alert: 'Walk-in cooler compressor showing early failure signs - schedule preventive maintenance within 48 hours before critical failure'. 3. Agent creates mobile work order with equipment details, sensor data, maintenance history: 'Cooler ID #1234 - compressor issue likely, last serviced 6 months ago'. 4. Vendor Dispatch Agent auto-routes work order to preferred vendor with API integration: sends vendor work order, equipment location, access instructions, sensor diagnostics. 5. Vendor schedules technician visit within 1-3 days and arrives with likely needed parts (compressor) based on sensor diagnostics. 6. Mobile app guides technician through repair with equipment manual, warranty info, parts inventory: technician replaces compressor, updates work order status to complete. 7. 70-80% faster resolution (1-3 days vs 5-10 days) with 40-60% downtime reduction through predictive maintenance preventing critical failures.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Facility Maintenance Agent", "Vendor Dispatch Agent"],
+        "utilityAgents": ["IoT Sensors (HVAC, Refrigeration, Lighting)", "CMMS API (Computerized Maintenance Management System)", "Vendor Portal Integration", "Mobile Work Order App"]
+      },
+      "dataSources": [
+        "IoT sensor data from equipment (temperature, vibration, power consumption)",
+        "Equipment maintenance history and service records",
+        "Vendor directory with contact info, service areas, response times",
+        "Facility calendar showing store hours and access windows",
+        "Parts inventory and warranty information for equipment",
+        "Predictive failure models trained on sensor data patterns",
+        "Work order completion metrics and vendor performance data"
+      ],
+      "benefits": [
+        "70-80% resolution time reduction (1-3 days vs 5-10 days)",
+        "40-60% equipment downtime reduction through predictive maintenance",
+        "Predictive alerts prevent critical failures (cooler breakdown, HVAC outage)",
+        "Auto-vendor dispatch eliminates manual phone calls and scheduling delays",
+        "Mobile work orders provide technicians with equipment history and diagnostics",
+        "Lost sales and customer satisfaction protected through uptime improvement"
+      ],
+      "metrics": ["Resolution time: 1-3 days", "Maintenance approach: Predictive (before failure)", "Equipment downtime: Low (40-60% reduction)", "Lost sales: Minimized (preventive maintenance)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy IoT sensors on critical equipment (walk-in coolers, HVAC) at pilot stores", "Implement mobile work order app for technicians with equipment access and history", "Enable vendor portal integration for auto-dispatch and scheduling"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["IoT sensors for equipment monitoring (temperature, vibration, power)", "CMMS platform (ServiceChannel, FMX, UpKeep) with API access", "Vendor portal integration for work order dispatch and scheduling", "Mobile work order app for store managers and technicians", "Equipment inventory with maintenance history and warranty info", "Predictive maintenance models for failure pattern detection", "Store-level internet connectivity for IoT sensor data transmission"]
+    },
+    "icon": "wrench",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-store-communications-announcements",
+    "type": "function",
+    "level": 4,
+    "label": "Store Communications & Announcements",
+    "description": "Targeted mobile push notifications with mandatory acknowledgment achieving 85-95% read rates versus 30-50% email-based bulletin boards with no tracking.",
+    "parentCapability": "capability-store-task-management",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "store",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Corporate communications sends mass email to all store managers: 'New return policy effective 6/1 - no returns on clearance items, see attached 5-page policy document'. 2. Store manager receives email among 50+ daily emails, may or may not read (30-50% open rate for managers). 3. Manager prints email and posts on employee bulletin board in back room (if remembered). 4. Store associates may or may not see bulletin board posting (10-30% awareness estimated). 5. Associates apply old policy at POS causing customer dissatisfaction: 'Customer wants to return clearance item, associate accepts return violating new policy'. 6. District Manager discovers non-compliance during store visit weeks later: '5 stores in district not following new return policy, store managers claim they never received communication'. 7. No read receipts or acknowledgment tracking resulting in 30-50% manager awareness and 10-30% associate awareness.",
+      "constraints": [
+        "30-50% email open rate for store managers (50-70% never read)",
+        "Bulletin board posting results in 10-30% associate awareness (most never see)",
+        "No read receipts or acknowledgment tracking (can't verify awareness)",
+        "Information overload: 20-50 corporate emails per day per store",
+        "Non-compliance discovered weeks later during DM visits",
+        "No targeted delivery (all stores receive all messages regardless of relevance)"
+      ],
+      "metrics": ["Manager read rate: 30-50%", "Associate awareness: 10-30%", "Acknowledgment tracking: None", "Non-compliance detection: 2-8 weeks (DM visits)"]
+    },
+    "agentic": {
+      "workflow": "1. Communication Agent receives corporate announcement with targeting rules: 'New return policy applies to all stores with electronics department (800 stores), requires manager and cashier acknowledgment'. 2. Agent delivers targeted mobile push notification to relevant store managers and cashiers: 'New Return Policy Effective 6/1 - Tap to read and acknowledge (required)'. 3. Mobile app displays concise policy summary with key points: 'No returns on clearance items, see video tutorial and quiz'. 4. Acknowledgment Tracking Agent requires mandatory confirmation: employees must read policy, watch 2-minute video, pass 3-question quiz before acknowledgment accepted. 5. Agent tracks read rates and acknowledgment in real-time: corporate dashboard shows 85-95% manager read rate, 85-95% associate acknowledgment within 48 hours. 6. Agent sends escalation reminders for non-acknowledgment: 'You have not acknowledged new return policy - required by 5/30 or shift blocked'. 7. 35-65 point read rate improvement (85-95% vs 30-50% managers, 85-95% vs 10-30% associates) with full audit trail ensuring compliance.",
+      "agents": {
+        "orchestrator": "Store Task Orchestration Agent",
+        "superAgents": ["Communication Agent", "Acknowledgment Tracking Agent"],
+        "utilityAgents": ["Mobile Push Notification API", "Employee Mobile App", "Communication Platform (Workplace, Teams)", "Analytics Dashboard"]
+      },
+      "dataSources": [
+        "Corporate communication messages with targeting rules and priority",
+        "Store employee roster with roles, locations, departments",
+        "Mobile push notification delivery and read receipt data",
+        "Acknowledgment tracking with timestamps and quiz results",
+        "Historical communication engagement metrics by message type",
+        "Escalation rules for non-acknowledgment reminders",
+        "Corporate analytics dashboards showing read rates by store/role"
+      ],
+      "benefits": [
+        "35-65 point manager read rate improvement (85-95% vs 30-50%)",
+        "75-85 point associate awareness improvement (85-95% vs 10-30%)",
+        "Mandatory acknowledgment ensures compliance verification vs no tracking",
+        "Targeted delivery reduces information overload (relevant messages only)",
+        "Real-time analytics enable same-day escalation vs 2-8 week detection",
+        "Mobile push notifications bypass email clutter and bulletin board reliance"
+      ],
+      "metrics": ["Manager read rate: 85-95%", "Associate awareness: 85-95%", "Acknowledgment tracking: 100% (mandatory)", "Non-compliance detection: Real-time (same day)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy employee mobile app with push notification capability at pilot stores", "Implement mandatory acknowledgment for top 10 critical communications (policies, safety)", "Enable read receipt tracking and corporate analytics dashboards"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Employee mobile app platform (Workplace, Teams, Beekeeper)", "Mobile push notification service for real-time delivery", "Employee roster with roles, departments, store locations for targeting", "Communication platform integration for message creation and targeting", "Analytics dashboard for read rate and acknowledgment tracking", "Mobile device access for all associates (BYOD or store-provided)", "Escalation rules and workflows for non-acknowledgment reminders"]
+    },
+    "icon": "speakerphone",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

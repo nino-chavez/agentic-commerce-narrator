@@ -1,0 +1,257 @@
+[
+  {
+    "id": "persona-cio",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Chief Information Officer (CIO)",
+    "label": "Chief Information Officer (CIO)",
+    "description": "Leads enterprise IT strategy, infrastructure, security, and digital transformation initiatives, responsible for technology platforms, cybersecurity, IT operations, and aligning technology with business objectives.",
+    "responsibilities": [
+      "Set IT strategy and technology roadmap",
+      "Oversee IT operations, infrastructure, and security",
+      "Manage IT budget and vendor relationships",
+      "Drive digital transformation initiatives",
+      "Ensure business continuity and disaster recovery",
+      "Report to board on technology risks and opportunities"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "React to outages after they impact customers (no predictive capability)",
+      "Monthly IT performance reviews with delayed metrics",
+      "Quarterly security posture assessments",
+      "Annual technology strategy planning (3-6 months process)",
+      "IT spend tracked reactively (budget overruns common)"
+    ],
+    "agenticWorkflow": [
+      "Real-time IT health dashboards predict issues before customer impact",
+      "Weekly automated performance reports with trend analysis",
+      "Continuous security monitoring with real-time risk scoring",
+      "Rolling technology roadmaps updated monthly with AI insights",
+      "Real-time IT spend visibility with predictive budget forecasting"
+    ],
+    "painPointsAddressed": [
+      "Uptime improved to 99.9%+ (predictive maintenance)",
+      "MTTR reduced 85% (10-30 min vs 2-8 hours)",
+      "Security breach detection 95% faster (1-7 days vs 200+ days)",
+      "IT staff productivity increased 40-300%"
+    ],
+    "kpis": [
+      "Infrastructure Uptime",
+      "Mean Time to Resolution (MTTR)",
+      "Security Breach Detection Time",
+      "IT Budget Variance",
+      "Project Delivery On-Time %",
+      "Employee IT Satisfaction (CSAT)"
+    ],
+    "icon": "chip",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-it-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "IT Operations Manager",
+    "label": "IT Operations Manager",
+    "description": "Manages day-to-day IT infrastructure operations including monitoring, incident response, problem management, and ensuring service availability and performance.",
+    "responsibilities": [
+      "Oversee IT infrastructure monitoring and alerting",
+      "Manage incident response and war rooms",
+      "Ensure SLA compliance for IT services",
+      "Coordinate with DevOps and SRE teams",
+      "Implement automation and self-healing capabilities",
+      "Drive continuous improvement in operational efficiency"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Respond to alert storms during outages (chaotic war rooms)",
+      "Manually correlate alerts to identify root cause",
+      "Review MTTR and MTTD metrics weekly (lagging indicators)",
+      "Approve runbook executions manually (bottleneck)",
+      "Conduct post-incident reviews days after incidents"
+    ],
+    "agenticWorkflow": [
+      "AI correlates alerts automatically, creates single incident",
+      "Root cause analysis provided by ML in minutes",
+      "Real-time MTTR and MTTD dashboards with predictive trends",
+      "Auto-remediation executes runbooks with 60-80% success rate",
+      "Post-incident reports auto-generated immediately"
+    ],
+    "painPointsAddressed": [
+      "Alert noise reduced 90% (actionable alerts only)",
+      "MTTR reduced to 10-30 min (vs 2-8 hours)",
+      "Auto-remediation handles 60-80% of incidents",
+      "Incidents predicted and prevented 30-50%"
+    ],
+    "kpis": [
+      "Mean Time to Detect (MTTD)",
+      "Mean Time to Resolution (MTTR)",
+      "Alert Noise Reduction",
+      "Auto-Remediation Rate",
+      "Incident Recurrence Rate",
+      "Infrastructure Uptime %"
+    ],
+    "icon": "server",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-security-operations-lead",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Security Operations Lead (SOC Manager)",
+    "label": "Security Operations Lead",
+    "description": "Leads security operations center (SOC) managing threat detection, incident response, vulnerability management, and security monitoring to protect enterprise assets.",
+    "responsibilities": [
+      "Manage SOC analysts and security monitoring",
+      "Oversee threat detection and incident response",
+      "Coordinate vulnerability management program",
+      "Implement security automation (SOAR)",
+      "Conduct threat hunting and forensics",
+      "Report security posture to CISO and leadership"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Review 5,000-50,000 security alerts per day manually",
+      "Spend 10-40 hours per investigation searching video footage",
+      "Reactive threat response (discover breaches 200+ days later)",
+      "Monthly vulnerability scans (findings outdated by remediation)",
+      "Annual phishing simulations (if at all)"
+    ],
+    "agenticWorkflow": [
+      "AI filters to 500 actionable alerts (90% noise reduction)",
+      "Automated investigation provides evidence in minutes",
+      "Proactive threat hunting detects breaches in 1-7 days",
+      "Continuous vulnerability scanning with auto-patching",
+      "Ongoing phishing simulations with targeted micro-training"
+    ],
+    "painPointsAddressed": [
+      "MTTD reduced to 1-7 days (vs 200+ days, -95%)",
+      "MTTR reduced to 10 min - 4 hours (vs 3-30 days)",
+      "Vulnerability remediation in 7-14 days (vs 60-90 days)",
+      "Analyst productivity increased 300%"
+    ],
+    "kpis": [
+      "Mean Time to Detect Breach",
+      "Mean Time to Respond to Incident",
+      "Security Alert False Positive Rate",
+      "Incident Auto-Remediation Rate",
+      "Vulnerability Remediation Time",
+      "Phishing Click Rate"
+    ],
+    "icon": "shield-exclamation",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-it-service-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "IT Service Manager",
+    "label": "IT Service Manager",
+    "description": "Manages IT service delivery including service desk operations, ticket management, SLA compliance, and continuous service improvement.",
+    "responsibilities": [
+      "Oversee service desk operations and technician teams",
+      "Ensure SLA compliance and customer satisfaction",
+      "Manage ITSM platform and automation",
+      "Drive continuous improvement through problem management",
+      "Coordinate knowledge management and self-service",
+      "Report service metrics to IT leadership"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Monitor ticket backlog of 500-2,000 open tickets",
+      "Review service desk metrics weekly (lagging indicators)",
+      "Manually route escalated tickets (60-70% escalation rate)",
+      "Update knowledge base sporadically (tribal knowledge issue)",
+      "Investigate SLA breaches after they occur"
+    ],
+    "agenticWorkflow": [
+      "Real-time ticket dashboard with automated routing",
+      "Daily automated service metrics with trend predictions",
+      "AI chatbot resolves 40-60% of requests (no escalation)",
+      "Knowledge articles auto-generated from solved tickets",
+      "SLA monitoring with proactive alerts before breach"
+    ],
+    "painPointsAddressed": [
+      "First contact resolution improved to 70-80% (vs 30-40%)",
+      "Ticket backlog reduced 70% through automation",
+      "SLA compliance improved to 95%+ (vs 70-80%)",
+      "Employee satisfaction increased to 4.5+ / 5.0"
+    ],
+    "kpis": [
+      "First Contact Resolution Rate",
+      "Average Handle Time",
+      "Ticket Backlog",
+      "SLA Compliance %",
+      "Employee Satisfaction (CSAT)",
+      "Chatbot Resolution Rate"
+    ],
+    "icon": "support",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-it-asset-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "IT Asset Manager",
+    "label": "IT Asset Manager",
+    "description": "Manages IT asset lifecycle from procurement through retirement, ensuring inventory accuracy, license compliance, cost optimization, and audit readiness.",
+    "responsibilities": [
+      "Maintain accurate inventory of all IT assets",
+      "Ensure software license compliance",
+      "Manage asset procurement and provisioning",
+      "Track asset lifecycle (warranties, end-of-life)",
+      "Optimize software license spend",
+      "Prepare for IT asset audits"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Update asset spreadsheet manually (always outdated)",
+      "Conduct annual license audit (discover compliance gaps)",
+      "Process laptop procurement requests in 1-3 weeks",
+      "Track warranty expirations in calendar reminders",
+      "Discover shadow IT during vendor audits (100-500 apps)"
+    ],
+    "agenticWorkflow": [
+      "Automated asset discovery maintains 95%+ accuracy",
+      "Continuous license monitoring ensures 99% compliance",
+      "Auto-approve laptop requests, provision in 1-3 days",
+      "Warranty tracking with automated renewal recommendations",
+      "Shadow IT discovered continuously via SSO log analysis"
+    ],
+    "painPointsAddressed": [
+      "Inventory accuracy improved to 95%+ (vs 50-70%)",
+      "License compliance improved to 99% (vs 60-80%)",
+      "Provisioning time reduced to 1-3 days (vs 1-3 weeks)",
+      "License savings of 20-40% through optimization"
+    ],
+    "kpis": [
+      "Asset Inventory Accuracy",
+      "License Compliance Rate",
+      "Time to Provision New Asset",
+      "Software License Waste %",
+      "Shadow IT App Count",
+      "Audit Preparation Time"
+    ],
+    "icon": "desktop-computer",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

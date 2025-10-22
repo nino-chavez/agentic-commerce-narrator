@@ -1,0 +1,392 @@
+[
+  {
+    "id": "function-multi-platform-order-aggregation",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Platform Order Aggregation (DoorDash, Uber Eats)",
+    "description": "Unified order management consolidating DoorDash, Uber Eats, and Grubhub into single kitchen workflow reducing errors by 70-85% and improving efficiency 40-60% through centralized orchestration.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Three separate tablets ring simultaneously: DoorDash, Uber Eats, Grubhub. 2. Staff must monitor all tablets and manually accept orders. 3. Orders manually re-entered into POS or kitchen system. 4. No unified queue - staff prioritizes based on which tablet they notice first. 5. 12-18% order errors from manual re-entry.",
+      "constraints": [
+        "3+ tablets creates chaos and missed orders",
+        "12-18% errors from manual re-entry",
+        "No unified prioritization (FIFO across platforms impossible)",
+        "Staff overwhelmed monitoring multiple tablets",
+        "Orders missed when tablet notification not heard",
+        "Kitchen sees fragmented view not unified queue"
+      ],
+      "metrics": ["Manual re-entry: 100%", "Order errors: 12-18%", "Platform integration: None"]
+    },
+    "agentic": {
+      "workflow": "1. Order Aggregation Agent automatically receives orders from all platforms via API integration. 2. Unified Queue consolidates orders into single KDS stream with platform identifier. 3. Auto-Accept accepts orders within SLA (no manual tablet monitoring). 4. Priority Engine sequences orders by promise time and prep complexity. 5. Single Workflow eliminates re-entry: orders flow directly to kitchen stations with all customizations.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Order Aggregation Agent", "Unified Queue", "Auto-Accept", "Priority Engine"],
+        "utilityAgents": ["DoorDash API", "Uber Eats API", "Grubhub API", "KDS Integration"]
+      },
+      "dataSources": [
+        "DoorDash order stream via API",
+        "Uber Eats order stream via API",
+        "Grubhub order stream via API",
+        "Platform SLA requirements (accept within X minutes)",
+        "Order promise times and pickup deadlines",
+        "Kitchen capacity and current queue",
+        "Item customizations and special instructions",
+        "Platform-specific packaging requirements"
+      ],
+      "benefits": [
+        "70-85% error reduction (<2% vs 12-18%)",
+        "40-60% efficiency improvement (no tablet monitoring, no re-entry)",
+        "Unified queue enables proper FIFO sequencing",
+        "Auto-accept ensures no missed orders",
+        "Staff focus on cooking not order management",
+        "Single KDS view for all delivery orders"
+      ],
+      "metrics": ["Manual re-entry: 0%", "Order errors: <2%", "Platform integration: API unified"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement API integration for top 2 platforms", "Consolidate orders into single KDS view"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Delivery aggregation platform or middleware", "API contracts with delivery partners", "KDS integration", "POS integration"]
+    },
+    "icon": "collection",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-menu-synchronization-across-platforms",
+    "type": "function",
+    "level": 4,
+    "label": "Menu Synchronization Across Platforms",
+    "description": "Real-time menu updates pushed to all delivery platforms simultaneously reducing out-of-stock frustration by 90-95% and enabling instant menu changes across ecosystem.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Chicken nuggets sell out at 6pm. 2. Staff must manually update DoorDash tablet, then Uber Eats tablet, then Grubhub tablet (8-15 min process). 3. Orders continue coming in during update lag. 4. Customer receives 'Item unavailable' notification after ordering (poor experience). 5. Price changes require manual update to 3+ platforms (forgotten or inconsistent).",
+      "constraints": [
+        "8-15 min lag to update all platforms manually",
+        "Orders placed for unavailable items during lag",
+        "Price inconsistencies across platforms",
+        "Promotions can't run simultaneously across platforms",
+        "New menu rollouts require 3x effort",
+        "30-40% of out-of-stock notifications preventable with real-time updates"
+      ],
+      "metrics": ["Update time: 8-15 min", "Out-of-stock orders: 30-40%", "Menu consistency: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Menu Management Agent maintains single source of truth for menu: items, prices, descriptions, availability. 2. Real-Time Sync pushes updates to all platforms via API within 30 seconds: '86 chicken nuggets' → all platforms updated instantly. 3. Availability Automation integrates with POS inventory: when last nugget sold, auto-86 across platforms. 4. Pricing Consistency ensures promotional pricing synchronized across all channels. 5. New Item Rollout publishes to all platforms with single click.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Menu Management Agent", "Real-Time Sync", "Availability Automation", "Pricing Consistency"],
+        "utilityAgents": ["Menu Database", "Platform APIs", "POS Integration", "Inventory System"]
+      },
+      "dataSources": [
+        "Master menu database (items, prices, descriptions)",
+        "Real-time inventory levels by item",
+        "Platform-specific menu requirements and formats",
+        "Promotional calendar and pricing rules",
+        "Item availability status (86'd items)",
+        "New menu item launch schedules",
+        "Platform menu update APIs",
+        "Multi-location menu variations"
+      ],
+      "benefits": [
+        "90-95% reduction in out-of-stock order frustration",
+        "30-second updates vs 8-15 min manual process",
+        "100% menu consistency across all platforms",
+        "Automated inventory sync eliminates manual updates",
+        "Instant promotional launch across ecosystem",
+        "Single-click new item rollout"
+      ],
+      "metrics": ["Update time: 30 sec", "Out-of-stock orders: 2-5%", "Menu consistency: 100%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement centralized menu management system", "Enable one-click 86 across all platforms"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Menu management platform", "Delivery platform API integrations", "POS inventory integration", "Master menu database"]
+    },
+    "icon": "document-duplicate",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-delivery-partner-performance-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Delivery Partner Performance Tracking",
+    "description": "Real-time courier performance monitoring with automated escalation reducing late deliveries by 40-60% and improving customer satisfaction through proactive issue resolution.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer complains food arrived cold and 45 minutes late. 2. Restaurant has no visibility into what happened during delivery. 3. Restaurant can't identify if courier, traffic, or other issue. 4. No way to rate or track individual courier performance. 5. Same courier assigned to future orders despite poor performance.",
+      "constraints": [
+        "Zero visibility into delivery journey after pickup",
+        "Can't identify root cause of delivery issues",
+        "No courier performance tracking or ratings",
+        "Restaurant blamed for platform's delivery failures",
+        "20-30% of deliveries late (>20 min past promise)",
+        "No escalation path for problem orders"
+      ],
+      "metrics": ["Late deliveries: 20-30%", "Delivery visibility: None", "Performance tracking: None"]
+    },
+    "agentic": {
+      "workflow": "1. Tracking Agent monitors delivery in real-time: courier assignment, pickup time, GPS location, estimated delivery time. 2. Performance Metrics tracks each courier: on-time rate, customer ratings, average delivery time. 3. Delay Detection alerts when courier off-route or delayed: 'Courier has been stationary 15 min, order at risk'. 4. Auto-Escalation triggers support contact to customer: 'We see your order is delayed, investigating now'. 5. Courier Rating enables restaurant to flag poor performers for platform review.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Tracking Agent", "Performance Metrics", "Delay Detection", "Auto-Escalation", "Courier Rating"],
+        "utilityAgents": ["Platform APIs", "GPS Tracking", "Customer Communication", "Analytics Dashboard"]
+      },
+      "dataSources": [
+        "Real-time courier GPS location",
+        "Pickup and delivery timestamps",
+        "Estimated vs actual delivery times",
+        "Courier ID and assignment history",
+        "Customer delivery ratings and feedback",
+        "Route optimization and traffic data",
+        "Order temperature/quality issues",
+        "Platform courier performance metrics"
+      ],
+      "benefits": [
+        "40-60% late delivery reduction through monitoring and escalation",
+        "Real-time visibility prevents customer surprises",
+        "Courier performance tracking improves quality",
+        "Proactive communication when issues detected",
+        "Data to advocate with platforms for courier accountability",
+        "Higher customer satisfaction and retention"
+      ],
+      "metrics": ["Late deliveries: 8-15%", "Delivery visibility: Real-time GPS", "Performance tracking: Comprehensive"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement delivery tracking dashboard for staff", "Enable automated customer alerts for delays"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Delivery platform API access for tracking", "GPS data integration", "Customer communication platform", "Analytics and reporting"]
+    },
+    "icon": "truck",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-commission-fee-management",
+    "type": "function",
+    "level": 4,
+    "label": "Commission & Fee Management",
+    "description": "Automated commission tracking and reconciliation with 99%+ accuracy reducing accounting overhead by 60-80% and identifying $2K-$5K monthly overcharges through intelligent auditing.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Accountant manually downloads invoices from DoorDash, Uber Eats, Grubhub portals. 2. Accountant spot-checks calculations in Excel (checking 5-10% of line items). 3. Invoices paid without comprehensive verification. 4. Errors discovered months later if at all. 5. $2K-$8K in overcharges go undetected annually per location.",
+      "constraints": [
+        "Manual invoice download and reconciliation (8-12 hours/month)",
+        "Spot-checking misses 90-95% of errors",
+        "No systematic commission rate verification",
+        "Overcharges discovered too late for recovery",
+        "$2K-$8K annual leakage per location",
+        "Multi-location franchises can't scale manual process"
+      ],
+      "metrics": ["Reconciliation time: 8-12 hrs/mo", "Error detection: 5-10%", "Overcharge recovery: <30%"]
+    },
+    "agentic": {
+      "workflow": "1. Commission Tracking Agent auto-captures all order data: order value, fees, commission rates, promotional adjustments. 2. Reconciliation Engine compares platform invoices to actual orders line-by-line: '$347.82 DoorDash invoice vs $342.15 calculated (overcharge detected)'. 3. Discrepancy Alert flags errors: 'Uber Eats charged 28% commission instead of contracted 25% on 14 orders'. 4. Automated Dispute generates claim with supporting data for platform review. 5. Performance Dashboard shows commission trends and optimization opportunities.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Commission Tracking Agent", "Reconciliation Engine", "Discrepancy Alert", "Automated Dispute"],
+        "utilityAgents": ["Order Data Aggregation", "Invoice Parser", "Analytics Platform", "Dispute Management"]
+      },
+      "dataSources": [
+        "All order details (item prices, fees, commissions)",
+        "Platform invoices and statements",
+        "Contracted commission rates by platform",
+        "Promotional terms and fee waivers",
+        "Payment deposits and transaction history",
+        "Adjustment and credit records",
+        "Multi-location aggregated data",
+        "Historical dispute outcomes"
+      ],
+      "benefits": [
+        "60-80% accounting overhead reduction (2-3 hrs vs 8-12 hrs)",
+        "99%+ error detection vs 5-10% spot-checking",
+        "$2K-$5K monthly overcharge recovery per location",
+        "Automated dispute generation with evidence",
+        "Real-time commission tracking not monthly retrospective",
+        "Scalable to hundreds of locations"
+      ],
+      "metrics": ["Reconciliation time: 2-3 hrs/mo", "Error detection: 99%+", "Overcharge recovery: 80-95%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated invoice reconciliation for top platform", "Set up overcharge alerts for commission rate discrepancies"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Order data aggregation", "Platform invoice access via API or file", "Reconciliation logic and rules engine", "Dispute management workflow"]
+    },
+    "icon": "currency-dollar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-virtual-brand-management",
+    "type": "function",
+    "level": 4,
+    "label": "Virtual Brand Management (Ghost Kitchens)",
+    "description": "Multi-brand operation from single kitchen with separate digital storefronts enabling 30-50% revenue increase through delivery-only brands with minimal incremental cost.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Restaurant operates single brand (e.g., burger concept). 2. Kitchen capacity underutilized during off-peak (40-60% idle capacity). 3. Limited menu appeal (burger fans only). 4. Revenue capped by single brand's market share. 5. No way to test new concepts without opening new physical location.",
+      "constraints": [
+        "Single brand limits addressable market",
+        "40-60% kitchen idle capacity during off-peak",
+        "Can't test new concepts without capital investment",
+        "Competition for same customer segment",
+        "No portfolio diversification (all eggs in one basket)",
+        "Menu innovation limited by brand identity"
+      ],
+      "metrics": ["Brands operated: 1", "Kitchen utilization: 40-60%", "Incremental revenue: $0"]
+    },
+    "agentic": {
+      "workflow": "1. Virtual Brand Platform enables multiple delivery-only concepts: main burger brand + virtual wing brand + virtual salad brand. 2. Shared Kitchen uses same equipment, staff, and ingredients across brands. 3. Separate Storefronts on delivery apps: customers see 3 different restaurant brands. 4. Unified Operations routes all orders to same kitchen with brand identifier. 5. Performance Analytics tracks each brand's P&L, enables portfolio optimization: shut down underperformers, double down on winners.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Virtual Brand Platform", "Shared Kitchen", "Separate Storefronts", "Unified Operations", "Performance Analytics"],
+        "utilityAgents": ["Multi-Brand Menu Management", "Brand Asset Library", "KDS Integration", "Analytics Dashboard"]
+      },
+      "dataSources": [
+        "Primary brand menu and recipes",
+        "Virtual brand menus and positioning",
+        "Shared ingredient inventory",
+        "Kitchen equipment capabilities",
+        "Order volume by brand and daypart",
+        "Revenue and profitability by brand",
+        "Customer demographics and preferences",
+        "Competitive landscape by cuisine type"
+      ],
+      "benefits": [
+        "30-50% revenue increase from virtual brands",
+        "Leverage existing kitchen capacity (minimal incremental cost)",
+        "3-5 brands operated vs 1 traditional",
+        "Diversified revenue across customer segments",
+        "Low-risk concept testing (no capital required)",
+        "Portfolio optimization based on performance data"
+      ],
+      "metrics": ["Brands operated: 3-5", "Kitchen utilization: 80-95%", "Incremental revenue: +30-50%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch 1 virtual brand using existing ingredients (wings or salads)", "Test on DoorDash for 90 days before expanding"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Delivery platform partnerships", "Menu development for virtual brands", "Brand identity and assets", "Kitchen capacity analysis"]
+    },
+    "icon": "view-grid",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-delivery-optimized-menu-packaging",
+    "type": "function",
+    "level": 4,
+    "label": "Delivery-Optimized Menu & Packaging",
+    "description": "Menu engineering for delivery channel with specialized packaging reducing quality complaints by 50-70% and increasing repeat order rate 25-40% through superior delivery experience.",
+    "parentCapability": "capability-qsr-delivery-aggregator-management",
+    "applicableIndustries": ["QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Same menu offered for dine-in, drive-thru, and delivery. 2. Fries packed in standard container arrive soggy after 20-min delivery. 3. Burgers slide apart in transit, arrive messy. 4. Milkshakes melt, salads wilt, hot food arrives lukewarm. 5. 25-35% of delivery customers complain about food quality.",
+      "constraints": [
+        "Dine-in menu not optimized for 20-30 min transit time",
+        "Standard packaging inadequate for delivery",
+        "25-35% quality complaints on delivery orders",
+        "Repeat order rate 40-60% lower than dine-in",
+        "Items removed from delivery menu due to quality issues",
+        "Temperature, texture, presentation degraded"
+      ],
+      "metrics": ["Quality complaints: 25-35%", "Menu optimization: None", "Repeat rate: 40-60% of dine-in"]
+    },
+    "agentic": {
+      "workflow": "1. Menu Engineering Agent curates delivery-optimized menu: remove items that don't travel well (ice cream, delicate salads), feature items that hold heat/texture. 2. Specialized Packaging uses vented containers for fries (prevent sogginess), burger locks, insulated bags, separate hot/cold compartments. 3. Portion Adjustment optimizes serving size: slightly larger portions compensate for perceived value loss during delivery. 4. Assembly Modifications alters prep for delivery: sauces packaged separately, burgers wrapped tighter. 5. Quality Testing validates each item survives 30-min transit with acceptable quality.",
+      "agents": {
+        "orchestrator": "QSR Delivery Aggregator Orchestration Agent",
+        "superAgents": ["Menu Engineering Agent", "Specialized Packaging", "Portion Adjustment", "Assembly Modifications", "Quality Testing"],
+        "utilityAgents": ["Menu Management", "Packaging Supplier", "Kitchen Workflow", "Customer Feedback"]
+      },
+      "dataSources": [
+        "Full menu item catalog",
+        "Customer quality ratings by item (delivery)",
+        "Travel time and distance data",
+        "Packaging performance tests",
+        "Temperature retention studies",
+        "Competitor delivery menu analysis",
+        "Item profitability by channel",
+        "Repeat order patterns"
+      ],
+      "benefits": [
+        "50-70% reduction in quality complaints",
+        "25-40% increase in delivery repeat order rate",
+        "Delivery menu tailored for travel vs dine-in",
+        "Specialized packaging preserves quality",
+        "Higher customer satisfaction and ratings",
+        "Competitive advantage in delivery channel"
+      ],
+      "metrics": ["Quality complaints: 8-12%", "Menu optimization: Delivery-specific", "Repeat rate: 85-95% of dine-in"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Switch to vented fry containers to reduce sogginess", "Package sauces separately to prevent burger sogginess"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Delivery menu analysis and testing", "Specialized packaging sourcing", "Kitchen workflow modifications", "Quality testing protocol"]
+    },
+    "icon": "cube",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

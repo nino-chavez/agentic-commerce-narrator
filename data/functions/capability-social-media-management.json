@@ -1,0 +1,449 @@
+[
+  {
+    "id": "function-multi-platform-social-publishing",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Platform Social Publishing",
+    "description": "AI-assisted content creation and scheduling across social platforms with platform-specific optimization reducing publishing time by 60-80%.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Social media manager manually creates posts for each platform (Facebook, Instagram, Twitter, TikTok). 2. Manually resize images and videos for each platform's specifications. 3. Log into each platform separately to schedule posts. 4. Copy/paste same content across platforms (not optimized per platform). 5. Process takes 3-5 hours to publish across 4-5 platforms.",
+      "constraints": [
+        "Manual platform-by-platform publishing takes 3-5 hours",
+        "Same content on all platforms (not optimized for platform culture)",
+        "Manual image resizing error-prone (wrong dimensions, cropped faces)",
+        "Logging into multiple platforms daily time-consuming",
+        "Can't maintain consistent posting frequency (limited by manual bandwidth)",
+        "No centralized content calendar across platforms"
+      ],
+      "metrics": ["Publishing time: 3-5 hrs/post", "Platform optimization: None", "Post frequency: Limited by manual effort"]
+    },
+    "agentic": {
+      "workflow": "1. Content Creation Agent adapts messaging for each platform: Twitter → concise witty copy, Instagram → visual storytelling, LinkedIn → professional insights, TikTok → trend-aligned short video. 2. Asset Optimization Agent auto-resizes images/videos to platform specifications. 3. Publishing Orchestration Agent schedules to all platforms from single interface. 4. Optimal Timing Agent recommends best post times per platform based on audience engagement patterns. 5. Hashtag Optimization Agent suggests relevant trending hashtags per platform.",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Content Creation Agent", "Asset Optimization Agent", "Publishing Orchestration Agent"],
+        "utilityAgents": ["Social Media Management Platform", "Image Processing", "Generative AI", "Analytics APIs"]
+      },
+      "dataSources": [
+        "Social media content calendar",
+        "Platform-specific engagement data",
+        "Trending topics and hashtags by platform",
+        "Brand social media guidelines",
+        "Audience demographics and behavior by platform",
+        "Historical post performance"
+      ],
+      "benefits": [
+        "60-80% reduction in publishing time (3-5 hrs to 30-60 min)",
+        "Platform-optimized content vs generic copy/paste",
+        "3-5x posting frequency enabled by automation",
+        "Automated asset resizing eliminates formatting errors",
+        "Centralized calendar and scheduling across all platforms",
+        "Optimal timing recommendations improve engagement 20-40%"
+      ],
+      "metrics": ["Publishing time: 30-60 min/post", "Platform optimization: AI-tailored", "Post frequency: 3-5x higher"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement social media management platform", "Automate image resizing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Social media management platform", "Asset optimization tools", "Platform API integrations", "Content calendar system", "Brand guidelines for social"]
+    },
+    "icon": "share",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-social-listening-sentiment-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Social Listening & Sentiment Analysis",
+    "description": "AI-powered social listening with real-time sentiment tracking and crisis detection enabling proactive brand management and 70-90% faster issue response.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Social media manager manually searches brand mentions on Twitter, Facebook, Instagram. 2. Limited to checking 2-3 times per day during business hours. 3. Miss mentions without exact brand name (misspellings, hashtags, nicknames). 4. No sentiment analysis (must manually read each mention to gauge tone). 5. Brand crises often discovered through viral posts hours after they start.",
+      "constraints": [
+        "Manual monitoring limited to 2-3 checks per day",
+        "Miss 40-60% of mentions (misspellings, variations, indirect references)",
+        "No sentiment tracking (can't detect negativity trending)",
+        "After-hours and weekend mentions go unnoticed",
+        "Brand crises discovered reactively (hours after viral spread)",
+        "No competitive intelligence or category trend monitoring"
+      ],
+      "metrics": ["Mention coverage: 40-60%", "Crisis detection: Reactive (hours)", "Sentiment tracking: Manual"]
+    },
+    "agentic": {
+      "workflow": "1. Social Listening Agent monitors 24/7 across platforms: brand mentions (including variations, misspellings), product and category discussions, competitor mentions, influencer conversations. 2. Sentiment Analysis Agent scores every mention (positive, neutral, negative) with confidence. 3. Crisis Detection Agent identifies trending negative sentiment spikes and alerts team. 4. Topic Clustering reveals common themes in mentions (product issues, service complaints, praise). 5. Competitive Intelligence tracks share of voice vs competitors.",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Social Listening Agent", "Sentiment Analysis Agent", "Crisis Detection Agent"],
+        "utilityAgents": ["Social Listening Platform", "NLP Sentiment Analysis", "Alerting System", "Competitive Intelligence"]
+      },
+      "dataSources": [
+        "Social media posts and comments across platforms",
+        "Brand mention keywords and variations",
+        "Historical sentiment baselines",
+        "Competitor brand mentions",
+        "Product and category discussions",
+        "Influencer and advocacy networks"
+      ],
+      "benefits": [
+        "70-90% faster crisis detection and response (minutes vs hours)",
+        "95%+ mention coverage vs 40-60% manual",
+        "Real-time sentiment tracking reveals trends before they escalate",
+        "24/7 monitoring vs business hours only",
+        "Automated alerts for negative sentiment spikes",
+        "Competitive intelligence and share of voice tracking"
+      ],
+      "metrics": ["Mention coverage: 95%+", "Crisis detection: Proactive (minutes)", "Sentiment tracking: Real-time AI"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Crisis-level negative sentiment spike",
+      "policy": "Brand and communications leaders immediately notified for crisis response coordination"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Set up brand mention monitoring", "Implement sentiment analysis on Twitter"],
+      "investmentRequired": "Medium",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Social listening platform", "NLP sentiment analysis capability", "Crisis alerting workflow", "Historical sentiment baseline", "Competitive tracking setup"]
+    },
+    "icon": "ear",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-social-media-engagement-response",
+    "type": "function",
+    "level": 4,
+    "label": "Social Media Engagement & Response",
+    "description": "AI-assisted response management with suggested replies and automated routing reducing response time by 60-80% while maintaining brand voice.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually monitors notifications across platforms. 2. Manually reads each comment/message to determine how to respond. 3. Types response from scratch for each interaction. 4. No prioritization (urgent customer service issues mixed with casual comments). 5. Average response time 4-12 hours, overwhelming volume during campaigns or crises.",
+      "constraints": [
+        "Manual response to every comment doesn't scale (4-12 hour response time)",
+        "No prioritization between urgent issues and casual engagement",
+        "Typing each response from scratch time-consuming and inconsistent",
+        "After-hours and weekend engagement goes unanswered",
+        "Community manager overwhelmed by volume (can handle 50-100 interactions/day max)",
+        "Brand voice inconsistency across multiple community managers"
+      ],
+      "metrics": ["Response time: 4-12 hours", "Daily capacity: 50-100 interactions", "Brand voice consistency: Variable"]
+    },
+    "agentic": {
+      "workflow": "1. Engagement Routing Agent categorizes incoming interactions: customer service issues (route to support team), simple FAQs (suggest automated response), brand engagement (community manager response), spam/trolls (auto-hide or ignore). 2. Response Suggestion Agent generates draft replies using: historical successful responses, brand voice guidelines, context of conversation. 3. Priority Ranking scores interactions by urgency and customer value. 4. Community manager reviews and sends AI-suggested responses (5-10 sec vs 2-3 min typing). 5. Automated Response handles simple FAQs (hours, returns, shipping).",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Engagement Routing Agent", "Response Suggestion Agent", "Priority Ranking Agent"],
+        "utilityAgents": ["Social Media Platform APIs", "NLP Service", "Knowledge Base", "CRM Integration"]
+      },
+      "dataSources": [
+        "Historical response library and successful replies",
+        "Brand voice guidelines and tone examples",
+        "Customer service knowledge base and FAQs",
+        "Customer data and value tiers",
+        "Conversation context and thread history",
+        "Spam and troll patterns"
+      ],
+      "benefits": [
+        "60-80% reduction in response time (4-12 hrs to 30-90 min)",
+        "5-10x capacity increase (500-1000 interactions/day vs 50-100)",
+        "Consistent brand voice through AI-suggested responses",
+        "Intelligent prioritization ensures urgent issues addressed first",
+        "24/7 FAQ automation handles simple questions instantly",
+        "Community manager focuses on complex/high-value interactions"
+      ],
+      "metrics": ["Response time: 30-90 min", "Daily capacity: 500-1000 interactions", "Brand voice consistency: AI-enforced"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement FAQ auto-responses", "Deploy AI-suggested reply drafts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Social media management platform", "Response library and brand voice guidelines", "NLP capability for suggestion", "Customer service integration", "Priority scoring framework"]
+    },
+    "icon": "message-square",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-influencer-identification-management",
+    "type": "function",
+    "level": 4,
+    "label": "Influencer Identification & Management",
+    "description": "AI-powered influencer discovery and ROI tracking delivering 40-70% improvement in campaign performance through data-driven partner selection.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager manually searches Instagram for influencers in brand category. 2. Evaluate influencers based on follower count only (no engagement or authenticity checks). 3. Manually reach out via DM (low response rate, time-consuming). 4. No systematic tracking of campaign ROI or influencer performance. 5. Work with same 5-10 influencers repeatedly (limited discovery of new talent).",
+      "constraints": [
+        "Manual discovery limited to 5-10 influencers (miss long-tail micro-influencers)",
+        "Follower count poor proxy for engagement (fake followers common)",
+        "No authenticity verification (bot followers, engagement pods)",
+        "Manual outreach doesn't scale beyond 10-20 prospects",
+        "Can't track ROI or attribute sales to influencer campaigns",
+        "No database of past influencer performance"
+      ],
+      "metrics": ["Influencer pool: 5-10 recurring", "Engagement quality: Unknown", "ROI tracking: None"]
+    },
+    "agentic": {
+      "workflow": "1. Influencer Discovery Agent identifies candidates using: audience demographics match, engagement rate (not just followers), content relevance and brand alignment, authenticity score (fake follower detection). 2. Outreach Automation Agent manages scaled outreach and negotiation. 3. Campaign Tracking Agent monitors: content performance (likes, comments, shares), traffic and conversions driven, ROI calculation and cost per acquisition. 4. Performance Database ranks influencers by past ROI for future selection. 5. Micro-Influencer Expansion discovers long-tail high-engagement creators.",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Influencer Discovery Agent", "Campaign Tracking Agent"],
+        "utilityAgents": ["Influencer Platform", "Engagement Analytics", "Attribution System", "CRM"]
+      },
+      "dataSources": [
+        "Social media influencer profiles and metrics",
+        "Audience demographics and psychographics",
+        "Engagement rates and authenticity scores",
+        "Campaign performance and attribution data",
+        "Historical influencer ROI database",
+        "Competitor influencer partnerships"
+      ],
+      "benefits": [
+        "40-70% improvement in campaign performance through data-driven selection",
+        "100-500 influencer pool vs 5-10 (micro + macro coverage)",
+        "Fake follower detection prevents wasted spend on inauthentic influencers",
+        "Scaled outreach (100+ prospects vs 10-20 manual)",
+        "Full ROI tracking and attribution vs no measurement",
+        "Performance database enables continuous optimization"
+      ],
+      "metrics": ["Influencer pool: 100-500", "Engagement quality: Verified authentic", "ROI tracking: Full attribution"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build influencer database with engagement metrics", "Implement basic ROI tracking"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Influencer marketing platform", "Engagement analytics and authenticity tools", "Attribution and tracking capability", "Outreach automation", "Performance database"]
+    },
+    "icon": "users",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-user-generated-content-curation",
+    "type": "function",
+    "level": 4,
+    "label": "User-Generated Content (UGC) Curation",
+    "description": "AI-powered UGC discovery and rights management increasing authentic content volume 5-10x and driving 35-60% higher engagement than branded content.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually searches brand hashtags for customer photos. 2. Manually review 20-30 posts per day to find usable content. 3. DM customers individually to request usage permission (slow, low response). 4. Download and organize approved UGC in folders. 5. Limited UGC volume (10-20 pieces per month) constrains usage across channels.",
+      "constraints": [
+        "Manual hashtag search misses 70-80% of untagged brand mentions",
+        "Review capacity limited to 20-30 posts/day (tiny fraction of UGC)",
+        "Individual permission requests don't scale (30-40% response rate)",
+        "No centralized UGC library (content lost in folders and DMs)",
+        "10-20 pieces per month insufficient for multi-channel needs",
+        "No quality filtering or brand safety checking"
+      ],
+      "metrics": ["UGC volume: 10-20 pieces/month", "Discovery coverage: 20-30%", "Rights clearance: 30-40%"]
+    },
+    "agentic": {
+      "workflow": "1. UGC Discovery Agent monitors across platforms: brand hashtags and mentions, visual recognition (products in images), untagged brand appearances. 2. Content Quality Agent scores UGC by: visual quality and brand fit, engagement potential, brand safety (no inappropriate content). 3. Rights Management Agent: automated permission requests at scale, tracks usage rights and expiration, centralizes approved UGC library. 4. Moderation Agent flags inappropriate or off-brand content. 5. Distribution Agent recommends UGC for different channels (social, website, email).",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["UGC Discovery Agent", "Content Quality Agent", "Rights Management Agent"],
+        "utilityAgents": ["Social Listening Platform", "Computer Vision", "Rights Management System", "DAM"]
+      },
+      "dataSources": [
+        "Social media posts across platforms",
+        "Brand hashtags and mention keywords",
+        "Visual product recognition data",
+        "Content quality and engagement signals",
+        "Rights and permissions database",
+        "Brand safety and moderation rules"
+      ],
+      "benefits": [
+        "5-10x increase in UGC volume (100-200 pieces/month vs 10-20)",
+        "90%+ discovery coverage vs 20-30% manual",
+        "Scaled rights management (70-80% clearance vs 30-40%)",
+        "Automated brand safety and quality filtering",
+        "Centralized UGC library accessible across marketing teams",
+        "UGC drives 35-60% higher engagement than branded content"
+      ],
+      "metrics": ["UGC volume: 100-200 pieces/month", "Discovery coverage: 90%+", "Rights clearance: 70-80%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement visual brand recognition to find untagged UGC", "Automate permission request workflows"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Social listening platform", "Computer vision for product recognition", "Rights management system", "Digital asset management", "Brand safety moderation tools"]
+    },
+    "icon": "image",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-social-commerce-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Social Commerce Integration",
+    "description": "Shoppable social posts with seamless checkout driving 3-6x conversion vs link-to-website and capturing the 50%+ of customers who discover products on social.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Social posts include 'Link in bio' directing to website homepage. 2. Customer must: click bio link, search for product on website, add to cart, checkout. 3. 70-85% drop-off between social post and purchase due to friction. 4. No product tagging or in-app shopping. 5. Can't track social-to-purchase attribution (dark social).",
+      "constraints": [
+        "'Link in bio' friction causes 70-85% drop-off",
+        "Customers must leave social platform to shop (context switch)",
+        "Can't attribute purchases to specific social posts (dark social problem)",
+        "Product discovery on social doesn't convert to sales efficiently",
+        "Mobile users especially abandon during app-to-website transition",
+        "Miss 50%+ of customers who discover products on social but buy elsewhere"
+      ],
+      "metrics": ["Social-to-purchase conversion: 2-5%", "Drop-off: 70-85%", "Attribution: Poor"]
+    },
+    "agentic": {
+      "workflow": "1. Product Tagging Agent enables shoppable posts: Instagram Shopping product tags, Facebook Shops integration, Pinterest Product Pins, TikTok Shopping. 2. In-App Checkout allows purchase without leaving social platform. 3. Dynamic Product Catalog syncs inventory and pricing to social shops in real-time. 4. Social Attribution Agent tracks complete journey from post to purchase. 5. Personalized Recommendations show relevant products based on engagement signals.",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Product Tagging Agent", "Dynamic Product Catalog Agent", "Social Attribution Agent"],
+        "utilityAgents": ["Social Commerce APIs", "E-commerce Platform", "Inventory System", "Attribution Platform"]
+      },
+      "dataSources": [
+        "Product catalog with images and pricing",
+        "Real-time inventory availability",
+        "Social platform commerce APIs",
+        "Customer engagement on social posts",
+        "Purchase and conversion data",
+        "Social media traffic and attribution"
+      ],
+      "benefits": [
+        "3-6x conversion improvement vs link-in-bio (8-15% vs 2-5%)",
+        "Seamless in-app checkout reduces drop-off to 30-40% vs 70-85%",
+        "Product discovery converts to sales on same platform",
+        "Full attribution from social post to purchase",
+        "Automated product catalog sync ensures accurate pricing/inventory",
+        "Capture the 50%+ of social-first shoppers"
+      ],
+      "metrics": ["Social-to-purchase conversion: 8-15%", "Drop-off: 30-40%", "Attribution: Full tracking"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Enable Instagram Shopping product tags", "Set up Facebook Shops integration"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["E-commerce platform with social commerce APIs", "Product catalog feed", "Inventory integration", "Social commerce account setup", "Attribution tracking capability"]
+    },
+    "icon": "shopping-bag",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-social-media-analytics-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Social Media Analytics & Reporting",
+    "description": "Unified cross-platform analytics with AI-powered insights delivering actionable recommendations and 50-75% improvement in content performance.",
+    "parentCapability": "capability-social-media-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Social media manager logs into each platform separately to pull metrics. 2. Manually export data to spreadsheets and calculate aggregate metrics. 3. Create weekly report showing follower growth and post engagement. 4. Limited analysis (what content performed but not why). 5. Reporting takes 4-6 hours weekly with limited actionable insights.",
+      "constraints": [
+        "Platform silos require manual data aggregation (4-6 hours/week)",
+        "Basic vanity metrics (followers, likes) don't reveal business impact",
+        "No content performance analysis (what works and why)",
+        "Can't correlate social metrics to business outcomes (traffic, sales)",
+        "Reporting retrospective not predictive or prescriptive",
+        "No competitive benchmarking or share of voice tracking"
+      ],
+      "metrics": ["Reporting time: 4-6 hrs/week", "Insight depth: Basic metrics", "Business impact: Unclear"]
+    },
+    "agentic": {
+      "workflow": "1. Analytics Integration Agent aggregates metrics across all platforms in unified dashboard. 2. Performance Analysis Agent identifies: top-performing content types, optimal posting times, best-performing hashtags and topics. 3. Business Impact Agent correlates social metrics to: website traffic and conversions, revenue attribution, customer acquisition cost. 4. Competitive Intelligence tracks share of voice vs competitors. 5. Recommendation Engine suggests content strategy improvements based on data patterns.",
+      "agents": {
+        "orchestrator": "Social Media Management Orchestration Agent",
+        "superAgents": ["Analytics Integration Agent", "Performance Analysis Agent", "Business Impact Agent"],
+        "utilityAgents": ["Social Analytics Platform", "BI Dashboard", "Attribution System", "Competitive Intelligence"]
+      },
+      "dataSources": [
+        "Social media metrics from all platforms",
+        "Content performance data (engagement, reach, clicks)",
+        "Website traffic and conversion data",
+        "Revenue and customer acquisition data",
+        "Competitive social media metrics",
+        "Historical performance trends"
+      ],
+      "benefits": [
+        "90% reduction in reporting time (4-6 hrs to 20-30 min weekly)",
+        "Unified cross-platform view vs siloed platform reporting",
+        "Business impact metrics (revenue, CAC) vs vanity metrics (likes)",
+        "AI-powered insights reveal what content works and why",
+        "Predictive recommendations improve content performance 50-75%",
+        "Competitive benchmarking shows share of voice and positioning"
+      ],
+      "metrics": ["Reporting time: 20-30 min/week", "Insight depth: AI-powered recommendations", "Business impact: Revenue-attributed"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement unified social analytics dashboard", "Connect social metrics to website analytics"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Social media management platform with analytics", "Platform API integrations", "Attribution and business impact tracking", "BI/dashboard tool", "Competitive intelligence tools"]
+    },
+    "icon": "chart-pie",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

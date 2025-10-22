@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "capability-talent-acquisition-recruiting",
+    "type": "capability",
+    "level": 3,
+    "label": "Talent Acquisition & Recruiting",
+    "description": "End-to-end recruiting lifecycle from requisition through offer acceptance with AI-powered resume screening, intelligent scheduling, and candidate experience optimization.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 8,
+    "keyFunctions": [
+      "Job Description Optimization",
+      "Multi-Channel Job Posting",
+      "Resume Screening & Matching",
+      "Interview Scheduling & Coordination",
+      "Candidate Experience Management",
+      "Diversity & Inclusion Tracking",
+      "Reference & Background Checks",
+      "Offer Generation & Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual recruiting with email-based coordination",
+      "characteristics": [
+        "Manual resume screening (50 resumes per day per recruiter)",
+        "Email-based interview scheduling",
+        "Phone-based reference checks (3-5 business days)",
+        "Manual offer letter creation in Word documents",
+        "No candidate experience tracking or sentiment analysis",
+        "Limited diversity metrics and reporting"
+      ],
+      "constraints": [
+        "High recruiter burnout from administrative tasks",
+        "No real-time diversity tracking across hiring funnel",
+        "Limited insights into offer acceptance factors"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-tar-001",
+          "metric": "Time-to-Fill (Traditional)",
+          "value": "45-60 days",
+          "source": "TBD: [SME to provide source, e.g., 'Professional role recruiting benchmarks']"
+        },
+        {
+          "id": "bench-tar-002",
+          "metric": "Interview Scheduling Effort",
+          "value": "5-10 emails per candidate",
+          "source": "TBD: [SME to provide source, e.g., 'Recruiting operations productivity studies']"
+        },
+        {
+          "id": "bench-tar-003",
+          "metric": "Recruiter Capacity (Traditional)",
+          "value": "15-25 requisitions per recruiter",
+          "source": "TBD: [SME to provide source, e.g., 'Talent acquisition capacity benchmarks']"
+        },
+        {
+          "id": "bench-tar-004",
+          "metric": "Offer Acceptance Rate (Traditional)",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Recruiting effectiveness benchmarks']"
+        },
+        {
+          "id": "bench-tar-005",
+          "metric": "Cost-per-Hire (Traditional)",
+          "value": "$4,000-$7,000",
+          "source": "TBD: [SME to provide source, e.g., 'SHRM cost-per-hire benchmarks']"
+        },
+        {
+          "id": "bench-tar-006",
+          "metric": "Candidate NPS (Traditional)",
+          "value": "40",
+          "source": "TBD: [SME to provide source, e.g., 'Candidate experience satisfaction studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-orchestrated recruiting with instant resume screening, automated scheduling, and proactive candidate engagement",
+      "characteristics": [
+        "ML-based resume screening reviews all applicants in minutes",
+        "Auto-scheduling sends calendar invites and books interview rooms",
+        "Automated reference requests and background check initiation",
+        "Personalized candidate communication throughout process",
+        "Real-time diversity metrics and bias detection",
+        "Predictive analytics for offer acceptance probability"
+      ],
+      "benefits": [
+        "Reduced time-to-fill and cost-per-hire",
+        "Increased recruiter capacity and candidate satisfaction",
+        "Improved diversity outcomes and offer acceptance",
+        "Enhanced candidate experience throughout journey"
+      ],
+      "projections": [
+        {
+          "metric": "Time-to-Fill Reduction",
+          "value": "40-50% (25-30 days vs 45-60 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI resume screening and automated scheduling eliminating coordination delays']",
+          "sourceBenchmark": "bench-tar-001"
+        },
+        {
+          "metric": "Cost-per-Hire Reduction",
+          "value": "30% ($2,800-$4,900 vs $4,000-$7,000)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on increased recruiter efficiency and reduced time-to-fill']",
+          "sourceBenchmark": "bench-tar-005"
+        },
+        {
+          "metric": "Recruiter Capacity Increase",
+          "value": "3x (45-75 reqs vs 15-25 reqs)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation of resume screening and interview coordination']",
+          "sourceBenchmark": "bench-tar-003"
+        },
+        {
+          "metric": "Candidate NPS Improvement",
+          "value": "20-point improvement (60+ vs 40)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized communication and streamlined candidate experience']",
+          "sourceBenchmark": "bench-tar-006"
+        },
+        {
+          "metric": "Diversity Hiring Increase",
+          "value": "25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on bias detection and real-time diversity tracking']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Offer Acceptance Rate Improvement",
+          "value": "85-90% (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive analytics and improved candidate engagement']",
+          "sourceBenchmark": "bench-tar-004"
+        }
+      ],
+      "agents": [
+        "Talent Acquisition Orchestration Agent",
+        "Resume Screening & Matching Agent",
+        "Interview Scheduling & Coordination Agent",
+        "Candidate Experience Agent",
+        "Diversity & Inclusion Agent",
+        "Reference & Background Check Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy resume screening agent for high-volume roles",
+        "Implement auto-scheduling for phone screens",
+        "Enable automated job posting to multiple boards"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Modern ATS (Workday, Greenhouse, Lever) with API access",
+        "Clean historical hiring data (minimum 2 years)",
+        "Executive sponsorship from CHRO and CFO",
+        "Legal review of AI bias and fairness requirements",
+        "Recruiter training on AI-assisted workflows"
+      ]
+    },
+    "icon": "user-group",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-onboarding-offboarding",
+    "type": "capability",
+    "level": 3,
+    "label": "Employee Onboarding & Offboarding",
+    "description": "Automated employee lifecycle management from offer acceptance through separation with intelligent provisioning, personalized training, and secure access management.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 8,
+    "keyFunctions": [
+      "Pre-Boarding & Welcome",
+      "IT Provisioning & Access Management",
+      "Benefits Enrollment Automation",
+      "Personalized Training Path",
+      "Manager Enablement",
+      "Check-In & Feedback Collection",
+      "Offboarding & Access Revocation",
+      "Knowledge Transfer Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual onboarding with spreadsheet checklists taking weeks and inconsistent experiences",
+      "characteristics": [
+        "Manual IT provisioning",
+        "Paper-based benefits enrollment forms",
+        "Spreadsheet-based onboarding task tracking",
+        "Manual scheduling of check-ins",
+        "Delayed access revocation during offboarding (security risk)",
+        "No tracking of onboarding completion or effectiveness"
+      ],
+      "constraints": [
+        "Inconsistent experiences across departments",
+        "Offboarding security risks from delayed access revocation"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-oob-001",
+          "metric": "Time to Productivity (Traditional)",
+          "value": "60-90 days",
+          "source": "TBD: [SME to provide source, e.g., 'New hire productivity benchmarks']"
+        },
+        {
+          "id": "bench-oob-002",
+          "metric": "First-Year Turnover (Traditional)",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Employee retention benchmarks']"
+        },
+        {
+          "id": "bench-oob-003",
+          "metric": "Onboarding Completion Rate (Traditional)",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Onboarding effectiveness studies']"
+        },
+        {
+          "id": "bench-oob-004",
+          "metric": "System Access Delay (Traditional)",
+          "value": "3-5 days",
+          "source": "TBD: [SME to provide source, e.g., 'IT provisioning time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Orchestrated onboarding with same-day IT provisioning, personalized training, and proactive manager coaching",
+      "characteristics": [
+        "Automated IT account creation and system provisioning",
+        "Intelligent benefits recommendations via chatbot",
+        "Role-based personalized training curriculum",
+        "Automated check-ins with sentiment analysis",
+        "Immediate critical access revocation upon resignation",
+        "Buddy matching based on role, interests, and location"
+      ],
+      "benefits": [
+        "Reduced time to productivity and first-year turnover",
+        "Improved onboarding completion and system access speed",
+        "Manager time savings and zero offboarding security incidents"
+      ],
+      "agents": [
+        "Employee Lifecycle Orchestration Agent",
+        "IT Provisioning & Access Agent",
+        "Benefits Enrollment Agent",
+        "Personalized Training Agent",
+        "Manager Enablement Agent",
+        "Access Governance Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Time to Productivity Reduction",
+          "value": "30-40% (42-63 days vs 60-90 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated provisioning and personalized training paths']",
+          "sourceBenchmark": "bench-oob-001"
+        },
+        {
+          "metric": "First-Year Turnover Reduction",
+          "value": "25-35% (10-15% vs 15-25%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on improved onboarding experience and manager enablement']",
+          "sourceBenchmark": "bench-oob-002"
+        },
+        {
+          "metric": "Onboarding Completion Rate Improvement",
+          "value": "95%+ (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated checklists and intelligent reminders']",
+          "sourceBenchmark": "bench-oob-003"
+        },
+        {
+          "metric": "System Access Improvement",
+          "value": "Same-day (vs 3-5 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated IT provisioning and access management']",
+          "sourceBenchmark": "bench-oob-004"
+        },
+        {
+          "metric": "Manager Time Savings",
+          "value": "10 hours per new hire",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated task coordination and manager coaching']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Offboarding Security Incidents",
+          "value": "Zero (vs delays causing risk)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on immediate critical access revocation upon resignation']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Automate IT provisioning for same-day access",
+        "Deploy pre-boarding welcome emails with logistics",
+        "Implement automated onboarding checklist reminders"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-8 months",
+      "prerequisites": [
+        "Modern HRIS with API capabilities",
+        "Identity management platform (Okta, Azure AD)",
+        "IT service management platform integration",
+        "Manager buy-in and training on new processes",
+        "Documented IT access requirements by role"
+      ]
+    },
+    "icon": "academic-cap",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-learning-development",
+    "type": "capability",
+    "level": 3,
+    "label": "Learning & Development",
+    "description": "Personalized learning experiences with continuous skill assessment, intelligent content recommendations, and measurable ROI on training investments.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Skills Gap Analysis",
+      "Personalized Learning Recommendations",
+      "Content Curation & Delivery",
+      "Compliance Training Automation",
+      "Progress Tracking & Nudging",
+      "Career Pathing Integration",
+      "Learning Impact Measurement"
+    ],
+    "traditionalApproach": {
+      "description": "Annual training plans with classroom sessions having limited completion rates and no ROI measurement",
+      "characteristics": [
+        "Annual training needs assessment via surveys",
+        "One-size-fits-all classroom training sessions",
+        "Manual attendance tracking with paper sign-in sheets",
+        "No measurement of skill improvement or business impact",
+        "Training disconnected from career progression goals",
+        "Post-training surveys with limited actionable insights"
+      ],
+      "constraints": [
+        "Limited scalability of classroom training",
+        "No real-time skill gap visibility across workforce",
+        "Training ROI not measured or connected to performance"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-lnd-001",
+          "metric": "Training Completion Rate (Traditional)",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Corporate training completion benchmarks']"
+        },
+        {
+          "id": "bench-lnd-002",
+          "metric": "Training Hours per Employee (Traditional)",
+          "value": "20-30 hours per year",
+          "source": "TBD: [SME to provide source, e.g., 'Employee development hours benchmarks']"
+        },
+        {
+          "id": "bench-lnd-003",
+          "metric": "Employee Satisfaction with Training (Traditional)",
+          "value": "3.5/5",
+          "source": "TBD: [SME to provide source, e.g., 'Training satisfaction surveys']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven personalized learning with continuous skill assessment and ROI tracking",
+      "characteristics": [
+        "Continuous skills assessment vs role requirements",
+        "ML-based personalized learning recommendations",
+        "Microlearning modules (5-10 minutes) for busy employees",
+        "Auto-enrollment in required compliance training",
+        "Real-time progress tracking with intelligent reminders",
+        "Learning impact correlated with performance and retention"
+      ],
+      "benefits": [
+        "Improved training completion and skills gap reduction",
+        "Reduced time to competency for new skills",
+        "Enhanced employee retention through development",
+        "Measurable training ROI and manager visibility"
+      ],
+      "agents": [
+        "Learning & Development Orchestration Agent",
+        "Skills Assessment & Gap Analysis Agent",
+        "Personalized Learning Recommendation Agent",
+        "Content Curation & Delivery Agent",
+        "Compliance Training Agent",
+        "Learning Impact Measurement Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Training Completion Rate Improvement",
+          "value": "85-90% (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized recommendations and microlearning accessibility']",
+          "sourceBenchmark": "bench-lnd-001"
+        },
+        {
+          "metric": "Skills Gap Reduction",
+          "value": "40% within 12 months",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous assessment and targeted learning interventions']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Time to Competency Reduction",
+          "value": "30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized learning paths and adaptive content']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Employee Retention Improvement",
+          "value": "15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on development opportunities improving engagement and retention']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy personalized learning recommendations for pilot group",
+        "Implement microlearning content for high-demand skills",
+        "Automate compliance training enrollment and tracking"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Modern LMS with API capabilities or willingness to upgrade",
+        "Skills taxonomy definition for organization",
+        "Baseline employee skills data collection",
+        "Content licensing agreements (LinkedIn Learning, Coursera)",
+        "Manager buy-in on personalized learning approach"
+      ]
+    },
+    "icon": "book-open",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-performance-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Performance Management",
+    "description": "Continuous performance feedback and development with real-time goal tracking, 360 insights, and predictive attrition alerts.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Continuous Feedback & Recognition",
+      "Goal Setting & OKR Tracking",
+      "360 Feedback Orchestration",
+      "Performance Analytics & Insights",
+      "Development Planning",
+      "Calibration & Rating Consistency",
+      "Manager Coaching Support"
+    ],
+    "traditionalApproach": {
+      "description": "Annual performance reviews with recency bias and limited development focus",
+      "characteristics": [
+        "Annual review cycle (once per year feedback)",
+        "Manager fills Word/PDF performance review forms",
+        "Goals set annually and rarely revisited mid-year",
+        "Forced ranking creates unhealthy competition",
+        "No ongoing feedback (annual surprise reviews)",
+        "Performance ratings used primarily for merit increases"
+      ],
+      "constraints": [
+        "Recency bias (entire year judged on last months)",
+        "Manual tracking required",
+        "Reviews dreaded by employees",
+        "Limited focus on growth vs evaluation"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-pm-001",
+          "metric": "Review Completion Rate (Traditional)",
+          "value": "75-85%",
+          "source": "TBD: [SME to provide source, e.g., 'Performance review completion benchmarks']"
+        },
+        {
+          "id": "bench-pm-002",
+          "metric": "Manager Time per Review (Traditional)",
+          "value": "2-4 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Manager time investment studies']"
+        },
+        {
+          "id": "bench-pm-003",
+          "metric": "Employee Satisfaction with Reviews (Traditional)",
+          "value": "2.5/5",
+          "source": "TBD: [SME to provide source, e.g., 'Performance review satisfaction surveys']"
+        },
+        {
+          "id": "bench-pm-004",
+          "metric": "Development Plan Coverage (Traditional)",
+          "value": "30%",
+          "source": "TBD: [SME to provide source, e.g., 'Development planning coverage studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous feedback ecosystem with real-time insights and proactive development",
+      "characteristics": [
+        "Weekly/biweekly feedback prompts via Slack/Teams",
+        "Real-time OKR/KPI tracking with alerts",
+        "Automated 360 feedback collection (quarterly or biannual)",
+        "Performance pattern analysis (high/low performers, flight risks)",
+        "AI-generated development plans from feedback themes",
+        "Rating calibration for consistency across managers"
+      ],
+      "benefits": [
+        "Continuous feedback eliminates recency bias",
+        "Reduced manager time spread throughout year",
+        "Improved employee satisfaction with performance process",
+        "Increased development plan creation and retention interventions",
+        "Enhanced rating fairness through calibration and bias detection"
+      ],
+      "agents": [
+        "Performance Management Orchestration Agent",
+        "Continuous Feedback & Recognition Agent",
+        "Goal Setting & Tracking Agent",
+        "360 Feedback Orchestration Agent",
+        "Performance Analytics & Insights Agent",
+        "Development & Career Planning Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Manager Time Reduction",
+          "value": "50% (spread throughout year)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous feedback eliminating concentrated annual review effort']",
+          "sourceBenchmark": "bench-pm-002"
+        },
+        {
+          "metric": "Employee Satisfaction Improvement",
+          "value": "25% (4.0/5 vs 2.5/5)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous feedback and development focus vs annual evaluation']",
+          "sourceBenchmark": "bench-pm-003"
+        },
+        {
+          "metric": "Development Plan Coverage Increase",
+          "value": "3x (90% vs 30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-generated plans from continuous feedback themes']",
+          "sourceBenchmark": "bench-pm-004"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy continuous feedback tool with Slack/Teams integration",
+        "Implement OKR tracking with weekly check-ins",
+        "Provide manager training on effective feedback delivery"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Executive sponsorship from CHRO and CEO",
+        "Modern performance management platform",
+        "Manager willingness to provide continuous feedback",
+        "Employee trust in feedback for development not punishment",
+        "Cultural shift from annual to continuous mindset"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-compensation-benefits",
+    "type": "capability",
+    "level": 3,
+    "label": "Compensation & Benefits Administration",
+    "description": "Data-driven compensation planning with market benchmarking, pay equity analysis, and intelligent benefits recommendations.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Market Benchmarking & Intelligence",
+      "Pay Equity Analysis",
+      "Compensation Planning Automation",
+      "Benefits Selection & Optimization",
+      "Benefits Communication & Education",
+      "Total Rewards Statements",
+      "Compliance Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Annual merit cycle with spreadsheet-based compensation planning and confusing benefits enrollment",
+      "characteristics": [
+        "Annual merit cycle with budget pool allocated in spreadsheets",
+        "Manual market benchmarking once per year",
+        "Paper-based or basic portal benefits enrollment",
+        "Limited pay transparency (employees don't know market rates)",
+        "Compensation decisions based on manager gut feel",
+        "Manual benefits enrollment with error rate"
+      ],
+      "constraints": [
+        "No real-time compensation analytics for decision-making",
+        "Annual pay equity audits (manual, time-consuming)",
+        "Reactive approach to retention (counteroffers after resignation)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cb-001",
+          "metric": "Compensation Planning Cycle Time (Traditional)",
+          "value": "4-6 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Compensation planning cycle benchmarks']"
+        },
+        {
+          "id": "bench-cb-002",
+          "metric": "Benefits Enrollment Error Rate (Traditional)",
+          "value": "5-10%",
+          "source": "TBD: [SME to provide source, e.g., 'Benefits enrollment accuracy studies']"
+        },
+        {
+          "id": "bench-cb-003",
+          "metric": "Benefits Understanding & Usage (Traditional)",
+          "value": "30% don't understand or use available benefits",
+          "source": "TBD: [SME to provide source, e.g., 'Benefits utilization and comprehension studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous market monitoring with AI-powered pay equity and personalized benefits guidance",
+      "characteristics": [
+        "Real-time market benchmarking from multiple data sources",
+        "Continuous pay equity analysis with gap alerts",
+        "AI compensation recommendations (below market, promotion candidates)",
+        "Personalized benefits recommendations based on demographics",
+        "Benefits comparison tools and chatbot support",
+        "Proactive retention interventions for below-market employees"
+      ],
+      "benefits": [
+        "Faster compensation planning and reduced enrollment errors",
+        "Increased benefits utilization through education",
+        "Proactive pay equity vs reactive annual audits",
+        "Improved employee satisfaction and data-driven retention"
+      ],
+      "agents": [
+        "Compensation & Benefits Orchestration Agent",
+        "Market Intelligence & Benchmarking Agent",
+        "Pay Equity & Compliance Agent",
+        "Compensation Planning Agent",
+        "Benefits Selection & Optimization Agent",
+        "Benefits Communication & Engagement Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Compensation Planning Speed Improvement",
+          "value": "70% faster (1-2 weeks vs 4-6 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated market benchmarking and AI recommendations']",
+          "sourceBenchmark": "bench-cb-001"
+        },
+        {
+          "metric": "Benefits Enrollment Error Reduction",
+          "value": "80% (<1% vs 5-10%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent validation and guided enrollment process']",
+          "sourceBenchmark": "bench-cb-002"
+        },
+        {
+          "metric": "Benefits Utilization Increase",
+          "value": "40% through education",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized recommendations and 24/7 chatbot support']",
+          "sourceBenchmark": "bench-cb-003"
+        },
+        {
+          "metric": "Employee Satisfaction Improvement",
+          "value": "30% with comp/benefits",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on transparency, education, and personalized benefits guidance']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy market benchmarking for retention-risk employees",
+        "Implement benefits recommendation chatbot",
+        "Generate total rewards statements to visualize full compensation"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Clean compensation data (job codes, salary history)",
+        "Benefits admin platform with API capabilities",
+        "Market data subscriptions (Payscale, Radford, Mercer)",
+        "Executive buy-in on pay transparency approach",
+        "Legal review of pay equity analysis methodology"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-time-attendance",
+    "type": "capability",
+    "level": 3,
+    "label": "Time & Attendance Management",
+    "description": "Biometric time tracking with intelligent overtime management, compliance monitoring, and real-time labor cost visibility.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Intelligent Time Capture",
+      "Overtime Management & Compliance",
+      "PTO & Leave Management",
+      "Workforce Scheduling",
+      "Labor Analytics & Forecasting",
+      "Exception Handling",
+      "Payroll Integration"
+    ],
+    "traditionalApproach": {
+      "description": "Manual timesheets with paper punch cards and spreadsheet-based tracking",
+      "characteristics": [
+        "Paper time cards or manual punch clocks",
+        "Supervisor manual approval of timesheets weekly",
+        "Manual payroll data entry",
+        "PTO requests via email with manual tracking",
+        "No real-time overtime alerts or labor cost visibility",
+        "Spreadsheet-based attendance tracking"
+      ],
+      "constraints": [
+        "Time theft from buddy punching and rounding",
+        "Lag from time entry to payroll processing",
+        "No real-time labor cost visibility for budget management"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ta-001",
+          "metric": "Payroll Error Rate (Traditional)",
+          "value": "3-5%",
+          "source": "TBD: [SME to provide source, e.g., 'Payroll accuracy benchmarks']"
+        },
+        {
+          "id": "bench-ta-002",
+          "metric": "Payroll Processing Time (Traditional)",
+          "value": "2-3 days",
+          "source": "TBD: [SME to provide source, e.g., 'Payroll cycle time benchmarks']"
+        },
+        {
+          "id": "bench-ta-003",
+          "metric": "Overtime Compliance Violations (Traditional)",
+          "value": "10-15% (FLSA, meal breaks)",
+          "source": "TBD: [SME to provide source, e.g., 'Labor compliance violation rates']"
+        },
+        {
+          "id": "bench-ta-004",
+          "metric": "Manager Time on Timesheet Approval (Traditional)",
+          "value": "1-2 hours per week",
+          "source": "TBD: [SME to provide source, e.g., 'Manager administrative time studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Biometric time capture with automated approvals and proactive overtime management",
+      "characteristics": [
+        "Biometric time clocks (facial recognition, fingerprint)",
+        "Auto-approval for compliant timesheets (exceptions only)",
+        "Real-time overtime alerts when approaching thresholds",
+        "Self-service PTO requests with rule-based auto-approval",
+        "Intelligent workforce scheduling based on demand forecasts",
+        "Real-time labor cost dashboards by department/location"
+      ],
+      "benefits": [
+        "Reduced payroll errors and faster processing",
+        "Time theft elimination through biometric verification",
+        "Overtime cost reduction and manager time savings",
+        "Zero FLSA compliance violations"
+      ],
+      "agents": [
+        "Time & Attendance Orchestration Agent",
+        "Intelligent Time Capture Agent",
+        "Overtime Management & Compliance Agent",
+        "PTO & Leave Management Agent",
+        "Workforce Scheduling Agent",
+        "Labor Analytics & Forecasting Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Payroll Error Reduction",
+          "value": "85% (<0.5% vs 3-5%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated data capture eliminating manual entry errors']",
+          "sourceBenchmark": "bench-ta-001"
+        },
+        {
+          "metric": "Payroll Processing Speed Improvement",
+          "value": "90% faster (<4 hours vs 2-3 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time integration and automated approvals']",
+          "sourceBenchmark": "bench-ta-002"
+        },
+        {
+          "metric": "Overtime Cost Reduction",
+          "value": "20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive alerts when approaching overtime thresholds']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Manager Time Savings on Approvals",
+          "value": "75%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on exception-based approval workflows']",
+          "sourceBenchmark": "bench-ta-004"
+        },
+        {
+          "metric": "FLSA Compliance Improvement",
+          "value": "Zero violations (vs 10-15%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated compliance monitoring and alerts']",
+          "sourceBenchmark": "bench-ta-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy biometric time clocks in high-risk locations",
+        "Implement overtime alerts for managers",
+        "Enable employee self-service PTO requests"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Modern time & attendance platform with API",
+        "Biometric hardware for stores/warehouses/factories",
+        "Payroll system integration capabilities",
+        "Employee privacy policy for biometric data collection",
+        "Manager training on exception-based approval workflows"
+      ]
+    },
+    "icon": "clock",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-workforce-planning-analytics",
+    "type": "capability",
+    "level": 3,
+    "label": "Workforce Planning & Analytics",
+    "description": "Predictive workforce modeling with attrition forecasting, skills gap analysis, and strategic succession planning.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Demand Forecasting & Capacity Planning",
+      "Attrition Prediction & Retention",
+      "Skills & Competency Analytics",
+      "Succession & Talent Mobility",
+      "Diversity, Equity & Inclusion Analytics",
+      "Scenario Planning & Modeling"
+    ],
+    "traditionalApproach": {
+      "description": "Annual headcount planning with spreadsheets and reactive attrition response",
+      "characteristics": [
+        "Annual headcount planning during budgeting cycle",
+        "Manager headcount requests submitted via spreadsheets",
+        "Reactive attrition discovery (exit interviews after departure)",
+        "Succession planning for top roles only",
+        "Quarterly diversity reports with limited insights",
+        "No predictive workforce modeling or scenario planning"
+      ],
+      "constraints": [
+        "No early attrition prediction",
+        "No bench strength visibility for succession risk",
+        "Limited workforce analytics maturity and insights"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-wpa-001",
+          "metric": "Voluntary Attrition Rate (Traditional)",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Employee turnover benchmarks']"
+        },
+        {
+          "id": "bench-wpa-002",
+          "metric": "Succession Plan Coverage (Traditional)",
+          "value": "20-30% (key roles only)",
+          "source": "TBD: [SME to provide source, e.g., 'Succession planning coverage benchmarks']"
+        },
+        {
+          "id": "bench-wpa-003",
+          "metric": "Key Role Backfill Time (Traditional)",
+          "value": "4-6 months",
+          "source": "TBD: [SME to provide source, e.g., 'Critical role replacement time studies']"
+        },
+        {
+          "id": "bench-wpa-004",
+          "metric": "Skill Gap Visibility (Traditional)",
+          "value": "Discovered when project staffing fails",
+          "source": "TBD: [SME to provide source, e.g., 'Skills visibility maturity assessment']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Predictive workforce intelligence with attrition alerts and continuous planning",
+      "characteristics": [
+        "ML predicts attrition risk in advance",
+        "Continuous headcount forecasting based on business plans",
+        "Real-time skills gap analysis across workforce",
+        "Automated succession plan generation for critical roles",
+        "Continuous diversity tracking with goal attainment forecasts",
+        "Scenario modeling for growth, contraction, and reorganizations"
+      ],
+      "benefits": [
+        "Proactive attrition prediction and retention",
+        "Improved succession coverage and faster backfill",
+        "Complete skill gap visibility",
+        "Enhanced diversity goal attainment",
+        "Continuous strategic workforce planning"
+      ],
+      "agents": [
+        "Workforce Planning & Analytics Orchestration Agent",
+        "Demand Forecasting & Capacity Planning Agent",
+        "Attrition Prediction & Retention Agent",
+        "Skills & Competency Analytics Agent",
+        "Succession & Talent Mobility Agent",
+        "Diversity, Equity & Inclusion Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Attrition Prediction Accuracy",
+          "value": "70-80% enables proactive retention",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML predicting attrition risk 60-90 days in advance']",
+          "sourceBenchmark": "bench-wpa-001"
+        },
+        {
+          "metric": "Succession Coverage Improvement",
+          "value": "80%+ for key roles (vs 20-30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated succession plan generation for critical roles']",
+          "sourceBenchmark": "bench-wpa-002"
+        },
+        {
+          "metric": "Key Role Backfill Speed",
+          "value": "40% faster through proactive pipelines",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive talent pipeline development']",
+          "sourceBenchmark": "bench-wpa-003"
+        },
+        {
+          "metric": "Skill Gap Visibility",
+          "value": "100% (vs zero in traditional)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time skills gap analysis across workforce']",
+          "sourceBenchmark": "bench-wpa-004"
+        },
+        {
+          "metric": "Diversity Goal Attainment Improvement",
+          "value": "50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous tracking with goal attainment forecasts']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy attrition prediction model for high-value roles",
+        "Create succession plans for top critical roles",
+        "Implement diversity dashboard with current state visibility"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Clean HRIS data (minimum 3 years of history)",
+        "People analytics platform or data warehouse",
+        "Executive sponsorship from CHRO, CFO, and CEO",
+        "Skills taxonomy definition for organization",
+        "Integration with business planning and financial systems"
+      ]
+    },
+    "icon": "chart-pie",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-employee-engagement-relations",
+    "type": "capability",
+    "level": 3,
+    "label": "Employee Engagement & Relations",
+    "description": "Real-time employee sentiment analysis with pulse surveys, manager effectiveness tracking, and proactive crisis intervention.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Pulse Survey & Feedback",
+      "Sentiment & Text Analytics",
+      "Manager Effectiveness Tracking",
+      "Employee Relations Case Management",
+      "Crisis Detection & Intervention",
+      "Action Planning & Recommendations"
+    ],
+    "traditionalApproach": {
+      "description": "Annual engagement surveys with limited response rates and reactive employee relations",
+      "characteristics": [
+        "Annual engagement survey (once per year)",
+        "Survey response rate with survey fatigue",
+        "HR analyzes results and presents to leadership",
+        "Employee complaints handled via email/phone reactively",
+        "HR case management in spreadsheets with no tracking",
+        "Toxic managers not identified until mass employee exodus"
+      ],
+      "constraints": [
+        "Annual survey provides limited ongoing sentiment visibility",
+        "Limited improvement actions",
+        "No real-time pulse on employee sentiment or concerns",
+        "Toxic managers discovered reactively after damage done",
+        "No proactive intervention for employee crises"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-eer-001",
+          "metric": "Annual Survey Response Rate (Traditional)",
+          "value": "50-60%",
+          "source": "TBD: [SME to provide source, e.g., 'Annual engagement survey participation rates']"
+        },
+        {
+          "id": "bench-eer-002",
+          "metric": "Engagement Score (Traditional)",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Employee engagement benchmarks']"
+        },
+        {
+          "id": "bench-eer-003",
+          "metric": "Employee Relations Case Resolution Time (Traditional)",
+          "value": "30-60 days",
+          "source": "TBD: [SME to provide source, e.g., 'HR case resolution time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous sentiment monitoring with weekly pulse surveys and proactive manager coaching",
+      "characteristics": [
+        "Weekly/biweekly pulse surveys",
+        "NLP analysis of survey comments, Slack messages, exit interviews",
+        "Manager scorecards with team engagement and attrition metrics",
+        "Centralized case management with automated routing",
+        "Crisis language detection (suicide, violence, extreme distress)",
+        "AI-recommended interventions for low engagement teams"
+      ],
+      "benefits": [
+        "Real-time engagement visibility vs annual snapshots",
+        "Improved pulse survey response rate",
+        "Proactive identification of toxic managers before exodus",
+        "Faster employee relations case resolution",
+        "Early crisis detection enables intervention",
+        "Data-driven action planning"
+      ],
+      "agents": [
+        "Employee Engagement & Relations Orchestration Agent",
+        "Pulse Survey & Feedback Agent",
+        "Sentiment & Text Analytics Agent",
+        "Manager Effectiveness Agent",
+        "Employee Relations Case Management Agent",
+        "Crisis Detection & Intervention Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Pulse Survey Response Rate",
+          "value": "75-85% (vs 50-60% annual)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on short weekly/biweekly surveys reducing fatigue']",
+          "sourceBenchmark": "bench-eer-001"
+        },
+        {
+          "metric": "Case Resolution Speed Improvement",
+          "value": "50% faster (15-30 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on centralized case management with automated routing']",
+          "sourceBenchmark": "bench-eer-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Replace annual survey with weekly pulse surveys",
+        "Deploy manager effectiveness scorecards",
+        "Implement employee relations case tracking system"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Engagement platform with pulse survey capability",
+        "Employee consent for sentiment analysis of communications",
+        "Crisis response protocols (HR, security, EAP partnership)",
+        "Manager willingness to receive ongoing feedback",
+        "Cultural readiness for continuous feedback"
+      ]
+    },
+    "icon": "heart",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-hr-compliance-reporting",
+    "type": "capability",
+    "level": 3,
+    "label": "HR Compliance & Reporting",
+    "description": "Automated compliance monitoring with regulatory intelligence, training enforcement, and instant audit readiness.",
+    "parentDomain": "domain-human-capital",
+    "industries": [
+      "All"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Compliance Calendar & Tracking",
+      "Regulatory Intelligence & Change Management",
+      "Training & Certification Management",
+      "Audit Management & Documentation",
+      "Automated Reporting & Filing",
+      "Policy Management & Acknowledgment"
+    ],
+    "traditionalApproach": {
+      "description": "Manual compliance tracking with spreadsheets and reactive audit scrambles",
+      "characteristics": [
+        "Manual compliance requirements tracking in spreadsheets",
+        "Annual compliance training (harassment, safety, security)",
+        "Manual report compilation once per year",
+        "Audit requests handled via email scramble for documents",
+        "Policy updates communicated via email with no acknowledgment tracking",
+        "Regulatory changes monitored manually via newsletters"
+      ],
+      "constraints": [
+        "Reactive compliance approach (audit triggers panic)",
+        "Variable regulatory fines and penalties (avoidable)",
+        "No automated tracking of policy acknowledgments",
+        "Manual regulatory change detection and impact assessment"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-hcr-001",
+          "metric": "Compliance Training Completion Rate (Traditional)",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Compliance training completion benchmarks']"
+        },
+        {
+          "id": "bench-hcr-002",
+          "metric": "Audit Response Time (Traditional)",
+          "value": "5-10 business days",
+          "source": "TBD: [SME to provide source, e.g., 'Audit preparation time studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Proactive compliance monitoring with real-time regulatory tracking and instant audit response",
+      "characteristics": [
+        "Centralized compliance calendar with auto-reminders",
+        "Real-time monitoring of federal, state, local regulation changes",
+        "Auto-enrollment in required training with escalation workflows",
+        "Real-time audit trail maintenance with instant documentation",
+        "Automated report generation",
+        "Policy management with electronic acknowledgment tracking"
+      ],
+      "benefits": [
+        "Improved compliance training completion",
+        "Reduced audit response time",
+        "Real-time regulatory change detection vs quarterly monitoring",
+        "Reduced reporting time through automation",
+        "Proactive compliance risk identification",
+        "Fines and penalties avoided through continuous monitoring"
+      ],
+      "agents": [
+        "HR Compliance Orchestration Agent",
+        "Compliance Calendar & Tracking Agent",
+        "Regulatory Intelligence & Change Management Agent",
+        "Training & Certification Management Agent",
+        "Audit Management & Documentation Agent",
+        "Automated Reporting & Filing Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Compliance Training Completion Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on auto-enrollment with escalation workflows']",
+          "sourceBenchmark": "bench-hcr-001"
+        },
+        {
+          "metric": "Audit Response Time Reduction",
+          "value": "80% (<1 day vs 5-10 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time audit trail maintenance with instant documentation']",
+          "sourceBenchmark": "bench-hcr-002"
+        },
+        {
+          "metric": "Reporting Time Reduction",
+          "value": "80% through automation",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated report generation (EEO-1, VETS-4212, AAP, OSHA)']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Automate compliance training enrollment and tracking",
+        "Create centralized compliance calendar with alerts",
+        "Automate regulatory reporting with real-time data extraction"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Compliance management platform or CLM system",
+        "Clean HRIS data for regulatory reporting",
+        "Legal counsel involvement in rule configuration",
+        "Document management system for audit trails",
+        "Regulatory intelligence service subscription"
+      ]
+    },
+    "icon": "shield-check",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

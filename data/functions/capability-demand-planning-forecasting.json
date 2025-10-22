@@ -1,0 +1,460 @@
+[
+  {
+    "id": "function-statistical-demand-forecasting",
+    "type": "function",
+    "level": 4,
+    "label": "Statistical Demand Forecasting",
+    "description": "Time-series analysis with exponential smoothing and seasonal decomposition achieving 75-85% forecast accuracy versus 60-70% manual spreadsheet forecasts reducing stockouts by 40% and overstock by 30%.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Demand planner exports last 24 months sales data into Excel spreadsheet for each SKU category. 2. Manually calculates simple moving averages and applies seasonal factors from previous year: 'Summer months +15%, winter months -10%, December +200% for toys category'. 3. Adjusts forecasts based on gut feeling and knowledge of upcoming promotions or market trends. 4. Forecast accuracy 60-70% due to limited data analysis and inability to detect complex patterns. 5. Stockouts occur 15-20% of time during demand spikes (underforecasted), overstock 25-30% during slow periods (overforecasted).",
+      "constraints": [
+        "Manual Excel analysis limits data volume to 24-36 months maximum",
+        "60-70% forecast accuracy due to simple moving averages",
+        "Seasonal patterns manually coded (miss complex multi-seasonal effects)",
+        "SKU-by-SKU analysis impossible (focus on categories only)",
+        "15-20% stockout rate during demand spikes",
+        "25-30% overstock waste during slow periods"
+      ],
+      "metrics": ["Forecast accuracy: 60-70%", "Stockout rate: 15-20%", "Overstock rate: 25-30%", "Forecasting method: Manual Excel"]
+    },
+    "agentic": {
+      "workflow": "1. Statistical Forecasting Agent ingests 5+ years historical sales data across all SKUs with seasonality, promotions, weather, economic indicators. 2. Agent applies exponential smoothing (Holt-Winters) and ARIMA models automatically: detects double-seasonality (weekly + yearly), trend changes, promotion effects. 3. Seasonal Decomposition Agent identifies multi-layer patterns: 'Ice cream sales show weekly peak Fri-Sat (+40%), summer season (+300% Jun-Aug), heat wave correlation (+25% when temp >85°F)'. 4. Agent generates SKU-level forecasts 13 weeks ahead: 'Vanilla ice cream SKU#12345 forecast 5,200 units week of July 4 (vs 2,000 normal) due to Independence Day + summer + heatwave predicted'. 5. Forecast accuracy improves to 75-85% through statistical rigor and multi-variable analysis. 6. Stockouts reduced 40% (15-20% → 9-12%) and overstock reduced 30% (25-30% → 17-21%) through better predictions.",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["Statistical Forecasting Agent", "Seasonal Decomposition Agent"],
+        "utilityAgents": ["Time-Series Analytics Engine", "Historical Sales Database", "Promotional Calendar Integration", "Weather Data API"]
+      },
+      "dataSources": [
+        "5+ years historical sales data (transactions by SKU, date, location)",
+        "Promotional calendar with discount levels and advertising spend",
+        "Seasonal patterns (weekly, monthly, yearly, holiday calendars)",
+        "External data (weather forecasts, economic indicators, competitor activity)",
+        "Inventory levels and stockout history",
+        "Price changes and elasticity data"
+      ],
+      "benefits": [
+        "75-85% forecast accuracy vs 60-70% manual spreadsheet analysis",
+        "40% stockout reduction (15-20% → 9-12%) through better demand prediction",
+        "30% overstock reduction (25-30% → 17-21%) minimizing waste",
+        "SKU-level forecasting vs category-level (10,000+ SKUs analyzed)",
+        "Multi-seasonality detection (weekly, monthly, yearly patterns combined)",
+        "13-week rolling forecasts updated automatically vs manual monthly"
+      ],
+      "metrics": ["Forecast accuracy: 75-85%", "Stockout rate: 9-12%", "Overstock rate: 17-21%", "Forecasting method: Statistical models (automated)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy exponential smoothing for top 100 SKUs representing 80% revenue", "Integrate promotional calendar to capture known demand drivers", "Implement automated weekly forecast refresh vs manual monthly"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["5+ years historical sales data (daily granularity preferred)", "Time-series analytics platform (Python statsmodels, R, or commercial)", "Promotional calendar and marketing event data", "Weather and economic indicator integrations", "SKU master data with hierarchies (category, brand, supplier)", "Inventory management system integration"]
+    },
+    "icon": "chart-line",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-machine-learning-demand-prediction",
+    "type": "function",
+    "level": 4,
+    "label": "Machine Learning Demand Prediction",
+    "description": "Gradient boosting and neural networks with 100+ features achieving 85-95% forecast accuracy versus 75-85% statistical methods through pattern recognition of complex demand drivers.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 3,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Demand forecasting uses statistical models (exponential smoothing, ARIMA) with 10-15 key variables: historical sales, seasonality, promotions. 2. Models struggle with complex interactions: 'Can't predict that rainy weather + payday Friday + Instagram influencer post = 300% ice cream sales spike'. 3. Forecast accuracy plateaus at 75-85% due to limited feature engineering and inability to detect non-linear patterns. 4. New product launches, competitive actions, social media trends cause unexpected demand variations that models miss. 5. Planners manually adjust forecasts based on qualitative insights not captured by statistical models.",
+      "constraints": [
+        "Statistical models limited to 10-15 variables (can't handle 100+ features)",
+        "75-85% forecast accuracy ceiling due to linear assumptions",
+        "Complex interactions missed (weather + payday + social media)",
+        "New product demand unpredictable (no historical data)",
+        "Competitive actions and market dynamics not modeled",
+        "Social media and sentiment signals ignored"
+      ],
+      "metrics": ["Forecast accuracy: 75-85%", "Features used: 10-15 variables", "Model type: Statistical (linear)", "New product accuracy: 40-50%"]
+    },
+    "agentic": {
+      "workflow": "1. ML Prediction Agent trains gradient boosting models (XGBoost, LightGBM) on 100+ features: historical sales, weather, holidays, promotions, prices, competitor actions, social media sentiment, economic indicators, inventory levels, traffic patterns. 2. Agent detects complex patterns: 'Rainy weekends + payday Friday + Instagram influencer post = 280% ice cream demand spike (vs 120% for rain alone, 150% payday alone)'. 3. Neural Network Agent handles non-linear relationships and seasonal patterns: 'Back-to-school season demand driven by 47 interacting factors including school calendar, local demographics, weather, competitor promotions'. 4. Agent achieves 85-95% forecast accuracy through deep pattern recognition vs 75-85% statistical models. 5. New Product Launch Agent predicts demand using similar product history, market trends, social media buzz: 'New keto ice cream SKU forecast 12,000 units week 1 based on vegan ice cream launch pattern + keto trend growth + pre-launch social sentiment'. 6. Continuous learning improves accuracy as more data collected (weekly retraining on latest sales).",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["ML Prediction Agent", "Neural Network Agent", "New Product Launch Agent"],
+        "utilityAgents": ["Feature Engineering Pipeline", "Model Training Platform", "Social Media Analytics", "Competitor Intelligence"]
+      },
+      "dataSources": [
+        "Historical sales data with 100+ features (sales, weather, holidays, promotions, prices)",
+        "Competitor pricing and promotional activity monitoring",
+        "Social media sentiment and influencer mentions",
+        "Economic indicators (consumer confidence, unemployment, inflation)",
+        "Web traffic and search trends (Google Trends for product interest)",
+        "Inventory availability and stockout history",
+        "Customer demographics and location-based preferences",
+        "Supplier lead times and production constraints"
+      ],
+      "benefits": [
+        "85-95% forecast accuracy vs 75-85% statistical methods (10-20% improvement)",
+        "100+ features analyzed vs 10-15 (captures complex demand drivers)",
+        "Non-linear pattern recognition (weather + payday + social media interactions)",
+        "New product demand prediction (40-50% → 70-80% accuracy)",
+        "Competitive intelligence integrated (pricing, promotions, market share)",
+        "Continuous learning and weekly retraining improves accuracy over time"
+      ],
+      "metrics": ["Forecast accuracy: 85-95%", "Features used: 100+ variables", "Model type: ML (gradient boosting, neural nets)", "New product accuracy: 70-80%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy gradient boosting for top 500 SKUs with 20-30 key features initially", "Integrate social media sentiment for trending product categories", "Implement new product similarity matching for launch forecasts"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform (Python scikit-learn, XGBoost, TensorFlow) with GPU compute", "Feature engineering pipeline for 100+ variable preparation", "Social media and competitor data integrations", "Historical sales data with granular attributes (3-5 years minimum)", "Model training and deployment infrastructure (MLOps)", "Data science team or ML expertise for model development", "A/B testing framework for forecast accuracy measurement"]
+    },
+    "icon": "brain",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-demand-sensing-real-time",
+    "type": "function",
+    "level": 4,
+    "label": "Demand Sensing (Real-Time Signals)",
+    "description": "Short-term demand detection using POS data, web traffic, and social signals updating forecasts daily achieving 70-90% reduction in forecast error for 0-4 week horizon versus monthly static forecasts.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Monthly demand forecast created at end of previous month: 'January forecast generated Dec 20, locked for entire month'. 2. Unexpected demand spike occurs Jan 15 due to viral TikTok video about product (demand up 400%). 3. Forecast not updated until Feb planning cycle (Jan 25-30), by which time stockout occurred Jan 16-25 (10 days missed sales). 4. Static monthly forecasts can't respond to real-time market changes, social media trends, weather events, competitor actions. 5. Lost sales due to inability to sense and react to short-term demand signals (TikTok viral videos, sudden weather changes, competitor stockouts).",
+      "constraints": [
+        "Monthly forecast refresh cycle too slow (misses short-term changes)",
+        "Static forecasts locked for 30 days (can't adjust to viral trends)",
+        "10-14 day lag between demand signal and forecast update",
+        "No real-time data integration (POS, web traffic, social media)",
+        "Stockouts occur before forecast adjusted (lost revenue opportunity)",
+        "Weather events, competitor actions, viral trends not detected"
+      ],
+      "metrics": ["Forecast update frequency: Monthly", "Signal-to-forecast lag: 10-14 days", "Short-term accuracy (0-4 weeks): 60-70%", "Viral trend detection: Manual (too late)"]
+    },
+    "agentic": {
+      "workflow": "1. Demand Sensing Agent monitors real-time signals daily: POS sales trends, website traffic and conversion rates, social media mentions and sentiment, search trends, weather forecasts. 2. Agent detects TikTok viral video Jan 15 driving 400% spike in product search and web traffic: 'Product SKU#789 showing 380% website traffic increase, 450% social media mentions, 290% sales vs forecast - viral trend detected'. 3. Agent updates short-term forecast (0-4 weeks) immediately: 'Adjusting forecast from 5,000 to 22,000 units for next 2 weeks based on viral trend velocity'. 4. Replenishment Agent triggers emergency order to supplier: 'Rush order 15,000 units overnight delivery to prevent stockout, viral trends typically sustain 7-14 days'. 5. 70-90% reduction in forecast error for near-term horizon through daily updates vs monthly static forecasts. 6. Agent monitors trend decay: 'Viral trend declining, sales down to 180% of baseline by week 3, adjusting forecast back to normal by week 4'.",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["Demand Sensing Agent", "Viral Trend Detection Agent"],
+        "utilityAgents": ["POS Data Stream", "Web Analytics", "Social Listening Platform", "Weather API", "Replenishment Trigger"]
+      },
+      "dataSources": [
+        "Real-time POS sales data (daily/hourly by SKU and location)",
+        "Website traffic, search, conversion rates by product",
+        "Social media mentions, sentiment, influencer activity",
+        "Search trends (Google Trends, internal site search)",
+        "Weather forecasts and actual conditions by region",
+        "Competitor inventory status and pricing changes",
+        "Promotional activity and advertising spend",
+        "Email campaign engagement and click-through rates"
+      ],
+      "benefits": [
+        "70-90% reduction in short-term forecast error (0-4 weeks) vs monthly forecasts",
+        "Daily forecast updates capture viral trends, weather changes, competitor actions",
+        "Real-time signal detection (TikTok videos, Instagram influencers) within hours",
+        "Emergency replenishment triggered automatically (prevent stockouts)",
+        "Trend decay monitoring adjusts forecasts as virality fades",
+        "Lost sales prevention through rapid response (hours vs weeks)"
+      ],
+      "metrics": ["Forecast update frequency: Daily (real-time)", "Signal-to-forecast lag: <24 hours", "Short-term accuracy (0-4 weeks): 85-95%", "Viral trend detection: Automated (same day)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy POS daily sales monitoring for top 100 SKUs with automated alerts for +/-50% spikes", "Integrate Google Trends and social listening for trending product detection", "Enable weekly forecast refresh for 0-4 week horizon vs monthly"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Real-time POS data streaming (daily/hourly granularity)", "Web analytics platform (Google Analytics, Adobe Analytics)", "Social listening tools (Brandwatch, Sprinklr, Hootsuite)", "Weather API integration for regional forecasts", "Replenishment system integration for automated ordering", "Demand planning platform supporting daily forecast updates", "Alert and notification system for demand spikes"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-new-product-demand-forecasting",
+    "type": "function",
+    "level": 4,
+    "label": "New Product Demand Forecasting",
+    "description": "Similarity matching and market trend analysis achieving 70-80% new product forecast accuracy versus 40-50% guesswork reducing launch failures and stockouts by 50%.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. New product launching with zero historical sales data, demand planner guesses initial forecast: 'Let's order 10,000 units for new keto snack bar launch, seems reasonable'. 2. Guess based on intuition, similar category averages, marketing team optimism ('This will be huge!'). 3. Product launches, actual demand 35,000 units in month 1 (stockout by week 2, lost sales). 4. Or opposite scenario: forecast 10,000, actual demand 2,000 (8,000 units excess inventory, markdowns). 5. 40-50% forecast accuracy for new products due to lack of historical data and systematic approach. 6. 50% of new product launches fail due to under-forecasting (stockout kills momentum) or over-forecasting (excess inventory, financial loss).",
+      "constraints": [
+        "No historical sales data for new products (pure guesswork)",
+        "40-50% forecast accuracy for new product launches",
+        "50% launch failure rate (stockout or overstock)",
+        "Market trend analysis manual and subjective",
+        "Similar product comparisons inconsistent",
+        "Social media buzz and pre-launch demand signals ignored"
+      ],
+      "metrics": ["New product accuracy: 40-50%", "Launch success rate: 50%", "Stockout rate (new products): 30-40%", "Overstock rate (new products): 35-45%"]
+    },
+    "agentic": {
+      "workflow": "1. New Product Forecasting Agent analyzes similar product launches historically: 'Last 3 keto snack bar launches averaged 18,000 units month 1, range 12K-28K units'. 2. Market Trend Agent assesses category growth: 'Keto snack category growing 35% YoY, consumer interest (Google Trends) up 120% vs last year, competitor launches selling out'. 3. Social Buzz Agent monitors pre-launch signals: 'Product announced 8 weeks ago, 15,000 Instagram followers, influencer partnerships generating 2.5M impressions, email waitlist 8,500 subscribers'. 4. Agent builds forecast using similarity matching + market trends + pre-launch signals: 'Forecast 32,000 units month 1 (vs 18K similar product average) due to strong pre-launch buzz and keto trend growth'. 5. Forecast accuracy 70-80% for new products through systematic analysis vs 40-50% guesswork. 6. Launch success rate improves to 75-85% with appropriate inventory positioning (stockout and overstock risks both reduced 50%).",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["New Product Forecasting Agent", "Market Trend Agent", "Social Buzz Agent"],
+        "utilityAgents": ["Historical Product Launch Database", "Social Listening Platform", "Search Trend Analytics", "Pre-Launch Campaign Tracker"]
+      },
+      "dataSources": [
+        "Historical new product launch sales data (similar categories, brands, price points)",
+        "Category growth trends and market size estimates",
+        "Social media buzz (mentions, sentiment, influencer engagement)",
+        "Pre-launch campaign performance (email signups, website traffic, ad engagement)",
+        "Competitor product launch results and trajectories",
+        "Consumer search trends (Google Trends, Amazon search volume)",
+        "Market research and consumer testing results",
+        "Retail buyer feedback and pre-orders"
+      ],
+      "benefits": [
+        "70-80% new product forecast accuracy vs 40-50% guesswork (30-50% improvement)",
+        "Launch success rate 75-85% vs 50% (50% reduction in failures)",
+        "Similarity matching identifies comparable products systematically",
+        "Pre-launch social buzz quantified (waitlist, influencers, impressions)",
+        "Market trend integration (category growth, consumer interest)",
+        "Stockout and overstock risks both reduced 50% through better forecasts"
+      ],
+      "metrics": ["New product accuracy: 70-80%", "Launch success rate: 75-85%", "Stockout rate (new products): 15-20%", "Overstock rate (new products): 18-23%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build database of last 50 new product launches with actual sales trajectories", "Integrate social listening for pre-launch buzz measurement", "Implement similarity matching algorithm for comparable product identification"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Historical new product launch data (3-5 years, 50+ launches)", "Similarity matching algorithm (ML-based product attribute comparison)", "Social listening platform for pre-launch buzz monitoring", "Market research and consumer trend data access", "Competitor intelligence for launch tracking", "Pre-launch campaign analytics (email, social, web traffic)", "Product attribute taxonomy (category, price, brand, ingredients, features)"]
+    },
+    "icon": "sparkles",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-promotional-demand-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Promotional Demand Planning",
+    "description": "Promotion effect modeling with elasticity curves achieving 80-90% promotional forecast accuracy versus 55-65% gut-feel estimates optimizing inventory for 2-5x demand spikes.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing plans 40%-off promotion for breakfast cereal next month, asks demand planner: 'How much inventory do we need?'. 2. Planner checks last promotion (30%-off generated 150% of normal demand), guesses: '40% discount should drive 200% demand, order 2x normal inventory'. 3. Promotion launches, actual demand 420% of normal (40% discount hit price elasticity sweet spot + back-to-school timing + competitive stockout). 4. Stockout occurs day 3 of 7-day promotion, lost sales and customer dissatisfaction. 5. 55-65% promotional forecast accuracy due to lack of price elasticity modeling, timing effects, competitive dynamics. 6. Either stockouts (under-forecasted) or massive overstock (over-forecasted) after promotions end.",
+      "constraints": [
+        "Promotional forecasts based on gut-feel and simple multipliers",
+        "55-65% forecast accuracy for promotional periods",
+        "Price elasticity not modeled (don't know 30% vs 40% discount impact)",
+        "Timing effects ignored (back-to-school, holidays, payday)",
+        "Competitive dynamics not considered (competitor stockouts drive demand)",
+        "Cross-promotional effects missed (cereal discount drives milk sales)"
+      ],
+      "metrics": ["Promotional forecast accuracy: 55-65%", "Stockout rate (promotions): 35-45%", "Overstock rate (post-promotion): 40-50%", "Elasticity modeling: None"]
+    },
+    "agentic": {
+      "workflow": "1. Promotional Planning Agent receives 40%-off cereal promotion plan, analyzes historical price elasticity: '30% discount = 180% demand, 40% = 350% demand, 50% = 520% demand (elasticity curve)'. 2. Agent models timing effects: 'Back-to-school week + payday Friday = additional +80% boost, expected total demand 430% (350% price effect × 1.23 timing multiplier)'. 3. Competitive Intelligence Agent checks competitor promotions: 'Competitor A stockout on competing cereal, 15% demand shift expected to our product'. 4. Cross-Effect Agent predicts halo sales: 'Cereal promotion drives +40% milk sales, +25% breakfast bar sales (basket analysis)'. 5. Agent forecasts total demand: 'Cereal SKU forecast 21,500 units (vs 5,000 normal), milk +2,000 units, breakfast bars +1,250 units'. 6. 80-90% promotional forecast accuracy through elasticity modeling, timing, competitive intelligence vs 55-65% gut-feel.",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["Promotional Planning Agent", "Price Elasticity Agent", "Competitive Intelligence Agent", "Cross-Effect Agent"],
+        "utilityAgents": ["Historical Promotion Database", "Basket Analysis Engine", "Competitor Monitoring", "Calendar Integration"]
+      },
+      "dataSources": [
+        "Historical promotional sales data (price points, discounts, volumes)",
+        "Price elasticity curves by category and SKU",
+        "Promotional calendar with timing, duration, discount levels",
+        "Competitive promotional activity and pricing",
+        "Calendar events (holidays, back-to-school, paydays)",
+        "Basket analysis (cross-promotional effects on complementary products)",
+        "Advertising spend and media impressions",
+        "Customer segmentation and promotional responsiveness"
+      ],
+      "benefits": [
+        "80-90% promotional forecast accuracy vs 55-65% gut-feel estimates",
+        "Price elasticity modeling (know 30% vs 40% vs 50% discount impact)",
+        "Timing effects captured (holidays, paydays, seasonal events)",
+        "Competitive dynamics integrated (stockouts, pricing actions)",
+        "Cross-promotional effects predicted (cereal drives milk sales)",
+        "Stockout reduction 35-45% → 15-20% during promotional periods"
+      ],
+      "metrics": ["Promotional forecast accuracy: 80-90%", "Stockout rate (promotions): 15-20%", "Overstock rate (post-promotion): 18-25%", "Elasticity modeling: ML-based curves"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build price elasticity curves for top 50 frequently promoted SKUs", "Integrate promotional calendar with demand forecasting system", "Implement basket analysis for cross-promotional effect identification"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Historical promotional data (3-5 years, hundreds of promotions)", "Price elasticity modeling capability (regression, ML)", "Promotional calendar integration with pricing and advertising", "Basket analysis for cross-promotional effects", "Competitor price and promotion monitoring", "Calendar event database (holidays, paydays, seasonal)", "Customer segmentation for promotional responsiveness"]
+    },
+    "icon": "tag",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-seasonal-trend-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Seasonal & Trend Analysis",
+    "description": "Multi-layer seasonality detection with trend decomposition identifying weekly, monthly, yearly patterns achieving 20-30% forecast improvement for seasonal products.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Demand planner applies simple seasonal factors from last year: 'December sales 200% of average, apply +100% factor to this December forecast'. 2. Single-layer seasonality ignores weekly patterns (weekend peaks), monthly patterns (payday effects), holiday shifts (Easter moves each year). 3. Ice cream forecast uses 'summer high, winter low' seasonal pattern, misses that July 4 week 300% higher than average July week. 4. Back-to-school forecasts miss that timing shifts by 1-2 weeks each year based on school district calendars. 5. Forecast errors 25-35% for highly seasonal products due to simplistic seasonal modeling.",
+      "constraints": [
+        "Single-layer seasonality (yearly factors only, miss weekly/monthly)",
+        "Prior year seasonal factors copied forward (don't adapt to shifts)",
+        "Holiday timing shifts ignored (Easter, school calendars)",
+        "Weekend vs weekday patterns not modeled",
+        "Payday effects (1st, 15th of month) missed",
+        "25-35% forecast error for seasonal products"
+      ],
+      "metrics": ["Seasonality layers: 1 (yearly only)", "Seasonal product accuracy: 65-75%", "Holiday shift handling: Manual adjustments", "Pattern complexity: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Seasonal Decomposition Agent analyzes ice cream sales data, detects 4 layers of seasonality: yearly (summer peak), monthly (payday effects), weekly (Fri-Sat peak), event-based (July 4, Memorial Day). 2. Agent quantifies each layer: 'Yearly: summer +280% vs winter, Monthly: payday weeks +18%, Weekly: Fri-Sat +42% vs Mon-Thu, Events: July 4 week +320%'. 3. Trend Analysis Agent separates growth from seasonality: 'Ice cream category growing 8% annually, plus seasonal effects, next July 4 forecast 15% higher than last year July 4 (growth + seasonality)'. 4. Holiday Shift Agent adjusts for calendar variations: 'Easter in April this year vs March last year, shift chocolate egg sales forecast by 3 weeks'. 5. Agent combines all layers for accurate forecast: 'Ice cream SKU#456 forecast July 4 weekend (Sat): 8,200 units (2,000 baseline × 2.8 summer × 1.18 payday × 1.42 Saturday × 1.15 growth)'. 6. 20-30% forecast improvement for seasonal products through multi-layer pattern detection.",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["Seasonal Decomposition Agent", "Trend Analysis Agent", "Holiday Shift Agent"],
+        "utilityAgents": ["Time-Series Analytics", "Calendar Database", "Statistical Decomposition Engine", "Pattern Recognition ML"]
+      },
+      "dataSources": [
+        "Multi-year historical sales data (5+ years for long-term trends)",
+        "Calendar database (holidays, school schedules, payday dates)",
+        "Weekly and daily sales patterns by SKU and location",
+        "Event calendar (July 4, Super Bowl, back-to-school dates)",
+        "Weather data for temperature-sensitive products",
+        "Economic indicators for consumer spending trends",
+        "Prior year seasonal factors and adjustments"
+      ],
+      "benefits": [
+        "20-30% forecast improvement for seasonal products (65-75% → 85-92% accuracy)",
+        "Multi-layer seasonality (yearly, monthly, weekly, event-based)",
+        "Holiday shift handling (Easter, school calendars adjusted automatically)",
+        "Trend separation (growth vs seasonal effects isolated)",
+        "Payday and weekend patterns captured (18% and 42% uplifts)",
+        "Event-based forecasting (July 4, Super Bowl specific predictions)"
+      ],
+      "metrics": ["Seasonality layers: 4+ (yearly, monthly, weekly, events)", "Seasonal product accuracy: 85-92%", "Holiday shift handling: Automated", "Pattern complexity: High (multi-layer)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement weekly pattern detection for top 100 seasonal SKUs", "Integrate calendar database for holiday and event-based forecasting", "Deploy trend decomposition to separate growth from seasonality"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["5+ years historical sales data (daily granularity for weekly patterns)", "Calendar database (holidays, school schedules, paydays)", "Time-series decomposition platform (STL, X-13-ARIMA)", "Event calendar with regional variations", "Weather data for temperature-sensitive categories", "Statistical analytics capability (Python, R, or commercial platform)"]
+    },
+    "icon": "calendar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-forecast-accuracy-monitoring-improvement",
+    "type": "function",
+    "level": 4,
+    "label": "Forecast Accuracy Monitoring & Improvement",
+    "description": "Continuous accuracy tracking with root-cause analysis achieving 15-25% accuracy improvement through automated learning from forecast errors and systematic bias correction.",
+    "parentCapability": "capability-demand-planning-forecasting",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Quarterly business review: demand planning team manually calculates forecast accuracy for last 90 days across major categories. 2. Report shows 68% overall accuracy (MAPE), but no SKU-level detail or root-cause analysis. 3. Team discusses: 'Accuracy down 3% from last quarter, let's try to improve', no systematic action plan. 4. Forecast errors not analyzed for patterns (always over-forecast promotions, always under-forecast new products). 5. Bias in forecasting process not identified or corrected (planner tends to round up 'to be safe'). 6. Same forecast errors repeat quarter after quarter with no learning or improvement.",
+      "constraints": [
+        "Quarterly accuracy reviews too infrequent (3-month delay for insights)",
+        "Category-level only (no SKU-level accuracy tracking)",
+        "No root-cause analysis (why forecasts wrong?)",
+        "Systematic biases not identified (over/under forecast patterns)",
+        "Manual calculation and reporting (limited depth)",
+        "No continuous improvement process (same errors repeat)"
+      ],
+      "metrics": ["Accuracy review frequency: Quarterly", "Granularity: Category-level", "Root-cause analysis: Manual (limited)", "Improvement rate: 2-3% annually"]
+    },
+    "agentic": {
+      "workflow": "1. Forecast Accuracy Agent tracks errors continuously at SKU-level: calculates MAPE, bias, mean error daily for all 10,000+ SKUs. 2. Agent identifies systematic patterns: 'Promotional forecasts consistently over by 25%, new product launches under by 35%, ice cream under-forecasted on hot weekends by 40%'. 3. Root Cause Agent analyzes top error drivers: 'Top 3 accuracy issues: 1) Promotions missing elasticity modeling (68% error rate), 2) Weather effects ignored (42% error), 3) Competitive stockouts not factored (31% error)'. 4. Improvement Agent recommends corrections: 'Implement price elasticity module (reduce promo error 25% → 10%), integrate weather API (reduce temp-sensitive error 40% → 15%)'. 5. Agent monitors improvement: 'Post-elasticity implementation, promotional accuracy improved 68% → 82% (+14%), ROI $2.4M reduced stockouts'. 6. Continuous learning loop: errors → root-cause → fix → measure → repeat, achieving 15-25% accuracy improvement annually.",
+      "agents": {
+        "orchestrator": "Demand Planning Orchestration Agent",
+        "superAgents": ["Forecast Accuracy Agent", "Root Cause Agent", "Improvement Agent"],
+        "utilityAgents": ["Accuracy Metrics Calculator", "Bias Detection Engine", "Statistical Analysis Platform", "Dashboard & Reporting"]
+      },
+      "dataSources": [
+        "Actual sales vs forecast data (daily, by SKU and location)",
+        "Forecast snapshots over time (track how forecasts changed)",
+        "Error patterns by category, SKU, location, time period",
+        "Promotional calendar and actual promotional performance",
+        "External factors (weather actuals, competitor actions)",
+        "Model performance metrics and parameters",
+        "Forecast bias indicators (over vs under patterns)"
+      ],
+      "benefits": [
+        "15-25% accuracy improvement annually through systematic learning",
+        "SKU-level accuracy tracking (10,000+ SKUs vs category-level)",
+        "Root-cause analysis automated (identify top error drivers)",
+        "Bias detection (systematic over/under forecasting patterns)",
+        "Daily accuracy monitoring vs quarterly manual reviews",
+        "Closed-loop improvement (error → fix → measure → repeat)"
+      ],
+      "metrics": ["Accuracy review frequency: Daily (continuous)", "Granularity: SKU-level (10,000+)", "Root-cause analysis: Automated (top drivers)", "Improvement rate: 15-25% annually"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy SKU-level accuracy tracking for top 500 SKUs (80% revenue)", "Implement bias detection for promotional forecasts", "Create weekly accuracy dashboard vs quarterly manual reports"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Actual sales data integrated with forecast system", "Historical forecast snapshots (not just final forecast)", "Accuracy metrics calculation engine (MAPE, bias, WMAPE)", "Root-cause analysis framework and statistical tools", "Dashboard and reporting platform for continuous monitoring", "Forecast improvement workflow and prioritization process"]
+    },
+    "icon": "chart-pie",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

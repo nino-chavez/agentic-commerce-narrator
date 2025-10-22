@@ -1,0 +1,762 @@
+[
+  {
+    "id": "capability-quote-to-order-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Quote-to-Order Management",
+    "description": "Orchestrates quote lifecycle with dramatic acceleration, high accuracy, and improved conversion through AI-powered automation.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": ["All"],
+    "businessModels": ["B2B"],
+    "functionCount": 9,
+    "keyFunctions": [
+      "RFQ Intake & Requirements Gathering",
+      "Product Configuration & Guided Selling",
+      "Dynamic Pricing Optimization",
+      "Quote Generation & Documentation",
+      "Approval Workflow Management",
+      "Conversion Prediction & Analytics",
+      "Negotiation Support",
+      "Order Conversion & Validation",
+      "Quote Lifecycle Management"
+    ],
+    "traditionalApproach": {
+      "description": "Manual quote creation with email-based approvals taking weeks and high error rates.",
+      "characteristics": [
+        "Manual quote building using spreadsheets or basic CPQ tools",
+        "Email-based approval chains",
+        "Static pricing without real-time market adaptation",
+        "No visibility into inventory availability during quoting",
+        "Limited quote-to-order conversion tracking"
+      ],
+      "constraints": [
+        "Long quote-to-order cycles cause lost deals to faster competitors",
+        "High percentage of quotes contain pricing/configuration errors requiring rework",
+        "Inconsistent pricing across different sales reps",
+        "No real-time inventory visibility leads to unfulfillable orders",
+        "Low quote conversion rate with no win/loss analytics"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-qtc-001",
+          "metric": "Quote-to-Order Cycle Time",
+          "value": "2-8 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'B2B sales cycle benchmarks']"
+        },
+        {
+          "id": "bench-qtc-002",
+          "metric": "Quote Error Rate",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'CPQ error rate studies']"
+        },
+        {
+          "id": "bench-qtc-003",
+          "metric": "Quote Conversion Rate (Traditional)",
+          "value": "20-40%",
+          "source": "TBD: [SME to provide source, e.g., 'B2B quote conversion benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-orchestrated quote lifecycle achieving dramatic acceleration, high accuracy, and improved conversion.",
+      "characteristics": [
+        "AI-powered RFQ intake extracts requirements from unstructured emails/forms",
+        "Guided selling agents recommend optimal product configurations",
+        "Dynamic pricing engine optimizes for margin, volume, competitive position",
+        "Instant quote generation",
+        "Automated approval routing with policy-based auto-approval",
+        "ML predicts conversion probability and recommends improvement actions"
+      ],
+      "benefits": [
+        "Dramatically faster quote generation",
+        "High quote accuracy eliminating manual errors",
+        "Significantly faster approvals through automation",
+        "High quote conversion rates",
+        "Substantial reduction in sales rep quoting time",
+        "Margin improvement through dynamic pricing"
+      ],
+      "projections": [
+        {
+          "metric": "Quote Generation Speed Improvement",
+          "value": "95% (minutes vs hours/days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered automation and template-based generation']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Quote Accuracy Improvement",
+          "value": "95%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated validation and real-time pricing/inventory integration']",
+          "sourceBenchmark": "bench-qtc-002"
+        },
+        {
+          "metric": "Approval Speed Improvement",
+          "value": "80% faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated workflow routing and policy-based auto-approval']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Quote Conversion Rate Improvement",
+          "value": "50-80% (vs 20-40%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on faster response times, accurate quotes, and predictive conversion optimization']",
+          "sourceBenchmark": "bench-qtc-003"
+        },
+        {
+          "metric": "Sales Rep Time Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation handling quote creation, pricing, and approval routing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Margin Improvement",
+          "value": "2-5 percentage points",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic pricing optimizing for competitive position and customer willingness to pay']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Quote-to-Order Orchestration Agent",
+        "RFQ Intelligence Agent",
+        "Guided Selling & Configuration Agent",
+        "Dynamic Pricing Optimization Agent",
+        "Quote Generation Agent",
+        "Intelligent Approval Workflow Agent",
+        "Predictive Conversion & Win/Loss Agent",
+        "Negotiation Assistant Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI-powered RFQ intake for pilot product line",
+        "Implement dynamic pricing engine for standard products",
+        "Enable automated approval for low-risk quotes (<$50K, standard terms)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Modern CRM with API access (Salesforce, Dynamics, etc.)",
+        "Product catalog with accurate cost and pricing data",
+        "Historical quote data (12-24 months) for ML training",
+        "Clear pricing policies and approval workflows",
+        "Integration with ERP for inventory and order entry"
+      ]
+    },
+    "icon": "document-text",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-contract-agreement-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Contract & Agreement Management",
+    "description": "Accelerates contract lifecycle with complete repository coverage, proactive renewals, and revenue recovery through AI-powered automation.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": ["All"],
+    "businessModels": ["B2B"],
+    "functionCount": 9,
+    "keyFunctions": [
+      "Contract Generation & Templating",
+      "Clause Library Management",
+      "Redline Analysis & Negotiation",
+      "Approval Workflow Routing",
+      "Contract Repository & Search",
+      "Compliance Monitoring",
+      "Renewal Management & Churn Prediction",
+      "E-Signature Integration",
+      "Contract Analytics & Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Manual contract creation with email-based collaboration, poor repository coverage, and missed renewals.",
+      "characteristics": [
+        "Manual contract customization via email collaboration",
+        "Email-based approval routing",
+        "Poor repository coverage (contracts in email/file shares)",
+        "Manual tracking in spreadsheets for renewal dates",
+        "Reactive compliance monitoring only when issues arise"
+      ],
+      "constraints": [
+        "Long contract cycles delay revenue and create competitive risk",
+        "No central searchable repository",
+        "Significant percentage of contracts missed for renewal",
+        "No visibility into customer compliance with volume commitments",
+        "Revenue leakage from missed rebates and unenforced terms"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cnt-001",
+          "metric": "Contract Cycle Time",
+          "value": "4-12 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'B2B contract lifecycle benchmarks']"
+        },
+        {
+          "id": "bench-cnt-002",
+          "metric": "Repository Coverage (Traditional)",
+          "value": "20-30% searchable",
+          "source": "TBD: [SME to provide source, e.g., 'Contract management system adoption studies']"
+        },
+        {
+          "id": "bench-cnt-003",
+          "metric": "Missed Renewals",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Contract renewal management studies']"
+        },
+        {
+          "id": "bench-cnt-004",
+          "metric": "Revenue Leakage from Unenforced Terms",
+          "value": "5-10%",
+          "source": "TBD: [SME to provide source, e.g., 'Contract compliance studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven contract lifecycle achieving faster cycles, complete coverage, proactive renewals, and revenue recovery.",
+      "characteristics": [
+        "AI contract generation auto-populates from CRM/quote data",
+        "Intelligent clause library recommends optimal terms based on risk profile",
+        "Automated redline analysis flags high-risk changes for legal review",
+        "Smart approval routing with auto-approval for standard terms",
+        "Complete contract repository with AI-powered search",
+        "Proactive compliance monitoring with real-time deviation alerts",
+        "ML predicts churn risk early for proactive renewal"
+      ],
+      "benefits": [
+        "Significantly faster contract cycles",
+        "Complete repository coverage",
+        "High renewal capture through proactive workflows",
+        "Proactive compliance vs reactive issue detection",
+        "Revenue recovery from enforcing terms and rebate accruals",
+        "Substantial reduction in legal time on routine contracts"
+      ],
+      "projections": [
+        {
+          "metric": "Contract Cycle Time Reduction",
+          "value": "70-85% (to 1-3 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered generation, automated routing, and smart approval workflows']",
+          "sourceBenchmark": "bench-cnt-001"
+        },
+        {
+          "metric": "Repository Coverage Improvement",
+          "value": "100% (vs 20-30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mandatory CLM workflow and AI metadata extraction']",
+          "sourceBenchmark": "bench-cnt-002"
+        },
+        {
+          "metric": "Renewal Capture Rate",
+          "value": "95%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated renewal alerts and predictive churn scoring']",
+          "sourceBenchmark": "bench-cnt-003"
+        },
+        {
+          "metric": "Revenue Recovery",
+          "value": "3-7%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive compliance monitoring and automated enforcement of volume commitments and rebate terms']",
+          "sourceBenchmark": "bench-cnt-004"
+        },
+        {
+          "metric": "Legal Time Reduction on Routine Contracts",
+          "value": "60-75%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated redline analysis and playbook-driven approval for standard terms']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Contract Lifecycle Orchestration Agent",
+        "Contract Generation Agent",
+        "Intelligent Clause Library Agent",
+        "Redline Analysis Agent",
+        "Contract Approval Workflow Agent",
+        "Contract Repository & Search Agent",
+        "Compliance Monitoring Agent",
+        "Renewal & Churn Prediction Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy CLM repository with AI metadata extraction for all new contracts",
+        "Implement e-signature integration for standard agreements",
+        "Enable renewal alerts 90 days before expiration with risk scoring"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-9 months",
+      "prerequisites": [
+        "Contract templates approved by legal team",
+        "Defined approval workflows and risk criteria",
+        "E-signature platform (or included in CLM)",
+        "Integration with CRM for contract-to-opportunity linking",
+        "Legal team trained on CLM playbook configuration"
+      ]
+    },
+    "icon": "document-duplicate",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-b2b-catalog-punchout",
+    "type": "capability",
+    "level": 3,
+    "label": "B2B Catalog & Punchout",
+    "description": "Delivers real-time catalogs with complete personalization, dramatically faster punchout setup, and significantly fewer order errors through AI-powered automation.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": ["All"],
+    "businessModels": ["B2B"],
+    "functionCount": 8,
+    "keyFunctions": [
+      "Dynamic Catalog Generation",
+      "Intelligent Personalization",
+      "Punchout Integration",
+      "AI Product Discovery & Search",
+      "Real-Time Inventory Visibility",
+      "Smart Product Substitutions",
+      "Catalog Syndication",
+      "Catalog Analytics & Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual catalog files with stale data, limited personalization, and high error rates.",
+      "characteristics": [
+        "Monthly catalog exports to CSV/Excel files",
+        "Manual customer-specific pricing additions",
+        "Email/FTP file distribution to customers",
+        "Manual punchout configuration",
+        "High percentage of punchout orders have errors from stale data"
+      ],
+      "constraints": [
+        "Monthly refresh cycles mean data significantly out of date",
+        "Limited customer-specific personalization at scale",
+        "High order error rate requires manual intervention",
+        "Long integration time for each customer's procurement system",
+        "No intelligent search, filters, or recommendations",
+        "Manual catalog creation doesn't scale"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cat-001",
+          "metric": "Punchout Setup Time",
+          "value": "4-12 weeks per customer",
+          "source": "TBD: [SME to provide source, e.g., 'B2B punchout integration benchmarks']"
+        },
+        {
+          "id": "bench-cat-002",
+          "metric": "Order Error Rate (Stale Data)",
+          "value": "30-50%",
+          "source": "TBD: [SME to provide source, e.g., 'B2B catalog order accuracy studies']"
+        },
+        {
+          "id": "bench-cat-003",
+          "metric": "Customer-Specific Personalization Coverage",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source, e.g., 'B2B catalog personalization benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Real-time API-driven catalogs achieving faster punchout setup, dramatically fewer errors, and complete personalization through AI-powered automation.",
+      "characteristics": [
+        "Real-time catalog generation from ERP inventory and pricing systems",
+        "AI personalization shows contract pricing and preferred items per customer",
+        "Self-service punchout setup via standardized connectors (cXML, OCI)",
+        "AI product discovery with intelligent search and recommendations",
+        "Real-time inventory checks prevent out-of-stock orders",
+        "Smart substitution suggestions when items unavailable",
+        "Multi-channel catalog syndication to marketplaces"
+      ],
+      "benefits": [
+        "Real-time catalog freshness",
+        "Dramatically faster punchout setup",
+        "Significantly fewer order errors through real-time validation",
+        "Complete customer-specific catalogs",
+        "Higher order values through discovery and recommendations",
+        "Substantially less catalog admin effort through automation",
+        "B2C-like search and discovery experience for B2B buyers"
+      ],
+      "projections": [
+        {
+          "metric": "Punchout Setup Time Reduction",
+          "value": "90-95% (to days vs 4-12 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service setup with standardized connectors']",
+          "sourceBenchmark": "bench-cat-001"
+        },
+        {
+          "metric": "Order Error Reduction",
+          "value": "80-90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time inventory and pricing validation']",
+          "sourceBenchmark": "bench-cat-002"
+        },
+        {
+          "metric": "Personalization Coverage",
+          "value": "100% (vs 10-20%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated customer-specific catalog generation']",
+          "sourceBenchmark": "bench-cat-003"
+        },
+        {
+          "metric": "Average Order Value Increase",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent product discovery and recommendations']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Catalog Admin Effort Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automation eliminating manual file creation and distribution']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "B2B Catalog Orchestration Agent",
+        "Dynamic Catalog Generation Agent",
+        "Intelligent Personalization Agent",
+        "Punchout Integration Agent",
+        "AI Product Discovery Agent",
+        "Real-Time Inventory Agent",
+        "Catalog Syndication Agent",
+        "Catalog Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy API-driven catalog for top 20% of customers",
+        "Implement real-time inventory visibility to reduce out-of-stock errors",
+        "Enable intelligent search with synonyms and filters for web portal"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Product master data in structured format (PIM or clean ERP data)",
+        "Real-time inventory visibility (or near real-time, <1 hour latency)",
+        "Customer-specific pricing rules documented",
+        "Customer procurement system details for punchout",
+        "Product images and specifications for catalog content"
+      ]
+    },
+    "icon": "book-open",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-multi-user-buying-approvals",
+    "type": "capability",
+    "level": 3,
+    "label": "Multi-User Buying & Approvals",
+    "description": "Accelerates approvals dramatically with complete visibility, zero lost requests, and high auto-approval rates through intelligent automation.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": ["All"],
+    "businessModels": ["B2B"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Requisition Management",
+      "Intelligent Approval Routing",
+      "Budget Validation & Checking",
+      "Delegation & Escalation",
+      "Mobile Approvals",
+      "Compliance & Audit Trail",
+      "Analytics & Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Email-based approval chains with no visibility, high request loss, and budget overruns.",
+      "characteristics": [
+        "Email requests from employees to managers",
+        "Multi-level email approval chains",
+        "No real-time budget checking until procurement reviews",
+        "Lost or forgotten requests with no tracking",
+        "Scattered audit trail across emails"
+      ],
+      "constraints": [
+        "Long approval cycles",
+        "Significant percentage of requests lost or forgotten requiring follow-ups",
+        "No visibility for requestors into approval status",
+        "Percentage of purchases exceed budget (discovered post-facto)",
+        "Inconsistent policy enforcement across managers",
+        "No delegation management when approvers out-of-office"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-appr-001",
+          "metric": "Approval Cycle Time",
+          "value": "3-7 days",
+          "source": "TBD: [SME to provide source, e.g., 'Procurement approval cycle benchmarks']"
+        },
+        {
+          "id": "bench-appr-002",
+          "metric": "Lost Request Rate",
+          "value": "10-20%",
+          "source": "TBD: [SME to provide source, e.g., 'Manual approval process tracking studies']"
+        },
+        {
+          "id": "bench-appr-003",
+          "metric": "Budget Overrun Rate",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Budget compliance studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Automated approval workflows achieving dramatically faster approvals, complete visibility, and high auto-approval rates through intelligent routing.",
+      "characteristics": [
+        "Self-service requisition portal with personalized catalogs",
+        "Intelligent routing based on amount, category, requester, risk",
+        "Real-time budget validation against GL/ERP systems",
+        "Smart delegation auto-routes when approvers out-of-office",
+        "Mobile approval app with push notifications",
+        "High auto-approval rate for low-risk purchases within policy",
+        "Complete audit trail with timestamps and reason codes"
+      ],
+      "benefits": [
+        "Dramatically faster approvals",
+        "Complete real-time visibility for requestors",
+        "Zero lost requests through workflow enforcement",
+        "High policy compliance through automated enforcement",
+        "High auto-approval rate for low-risk purchases",
+        "Complete budget overrun prevention through real-time checking",
+        "Better approver experience with mobile and bulk actions"
+      ],
+      "projections": [
+        {
+          "metric": "Approval Speed Improvement",
+          "value": "75-85% (to 4-8 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated routing, mobile approvals, and policy-based auto-approval']",
+          "sourceBenchmark": "bench-appr-001"
+        },
+        {
+          "metric": "Visibility Improvement",
+          "value": "100%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on workflow system providing real-time status to all requestors']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Lost Request Elimination",
+          "value": "Zero (vs 10-20%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on workflow enforcement ensuring all requests tracked until completion']",
+          "sourceBenchmark": "bench-appr-002"
+        },
+        {
+          "metric": "Policy Compliance Rate",
+          "value": "95%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated policy enforcement and validation rules']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Auto-Approval Rate",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on policy-based rules for low-risk purchases within approved budgets']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Budget Overrun Prevention",
+          "value": "100% (vs 15-25%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time budget validation preventing submission of over-budget requests']",
+          "sourceBenchmark": "bench-appr-003"
+        }
+      ],
+      "agents": [
+        "Multi-User Buying Orchestration Agent",
+        "Requisition Management Agent",
+        "Intelligent Approval Routing Agent",
+        "Budget Validation Agent",
+        "Delegation & Escalation Agent",
+        "Mobile Approval Agent",
+        "Compliance & Audit Trail Agent",
+        "Analytics & Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy self-service requisition portal for pilot department",
+        "Implement auto-approval for low-value purchases (<$500)",
+        "Enable mobile approval app for top 20 frequent approvers"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Documented approval policies (thresholds, routing rules)",
+        "Clean budget structure in ERP/GL (cost centers, budget codes)",
+        "User directory with roles, departments, manager hierarchy",
+        "Integration with B2B catalog or product master data",
+        "Executive sponsorship for policy enforcement"
+      ]
+    },
+    "icon": "users",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-credit-payment-terms",
+    "type": "capability",
+    "level": 3,
+    "label": "Credit & Payment Terms Management",
+    "description": "Delivers instant credit decisions, proactive collections, and significant bad debt reduction through AI-powered scoring and dynamic risk management.",
+    "parentDomain": "domain-payments-finance",
+    "industries": ["All"],
+    "businessModels": ["B2B"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Credit Scoring",
+      "Dynamic Credit Limit Management",
+      "Payment Terms Optimization",
+      "Proactive Collections",
+      "Portfolio Risk Monitoring",
+      "Risk-Based Pricing",
+      "Credit Analytics & Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Manual credit review with static limits, reactive collections, and high bad debt rates.",
+      "characteristics": [
+        "Manual credit analyst review",
+        "Static credit limits rarely reviewed",
+        "Reactive collections starting after missed payment",
+        "Quarterly review of top customers only",
+        "No risk-based pricing adjustments"
+      ],
+      "constraints": [
+        "Multi-day credit decisions delay sales to faster competitors",
+        "Significant percentage of customers have outdated credit limits",
+        "Moderate collection recovery rate with reactive approach",
+        "High bad debt write-offs annually",
+        "Long DSO (Days Sales Outstanding)",
+        "No proactive monitoring of customer financial health"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cred-001",
+          "metric": "Credit Decision Time",
+          "value": "3-5 days",
+          "source": "TBD: [SME to provide source, e.g., 'B2B credit approval cycle benchmarks']"
+        },
+        {
+          "id": "bench-cred-002",
+          "metric": "Outdated Credit Limits",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Credit management review cycle studies']"
+        },
+        {
+          "id": "bench-cred-003",
+          "metric": "Collection Recovery Rate (Reactive)",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Accounts receivable collection effectiveness studies']"
+        },
+        {
+          "id": "bench-cred-004",
+          "metric": "Bad Debt Rate (Annual)",
+          "value": "5-10%",
+          "source": "TBD: [SME to provide source, e.g., 'B2B bad debt write-off benchmarks']"
+        },
+        {
+          "id": "bench-cred-005",
+          "metric": "Days Sales Outstanding (DSO)",
+          "value": "45-65 days",
+          "source": "TBD: [SME to provide source, e.g., 'B2B payment terms and DSO benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven credit management achieving instant decisions, proactive collections, and significantly reduced bad debt through dynamic risk management.",
+      "characteristics": [
+        "Instant AI credit scoring analyzes multiple data sources",
+        "Auto-approval for low-risk customers within policy",
+        "Dynamic credit limit adjustments based on payment behavior",
+        "Proactive collections predict late payment risk early",
+        "Risk-based pricing charges premium for high-risk customers",
+        "Daily monitoring of customer financial health and payment trends",
+        "Automated dunning sequences personalized by risk profile"
+      ],
+      "benefits": [
+        "Dramatically faster credit decisions",
+        "Proactive credit management with daily monitoring",
+        "Significant reduction in bad debt",
+        "Substantial DSO improvement",
+        "High collection recovery",
+        "Dynamic risk management with real-time limit adjustments",
+        "Sales increase from faster approvals and higher limits"
+      ],
+      "projections": [
+        {
+          "metric": "Credit Decision Speed Improvement",
+          "value": "95%+ (seconds vs 3-5 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI credit scoring automating analysis and policy-based auto-approval']",
+          "sourceBenchmark": "bench-cred-001"
+        },
+        {
+          "metric": "Bad Debt Reduction",
+          "value": "30-50% (to 2.5-3.5%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive risk monitoring, dynamic limit adjustments, and early collection intervention']",
+          "sourceBenchmark": "bench-cred-004"
+        },
+        {
+          "metric": "DSO Improvement",
+          "value": "10-20% (to 38-55 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive collections and automated dunning improving payment timeliness']",
+          "sourceBenchmark": "bench-cred-005"
+        },
+        {
+          "metric": "Collection Recovery Rate",
+          "value": "80-90% (vs 50-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive late payment detection and personalized collection strategies']",
+          "sourceBenchmark": "bench-cred-003"
+        },
+        {
+          "metric": "Sales Increase from Credit Optimization",
+          "value": "5-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on faster credit approvals reducing sales cycle friction and dynamic limits enabling larger orders']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Credit & Payment Terms Orchestration Agent",
+        "AI Credit Scoring Agent",
+        "Dynamic Credit Limit Agent",
+        "Payment Terms Optimization Agent",
+        "Proactive Collections Agent",
+        "Portfolio Risk Monitoring Agent",
+        "Risk-Based Pricing Agent",
+        "Credit Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI credit scoring for new customer applications",
+        "Implement proactive collections with automated payment reminders",
+        "Enable dynamic credit limit adjustments for top 100 customers"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Clean AR data (customer master, payment history)",
+        "Documented credit policies (limits by risk tier)",
+        "Integration with ERP/AR system",
+        "D&B subscription or similar credit bureau access",
+        "Executive alignment on risk tolerance"
+      ]
+    },
+    "icon": "credit-card",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "id": "agent-talent-acquisition-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Talent Acquisition Orchestration Agent",
+    "description": "Coordinates end-to-end recruiting lifecycle from requisition through offer acceptance, managing candidate state machine and triggering appropriate agents based on hiring stage.",
+    "capabilities": [
+      "Orchestrate complete hiring workflow from req to offer",
+      "Manage candidate state transitions (Applied → Screening → Interview → Offer)",
+      "Balance speed vs quality in hiring decisions",
+      "Coordinate recruiter workload and capacity planning",
+      "Monitor diversity metrics throughout funnel",
+      "Track conversion rates and identify bottlenecks"
+    ],
+    "integrations": [
+      "Applicant Tracking System (Workday, Greenhouse, Lever)",
+      "Job Board APIs (LinkedIn, Indeed, Glassdoor)",
+      "Calendar APIs (Outlook, Google Calendar)",
+      "Video Interview Platforms (Zoom, Teams)",
+      "Background Check Vendors (Sterling, HireRight)",
+      "HRIS for new hire data transfer"
+    ],
+    "dataSources": [
+      "Job requisitions and requirements",
+      "Historical hiring data (time-to-fill, source effectiveness)",
+      "Resume and application data",
+      "Interview feedback and scores",
+      "Diversity and inclusion metrics",
+      "Market salary data (Glassdoor, Payscale)"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-employee-lifecycle-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Employee Lifecycle Orchestration Agent",
+    "description": "Manages employee state transitions from offer acceptance through separation, triggering onboarding and offboarding workflows while tracking completion rates and escalating blockers.",
+    "capabilities": [
+      "Orchestrate onboarding from offer acceptance to Day 1 readiness",
+      "Manage 30/60/90-day milestone check-ins",
+      "Coordinate IT provisioning, benefits enrollment, and training",
+      "Trigger offboarding workflows on resignation notification",
+      "Ensure security compliance through access revocation",
+      "Track onboarding effectiveness and first-year retention"
+    ],
+    "integrations": [
+      "HRIS (Workday, BambooHR, ADP)",
+      "IT Service Management (ServiceNow, Jira)",
+      "Identity Management (Active Directory, Okta)",
+      "Learning Management System (Cornerstone, Docebo)",
+      "Benefits Admin Platform",
+      "Survey Tools (Qualtrics, SurveyMonkey)"
+    ],
+    "dataSources": [
+      "Employee hire data (role, department, location, start date)",
+      "IT systems and access requirements by role",
+      "Training curriculum and completion data",
+      "Manager feedback and check-in notes",
+      "Exit interview feedback and reasons for leaving",
+      "First-year retention metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-learning-development-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Learning & Development Orchestration Agent",
+    "description": "Coordinates continuous learning across the organization, balancing personalized employee development with enterprise-wide skill gap closure and compliance requirements.",
+    "capabilities": [
+      "Orchestrate personalized learning paths for employees",
+      "Balance individual development with organizational needs",
+      "Manage compliance training deadlines and escalations",
+      "Track skills gap closure and competency development",
+      "Measure learning impact on performance and retention",
+      "Optimize content recommendations based on engagement"
+    ],
+    "integrations": [
+      "Learning Management System (Cornerstone, Docebo, Degreed)",
+      "Content Platforms (LinkedIn Learning, Coursera, Udemy)",
+      "Skills Taxonomy Database",
+      "Performance Management System",
+      "HRIS for employee profile data",
+      "Survey Tools for feedback collection"
+    ],
+    "dataSources": [
+      "Employee skills profiles and competency data",
+      "Performance review data and feedback",
+      "Course catalog and completion data",
+      "Job postings and role requirements",
+      "Industry skill trends and emerging technologies",
+      "Employee career goals and interests"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-performance-management-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Performance Management Orchestration Agent",
+    "description": "Coordinates continuous performance feedback, goal tracking, and development planning while balancing employee growth with organizational accountability.",
+    "capabilities": [
+      "Orchestrate continuous feedback cycles throughout year",
+      "Manage goal-setting and OKR tracking processes",
+      "Coordinate 360 feedback collection and analysis",
+      "Balance development focus with performance evaluation",
+      "Ensure rating calibration and consistency across managers",
+      "Identify high performers and flight risks proactively"
+    ],
+    "integrations": [
+      "Performance Management Platform (Workday, 15Five, Lattice)",
+      "Goal Tracking System (Asana, Monday.com)",
+      "HRIS for employee data and org hierarchy",
+      "Collaboration Tools (Slack, Teams) for feedback prompts",
+      "Survey Tools for 360 feedback collection",
+      "Learning Management System for development plans"
+    ],
+    "dataSources": [
+      "Ongoing feedback and recognition data",
+      "Goal and OKR progress tracking",
+      "360 feedback responses and themes",
+      "Performance ratings history",
+      "Promotion and attrition data",
+      "Employee engagement survey results"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-compensation-benefits-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Compensation & Benefits Orchestration Agent",
+    "description": "Coordinates compensation planning, benefits administration, and pay equity monitoring while balancing competitiveness with budget constraints and fairness.",
+    "capabilities": [
+      "Orchestrate annual merit and bonus cycles",
+      "Coordinate benefits open enrollment and life event changes",
+      "Balance pay competitiveness with budget constraints",
+      "Monitor pay equity and flag disparities proactively",
+      "Optimize benefits utilization and employee satisfaction",
+      "Generate total rewards statements and communications"
+    ],
+    "integrations": [
+      "HRIS / Payroll (Workday, ADP)",
+      "Benefits Admin Platform (Benefitfocus, Businessolver)",
+      "Market Data Providers (Payscale, Salary.com, Radford)",
+      "Equity Analysis Tools",
+      "Survey and Communication Tools",
+      "Financial Planning Systems for budget tracking"
+    ],
+    "dataSources": [
+      "Employee compensation data (salary, bonus, equity)",
+      "Market salary data by role and location",
+      "Benefits enrollment and utilization data",
+      "Employee demographics for equity analysis",
+      "Performance ratings and promotion history",
+      "External compensation benchmarks"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-time-attendance-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Time & Attendance Orchestration Agent",
+    "description": "Coordinates time capture, approval workflows, overtime management, and payroll integration while ensuring FLSA compliance and real-time labor cost visibility.",
+    "capabilities": [
+      "Orchestrate time capture from clocks, mobile, and systems",
+      "Manage approval workflows with exception-based routing",
+      "Monitor overtime and trigger proactive manager alerts",
+      "Ensure compliance with FLSA, meal breaks, and rest periods",
+      "Coordinate PTO requests and coverage management",
+      "Provide real-time labor cost analytics by location and department"
+    ],
+    "integrations": [
+      "Time & Attendance System (Kronos, ADP, UKG)",
+      "Biometric Time Clocks",
+      "Mobile App for employee self-service",
+      "Payroll System for data transfer",
+      "Scheduling Platform for shift management",
+      "HRIS for employee master data"
+    ],
+    "dataSources": [
+      "Time punch data (clock in/out times)",
+      "Employee schedules and shift assignments",
+      "PTO balances and leave requests",
+      "Overtime and compliance tracking data",
+      "Labor costs and department budgets",
+      "State and federal labor law requirements"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-workforce-planning-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Workforce Planning & Analytics Orchestration Agent",
+    "description": "Coordinates strategic workforce planning with predictive analytics, balancing near-term operational needs with long-term talent strategy and succession planning.",
+    "capabilities": [
+      "Orchestrate continuous workforce demand forecasting",
+      "Predict attrition risk and trigger retention interventions",
+      "Analyze skills gaps and recommend build vs buy strategies",
+      "Coordinate succession planning for critical roles",
+      "Monitor diversity metrics and forecast goal attainment",
+      "Model workforce scenarios for growth, contraction, and reorganization"
+    ],
+    "integrations": [
+      "HRIS / People Analytics Platform (Workday, Visier, OneModel)",
+      "Financial Planning System (Anaplan, Adaptive Insights)",
+      "Skills Taxonomy Database",
+      "Survey Tools (engagement, pulse surveys)",
+      "Business Intelligence (Tableau, Power BI)",
+      "Applicant Tracking System for pipeline data"
+    ],
+    "dataSources": [
+      "Employee census data (demographics, tenure, role, department)",
+      "Compensation and promotion history",
+      "Performance ratings and feedback",
+      "Engagement survey responses and pulse data",
+      "Attrition data and exit interview reasons",
+      "Skills and competency assessments",
+      "Business plans and growth forecasts"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-employee-engagement-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Employee Engagement & Relations Orchestration Agent",
+    "description": "Coordinates continuous employee listening, sentiment analysis, manager effectiveness tracking, and employee relations case management while balancing confidentiality with transparency.",
+    "capabilities": [
+      "Orchestrate pulse surveys and continuous feedback collection",
+      "Analyze sentiment trends and identify emerging issues",
+      "Track manager effectiveness and flag toxic managers",
+      "Manage employee relations case workflows and escalations",
+      "Detect crisis situations and trigger immediate interventions",
+      "Recommend action plans for low engagement teams"
+    ],
+    "integrations": [
+      "Engagement Platform (Culture Amp, Glint, Peakon)",
+      "Case Management System (ServiceNow, Salesforce)",
+      "NLP / Sentiment Analysis Tools",
+      "Employee Assistance Program (EAP)",
+      "Communication Tools (Slack, Teams)",
+      "HRIS for employee and manager data"
+    ],
+    "dataSources": [
+      "Pulse survey responses and comments",
+      "Engagement survey history and trends",
+      "Exit interview data and themes",
+      "Manager ratings from 360 feedback and performance data",
+      "Employee relations cases and resolutions",
+      "Attrition data by manager and team"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-hr-compliance-orchestrator",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "HR Compliance Orchestration Agent",
+    "description": "Coordinates all HR compliance activities including regulatory monitoring, training enforcement, audit readiness, and automated reporting across federal, state, and local requirements.",
+    "capabilities": [
+      "Orchestrate compliance calendar and deadline tracking",
+      "Monitor regulatory changes and assess organizational impact",
+      "Enforce compliance training completion with escalations",
+      "Maintain audit readiness with real-time documentation",
+      "Automate regulatory report generation and filing",
+      "Track policy acknowledgments and update distributions"
+    ],
+    "integrations": [
+      "Compliance Management Platform (Mitratech, Navex Global)",
+      "Learning Management System for training tracking",
+      "Regulatory Intelligence Service (Thomson Reuters, Bloomberg Law)",
+      "Document Management System",
+      "HRIS for employee data and reporting",
+      "E-filing portals (EEOC, DOL)"
+    ],
+    "dataSources": [
+      "Employee census and demographics for EEO-1 reporting",
+      "Training completion data by requirement",
+      "Policy acknowledgments and distribution tracking",
+      "Employee relations cases and investigations",
+      "Regulatory databases and legal update feeds",
+      "Audit history and compliance performance metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#EF4444",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

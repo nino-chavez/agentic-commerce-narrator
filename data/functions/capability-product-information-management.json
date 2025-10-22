@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-product-data-governance-master-data",
+    "type": "function",
+    "level": 4,
+    "label": "Product Data Governance & Master Data Management",
+    "description": "AI-powered data validation with golden record creation achieving 95%+ data quality versus 40-60% manual with real-time updates replacing 3-5 day cycles through automated governance and master data orchestration.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager manually enters new product data into PIM system: creates product record typing SKU, title, description, attributes (color, size, material) into web form taking 20-30 minutes per product. 2. Data entry errors common: typos in descriptions, missing required attributes (40-60% incomplete records), inconsistent naming conventions (Blue vs BLU vs blue). 3. Manual data validation: merchandising team reviews product data weekly identifying errors but backlog grows to 500+ products awaiting correction. 4. Data updates slow: change requests (price update, discontinued status) submitted via email or Slack taking 3-5 days to implement across all systems. 5. No golden record concept: product data exists in multiple systems (PIM, ecommerce, ERP, marketplaces) with inconsistencies and no single source of truth. 6. Data quality poor: 40-60% of products have incomplete or incorrect data resulting in customer complaints, returns, and lost sales. 7. Manual governance: data quality measured quarterly through audits revealing 40-60% pass rate with no real-time enforcement or automated remediation.",
+      "constraints": [
+        "Manual data entry taking 20-30 minutes per product with 40-60% error rates",
+        "Missing required attributes in 40-60% of product records",
+        "Inconsistent data across systems (no golden record or single source of truth)",
+        "3-5 day delay for data updates across all channels and systems",
+        "Data quality 40-60% due to manual entry errors and incomplete validation",
+        "Quarterly audits provide retrospective quality metrics with no real-time enforcement"
+      ],
+      "metrics": ["Data quality: 40-60% complete/accurate", "Data entry time: 20-30 min per product", "Update cycle: 3-5 days", "Governance: Quarterly audits (retrospective)"]
+    },
+    "agentic": {
+      "workflow": "1. Data Governance Agent receives new product data from supplier feed or manual entry: validates data against schema rules (required fields, data types, value ranges) rejecting 95% of errors at submission vs 40-60% post-entry errors. 2. Master Data Agent applies AI-powered enrichment: auto-fills missing attributes using ML models trained on similar products (e.g., infers 'material: cotton' for apparel based on product title and category). 3. Agent creates golden record: consolidates product data from multiple sources (supplier feeds, internal entry, marketplace data) using conflict resolution rules to establish single source of truth. 4. Agent enforces data governance policies: validates product title follows brand style guide (title case, no special characters), description meets 50-word minimum, all required attributes completed achieving 95%+ quality. 5. Agent publishes golden record in real-time: distributes validated product data to all downstream systems (ecommerce, ERP, marketplaces, POS) within seconds vs 3-5 day manual updates. 6. Data Quality Engine monitors ongoing quality: tracks completeness, accuracy, consistency metrics by category and supplier flagging degradation for immediate remediation. 7. 35-55 point data quality improvement (95% vs 40-60%) with real-time updates vs 3-5 day cycles through automated validation, AI enrichment, and golden record orchestration.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Data Governance Agent", "Master Data Management Agent"],
+        "utilityAgents": ["PIM Platform API (Akeneo, Salsify, inRiver)", "Data Quality Engine", "ERP Integration", "ML Attribute Enrichment Model"]
+      },
+      "dataSources": [
+        "Product data from suppliers (feeds, API, manual entry)",
+        "ML models trained on historical product data for attribute inference",
+        "Data governance policies and schema validation rules",
+        "Product data from multiple systems (PIM, ecommerce, ERP, marketplaces)",
+        "Conflict resolution rules for golden record creation",
+        "Data quality metrics (completeness, accuracy, consistency) by category",
+        "Downstream system APIs for real-time distribution (ecommerce, ERP, POS)"
+      ],
+      "benefits": [
+        "35-55 point data quality improvement (95% vs 40-60% complete/accurate)",
+        "Real-time updates vs 3-5 day manual cycles (instant distribution to all systems)",
+        "AI-powered attribute enrichment reduces manual entry time by 60-80%",
+        "Golden record eliminates data inconsistencies across systems (single source of truth)",
+        "Automated validation catches 95% of errors at submission vs post-entry correction",
+        "Continuous data quality monitoring enables proactive remediation vs quarterly retrospective audits"
+      ],
+      "metrics": ["Data quality: 95%+ complete/accurate", "Data entry time: 5-10 min per product (AI-assisted)", "Update cycle: Real-time (seconds)", "Governance: Continuous monitoring (real-time enforcement)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI-powered data validation at product entry to catch errors immediately", "Implement golden record creation to consolidate product data from multiple sources", "Enable real-time distribution to downstream systems replacing 3-5 day batch updates"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["PIM platform with API integration (Akeneo, Salsify, inRiver)", "ML models for attribute inference trained on product catalog", "Data governance policies codified as validation rules", "Integration with all downstream systems (ecommerce, ERP, marketplaces, POS)", "Data quality engine with continuous monitoring capabilities", "Conflict resolution rules for golden record creation", "Supplier feed integration (EDI, API, manual upload)"]
+    },
+    "icon": "database",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-enrichment-content-creation",
+    "type": "function",
+    "level": 4,
+    "label": "Product Enrichment & Content Creation",
+    "description": "AI-generated product descriptions with image tagging and SEO optimization achieving 15-30 min per SKU versus 2-4 hours manual with 75-90% time savings and consistent brand voice through automated content generation.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Content writer manually creates product descriptions: researches product features, benefits, specifications writing 150-300 word description taking 45-90 minutes per SKU. 2. Writer creates multiple versions for different channels: long description for website, short for mobile, optimized for Amazon requiring 2-4 hours total per product. 3. SEO optimization manual: writer attempts to incorporate keywords based on Google Trends or gut feeling with inconsistent results and limited SEO expertise. 4. Image tagging manual: photographer or merchandiser adds alt text, tags to product images taking 10-15 minutes per image with inconsistent tagging conventions. 5. Quality review bottleneck: content manager reviews all descriptions for brand voice, accuracy, grammar creating 5-7 day approval cycle before publishing. 6. Content quality inconsistent: descriptions vary widely in tone, detail, SEO optimization depending on writer skills and workload resulting in poor customer experience. 7. 2-4 hours per SKU content creation with inconsistent quality, limited SEO optimization, and week-long approval cycles limiting catalog growth.",
+      "constraints": [
+        "Manual description writing taking 2-4 hours per SKU (including all channel variations)",
+        "SEO optimization inconsistent due to limited writer expertise",
+        "Image tagging manual with 10-15 min per image and inconsistent conventions",
+        "5-7 day content approval cycle creating publishing bottleneck",
+        "Content quality varies based on writer skills and workload",
+        "Limited capacity for catalog expansion due to manual creation time"
+      ],
+      "metrics": ["Content creation time: 2-4 hours per SKU", "SEO optimization: Inconsistent (writer-dependent)", "Content quality: Variable (60-80% brand consistency)", "Publishing cycle: 5-7 days (approval delays)"]
+    },
+    "agentic": {
+      "workflow": "1. Content Generation Agent receives product specifications: ingests product attributes (title, features, dimensions, materials) from PIM system and generates SEO-optimized descriptions in 2-5 minutes vs 2-4 hours manual. 2. Agent creates channel-specific variations automatically: generates long-form description for website (300 words), short for mobile (75 words), bullet points for Amazon adapting tone and format per channel requirements. 3. SEO Optimization Agent enhances content: analyzes search volume, competition, trending keywords incorporating high-value terms naturally into title, description, meta tags achieving 3-5x organic traffic improvement. 4. Image Recognition Agent auto-tags product images: uses computer vision to detect product features (color, style, category) generating alt text, tags, metadata in <1 minute vs 10-15 minutes manual. 5. Agent maintains brand voice consistency: applies brand style guide (tone, vocabulary, structure) trained on approved content ensuring 95%+ brand consistency vs 60-80% manual variation. 6. Agent routes for human review: flags low-confidence content (unusual products, complex features) for human review while auto-publishing 80-90% of standard content eliminating 5-7 day bottleneck. 7. 75-90% time savings (15-30 min vs 2-4 hours per SKU) with SEO-optimized content, consistent brand voice, and automated publishing enabling 5-10x catalog expansion velocity.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Content Generation Agent", "SEO Optimization Agent"],
+        "utilityAgents": ["OpenAI/Claude API", "Image Recognition Service", "SEO Analysis Tool (Ahrefs, SEMrush)", "Content Management System API"]
+      },
+      "dataSources": [
+        "Product specifications from PIM (attributes, features, dimensions, materials)",
+        "Brand style guide and approved content examples for training",
+        "SEO keyword data (search volume, competition, trending terms)",
+        "Channel-specific content requirements (word count, format, tone)",
+        "Computer vision models for image feature detection",
+        "Historical content performance data (traffic, conversion, engagement)",
+        "Content management system for publishing and version control"
+      ],
+      "benefits": [
+        "75-90% time savings (15-30 min vs 2-4 hours per SKU content creation)",
+        "SEO-optimized content with 3-5x organic traffic improvement from keyword optimization",
+        "Consistent brand voice with 95%+ adherence vs 60-80% manual variation",
+        "Automated image tagging in <1 minute vs 10-15 minutes manual per image",
+        "Channel-specific content variations generated automatically (web, mobile, marketplace)",
+        "5-10x catalog expansion velocity enabling rapid new product launches"
+      ],
+      "metrics": ["Content creation time: 15-30 min per SKU (AI-generated)", "SEO optimization: High (data-driven keyword integration)", "Content quality: 95%+ brand consistency", "Publishing cycle: Same-day (80-90% auto-published)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI content generation for standard product categories (apparel, home goods)", "Implement automated image tagging with computer vision for product photos", "Enable SEO keyword optimization using search volume and competition data"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Generative AI API (OpenAI GPT, Claude) for content creation", "PIM system integration for product specification ingestion", "Brand style guide codified for AI training", "SEO analysis tools (Ahrefs, SEMrush) for keyword research", "Computer vision service for image recognition and tagging", "Content management system API for automated publishing", "Human review workflow for low-confidence content flagging"]
+    },
+    "icon": "pencil-alt",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-multi-channel-product-syndication",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Channel Product Syndication",
+    "description": "Auto-syndication to 50+ channels with real-time updates achieving 95%+ channel coverage versus 30-50% manual with 45-65 point coverage improvement replacing weekly batch exports through intelligent channel mapping and distribution.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandising team identifies target sales channels: selects 3-5 priority channels (Amazon, eBay, Google Shopping, own website) based on manual analysis of opportunity. 2. Team manually exports product data: generates CSV files from PIM system with product info, prices, images for each channel taking 2-4 hours per channel weekly. 3. Manual channel mapping: maps product attributes to each channel's requirements (e.g., Amazon requires 'color' field, Google Shopping requires 'gtin') creating separate spreadsheets for each channel. 4. Team uploads data to each channel: logs into Amazon Seller Central, eBay Seller Hub uploading CSV files manually with 10-20% upload failures due to data format errors. 5. Error resolution manual: reviews error reports from each channel fixing data issues (missing required fields, invalid values) re-uploading corrected files taking additional 1-2 hours per channel. 6. Updates infrequent: product data synced weekly due to manual effort resulting in outdated prices, out-of-stock items still listed, new products delayed 7-14 days. 7. 30-50% channel coverage: limited to 3-5 channels due to manual effort missing 50-70% of potential sales opportunities across 50+ available channels (marketplaces, comparison shopping, social commerce).",
+      "constraints": [
+        "Manual export/upload taking 2-4 hours per channel weekly (limited to 3-5 channels)",
+        "30-50% channel coverage missing 50-70% of sales opportunities",
+        "Weekly update cycle results in outdated data (prices, inventory, new products)",
+        "10-20% upload failures requiring manual error resolution (1-2 hours per channel)",
+        "Manual channel mapping creates data format errors and missing required fields",
+        "New channel onboarding takes 2-3 weeks of setup time"
+      ],
+      "metrics": ["Channel coverage: 30-50% (3-5 of 50+ channels)", "Update frequency: Weekly batch", "Upload success rate: 80-90% (10-20% errors)", "Channel onboarding time: 2-3 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Syndication Agent receives product data from PIM golden record: monitors PIM for new products, updates, or deletions triggering real-time distribution vs weekly batch exports. 2. Channel Mapping Agent transforms data per channel requirements: automatically maps product attributes to each channel's specifications (Amazon: 'color', Google Shopping: 'gtin', Facebook: 'fb_product_category') eliminating manual mapping errors. 3. Agent validates data quality per channel: checks required fields, value ranges, image specifications rejecting invalid data before upload achieving 95%+ upload success vs 80-90% manual. 4. Agent syndicates to 50+ channels simultaneously: publishes product data to all active channels (marketplaces, comparison shopping engines, social commerce, affiliate networks) in parallel vs sequential manual uploads. 5. Agent handles channel-specific logic: applies channel rules (Amazon requires brand registry, eBay requires return policy) including/excluding products based on eligibility criteria automatically. 6. Agent provides real-time status dashboard: shows syndication status per channel (published, pending, failed) with error details enabling immediate remediation vs delayed weekly error reports. 7. 45-65 point channel coverage improvement (95%+ vs 30-50%) with real-time updates vs weekly batches through automated syndication, intelligent mapping, and parallel distribution to 50+ channels.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Syndication Agent", "Channel Mapping Agent"],
+        "utilityAgents": ["Marketplace APIs (Amazon, eBay, Google Shopping)", "Feed Management Platform (ChannelAdvisor, Feedonomics)", "Channel Partner Integration", "Data Transformation Engine"]
+      },
+      "dataSources": [
+        "PIM golden record with product data (attributes, prices, images, inventory)",
+        "Channel specifications and requirements (required fields, data formats, validation rules)",
+        "Channel eligibility rules (brand registry, category restrictions, geographic limits)",
+        "Channel performance data (sales, traffic, conversion) for prioritization",
+        "Real-time syndication status and error logs per channel",
+        "Channel mapping templates (attribute mapping, transformation rules)",
+        "Marketplace and partner APIs for automated data publishing"
+      ],
+      "benefits": [
+        "45-65 point channel coverage improvement (95%+ vs 30-50%) expanding to 50+ channels",
+        "Real-time updates vs weekly batch cycles (instant price, inventory, new product sync)",
+        "95%+ upload success rate vs 80-90% through pre-validation and error prevention",
+        "80-90% time savings on syndication (automated vs 2-4 hours per channel weekly)",
+        "New channel onboarding in days vs 2-3 weeks (pre-built connectors and mapping)",
+        "15-30% revenue increase from expanded channel presence and real-time availability"
+      ],
+      "metrics": ["Channel coverage: 95%+ (50+ channels active)", "Update frequency: Real-time (seconds to minutes)", "Upload success rate: 95%+ (pre-validated)", "Channel onboarding time: 1-3 days"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy feed management platform with pre-built marketplace connectors", "Implement real-time syndication for top 10 channels replacing weekly batches", "Enable automated channel mapping and data transformation to reduce errors"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["PIM system with real-time change notifications (API, webhooks)", "Feed management platform (ChannelAdvisor, Feedonomics) or custom syndication engine", "Marketplace API credentials (Amazon MWS, eBay API, Google Content API)", "Channel mapping templates and transformation rules library", "Data validation engine with channel-specific rules", "Syndication monitoring dashboard with real-time status and error tracking", "Channel performance analytics for prioritization and ROI measurement"]
+    },
+    "icon": "share",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-attribute-taxonomy-management",
+    "type": "function",
+    "level": 4,
+    "label": "Product Attribute Management & Taxonomy",
+    "description": "ML-powered categorization with auto-attribute inference achieving 95%+ completeness versus 20-40% manual with 55-75 point attribute completeness improvement through intelligent classification and taxonomy orchestration.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandiser manually categorizes new products: reviews product info assigning to category hierarchy (e.g., 'Apparel > Women's > Tops > Blouses') based on judgment taking 5-10 minutes per product with 15-25% mis-categorization. 2. Merchandiser manually assigns attributes: selects attributes from dropdowns (color, size, material) but often skips optional attributes resulting in 20-40% attribute completeness. 3. Inconsistent taxonomy: different merchandisers use different category paths ('Men's Shirts' vs 'Apparel > Men > Shirts') creating duplicate categories and navigation issues. 4. Missing attributes hinder search: customers searching for 'cotton shirts size large blue' find incomplete results because 30-60% of products missing material, size, or color attributes. 5. Manual taxonomy maintenance: taxonomy manager reviews category structure quarterly identifying duplicates, orphaned categories, missing attributes but changes implemented slowly over 2-3 months. 6. Attribute validation manual: no enforcement of required attributes for category (e.g., apparel requires 'size' and 'color') resulting in incomplete product data and poor customer experience. 7. 20-40% attribute completeness with inconsistent categorization limiting search effectiveness, navigation, and customer satisfaction.",
+      "constraints": [
+        "Manual categorization taking 5-10 min per product with 15-25% mis-categorization rate",
+        "20-40% attribute completeness due to optional attribute skipping",
+        "Inconsistent taxonomy with duplicate categories and varied naming conventions",
+        "Missing attributes limit search effectiveness (30-60% of products incomplete)",
+        "Quarterly taxonomy reviews with 2-3 month implementation cycles for changes",
+        "No required attribute enforcement for category-specific rules"
+      ],
+      "metrics": ["Attribute completeness: 20-40%", "Categorization accuracy: 75-85%", "Taxonomy consistency: Low (duplicates, variations)", "Search effectiveness: Poor (60-70% relevant results)"]
+    },
+    "agentic": {
+      "workflow": "1. Attribute Management Agent receives new product data: analyzes product title, description, specifications using ML classification model to auto-categorize product into taxonomy hierarchy with 95%+ accuracy vs 75-85% manual. 2. Taxonomy Agent infers missing attributes: uses ML model trained on similar products to predict attribute values (e.g., product titled 'Men's Cotton Crew Neck T-Shirt Large Blue' infers material: cotton, size: large, color: blue, neckline: crew) achieving 95%+ completeness vs 20-40% manual. 3. Agent enforces category-specific attribute requirements: validates apparel has required size, color, material attributes rejecting incomplete records vs no enforcement enabling submission of incomplete data. 4. Agent standardizes attribute values: normalizes color names ('Sky Blue' → 'Blue'), size variations ('L' → 'Large') creating consistent faceted search vs inconsistent manual entry. 5. Agent detects taxonomy inconsistencies: identifies duplicate categories ('Men's Shirts' and 'Shirts > Men'), orphaned products, incorrect category assignments recommending consolidation or corrections. 6. Agent maintains taxonomy hierarchy: analyzes product assortment and customer search patterns suggesting new categories or attribute additions (e.g., 'sustainable' attribute for eco-conscious filtering). 7. 55-75 point attribute completeness improvement (95%+ vs 20-40%) with ML-powered categorization, auto-attribute inference, and consistent taxonomy enabling superior search, navigation, and customer experience.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Attribute Management Agent", "Taxonomy Agent"],
+        "utilityAgents": ["ML Classification Model", "Attribute Extraction Engine", "Taxonomy Database", "Search Analytics Platform"]
+      },
+      "dataSources": [
+        "Product data (title, description, specifications) for attribute extraction",
+        "ML models trained on product catalog for categorization and attribute inference",
+        "Taxonomy hierarchy with category definitions and parent-child relationships",
+        "Category-specific attribute requirements and validation rules",
+        "Attribute value standardization dictionary (color names, size mappings)",
+        "Customer search query data showing attribute usage and filtering patterns",
+        "Product catalog analytics identifying taxonomy gaps and inconsistencies"
+      ],
+      "benefits": [
+        "55-75 point attribute completeness improvement (95%+ vs 20-40%)",
+        "95%+ categorization accuracy vs 75-85% manual reducing mis-categorizations by 80%",
+        "Automated attribute inference eliminates 90% of manual attribute entry time",
+        "Consistent taxonomy with standardized attribute values enabling faceted search",
+        "Category-specific attribute enforcement ensures required fields completed",
+        "20-40% search effectiveness improvement through complete and accurate attributes"
+      ],
+      "metrics": ["Attribute completeness: 95%+", "Categorization accuracy: 95%+", "Taxonomy consistency: High (standardized, no duplicates)", "Search effectiveness: High (90%+ relevant results)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML classification for automatic product categorization", "Implement attribute inference from product titles and descriptions", "Enable category-specific attribute requirements and validation"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML classification model trained on product catalog for categorization", "Attribute extraction engine using NLP for title/description parsing", "Taxonomy database with category hierarchy and definitions", "Category-specific attribute requirement rules and validation", "Attribute value standardization dictionary (color, size, material mappings)", "Search analytics platform for taxonomy performance measurement", "Human review workflow for low-confidence predictions and taxonomy evolution"]
+    },
+    "icon": "view-list",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-digital-asset-management-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Digital Asset Management (DAM) Integration",
+    "description": "AI auto-tagging with smart asset recommendation achieving <1 min per asset versus 5-10 min manual with 80-90% time savings and intelligent asset discovery through automated metadata extraction and visual search.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Photographer uploads product images to shared drive: saves files with inconsistent naming (IMG_1234.jpg, product-photo-final-v3.jpg) creating disorganized asset library. 2. Merchandiser manually searches for assets: browses folders or uses keyword search finding only 30-50% of relevant images due to poor file naming and missing metadata. 3. Merchandiser manually tags images: adds alt text, keywords, product SKU association taking 5-10 minutes per image but often skipped due to time constraints resulting in untagged assets. 4. Asset reuse difficult: content team cannot find existing lifestyle images for new campaign spending 2-4 hours searching or re-shooting duplicate assets costing $500-$2,000 per shoot. 5. No asset relationships: images not linked to products requiring manual association every time asset used across channels (web, mobile, email, social, print). 6. Quality control manual: merchandiser reviews images for brand compliance (background color, lighting, composition) but inconsistencies common with 20-30% requiring re-shoot or editing. 7. 5-10 minutes per asset manual tagging with 30-50% findability resulting in asset waste, duplicate shoots, and poor asset utilization.",
+      "constraints": [
+        "Manual tagging taking 5-10 minutes per asset often skipped due to time constraints",
+        "Inconsistent file naming and folder organization limiting asset discovery to 30-50%",
+        "No automated metadata extraction or image recognition capabilities",
+        "Asset reuse difficult requiring 2-4 hours searching or $500-$2K duplicate shoots",
+        "Manual product-to-asset linking required for every usage across channels",
+        "20-30% assets require re-shoot due to quality control failures"
+      ],
+      "metrics": ["Asset tagging time: 5-10 min per asset", "Asset findability: 30-50% (poor search)", "Asset reuse rate: Low (duplicate shoots common)", "Quality compliance: 70-80% (manual review)"]
+    },
+    "agentic": {
+      "workflow": "1. Digital Asset Agent ingests product images: monitors DAM platform for new uploads automatically extracting metadata (dimensions, file size, color profile) and applying AI-powered tagging in <1 minute vs 5-10 minutes manual. 2. Auto-Tagging Agent uses computer vision: detects image content (product type, color, style, background, angle) generating descriptive tags (e.g., 'blue cotton shirt, front view, white background, studio lighting') with 95%+ accuracy. 3. Agent links assets to products automatically: matches product images to SKUs in PIM using visual similarity and metadata (product code embedded in filename or IPTC) eliminating manual product-to-asset association. 4. Agent generates smart recommendations: suggests related assets when merchandiser selects product showing lifestyle images, alternate angles, color variations enabling asset discovery without search. 5. Agent validates brand compliance: analyzes images against brand guidelines (background color #FFFFFF, product centered, high resolution >2000px) flagging non-compliant assets for review before usage reducing re-shoots by 60-80%. 6. Agent enables visual similarity search: merchandiser uploads reference image finding visually similar assets (similar composition, lighting, style) discovering 95%+ of relevant assets vs 30-50% keyword search. 7. 80-90% time savings (<1 min vs 5-10 min per asset) with intelligent asset discovery, automated product linking, and brand compliance validation eliminating duplicate shoots and improving asset utilization.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Digital Asset Agent", "Auto-Tagging Agent"],
+        "utilityAgents": ["DAM Platform API (Bynder, Cloudinary, Adobe Experience Manager)", "Computer Vision Service (AWS Rekognition, Google Vision)", "Metadata Extraction Engine", "Visual Similarity Search"]
+      },
+      "dataSources": [
+        "Product images and video assets uploaded to DAM platform",
+        "Computer vision models for image content detection (objects, colors, composition)",
+        "PIM product data for automatic SKU linking via metadata or visual matching",
+        "Brand guidelines for compliance validation (background, lighting, resolution rules)",
+        "Historical asset usage data showing which assets perform best",
+        "IPTC/EXIF metadata embedded in image files for automatic extraction",
+        "Visual similarity index for asset recommendation and discovery"
+      ],
+      "benefits": [
+        "80-90% time savings (<1 min vs 5-10 min per asset for tagging and organization)",
+        "95%+ asset findability vs 30-50% through AI-powered tagging and visual search",
+        "Automated product-to-asset linking eliminating manual association across channels",
+        "60-80% reduction in re-shoots through brand compliance validation",
+        "Smart asset recommendations enable discovery without search improving reuse rate",
+        "$50K-$200K annual savings from reduced duplicate shoots and improved asset utilization"
+      ],
+      "metrics": ["Asset tagging time: <1 min per asset (automated)", "Asset findability: 95%+ (AI-powered search)", "Asset reuse rate: High (smart recommendations)", "Quality compliance: 95%+ (automated validation)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI auto-tagging for all new asset uploads with computer vision", "Implement visual similarity search for asset discovery and recommendations", "Enable automated brand compliance validation to reduce re-shoots"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["DAM platform with API integration (Bynder, Cloudinary, Adobe Experience Manager)", "Computer vision service for image content detection (AWS Rekognition, Google Vision)", "PIM system integration for automatic product-to-asset linking", "Brand guidelines codified as validation rules (resolution, background, composition)", "Metadata extraction engine for IPTC/EXIF data", "Visual similarity search index for asset recommendations", "Asset usage analytics to measure utilization and performance"]
+    },
+    "icon": "photograph",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-lifecycle-management",
+    "type": "function",
+    "level": 4,
+    "label": "Product Lifecycle Management",
+    "description": "ML lifecycle predictions with auto-phase transitions achieving weekly optimization versus quarterly manual reviews enabling predictive lifecycle management and optimal markdown timing through intelligent phase detection and forecasting.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandising team tracks product lifecycle manually: reviews sales reports quarterly identifying products in introduction, growth, maturity, or decline phases based on sales trends and gut feeling. 2. Team identifies declining products too late: notices sales decline after 3-6 months of downward trend missing optimal markdown timing resulting in excess inventory and margin erosion. 3. Manual markdown decisions: marks down declining products based on fixed rules ('30% off after 90 days, 50% off after 120 days') ignoring product-specific demand patterns and competitive landscape. 4. No lifecycle predictions: cannot forecast when product will transition from maturity to decline missing opportunity to optimize inventory levels and markdown strategy proactively. 5. Discontinuation decisions reactive: discovers product obsolete only when inventory piles up or competitor releases superior alternative resulting in clearance at heavy discounts (60-80% off). 6. New product launches risky: introduces products without demand forecasting resulting in 30-50% new product failure rate (discontinued within 6-12 months) due to poor lifecycle planning. 7. Quarterly review cycle too slow: lifecycle changes occur monthly but reviewed quarterly resulting in missed optimization opportunities and margin pressure.",
+      "constraints": [
+        "Quarterly lifecycle reviews miss real-time phase transitions and optimization timing",
+        "Manual phase tracking based on sales trends and gut feeling (not predictive)",
+        "Declining products identified 3-6 months after peak missing optimal markdown timing",
+        "Fixed markdown rules ignore product-specific demand and competitive dynamics",
+        "30-50% new product failure rate due to lack of lifecycle planning and forecasting",
+        "Reactive discontinuation decisions result in heavy clearance discounts (60-80% off)"
+      ],
+      "metrics": ["Lifecycle review frequency: Quarterly", "Phase transition detection: Retrospective (3-6 month lag)", "Markdown timing: Reactive (fixed rules)", "New product success rate: 50-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Lifecycle Management Agent monitors all products continuously: analyzes daily sales velocity, inventory turns, sell-through rate, and margin detecting lifecycle phase transitions in real-time vs quarterly reviews. 2. Phase Prediction Agent forecasts lifecycle transitions: uses ML model trained on historical product performance predicting 'Product X will enter decline phase in 4-6 weeks' enabling proactive inventory and markdown planning. 3. Agent optimizes markdown timing: recommends markdown schedule based on demand elasticity, competitive pricing, and inventory position suggesting '15% markdown in week 6, 30% in week 10' vs fixed rules maximizing margin and sell-through. 4. Agent identifies discontinuation candidates: flags products approaching end-of-life based on declining demand, supplier discontinuation, or competitive obsolescence recommending optimal clearance strategy. 5. Agent supports new product introductions: forecasts demand for new products using category trends, similar product performance, and external signals (fashion trends, social media buzz) reducing failure rate from 30-50% to 10-20%. 6. Agent monitors competitive lifecycle: tracks competitor product launches, markdowns, and discontinuations adjusting lifecycle strategy to maintain competitive position. 7. Weekly optimization vs quarterly reviews enabling predictive lifecycle management, optimal markdown timing, and proactive discontinuation decisions improving margin by 5-12% and inventory turns by 15-25%.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Lifecycle Management Agent", "Phase Prediction Agent"],
+        "utilityAgents": ["Sales Analytics Platform", "Inventory Management System", "Forecasting Engine", "Lifecycle Dashboard"]
+      },
+      "dataSources": [
+        "Daily sales data (velocity, units sold, revenue) by product and channel",
+        "Inventory data (on-hand, on-order, weeks of supply) across all locations",
+        "Historical product lifecycle curves showing introduction, growth, maturity, decline patterns",
+        "ML models trained on product performance for phase prediction",
+        "Markdown and promotion history with elasticity and margin impact data",
+        "Competitive intelligence (competitor pricing, product launches, discontinuations)",
+        "External signals (fashion trends, social media sentiment, search volume)"
+      ],
+      "benefits": [
+        "Weekly optimization vs quarterly reviews enabling real-time lifecycle management",
+        "Predictive phase transitions with 4-6 week advance warning vs retrospective detection",
+        "Optimal markdown timing improves margin by 5-12% vs fixed rule-based approach",
+        "Proactive discontinuation planning reduces clearance discounts from 60-80% to 30-50%",
+        "New product success rate improves from 50-70% to 80-90% through demand forecasting",
+        "15-25% inventory turn improvement through lifecycle-driven planning"
+      ],
+      "metrics": ["Lifecycle review frequency: Weekly (continuous)", "Phase transition detection: Predictive (4-6 week advance)", "Markdown timing: Optimized (product-specific)", "New product success rate: 80-90%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML lifecycle prediction for top 100-500 products", "Implement weekly lifecycle monitoring replacing quarterly reviews", "Enable product-specific markdown optimization based on demand elasticity"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Sales analytics platform with daily product-level performance data", "Inventory management system integration for stock levels and turns", "ML forecasting engine for lifecycle phase prediction", "Historical product lifecycle data (2+ years) for model training", "Markdown optimization engine with elasticity modeling", "Competitive intelligence data (pricing, launches, discontinuations)", "Lifecycle dashboard with phase visualization and action recommendations"]
+    },
+    "icon": "refresh",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-data-quality-compliance-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Product Data Quality & Compliance Monitoring",
+    "description": "Continuous validation with real-time compliance checks achieving 95%+ pass rate versus 40-60% quarterly with 35-55 point pass rate improvement through automated quality monitoring, compliance verification, and auto-fix capabilities.",
+    "parentCapability": "capability-product-information-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Data quality team conducts quarterly audits: manually reviews product data sampling 500-1,000 products checking completeness, accuracy, consistency taking 40-60 hours per audit. 2. Team discovers quality issues retrospectively: identifies 40-60% of products with data quality problems (missing attributes, incorrect values, formatting errors) but issues already impacting customer experience for months. 3. Manual issue tracking: creates spreadsheet of data quality issues assigning to merchandisers for correction but backlog grows to 2,000+ issues with 4-8 week resolution time. 4. Compliance checks reactive: legal team discovers non-compliant product descriptions (incorrect country of origin, missing safety warnings, unsubstantiated claims) during regulatory audit facing $25,000-$100,000 fines. 5. No automated validation: product data published without quality checks resulting in customer complaints (wrong product images, incorrect specifications) and increased returns. 6. Channel-specific compliance inconsistent: Amazon requires specific attributes (GTIN, brand), eBay requires return policy, Google Shopping requires detailed descriptions but validation manual and error-prone. 7. 40-60% pass rate on quarterly audits with reactive compliance fixes resulting in regulatory risk, customer dissatisfaction, and channel rejection (10-20% of product feeds rejected).",
+      "constraints": [
+        "Quarterly audits provide retrospective quality metrics missing real-time issues",
+        "40-60% pass rate indicates majority of products have data quality problems",
+        "Manual issue tracking with 4-8 week resolution time creates growing backlog",
+        "Reactive compliance checks expose business to regulatory fines ($25K-$100K)",
+        "No automated validation enables publication of poor quality product data",
+        "10-20% of product feeds rejected by channels due to compliance failures"
+      ],
+      "metrics": ["Data quality pass rate: 40-60%", "Audit frequency: Quarterly (retrospective)", "Issue resolution time: 4-8 weeks", "Compliance violations: Reactive discovery (fines)"]
+    },
+    "agentic": {
+      "workflow": "1. Data Quality Agent validates all product data continuously: checks every product record against quality rules (required fields, data types, value ranges, cross-field logic) at creation and update vs quarterly audits. 2. Agent rejects poor quality data at submission: blocks publication of product records missing required attributes or with invalid values achieving 95%+ pass rate vs 40-60% post-publication detection. 3. Compliance Monitoring Agent verifies regulatory requirements: checks product descriptions for required disclosures (country of origin, safety warnings, care instructions) and prohibited claims (medical, unsubstantiated) preventing non-compliant content. 4. Agent applies channel-specific validation: validates product data meets Amazon, eBay, Google Shopping requirements before feed submission reducing channel rejection rate from 10-20% to <2%. 5. Auto-Fix Engine remediates common issues: automatically corrects data formatting errors (trim whitespace, standardize case, normalize punctuation), fills missing attributes using ML inference, and updates outdated values. 6. Agent provides real-time quality dashboard: shows data quality metrics by category, supplier, and channel with drill-down to specific issues enabling immediate remediation vs quarterly reports. 7. 35-55 point pass rate improvement (95%+ vs 40-60%) with proactive compliance preventing regulatory violations, reducing channel rejections by 80-90%, and improving customer experience through high-quality product data.",
+      "agents": {
+        "orchestrator": "Product Information Orchestration Agent",
+        "superAgents": ["Data Quality Agent", "Compliance Monitoring Agent"],
+        "utilityAgents": ["Data Validation Engine", "Regulatory Database", "Auto-Fix Engine", "Quality Audit System"]
+      },
+      "dataSources": [
+        "Product data quality rules (required fields, data types, value ranges, cross-field logic)",
+        "Regulatory compliance requirements by geography and product category",
+        "Channel-specific validation rules (Amazon, eBay, Google Shopping requirements)",
+        "Historical data quality audit results identifying common error patterns",
+        "Auto-fix rules for common data formatting and completeness issues",
+        "Real-time quality metrics (completeness, accuracy, consistency) by category and supplier",
+        "Compliance violation database showing prohibited claims and required disclosures"
+      ],
+      "benefits": [
+        "35-55 point pass rate improvement (95%+ vs 40-60%) through continuous validation",
+        "Proactive compliance prevents regulatory violations and fines ($25K-$100K avoided)",
+        "Channel rejection rate reduced 80-90% (<2% vs 10-20%) through pre-submission validation",
+        "Real-time quality monitoring vs quarterly retrospective audits",
+        "Auto-fix capabilities reduce manual remediation time by 70-85%",
+        "Customer satisfaction improved through high-quality product data (fewer returns, complaints)"
+      ],
+      "metrics": ["Data quality pass rate: 95%+", "Audit frequency: Continuous (real-time)", "Issue resolution time: Immediate (auto-fix) to same-day", "Compliance violations: Proactive prevention (<1% issues)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy continuous data validation at product creation/update points", "Implement compliance checks for regulatory requirements (country of origin, safety)", "Enable auto-fix for common data formatting and completeness issues"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Data validation engine with configurable quality rules", "Regulatory compliance database by geography and product category", "Channel-specific validation rules (Amazon, eBay, Google Shopping)", "Auto-fix engine for common data quality issues", "PIM integration for real-time validation at submission", "Quality dashboard with real-time metrics and drill-down capabilities", "Legal review process for compliance rule updates and new regulations"]
+    },
+    "icon": "badge-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

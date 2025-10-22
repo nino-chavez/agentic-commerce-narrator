@@ -1,0 +1,192 @@
+[
+  {
+    "id": "agent-bnpl-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "BNPL Orchestration Agent",
+    "description": "Manages Buy Now, Pay Later offering by coordinating real-time eligibility decisioning, installment presentation, risk assessment, and automated collections management.",
+    "capabilities": [
+      "Orchestrate BNPL eligibility and approval workflow",
+      "Manage installment plan presentation timing",
+      "Coordinate risk assessment across providers",
+      "Trigger collection workflows for missed payments",
+      "Track BNPL performance and conversion impact",
+      "Balance multiple BNPL provider relationships"
+    ],
+    "integrations": [
+      "BNPL Providers (Affirm, Klarna, Afterpay, Sezzle)",
+      "Payment Gateway",
+      "CRM Platform",
+      "Collections Platform",
+      "E-commerce Checkout",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Customer credit eligibility data",
+      "Transaction and cart data",
+      "BNPL provider approval rates",
+      "Payment and collection history",
+      "Conversion and cart abandonment metrics",
+      "Customer demographic data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-digital-payment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Digital Payment Orchestration Agent",
+    "description": "Coordinates cryptocurrency and digital wallet payments by managing crypto processing, wallet integrations, real-time FX conversion, and volatility protection.",
+    "capabilities": [
+      "Orchestrate multi-payment method acceptance",
+      "Coordinate crypto payment processing and settlement",
+      "Manage digital wallet integrations",
+      "Handle real-time FX conversion and hedging",
+      "Protect against crypto volatility risk",
+      "Track payment method mix and performance"
+    ],
+    "integrations": [
+      "Crypto Payment Processors (Coinbase Commerce, BitPay, Stripe Crypto)",
+      "Digital Wallet APIs (Apple Pay, Google Pay, PayPal, Venmo)",
+      "FX Rate APIs",
+      "Treasury and Hedging Platform",
+      "Payment Gateway",
+      "Compliance and KYC Systems"
+    ],
+    "dataSources": [
+      "Crypto payment transactions",
+      "Real-time FX rates and spreads",
+      "Wallet payment data",
+      "Settlement and reconciliation data",
+      "Customer payment preferences",
+      "Regulatory and compliance requirements"
+    ],
+    "applicableIndustries": ["Retail", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-payment-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Payment Orchestration Agent",
+    "description": "Optimizes payment processing across multiple gateways by coordinating intelligent routing, automatic failover, retry optimization, and cost minimization.",
+    "capabilities": [
+      "Orchestrate multi-gateway payment routing",
+      "Manage automatic failover and redundancy",
+      "Coordinate intelligent retry strategies",
+      "Optimize payment costs across providers",
+      "A/B test routing strategies",
+      "Monitor gateway performance and SLAs"
+    ],
+    "integrations": [
+      "Multiple Payment Gateways (Stripe, Adyen, Braintree, etc.)",
+      "Payment Orchestration Platform (Spreedly, Primer)",
+      "Routing Engine",
+      "Cost Analytics Platform",
+      "Gateway Monitoring Tools",
+      "Retry Logic Engine"
+    ],
+    "dataSources": [
+      "Transaction routing data",
+      "Gateway approval rates and declines",
+      "Payment processing costs by gateway",
+      "Gateway uptime and performance metrics",
+      "Soft decline and retry success rates",
+      "Regional and card network data"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-subscription-management-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Subscription Management Orchestration Agent",
+    "description": "Automates recurring billing by coordinating billing cycles, usage metering, intelligent dunning, and subscription lifecycle management.",
+    "capabilities": [
+      "Orchestrate recurring billing and pro-ration",
+      "Manage usage-based metering and billing",
+      "Coordinate dunning workflows for failed payments",
+      "Handle subscription lifecycle (upgrades, downgrades, cancellations)",
+      "Trigger win-back campaigns on cancellation",
+      "Track subscription metrics and churn"
+    ],
+    "integrations": [
+      "Subscription Billing Platform (Stripe Billing, Chargebee, Recurly, Zuora)",
+      "Payment Gateway with card updater",
+      "Usage Tracking Infrastructure",
+      "Customer Portal",
+      "CRM and Marketing Automation",
+      "Analytics Platform"
+    ],
+    "dataSources": [
+      "Subscription plan data",
+      "Billing cycle and payment data",
+      "Usage and consumption metrics",
+      "Failed payment and dunning data",
+      "Customer subscription history",
+      "Churn and retention metrics"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "agent-revenue-recognition-orchestration",
+    "type": "agent",
+    "level": 6,
+    "role": "orchestrator",
+    "label": "Revenue Recognition Orchestration Agent",
+    "description": "Automates revenue recognition by coordinating allocation to performance obligations, deferred revenue management, real-time reporting, and compliance monitoring.",
+    "capabilities": [
+      "Orchestrate automated revenue recognition workflows",
+      "Coordinate allocation to performance obligations (ASC 606)",
+      "Manage deferred revenue schedules",
+      "Generate real-time revenue reporting",
+      "Ensure GAAP/IFRS compliance",
+      "Track month-end close and audit trails"
+    ],
+    "integrations": [
+      "Revenue Recognition Platform (Zuora RevPro, Zone, NetSuite ARM)",
+      "ERP System (NetSuite, SAP, Oracle)",
+      "Contract Management System",
+      "Billing Platform",
+      "BI Tool for reporting",
+      "Audit and Compliance Systems"
+    ],
+    "dataSources": [
+      "Contract and billing data",
+      "Revenue allocation rules (SSP, waterfalls)",
+      "Deferred revenue schedules",
+      "Financial close data",
+      "Compliance requirements (ASC 606, IFRS 15)",
+      "Audit trail and documentation"
+    ],
+    "applicableIndustries": ["All"],
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

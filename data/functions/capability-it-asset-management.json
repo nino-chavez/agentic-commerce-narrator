@@ -1,0 +1,394 @@
+[
+  {
+    "id": "function-asset-discovery-inventory",
+    "type": "function",
+    "level": 4,
+    "label": "Asset Discovery & Inventory",
+    "description": "Continuous auto-discovery with shadow IT detection achieving 95%+ accuracy versus 50-70% manual quarterly inventories and real-time visibility replacing spreadsheet tracking.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT asset inventory tracked in Excel spreadsheet (laptops, desktops, servers, network devices). 2. New asset purchases manually added to spreadsheet by IT admin when deployed. 3. Quarterly inventory audit: IT staff physically walk floors counting devices, compare to spreadsheet. 4. Audit discovers 30-50% discrepancies: missing assets (stolen, disposed without documentation), undocumented assets (shadow IT purchases on employee credit cards), incorrect assignments (laptop assigned to departed employee). 5. IT admin spends 2-4 weeks updating spreadsheet to reflect audit findings. 6. Shadow IT unknown between audits (employees buying cloud services, SaaS apps, personal devices). 7. Asset inventory accuracy 50-70% due to manual tracking and quarterly audit cycle.",
+      "constraints": [
+        "Manual spreadsheet tracking 50-70% accurate (missing, outdated, incorrect data)",
+        "Quarterly audit cycle too infrequent (assets change weekly, not quarterly)",
+        "2-4 week audit remediation labor-intensive and temporary (drifts again)",
+        "Shadow IT proliferation (employees buy unapproved cloud services, SaaS apps)",
+        "No real-time visibility into asset changes (deployments, retirements, moves)",
+        "Physical inventory audits disruptive and incomplete (remote workers, WFH)"
+      ],
+      "metrics": ["Asset inventory accuracy: 50-70%", "Update frequency: Quarterly (manual audit)", "Shadow IT visibility: 0%", "Audit remediation time: 2-4 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Asset Discovery Agent continuously scans network discovering devices within 15 minutes of connection: laptops, desktops, servers, printers, IoT devices, network switches, access points. 2. Agent queries cloud provider APIs (AWS, Azure, GCP) for EC2 instances, VMs, containers, storage, databases - refreshes CMDB real-time. 3. Shadow IT Detection Agent discovers unapproved cloud services via multiple methods: SSO login logs (employee accessed Dropbox), credit card statements (SaaS subscription charges), OAuth integrations (employee connected app to company email). 4. Agent identifies 250 undocumented SaaS apps: Zoom, Slack, Dropbox, Trello, Asana, QuickBooks purchased by departments on credit cards. 5. Agent validates assets continuously: 'CMDB shows 500 laptops, network scan finds 525 - investigate 25 undocumented devices'. 6. Agent maintains 95%+ CMDB accuracy through continuous discovery vs quarterly audit approach. 7. Real-time asset visibility replaces spreadsheet tracking and manual audits.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["Asset Discovery Agent", "Shadow IT Detection Agent"],
+        "utilityAgents": ["Network Discovery Tools (Nmap, Lansweeper)", "Cloud Provider APIs", "MDM Platforms", "SSO Login Analytics"]
+      },
+      "dataSources": [
+        "Network discovery scans (IP addresses, MAC addresses, device types)",
+        "Cloud provider inventory APIs (AWS, Azure, GCP resources)",
+        "Mobile Device Management (MDM) platform data",
+        "SSO login logs (SaaS application access)",
+        "Credit card expense reports (SaaS subscriptions)",
+        "OAuth integration grants (apps connected to corporate email)",
+        "Active Directory/LDAP for user and computer accounts",
+        "Asset tags and serial numbers from procurement system"
+      ],
+      "benefits": [
+        "25-45 point accuracy improvement (95% vs 50-70%) through continuous discovery",
+        "Real-time asset visibility vs quarterly audit delays (15 min vs 90 days)",
+        "Shadow IT detection identifies 200-500+ unapproved SaaS apps",
+        "Continuous validation eliminates 2-4 week audit remediation cycles",
+        "Cloud infrastructure auto-discovered (AWS, Azure, GCP inventory synced)",
+        "Network-connected devices discovered automatically (no physical inventory)"
+      ],
+      "metrics": ["Asset inventory accuracy: 95%+", "Update frequency: Real-time (continuous)", "Shadow IT visibility: 100% (200-500+ apps discovered)", "Audit remediation time: Real-time (auto-corrected)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy network discovery tools for automated device detection on corporate network", "Implement cloud provider API integration for AWS/Azure/GCP resource inventory", "Enable SSO login analytics for shadow IT SaaS application discovery"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["ITAM platform (ServiceNow ITAM, Flexera, Snow Software) with API", "Network discovery tools (Nmap, Lansweeper, SolarWinds)", "Cloud provider API credentials (AWS, Azure, GCP)", "Network access for discovery scans across all subnets", "SSO platform with usage analytics (Okta, Azure AD)", "MDM platform for mobile device inventory (Intune, Jamf)", "Integration with procurement system for purchase order validation"]
+    },
+    "icon": "search",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-software-license-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Software License Optimization",
+    "description": "Usage-based license recommendations with auto-harvesting and compliance automation achieving 20-40% license cost reduction and 100% compliance versus manual tracking with audit risk.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Software licenses tracked in spreadsheet: 500 Microsoft Office licenses purchased, 300 Adobe Creative Cloud licenses, 150 Salesforce licenses. 2. License assignments manual: employee requests software via email, IT admin assigns license, updates spreadsheet. 3. No usage tracking (don't know if assigned licenses actually used). 4. License waste: 20-40% of licenses assigned to employees who never use software or use <1 hour/month. 5. License shortages: employee requests Adobe license, all 300 allocated, must purchase more despite 80 unused licenses assigned to inactive users. 6. Vendor audit risk: Microsoft audits license compliance, discovers 50 unlicensed installs, $200K audit penalty. 7. No optimization or harvesting (licenses sit idle, wasted spend).",
+      "constraints": [
+        "Manual license tracking in spreadsheets (inaccurate, outdated)",
+        "20-40% license waste (assigned but not used or underutilized)",
+        "No usage visibility (can't identify inactive licenses to reclaim)",
+        "Vendor audit risk (unlicensed installs, compliance gaps)",
+        "License shortages despite idle licenses (can't reallocate efficiently)",
+        "No auto-harvesting from departed employees (licenses sit assigned to ex-employees)"
+      ],
+      "metrics": ["License waste: 20-40%", "Compliance: 80-90% (audit risk)", "Harvesting: Manual (if at all)", "Optimization: None (no usage data)"]
+    },
+    "agentic": {
+      "workflow": "1. License Optimization Agent tracks software installs and usage via endpoint agents: 'Adobe Creative Cloud installed on 300 devices, only 180 used in last 90 days (60% utilization)'. 2. Usage Analytics Agent identifies idle licenses: 'John Doe has Adobe license, last login 180 days ago (departed employee), Sarah Smith has Adobe license, used 2 hours in 90 days (underutilized)'. 3. Agent recommends license harvesting: 'Reclaim 50 idle Adobe licenses from inactive users, reallocate to 50 employees on waitlist - avoid purchasing new licenses ($15K savings)'. 4. Agent auto-harvests licenses from departed employees: integrates with HR offboarding, uninstalls software, removes license assignment within 24 hours. 5. Agent ensures compliance: tracks license entitlements (500 Office licenses owned), monitors installs (485 devices), alerts before over-deployment. 6. Agent optimizes license tiers: 'Move 100 employees from Office 365 E5 ($57/user/month) to E3 ($36/user/month) - power users don't need E5 features, save $25K/year'. 7. 20-40% license cost reduction and 100% compliance through usage-based optimization vs manual tracking.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["License Optimization Agent", "Usage Analytics Agent"],
+        "utilityAgents": ["Software Asset Management Tools (Flexera, Snow)", "Usage Monitoring", "Vendor APIs", "HR System Integration"]
+      },
+      "dataSources": [
+        "Software license entitlements (contracts, purchase orders)",
+        "Endpoint software installation inventory",
+        "Software usage metrics (last login, hours used, feature utilization)",
+        "Employee status (active, departed, on leave)",
+        "Vendor compliance policies and license models",
+        "Historical license consumption patterns",
+        "Waitlist data (employees requesting licenses)"
+      ],
+      "benefits": [
+        "20-40% license cost reduction through waste elimination and optimization",
+        "100% compliance vs 80-90% manual tracking (avoid $200K+ audit penalties)",
+        "Auto-harvesting from departed employees (within 24 hours vs never)",
+        "Usage-based recommendations (identify underutilized licenses to reclaim)",
+        "Tier optimization (downgrade from E5 to E3, save $25K/year per 100 users)",
+        "License reallocation from idle to active users (eliminate shortages)"
+      ],
+      "metrics": ["License waste: 5-10%", "Compliance: 99%+ (automated tracking)", "Harvesting: Automated (departed employees)", "Optimization: Continuous (usage-based)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy endpoint agents for software usage monitoring on laptops/desktops", "Implement auto-harvesting for departed employees via HR system integration", "Enable license tier optimization (identify E5 users who can downgrade to E3)"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Software Asset Management platform (Flexera, Snow Software)", "Endpoint agents deployed for software inventory and usage tracking", "Integration with vendor license portals (Microsoft, Adobe, Salesforce)", "HR system integration for employee status (active, departed, on leave)", "License entitlement data (contracts, purchase orders, SKUs)", "Usage monitoring capability (last login, feature utilization)", "Compliance policies and license models documented"]
+    },
+    "icon": "key",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-hardware-lifecycle-management",
+    "type": "function",
+    "level": 4,
+    "label": "Hardware Lifecycle Management",
+    "description": "Predictive refresh recommendations with warranty tracking and budget forecasting achieving 30-50% unplanned replacement reduction and optimized refresh cycles versus reactive failures.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Laptop purchased in 2019, deployed to employee, tracked in spreadsheet with purchase date. 2. No warranty tracking (warranty expires 2022, unknown to IT). 3. Laptop fails in 2024 (5 years old, well past useful life), employee submits support ticket. 4. IT discovers laptop out of warranty, repair cost $800 vs $1200 replacement - order new laptop. 5. Unplanned replacement (no budget allocated, emergency procurement, 5-7 day lead time). 6. 20-30% of laptop fleet aged 5+ years (past optimal refresh cycle), high failure rates. 7. No refresh planning (reactive replacement after failure, expensive and disruptive).",
+      "constraints": [
+        "No warranty tracking (repair vs replace decisions uninformed)",
+        "20-30% of fleet aged 5+ years (past optimal refresh cycle)",
+        "Unplanned replacements (emergency procurement, 5-7 day lead time)",
+        "No refresh budget forecasting (capital expense surprises)",
+        "Reactive replacement after failure (employee downtime, lost productivity)",
+        "No age-based refresh policy (run until failure approach)"
+      ],
+      "metrics": ["Unplanned replacements: 60-70%", "Fleet age: 20-30% aged 5+ years", "Warranty tracking: None", "Refresh planning: Reactive (after failure)"]
+    },
+    "agentic": {
+      "workflow": "1. Lifecycle Management Agent tracks asset age automatically: '250 laptops deployed 2020 (4 years old), warranty expired 2023, approaching end-of-life'. 2. Agent monitors warranty status via vendor APIs: 'Dell laptop service tag ABC123, warranty expires in 30 days - alert IT to extend or plan replacement'. 3. Refresh Planning Agent recommends proactive replacements: '250 laptops age 4 years, recommend refresh in Q1 2025 before failure rates increase, budget $300K capital expense'. 4. Agent prioritizes refresh by usage: 'Engineering laptops high utilization (8-10 hours/day), refresh after 3 years; Sales laptops low utilization (4-6 hours/day), refresh after 4 years'. 5. Agent forecasts refresh budget: 'FY2025 refresh forecast: 500 laptops ($600K), 100 desktops ($100K), 20 servers ($200K) = $900K total capital requirement'. 6. Agent detects emerging failures: '15 laptops model XYZ experiencing 40% failure rate at 3 years - recommend early refresh before widespread failures'. 7. 30-50% unplanned replacement reduction through predictive refresh vs reactive failure response.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["Lifecycle Management Agent", "Refresh Planning Agent"],
+        "utilityAgents": ["Asset Database", "Warranty APIs (Dell, HP, Lenovo)", "Financial Planning System", "Incident/Repair Tracking"]
+      },
+      "dataSources": [
+        "Asset purchase dates and deployment history",
+        "Warranty expiration dates from vendor APIs",
+        "Asset failure and repair history by model and age",
+        "Usage intensity data (hours per day, performance metrics)",
+        "Refresh policy (optimal lifecycle by device type)",
+        "Budget and capital planning data",
+        "Vendor end-of-life announcements",
+        "Employee role and usage patterns"
+      ],
+      "benefits": [
+        "30-50% unplanned replacement reduction through predictive refresh",
+        "Warranty tracking via vendor APIs (extend or replace before expiration)",
+        "Refresh budget forecasting (3-year capital plan vs surprise expenses)",
+        "Usage-based refresh prioritization (high-use devices refreshed earlier)",
+        "Failure pattern detection (early refresh for high-failure models)",
+        "Proactive replacement (minimal employee downtime vs 5-7 day emergency procurement)"
+      ],
+      "metrics": ["Unplanned replacements: 20-30%", "Fleet age: <5% aged 5+ years", "Warranty tracking: 100% (vendor API integration)", "Refresh planning: Proactive (3-year forecast)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate vendor warranty APIs (Dell, HP, Lenovo) for expiration tracking", "Implement asset age reporting dashboard showing fleet age distribution", "Enable 90-day advance refresh alerts for assets approaching end-of-life"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Asset management platform with lifecycle tracking", "Vendor warranty API integrations (Dell, HP, Lenovo)", "Historical failure and repair data for predictive modeling", "Refresh policy defined (optimal lifecycle by device type)", "Financial planning system for budget forecasting", "Usage monitoring for intensity-based refresh prioritization", "Integration with procurement system for refresh automation"]
+    },
+    "icon": "clock",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-asset-procurement-provisioning",
+    "type": "function",
+    "level": 4,
+    "label": "Asset Procurement & Provisioning",
+    "description": "Automated approval workflows with preferred vendor routing achieving 70-80% procurement cycle time reduction from 3-7 days to 1-2 days and duplicate order elimination.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee requests laptop via email to manager: 'Need new laptop for design work, current laptop 5 years old and slow'. 2. Manager approves via email reply (if remembered, 1-3 days). 3. IT procurement receives forwarded email thread, manually creates requisition in system. 4. Procurement manually selects vendor (no preferred vendor routing), creates purchase order. 5. PO routed for CFO approval (>$5K purchases), 2-3 day approval cycle. 6. Vendor ships laptop, arrives 3-5 days later. 7. Total cycle time 3-7 days due to manual approvals and procurement. 8. Duplicate orders occur (multiple managers order same equipment for same employee).",
+      "constraints": [
+        "Email-based request process slow and manual (3-7 day cycle time)",
+        "Manual approval routing creates 1-3 day delays",
+        "No preferred vendor routing (procurement manually selects each time)",
+        "Duplicate orders (poor visibility, same employee gets 2 laptops)",
+        "No budget validation (orders approved exceeding department budget)",
+        "Manual PO creation labor-intensive for procurement team"
+      ],
+      "metrics": ["Procurement cycle time: 3-7 days", "Manual approvals: 1-3 days", "Duplicate orders: 5-10%", "Auto-procurement: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Employee requests laptop via self-service portal: selects Dell XPS 15 from catalog ($1,800). 2. Procurement Automation Agent validates request: checks employee doesn't already have pending laptop request (prevent duplicates), validates department budget has available funds. 3. Agent routes to approval workflow: manager auto-approved for <$2K items, department head required for $2K-$5K, CFO for >$5K. 4. Manager receives Slack notification, approves in one click within 30 minutes. 5. Vendor Selection Agent routes to preferred vendor automatically: Dell laptops → CDW (preferred pricing, 2-day shipping SLA). 6. Agent creates PO automatically, sends to vendor via EDI integration. 7. Laptop ships same day, arrives in 1-2 days (vs 3-7 days manual). 8. 70-80% cycle time reduction and duplicate order elimination through automation.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["Procurement Automation Agent", "Vendor Selection Agent"],
+        "utilityAgents": ["Procurement System API", "Vendor Portals", "Budget System", "ITSM Integration"]
+      },
+      "dataSources": [
+        "Self-service catalog with approved products and pricing",
+        "Approval policies by request type and cost threshold",
+        "Department budget data and available funds",
+        "Preferred vendor contracts and pricing agreements",
+        "Employee pending request history (duplicate detection)",
+        "Vendor performance data (delivery time, pricing, quality)",
+        "Purchase order history and vendor relationships"
+      ],
+      "benefits": [
+        "70-80% procurement cycle time reduction (1-2 days vs 3-7 days)",
+        "Slack approval enables 30-minute response vs 1-3 day email cycle",
+        "Duplicate order elimination through pending request validation",
+        "Preferred vendor routing (optimal pricing, fast shipping)",
+        "Budget validation prevents overspending (available funds check)",
+        "Auto-PO creation eliminates manual procurement work"
+      ],
+      "metrics": ["Procurement cycle time: 1-2 days", "Manual approvals: 30 min - 2 hours", "Duplicate orders: <1%", "Auto-procurement: 80-90%"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy self-service catalog for top 20 common IT hardware requests", "Implement Slack/Teams approval notifications for faster manager response", "Enable duplicate request detection to prevent double-ordering"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Procurement system with workflow automation and API", "Self-service catalog with approved products and pricing", "Approval policies defined by cost threshold", "Integration with budget system for available funds validation", "Vendor portal integrations (Dell, CDW, Apple) for EDI ordering", "Slack/Teams integration for approval notifications", "Duplicate request detection logic and pending order tracking"]
+    },
+    "icon": "shopping-bag",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-asset-disposal-data-sanitization",
+    "type": "function",
+    "level": 4,
+    "label": "Asset Disposal & Data Sanitization",
+    "description": "Automated ITAD workflows with certified data wiping and chain-of-custody tracking achieving 100% data security compliance and complete audit trail versus manual disposal with security risks.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee returns old laptop when receiving replacement (5-year-old device). 2. IT admin stores laptop in closet with 50+ other old devices (no process). 3. Closet fills up over 6-12 months, IT manager decides to dispose. 4. IT admin manually wipes some laptops using DBAN utility (inconsistent, some skipped). 5. Devices taken to e-waste recycler, no chain-of-custody documentation. 6. No data sanitization certificates (can't prove data wiped if audit or breach occurs). 7. Compliance risk: HIPAA, PCI, GDPR require certified data destruction (not documented).",
+      "constraints": [
+        "Manual disposal process ad-hoc and inconsistent",
+        "Data sanitization not certified (can't prove compliant data destruction)",
+        "No chain-of-custody tracking (devices lost, stolen, or disposed improperly)",
+        "6-12 month backlog of devices sitting in closet (security risk)",
+        "Compliance gaps (HIPAA, PCI, GDPR violations)",
+        "No asset value recovery (e-waste recycler vs trade-in programs)"
+      ],
+      "metrics": ["Data sanitization certificates: 0%", "Chain-of-custody tracking: None", "Disposal backlog: 6-12 months", "Compliance: At risk"]
+    },
+    "agentic": {
+      "workflow": "1. Employee returns old laptop, Disposal Automation Agent triggers ITAD workflow: creates disposal ticket, schedules data sanitization. 2. Data Sanitization Agent wipes device using NIST 800-88 compliant utility (DoD 5220.22-M 7-pass wipe). 3. Agent generates sanitization certificate: 'Dell Latitude service tag ABC123, wiped 2024-11-10 14:32 UTC, NIST 800-88 compliant, certificate ID 12345, technician John Doe'. 4. Agent tracks chain-of-custody: 'Device transferred from John Doe (employee) → IT Asset Room → Data Wipe Station → ITAD Vendor XYZ, signed at each step'. 5. Agent coordinates ITAD vendor pickup: schedules collection, provides manifest of devices, tracks shipping to vendor facility. 6. Agent receives vendor destruction certificate: 'Device ABC123 recycled at certified facility, certificate of destruction #67890, audit trail complete'. 7. 100% data security compliance and complete chain-of-custody through automated ITAD workflow.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["Disposal Automation Agent", "Data Sanitization Agent"],
+        "utilityAgents": ["ITAD Vendor APIs", "Data Wiping Tools", "Compliance Database", "Audit Trail System"]
+      },
+      "dataSources": [
+        "Asset disposal requests and return tracking",
+        "Data sanitization certificates and audit logs",
+        "Chain-of-custody transfer records with signatures",
+        "ITAD vendor contracts and pickup schedules",
+        "Device manifest and shipping tracking",
+        "Vendor destruction certificates and audit reports",
+        "Compliance policies (HIPAA, PCI, GDPR requirements)"
+      ],
+      "benefits": [
+        "100% data security compliance through certified sanitization (NIST 800-88)",
+        "Complete chain-of-custody tracking from return → wipe → vendor → destruction",
+        "Disposal backlog eliminated (6-12 months → <30 days)",
+        "Audit-ready documentation (sanitization certificates, destruction certificates)",
+        "Compliance assurance (HIPAA, PCI, GDPR certified data destruction)",
+        "Asset value recovery (trade-in programs vs e-waste recycling)"
+      ],
+      "metrics": ["Data sanitization certificates: 100%", "Chain-of-custody tracking: 100% (digital signatures)", "Disposal backlog: <30 days", "Compliance: 100% (certified)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy certified data wiping utility (NIST 800-88 compliant) for all disposals", "Implement chain-of-custody tracking with digital signatures at each transfer", "Enable ITAD vendor integration for pickup scheduling and certificate automation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["ITAD vendor contracts (certified data destruction providers)", "Data wiping tools (NIST 800-88 compliant utilities)", "Chain-of-custody tracking system with digital signatures", "Compliance policy documentation (HIPAA, PCI, GDPR requirements)", "Integration with ITAD vendor for pickup and certificate automation", "Audit trail database for sanitization and destruction records", "Trade-in program for asset value recovery (Dell, Apple, CDW)"]
+    },
+    "icon": "trash",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-asset-cost-allocation-chargeback",
+    "type": "function",
+    "level": 4,
+    "label": "Asset Cost Allocation & Chargeback",
+    "description": "Automated chargeback with real-time cost allocation and usage-based billing achieving 95%+ allocation accuracy versus quarterly manual attribution with inaccurate cost center assignment.",
+    "parentCapability": "capability-it-asset-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. IT purchases 500 laptops for $750K, allocated to corporate IT budget (no departmental chargeback). 2. Quarterly cost allocation: IT finance admin manually assigns laptop costs to departments based on headcount estimates: 'Engineering has 200 employees (40% headcount), allocate 40% of $750K = $300K'. 3. Allocation inaccurate: Engineering actually has 180 laptops (36%), not 200 (40%) - overcharged by $30K. 4. No visibility into actual asset assignments by department (rely on headcount proxies). 5. Departments don't see IT costs on P&L (no accountability for asset requests). 6. No usage-based chargeback (high-end MacBook Pro same charge as budget laptop). 7. Quarterly allocation cycle too infrequent (can't adjust for mid-quarter changes).",
+      "constraints": [
+        "Manual cost allocation inaccurate (headcount proxy vs actual assets)",
+        "Quarterly allocation cycle too infrequent (3-month delay)",
+        "No departmental accountability (IT budget, not charged to requesters)",
+        "No usage-based pricing (MacBook Pro same charge as budget laptop)",
+        "Mid-quarter changes not reflected (new hires, departures, transfers)",
+        "No transparency (departments don't see what they're charged for)"
+      ],
+      "metrics": ["Allocation accuracy: 60-70% (headcount-based)", "Allocation frequency: Quarterly", "Chargeback transparency: None", "Usage-based pricing: No"]
+    },
+    "agentic": {
+      "workflow": "1. Cost Allocation Agent tracks asset assignments in real-time: 'Engineering department has 180 laptops (Dell: 120 at $1,200 each, MacBook Pro: 60 at $2,500 each) = $294K total'. 2. Agent calculates monthly chargeback: 'Engineering: 180 laptops × $49/month (3-year lease amortization) + software licenses + support = $12K/month'. 3. Chargeback Automation Agent posts charges to department P&L monthly: 'Engineering November 2024: Hardware $8,820, Software $2,400, Support $780 = $12K total IT costs'. 4. Agent provides usage-based pricing: 'MacBook Pro: $104/month (premium device), Dell Latitude: $33/month (standard), Microsoft Surface: $67/month (mid-tier)'. 5. Agent adjusts for mid-month changes: 'Engineering hired 5 employees Nov 15, received 5 laptops Nov 20 - pro-rated charge for 10 days = $163 vs full month $490'. 6. Agent provides transparency dashboard: departments see what assets assigned, costs, can drill down to individual employees. 7. 95%+ allocation accuracy and real-time chargeback vs quarterly manual attribution.",
+      "agents": {
+        "orchestrator": "IT Asset Management Orchestration Agent",
+        "superAgents": ["Cost Allocation Agent", "Chargeback Automation Agent"],
+        "utilityAgents": ["Financial System API", "Usage Tracking", "BI Dashboard", "Cost Center Database"]
+      },
+      "dataSources": [
+        "Asset assignments by department and employee",
+        "Asset purchase prices and lease/amortization schedules",
+        "Software license costs allocated per user",
+        "Support and maintenance costs per asset type",
+        "Departmental headcount and organizational hierarchy",
+        "Usage-based pricing models (tier 1, 2, 3 devices)",
+        "Mid-month changes (new hires, departures, transfers)"
+      ],
+      "benefits": [
+        "95%+ allocation accuracy vs 60-70% headcount-based estimates",
+        "Real-time chargeback (monthly) vs quarterly delayed allocation",
+        "Departmental accountability (costs visible on P&L, not hidden in IT budget)",
+        "Usage-based pricing (MacBook Pro $104/month, Dell $33/month)",
+        "Mid-month pro-ration (new hires charged for days, not full month)",
+        "Transparency dashboard (departments see assets and costs)"
+      ],
+      "metrics": ["Allocation accuracy: 95%+", "Allocation frequency: Real-time (monthly chargeback)", "Chargeback transparency: Full (dashboard)", "Usage-based pricing: Yes (tiered)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement asset assignment tracking by department (actual vs headcount proxy)", "Deploy monthly chargeback posting to departmental P&Ls", "Enable transparency dashboard showing assets and costs by department"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Asset management platform with department assignment tracking", "Financial system integration for P&L chargeback posting", "Usage-based pricing model (tiered by device type)", "Cost center database with departmental hierarchy", "BI dashboard for transparency and drill-down reporting", "Amortization schedules for hardware (3-year lease, 5-year depreciation)", "Software license cost allocation methodology (per user, per device)"]
+    },
+    "icon": "currency-dollar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

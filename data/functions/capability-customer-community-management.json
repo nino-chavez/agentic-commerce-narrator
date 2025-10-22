@@ -1,0 +1,467 @@
+[
+  {
+    "id": "function-online-community-platform-management",
+    "type": "function",
+    "level": 4,
+    "label": "Online Community Platform Management",
+    "description": "AI-powered community infrastructure with health monitoring and automated engagement programs increasing active participation by 40-60% and member retention by 50-70%.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually sets up forum categories and discussion threads. 2. Monitors basic metrics (total members, posts per day) in platform admin panel. 3. Manually creates engagement initiatives (weekly discussion prompts, contests). 4. Technical issues escalated to IT with 2-3 day resolution time. 5. Limited understanding of community health beyond basic activity counts.",
+      "constraints": [
+        "Manual forum setup doesn't scale across multiple product lines",
+        "Basic metrics (post count, members) don't reveal engagement quality",
+        "Manual engagement programs limited to 1-2 per month",
+        "Technical infrastructure issues cause member frustration",
+        "No visibility into declining engagement until members churn",
+        "Can't identify or nurture super users and advocates"
+      ],
+      "metrics": ["Engagement programs: 1-2/month", "Health visibility: Basic counts", "Member retention: 40-50%"]
+    },
+    "agentic": {
+      "workflow": "1. Platform Orchestration Agent manages technical infrastructure: uptime monitoring, performance optimization, automated scaling during traffic spikes, integration with CRM and support systems. 2. Community Health Agent tracks engagement quality: active vs lurker ratios, response time in threads, sentiment trends, churn risk scoring. 3. Engagement Program Agent automates initiatives: personalized onboarding for new members, discussion prompts based on trending topics, gamification triggers and celebrations, re-engagement campaigns for inactive members. 4. Technical Support Agent proactively identifies and resolves platform issues.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Platform Orchestration Agent", "Community Health Agent", "Engagement Program Agent"],
+        "utilityAgents": ["Community Platform", "Analytics Engine", "Notification System", "Infrastructure Monitoring"]
+      },
+      "dataSources": [
+        "Community member profiles and activity history",
+        "Discussion threads and post engagement metrics",
+        "Platform performance and uptime data",
+        "Member sentiment and satisfaction scores",
+        "Engagement program effectiveness data",
+        "Technical infrastructure health metrics",
+        "Churn risk indicators and patterns",
+        "Member lifecycle stage data"
+      ],
+      "benefits": [
+        "40-60% increase in active participation through personalized engagement",
+        "50-70% improvement in member retention via churn prediction",
+        "Automated health monitoring identifies issues before member impact",
+        "3-5x more engagement programs enabled by automation",
+        "99.9% platform uptime vs manual monitoring gaps",
+        "Super user identification enables advocacy program development"
+      ],
+      "metrics": ["Engagement programs: 5-10/month", "Health visibility: Predictive AI scoring", "Member retention: 70-85%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement community health scoring dashboard", "Automate new member onboarding"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Community platform with API access", "Analytics and reporting capability", "Member data integration", "Engagement automation tools", "Infrastructure monitoring"]
+    },
+    "icon": "users",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-community-engagement-moderation",
+    "type": "function",
+    "level": 4,
+    "label": "Community Engagement & Moderation",
+    "description": "AI-assisted moderation with sentiment analysis and power user identification scaling moderation capacity from 100 posts/day to 10,000+ while improving quality.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community moderator manually reviews every post and comment in chronological order. 2. Relies on member reports to flag inappropriate content (reactive approach). 3. Manually identifies spam and off-topic posts. 4. Apply moderation actions (delete, warn, ban) inconsistently based on individual judgment. 5. Can realistically moderate 100-150 posts per day maximum.",
+      "constraints": [
+        "Manual review limited to 100-150 posts/day (doesn't scale)",
+        "Chronological review misses high-priority toxic content",
+        "Reactive moderation means inappropriate content visible for hours",
+        "Inconsistent policy enforcement across multiple moderators",
+        "Can't identify power users or quality contributors proactively",
+        "After-hours and weekend content goes unmoderated"
+      ],
+      "metrics": ["Moderation capacity: 100-150 posts/day", "Response time: 2-8 hours", "Policy consistency: Variable"]
+    },
+    "agentic": {
+      "workflow": "1. Content Moderation Agent pre-screens all posts using: toxicity detection (hate speech, harassment), spam filtering, off-topic identification, policy violation flagging. 2. Priority Routing Agent surfaces high-risk content first for human review. 3. Engagement Scoring Agent identifies quality contributors: helpful answer rate, positive sentiment contributions, expert knowledge in topic areas, community leadership potential. 4. Power User Agent recommends members for moderator or ambassador roles. 5. Consistency Agent ensures policy enforcement aligned across human moderators.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Content Moderation Agent", "Engagement Scoring Agent", "Power User Agent"],
+        "utilityAgents": ["NLP Toxicity Detection", "Spam Filter", "Policy Engine", "Member Analytics"]
+      },
+      "dataSources": [
+        "Community posts and comments",
+        "Member activity history and reputation scores",
+        "Moderation policy guidelines",
+        "Toxicity and sentiment models",
+        "Historical moderation decisions",
+        "Member report patterns",
+        "Engagement quality metrics",
+        "Expert knowledge indicators"
+      ],
+      "benefits": [
+        "100x moderation capacity (10,000+ posts/day vs 100-150)",
+        "Proactive toxic content detection in seconds vs reactive hours",
+        "95%+ policy consistency through AI enforcement guidance",
+        "Power user identification enables community-led moderation",
+        "24/7 automated pre-screening with human review for edge cases",
+        "Quality contributor recognition drives engagement"
+      ],
+      "metrics": ["Moderation capacity: 10,000+ posts/day", "Response time: Real-time AI + human review", "Policy consistency: 95%+ AI-guided"]
+    },
+    "hitlGate": {
+      "step": 2,
+      "threshold": "Content flagged as potentially harmful or edge case",
+      "policy": "Human moderator reviews AI-flagged content before action taken"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated spam filtering", "Deploy toxicity detection for high-risk keywords"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["AI moderation tools (toxicity, spam detection)", "Community moderation policy framework", "Priority routing system", "Member reputation and scoring", "Human moderator workflow integration"]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-community-driven-support-peer-to-peer",
+    "type": "function",
+    "level": 4,
+    "label": "Community-Driven Support (Peer-to-Peer)",
+    "description": "AI-powered peer support with intelligent question routing and answer quality scoring reducing support costs by 30-50% while improving response time by 60-80%.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer posts question in general community forum. 2. Relies on random community members to see and answer (no targeted routing). 3. No quality control on answers (incorrect solutions posted as facts). 4. Questions often go unanswered or receive low-quality responses. 5. Community support seen as unreliable, customers escalate directly to support team.",
+      "constraints": [
+        "Questions posted to general forum don't reach topic experts",
+        "30-40% of questions go unanswered or poorly answered",
+        "No answer quality validation (misinformation spreads)",
+        "Can't identify subject matter experts in community",
+        "Low confidence in peer support drives unnecessary escalations",
+        "Duplicate questions answered repeatedly (no knowledge capture)"
+      ],
+      "metrics": ["Question resolution: 60-70%", "Answer quality: Unvalidated", "Support deflection: 20-30%"]
+    },
+    "agentic": {
+      "workflow": "1. Question Routing Agent analyzes incoming questions and routes to: relevant topic categories, members with expertise in subject area, similar previously answered questions (avoid duplicates). 2. Expert Identification Agent maps community members to knowledge areas based on: answer history and quality, topic engagement patterns, validated expertise. 3. Answer Quality Agent scores responses using: accuracy validation against knowledge base, helpfulness votes from community, solution confirmation by original poster. 4. Knowledge Base Agent captures high-quality Q&A pairs for future search. 5. Escalation Agent routes complex issues to support team when community can't solve.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Question Routing Agent", "Expert Identification Agent", "Answer Quality Agent"],
+        "utilityAgents": ["NLP Classification", "Knowledge Base", "Expert Matching System", "Support Integration"]
+      },
+      "dataSources": [
+        "Community questions and answers",
+        "Member expertise profiles and answer history",
+        "Answer quality scores and validations",
+        "Knowledge base and documentation",
+        "Support ticket topics and resolutions",
+        "Solution confirmation signals",
+        "Topic classification taxonomy",
+        "Member availability and response time"
+      ],
+      "benefits": [
+        "30-50% support cost reduction through deflection to community",
+        "60-80% faster response time (community vs support queue)",
+        "90%+ question resolution rate vs 60-70% random posting",
+        "Answer quality validation prevents misinformation",
+        "Expert identification enables targeted routing",
+        "Knowledge capture eliminates duplicate question answering"
+      ],
+      "metrics": ["Question resolution: 90%+", "Answer quality: AI-validated", "Support deflection: 50-70%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement question categorization and routing", "Identify top answerers as experts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Community platform with routing capability", "NLP for question classification", "Expert identification system", "Answer quality scoring", "Knowledge base integration", "Support system integration"]
+    },
+    "icon": "help-circle",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-gamification-rewards",
+    "type": "function",
+    "level": 4,
+    "label": "Gamification & Rewards",
+    "description": "AI-driven gamification with personalized challenges and recognition increasing member engagement by 40-60% and content contributions by 3-5x.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually tracks top contributors in spreadsheet. 2. Generic point system for any activity (1 point per post, no quality distinction). 3. Manually create monthly leaderboard showing top 10 members. 4. Send occasional 'thank you' messages to active members. 5. Limited rewards (badges displayed on profile but no tangible value).",
+      "constraints": [
+        "Manual tracking doesn't scale beyond basic activity counts",
+        "Generic points don't differentiate quality vs quantity contributions",
+        "Monthly leaderboards create winners/losers (demotivates most members)",
+        "Manual recognition limited to handful of top contributors",
+        "Badges provide no tangible value (low motivation)",
+        "No personalized challenges or goals for different member types"
+      ],
+      "metrics": ["Engaged members: 10-15%", "Content contribution: Low volume", "Reward redemption: Minimal"]
+    },
+    "agentic": {
+      "workflow": "1. Points & Progression Agent awards differentiated points based on: contribution quality and helpfulness, topic expertise demonstration, community support activities, milestone achievements. 2. Badge & Achievement Agent triggers recognition for: first helpful answer, 10 solved questions, community welcome (helping new members), category expertise. 3. Personalized Challenge Agent creates custom goals: encourage lurkers to post first question, prompt experts to answer in new topics, nudge intermittent members back to activity. 4. Leaderboard Agent shows multiple dimensions (not just single ranking): most helpful this month, rising stars, category experts. 5. Rewards Management Agent enables point redemption for: discounts and offers, exclusive access to products or events, charity donations.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Points & Progression Agent", "Personalized Challenge Agent", "Rewards Management Agent"],
+        "utilityAgents": ["Gamification Engine", "Loyalty Platform", "Notification System", "Analytics"]
+      },
+      "dataSources": [
+        "Member activity and contribution history",
+        "Content quality and helpfulness scores",
+        "Achievement trigger rules and milestones",
+        "Member segments and personas",
+        "Reward catalog and redemption options",
+        "Engagement patterns and preferences",
+        "Leaderboard rankings and categories",
+        "Badge library and progression paths"
+      ],
+      "benefits": [
+        "40-60% increase in member engagement through personalization",
+        "3-5x content contribution volume via quality recognition",
+        "Multi-dimensional leaderboards motivate diverse participation styles",
+        "Automated achievement triggers vs manual recognition",
+        "Tangible rewards (discounts, perks) drive redemption and loyalty",
+        "Personalized challenges activate lurkers and inactive members"
+      ],
+      "metrics": ["Engaged members: 40-60%", "Content contribution: 3-5x increase", "Reward redemption: 30-50% of members"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated badges for key milestones", "Create multi-dimensional leaderboards"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Gamification platform or engine", "Points and badges system", "Rewards catalog and fulfillment", "Member segmentation capability", "Notification and celebration workflows", "Analytics for engagement tracking"]
+    },
+    "icon": "award",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-community-analytics-health-scoring",
+    "type": "function",
+    "level": 4,
+    "label": "Community Analytics & Health Scoring",
+    "description": "AI-powered community health analytics with predictive churn modeling and sentiment tracking enabling proactive interventions that reduce churn by 50-70%.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager reviews basic metrics weekly (total members, posts per day, new registrations). 2. Manually export data to spreadsheet for trend analysis. 3. Notice declining engagement after members have already churned. 4. Limited visibility into member sentiment or satisfaction. 5. Reporting shows what happened but not why or what to do about it.",
+      "constraints": [
+        "Basic metrics (post count, members) don't reveal engagement quality",
+        "Weekly manual reporting too slow to catch declining engagement",
+        "Churn identified reactively (after members leave)",
+        "No sentiment tracking to gauge community health",
+        "Can't predict which members at risk of becoming inactive",
+        "Metrics show symptoms not root causes or solutions"
+      ],
+      "metrics": ["Health visibility: Lagging indicators", "Churn prediction: Reactive", "Intervention: After churn occurs"]
+    },
+    "agentic": {
+      "workflow": "1. Engagement Metrics Agent tracks quality indicators: active vs lurker ratios, post response time, discussion depth (multi-turn conversations), helpful answer rate. 2. Sentiment Analysis Agent monitors community mood: overall sentiment trends, negative sentiment spikes (indicating frustration), topic-level sentiment (which areas thriving vs struggling). 3. Churn Prediction Agent identifies at-risk members: declining activity patterns, negative sentiment in posts, lack of recognition or response, approaching milestone without engagement. 4. Health Scoring Agent calculates overall community health index combining multiple dimensions. 5. Intervention Agent recommends proactive actions: re-engagement outreach, topic area improvements, moderation interventions.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Engagement Metrics Agent", "Sentiment Analysis Agent", "Churn Prediction Agent"],
+        "utilityAgents": ["Analytics Platform", "NLP Sentiment Service", "Predictive ML Model", "Alerting System"]
+      },
+      "dataSources": [
+        "Member activity patterns and frequency",
+        "Post and comment engagement metrics",
+        "Sentiment scores from community content",
+        "Member lifecycle stage data",
+        "Response time and interaction quality",
+        "Topic health and activity levels",
+        "Historical churn data and patterns",
+        "Intervention effectiveness data"
+      ],
+      "benefits": [
+        "50-70% churn reduction through predictive intervention",
+        "Real-time health scoring vs weekly lagging indicators",
+        "Sentiment tracking identifies community issues before escalation",
+        "Proactive member re-engagement vs reactive churn management",
+        "Root cause analysis reveals why engagement declining",
+        "Automated alerts enable timely intervention"
+      ],
+      "metrics": ["Health visibility: Real-time predictive scoring", "Churn prediction: 70-85% accuracy", "Intervention: Proactive before churn"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement community health dashboard", "Deploy sentiment tracking on posts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Community analytics platform", "Sentiment analysis capability", "Predictive modeling for churn", "Member activity tracking", "Alerting and intervention workflows", "Historical data for model training"]
+    },
+    "icon": "heart-pulse",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-advocacy-ambassador-programs",
+    "type": "function",
+    "level": 4,
+    "label": "Advocacy & Ambassador Programs",
+    "description": "AI-driven ambassador identification and program management delivering 3-5x more advocacy impact through data-driven selection and personalized engagement.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually selects 5-10 highly active members as ambassadors. 2. Create one-size-fits-all ambassador program (monthly challenges, exclusive access). 3. Manually track ambassador activities in spreadsheet. 4. Send monthly email newsletter to ambassadors. 5. Limited measurement of program impact or ambassador effectiveness.",
+      "constraints": [
+        "Manual selection based on activity alone (misses influential but less active members)",
+        "Generic program doesn't leverage individual ambassador strengths",
+        "Limited to 5-10 ambassadors (can't scale beyond manual management)",
+        "Spreadsheet tracking doesn't capture full ambassador impact",
+        "Monthly touchpoints insufficient to maintain engagement",
+        "No performance measurement or ROI tracking"
+      ],
+      "metrics": ["Ambassador pool: 5-10", "Selection: Manual activity-based", "Impact measurement: Minimal"]
+    },
+    "agentic": {
+      "workflow": "1. Ambassador Identification Agent scores members on multiple dimensions: community influence and reach, content quality and helpfulness, brand alignment and passion, external social presence, expertise in specific topics. 2. Segmentation Agent creates ambassador tiers: mega advocates (high influence), expert contributors (deep knowledge), community connectors (bring others together), brand evangelists (external promotion). 3. Program Management Agent personalizes engagement: assign missions matching ambassador strengths, provide exclusive content and early access, facilitate brand collaboration opportunities. 4. Performance Tracking Agent measures ambassador impact: community engagement driven, support deflection contribution, external brand promotion, new member recruitment. 5. Reward & Recognition Agent automates appreciation.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Ambassador Identification Agent", "Program Management Agent", "Performance Tracking Agent"],
+        "utilityAgents": ["Advocacy Platform", "Social Media Analytics", "CRM Integration", "Reward System"]
+      },
+      "dataSources": [
+        "Member activity and influence metrics",
+        "Community contribution quality scores",
+        "External social media presence data",
+        "Brand sentiment and alignment indicators",
+        "Ambassador program participation data",
+        "Impact metrics (engagement, deflection, recruitment)",
+        "Reward and recognition history",
+        "Ambassador feedback and satisfaction"
+      ],
+      "benefits": [
+        "3-5x advocacy impact through data-driven selection",
+        "50-100 active ambassadors vs 5-10 manual program",
+        "Personalized engagement matches ambassador strengths and interests",
+        "Automated performance tracking shows clear ROI",
+        "Tiered program structure enables scaled management",
+        "Ambassador-driven support deflection reduces cost 20-40%"
+      ],
+      "metrics": ["Ambassador pool: 50-100", "Selection: AI multi-factor scoring", "Impact measurement: Full ROI tracking"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement ambassador scoring system", "Create tiered program structure"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Ambassador identification framework", "Program management platform", "Performance tracking and analytics", "Reward and recognition system", "Social media monitoring", "CRM integration for impact tracking"]
+    },
+    "icon": "star",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-community-content-moderation",
+    "type": "function",
+    "level": 4,
+    "label": "Community Content Moderation",
+    "description": "AI-powered content scanning with policy enforcement and escalation workflows achieving 95%+ detection accuracy while reducing manual moderation burden by 80-90%.",
+    "parentCapability": "capability-customer-community-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Human moderator reviews reported content after members flag it. 2. Manually read each flagged post to determine if it violates policies. 3. Apply moderation action (warn, delete, ban) based on moderator judgment. 4. No proactive scanning (inappropriate content visible until reported). 5. Moderation decisions inconsistent across different moderators interpreting policies.",
+      "constraints": [
+        "Reactive moderation only after member reports (content visible for hours)",
+        "Manual review doesn't scale (can handle 50-100 flags per day)",
+        "Inconsistent policy interpretation across moderators",
+        "No proactive detection of borderline or evolving policy violations",
+        "Complex cases (context-dependent violations) often mishandled",
+        "After-hours violations go unaddressed until next business day"
+      ],
+      "metrics": ["Detection: Reactive after reports", "Moderation capacity: 50-100 flags/day", "Policy consistency: 70-80%"]
+    },
+    "agentic": {
+      "workflow": "1. Content Scanning Agent proactively analyzes all posts in real-time: hate speech and harassment detection, profanity and explicit content filtering, spam and promotional content identification, personally identifiable information flagging. 2. Policy Enforcement Agent matches violations to specific policy guidelines. 3. Severity Classification Agent categorizes violations: auto-remove (clear violations), human review needed (borderline cases), context required (depends on thread discussion). 4. Escalation Workflow Agent routes: clear violations to auto-moderation, edge cases to human moderator, severe violations to senior moderation team. 5. Audit Trail Agent logs all decisions for consistency review.",
+      "agents": {
+        "orchestrator": "Customer Community Management Orchestration Agent",
+        "superAgents": ["Content Scanning Agent", "Policy Enforcement Agent", "Escalation Workflow Agent"],
+        "utilityAgents": ["AI Content Moderation API", "NLP Classification", "Policy Rule Engine", "Audit Logging"]
+      },
+      "dataSources": [
+        "Community content (posts, comments, messages)",
+        "Moderation policy guidelines and rules",
+        "AI toxicity and harm models",
+        "Historical moderation decisions",
+        "Member history and reputation scores",
+        "Context signals from thread discussions",
+        "Escalation workflow rules",
+        "Audit logs and decision records"
+      ],
+      "benefits": [
+        "95%+ detection accuracy vs reactive member reporting",
+        "80-90% reduction in manual moderation burden",
+        "Real-time proactive scanning vs hours-delayed reactive response",
+        "Consistent policy enforcement through AI-guided decisions",
+        "24/7 automated protection vs business hours only",
+        "Human moderators focus on complex edge cases requiring judgment"
+      ],
+      "metrics": ["Detection: Proactive real-time AI", "Moderation capacity: 10,000+ posts/day", "Policy consistency: 95%+"]
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Borderline violations or context-dependent cases",
+      "policy": "Human moderator reviews AI classification before action for edge cases"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI toxicity detection for hate speech", "Implement automated spam filtering"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["AI content moderation service", "Moderation policy rule engine", "Human review workflow integration", "Audit logging system", "Escalation routing capability", "Historical moderation data for training"]
+    },
+    "icon": "shield",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

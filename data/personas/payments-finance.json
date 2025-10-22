@@ -1,0 +1,104 @@
+[
+  {
+    "id": "persona-fraud-payment-analyst",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "label": "Fraud & Payment Analyst",
+    "title": "Fraud & Payment Analyst",
+    "description": "Monitors payment processing, fraud detection, authorization rates, and payment gateway performance to optimize payment success while minimizing fraud losses.",
+    "responsibilities": [
+      "Monitor payment authorization rates and decline reasons",
+      "Manage fraud detection rules and thresholds",
+      "Analyze payment gateway performance and costs",
+      "Investigate chargebacks and fraud patterns",
+      "Optimize payment routing and retry strategies",
+      "Track payment method mix and trends"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual review of flagged transactions",
+      "Static fraud rules requiring periodic updates",
+      "Spreadsheet analysis of payment gateway metrics",
+      "Reactive chargeback investigation",
+      "Manual payment method configuration"
+    ],
+    "agenticWorkflow": [
+      "AI-powered fraud detection with adaptive scoring",
+      "Real-time payment orchestration across gateways",
+      "Automated retry optimization for soft declines",
+      "Proactive fraud pattern detection and alerts",
+      "Dynamic fraud rule optimization"
+    ],
+    "painPointsAddressed": [
+      "Manual fraud review doesn't scale with transaction volume",
+      "Static rules miss evolving fraud patterns",
+      "Payment gateway issues discovered reactively",
+      "High false positive rate frustrates legitimate customers",
+      "Manual configuration limits optimization"
+    ],
+    "kpis": [
+      "Payment Authorization Rate",
+      "Fraud Loss Rate",
+      "False Positive Rate",
+      "Chargeback Rate",
+      "Payment Processing Cost"
+    ],
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-finance-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "label": "Finance Operations Manager",
+    "title": "Finance Operations Manager",
+    "description": "Oversees financial operations including revenue recognition, subscription billing, accounts receivable, and month-end close processes.",
+    "responsibilities": [
+      "Manage revenue recognition and month-end close",
+      "Oversee subscription billing and recurring revenue",
+      "Monitor accounts receivable and collections",
+      "Ensure financial compliance (ASC 606, IFRS 15)",
+      "Optimize financial processes and automation",
+      "Track financial KPIs and cash flow"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual revenue recognition in spreadsheets",
+      "3-5 day month-end close cycle",
+      "Reactive collections starting 30+ days after missed payment",
+      "Manual subscription lifecycle management",
+      "Quarterly financial reporting and analysis"
+    ],
+    "agenticWorkflow": [
+      "Automated revenue recognition with real-time visibility",
+      "Hours-long month-end close with continuous accounting",
+      "Proactive collections with AI-driven dunning",
+      "Automated subscription billing and lifecycle management",
+      "Real-time financial dashboards and forecasting"
+    ],
+    "painPointsAddressed": [
+      "Manual processes delay financial close",
+      "Spreadsheet errors create audit risk",
+      "Reactive collections reduce recovery rates",
+      "Limited real-time visibility for business decisions",
+      "Compliance risk with manual revenue recognition"
+    ],
+    "kpis": [
+      "Days Sales Outstanding (DSO)",
+      "Month-End Close Cycle Time",
+      "Revenue Recognition Accuracy",
+      "Collection Recovery Rate",
+      "Cash Conversion Cycle"
+    ],
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

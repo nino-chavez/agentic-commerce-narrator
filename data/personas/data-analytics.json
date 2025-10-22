@@ -1,0 +1,53 @@
+[
+  {
+    "id": "persona-data-integration-architect",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "label": "Data & Integration Architect",
+    "title": "Data & Integration Architect",
+    "description": "Designs and manages data architecture, analytics infrastructure, ML platforms, and integration frameworks to enable data-driven decision making across the enterprise.",
+    "responsibilities": [
+      "Design data architecture and analytics platforms",
+      "Manage ML/AI platform and model lifecycle",
+      "Oversee data integration and API strategy",
+      "Ensure data quality and governance",
+      "Enable self-service analytics capabilities",
+      "Drive data literacy and analytics adoption"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual data pipeline development and maintenance",
+      "Siloed analytics tools across departments",
+      "Batch data processing with nightly updates",
+      "Manual model deployment and monitoring",
+      "Centralized data team as bottleneck"
+    ],
+    "agenticWorkflow": [
+      "Automated data pipelines with real-time processing",
+      "Unified analytics platform with self-service access",
+      "Streaming data infrastructure for real-time insights",
+      "MLOps platform for automated model lifecycle",
+      "Democratized analytics with governance guardrails"
+    ],
+    "painPointsAddressed": [
+      "Manual pipelines don't scale with data growth",
+      "Tool sprawl creates integration complexity",
+      "Batch processing delays time-to-insight",
+      "Manual ML operations limit model velocity",
+      "Centralized team can't meet business demand"
+    ],
+    "kpis": [
+      "Data Quality Score",
+      "Time to Insight",
+      "Analytics Platform Adoption",
+      "ML Models in Production",
+      "Data Pipeline Reliability"
+    ],
+    "icon": "database",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

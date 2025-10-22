@@ -1,0 +1,825 @@
+[
+  {
+    "id": "capability-content-management-personalization",
+    "type": "capability",
+    "level": 3,
+    "label": "Content Management & Personalization",
+    "description": "Headless CMS architecture with AI-powered content generation, personalization, and multi-channel delivery achieving sub-100ms load times and 35-60% engagement improvement.",
+    "parentDomain": "domain-customer-experience",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Headless CMS & content delivery",
+      "AI-powered content generation",
+      "Content personalization engine",
+      "Content performance analytics",
+      "Digital asset management (DAM)",
+      "Content localization & translation",
+      "Content governance & workflow"
+    ],
+    "traditionalApproach": {
+      "description": "Monolithic CMS tightly coupled to frontend with manual content creation and generic one-size-fits-all delivery",
+      "characteristics": [
+        "Monolithic CMS coupled to website frontend",
+        "Manual content writing",
+        "Generic content for all visitors",
+        "Content updates require deployments",
+        "Assets stored in network drives with poor organization",
+        "Email-based approval workflows"
+      ],
+      "constraints": [
+        "Content duplication across channels"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cmp-001",
+          "metric": "Page Load Time (Traditional)",
+          "value": "800ms-2s",
+          "source": "TBD: [SME to provide source, e.g., 'CMS performance benchmarks']"
+        },
+        {
+          "id": "bench-cmp-002",
+          "metric": "Content Production (Traditional)",
+          "value": "20-40 pieces per month per writer",
+          "source": "TBD: [SME to provide source, e.g., 'Content team productivity benchmarks']"
+        },
+        {
+          "id": "bench-cmp-003",
+          "metric": "Engagement Rate (Traditional)",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Content engagement benchmarks']"
+        },
+        {
+          "id": "bench-cmp-004",
+          "metric": "Asset Search Time (Traditional)",
+          "value": "15-30 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'DAM efficiency studies']"
+        },
+        {
+          "id": "bench-cmp-005",
+          "metric": "Approval Cycle Time (Traditional)",
+          "value": "10-20 days",
+          "source": "TBD: [SME to provide source, e.g., 'Content approval workflow benchmarks']"
+        },
+        {
+          "id": "bench-cmp-006",
+          "metric": "Manual Content Writing Time (Traditional)",
+          "value": "4-8 hours per piece",
+          "source": "TBD: [SME to provide source, e.g., 'Content creation time studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "API-first headless CMS with AI content generation, 1:1 personalization, intelligent caching, and automated workflows",
+      "characteristics": [
+        "Headless CMS with API-first architecture",
+        "AI generates content reducing time significantly",
+        "1:1 behavioral personalization in real-time",
+        "Content delivery via global CDN",
+        "AI auto-tagging for instant asset retrieval",
+        "Automated approval workflows with risk-based routing"
+      ],
+      "benefits": [
+        "Faster content delivery and increased output",
+        "Improved engagement through personalization",
+        "Reduced asset retrieval and approval cycle time",
+        "Single content source serves all channels"
+      ],
+      "agents": [
+        "Content Management Orchestration Agent",
+        "Headless CMS Agent",
+        "Content Generation Agent",
+        "Content Personalization Agent",
+        "Auto-Tagging Agent",
+        "Workflow Routing Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Content Delivery Speed Improvement",
+          "value": "Sub-100ms (vs 800ms-2s)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on headless CMS with global CDN caching']",
+          "sourceBenchmark": "bench-cmp-001"
+        },
+        {
+          "metric": "Content Output Increase",
+          "value": "5-10x (100-400 pieces vs 20-40 per month)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI content generation reducing writing time']",
+          "sourceBenchmark": "bench-cmp-002"
+        },
+        {
+          "metric": "Engagement Improvement",
+          "value": "35-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on 1:1 behavioral personalization']",
+          "sourceBenchmark": "bench-cmp-003"
+        },
+        {
+          "metric": "Asset Retrieval Time Reduction",
+          "value": "70-85%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI auto-tagging enabling instant search']",
+          "sourceBenchmark": "bench-cmp-004"
+        },
+        {
+          "metric": "Approval Cycle Time Reduction",
+          "value": "50-75%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated workflows with risk-based routing']",
+          "sourceBenchmark": "bench-cmp-005"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement CDN for static content delivery",
+        "Use AI for product description drafts",
+        "Personalize homepage hero for new vs returning",
+        "Deploy AI auto-tagging for new assets"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Headless CMS platform selection and implementation",
+        "Global CDN infrastructure",
+        "Generative AI platform access",
+        "Customer Data Platform for personalization",
+        "DAM platform with AI capabilities"
+      ]
+    },
+    "icon": "document-text",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-product-information-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Product Information Management (PIM)",
+    "description": "Centralized product data management with AI-powered enrichment, multi-channel syndication, and data quality automation achieving 95%+ product data accuracy.",
+    "parentDomain": "domain-merchandising",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Product data governance & master data management",
+      "AI-powered product enrichment",
+      "Multi-channel product syndication",
+      "Product data quality automation",
+      "Supplier product onboarding",
+      "Product taxonomy & classification",
+      "Product content localization"
+    ],
+    "traditionalApproach": {
+      "description": "Product data scattered across spreadsheets and systems with manual enrichment and inconsistent quality",
+      "characteristics": [
+        "Product data in spreadsheets and siloed systems",
+        "Manual product description writing",
+        "Manual data entry and updates",
+        "Channel-specific product data (duplication)",
+        "No centralized taxonomy or data governance",
+        "Supplier data via email and manual processing"
+      ],
+      "constraints": [
+        "Data inconsistencies across channels",
+        "Supplier data quality issues cause delays",
+        "No automated quality checks or validation"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-pim-001",
+          "metric": "Product Data Accuracy (Traditional)",
+          "value": "70-85%",
+          "source": "TBD: [SME to provide source, e.g., 'Product data quality benchmarks']"
+        },
+        {
+          "id": "bench-pim-002",
+          "metric": "Manual Enrichment Time (Traditional)",
+          "value": "2-4 hours per SKU",
+          "source": "TBD: [SME to provide source, e.g., 'Product enrichment time studies']"
+        },
+        {
+          "id": "bench-pim-003",
+          "metric": "New Product Onboarding Time (Traditional)",
+          "value": "2-4 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Product launch cycle time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Centralized PIM with AI enrichment, automated syndication, and continuous data quality management",
+      "characteristics": [
+        "Single source of truth for all product data",
+        "AI generates product descriptions and attributes automatically",
+        "Automated multi-channel syndication with channel-specific rules",
+        "Real-time data quality monitoring and auto-correction",
+        "Supplier portal for automated product onboarding",
+        "ML-powered taxonomy classification and attribute mapping"
+      ],
+      "benefits": [
+        "Improved product data accuracy",
+        "Reduced enrichment time and time-to-market",
+        "Single source of truth eliminates data inconsistencies",
+        "Automated syndication to multiple channels in minutes",
+        "Real-time data quality prevents downstream issues"
+      ],
+      "agents": [
+        "Product Information Management Orchestrator",
+        "Product Enrichment Agent",
+        "Syndication Agent",
+        "Data Quality Agent",
+        "Taxonomy Classification Agent",
+        "Supplier Onboarding Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Product Data Accuracy Improvement",
+          "value": "95-99% (vs 70-85%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated validation and AI quality checks']",
+          "sourceBenchmark": "bench-pim-001"
+        },
+        {
+          "metric": "Enrichment Time Reduction",
+          "value": "70-85% (30-60 min vs 2-4 hrs)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI generating descriptions and attributes automatically']",
+          "sourceBenchmark": "bench-pim-002"
+        },
+        {
+          "metric": "Time-to-Market Reduction",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated onboarding and syndication']",
+          "sourceBenchmark": "bench-pim-003"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Centralize product data for top-selling items first",
+        "Use AI to generate missing product descriptions",
+        "Implement automated data quality checks",
+        "Deploy supplier portal for new product onboarding"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "PIM platform selection and implementation",
+        "Product data migration strategy",
+        "AI enrichment capability",
+        "Channel integrations (ecommerce, marketplaces, POS)",
+        "Master data governance framework"
+      ]
+    },
+    "icon": "tag",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-merchandise-financial-planning",
+    "type": "capability",
+    "level": 3,
+    "label": "Merchandise Financial Planning (MFP)",
+    "description": "AI-driven financial planning for merchandising with predictive analytics, scenario modeling, and real-time performance tracking achieving 20-35% improvement in margin realization.",
+    "parentDomain": "domain-merchandising",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Top-down financial planning & budgeting",
+      "Bottom-up merchandise planning",
+      "Pre-season buy planning",
+      "In-season plan management",
+      "Open-to-buy (OTB) calculation",
+      "Financial performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Spreadsheet-based annual planning with static budgets and limited scenario analysis",
+      "characteristics": [
+        "Annual planning cycle with static budgets",
+        "Spreadsheet-based financial modeling",
+        "Manual reconciliation between top-down and bottom-up",
+        "Limited scenario analysis capability",
+        "Monthly plan review and reforecasting",
+        "Disconnected from inventory and sales systems"
+      ],
+      "constraints": [
+        "Static plans don't adapt to market changes",
+        "Limited scenarios due to spreadsheet complexity",
+        "Plan vs actual visibility lags by weeks",
+        "Spreadsheet errors and version control issues"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-mfp-001",
+          "metric": "Planning Cycle Time (Traditional)",
+          "value": "6-12 weeks annually",
+          "source": "TBD: [SME to provide source, e.g., 'Merchandise planning cycle time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered continuous planning with real-time performance tracking and automated scenario modeling",
+      "characteristics": [
+        "Continuous rolling forecasts vs annual static plans",
+        "AI-driven scenario modeling (100+ scenarios in minutes)",
+        "Automated top-down/bottom-up reconciliation",
+        "Real-time plan vs actual tracking with alerts",
+        "Dynamic OTB recalculation based on sales performance",
+        "Integration with demand forecasting and inventory systems"
+      ],
+      "benefits": [
+        "Reduced planning cycle and improved margin realization",
+        "Real-time plan vs actual visibility enables agile responses",
+        "AI scenario modeling supports better decisions",
+        "Working capital savings from dynamic OTB",
+        "Automated reconciliation saves time"
+      ],
+      "agents": [
+        "Merchandise Financial Planning Orchestrator",
+        "Top-Down Planning Agent",
+        "Bottom-Up Planning Agent",
+        "Scenario Modeling Agent",
+        "OTB Calculation Agent",
+        "Performance Analytics Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Planning Cycle Reduction",
+          "value": "From 6-12 weeks to 2-3 weeks",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI scenario modeling and automated reconciliation']",
+          "sourceBenchmark": "bench-mfp-001"
+        },
+        {
+          "metric": "Margin Realization Improvement",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous rolling forecasts and better planning accuracy']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Working Capital Savings",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic OTB preventing overbuy']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Reconciliation Time Savings",
+          "value": "40+ hours per planning cycle",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated top-down/bottom-up reconciliation']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement automated OTB calculation",
+        "Deploy real-time plan vs actual dashboard",
+        "Enable AI scenario modeling for seasonal planning"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Merchandise planning platform or advanced EPM system",
+        "Integration with sales, inventory, and forecasting systems",
+        "Historical sales and margin data (2-3 years)",
+        "Defined planning hierarchies and calendars",
+        "Merchandising organization buy-in"
+      ]
+    },
+    "icon": "calculator",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-assortment-planning",
+    "type": "capability",
+    "level": 3,
+    "label": "Assortment Planning & Optimization",
+    "description": "AI-driven assortment planning with space optimization, localization, and continuous refinement achieving 25-40% improvement in sales per square foot.",
+    "parentDomain": "domain-merchandising",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Category assortment strategy",
+      "Localized assortment planning",
+      "Space planning & optimization",
+      "Assortment performance analytics",
+      "New item introduction planning",
+      "Assortment rationalization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual assortment planning based on buyer intuition with one-size-fits-all approaches",
+      "characteristics": [
+        "Buyers select assortments based on experience and intuition",
+        "Same assortment across all stores (no localization)",
+        "Manual space allocation using planograms",
+        "Annual or bi-annual assortment reviews",
+        "New items tested in all stores simultaneously",
+        "Limited analytics on assortment performance"
+      ],
+      "constraints": [
+        "One-size-fits-all assortment yields sub-optimal local performance",
+        "Manual space planning takes weeks per category",
+        "Slow assortment changes (2x per year max)",
+        "High-risk new item introductions (all stores at once)",
+        "Limited visibility into assortment cannibalization"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ap-001",
+          "metric": "SKU Underperformance Rate (Traditional)",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'Assortment effectiveness benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered localized assortment optimization with continuous performance monitoring and dynamic refinement",
+      "characteristics": [
+        "AI-driven assortment recommendations based on local demand patterns",
+        "Store clustering for localized assortments (100+ clusters)",
+        "Automated space optimization with sales/margin/turn tradeoffs",
+        "Continuous assortment performance monitoring",
+        "Risk-based new item rollout (test & learn, then scale)",
+        "Automated assortment rationalization (prune slow sellers)"
+      ],
+      "benefits": [
+        "Improved sales per square foot",
+        "Localized assortments increase relevance and conversion",
+        "Space optimization improves category profitability",
+        "New item success rate improves with test & learn",
+        "Assortment rationalization frees working capital",
+        "Continuous refinement vs static annual plans"
+      ],
+      "agents": [
+        "Assortment Planning Orchestrator",
+        "Localized Assortment Agent",
+        "Space Optimization Agent",
+        "Performance Analytics Agent",
+        "New Item Introduction Agent",
+        "Assortment Rationalization Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Sales per Square Foot Improvement",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on localized assortments and space optimization']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Category Profitability Improvement",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on space optimization balancing sales/margin/turn']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "New Item Success Rate Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on test & learn rollout reducing risk']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Working Capital Freed",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on assortment rationalization pruning slow sellers']",
+          "sourceBenchmark": "bench-ap-001"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement store clustering for top 3 categories",
+        "Deploy assortment performance dashboard",
+        "Use AI to identify slow-moving SKUs for rationalization"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Assortment planning platform or advanced merchandising system",
+        "Historical sales data at store-SKU level (2+ years)",
+        "Store clustering and customer segmentation",
+        "Space planning capability (planogram software)",
+        "New item testing framework"
+      ]
+    },
+    "icon": "squares-2x2",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-pricing-markdown-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Pricing & Markdown Management",
+    "description": "AI-driven dynamic pricing and markdown optimization with competitive intelligence and demand elasticity modeling achieving 10-15% margin improvement.",
+    "parentDomain": "domain-merchandising",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Dynamic pricing optimization",
+      "Competitive price monitoring",
+      "Markdown optimization",
+      "Price elasticity modeling",
+      "Promotion pricing",
+      "Price testing & analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Rule-based pricing with manual competitive checks and calendar-driven markdowns",
+      "characteristics": [
+        "Static pricing rules (cost-plus, keystone markup)",
+        "Weekly manual competitive price checks",
+        "Calendar-driven markdowns (end-of-season, fixed %)",
+        "Limited SKU coverage",
+        "No demand elasticity consideration",
+        "Gut-feel pricing decisions"
+      ],
+      "constraints": [
+        "Static rules leave money on table (over/under priced)",
+        "Calendar markdowns ignore inventory/demand reality",
+        "No testing or price optimization",
+        "Slow pricing reactions to market changes (weeks)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-pmm-001",
+          "metric": "Competitive Coverage (Traditional)",
+          "value": "100-500 SKUs only",
+          "source": "TBD: [SME to provide source, e.g., 'Manual competitive monitoring capability benchmarks']"
+        },
+        {
+          "id": "bench-pmm-002",
+          "metric": "Markdown Effectiveness (Traditional)",
+          "value": "20-40% items over-marked down",
+          "source": "TBD: [SME to provide source, e.g., 'Markdown optimization benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered dynamic pricing with real-time competitive intelligence and demand-based markdown optimization",
+      "characteristics": [
+        "AI continuously monitors competitor prices (1000s of SKUs)",
+        "Dynamic pricing based on demand elasticity and inventory",
+        "Optimized markdowns maximize revenue and inventory clearance",
+        "Real-time price testing and A/B experiments",
+        "Channel-specific and segment-specific pricing",
+        "Promotional price optimization"
+      ],
+      "benefits": [
+        "Margin improvement through optimal pricing",
+        "Real-time competitive response (hours vs weeks)",
+        "Markdown optimization reduces excess inventory",
+        "Broad SKU coverage vs manual limitations",
+        "A/B price testing enables continuous optimization",
+        "Revenue maximization with clearance goals"
+      ],
+      "agents": [
+        "Pricing Optimization Orchestrator",
+        "Dynamic Pricing Agent",
+        "Competitive Intelligence Agent",
+        "Markdown Optimization Agent",
+        "Demand Elasticity Agent",
+        "Price Testing Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Margin Improvement",
+          "value": "10-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimal pricing using demand elasticity']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Excess Inventory Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on markdown optimization maximizing revenue and clearance']",
+          "sourceBenchmark": "bench-pmm-002"
+        },
+        {
+          "metric": "SKU Coverage Increase",
+          "value": "99% (vs 100-500 items)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI monitoring thousands of competitor SKUs']",
+          "sourceBenchmark": "bench-pmm-001"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Start with top 20% SKUs by revenue for dynamic pricing",
+        "Implement competitive price monitoring and alerts",
+        "Use AI for markdown optimization in clearance categories"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Pricing optimization platform or advanced merchandising system",
+        "Competitive price data feeds or web scraping capability",
+        "Historical sales data at price point level",
+        "Executive buy-in on algorithmic pricing",
+        "Demand forecasting capability"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-merchandising-analytics",
+    "type": "capability",
+    "level": 3,
+    "label": "Merchandising Analytics & Insights",
+    "description": "Advanced analytics platform providing real-time merchandising insights, predictive recommendations, and performance attribution achieving 30-50% improvement in merchandising ROI.",
+    "parentDomain": "domain-data-analytics",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Merchandise performance dashboards",
+      "Predictive analytics & forecasting",
+      "Assortment performance analysis",
+      "Pricing & promotion analytics",
+      "Inventory health metrics",
+      "Supplier performance analytics",
+      "Cross-category & basket analysis"
+    ],
+    "traditionalApproach": {
+      "description": "Spreadsheet-based reporting with lagging indicators and limited predictive capability",
+      "characteristics": [
+        "Weekly/monthly static reports in spreadsheets",
+        "Lagging indicators only (sales, margin, turn from last week/month)",
+        "Manual report generation (analysts pull data)",
+        "Limited cross-category or basket insights",
+        "No predictive analytics or forecasting",
+        "Siloed analytics by category/channel"
+      ],
+      "constraints": [
+        "Reports lag reality by days/weeks (too late to act)",
+        "No forward-looking insights (what will happen)",
+        "Limited drill-down capability in spreadsheets",
+        "Insights siloed by category (miss cross-sell opportunities)",
+        "Gut-feel decisions vs data-driven optimization"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-merca-001",
+          "metric": "Analyst Time on Manual Reporting (Traditional)",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Analytics team time allocation studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Real-time analytics platform with AI-driven insights, predictive recommendations, and automated anomaly detection",
+      "characteristics": [
+        "Real-time performance dashboards (sales, margin, turn, inventory)",
+        "AI-powered predictive analytics (demand forecasts, trend detection)",
+        "Automated anomaly detection and alerts",
+        "Cross-category and basket analysis for merchandising optimization",
+        "Attribution analytics (price vs promo vs assortment impact)",
+        "Natural language querying and insights"
+      ],
+      "benefits": [
+        "Real-time visibility enables agile merchandising decisions",
+        "Predictive analytics anticipate trends ahead of time",
+        "Automated alerts free analysts from manual report generation",
+        "Cross-category insights drive basket size increase",
+        "Attribution analytics quantify merchandising lever effectiveness",
+        "Improved merchandising ROI through data-driven decisions"
+      ],
+      "agents": [
+        "Merchandising Analytics Orchestrator",
+        "Performance Dashboard Agent",
+        "Predictive Analytics Agent",
+        "Anomaly Detection Agent",
+        "Attribution Agent",
+        "Basket Analysis Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Trend Prediction Lead Time",
+          "value": "4-8 weeks ahead",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI predictive analytics identifying patterns early']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Basket Size Increase",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on cross-category insights driving merchandising decisions']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Merchandising ROI Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on data-driven decisions vs gut-feel']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy real-time performance dashboards for top categories",
+        "Implement automated anomaly detection and alerts",
+        "Enable cross-category basket analysis for top 100 SKUs"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Modern data warehouse or data lake",
+        "Real-time data integration from POS, inventory, pricing systems",
+        "Advanced analytics platform (Tableau, Power BI, or specialized)",
+        "Historical data (2-3 years)",
+        "Defined KPIs and merchandising metrics"
+      ]
+    },
+    "icon": "chart-bar",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

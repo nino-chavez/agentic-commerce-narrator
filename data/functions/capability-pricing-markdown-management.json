@@ -1,0 +1,467 @@
+[
+  {
+    "id": "function-dynamic-pricing-competitive-intelligence",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Pricing & Competitive Intelligence",
+    "description": "Real-time competitor monitoring with AI price recommendations achieving hourly updates versus weekly manual with 3-8% margin improvement through demand elasticity optimization and competitive positioning.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Pricing analyst manually checks competitor prices weekly: visits competitor websites recording prices for 100-200 key products in spreadsheet taking 4-6 hours per week. 2. Analyst identifies price gaps: compares own prices to competitors finding 'We're 15% higher on Product A' but analysis completed 3-5 days after price changes occurred missing competitive window. 3. Analyst recommends price changes: proposes price adjustments in weekly pricing meeting based on competitor data and margin targets but recommendations not data-driven (no elasticity modeling). 4. Price changes implemented manually: pricing team updates prices in ecommerce platform, ERP, POS systems taking 2-3 days to execute across all channels. 5. No demand elasticity consideration: prices set based on competitor matching or cost-plus without understanding customer price sensitivity resulting in sub-optimal margin or volume. 6. Limited price testing: occasional A/B tests on small product sets but insights not systematically applied across catalog. 7. Weekly price update cycle with 3-5 day implementation lag results in margin erosion (3-8% opportunity cost), lost sales from being priced too high, or leaving money on table when priced too low.",
+      "constraints": [
+        "Manual competitor price checking taking 4-6 hours weekly for only 100-200 products",
+        "3-5 day lag between competitor price changes and response",
+        "Weekly price update cycle misses dynamic market conditions and demand shifts",
+        "No demand elasticity modeling results in sub-optimal pricing decisions",
+        "Price changes take 2-3 days to implement across all channels",
+        "3-8% margin opportunity cost from delayed or sub-optimal pricing"
+      ],
+      "metrics": ["Price update frequency: Weekly", "Competitor monitoring: Manual (100-200 products)", "Price change lag: 3-5 days", "Margin optimization: Limited (no elasticity)"]
+    },
+    "agentic": {
+      "workflow": "1. Dynamic Pricing Agent monitors competitor prices continuously: scrapes competitor websites hourly tracking prices for all competing products (5,000-10,000 SKUs) vs 100-200 weekly manual checks. 2. Competitive Intelligence Agent detects price changes in real-time: identifies 'Competitor lowered price on Product A by 12% at 10:15am' alerting pricing team immediately vs 3-5 day lag. 3. Agent analyzes demand elasticity: uses ML model to predict sales impact of price changes showing 'Lowering price 5% will increase volume 18% and margin 3%' vs gut-feel decisions. 4. Agent recommends optimal prices: calculates price recommendations balancing competitive position, demand elasticity, margin targets, and inventory levels suggesting hourly adjustments vs weekly static prices. 5. Agent implements price changes automatically: updates prices across ecommerce, marketplaces, POS within minutes of approval vs 2-3 day manual implementation. 6. Agent monitors price change performance: tracks sales, margin, and competitive position after price changes learning from results to improve future recommendations. 7. 3-8% margin improvement through hourly price updates, real-time competitive monitoring, demand elasticity optimization vs weekly manual approach with delayed implementation.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Dynamic Pricing Agent", "Competitive Intelligence Agent"],
+        "utilityAgents": ["Price Scraping Services (Prisync, Feedvisor)", "Pricing Engine", "Competitor Price Database", "Demand Elasticity Model"]
+      },
+      "dataSources": [
+        "Competitor prices scraped hourly from websites and marketplaces",
+        "Historical sales data correlated with pricing changes for elasticity modeling",
+        "ML demand elasticity models showing price-volume-margin relationships",
+        "Inventory levels and aging data for markdown urgency assessment",
+        "Margin targets and pricing rules (min margin, max discount) by category",
+        "Competitive positioning strategy (price leader, premium, value)",
+        "Real-time sales velocity data showing customer response to price changes"
+      ],
+      "benefits": [
+        "3-8% margin improvement through demand elasticity optimization",
+        "Real-time vs weekly competitor monitoring (5,000-10,000 SKUs vs 100-200)",
+        "Hourly price updates vs weekly cycle with 3-5 day lag (95% faster response)",
+        "Automated price implementation across channels in minutes vs 2-3 days",
+        "Data-driven pricing decisions using ML elasticity vs gut-feel recommendations",
+        "Continuous learning from price change performance improving future recommendations"
+      ],
+      "metrics": ["Price update frequency: Hourly (dynamic)", "Competitor monitoring: Real-time (5,000-10,000 products)", "Price change lag: Minutes (automated)", "Margin optimization: High (elasticity-driven)"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "Strategic pricing decisions (>10% price changes, category-wide pricing, promotional pricing) require human approval",
+      "policy": "Agent recommends price changes and implements tactical adjustments (<10% on individual SKUs) automatically within guardrails but strategic pricing decisions require pricing manager approval. Agent provides impact analysis (margin, volume, competitive position) but human makes final decision on significant changes."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy automated competitor price monitoring for top 500-1,000 products", "Implement demand elasticity modeling for high-volume categories", "Enable automated price updates across channels replacing manual implementation"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Price scraping service or custom web scraping infrastructure", "Pricing engine with rules and guardrails (min margin, max discount)", "ML demand elasticity models trained on historical sales and pricing data", "Integration with all price storage systems (ecommerce, ERP, POS, marketplaces)", "Competitor identification and product matching (SKU to competitor product mapping)", "Pricing approval workflow for strategic changes (>10% or category-wide)", "Real-time sales and inventory data for pricing optimization"]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-promotional-price-planning-execution",
+    "type": "function",
+    "level": 4,
+    "label": "Promotional Price Planning & Execution",
+    "description": "AI promo optimization with 1-3 day execution achieving <2% pricing errors versus 10-20% manual with 15-25% promo ROI improvement and 90% error reduction through demand forecasting and automated execution.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandising team plans promotional calendar: schedules quarterly promotions (Memorial Day, Back to School, Black Friday) selecting products and discount levels based on prior year and gut feeling. 2. Team manually creates promotion setup: builds promo in system specifying products, discount %, start/end dates, exclusions taking 2-3 weeks lead time for large promotions. 3. Pricing errors common: incorrect discount applied (30% instead of 20%), wrong products included, date overlap with other promos resulting in 10-20% of promotions with pricing errors. 4. No demand forecasting: promotions launched without predicting sales lift or inventory requirements resulting in stock-outs (lost sales) or overstock (excess clearance). 5. Manual promotion execution: pricing team updates promotional prices in POS, ecommerce, signage requiring 2-3 day execution window and store labor for price changes. 6. Limited promotion optimization: analyzes promotion performance retrospectively (2-4 weeks after completion) identifying 'We over-discounted by 10%' but cannot adjust in-flight or apply learnings until next quarter. 7. 2-3 week lead time with 10-20% pricing errors and limited optimization results in 15-25% lower promo ROI vs optimal execution.",
+      "constraints": [
+        "2-3 week lead time for promotion setup limits agility and responsiveness",
+        "10-20% of promotions have pricing errors (wrong discounts, products, dates)",
+        "No demand forecasting results in stock-outs or overstock during promotions",
+        "Manual price execution takes 2-3 days across channels and stores",
+        "Retrospective analysis (2-4 weeks post-promo) prevents in-flight optimization",
+        "15-25% promo ROI gap due to sub-optimal discount levels and execution errors"
+      ],
+      "metrics": ["Promotion lead time: 2-3 weeks", "Pricing error rate: 10-20%", "Execution time: 2-3 days", "Promo ROI: Baseline (sub-optimal)"]
+    },
+    "agentic": {
+      "workflow": "1. Promotional Planning Agent analyzes promotion opportunities: uses ML model to recommend optimal products, discount levels, and timing based on historical performance, inventory position, and competitive promotions. 2. Agent forecasts promotion demand: predicts sales lift by product and channel showing 'Product A with 20% discount will sell 850 units (vs 300 baseline) requiring 550 units additional inventory' enabling proactive planning. 3. Price Execution Agent validates promotion setup: checks for pricing conflicts (overlapping promos, excluded products, margin violations) catching 90% of errors before launch vs 10-20% post-launch errors. 4. Agent executes promotion across all channels: updates promotional prices in POS, ecommerce, marketplaces simultaneously within 1-3 days vs 2-3 weeks manual lead time. 5. Agent monitors in-flight performance: tracks sales velocity, stock levels, margin impact during promotion alerting if sales below forecast (increase marketing) or stock-out risk (expedite replenishment). 6. Agent optimizes promotions dynamically: recommends mid-promotion adjustments ('Increase discount from 20% to 25% to clear remaining 200 units before promo end') maximizing ROI vs fixed promotion approach. 7. 15-25% promo ROI improvement with <2% pricing errors, 1-3 day execution vs 2-3 weeks, and in-flight optimization vs retrospective analysis.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Promotional Planning Agent", "Price Execution Agent"],
+        "utilityAgents": ["Promotion Management System", "POS Integration", "Demand Forecasting API", "Promotion Analytics Platform"]
+      },
+      "dataSources": [
+        "Historical promotion performance data (sales lift, margin impact, ROI by product/category)",
+        "ML demand forecasting models predicting sales lift by discount level",
+        "Inventory position data showing available stock and replenishment timing",
+        "Competitive promotion intelligence (competitor offers, timing, products)",
+        "Promotional calendar with planned and active promotions",
+        "Pricing rules and guardrails (min margin, max discount, exclusions)",
+        "Real-time sales and stock data during promotion execution"
+      ],
+      "benefits": [
+        "15-25% promo ROI improvement through ML-optimized discount levels and timing",
+        "90% pricing error reduction (<2% vs 10-20%) through automated validation",
+        "1-3 day execution vs 2-3 week lead time enabling agile promotional strategy",
+        "Demand forecasting prevents stock-outs and overstock during promotions",
+        "In-flight optimization adjusts promotions based on real-time performance",
+        "Faster execution enables responsive competitive promotions and market opportunities"
+      ],
+      "metrics": ["Promotion lead time: 1-3 days", "Pricing error rate: <2%", "Execution time: Same-day to 1 day", "Promo ROI: +15-25% improvement"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML demand forecasting for top promotional categories", "Implement automated promotion validation to catch pricing errors before launch", "Enable cross-channel promotion execution automation replacing manual updates"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Promotion management system with API integration", "ML demand forecasting models trained on historical promotion data", "Integration with all pricing systems (POS, ecommerce, marketplaces)", "Promotion validation rules (overlap detection, margin checks, exclusions)", "Real-time sales and inventory data for in-flight monitoring", "Promotional performance analytics for ROI measurement", "Approval workflow for strategic promotions requiring human review"]
+    },
+    "icon": "speakerphone",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-markdown-optimization-clearance",
+    "type": "function",
+    "level": 4,
+    "label": "Markdown Optimization & Clearance",
+    "description": "ML-powered markdown timing with demand-driven discounts achieving 15-25% margin erosion versus 30-40% rule-based with 50% margin erosion reduction through optimal timing and inventory velocity optimization.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandising team applies fixed markdown rules: automatically marks down slow-moving products based on age ('30% off after 60 days, 50% off after 90 days, 70% off after 120 days') ignoring product-specific demand. 2. Rule-based approach over-discounts: product with strong demand marked down 30% unnecessarily because it reached 60-day threshold eroding margin when 15% discount would have cleared inventory. 3. Team identifies clearance candidates too late: discovers excess inventory only during quarterly review missing optimal markdown timing resulting in deep discounts (70-80% off) to clear aged stock. 4. No demand elasticity modeling: applies same markdown schedule to all products regardless of price sensitivity resulting in too-small discounts for price-elastic items (remain in stock) or too-large for price-inelastic items (margin loss). 5. Manual markdown execution: pricing team creates markdown batches weekly updating prices in POS and ecommerce taking 1-2 days to implement across channels. 6. Limited markdown testing: rarely tests alternative markdown strategies (smaller discounts earlier vs larger discounts later) missing optimization opportunities. 7. 30-40% margin erosion from rule-based markdowns with no demand consideration and delayed clearance decisions requiring heavy discounts.",
+      "constraints": [
+        "Fixed markdown rules (30% at 60 days, 50% at 90 days) ignore product-specific demand",
+        "Over-discounting erodes margin when smaller discounts would clear inventory",
+        "Quarterly inventory reviews identify clearance needs too late (70-80% discounts required)",
+        "No demand elasticity modeling results in sub-optimal discount levels",
+        "Manual markdown execution takes 1-2 days weekly across channels",
+        "30-40% margin erosion from sub-optimal markdown timing and depth"
+      ],
+      "metrics": ["Markdown margin erosion: 30-40%", "Markdown timing: Fixed rules (age-based)", "Clearance timing: Quarterly (reactive)", "Optimization: None (rule-based)"]
+    },
+    "agentic": {
+      "workflow": "1. Markdown Optimization Agent monitors inventory velocity daily: identifies slow-moving products based on sales rate, weeks of supply, and seasonality triggering markdown recommendations proactively vs quarterly reactive clearance. 2. Agent calculates optimal markdown timing: uses ML model to predict 'Product A should be marked down 15% in 2 weeks when demand peaks to maximize sell-through at minimal margin loss' vs fixed 60-day rule. 3. Agent optimizes discount depth: analyzes demand elasticity showing 'Product B requires only 20% markdown to clear inventory' vs 30% rule-based discount saving 10 points of margin. 4. Clearance Planning Agent forecasts clearance needs: predicts end-of-season clearance requirements 4-6 weeks in advance enabling early markdowns at 30-40% vs late-season 70-80% desperation discounts. 5. Agent tests markdown strategies: runs A/B tests comparing '20% off for 4 weeks' vs '40% off for 2 weeks' measuring margin and velocity outcomes applying learnings to similar products. 6. Agent executes markdowns automatically: updates promotional prices across POS, ecommerce, marketplaces within hours of markdown decision vs 1-2 day manual batch process. 7. 50% margin erosion reduction (15-25% vs 30-40%) through ML-powered optimal timing, demand-driven discount levels, and proactive clearance planning vs rule-based approach.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Markdown Optimization Agent", "Clearance Planning Agent"],
+        "utilityAgents": ["Inventory Analytics Platform", "Demand Forecasting Engine", "Pricing Engine", "Markdown Calendar System"]
+      },
+      "dataSources": [
+        "Daily inventory data (on-hand, weeks of supply, aging) by product and location",
+        "Historical markdown performance (discount level, timing, sell-through, margin)",
+        "ML demand elasticity models showing price-volume relationships by product",
+        "Sales velocity data identifying slow-moving products requiring markdown",
+        "Seasonal patterns and end-of-season dates for clearance planning",
+        "Competitive markdown data showing competitor clearance timing and depth",
+        "A/B test results comparing markdown strategies (timing, depth, duration)"
+      ],
+      "benefits": [
+        "50% margin erosion reduction (15-25% vs 30-40%) through optimal markdown strategy",
+        "Optimal markdown timing maximizes sell-through at minimal margin loss",
+        "Demand-driven discount levels prevent over-discounting (save 5-10 margin points)",
+        "Proactive clearance planning (4-6 weeks advance) reduces end-of-season desperation discounts",
+        "Automated markdown execution within hours vs 1-2 day manual process",
+        "Continuous learning from A/B tests improves markdown strategies over time"
+      ],
+      "metrics": ["Markdown margin erosion: 15-25%", "Markdown timing: Optimal (ML-driven)", "Clearance timing: Proactive (4-6 week advance)", "Optimization: High (elasticity-driven)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML markdown optimization for top 500-1,000 slow-moving products", "Implement demand elasticity modeling to optimize discount levels", "Enable proactive clearance forecasting 4-6 weeks before end-of-season"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Inventory analytics platform with daily product-level velocity data", "ML demand forecasting and elasticity models", "Historical markdown performance data (2+ years) for model training", "Pricing engine with markdown automation capabilities", "Integration with all pricing systems (POS, ecommerce, marketplaces)", "Markdown calendar system for planning and tracking", "A/B testing infrastructure for markdown strategy experimentation"]
+    },
+    "icon": "trending-down",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-zone-location-based-pricing",
+    "type": "function",
+    "level": 4,
+    "label": "Zone & Location-Based Pricing",
+    "description": "Store-level pricing with demographic optimization achieving 3-7% margin improvement versus national pricing with 5-10% missed margin opportunity through localized competitive pressure and demographic-driven pricing strategies.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Pricing team sets national pricing strategy: establishes single price for all products across all stores nationwide ignoring local market conditions, demographics, and competitive dynamics. 2. Urban stores under-priced: store in high-income neighborhood with weak competition priced same as rural store missing 5-10% margin opportunity due to higher willingness-to-pay. 3. Suburban stores over-priced: store in competitive suburban market with 3 competitors within 2 miles loses sales due to national pricing being 8-12% higher than local competition. 4. No demographic consideration: luxury products priced same in working-class neighborhoods (slow sales) and affluent zip codes (quick sell-through) missing localized demand signals. 5. Regional pricing limited: occasionally implements 2-3 regional price zones (Northeast, Southeast, West) but zones too broad to capture local market nuances. 6. Competitive pressure varies: Store A faces Walmart competition requiring competitive pricing while Store B has no nearby competition enabling premium pricing but both stores use same prices. 7. 5-10% margin opportunity missed from national pricing ignoring local optimization opportunities in competitive intensity, demographics, and willingness-to-pay.",
+      "constraints": [
+        "National pricing ignores local market conditions (competition, demographics, demand)",
+        "5-10% margin opportunity missed from inability to optimize prices by location",
+        "Urban high-income stores under-priced leaving margin on table",
+        "Suburban competitive stores over-priced losing sales to local competitors",
+        "Regional zones (2-3) too broad to capture local market nuances",
+        "No capability to respond to localized competitive pressure"
+      ],
+      "metrics": ["Pricing zones: National (1 price) or Regional (2-3 zones)", "Local optimization: None", "Margin opportunity: -5-10% (missed)", "Competitive responsiveness: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Zone Pricing Agent analyzes local market conditions: evaluates each store's competitive landscape (nearby competitors, their prices), demographics (income, education, age), and historical performance identifying pricing opportunities. 2. Agent segments stores into pricing zones: clusters stores with similar characteristics (high-income low-competition, middle-income high-competition, rural) creating 10-20 pricing zones vs 1-3 national/regional zones. 3. Location Optimization Agent sets store-level prices: recommends prices by zone showing 'Zone 1 (urban affluent): $49.99, Zone 2 (suburban competitive): $44.99, Zone 3 (rural): $46.99' optimizing margin and volume. 4. Agent monitors local competitive pressure: tracks competitor price changes by store location adjusting zone prices when local competition intensifies (e.g., Walmart opens nearby) vs static national pricing. 5. Agent tests price variations: runs price experiments within zones measuring customer response to different price points (e.g., $47.99 vs $49.99 in Zone 1) refining zone pricing strategies. 6. Agent balances customer perception: ensures price differences between nearby stores not excessive (10-15% max) preventing customer frustration from discovering price variations. 7. 3-7% margin improvement through store-level pricing optimization, demographic targeting, and localized competitive responsiveness vs national pricing missing 5-10% opportunity.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Zone Pricing Agent", "Location Optimization Agent"],
+        "utilityAgents": ["Geographic Data Platform", "Demographic Analytics Service", "Store Performance Database", "Pricing Engine"]
+      },
+      "dataSources": [
+        "Store locations with competitive landscape data (nearby competitors, distances)",
+        "Demographic data by zip code (income, education, age, household size)",
+        "Store-level sales and margin performance by product category",
+        "Competitor price data by location (web scraping, price shopping services)",
+        "Historical price elasticity by store cluster showing local demand sensitivity",
+        "Customer perception research on acceptable price variation between stores",
+        "Store clustering algorithms grouping stores with similar characteristics"
+      ],
+      "benefits": [
+        "3-7% margin improvement through localized pricing optimization",
+        "Store-level pricing captures local market opportunities vs national average",
+        "Demographic optimization targets pricing to local customer willingness-to-pay",
+        "Localized competitive responsiveness prevents sales loss in competitive markets",
+        "10-20 pricing zones vs 1-3 national/regional zones for granular optimization",
+        "Continuous price testing refines zone strategies over time"
+      ],
+      "metrics": ["Pricing zones: 10-20 (store clusters)", "Local optimization: High", "Margin opportunity: +3-7% (realized)", "Competitive responsiveness: High (localized)"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Zone pricing strategy and acceptable price variation ranges require human approval",
+      "policy": "Agent recommends zone definitions and store-level prices but pricing strategy (number of zones, price variation limits between stores, demographic targeting approach) requires pricing director approval. Agent implements tactical price adjustments within approved zone ranges but strategic zone redesign requires human decision."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy store clustering to create 10-20 pricing zones based on competition and demographics", "Implement localized competitive monitoring for top 500-1,000 products", "Enable zone-specific pricing for high-margin categories first"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Geographic data platform with store and competitor location mapping", "Demographic analytics by store location (income, education, household data)", "Store clustering algorithms grouping stores by characteristics", "Pricing engine supporting zone-based pricing (10-20 zones)", "Competitor price monitoring by location (localized price scraping)", "Customer perception research on acceptable price variation limits", "Integration with all pricing systems (POS, ecommerce, signage)"]
+    },
+    "icon": "location-marker",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-price-change-execution-validation",
+    "type": "function",
+    "level": 4,
+    "label": "Price Change Execution & Validation",
+    "description": "Electronic shelf labels with same-day updates achieving <0.5% pricing errors versus 3-5% manual with 85-90% error reduction and customer satisfaction improvement through mobile-guided execution and real-time validation.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Pricing team generates weekly price change report: prints list of 500-2,000 products requiring price updates (regular price changes, promotions, markdowns) for each store. 2. Store associates receive paper price change lists: printed report delivered to store on Monday morning for implementation during week requiring 15-25 hours of associate labor. 3. Associates manually change shelf labels: walks aisles finding products on list removing old paper labels printing and attaching new labels taking 2-5 minutes per label. 4. Price change errors common: wrong price printed (typo), label placed on wrong product, label missed entirely, old promotion label not removed resulting in 3-5% pricing errors. 5. Customer discovers pricing errors: product scans at POS for $12.99 but shelf label shows $9.99 requiring price override, manager call, or customer complaint. 6. Store team validates prices manually: spot-checks 10-20% of price changes finding errors but 80-90% of changes not validated until customer or audit discovers discrepancies. 7. 2-3 day price change execution with 3-5% error rate results in customer dissatisfaction, pricing accuracy issues, and regulatory risk (some states require honoring lower shelf price).",
+      "constraints": [
+        "Manual label printing and placement taking 2-5 min per label (15-25 hours per store weekly)",
+        "2-3 day execution window from price decision to shelf label implementation",
+        "3-5% pricing error rate (wrong price, wrong product, missing label, old label)",
+        "Limited validation (10-20% spot-checks) missing 80-90% of errors until discovered",
+        "Customer discovers errors at POS causing dissatisfaction and service delays",
+        "Regulatory risk in states requiring honoring lower shelf price (margin erosion)"
+      ],
+      "metrics": ["Price change execution time: 2-3 days", "Pricing error rate: 3-5%", "Validation coverage: 10-20% (spot-check)", "Customer satisfaction: Impacted (pricing errors)"]
+    },
+    "agentic": {
+      "workflow": "1. Price Change Agent generates electronic price change tasks: identifies products requiring price updates sending tasks to electronic shelf label (ESL) system or mobile app for stores without ESL. 2. ESL system updates prices automatically: sends price changes to electronic shelf labels updating displayed prices overnight or in real-time (same-day updates) vs 2-3 day manual label printing. 3. Validation Agent verifies price accuracy: cross-checks shelf label prices against POS prices identifying mismatches immediately (ESL: '100% validation' vs 10-20% manual spot-checks). 4. For stores without ESL, agent provides mobile-guided execution: associates use mobile app showing optimal route through store, products requiring updates, and new prices printing labels on mobile printer at shelf location. 5. Agent tracks completion in real-time: monitors price change status showing '85% complete, 15 products remaining' enabling management oversight and SLA adherence vs paper checklist. 6. Agent flags exceptions: identifies products where price change cannot be completed (product not found, ESL malfunction, out-of-stock) routing to manager for resolution. 7. 85-90% error reduction (<0.5% vs 3-5%) with same-day updates vs 2-3 days through electronic shelf labels or mobile-guided execution with real-time validation and customer satisfaction improvement.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Price Change Agent", "Validation Agent"],
+        "utilityAgents": ["Electronic Shelf Label System", "POS Integration API", "Mobile App", "Price Validation Engine"]
+      },
+      "dataSources": [
+        "Price change data from pricing engine (regular, promotional, markdown)",
+        "Electronic shelf label system for automated price display updates",
+        "POS system prices for validation and mismatch detection",
+        "Store planogram data for product location and mobile app routing",
+        "Mobile printer integration for on-demand label printing at shelf",
+        "Price change completion tracking (status, timestamp, associate ID)",
+        "Exception log for products where price change cannot be completed"
+      ],
+      "benefits": [
+        "85-90% error reduction (<0.5% vs 3-5% pricing errors)",
+        "Same-day execution vs 2-3 days (ESL: overnight or real-time updates)",
+        "100% validation coverage vs 10-20% manual spot-checks (ESL systems)",
+        "15-20 hours labor savings per store weekly (automated vs manual label changes)",
+        "Customer satisfaction improvement from pricing accuracy and consistency",
+        "Regulatory compliance (no shelf-POS price mismatches in states with enforcement)"
+      ],
+      "metrics": ["Price change execution time: Same-day (ESL: overnight/real-time)", "Pricing error rate: <0.5%", "Validation coverage: 100% (ESL) or 80-90% (mobile)", "Customer satisfaction: Improved (accurate pricing)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy electronic shelf labels in pilot stores for high-change categories (promotions)", "Implement mobile-guided price change execution for stores without ESL", "Enable real-time price validation and mismatch alerts"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Electronic shelf label system (ESL) with API integration (for stores with budget)", "POS system integration for price validation and mismatch detection", "Mobile app for price change execution in stores without ESL", "Mobile printer integration for on-demand label printing at shelf location", "Store planogram data for optimal routing through store", "Price change tracking system for completion monitoring and SLA adherence", "Exception management workflow for products where changes cannot be completed"]
+    },
+    "icon": "tag",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cost-plus-value-based-pricing-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Cost-Plus vs. Value-Based Pricing Analysis",
+    "description": "ML value-based pricing with customer segment willingness-to-pay achieving 5-12% revenue per transaction improvement versus simple cost-plus through price sensitivity curves and optimal value capture.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Pricing analyst uses simple cost-plus formula: calculates product price as 'Cost × (1 + Target Margin %)' applying uniform margin targets (40% for apparel, 25% for electronics) across all products. 2. Analyst ignores customer willingness-to-pay: prices based solely on cost and margin target without understanding customer value perception or price sensitivity. 3. Prices set at launch: initial price rarely adjusted based on customer response resulting in products priced too high (slow sales) or too low (fast sell-through leaving money on table). 4. No customer segmentation: same price for all customers regardless of segment (value-conscious, premium, convenience) missing segment-specific willingness-to-pay differences. 5. Limited competitive positioning: prices may be 20% higher than competition (losing price-sensitive customers) or 10% lower (unnecessarily sacrificing margin with price-insensitive customers). 6. No price testing: rarely tests alternative price points to understand demand curve and optimal price for revenue or margin maximization. 7. Simple cost-plus approach leaves 5-12% revenue per transaction on table from sub-optimal pricing vs value-based approach capturing customer willingness-to-pay.",
+      "constraints": [
+        "Cost-plus formula ignores customer willingness-to-pay and value perception",
+        "Uniform margin targets across products miss product-specific demand dynamics",
+        "Prices set at launch and rarely adjusted based on customer response",
+        "No customer segmentation or segment-specific pricing strategies",
+        "Competitive positioning not considered systematically in pricing decisions",
+        "5-12% revenue per transaction missed from sub-optimal pricing"
+      ],
+      "metrics": ["Pricing method: Cost-plus (formula-based)", "Willingness-to-pay analysis: None", "Customer segmentation: None", "Revenue optimization: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Value Pricing Agent analyzes customer willingness-to-pay: uses purchase history, price sensitivity, and competitive alternatives to estimate maximum price customer willing to pay for product vs cost-plus formula. 2. Willingness-to-Pay Agent segments customers: identifies price-sensitive customers (shop sales, compare prices), price-insensitive customers (convenience, brand loyal), premium customers (quality-focused) with different price sensitivities. 3. Agent builds price sensitivity curves: models demand response to price changes showing 'At $49.99 sell 1,000 units, at $54.99 sell 850 units, at $44.99 sell 1,200 units' identifying revenue-maximizing or margin-maximizing price. 4. Agent recommends value-based prices: suggests prices based on customer value perception showing 'Product A: Cost $30, Customer WTP $65, Recommend $59.99' vs cost-plus '$30 × 1.40 = $42' capturing more value. 5. Agent tests price points: runs controlled price experiments measuring customer response to different prices refining willingness-to-pay models with real data. 6. Agent monitors competitive value proposition: tracks competitor pricing and product features ensuring price positioned relative to value delivered (e.g., if superior features justify 15% premium). 7. 5-12% revenue per transaction improvement through value-based pricing, customer segment willingness-to-pay, and price sensitivity optimization vs simple cost-plus leaving money on table.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Value Pricing Agent", "Willingness-to-Pay Agent"],
+        "utilityAgents": ["Customer Analytics Platform", "Purchase History Database", "Price Elasticity Model", "Segment Analysis Engine"]
+      },
+      "dataSources": [
+        "Customer purchase history showing price sensitivity and purchase patterns",
+        "Price elasticity models estimating demand response to price changes",
+        "Customer segmentation data (price-sensitive, convenience, premium)",
+        "Competitive pricing and product feature data for value comparison",
+        "Historical price test results measuring customer response to price variations",
+        "Product attribute data for value perception modeling (features, quality, brand)",
+        "Transaction data showing revenue and margin by price point and customer segment"
+      ],
+      "benefits": [
+        "5-12% revenue per transaction improvement through value-based pricing",
+        "Customer segment willingness-to-pay optimization vs one-size-fits-all",
+        "Price sensitivity curves identify revenue-maximizing or margin-maximizing prices",
+        "Competitive value positioning ensures pricing aligned with delivered value",
+        "Continuous price testing refines willingness-to-pay models with real data",
+        "Optimal value capture replacing cost-plus approach leaving money on table"
+      ],
+      "metrics": ["Pricing method: Value-based (WTP analysis)", "Willingness-to-pay analysis: High (ML models)", "Customer segmentation: High (segment-specific)", "Revenue optimization: +5-12%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy price elasticity modeling for top 500-1,000 products", "Implement customer segmentation by price sensitivity", "Enable price testing infrastructure for willingness-to-pay discovery"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Customer analytics platform with purchase history and segmentation", "Price elasticity models trained on historical sales and pricing data", "Customer segmentation by price sensitivity (value, mainstream, premium)", "Competitive intelligence on pricing and product features", "Price testing infrastructure (A/B testing, multivariate testing)", "Transaction data warehouse for revenue and margin analysis", "Pricing decision support tools showing optimal prices by segment and product"]
+    },
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-price-elasticity-revenue-management",
+    "type": "function",
+    "level": 4,
+    "label": "Price Elasticity & Revenue Management",
+    "description": "Real-time elasticity tracking with revenue optimization achieving 8-15% revenue optimization versus static pricing through predictive margin management and data-driven pricing strategy.",
+    "parentCapability": "capability-pricing-markdown-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Pricing team uses static pricing: sets prices at product launch and rarely adjusts based on demand response or elasticity resulting in sub-optimal revenue capture. 2. Team has no elasticity measurement: cannot quantify how sales volume changes with price (e.g., 'If we lower price 10%, will volume increase 15% or 5%?') resulting in gut-feel pricing decisions. 3. Margin management reactive: discovers margin erosion quarterly when financial reports show 'Gross margin down 2 points' but cannot identify which products or categories driving decline. 4. No revenue optimization: prices set to hit margin target without considering revenue maximization opportunity (e.g., lower margin but higher volume may generate more total profit). 5. Limited price testing: occasionally runs A/B tests but results not systematically analyzed or applied to pricing strategy across catalog. 6. Competitor pricing drives decisions: matches competitor prices reactively without understanding whether price change will improve or hurt overall revenue and margin. 7. Static pricing with no elasticity measurement results in 8-15% revenue optimization opportunity missed from sub-optimal price points and reactive margin management.",
+      "constraints": [
+        "Static pricing set at launch rarely adjusted based on demand response",
+        "No price elasticity measurement or quantification of volume-price relationship",
+        "Reactive margin management discovers issues quarterly after erosion occurred",
+        "No revenue optimization balancing margin targets with volume opportunities",
+        "Limited price testing with results not systematically applied",
+        "8-15% revenue optimization opportunity missed from sub-optimal pricing"
+      ],
+      "metrics": ["Elasticity measurement: None", "Pricing adjustments: Infrequent (launch and occasional)", "Margin management: Reactive (quarterly)", "Revenue optimization: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Elasticity Analysis Agent measures price-volume relationships continuously: tracks sales response to price changes building elasticity curves showing 'Product A: -10% price = +18% volume (elastic), Product B: -10% price = +5% volume (inelastic)'. 2. Revenue Management Agent optimizes prices for revenue: recommends prices balancing margin and volume showing 'Product A: Current $50 sells 1,000 units ($50K revenue), $45 sells 1,300 units ($58.5K revenue, +17%)'. 3. Agent monitors margin in real-time: tracks gross margin by product, category, and channel daily identifying margin erosion immediately ('Electronics margin down 1.5 points this week') enabling rapid response vs quarterly discovery. 4. Agent runs continuous price tests: systematically tests alternative price points measuring elasticity and revenue impact applying learnings across similar products vs occasional one-off tests. 5. Agent provides predictive margin forecasting: predicts margin impact of planned price changes showing 'Reducing prices on 50 products will decrease margin 0.3 points but increase revenue 12%' enabling informed decisions. 6. Agent balances competing objectives: optimizes pricing strategy for revenue maximization, margin protection, or inventory clearance based on business priorities vs fixed margin targets. 7. 8-15% revenue optimization through real-time elasticity tracking, data-driven pricing decisions, and predictive margin management vs static pricing and reactive adjustments.",
+      "agents": {
+        "orchestrator": "Pricing Optimization Orchestration Agent",
+        "superAgents": ["Elasticity Analysis Agent", "Revenue Management Agent"],
+        "utilityAgents": ["Sales Analytics Platform", "Price Testing Platform (A/B testing)", "Econometric Models", "Revenue Dashboard"]
+      },
+      "dataSources": [
+        "Daily sales data by product showing volume, revenue, and margin",
+        "Price change history with timestamps for elasticity analysis",
+        "Econometric models estimating price-volume-margin relationships",
+        "A/B price test results measuring customer response to price variations",
+        "Competitive pricing data for market context and positioning",
+        "Inventory levels and aging for clearance urgency assessment",
+        "Revenue and margin targets by category and time period"
+      ],
+      "benefits": [
+        "8-15% revenue optimization through price-volume-margin balancing",
+        "Real-time elasticity tracking vs no measurement (data-driven decisions)",
+        "Predictive margin management prevents erosion vs reactive quarterly discovery",
+        "Continuous price testing systematically improves pricing strategy",
+        "Revenue maximization balances margin targets with volume opportunities",
+        "Informed pricing decisions using elasticity data vs gut-feel adjustments"
+      ],
+      "metrics": ["Elasticity measurement: Continuous (real-time)", "Pricing adjustments: Frequent (data-driven)", "Margin management: Predictive (daily monitoring)", "Revenue optimization: +8-15%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy price elasticity measurement for top 500-1,000 products", "Implement real-time margin monitoring by product and category", "Enable continuous A/B price testing infrastructure"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Sales analytics platform with daily product-level revenue and margin data", "Price testing infrastructure for systematic A/B testing", "Econometric models for elasticity estimation and forecasting", "Historical sales and pricing data (2+ years) for model training", "Revenue dashboard with real-time margin monitoring and alerts", "Pricing decision support tools showing revenue-optimal price recommendations", "Business rules for balancing revenue, margin, and inventory objectives"]
+    },
+    "icon": "scale",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

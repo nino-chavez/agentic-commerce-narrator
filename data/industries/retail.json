@@ -1,0 +1,42 @@
+{
+  "id": "industry-retail",
+  "type": "industry",
+  "label": "Retail",
+  "description": "Businesses selling finished goods directly to consumers through physical stores, digital channels, or hybrid models, characterized by high SKU counts, rapid product turnover, and seasonal collections.",
+  "marketSize": "$7.2 trillion (US retail sales, 2023)",
+  "growthRate": "3-4% annually (US retail)",
+  "characteristics": [
+    "High SKU counts (5,000-100,000+ items per retailer)",
+    "Thin profit margins (2-5% net, 25-40% gross)",
+    "Inventory-intensive (50-70% of working capital)",
+    "High seasonality (25-40% annual sales in Q4)",
+    "Markdown pressure ($300B annual US losses, 15-20% of sales)",
+    "Omnichannel complexity (60-70% research online, buy in-store or vice versa)",
+    "Personalization imperative (71% consumers expect it, drives 10-30% revenue lift)"
+  ],
+  "segments": [
+    "Department Stores (Macy's, Nordstrom, Bloomingdale's) - Multi-brand, large format, declining traffic",
+    "Specialty Apparel (Gap, Zara, H&M, Foot Locker) - Fast fashion, size/color complexity, trend-driven",
+    "Luxury Retail (Chanel, Louis Vuitton, Tiffany) - High-touch service, clienteling, limited distribution",
+    "Big-Box Retail (Target, Walmart, Costco) - High volume, operational efficiency, private label",
+    "Direct-to-Consumer/DTC (Warby Parker, Allbirds, Casper) - Digital-first, owned customer data",
+    "Off-Price Retail (TJ Maxx, Ross, Nordstrom Rack) - Opportunistic buying, treasure hunt experience"
+  ],
+  "stats": {
+    "ecommerceShare": "15-16% of total retail sales",
+    "inventoryAccuracy": "85-92% typical (causes 10-15% lost sales from phantom inventory)",
+    "markdownLosses": "$300B annually in US (15-20% of sales)",
+    "vipCustomerValue": "Top 20% generate 60-80% of profit",
+    "inventoryTurns": "3-4x per year (traditional), 4-6x (agentic)",
+    "forecastAccuracy": "60-70% SKU-level (traditional), 80-90% (agentic)",
+    "planogramCompliance": "40-60% (traditional), 80-95% (agentic)",
+    "clientelingParticipation": "10-20% associates (traditional), 80-90% (agentic)"
+  },
+  "createdAt": "2025-01-09T00:00:00Z",
+  "updatedAt": "2025-01-09T00:00:00Z",
+  "version": "1.0.0",
+  "x": 0,
+  "y": 0,
+  "color": "#1E3A8A",
+  "icon": "shopping-bag"
+}

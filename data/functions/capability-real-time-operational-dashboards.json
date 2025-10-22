@@ -1,0 +1,398 @@
+[
+  {
+    "id": "function-store-site-performance-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Store/Site Performance Monitoring",
+    "description": "Real-time location performance tracking with AI-powered anomaly alerts achieving 85-95% faster issue detection and enabling immediate corrective action reducing revenue loss by 60-80%.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Regional manager reviews store performance weekly: receives Excel report Monday morning with previous week's sales, traffic, conversion by location. 2. Report shows Store #247 sales down 30% last week, manager calls store manager Thursday (3-4 days after week ended). 3. Store manager investigates: discovers POS system offline Tuesday-Wednesday (48-hour outage), sales lost to cash-only mode (many customers left). 4. IT ticket shows POS issue reported Tuesday 2pm, fixed Wednesday 6pm (30 hours to resolve), but regional manager unaware until Thursday. 5. Revenue loss $50K (2-day outage), could have been mitigated with immediate escalation. 6. Manager reviews 50 stores manually in Excel, takes 2-3 hours, misses subtle performance degradations. 7. Issues discovered 3-7 days after occurrence (weekly reporting lag), reactive response vs proactive intervention.",
+      "constraints": [
+        "Weekly reporting lag (3-7 days to discover issues)",
+        "Manual Excel review (2-3 hours for 50 stores)",
+        "Subtle issues missed (only major variances visible)",
+        "No real-time alerts (POS outage invisible to regional manager)",
+        "Reactive response (issue discovered days after occurrence)",
+        "Revenue loss 60-80% preventable with immediate detection"
+      ],
+      "metrics": ["Issue detection time: 3-7 days", "Manual review time: 2-3 hours/week", "Revenue loss per incident: $30K-$50K", "Proactive interventions: <10%"]
+    },
+    "agentic": {
+      "workflow": "1. Real-Time Dashboard monitors all stores continuously: sales, traffic, conversion, transaction volume, average ticket, employee labor hours. 2. Store #247 POS system goes offline Tuesday 2pm, Performance Monitoring Agent detects immediately: 'Store #247 transaction volume dropped 95% (2pm-3pm vs normal 50 transactions/hour), POS connectivity lost, estimated revenue impact $1,500/hour'. 3. Agent sends instant alert to regional manager and IT: 'CRITICAL: Store #247 POS offline, customers leaving without purchase, immediate action required'. 4. Regional manager sees real-time dashboard: Store #247 red status, traffic normal (50 customers/hour) but transaction volume near zero (cash-only bottleneck). 5. Manager calls store immediately (within 15 minutes), authorizes emergency IT dispatch, POS restored within 2 hours (vs 30 hours). 6. Revenue loss limited to $3K (2-hour outage vs 30-hour), 85% reduction in impact. 7. Agent monitors 500 stores continuously, alerts on any anomaly (sales variance, traffic drop, conversion decline) within minutes.",
+      "agents": {
+        "orchestrator": "Operations Orchestration Agent",
+        "superAgents": ["Performance Monitoring Agent", "Anomaly Detection Agent", "Alert Prioritization Agent"],
+        "utilityAgents": ["Real-Time Data Pipeline", "POS Integration", "Traffic Counter APIs", "Notification Service"]
+      },
+      "dataSources": [
+        "POS transaction data (real-time sales, volume, ticket size)",
+        "Traffic counters (foot traffic, conversion rate)",
+        "Employee time clock data (labor hours, staffing levels)",
+        "Inventory systems (stock levels, out-of-stocks)",
+        "Historical performance baselines by location and time",
+        "Weather data (impact on traffic patterns)",
+        "Local events calendar (concerts, sports, holidays)",
+        "System health monitoring (POS uptime, network connectivity)"
+      ],
+      "benefits": [
+        "85-95% faster issue detection (15 min vs 3-7 days)",
+        "60-80% revenue loss reduction ($3K vs $50K per incident)",
+        "Proactive alerts (immediate notification vs weekly discovery)",
+        "500 stores monitored continuously (vs manual 50-store Excel review)",
+        "Contextual insights (traffic normal but transactions down = POS issue)",
+        "Automated escalation (IT dispatch triggered automatically)"
+      ],
+      "metrics": ["Issue detection time: <15 minutes", "Manual review time: 0 (automated monitoring)", "Revenue loss per incident: $3K-$10K", "Proactive interventions: 80-90%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time dashboard for top 20 stores with sales and traffic monitoring", "Implement critical anomaly alerts for POS outages and major sales variances", "Enable mobile dashboard access for regional managers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Real-time data integration from POS systems", "Traffic counter data feeds (or manual entry)", "Cloud-based dashboard platform (Tableau, Power BI, custom)", "Anomaly detection rules engine", "Mobile app or responsive web dashboard", "Alert notification system (SMS, email, push)", "Historical baseline data for anomaly comparison"]
+    },
+    "icon": "office-building",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-supply-chain-control-tower",
+    "type": "function",
+    "level": 4,
+    "label": "Supply Chain Control Tower",
+    "description": "End-to-end supply chain visibility with predictive risk alerts achieving 70-85% reduction in disruption impact and 40-60% improvement in on-time delivery through proactive intervention.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Supply chain manager tracks shipments manually: logs into 5 different systems (supplier portal, carrier tracking, warehouse management, customs, ERP). 2. Critical shipment from China delayed at port, manager discovers 3 days later when supplier sends email notification. 3. Manager scrambles to find alternatives: calls supplier, expedites air freight ($20K premium vs normal ocean), informs sales team of stockout risk. 4. Production line stops 2 days due to missing parts (delayed shipment), $200K revenue loss from production downtime. 5. Customer orders delayed 1 week, penalty fees $50K per contract terms, customer satisfaction declines. 6. Manager reviews supply chain health weekly in spreadsheet: manually compiles data from 5 systems, 4-6 hour weekly task. 7. Disruptions discovered reactively (after already occurred), limited time to mitigate impact.",
+      "constraints": [
+        "Fragmented visibility (5 different systems, no integration)",
+        "3-7 day disruption discovery lag (reactive notifications)",
+        "Manual tracking (4-6 hours/week spreadsheet compilation)",
+        "Limited mitigation time (issues discovered after impact started)",
+        "Production downtime (2 days, $200K revenue loss)",
+        "Customer penalties ($50K) and satisfaction decline"
+      ],
+      "metrics": ["Disruption detection: 3-7 days", "Manual tracking time: 4-6 hours/week", "Production downtime: 2-4 days per event", "On-time delivery: 70-75%"]
+    },
+    "agentic": {
+      "workflow": "1. Supply Chain Control Tower integrates all data sources: supplier systems, carriers, warehouses, customs, weather, port congestion, geopolitical risk. 2. Agent detects risk 7 days ahead: 'Critical shipment from Shanghai delayed - port congestion forecast 5-day delay based on vessel AIS tracking and port authority data, production line impact predicted Nov 15 if not mitigated'. 3. Agent recommends alternatives: 'Option 1: Expedite air freight ($18K cost, delivery Nov 12), Option 2: Source from backup supplier Mexico ($5K premium, delivery Nov 14), Option 3: Reallocate inventory from warehouse B to cover production (no cost, partial coverage)'. 4. Manager selects Option 2 (backup supplier), agent orchestrates: creates PO, notifies supplier, schedules freight, updates production plan. 5. Shipment arrives Nov 14 (1 day before production need), no production downtime, $195K loss avoided ($200K downtime - $5K supplier premium). 6. Agent monitors 10,000 shipments continuously, predicts risks 7-14 days ahead (vs 3-7 day reactive discovery). 7. 70-85% disruption impact reduction, 40-60% on-time delivery improvement (85-92% vs 70-75%).",
+      "agents": {
+        "orchestrator": "Supply Chain Orchestration Agent",
+        "superAgents": ["Control Tower Agent", "Risk Prediction Agent", "Alternative Sourcing Agent"],
+        "utilityAgents": ["Supplier Integration", "Carrier APIs", "Weather Data", "Port/Customs APIs", "ERP Integration"]
+      },
+      "dataSources": [
+        "Supplier order and shipment data (POs, ASNs, invoices)",
+        "Carrier tracking (vessel AIS, flight tracking, truck GPS)",
+        "Port congestion and customs clearance data",
+        "Weather forecasts and natural disaster alerts",
+        "Warehouse inventory levels and capacity",
+        "Production schedules and material requirements",
+        "Supplier performance history (lead times, quality, reliability)",
+        "Geopolitical risk feeds (strikes, regulations, trade restrictions)"
+      ],
+      "benefits": [
+        "70-85% disruption impact reduction ($5K cost vs $200K loss)",
+        "7-14 day advance warning (vs 3-7 day reactive discovery)",
+        "Proactive mitigation (backup supplier sourced before stockout)",
+        "40-60% on-time delivery improvement (85-92% vs 70-75%)",
+        "Automated risk monitoring (10,000 shipments vs manual 50)",
+        "Alternative recommendations (air freight, backup suppliers, inventory reallocation)"
+      ],
+      "metrics": ["Disruption detection: 7-14 days advance", "Manual tracking time: <1 hour/week (automated)", "Production downtime: <0.5 days per event", "On-time delivery: 85-92%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy control tower for top 100 critical suppliers and shipments", "Integrate carrier tracking APIs for real-time shipment visibility", "Implement predictive risk alerts for port congestion and weather delays"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Supply chain visibility platform (Blue Yonder, E2open, project44)", "API integration with suppliers, carriers, warehouses", "Real-time shipment tracking (AIS vessel tracking, flight tracking)", "Weather and port congestion data feeds", "ERP integration for production and inventory data", "Supplier performance database", "ML models for risk prediction and lead time forecasting"]
+    },
+    "icon": "truck",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-customer-experience-real-time-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Customer Experience Real-Time Monitoring",
+    "description": "Omnichannel CX dashboard with sentiment analysis and journey tracking achieving 80-90% faster issue resolution and 25-40% NPS improvement through proactive service recovery.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer experience team reviews NPS survey results monthly: aggregated score shows NPS dropped from 45 to 38 (7-point decline). 2. Team analyzes open-ended comments manually: reads 500 survey responses, identifies common themes (shipping delays, product quality issues). 3. Analysis completed 2-3 weeks after month ended: 'November NPS decline driven by Black Friday shipping delays and product stockouts'. 4. Mitigation actions too late: December already underway, same issues recurring (no real-time intervention). 5. Social media team discovers viral complaint on Twitter (10K retweets): 'Ordered Black Friday, still waiting 3 weeks later #Terrible'. 6. Crisis response scrambled: PR team drafts apology, offers expedited shipping, but brand damage already done. 7. CX issues discovered 2-4 weeks after occurrence, reactive crisis management vs proactive service recovery.",
+      "constraints": [
+        "Monthly NPS lag (2-4 weeks to identify issues)",
+        "Manual survey analysis (500 responses, 1-2 days)",
+        "No real-time sentiment monitoring (social media surprises)",
+        "Reactive crisis response (brand damage before mitigation)",
+        "Siloed channels (survey, social, support tickets analyzed separately)",
+        "Limited time for service recovery (issues discovered too late)"
+      ],
+      "metrics": ["Issue detection time: 2-4 weeks", "Manual analysis time: 1-2 days/month", "NPS: 38 (declining)", "Service recovery rate: <20%"]
+    },
+    "agentic": {
+      "workflow": "1. CX Monitoring Agent tracks all channels real-time: website chat, support tickets, social media, NPS surveys, product reviews, call center transcripts. 2. Agent detects sentiment spike: 'Negative sentiment increased 250% today (150 mentions vs 60 baseline), primary theme: shipping delays, social media virality risk detected (5 influencer accounts mentioned issue)'. 3. Agent analyzes customer journey: '85% of complaints from Black Friday orders, 65% purchased high-demand Electronics SKU-123, tracking shows 3-day carrier delay (weather disruption), customers not proactively notified'. 4. Agent recommends service recovery: 'Send proactive email to 2,500 affected customers: apologize for delay, offer $20 credit, provide updated delivery estimate - estimated cost $50K, prevent 500 support tickets ($40/ticket = $20K saved), reduce NPS impact'. 5. CX leader approves recommendation, agent orchestrates: triggers email campaign, creates social media response template, alerts support team with talking points. 6. Real-time monitoring shows sentiment stabilizing: negative mentions drop from 150/day to 40/day after proactive communication. 7. 80-90% faster resolution (same-day vs 2-4 weeks), NPS improves 25-40% (45 → 60) through proactive service recovery.",
+      "agents": {
+        "orchestrator": "CX Orchestration Agent",
+        "superAgents": ["CX Monitoring Agent", "Sentiment Analysis Agent", "Service Recovery Agent"],
+        "utilityAgents": ["Social Media Monitoring", "NPS Platform", "Support Ticket System", "Journey Analytics", "Communication Platform"]
+      },
+      "dataSources": [
+        "NPS survey responses and scores (real-time)",
+        "Social media mentions (Twitter, Facebook, Instagram, Reddit)",
+        "Support ticket data (volume, sentiment, themes)",
+        "Website chat transcripts and sentiment",
+        "Product review sites (Amazon, Google, Yelp)",
+        "Call center recordings and transcripts (speech analytics)",
+        "Customer journey data (touchpoints, drop-offs, friction points)",
+        "Order and shipping status (for root cause correlation)"
+      ],
+      "benefits": [
+        "80-90% faster resolution (same-day vs 2-4 weeks)",
+        "25-40% NPS improvement (45 → 60 through proactive recovery)",
+        "Real-time sentiment monitoring (prevent viral crises)",
+        "Omnichannel integration (unified view vs siloed analysis)",
+        "Proactive service recovery (email 2,500 customers before complaints)",
+        "ROI-positive intervention ($50K cost, $70K value from ticket reduction + NPS impact)"
+      ],
+      "metrics": ["Issue detection time: Real-time (<1 hour)", "Manual analysis time: Automated", "NPS: 60 (improving)", "Service recovery rate: 70-80%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time social media monitoring with sentiment analysis alerts", "Integrate support ticket themes with NPS survey feedback for unified view", "Implement proactive service recovery workflow for high-impact issues"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["CX analytics platform (Medallia, Qualtrics, custom)", "Social media monitoring tools (Sprinklr, Brandwatch)", "Sentiment analysis and NLP capabilities", "Integration with support ticket, chat, call center systems", "Customer journey analytics platform", "Communication automation (email, SMS campaigns)", "Real-time alerting and workflow triggers"]
+    },
+    "icon": "emoji-happy",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-campaign-performance-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Campaign Performance Tracking",
+    "description": "Real-time marketing dashboard with AI-powered optimization recommendations achieving 50-70% faster decision cycles and 30-50% improvement in campaign ROAS through dynamic budget reallocation.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing manager launches Black Friday campaign: $500K budget allocated across Google Ads ($200K), Facebook ($150K), Email ($100K), Display ($50K). 2. Campaign runs Monday-Friday, manager reviews performance Friday afternoon: pulls reports from 4 platforms, compiles Excel summary. 3. Analysis shows Google Ads ROAS 2.5:1 (excellent), Facebook 1.2:1 (break-even), Display 0.6:1 (losing money), Email 4:1 (great). 4. Manager realizes Display underperforming, but campaign already ended (5-day spend completed, $50K wasted). 5. Manager creates next week's plan: reallocates budget (Google $250K, Email $150K, Facebook $100K, Display $0), but can't recover lost week. 6. Weekly analysis cycle: spend Monday-Friday, review Friday, plan Saturday-Sunday, adjust next Monday (7-day lag between performance and action). 7. 30-40% of campaign budget sub-optimized due to weekly review cycle vs real-time optimization.",
+      "constraints": [
+        "Weekly review cycle (campaign runs 5 days before analysis)",
+        "Manual report compilation (4 platforms, Excel consolidation, 2-3 hours)",
+        "7-day lag between performance and budget adjustment",
+        "30-40% budget waste on underperforming channels",
+        "No intra-week optimization (locked into weekly budget allocation)",
+        "Missed opportunities (can't double-down on winners mid-campaign)"
+      ],
+      "metrics": ["Campaign review frequency: Weekly", "Budget optimization lag: 7 days", "Underperforming spend: 30-40%", "Campaign ROAS: 2.5:1"]
+    },
+    "agentic": {
+      "workflow": "1. Marketing manager launches campaign, Real-Time Campaign Agent monitors performance hourly: tracks spend, impressions, clicks, conversions, ROAS by channel. 2. Agent detects underperformance Day 1: 'Display ads ROAS 0.6:1 after $5K spend (8 hours), 70% probability of remaining below break-even, recommend reduce budget -80% and reallocate to Google Ads (current ROAS 2.8:1, capacity for $10K additional spend)'. 3. Manager reviews recommendation on mobile app, approves budget shift: Display $10K → $2K (save $8K waste), Google Ads $200K → $208K. 4. Agent executes budget changes via API: pauses Display campaigns, increases Google Ads bids, monitors results. 5. Agent monitors Email performance: 'Email ROAS 4.5:1 after 1 day, send volume at 50% capacity (could send to additional 100K opted-in customers), recommend increase email send +50K for estimated $50K incremental revenue'. 6. Manager approves, agent triggers additional email send to lookalike audience. 7. Week ends: total ROAS 3.8:1 (vs 2.5:1 baseline), 30-50% improvement through real-time optimization and budget reallocation.",
+      "agents": {
+        "orchestrator": "Marketing Orchestration Agent",
+        "superAgents": ["Real-Time Campaign Agent", "Budget Optimization Agent", "Performance Prediction Agent"],
+        "utilityAgents": ["Ad Platform APIs", "Analytics Integration", "Attribution Engine", "Forecasting Models"]
+      },
+      "dataSources": [
+        "Real-time campaign performance (spend, impressions, clicks, conversions)",
+        "Multi-channel ad platform data (Google, Facebook, Display, Email)",
+        "Attribution modeling (first-touch, last-touch, multi-touch)",
+        "Audience data (size, saturation, lookalike expansion)",
+        "Historical campaign performance for forecasting",
+        "Budget constraints and allocation rules",
+        "Creative performance (ad copy, images, CTR by variant)",
+        "Conversion funnel data (landing page, checkout, confirmation)"
+      ],
+      "benefits": [
+        "50-70% faster decision cycles (hourly vs weekly review)",
+        "30-50% campaign ROAS improvement (3.8:1 vs 2.5:1)",
+        "Real-time budget reallocation (shift $8K from Display to Google within hours)",
+        "Proactive scaling (expand Email send volume based on performance)",
+        "Waste elimination ($8K Display budget saved before full spend)",
+        "Mobile decision-making (manager approves optimizations on-the-go)"
+      ],
+      "metrics": ["Campaign review frequency: Hourly (real-time)", "Budget optimization lag: <4 hours", "Underperforming spend: <10%", "Campaign ROAS: 3.5:1-4:1"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time dashboard integrating top 3 ad platforms (Google, Facebook, Email)", "Implement automated budget reallocation alerts based on ROAS thresholds", "Enable mobile dashboard for on-the-go campaign optimization approvals"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Marketing analytics platform (Google Analytics 360, Adobe Analytics)", "API integration with ad platforms (Google Ads, Facebook Ads, email ESP)", "Attribution modeling framework", "Real-time data pipeline for hourly updates", "Budget management and allocation rules engine", "Mobile dashboard app or responsive web interface", "Predictive models for ROAS forecasting"]
+    },
+    "icon": "speakerphone",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-fleet-logistics-real-time-visibility",
+    "type": "function",
+    "level": 4,
+    "label": "Fleet & Logistics Real-Time Visibility",
+    "description": "GPS-enabled fleet tracking with predictive ETA and dynamic routing achieving 25-40% delivery time reduction and 30-50% fuel cost savings through AI-optimized logistics.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["Retail", "Grocery", "QSR"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "regional",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Delivery dispatcher creates daily routes manually: reviews 50 delivery orders, assigns to 10 drivers based on geography, creates route sequence in Excel. 2. Driver receives paper manifest: 'Deliver to addresses 1-8 in sequence', uses personal GPS for navigation. 3. Driver encounters traffic jam on highway (accident blocking 2 lanes), stuck 45 minutes, calls dispatcher for guidance. 4. Dispatcher unaware of traffic conditions, says 'Wait it out or find alternate route' (no real-time traffic data). 5. Driver arrives 2 hours late to customer, misses delivery window (customer not home), must reschedule for next day (failed delivery). 6. Dispatcher tracks deliveries manually: drivers call or text when completing stops, updates Excel spreadsheet. 7. End-of-day summary: 6 failed deliveries (customer not home, late arrival), 15% of routes, fuel costs 20% over budget (inefficient routing).",
+      "constraints": [
+        "Manual route planning (Excel-based, time-consuming)",
+        "No real-time traffic updates (drivers stuck in jams)",
+        "Paper manifests (no dynamic rerouting capability)",
+        "Manual delivery tracking (dispatcher depends on driver calls)",
+        "15% failed deliveries (late arrivals, missed windows)",
+        "Fuel costs 20% over budget (inefficient routes, traffic delays)"
+      ],
+      "metrics": ["Failed delivery rate: 15%", "Average delivery time: 45 min per stop", "Fuel cost per delivery: $12", "Real-time visibility: None"]
+    },
+    "agentic": {
+      "workflow": "1. Fleet Management Agent creates optimized routes: analyzes 50 orders, traffic patterns, delivery time windows, driver locations, generates optimal sequences minimizing drive time and fuel. 2. Driver receives routes on mobile app: GPS navigation with real-time traffic, dynamic ETA updates, customer contact info. 3. Agent detects traffic jam: 'Highway 101 accident, 45-min delay predicted, rerouting Driver #3 via Highway 280 (adds 5 min vs 45 min delay), notifying customers of updated ETAs'. 4. Driver's route updates automatically: mobile app shows new sequence, customers receive SMS: 'Your delivery ETA updated to 2:30pm (was 2:15pm)'. 5. Agent monitors progress: 'Driver #3 running 10 minutes behind schedule, recommend skip low-priority delivery #7 (standard shipping, flexible window), prioritize delivery #8 (premium customer, tight window)'. 6. Dispatcher approves, driver gets updated route, completes all priority deliveries on time. 7. End-of-day: 2% failed deliveries (vs 15%), 25-40% delivery time reduction (32 min per stop vs 45 min), 30-50% fuel cost savings ($7 per delivery vs $12).",
+      "agents": {
+        "orchestrator": "Logistics Orchestration Agent",
+        "superAgents": ["Fleet Management Agent", "Dynamic Routing Agent", "ETA Prediction Agent"],
+        "utilityAgents": ["GPS Tracking", "Traffic Data API", "Route Optimization Engine", "Customer Notification Service"]
+      },
+      "dataSources": [
+        "Real-time GPS tracking from fleet vehicles",
+        "Traffic data and incident feeds (Waze, Google Maps, HERE)",
+        "Delivery orders with addresses, time windows, priorities",
+        "Historical delivery time patterns by route and time of day",
+        "Vehicle capacity and fuel consumption data",
+        "Customer preferences and contact information",
+        "Weather forecasts (impact on drive times)",
+        "Driver break schedules and hours-of-service compliance"
+      ],
+      "benefits": [
+        "25-40% delivery time reduction (32 min vs 45 min per stop)",
+        "30-50% fuel cost savings ($7 vs $12 per delivery)",
+        "87% reduction in failed deliveries (2% vs 15%)",
+        "Real-time rerouting (avoid traffic, save 40 min per incident)",
+        "Proactive customer notifications (updated ETAs reduce missed deliveries)",
+        "Automated route optimization (vs manual Excel planning)"
+      ],
+      "metrics": ["Failed delivery rate: 2%", "Average delivery time: 28-32 min per stop", "Fuel cost per delivery: $6-$8", "Real-time visibility: 100% (GPS tracking)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy GPS tracking for delivery fleet with real-time dashboard visibility", "Implement route optimization software for daily delivery planning", "Enable customer SMS notifications with dynamic ETA updates"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["GPS tracking devices or mobile apps for fleet vehicles", "Fleet management platform (Samsara, Verizon Connect, Fleet Complete)", "Route optimization engine (Route4Me, Onfleet, custom)", "Real-time traffic data API integration", "Customer notification system (SMS, email)", "Mobile app for driver navigation and proof-of-delivery", "Integration with order management system"]
+    },
+    "icon": "location-marker",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-financial-performance-dashboards",
+    "type": "function",
+    "level": 4,
+    "label": "Financial Performance Dashboards",
+    "description": "Real-time P&L and cash flow monitoring with predictive variance alerts achieving 80-90% reduction in month-end close time and enabling daily financial decision-making with 95%+ accuracy.",
+    "parentCapability": "capability-real-time-operational-dashboards",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. CFO waits for month-end close: accounting team closes books, finalizes October P&L on November 10 (10-day lag). 2. CFO reviews October results: revenue $10M (vs $12M budget, -17%), operating profit $1.5M (vs $2M budget, -25%). 3. CFO calls emergency meeting: 'What happened? Why did we miss budget by $2M revenue?'. 4. Finance team investigates: pulls reports from 5 systems, discovers primary driver was 20% sales decline in Enterprise segment due to deal slippage. 5. Investigation takes 3-4 days: Enterprise deals worth $2.5M pushed from October to November (sales team didn't communicate). 6. Mitigation too late: October already ended, can't accelerate deals retroactively, board meeting next week with bad results. 7. CFO lacks real-time visibility: makes decisions on 10-40 day old data, reactive vs proactive financial management.",
+      "constraints": [
+        "10-day month-end close lag (results finalized Nov 10 for October)",
+        "No intra-month visibility (CFO blind to October until Nov 10)",
+        "Reactive variance investigation (3-4 days after close)",
+        "Cross-system analysis required (5 systems, manual consolidation)",
+        "Mitigation impossible (month already ended)",
+        "Board reporting on stale data (10-40 days old)"
+      ],
+      "metrics": ["Month-end close time: 10 days", "Financial visibility lag: 10-40 days", "Variance investigation: 3-4 days post-close", "Real-time decision-making: Limited"]
+    },
+    "agentic": {
+      "workflow": "1. Financial Dashboard Agent provides daily P&L updates: integrates revenue (CRM), expenses (ERP), payroll (HRIS), real-time accruals. 2. Mid-October (day 15), agent alerts CFO: 'October revenue tracking -15% to budget ($10.2M vs $12M forecast), primary driver: Enterprise segment -20% ($2M shortfall), deal pipeline analysis shows $2.5M deals at risk of slipping to November'. 3. CFO reviews dashboard on mobile: sees Enterprise deal detail, identifies 3 large deals ($800K, $700K, $500K) in 'Negotiation' stage with close date Oct 31. 4. CFO calls enterprise sales leader Oct 16: 'Can we close these 3 deals by month-end or should we adjust forecast?', sales leader confirms $1.5M closeable, $1M will slip. 5. CFO updates forecast Oct 16: revenue $11M (vs $12M budget), operating profit $1.7M (vs $2M budget), informs board early (15-day advance notice vs surprise). 6. Agent monitors cash flow daily: 'Accounts receivable aging increased, $500K past 60 days, recommend collection campaign, projected cash shortfall mid-November if not addressed'. 7. 80-90% close time reduction (real-time vs 10-day close), daily financial decision-making, 95%+ forecast accuracy.",
+      "agents": {
+        "orchestrator": "Financial Orchestration Agent",
+        "superAgents": ["Financial Dashboard Agent", "Variance Analysis Agent", "Cash Flow Prediction Agent"],
+        "utilityAgents": ["ERP Integration", "CRM Revenue API", "Payroll System", "Accrual Calculator", "Forecasting Engine"]
+      },
+      "dataSources": [
+        "Real-time revenue data (CRM deal stages, booked revenue)",
+        "Expense data (ERP, procurement, travel, vendor invoices)",
+        "Payroll and benefits (HRIS, time tracking)",
+        "Accounts receivable and payable aging",
+        "Cash position and bank account balances",
+        "Budget and forecast targets by month",
+        "Historical financial patterns for variance detection",
+        "Deal pipeline and sales forecast (CRM)"
+      ],
+      "benefits": [
+        "80-90% close time reduction (real-time vs 10-day lag)",
+        "Daily P&L visibility (vs monthly after 10-day close)",
+        "15-day advance warning on variances (vs post-close surprises)",
+        "95%+ forecast accuracy (real-time deal pipeline integration)",
+        "Proactive cash flow management (60-day AR aging detected early)",
+        "Mobile financial decision-making (CFO reviews on phone)"
+      ],
+      "metrics": ["Month-end close time: 1-2 days (mostly validation)", "Financial visibility lag: Real-time (daily updates)", "Variance investigation: Real-time (as variances occur)", "Real-time decision-making: 100%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time revenue dashboard integrating CRM deal pipeline", "Implement daily expense accruals for top 10 cost categories", "Enable cash flow forecasting with AR/AP aging monitoring"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Cloud-based ERP with real-time API access", "CRM integration for revenue and deal pipeline visibility", "Automated accrual calculations for expenses", "Cash flow forecasting models", "Budget and target data integration", "Mobile financial dashboard app", "Variance alert rules and notification system"]
+    },
+    "icon": "chart-pie",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

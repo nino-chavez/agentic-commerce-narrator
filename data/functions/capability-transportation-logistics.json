@@ -1,0 +1,604 @@
+[
+  {
+    "id": "function-tms-route-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Route Planning & Optimization",
+    "description": "AI-driven real-time route optimization considering traffic, weather, delivery windows, and vehicle constraints for cost and service level optimization.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Static route planning performed daily or weekly using basic routing software with limited real-time adjustment capability. Dispatchers manually assign orders to trucks based on geography and experience. Limited consideration of traffic patterns, weather, or delivery time windows. Routes locked once trucks depart with minimal dynamic re-routing. Manual exception handling for service failures or delays.",
+      "constraints": [
+        "10-20% route inefficiency (empty miles, suboptimal sequencing)",
+        "30-45 minute average route planning time per truck",
+        "Limited real-time visibility into truck locations/status",
+        "5-10% on-time delivery miss rate",
+        "Manual communication with drivers (phone calls, texts)"
+      ],
+      "metrics": [
+        "On-time delivery: 90-95%",
+        "Route efficiency: 80-90%",
+        "Planning time: 30-45 min/truck"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI routing engine continuously optimizes routes based on real-time order additions, traffic conditions, weather forecasts, delivery time windows, vehicle capacities, and driver hours-of-service regulations. Machine learning predicts delivery time with high accuracy using historical patterns and current conditions. System dynamically re-routes trucks mid-journey to accommodate new rush orders or avoid traffic incidents. Automated communication to drivers via mobile apps with turn-by-turn navigation and delivery instructions. Predictive ETA updates automatically sent to customers. Continuous learning from actual vs. planned performance.",
+      "agents": {
+        "orchestrator": "Route Optimization Orchestrator",
+        "superAgents": [
+          "Multi-Stop Route Planning Agent",
+          "Real-Time Re-Routing Agent",
+          "Delivery Time Prediction Agent",
+          "Driver Assignment Agent"
+        ],
+        "utilityAgents": [
+          "Traffic Data Integration Agent",
+          "Weather API Agent",
+          "Telematics Agent",
+          "Customer Notification Agent"
+        ]
+      },
+      "dataSources": [
+        "Real-time order queue with delivery windows",
+        "Live traffic data (Google, Waze, HERE)",
+        "Weather forecasts and conditions",
+        "Vehicle telematics (GPS, speed, fuel)",
+        "Driver hours-of-service logs",
+        "Historical delivery time patterns",
+        "Road restrictions and closures"
+      ],
+      "benefits": [
+        "15-25% reduction in total miles driven",
+        "20-35% improvement in on-time delivery (98%+ vs 90-95%)",
+        "85-95% faster route planning (2-5 min vs 30-45 min per truck)",
+        "10-15% fuel cost savings",
+        "30-40% increase in daily delivery capacity per truck"
+      ],
+      "metrics": [
+        "On-time delivery: 98%+",
+        "Route efficiency: 95%+",
+        "Planning time: 2-5 min/truck (mostly automated)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI route optimization for core delivery zones (15% mile reduction)",
+        "Enable real-time traffic integration (10% faster deliveries)",
+        "Implement automated customer ETA notifications"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Transportation Management System (TMS)",
+        "Vehicle telematics/GPS tracking",
+        "Mobile apps for driver communication",
+        "Accurate customer address geocoding"
+      ]
+    },
+    "icon": "route",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-carrier-selection",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Carrier Selection & Rate Shopping",
+    "description": "Automated carrier selection optimizing for cost, service level, and sustainability using real-time rate shopping and performance analytics.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Manual carrier selection based on negotiated contract rates and default routing guides. Limited rate shopping across carriers due to time constraints. Static carrier assignments without performance-based optimization. Quarterly carrier scorecarding with slow adjustments to routing guides. Manual entry of shipment details for rating and booking.",
+      "constraints": [
+        "80-90% shipments go to default carrier (limited optimization)",
+        "Quarterly carrier performance reviews (slow to adapt)",
+        "15-25% overpayment vs optimal carrier/service selection",
+        "No real-time rate comparison",
+        "Limited visibility into carrier capacity constraints"
+      ],
+      "metrics": [
+        "Carrier diversity: 1-2 primary carriers (80-90% volume)",
+        "Rate optimization: 75-85% vs optimal",
+        "Carrier scorecard frequency: Quarterly"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI carrier selection engine evaluates every shipment against all available carriers and service levels in real-time, considering contracted rates, spot market rates, delivery requirements, carrier performance history, and sustainability goals. Machine learning optimizes for total landed cost including freight, damage rates, and on-time performance. System automatically books shipments with selected carrier via API integration. Continuous carrier performance monitoring with dynamic routing guide adjustments. Predictive analytics identify carrier capacity constraints and recommend proactive contract negotiations.",
+      "agents": {
+        "orchestrator": "Carrier Selection Orchestrator",
+        "superAgents": [
+          "Rate Shopping Agent",
+          "Carrier Performance Analytics Agent",
+          "Contract Optimization Agent",
+          "Capacity Management Agent"
+        ],
+        "utilityAgents": [
+          "Multi-Carrier API Agent",
+          "Freight Audit Agent",
+          "Sustainability Metrics Agent"
+        ]
+      },
+      "dataSources": [
+        "Contracted carrier rates and routing guides",
+        "Real-time spot market rates",
+        "Carrier performance data (on-time, damage, claims)",
+        "Shipment characteristics (weight, dims, destination, urgency)",
+        "Carrier capacity and service availability",
+        "Carbon emission factors by carrier/mode"
+      ],
+      "benefits": [
+        "10-20% reduction in transportation costs through optimal selection",
+        "30-45% increase in carrier diversity (4-6 carriers utilized regularly)",
+        "95-99% carrier selection accuracy vs optimal",
+        "50-70% reduction in freight audit discrepancies",
+        "15-25% carbon emission reduction through mode/carrier optimization"
+      ],
+      "metrics": [
+        "Carrier diversity: 4-6 carriers optimized by lane",
+        "Rate optimization: 95-99% vs optimal",
+        "Carrier scorecard frequency: Real-time with weekly reviews"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Enable automated rate shopping for parcel shipments (8-12% cost savings)",
+        "Deploy carrier performance scorecards with monthly reviews",
+        "Implement API-based carrier booking (60% time savings)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "TMS with multi-carrier integration capability",
+        "Carrier contract rate data in structured format",
+        "Shipment history with carrier performance data",
+        "API connectivity to carrier systems"
+      ]
+    },
+    "icon": "truck",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-freight-audit-payment",
+    "type": "function",
+    "level": 4,
+    "label": "Automated Freight Audit & Payment",
+    "description": "AI-powered invoice auditing with automated dispute resolution and payment processing to eliminate overcharges and streamline AP workflows.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual matching of carrier invoices to shipment records and contracted rates. AP staff manually review 3-way match (PO, shipment, invoice) for discrepancies. Accessorial charges often not validated. Disputes handled via email/phone with carriers over weeks or months. Payment cycles delayed by audit backlogs. Lost savings from untimely dispute filing.",
+      "constraints": [
+        "5-15% of freight invoices have errors (overcharges, incorrect rates, duplicate charges)",
+        "3-7 days invoice audit cycle time",
+        "Manual review capacity: 50-100 invoices per day per analyst",
+        "30-50% of disputed charges recovered (rest expire or not pursued)",
+        "15-30 day payment cycles"
+      ],
+      "metrics": [
+        "Invoice accuracy: 85-95%",
+        "Audit coverage: 60-80% of invoices",
+        "Dispute recovery rate: 30-50%",
+        "Days to payment: 15-30"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI freight audit system automatically ingests carrier invoices (EDI, email, portal) and matches to shipment records and contracted rates. Machine learning validates accessorial charges against actual service delivery using telematics and proof-of-delivery data. System auto-approves clean invoices for payment and flags discrepancies with AI-generated dispute documentation. Automated dispute submission to carriers via EDI with tracking. Continuous analysis identifies systemic billing issues and carrier performance trends. Dynamic payment terms optimization based on cash flow and early payment discount opportunities.",
+      "agents": {
+        "orchestrator": "Freight Audit & Payment Orchestrator",
+        "superAgents": [
+          "Invoice Validation Agent",
+          "Accessorial Audit Agent",
+          "Dispute Management Agent",
+          "Payment Optimization Agent"
+        ],
+        "utilityAgents": [
+          "Invoice Ingestion Agent (OCR, EDI)",
+          "Carrier EDI Agent",
+          "AP System Integration Agent",
+          "Analytics & Reporting Agent"
+        ]
+      },
+      "dataSources": [
+        "Carrier invoices (EDI 210, PDF, email)",
+        "Shipment records with quoted rates",
+        "Contract rate tariffs",
+        "Telematics data (actual delivery times, locations)",
+        "Proof of delivery documents",
+        "Accessorial service validation data"
+      ],
+      "benefits": [
+        "98-100% invoice audit coverage (vs 60-80%)",
+        "90-95% reduction in audit cycle time (hours vs 3-7 days)",
+        "80-90% dispute recovery rate (vs 30-50%)",
+        "2-5% total freight spend savings from recovered overcharges",
+        "70-85% reduction in AP processing costs"
+      ],
+      "metrics": [
+        "Invoice accuracy: 99%+ (after auto-correction)",
+        "Audit coverage: 98-100%",
+        "Dispute recovery rate: 80-90%",
+        "Days to payment: 3-5 (auto-approved invoices)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated rate validation for top 3 carriers (1-2% spend savings)",
+        "Enable OCR invoice ingestion (50% data entry time reduction)",
+        "Implement automated dispute documentation generation"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "TMS with shipment and rate data",
+        "AP system with API integration",
+        "Carrier EDI connectivity or invoice digitization capability",
+        "Historical invoice and dispute data"
+      ]
+    },
+    "icon": "file-invoice-dollar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-load-consolidation",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Load Consolidation & Planning",
+    "description": "AI-driven load building and consolidation to maximize vehicle utilization, reduce shipments, and lower transportation costs.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "regional",
+    "traditional": {
+      "workflow": "Manual load planning based on fixed shipping schedules and basic cube/weight calculations. Orders shipped as they become available without holding for consolidation opportunities. Limited cross-warehouse load consolidation. Simple first-in-first-out (FIFO) shipment logic without optimization. Significant partial truck shipments and underutilized trailer space.",
+      "constraints": [
+        "30-50% average truck capacity utilization (cube and weight)",
+        "Limited hold time for consolidation (same-day ship pressure)",
+        "No optimization across multiple DCs or warehouses",
+        "Manual tetris-style load planning (2-4 hours per truck)",
+        "Frequent LTL shipments that could be consolidated to FTL"
+      ],
+      "metrics": [
+        "Truck utilization: 30-50% (cube)",
+        "LTL as % of shipments: 40-60%",
+        "Load planning time: 2-4 hours/truck"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI load optimization engine continuously analyzes order pipeline across all warehouses and identifies consolidation opportunities balancing cost savings vs. delivery time commitments. Machine learning algorithms perform 3D bin packing to maximize cube utilization while respecting weight limits and shipment compatibility (fragile, hazmat, temperature). System dynamically determines optimal hold times for orders to achieve consolidation without SLA violations. Cross-warehouse load planning identifies opportunities to combine shipments going to same destination region. Automated load building instructions sent to warehouse including optimal item sequencing for efficient unloading.",
+      "agents": {
+        "orchestrator": "Load Consolidation Orchestrator",
+        "superAgents": [
+          "3D Load Planning Agent",
+          "Consolidation Opportunity Agent",
+          "Hold Time Optimization Agent",
+          "Mode Selection Agent (LTL vs FTL)"
+        ],
+        "utilityAgents": [
+          "Network Optimization Agent",
+          "Shipment Compatibility Agent",
+          "Load Visualization Agent"
+        ]
+      },
+      "dataSources": [
+        "Order pipeline across all warehouses",
+        "Delivery commitments and time windows",
+        "SKU dimensions, weights, and handling requirements",
+        "Trailer/container capacities and configurations",
+        "Transportation costs (LTL, FTL, parcel)",
+        "Historical consolidation patterns and savings"
+      ],
+      "benefits": [
+        "50-80% improvement in truck cube utilization (60-80% vs 30-50%)",
+        "30-45% reduction in number of shipments through consolidation",
+        "20-35% transportation cost savings",
+        "40-60% reduction in LTL shipments (converted to FTL)",
+        "90-95% reduction in load planning time (automated)"
+      ],
+      "metrics": [
+        "Truck utilization: 70-85% (cube)",
+        "LTL as % of shipments: 15-25%",
+        "Load planning time: 10-20 min/truck (automated with review)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement automated cube/weight validation (eliminate overweight/overfull trucks)",
+        "Enable 2-4 hour hold window for same-destination consolidation (15% shipment reduction)",
+        "Deploy 3D load visualization for manual planning support"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "TMS with load planning module",
+        "Accurate SKU master data (dimensions, weights)",
+        "Multi-warehouse visibility into order pipeline",
+        "Delivery commitment data for hold time optimization"
+      ]
+    },
+    "icon": "boxes-stacked",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-shipment-tracking-visibility",
+    "type": "function",
+    "level": 4,
+    "label": "Real-Time Shipment Tracking & Visibility",
+    "description": "Unified multi-carrier tracking with predictive ETAs, proactive exception management, and automated customer notifications.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Fragmented tracking across multiple carrier portals requiring manual login and tracking number entry. Static ETAs based on carrier's initial estimate without updates. Reactive exception handling after customer complaints or missed delivery appointments. Manual email or call notifications to customers about shipment status. Limited visibility into in-transit inventory.",
+      "constraints": [
+        "Tracking visibility limited to carrier scan events (not real-time GPS)",
+        "No predictive ETA updates",
+        "Customer service reps spend 30-40% time tracking shipments manually",
+        "48-72 hour delay in identifying delivery exceptions",
+        "Inconsistent customer communication (60-70% receive proactive updates)"
+      ],
+      "metrics": [
+        "Real-time visibility: 40-60% of shipments",
+        "ETA accuracy: 70-80%",
+        "Exception resolution time: 48-72 hours"
+      ]
+    },
+    "agentic": {
+      "workflow": "Unified visibility platform aggregates tracking data from all carriers (EDI, API, GPS telematics) into single real-time dashboard. Machine learning continuously refines ETA predictions using actual shipment progress, traffic conditions, weather, and carrier performance patterns. AI exception management automatically detects delivery risks (delayed in transit, weather disruptions, missed pickup) and proactively triggers corrective actions (expedited shipping, customer notifications, appointment rescheduling). Automated personalized notifications to customers via SMS/email with accurate ETAs and delivery day updates. Control tower analytics provide strategic visibility into network performance, transit times, and carrier SLAs.",
+      "agents": {
+        "orchestrator": "Shipment Visibility Orchestrator",
+        "superAgents": [
+          "Multi-Carrier Tracking Aggregation Agent",
+          "Predictive ETA Agent",
+          "Exception Detection Agent",
+          "Customer Communication Agent"
+        ],
+        "utilityAgents": [
+          "Carrier API Integration Agent",
+          "Telematics Agent",
+          "SMS/Email Notification Agent",
+          "Control Tower Analytics Agent"
+        ]
+      },
+      "dataSources": [
+        "Carrier tracking events (EDI 214, API)",
+        "GPS telematics data",
+        "Traffic and weather conditions",
+        "Historical carrier performance (transit times by lane)",
+        "Delivery appointment schedules",
+        "Customer notification preferences"
+      ],
+      "benefits": [
+        "95-100% real-time shipment visibility across all carriers",
+        "90-95% ETA accuracy (vs 70-80%)",
+        "60-75% reduction in 'where is my order' customer inquiries",
+        "70-85% faster exception resolution (8-12 hours vs 48-72 hours)",
+        "95-100% proactive customer notification coverage"
+      ],
+      "metrics": [
+        "Real-time visibility: 95-100%",
+        "ETA accuracy: 90-95%",
+        "Exception resolution time: 8-12 hours"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy unified tracking dashboard for top 3 carriers (80% visibility improvement)",
+        "Enable automated shipment status emails to customers (60% inquiry reduction)",
+        "Implement exception alerts for delayed shipments"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "TMS or visibility platform with carrier API integrations",
+        "Customer notification system (email/SMS)",
+        "Carrier EDI connectivity or API access",
+        "Customer contact data and preferences"
+      ]
+    },
+    "icon": "map-pin",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-yard-dock-management",
+    "type": "function",
+    "level": 4,
+    "label": "Yard & Dock Appointment Scheduling",
+    "description": "Automated dock scheduling with yard management optimization to reduce dwell time, eliminate detention charges, and improve throughput.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "site",
+    "traditional": {
+      "workflow": "Manual dock scheduling via phone or email with limited visibility into warehouse capacity and labor availability. First-come-first-served dock assignment causing congestion during peak periods. No real-time visibility into trailers in yard (location, contents, dwell time). Manual yard checks to locate specific trailers. High detention and demurrage charges from extended trailer dwell times. Missed delivery appointments due to dock capacity constraints.",
+      "constraints": [
+        "60-90 minute average truck wait time for dock",
+        "3-5 hour average trailer dwell time in yard",
+        "15-25% detention charge incidence rate",
+        "Manual yard inventory (clipboard or outdated spreadsheet)",
+        "10-20% of appointments missed due to dock/labor constraints"
+      ],
+      "metrics": [
+        "Truck wait time: 60-90 minutes",
+        "Trailer dwell time: 3-5 hours",
+        "Detention charges: 15-25% of loads",
+        "Dock utilization: 60-75%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered dock scheduling system provides carrier self-service portal for appointment booking with real-time visibility into available slots based on warehouse capacity, labor availability, and shipment priorities. Machine learning optimizes dock assignment balancing receiving vs. shipping needs and load characteristics (pallet count, appointment duration estimate). RFID or computer vision automatically tracks trailer locations in yard and updates yard management system. Predictive analytics forecast dock capacity needs and trigger proactive labor scheduling. Automated alerts to carriers when approaching detention thresholds with dock readiness updates. Dynamic appointment rescheduling to accommodate urgent shipments.",
+      "agents": {
+        "orchestrator": "Yard & Dock Management Orchestrator",
+        "superAgents": [
+          "Dock Scheduling Optimization Agent",
+          "Yard Location Tracking Agent",
+          "Detention Avoidance Agent",
+          "Capacity Forecasting Agent"
+        ],
+        "utilityAgents": [
+          "Carrier Portal Agent",
+          "RFID/Computer Vision Agent",
+          "Labor Management Integration Agent",
+          "Notification Agent"
+        ]
+      },
+      "dataSources": [
+        "Inbound/outbound shipment schedules",
+        "Warehouse capacity and labor availability",
+        "Trailer locations (RFID, GPS, vision)",
+        "Historical unload/load time by shipment type",
+        "Carrier detention policies and thresholds",
+        "Real-time dock status"
+      ],
+      "benefits": [
+        "70-85% reduction in truck wait time (10-20 min vs 60-90 min)",
+        "60-75% reduction in trailer dwell time (1-1.5 hours vs 3-5 hours)",
+        "80-90% reduction in detention charges (2-4% vs 15-25%)",
+        "25-35% improvement in dock utilization (85-95% vs 60-75%)",
+        "95-100% appointment adherence"
+      ],
+      "metrics": [
+        "Truck wait time: 10-20 minutes",
+        "Trailer dwell time: 1-1.5 hours",
+        "Detention charges: 2-4% of loads",
+        "Dock utilization: 85-95%"
+      ],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy carrier self-service appointment portal (50% scheduling time reduction)",
+        "Implement RFID yard tracking for high-volume lanes (100% trailer location accuracy)",
+        "Enable automated detention warning alerts (60% charge reduction)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Yard management system or TMS module",
+        "RFID infrastructure or computer vision cameras",
+        "Carrier communication portal",
+        "Integration with WMS for capacity visibility"
+      ]
+    },
+    "icon": "warehouse",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-tms-network-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Transportation Network Design & Optimization",
+    "description": "Strategic network modeling and continuous optimization of distribution center locations, transportation lanes, and inventory positioning.",
+    "parentCapability": "capability-transportation-logistics",
+    "applicableIndustries": ["Retail", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Annual or biennial strategic network reviews using spreadsheet models or consulting engagements. Static network design based on historical demand patterns without continuous optimization. Limited scenario analysis due to manual modeling constraints. Slow to adapt to demand shifts, new markets, or cost changes. Network decisions driven by real estate availability rather than optimized fulfillment strategy.",
+      "constraints": [
+        "Network reviews: Annual or less frequent",
+        "Scenario analysis: 3-5 scenarios (limited by manual effort)",
+        "Modeling time: 4-8 weeks per network study",
+        "No continuous optimization between formal reviews",
+        "Limited consideration of inventory positioning tradeoffs"
+      ],
+      "metrics": [
+        "Optimization frequency: Annual",
+        "Scenario coverage: 3-5 per study",
+        "Time to decision: 4-8 weeks"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered network optimization continuously monitors demand patterns, transportation costs, real estate markets, and service level performance to identify network improvement opportunities. Digital twin modeling enables rapid scenario analysis (100+ scenarios) considering DC locations, transportation modes, inventory positioning, and customer service impacts. Machine learning predicts demand shifts by geography and recommends proactive network adjustments (new DC, lane changes, inventory redistribution). Automated what-if analysis for proposed changes (new market entry, DC closure, SKU rationalization). Sustainability modeling includes carbon footprint analysis for network decisions. Continuous validation of network performance vs. plan with auto-generated improvement recommendations.",
+      "agents": {
+        "orchestrator": "Network Optimization Orchestrator",
+        "superAgents": [
+          "Demand Forecasting Agent (geographic)",
+          "Network Modeling Agent",
+          "Scenario Analysis Agent",
+          "Inventory Positioning Agent",
+          "Sustainability Impact Agent"
+        ],
+        "utilityAgents": [
+          "Digital Twin Engine Agent",
+          "Real Estate Market Data Agent",
+          "Transportation Cost Agent",
+          "Visualization Agent"
+        ]
+      },
+      "dataSources": [
+        "Historical and forecasted demand by geography",
+        "Transportation costs by mode and lane",
+        "DC operating costs and capacities",
+        "Real estate market data and availability",
+        "Inventory carrying costs",
+        "Service level requirements",
+        "Carbon emission factors",
+        "Competitive DC locations"
+      ],
+      "benefits": [
+        "Continuous network optimization (quarterly scenario reviews vs annual)",
+        "10-20% reduction in total landed cost (transportation + inventory + warehousing)",
+        "95%+ scenario analysis capability (100+ scenarios vs 3-5)",
+        "80-90% faster decision making (days vs 4-8 weeks)",
+        "15-25% reduction in carbon footprint through mode and lane optimization"
+      ],
+      "metrics": [
+        "Optimization frequency: Continuous with quarterly formal reviews",
+        "Scenario coverage: 100+ per analysis",
+        "Time to decision: Days to 1-2 weeks"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Build digital twin model of existing network for rapid scenario analysis",
+        "Implement quarterly automated network performance reviews",
+        "Enable self-service what-if scenario modeling for leadership"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Historical demand data by customer geography",
+        "Transportation cost data by lane and mode",
+        "DC cost and capacity data",
+        "Network optimization software or platform",
+        "Service level definitions and targets"
+      ]
+    },
+    "icon": "network-wired",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

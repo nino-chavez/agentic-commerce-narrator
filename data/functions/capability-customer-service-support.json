@@ -1,0 +1,381 @@
+[
+  {
+    "id": "function-intelligent-call-chat-routing",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Call/Chat Routing",
+    "description": "AI intent detection with skill-based routing increasing first-call resolution from 30-40% to 60-75% and reducing hold times by 70-80% through intelligent matching.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer calls support and navigates IVR menu tree (Press 1 for orders, Press 2 for returns...). 2. System routes based on menu selection to first available agent. 3. Agent may not have skills for customer's issue (transfer required). 4. Customer repeats information after transfer. 5. 5-10 minute hold times, 30-40% first-call resolution.",
+      "constraints": [
+        "IVR menu trees frustrate customers (press through 3-4 levels)",
+        "Routing based on menu selection not actual customer need",
+        "30-40% first-call resolution (60-70% require callbacks or transfers)",
+        "5-10 minute average hold times degrade experience",
+        "No skill-based routing (agent may lack expertise for issue)",
+        "Customer must repeat information after transfers"
+      ],
+      "metrics": ["First-call resolution: 30-40%", "Average hold time: 5-10 min", "Transfer rate: 20-30%"]
+    },
+    "agentic": {
+      "workflow": "1. Customer states issue in natural language (voice or chat). 2. Intelligent Routing Agent uses NLP to detect true intent (order status, return, technical issue). 3. Intent Classification Agent analyzes: issue type, urgency, complexity, customer value. 4. Agent routes to optimal agent based on: skills match, current availability, language, customer history. 5. Agent pre-populates agent screen with customer context (no information repeat).",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Intelligent Routing Agent", "Intent Classification Agent"],
+        "utilityAgents": ["Contact Center Platform", "NLP Engine", "Agent Skill Database", "Queue Management"]
+      },
+      "dataSources": [
+        "Real-time customer input (voice transcription, chat text)",
+        "Agent skills matrix and specializations",
+        "Agent availability and current workload",
+        "Customer history and previous interactions",
+        "Issue complexity scoring models",
+        "Service level and routing rules"
+      ],
+      "benefits": [
+        "60-75% first-call resolution vs 30-40% (20-35 pt improvement)",
+        "70-80% reduction in hold times (<2 min vs 5-10 min)",
+        "Optimal agent matching improves customer satisfaction 15-25 pts",
+        "No IVR menu tree navigation (natural language intent)",
+        "Reduced transfers through accurate skills-based routing",
+        "Agent efficiency improves with right-fit case assignment"
+      ],
+      "metrics": ["First-call resolution: 60-75%", "Average hold time: <2 min", "Transfer rate: 5-10%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement NLP intent detection for chat channel", "Build agent skills database and matching"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Contact center platform with API", "NLP engine (Google Dialogflow, AWS Lex, etc.)", "Agent skills taxonomy", "Real-time queue management"]
+    },
+    "icon": "phone-incoming",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ai-chatbot-self-service",
+    "type": "function",
+    "level": 4,
+    "label": "AI Chatbot & Self-Service",
+    "description": "Generative AI chatbot achieving 60-75% deflection rate vs 15-25% for FAQ-based bots with 24/7 availability and instant responses through multi-turn conversations.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer visits FAQ page and searches for answer. 2. Rule-based chatbot matches keywords to pre-written responses. 3. Bot can only handle simple FAQs (hours, shipping policy). 4. Complex questions require human handoff (15-25% deflection rate). 5. No learning or improvement from interactions.",
+      "constraints": [
+        "Rule-based bots limited to exact keyword matches",
+        "15-25% deflection rate means 75-85% escalate to human agents",
+        "No multi-turn conversation capability (one question, one answer)",
+        "Can't execute transactions (check order status, process return)",
+        "No understanding of context or conversation history",
+        "Frequent 'Sorry, I don't understand' responses frustrate customers"
+      ],
+      "metrics": ["Deflection rate: 15-25%", "Conversation turns: 1-2", "Transaction capability: None"]
+    },
+    "agentic": {
+      "workflow": "1. Customer asks question in natural language. 2. Conversational AI Agent uses LLM (GPT-4, Claude) for deep understanding. 3. Dialog Management Agent handles multi-turn conversations, maintains context. 4. Action Execution Agent performs transactions: check order status, modify shipment, process return. 5. Human Handoff Agent escalates intelligently when confidence low or complex issue detected.",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Conversational AI Agent", "Self-Service Agent"],
+        "utilityAgents": ["LLM API (OpenAI, Claude)", "Knowledge Base", "Order Management API", "FAQ Database"]
+      },
+      "dataSources": [
+        "Knowledge base and FAQ content",
+        "Order management system data",
+        "Customer account and history data",
+        "Product catalog and policies",
+        "Historical chat transcripts for learning",
+        "Real-time conversation context"
+      ],
+      "benefits": [
+        "60-75% deflection rate vs 15-25% (35-50 pt improvement)",
+        "Multi-turn conversations solve complex issues (5-10 turn dialogues)",
+        "Transaction execution (80% of common tasks automated)",
+        "24/7 availability with instant responses (no wait times)",
+        "Continuous learning improves accuracy over time",
+        "Cost savings: $5-10 per deflected contact"
+      ],
+      "metrics": ["Deflection rate: 60-75%", "Conversation turns: 5-10", "Transaction capability: 80% of common tasks"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy generative AI chatbot for top 10 FAQ topics", "Connect chatbot to order status API"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["LLM API access (OpenAI, Anthropic, etc.)", "Knowledge base with structured content", "Integration with order management and customer systems", "Chat platform with API"]
+    },
+    "icon": "chat-alt-2",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-proactive-customer-outreach",
+    "type": "function",
+    "level": 4,
+    "label": "Proactive Customer Outreach",
+    "description": "Predictive issue detection with proactive outreach preventing 40-60% of issues before customers contact support through early intervention.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Issue occurs (delayed shipment, product defect, billing error). 2. Customer discovers issue and contacts support (reactive). 3. Agent responds to complaint and offers resolution. 4. Post-resolution survey sent to measure satisfaction. 5. No proactive issue detection or prevention.",
+      "constraints": [
+        "100% reactive approach waits for customer to contact support",
+        "Customer already frustrated by time they contact support",
+        "No early warning system for potential issues",
+        "Issue resolution more costly after customer complaint",
+        "Negative word-of-mouth spreads before company responds",
+        "Post-incident surveys measure damage not prevention"
+      ],
+      "metrics": ["Proactive outreach: 0%", "Issue prevention rate: 0%", "Contact volume: High"]
+    },
+    "agentic": {
+      "workflow": "1. Proactive Outreach Agent monitors signals: delayed shipments, inventory issues, service disruptions, billing errors. 2. Issue Prediction Agent identifies customers impacted by issues before they contact support. 3. Agent scores issue severity and customer impact (VIP customers prioritized). 4. Agent triggers proactive outreach: 'We noticed your order is delayed, here's a status update and discount'. 5. Agent tracks issue resolution and prevention outcomes.",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Proactive Outreach Agent", "Issue Prediction Agent"],
+        "utilityAgents": ["Predictive Models", "Customer Analytics", "Communication APIs", "Event Monitoring"]
+      },
+      "dataSources": [
+        "Order and shipment tracking data",
+        "Inventory and availability data",
+        "System monitoring and error logs",
+        "Customer interaction history",
+        "Billing and payment data",
+        "Customer value and segment data"
+      ],
+      "benefits": [
+        "40-60% issue prevention through proactive outreach",
+        "Customer satisfaction improves 20-30 pts through early resolution",
+        "Reduced support contact volume (30-40% reduction)",
+        "Improved NPS through proactive service recovery",
+        "Lower resolution costs (proactive intervention cheaper than reactive)",
+        "VIP customer retention through white-glove proactive service"
+      ],
+      "metrics": ["Proactive outreach: 40-60% of issues", "Issue prevention rate: 40-60%", "Contact volume: 30-40% reduction"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement proactive outreach for shipment delays", "Deploy predictive model for high-risk orders"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Real-time order and shipment monitoring", "Event detection and alerting", "Communication platform (email, SMS)", "Customer segmentation and prioritization"]
+    },
+    "icon": "speakerphone",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sentiment-analysis-escalation",
+    "type": "function",
+    "level": 4,
+    "label": "Sentiment Analysis & Escalation",
+    "description": "Real-time sentiment monitoring with auto-escalation on negative sentiment reducing negative CSAT by 30-50% through 95% faster escalation response.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer expresses frustration in chat or call. 2. Agent must manually recognize need for escalation. 3. Agent messages supervisor via internal chat to request escalation. 4. Supervisor reviews case and decides whether to escalate (5-15 min delay). 5. 20-30% escalation rate with inconsistent criteria across agents.",
+      "constraints": [
+        "Manual escalation detection relies on agent judgment (inconsistent)",
+        "5-15 minute escalation time allows customer frustration to escalate",
+        "Agents afraid to escalate (fear of being seen as incompetent)",
+        "No objective criteria for when to escalate",
+        "Supervisor must manually review context before escalation decision",
+        "Customer frustration peaks during escalation delay"
+      ],
+      "metrics": ["Escalation time: 5-15 min", "Escalation accuracy: 60-70%", "Negative CSAT: 20-30%"]
+    },
+    "agentic": {
+      "workflow": "1. Sentiment Analysis Agent monitors conversation in real-time (call transcription or chat text). 2. Agent detects negative sentiment signals: angry language, profanity, frustration indicators, threats to switch. 3. Agent scores sentiment intensity and triggers auto-escalation on threshold breach. 4. Escalation Agent routes to available supervisor with full context in <1 minute. 5. Alert System notifies supervisor with customer context and sentiment score.",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Sentiment Analysis Agent", "Escalation Agent"],
+        "utilityAgents": ["Sentiment Analysis API", "Contact Center Platform", "Escalation Workflow", "Alert System"]
+      },
+      "dataSources": [
+        "Real-time call transcription or chat text",
+        "Sentiment analysis models and libraries",
+        "Customer interaction history and CSAT scores",
+        "Agent and supervisor availability",
+        "Escalation rules and thresholds",
+        "Customer value and segment data"
+      ],
+      "benefits": [
+        "95% faster escalation (<1 min vs 5-15 min)",
+        "30-50% reduction in negative CSAT through rapid intervention",
+        "Objective sentiment scoring ensures consistent escalation criteria",
+        "Supervisor receives full context instantly (no manual review delay)",
+        "Real-time intervention prevents issue escalation",
+        "Agent confidence improves with automated escalation support"
+      ],
+      "metrics": ["Escalation time: <1 min", "Escalation accuracy: 90%+", "Negative CSAT: 10-15%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy sentiment analysis for chat channel", "Implement auto-escalation for profanity or anger keywords"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Sentiment analysis API (AWS Comprehend, Google NLP, etc.)", "Real-time call transcription or chat platform", "Contact center escalation workflow", "Supervisor notification system"]
+    },
+    "icon": "trending-up",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-knowledge-management-suggestion",
+    "type": "function",
+    "level": 4,
+    "label": "Knowledge Management & Suggestion",
+    "description": "AI-curated knowledge base with 95%+ article accuracy and auto-suggested articles during interactions delivering 50-70% faster resolution through intelligent recommendations.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Agent receives customer question. 2. Agent searches knowledge base using keyword search. 3. Agent manually reviews 5-10 articles to find relevant answer. 4. Article may be outdated or inaccurate (40-60% accuracy). 5. Agent cobbles together answer from multiple sources. 6. Knowledge base updated manually when someone notices outdated content.",
+      "constraints": [
+        "Static knowledge base with 40-60% article accuracy",
+        "Keyword search returns 20-50 results (agent must manually review)",
+        "No article recommendations based on customer question",
+        "Outdated articles confuse agents and customers",
+        "No systematic content quality scoring or updates",
+        "Agent spends 3-5 minutes searching for answers"
+      ],
+      "metrics": ["Article accuracy: 40-60%", "Time to find answer: 3-5 min", "Search results: 20-50 articles"]
+    },
+    "agentic": {
+      "workflow": "1. Customer asks question via chat or agent receives call. 2. Knowledge Management Agent uses NLP to understand intent and context. 3. Article Suggestion Agent instantly recommends top 3 most relevant articles with confidence scores. 4. Agent provides answer with one click from suggested articles. 5. Content Quality Scoring tracks article usage, accuracy, and feedback. 6. Auto-Update Agent identifies knowledge gaps and suggests content creation.",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Knowledge Management Agent", "Article Suggestion Agent"],
+        "utilityAgents": ["Knowledge Base Platform", "NLP Engine", "Search Index", "Content Quality Scoring"]
+      },
+      "dataSources": [
+        "Knowledge base articles and metadata",
+        "Customer questions and intents",
+        "Article usage and effectiveness data",
+        "Agent feedback on article quality",
+        "Resolution success rates by article",
+        "Product and policy updates"
+      ],
+      "benefits": [
+        "95%+ article accuracy through AI curation and quality scoring",
+        "50-70% faster resolution (agent finds answer in 30-60 sec vs 3-5 min)",
+        "Top 3 article suggestions vs 20-50 search results",
+        "Intelligent recommendations based on question understanding",
+        "Automatic content quality monitoring and improvement",
+        "Knowledge gap detection guides content creation"
+      ],
+      "metrics": ["Article accuracy: 95%+", "Time to find answer: 30-60 sec", "Search results: Top 3 suggestions"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement semantic search for knowledge base", "Add article quality scoring and feedback"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Knowledge base platform with API", "NLP engine for semantic search", "Content quality tracking", "Agent desktop integration for suggestions"]
+    },
+    "icon": "book-open",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-omnichannel-case-management",
+    "type": "function",
+    "level": 4,
+    "label": "Omnichannel Case Management",
+    "description": "Unified case history across channels with seamless channel switching and full context preservation reducing repeat contacts by 30-50% through connected experiences.",
+    "parentCapability": "capability-customer-service-support",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer contacts support via chat about order issue. 2. Separate case created in chat system. 3. Customer follows up via phone call next day. 4. New case created in call system (no link to chat case). 5. Customer must repeat entire story to phone agent. 6. Agent has no visibility into previous chat interaction.",
+      "constraints": [
+        "Siloed systems by channel (chat, phone, email separate)",
+        "Customer must repeat information across channels (frustrating)",
+        "No unified case history across interactions",
+        "Agents lack context from previous channel interactions",
+        "30-50% of contacts are repeats due to lack of continuity",
+        "Case resolution delayed by lack of context"
+      ],
+      "metrics": ["Context preservation: 0%", "Repeat contact rate: 30-50%", "Channel continuity: None"]
+    },
+    "agentic": {
+      "workflow": "1. Customer contacts support via any channel (chat, phone, email, social). 2. Case Management Agent creates unified case linked to customer identity. 3. Context Preservation Agent captures: issue details, conversation history, resolution attempts, customer sentiment. 4. Customer switches channels (chat to phone) - agent sees full history. 5. Agent continues conversation from where previous channel left off (no information repeat). 6. Case resolved faster with complete context.",
+      "agents": {
+        "orchestrator": "Customer Service Orchestration Agent",
+        "superAgents": ["Case Management Agent", "Context Preservation Agent"],
+        "utilityAgents": ["Case Management System", "CDP", "Channel Integration APIs", "Interaction History"]
+      },
+      "dataSources": [
+        "Cross-channel interaction data (chat, phone, email)",
+        "Customer identity and account data",
+        "Case history and resolution data",
+        "Conversation transcripts and recordings",
+        "Agent notes and actions taken",
+        "Customer sentiment and satisfaction data"
+      ],
+      "benefits": [
+        "30-50% reduction in repeat contacts through context continuity",
+        "100% context preservation vs 0% across channels",
+        "Seamless channel switching (customer never repeats information)",
+        "Faster resolution with complete interaction history",
+        "Improved customer satisfaction through connected experience",
+        "Agent efficiency increases with full context"
+      ],
+      "metrics": ["Context preservation: 100%", "Repeat contact rate: 10-20%", "Channel continuity: Seamless"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement unified case management system", "Link customer identity across channels"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Unified case management platform", "Customer Data Platform or identity resolution", "Channel integrations (chat, phone, email APIs)", "Agent desktop with unified view"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

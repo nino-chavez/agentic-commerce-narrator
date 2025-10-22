@@ -1,0 +1,458 @@
+[
+  {
+    "id": "function-predictive-maintenance-work-orders",
+    "type": "function",
+    "level": 4,
+    "label": "Predictive Maintenance & Work Orders",
+    "description": "IoT sensor monitoring with predictive failure alerts 7-14 days ahead and auto-generated work orders reducing unplanned downtime 40-60% and maintenance costs 30-50% versus reactive maintenance.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Equipment operates normally until failure occurs (HVAC stops cooling, elevator breaks down). 2. Employee discovers failure and reports to facilities via phone or email: 'AC not working in Building 2'. 3. Facilities admin manually creates work order, assigns to technician. 4. Technician dispatched 2-4 hours later, diagnoses failed compressor requiring replacement part. 5. Part ordered, arrives in 2-5 days, technician returns to complete repair. 6. Total downtime 2-7 days due to reactive response. 7. 60-80% of downtime is unplanned (run-to-failure maintenance).",
+      "constraints": [
+        "Reactive maintenance (fix after failure, no prevention)",
+        "60-80% unplanned downtime due to run-to-failure approach",
+        "2-7 day downtime for repairs requiring parts (not stocked on-site)",
+        "Manual work order creation delays response by 2-4 hours",
+        "No early warning of impending failures (discover when equipment stops)",
+        "High maintenance costs (emergency repairs, overtime labor, rush shipping)"
+      ],
+      "metrics": ["Unplanned downtime: 60-80% of total", "Mean time to repair: 2-7 days", "Maintenance cost per sq ft: $2.50-$4.00", "Equipment lifespan: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Predictive Maintenance Agent monitors IoT sensors on equipment: HVAC compressor vibration increased 30%, operating temperature elevated 15°F above normal baseline. 2. Agent applies ML model predicting compressor failure in 7-14 days with 85% confidence. 3. Work Order Automation Agent generates preventive work order automatically: 'HVAC Compressor - Predicted Failure in 10 days, schedule replacement before breakdown'. 4. Agent checks parts inventory, auto-orders compressor if not in stock (arrives in 2-3 days, before predicted failure). 5. Agent assigns work order to certified HVAC technician with availability during predicted timeframe. 6. Technician replaces compressor proactively during scheduled maintenance window (no unplanned downtime). 7. 40-60% unplanned downtime reduction and 30-50% maintenance cost savings through predictive intervention before failures occur.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Predictive Maintenance Agent", "Work Order Automation Agent"],
+        "utilityAgents": ["IoT Platform (Azure IoT, AWS IoT)", "CMMS API (Maximo, UpKeep)", "BMS Integration", "Parts Inventory System"]
+      },
+      "dataSources": [
+        "IoT sensor data (vibration, temperature, pressure, current draw)",
+        "Equipment operating baselines and normal ranges",
+        "Historical equipment failure patterns and fault signatures",
+        "Work order history with failure modes and resolution times",
+        "Parts inventory availability and lead times",
+        "Technician skills, certifications, and availability",
+        "Maintenance schedules and downtime windows"
+      ],
+      "benefits": [
+        "40-60% unplanned downtime reduction through predictive maintenance",
+        "30-50% maintenance cost savings (avoid emergency repairs, overtime, rush shipping)",
+        "7-14 day advance warning enables proactive intervention before failures",
+        "Auto-generated work orders eliminate 2-4 hour manual creation delay",
+        "Equipment lifespan extended 20-30% through condition-based maintenance",
+        "Parts pre-ordered before failure (in stock when technician arrives)"
+      ],
+      "metrics": ["Unplanned downtime: 20-30% of total", "Mean time to repair: 4-24 hours (planned)", "Maintenance cost per sq ft: $1.50-$2.50", "Equipment lifespan: +20-30%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy IoT sensors on top 10 critical assets (HVAC, elevators, chillers)", "Implement vibration and temperature monitoring with threshold alerts", "Enable auto work order generation for sensor alert triggers"],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": ["Modern CMMS (Maximo, UpKeep, Fiix) with API and automation", "IoT sensors retrofitted on critical equipment", "IoT platform for sensor data aggregation (Azure IoT, AWS IoT)", "ML model development for failure prediction by equipment type", "Parts inventory system integration for auto-ordering", "Technician mobile app for work order execution", "Historical equipment failure data (12-24 months) for ML training"]
+    },
+    "icon": "cog",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-space-planning-utilization",
+    "type": "function",
+    "level": 4,
+    "label": "Space Planning & Utilization",
+    "description": "Real-time occupancy sensors with ML-powered space recommendations and hoteling optimization achieving 75-85% desk utilization versus 40-60% manual planning and 20-40% real estate cost reduction.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Office space allocated by headcount: 100 employees = 100 desks (1:1 ratio regardless of actual presence). 2. Utilization unknown (no tracking or measurement of desk occupancy). 3. Quarterly manual headcount audit: 'Engineering grew from 100 to 120, we need 20 more desks'. 4. Facilities manager requests more space, commercial real estate broker finds additional floor (expensive). 5. Space planning reactive (add space when out of room, not proactive). 6. Desk utilization actually 40-60% due to remote work, travel, meetings (paying for 100 desks, using 40-60). 7. Post-COVID hybrid work worsens utilization to 20-40% (employees in office 2-3 days/week).",
+      "constraints": [
+        "1:1 desk-to-employee ratio ignores actual utilization (40-60% occupancy)",
+        "No real-time occupancy data (utilization unknown)",
+        "Space planning reactive based on headcount (add space when full)",
+        "Post-COVID hybrid work drives utilization to 20-40% (wasted real estate)",
+        "No hoteling or hot-desking (employees claim desks even when absent)",
+        "Real estate costs high (paying for unused space)"
+      ],
+      "metrics": ["Desk utilization: 40-60% pre-COVID, 20-40% post-COVID", "Space cost per employee: $10K-$15K/year", "Space planning: Reactive (headcount-based)", "Hoteling adoption: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Occupancy Analysis Agent monitors occupancy sensors in real-time: tracks desk, office, and conference room usage by day, time, and employee. 2. Agent analyzes utilization patterns: 'Engineering desks utilized 35% on average (Mon-Tue 60%, Wed-Thu 40%, Fri 10%)'. 3. Space Utilization Agent recommends hoteling transition: 'Engineering needs 70 desks for 120 employees (1.7:1 ratio) based on hybrid work patterns'. 4. Agent designs neighborhood seating: clusters teams together in hoteling zones, reserves 20% dedicated desks for full-time onsite staff. 5. Agent implements smart booking system: employees reserve desks via app, check-in via badge swipe, auto-release after 15 min if no-show. 6. Agent optimizes space portfolio: 'Consolidate 3 floors into 2 floors, sublease 1 floor, save $2M/year in real estate costs'. 7. 75-85% desk utilization improvement and 20-40% real estate cost reduction through data-driven space optimization.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Space Utilization Agent", "Occupancy Analysis Agent"],
+        "utilityAgents": ["Occupancy Sensors", "Badge Access Data", "Room Booking System API", "Space Management Platform"]
+      },
+      "dataSources": [
+        "Occupancy sensor data (desks, offices, conference rooms)",
+        "Badge access swipe data (entry, exit, location)",
+        "Room and desk booking system reservations",
+        "Employee work schedules and hybrid work policies",
+        "Real estate lease data (sq ft, cost, expiration)",
+        "Headcount data and growth projections",
+        "Space inventory (floor plans, desk count, room capacity)"
+      ],
+      "benefits": [
+        "20-40% real estate cost reduction through space consolidation and subleases",
+        "75-85% desk utilization improvement (vs 40-60% pre-COVID, 20-40% post-COVID)",
+        "Hoteling enables 1.5-2:1 employee-to-desk ratio (60-70 desks for 120 employees)",
+        "Data-driven space planning vs reactive headcount-based approach",
+        "Smart booking prevents double-bookings and no-shows (auto-release)",
+        "Neighborhood seating maintains team collaboration in hoteling environment"
+      ],
+      "metrics": ["Desk utilization: 75-85%", "Space cost per employee: $6K-$9K/year", "Space planning: Proactive (utilization-based)", "Hoteling adoption: 70-85%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy occupancy sensors on one pilot floor to measure utilization", "Implement desk booking app for hoteling trial with voluntary participants", "Create occupancy dashboard showing real-time and historical utilization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Workplace management platform (Robin, Envoy, OfficeSpace)", "Occupancy sensors deployed (Density, VergeSense, Butlr)", "Badge access system integration for check-in data", "Desk booking mobile app for employee self-service", "Floor plan digitization with desk/room inventory", "Hybrid work policy defined (office days, flexibility)", "Change management for hoteling adoption (executive sponsorship)"]
+    },
+    "icon": "office-building",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-energy-management-sustainability",
+    "type": "function",
+    "level": 4,
+    "label": "Energy Management & Sustainability",
+    "description": "Real-time energy monitoring with AI-optimized HVAC/lighting and predictive demand management achieving 15-30% energy cost reduction and real-time carbon footprint tracking versus monthly bills.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Utility bills received monthly via mail or email (electricity, gas, water). 2. Facilities admin manually enters bills into spreadsheet for tracking and budgeting. 3. Energy consumption analyzed at month-end (too late to take corrective action). 4. HVAC controlled by fixed schedules: on at 6am, off at 6pm Monday-Friday (runs even when building empty). 5. Lighting controlled by manual switches (employees forget to turn off, lights on all night). 6. No real-time energy visibility (discover waste after the fact in monthly bill). 7. Sustainability reporting manual: annual carbon footprint calculation in Excel from utility bills.",
+      "constraints": [
+        "Monthly utility bills too late for corrective action (waste discovered after it occurs)",
+        "Fixed HVAC schedules waste energy (runs when building empty nights/weekends)",
+        "Manual lighting control (employees forget, lights on unnecessarily)",
+        "No real-time energy monitoring (visibility delayed by 30 days)",
+        "20-30% energy waste from lights/HVAC running when spaces unoccupied",
+        "Carbon footprint calculated annually in Excel (time-consuming, inaccurate)"
+      ],
+      "metrics": ["Energy cost per sq ft: $2.50-$4.00", "Energy waste: 20-30%", "Sustainability reporting: Annual (manual)", "Carbon footprint visibility: Yearly"]
+    },
+    "agentic": {
+      "workflow": "1. Energy Monitoring Agent tracks consumption in real-time via smart meters: electricity, gas, water by building, floor, department, equipment. 2. Energy Optimization Agent adjusts HVAC based on occupancy sensors: 'Conference room 3B empty for 2 hours, reduce HVAC setpoint to save energy'. 3. Agent optimizes HVAC based on weather forecast: 'Pre-cool building at 5am using off-peak rates before heat wave hits, reduce afternoon cooling load'. 4. Lighting Control Agent dims/turns off lights automatically when occupancy sensors detect empty spaces. 5. Demand Response Agent reduces load during peak pricing: curtails non-essential HVAC, shifts equipment operation to off-peak hours, saves 20-40% on demand charges. 6. Sustainability Analytics Agent calculates carbon emissions automatically in real-time: 'Current monthly emissions 150 tons CO2e, down 25% vs last year, on track for net-zero by 2030 target'. 7. 15-30% energy cost reduction and real-time carbon tracking vs monthly bill approach.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Energy Optimization Agent", "Sustainability Analytics Agent"],
+        "utilityAgents": ["Smart Meter APIs", "Building Management System (BMS)", "Weather API", "Utility Company Integration"]
+      },
+      "dataSources": [
+        "Smart meter data (real-time electricity, gas, water consumption)",
+        "Utility bills and rate schedules (time-of-use, demand charges)",
+        "Weather data (temperature, humidity, forecast)",
+        "Occupancy sensor data (building, floor, room presence)",
+        "HVAC operating schedules and setpoint configurations",
+        "Lighting control system status (on/off, dimming levels)",
+        "Carbon emission factors by energy source (grid electricity, natural gas)",
+        "Sustainability goals and net-zero targets"
+      ],
+      "benefits": [
+        "15-30% energy cost reduction through HVAC/lighting optimization",
+        "Real-time energy monitoring vs 30-day delayed monthly bills",
+        "Occupancy-based HVAC/lighting control eliminates 60-80% of waste",
+        "Weather-based optimization (pre-cool, pre-heat) reduces peak demand",
+        "20-40% demand charge reduction through peak shaving and load curtailment",
+        "Real-time carbon footprint tracking vs annual manual calculation"
+      ],
+      "metrics": ["Energy cost per sq ft: $1.75-$2.80", "Energy waste: 5-10%", "Sustainability reporting: Real-time (automated)", "Carbon footprint visibility: Daily"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy smart meters for real-time energy monitoring by building", "Implement occupancy-based lighting control with auto-off when spaces empty", "Enable HVAC schedule optimization (off during unoccupied hours)"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-12 months",
+      "prerequisites": ["Energy management platform (EnergyCAP, Schneider EcoStruxure)", "Smart meters installed (or utility AMI data access)", "Building Management System (BMS) integration for HVAC control", "Occupancy sensors deployed for presence detection", "Weather API integration for forecast-based optimization", "Utility rate schedule data for demand response optimization", "Sustainability goals and carbon reduction targets defined"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-vendor-contractor-management",
+    "type": "function",
+    "level": 4,
+    "label": "Vendor & Contractor Management",
+    "description": "Centralized vendor portal with auto-invoice matching and performance scorecards achieving 70-85% invoice processing time reduction and 100% compliance visibility versus email-based tracking.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Vendor selection via informal email-based RFP process. 2. Contracts stored in filing cabinets or shared drives (no central repository). 3. Vendor work assigned via phone calls or emails (no systematic tracking). 4. Invoices received via email or mail, manually entered into AP system for payment. 5. Invoice reconciliation manual: facilities manager compares invoice to work order notes, checks rates against contract (2-4 hours per invoice). 6. Insurance certificates tracked in spreadsheet (if at all), many vendors operating with expired coverage (compliance risk). 7. No vendor performance tracking (renewals based on relationships, not data).",
+      "constraints": [
+        "Email-based vendor management fragmented and inefficient",
+        "No centralized contract repository (contracts lost, terms forgotten)",
+        "Manual invoice reconciliation takes 2-4 hours per invoice",
+        "Insurance certificate compliance 60-70% (expired coverage creates liability)",
+        "No vendor performance tracking (quality, timeliness, cost variance)",
+        "Invoice disputes common (10-15% of invoices) due to rate mismatches"
+      ],
+      "metrics": ["Invoice processing time: 2-4 hours", "Insurance compliance: 60-70%", "Invoice disputes: 10-15%", "Vendor performance tracking: None"]
+    },
+    "agentic": {
+      "workflow": "1. Vendor Management Agent provides centralized portal where vendors submit documents: W-9, insurance certificates, banking info, certifications. 2. Agent validates insurance certificates: checks coverage amounts meet requirements (GL $2M, Workers Comp, Auto), sends renewal reminders 30 days before expiration. 3. Work order assigned to vendor, vendor accepts and tracks progress in portal. 4. Invoice Processing Agent receives invoice, auto-matches to work order and contract rates: 'Invoice $1,200 for HVAC repair matches Work Order #54321, contract rate $150/hour × 8 hours = $1,200, approved for payment'. 5. Performance Monitoring Agent tracks metrics: 'ABC Mechanical: 95% on-time completion, 4.8/5 quality rating, 5% cost variance vs estimates - Platinum tier vendor'. 6. Agent flags compliance issues: 'XYZ Electrical insurance certificate expired 15 days ago - block new work orders until renewed'. 7. 70-85% invoice processing time reduction and 100% compliance visibility through automation.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Vendor Management Agent", "Performance Monitoring Agent"],
+        "utilityAgents": ["Vendor Portal API", "Invoice Processing (AP system)", "Compliance Database", "Contract Management System"]
+      },
+      "dataSources": [
+        "Vendor master data (contact info, capabilities, certifications)",
+        "Vendor contracts with pricing, SLAs, and terms",
+        "Work order assignments and completion data",
+        "Invoice details (line items, rates, quantities)",
+        "Insurance certificates and expiration dates",
+        "Performance feedback (quality ratings, on-time completion)",
+        "Cost variance analysis (estimated vs actual)"
+      ],
+      "benefits": [
+        "70-85% invoice processing time reduction (15-30 min vs 2-4 hours) through auto-matching",
+        "100% insurance compliance visibility vs 60-70% manual tracking",
+        "Invoice disputes reduced 80% through automated rate validation",
+        "Vendor performance scorecards enable data-driven renewals",
+        "Compliance blocking prevents work assignment to non-compliant vendors",
+        "Centralized vendor portal improves vendor experience and response time"
+      ],
+      "metrics": ["Invoice processing time: 15-30 minutes", "Insurance compliance: 98%+", "Invoice disputes: 2-3%", "Vendor performance tracking: 100% (automated scorecards)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy vendor portal for self-service document submission", "Implement insurance certificate tracking with auto-renewal reminders", "Enable invoice auto-matching to contract rates and work orders"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Vendor management platform (Coupa, SAP Ariba, Avetta)", "Vendor inventory and contract digitization", "Integration with CMMS for work order data", "AP system integration for invoice processing", "Insurance verification service for certificate validation", "Performance criteria and scorecard methodology defined", "Vendor onboarding and training for portal adoption"]
+    },
+    "icon": "user-group",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-workplace-safety-incident-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Workplace Safety & Incident Tracking",
+    "description": "Mobile incident reporting with real-time hazard detection and predictive safety analytics achieving 30-50% incident reduction and real-time compliance versus quarterly safety audits.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee witnesses safety incident (slip, fall, near-miss) and fills out paper incident report. 2. Paper form submitted to facilities manager, manually entered into spreadsheet or safety database. 3. Safety audits conducted quarterly using paper checklists (blocked exits, missing fire extinguishers, trip hazards). 4. Audit findings documented in Word report, shared with facilities team, corrective actions assigned manually. 5. OSHA reporting done annually or after major incidents (late, reactive compliance). 6. No predictive analytics (incidents discovered after they occur, patterns unidentified). 7. Safety training annual classroom sessions with no tracking of completion or effectiveness.",
+      "constraints": [
+        "Paper incident reports create 2-5 day reporting delay",
+        "Quarterly safety audits miss hazards that emerge between audits",
+        "No real-time hazard detection (discover issues reactively)",
+        "OSHA compliance reactive (report after incident, not prevent)",
+        "No incident pattern analysis (recurring hazards unidentified)",
+        "Safety training annual with no completion tracking"
+      ],
+      "metrics": ["Incident reporting time: 2-5 days", "Safety audit frequency: Quarterly", "Incident reduction: None (reactive)", "OSHA compliance: Reactive (post-incident)"]
+    },
+    "agentic": {
+      "workflow": "1. Safety Incident Agent provides mobile app for employees to report incidents in real-time: photo of hazard, location pin, description, severity. 2. Agent routes incident to facilities for immediate action: 'Trip hazard reported in Building 2 Lobby - dispatch technician now'. 3. Hazard Detection Agent analyzes IoT sensors: 'Temperature in chemical storage room exceeds 90°F safe limit - alert facilities and safety officer'. 4. Agent conducts digital safety inspections: facilities staff uses mobile checklist app, automatic photo documentation, GPS-stamped location data. 5. Predictive Safety Agent identifies patterns: 'Slip/fall incidents increased 40% in Building 3 during winter months - recommend anti-slip floor treatment before next season'. 6. Agent tracks corrective actions: '15 hazards identified last month, 12 resolved (80%), 3 overdue - escalate to facilities manager'. 7. 30-50% incident reduction and real-time compliance through predictive analytics and mobile reporting.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Safety Incident Agent", "Hazard Detection Agent"],
+        "utilityAgents": ["Mobile App API", "IoT Safety Sensors", "OSHA Reporting System", "Incident Database"]
+      },
+      "dataSources": [
+        "Incident reports from mobile app (photos, location, description)",
+        "IoT sensor data (temperature, gas detection, humidity)",
+        "Safety inspection checklists and findings",
+        "Corrective action tracking and completion status",
+        "Historical incident patterns by location and time",
+        "OSHA reporting requirements and deadlines",
+        "Safety training completion records"
+      ],
+      "benefits": [
+        "30-50% incident reduction through predictive analytics and pattern recognition",
+        "Real-time incident reporting (2-5 days → <1 hour) via mobile app",
+        "Continuous safety monitoring vs quarterly audit approach",
+        "Proactive hazard detection via IoT sensors (temperature, gas, humidity)",
+        "OSHA compliance automated (real-time reporting vs reactive)",
+        "Corrective action tracking ensures hazards resolved, not ignored"
+      ],
+      "metrics": ["Incident reporting time: <1 hour (real-time)", "Safety audit frequency: Continuous (mobile inspections)", "Incident reduction: 30-50%", "OSHA compliance: Proactive (real-time reporting)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy mobile incident reporting app for employees and facilities staff", "Implement digital safety inspection checklists replacing paper forms", "Enable IoT sensors for critical safety parameters (temperature, gas detection)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Safety management platform (Intelex, Cority) with mobile app", "IoT sensors for hazard detection (temperature, gas, humidity)", "Mobile app development for incident reporting and inspections", "Integration with OSHA reporting systems", "Historical incident data for pattern analysis and ML training", "Safety inspection checklist digitization", "Employee training on mobile incident reporting process"]
+    },
+    "icon": "shield-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-meeting-room-resource-booking",
+    "type": "function",
+    "level": 4,
+    "label": "Meeting Room & Resource Booking",
+    "description": "Smart booking with occupancy validation and auto-release on no-show achieving 90% no-show elimination and 30-50% meeting room efficiency improvement versus manual calendar booking.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee books conference room via Outlook/Google Calendar for 2pm-3pm meeting. 2. Employee forgets about meeting or decides to meet virtually instead (30-40% no-show rate). 3. Booked conference room sits empty while other employees can't find available space ('all rooms booked' but many empty). 4. Double-bookings occur when calendar integration fails or employees override system. 5. AV equipment requests manual (employee emails facilities: 'Need projector for 2pm meeting'). 6. No visibility into actual room utilization (30-40% of bookings result in no-shows, 20-30% of meetings end early but room held until scheduled end). 7. Conference rooms overbuilt relative to actual demand (wasted real estate).",
+      "constraints": [
+        "30-40% no-show rate wastes meeting room capacity",
+        "Manual booking doesn't validate actual usage (rooms held, not used)",
+        "Double-bookings and conflicts frustrate employees",
+        "AV equipment requests manual (email to facilities)",
+        "No utilization data (can't optimize room count or size)",
+        "Meetings ending early don't release rooms (held until scheduled end)"
+      ],
+      "metrics": ["No-show rate: 30-40%", "Room utilization: 40-60% (accounting for no-shows)", "Double-booking frequency: 5-10%", "AV equipment request time: 1-4 hours"]
+    },
+    "agentic": {
+      "workflow": "1. Smart Booking Agent enables employees to find rooms via app: filters by capacity, location, AV equipment, availability. 2. Employee books room for 2pm-3pm, agent requires check-in via badge swipe or mobile app within 10 minutes of meeting start. 3. Resource Optimization Agent monitors occupancy sensors: detects room 3B booked at 2pm but no one entered by 2:10pm - auto-releases room, notifies booker of cancellation. 4. Agent detects meeting ended early: occupancy sensors show room empty at 2:35pm (25 min remaining) - releases room, makes available for others. 5. Agent manages AV equipment automatically: employee selects 'projector required' when booking, facilities receives auto-notification to set up equipment. 6. Agent provides room utilization analytics: 'Conference rooms utilized 75% on average after no-show elimination, Meeting Room C underutilized at 40% - consider converting to focus room'. 7. 90% no-show elimination and 30-50% efficiency improvement through smart booking and auto-release.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Smart Booking Agent", "Resource Optimization Agent"],
+        "utilityAgents": ["Calendar APIs (Google/Outlook)", "Occupancy Sensors", "Room Booking Platform", "AV Equipment Integration"]
+      },
+      "dataSources": [
+        "Calendar booking data (reservations, duration, attendees)",
+        "Occupancy sensor data (room entry, exit, presence)",
+        "Badge access data for check-in validation",
+        "Room inventory (capacity, location, AV equipment)",
+        "Meeting room utilization history",
+        "AV equipment availability and setup requirements",
+        "Employee location and preferences"
+      ],
+      "benefits": [
+        "90% no-show elimination through check-in requirement and auto-release",
+        "30-50% meeting room efficiency improvement (utilization 70-80% vs 40-60%)",
+        "Auto-release on no-show makes rooms available for others (reduce 'all booked' frustration)",
+        "Early meeting end detection releases rooms immediately (vs held until scheduled end)",
+        "AV equipment auto-setup eliminates manual email requests",
+        "Utilization analytics enable data-driven decisions (convert underutilized rooms)"
+      ],
+      "metrics": ["No-show rate: 3-5%", "Room utilization: 70-80%", "Double-booking frequency: <1%", "AV equipment request time: Automatic (booking time)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy occupancy sensors in conference rooms for no-show detection", "Implement auto-release policy (10-minute check-in window)", "Enable room booking app with capacity, location, AV equipment filters"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Room booking platform (Robin, Condeco, Teem) with automation", "Occupancy sensors in conference rooms for presence detection", "Calendar API integration (Google Workspace, Microsoft 365)", "Badge access system integration for check-in validation", "AV equipment inventory and setup procedures", "No-show policy defined (auto-release after 10 min)", "Employee communication and training on check-in requirement"]
+    },
+    "icon": "calendar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-facilities-analytics-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Facilities Analytics & Reporting",
+    "description": "Real-time dashboards with predictive analytics and automated cost center allocation enabling data-driven facilities decisions versus monthly spreadsheet reports.",
+    "parentCapability": "capability-facilities-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Facilities manager manually compiles data from multiple sources: CMMS for work orders, utility bills for energy, invoices for vendor costs, spreadsheets for space allocation. 2. Data consolidated in Excel, pivot tables created for analysis by building, department, cost category. 3. Monthly report created in PowerPoint: 'Last month facilities spent $500K (maintenance $200K, energy $150K, vendor costs $150K)'. 4. Report shows what happened (backward-looking) but no insights or recommendations. 5. Cost center allocation manual: facilities manager estimates department usage, allocates costs subjectively. 6. Report shared with leadership 2-3 weeks after month-end (too late for corrective action). 7. No predictive analytics (can't forecast future costs or issues).",
+      "constraints": [
+        "Manual data consolidation from multiple sources (time-consuming, error-prone)",
+        "Monthly reporting cycle too slow for corrective action (2-3 weeks delayed)",
+        "Backward-looking only (what happened, not what will happen)",
+        "Cost center allocation manual and inaccurate (subjective estimates)",
+        "No predictive analytics or forecasting",
+        "Limited insights or recommendations (just data presentation)"
+      ],
+      "metrics": ["Reporting frequency: Monthly (2-3 weeks delayed)", "Cost allocation accuracy: 60-70% (manual estimates)", "Predictive capability: None", "Data consolidation time: 2-4 days"]
+    },
+    "agentic": {
+      "workflow": "1. Facilities Analytics Agent integrates data sources automatically: CMMS, utility bills, vendor invoices, space management system, energy monitoring. 2. Agent generates real-time dashboard: facilities costs by building, department, category with trend analysis (up/down vs prior period). 3. Cost Allocation Agent assigns costs to departments automatically: energy based on floor space occupancy, maintenance based on work orders by location, shared costs by headcount. 4. Agent provides predictive analytics: 'HVAC maintenance costs trending 20% higher than budget - forecast $50K overspend by year-end, recommend preventive maintenance to reduce failures'. 5. Agent benchmarks performance: 'Energy cost per sq ft $2.30 vs industry average $2.80 (performing well), maintenance cost per sq ft $3.50 vs industry $2.50 (opportunity to optimize)'. 6. Agent generates executive-ready reports automatically: top cost drivers, KPI trends, budget variances, recommended actions. 7. Real-time visibility enables proactive facilities decisions vs reactive monthly reports.",
+      "agents": {
+        "orchestrator": "Facilities Management Orchestration Agent",
+        "superAgents": ["Facilities Analytics Agent", "Cost Allocation Agent"],
+        "utilityAgents": ["BI Platform API", "Data Warehouse", "Cost Center System", "Executive Dashboard"]
+      },
+      "dataSources": [
+        "CMMS work order data (maintenance costs, labor, parts)",
+        "Utility bills and energy monitoring data (electricity, gas, water)",
+        "Vendor invoices and payment history",
+        "Space management system (occupancy, floor space by department)",
+        "Budget and forecast data by cost category",
+        "Industry benchmark data (cost per sq ft by category)",
+        "Headcount data for cost allocation"
+      ],
+      "benefits": [
+        "Real-time visibility vs 2-3 week delayed monthly reports",
+        "Automated cost allocation (95% accuracy vs 60-70% manual estimates)",
+        "Predictive analytics forecast budget variances before they occur",
+        "Benchmarking identifies improvement opportunities vs industry standards",
+        "Data consolidation automated (2-4 days → real-time)",
+        "Executive-ready reports with insights and recommendations, not just data"
+      ],
+      "metrics": ["Reporting frequency: Real-time (on-demand)", "Cost allocation accuracy: 95%+", "Predictive capability: 90-day forecasting", "Data consolidation time: Real-time (automated)"],
+      "implementationComplexity": "Medium-High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy BI dashboard with real-time facilities KPIs (cost, energy, maintenance)", "Implement automated cost allocation by department based on floor space and headcount", "Enable budget variance alerts when costs trending 10%+ over budget"],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["BI platform (Tableau, Power BI, Qlik) with data warehouse", "Integration with CMMS, utility bills, vendor invoices, space management", "Cost center system for department allocation", "Budget and forecast data for variance analysis", "Industry benchmark data subscriptions", "Executive dashboard design and KPI definition", "Data governance for accuracy and consistency"]
+    },
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

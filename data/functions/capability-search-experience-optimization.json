@@ -1,0 +1,380 @@
+[
+  {
+    "id": "function-ai-powered-site-search",
+    "type": "function",
+    "level": 4,
+    "label": "AI-Powered Site Search",
+    "description": "Semantic search with ML-powered ranking delivering 40-70% improvement in search conversion through intelligent query understanding and result relevance.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Site search uses basic keyword matching (exact text match required). 2. Results ranked by simple relevance score (title match > description match). 3. Misspellings return zero results (no spell correction). 4. Synonyms not understood ('sneakers' doesn't return 'athletic shoes'). 5. Poor search experience yields 15-25% search conversion and 20-30% zero-result rate.",
+      "constraints": [
+        "Keyword matching misses semantic meaning ('running shoes for flat feet' fails)",
+        "20-30% searches return zero results due to spelling, synonyms, product naming",
+        "No query understanding (can't distinguish 'apple' fruit vs Apple tech)",
+        "Results ranked by text match not business value or customer preference",
+        "15-25% search conversion due to poor result relevance",
+        "No learning from search engagement and conversions"
+      ],
+      "metrics": ["Search conversion: 15-25%", "Zero-result rate: 20-30%", "Result relevance: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Query Understanding Agent interprets search intent using NLP: semantic meaning not just keywords, entity recognition (brands, product types, attributes), spell correction and autocomplete, synonym expansion ('sneakers' includes 'athletic shoes'). 2. ML Ranking Agent scores results by: predicted relevance to user's intent, personalized based on user preferences, business rules (margin, inventory, promotions), engagement signals (clicks, conversions). 3. Result Enhancement Agent enriches listings with images, ratings, availability. 4. Learning Agent continuously improves from search engagement and outcomes. 5. Zero-Result Recovery suggests alternatives when no exact match.",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["Query Understanding Agent", "ML Ranking Agent", "Learning Agent"],
+        "utilityAgents": ["Search Engine", "NLP Service", "ML Platform", "Product Catalog"]
+      },
+      "dataSources": [
+        "Search query logs and engagement data",
+        "Product catalog with attributes and metadata",
+        "Customer behavioral data and preferences",
+        "Historical search conversion rates",
+        "Inventory levels and business rules",
+        "Synonym dictionaries and product taxonomies"
+      ],
+      "benefits": [
+        "40-70% improvement in search conversion through relevant results",
+        "Zero-result rate reduced to <5% via spell correction and synonyms",
+        "Semantic understanding handles natural language queries",
+        "Personalized ranking shows products aligned with user preferences",
+        "Continuous ML learning improves relevance over time",
+        "Business-aware ranking balances relevance with margin and inventory"
+      ],
+      "metrics": ["Search conversion: 30-50%", "Zero-result rate: <5%", "Result relevance: High (ML-ranked)"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement spell correction and synonym expansion", "Deploy ML ranking for search results"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Search platform with ML ranking capability", "NLP and semantic search tools", "Product catalog with rich metadata", "Historical search and conversion data", "Synonym and taxonomy management"]
+    },
+    "icon": "search",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-natural-language-query-understanding",
+    "type": "function",
+    "level": 4,
+    "label": "Natural Language Query Understanding",
+    "description": "Conversational search understanding complex queries and intent delivering 50-80% improvement in long-tail search effectiveness.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Search requires structured keywords ('red dress size 8'). 2. Natural language queries fail ('I need a formal dress for my daughter's wedding next month'). 3. Compound queries with multiple attributes return poor results. 4. No understanding of context, intent, or qualifiers. 5. Users must learn to search in 'computer language' not natural language.",
+      "constraints": [
+        "Natural language queries fail (must use structured keywords)",
+        "Long descriptive searches ('cocktail dress for summer outdoor wedding') return zero results",
+        "Can't understand intent or context (occasion, season, recipient)",
+        "Compound attribute queries difficult ('waterproof hiking boots under $100')",
+        "60-70% of natural language queries fail or return poor results",
+        "Mobile voice search nearly unusable due to conversational nature"
+      ],
+      "metrics": ["Natural language success: 30-40%", "Voice search success: 20-30%", "Long-tail conversion: Low"]
+    },
+    "agentic": {
+      "workflow": "1. NLP Parser Agent decomposes natural language query into structured intent: product type ('dress'), attributes ('formal', 'red', 'size 8'), context ('wedding', 'next month'), constraints ('under $150'). 2. Intent Classification Agent determines search purpose (research vs buy, gift vs self, occasion). 3. Entity Extraction identifies brands, categories, sizes, colors, materials. 4. Query Expansion enriches with synonyms and related terms. 5. Conversational Follow-up enables refinement ('show me cheaper options', 'in blue instead').",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["NLP Parser Agent", "Intent Classification Agent", "Entity Extraction Agent"],
+        "utilityAgents": ["NLP Platform", "Entity Recognition", "Query Expansion", "Conversational AI"]
+      },
+      "dataSources": [
+        "Natural language search queries",
+        "Product catalog with attributes and taxonomy",
+        "Occasion and use-case mappings",
+        "Entity libraries (brands, materials, colors)",
+        "Conversational search patterns",
+        "Voice search transcriptions"
+      ],
+      "benefits": [
+        "50-80% improvement in long-tail search effectiveness",
+        "Natural language queries handled successfully (85-95% vs 30-40%)",
+        "Voice search becomes viable (70-85% success vs 20-30%)",
+        "Context-aware results match intent not just keywords",
+        "Conversational refinement enables iterative search",
+        "Mobile users can search naturally without typing structured queries"
+      ],
+      "metrics": ["Natural language success: 85-95%", "Voice search success: 70-85%", "Long-tail conversion: High"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement entity extraction for key attributes", "Deploy query expansion for natural language"],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Advanced NLP platform", "Entity recognition capability", "Product taxonomy and attribute mapping", "Conversational AI framework", "Voice search integration"]
+    },
+    "icon": "microphone",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-faceted-search-filtering",
+    "type": "function",
+    "level": 4,
+    "label": "Faceted Search & Filtering",
+    "description": "AI-powered facet recommendations with smart filtering reducing time to find products by 50-70% through intelligent navigation.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. All available facets shown in sidebar (20-30 options overwhelming users). 2. Same facets for all searches regardless of query or category. 3. No guidance on which facets narrow results effectively. 4. Facet order fixed (not optimized for user's search). 5. Users must manually trial-and-error to find relevant filters.",
+      "constraints": [
+        "20-30 facets overwhelm users (analysis paralysis)",
+        "Generic facets not relevant to specific search context",
+        "No indication of result counts before applying filter (dead-end filtering)",
+        "Facet order not optimized for user's likely refinement path",
+        "50-60% users abandon after failing to narrow 1000+ results",
+        "Mobile users especially struggle with long facet lists"
+      ],
+      "metrics": ["Facet usage: 30-40% of users", "Filter abandonment: 50-60%", "Time to find: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Facet Relevance Agent selects most relevant facets for search context (show 'size' for shoes, 'cuisine' for restaurants). 2. Smart Ordering Agent prioritizes facets by: result set diversity (which facets split results meaningfully), user behavior patterns, predicted next refinement. 3. Result Count Preview shows counts before applying filter (avoids dead-ends). 4. Guided Filtering suggests optimal facet combinations to narrow results. 5. Progressive Disclosure shows additional facets as users refine (not all 30 upfront).",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["Facet Relevance Agent", "Smart Ordering Agent"],
+        "utilityAgents": ["Search Engine", "Product Taxonomy", "Behavioral Analytics", "Facet Configuration"]
+      },
+      "dataSources": [
+        "Search query and result set",
+        "Product attributes and taxonomy",
+        "User facet usage patterns",
+        "Result count distributions by facet",
+        "Historical refinement paths",
+        "Category-specific facet relevance"
+      ],
+      "benefits": [
+        "50-70% reduction in time to find products through smart filtering",
+        "Facet usage increases to 60-80% vs 30-40% (better discoverability)",
+        "Filter abandonment reduced to 15-25% vs 50-60%",
+        "Context-relevant facets (not generic 30-facet list)",
+        "Result count preview prevents dead-end filtering",
+        "Progressive disclosure reduces cognitive load on mobile"
+      ],
+      "metrics": ["Facet usage: 60-80% of users", "Filter abandonment: 15-25%", "Time to find: 50-70% faster"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add result count preview to facets", "Implement context-based facet selection"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Search platform with faceted navigation", "Product taxonomy and attributes", "Facet usage analytics", "Dynamic facet configuration", "Mobile-optimized UI"]
+    },
+    "icon": "filter",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-search-autocomplete-suggestions",
+    "type": "function",
+    "level": 4,
+    "label": "Search Autocomplete & Suggestions",
+    "description": "ML-powered autocomplete with personalized suggestions reducing search effort by 40-60% and increasing conversion through guided discovery.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Autocomplete shows top 10 most popular queries starting with typed letters. 2. Same suggestions for all users (not personalized). 3. Suggestions text-only (no images or context). 4. No product or category suggestions (only query completions). 5. Generic popular queries not relevant to individual user intent.",
+      "constraints": [
+        "Popular query autocomplete not personalized to user preferences",
+        "Text-only suggestions lack visual context",
+        "No product or category suggestions (must complete full search)",
+        "Mobile users must type entire query (autocomplete doesn't include products)",
+        "Suggestions don't guide discovery (just complete common searches)",
+        "40-50% users ignore autocomplete due to irrelevance"
+      ],
+      "metrics": ["Autocomplete usage: 50-60%", "Zero-typing discovery: None", "Personalization: Generic"]
+    },
+    "agentic": {
+      "workflow": "1. Personalized Suggestion Agent tailors autocomplete to user: recent searches and browsing, category preferences, trending searches in user's segment. 2. Multi-Type Suggestions shows mix of: query completions, product matches, category suggestions, brand suggestions. 3. Visual Enrichment adds product images and ratings to suggestions. 4. Zero-Typing Discovery enables clicking suggestion without typing full query. 5. Learning Agent improves suggestions based on selection and conversion outcomes.",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["Personalized Suggestion Agent", "Multi-Type Suggestions Agent", "Learning Agent"],
+        "utilityAgents": ["Search Platform", "Recommendation Engine", "Product Catalog", "Image Service"]
+      },
+      "dataSources": [
+        "User search and browsing history",
+        "Product catalog with images and ratings",
+        "Popular and trending search queries",
+        "Autocomplete selection and conversion data",
+        "Category and brand taxonomy",
+        "Real-time inventory availability"
+      ],
+      "benefits": [
+        "40-60% reduction in typing effort through smart autocomplete",
+        "Autocomplete usage increases to 75-85% vs 50-60%",
+        "Zero-typing discovery (click product from suggestions without search)",
+        "Personalized suggestions increase relevance and conversion 30-50%",
+        "Visual product suggestions enable image-based selection",
+        "Trending and popular queries aid discovery of new products"
+      ],
+      "metrics": ["Autocomplete usage: 75-85%", "Zero-typing discovery: 20-35% of searches", "Personalization: ML-driven"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add product suggestions to autocomplete", "Include images in suggestions"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Search platform with autocomplete API", "Product catalog integration", "Recommendation engine", "Image CDN", "User behavioral data"]
+    },
+    "icon": "lightbulb",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-visual-search-image-recognition",
+    "type": "function",
+    "level": 4,
+    "label": "Visual Search & Image Recognition",
+    "description": "AI-powered visual search enabling product discovery from images delivering 3-5x engagement and tapping into the 70%+ of users who struggle with text descriptions.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Travel", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customers must describe products in words (difficult for visual items like fashion, decor). 2. No image-based search capability. 3. Users screenshot products from social media but can't search with image. 4. Complex visual attributes hard to describe ('dress with abstract floral print, empire waist'). 5. Missed discovery opportunity for visually-oriented shoppers.",
+      "constraints": [
+        "Text descriptions inadequate for visual products (fashion, home decor, furniture)",
+        "Can't search using images from Instagram, Pinterest, real world photos",
+        "Visual attributes difficult to articulate in words",
+        "70%+ of users struggle to describe style preferences textually",
+        "Social media product discovery doesn't connect to purchase",
+        "Mobile users want to snap photo and find similar products"
+      ],
+      "metrics": ["Visual search capability: None", "Image-based discovery: 0%", "Social-to-shop conversion: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Image Recognition Agent analyzes uploaded or camera-captured images: product type and category, visual attributes (color, pattern, style, material), brand and logo detection, similar product matching. 2. Visual Similarity Search finds products matching visual characteristics. 3. Attribute Extraction translates visual elements into searchable attributes. 4. Shop-the-Look identifies multiple products in single image (outfit, room setup). 5. Results ranked by visual similarity and availability.",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["Image Recognition Agent", "Visual Similarity Search Agent"],
+        "utilityAgents": ["Computer Vision API", "Product Catalog", "Image Processing", "ML Platform"]
+      },
+      "dataSources": [
+        "Product catalog with images and visual attributes",
+        "Computer vision training data",
+        "Visual similarity models",
+        "Brand and logo recognition database",
+        "User-uploaded and camera images",
+        "Inventory and availability data"
+      ],
+      "benefits": [
+        "3-5x engagement from visual discovery vs text search",
+        "70%+ of visually-oriented shoppers can now search effectively",
+        "Social media inspiration becomes shoppable (Instagram → visual search → purchase)",
+        "Mobile camera search enables real-world product finding",
+        "Shop-the-look increases AOV 40-80% through outfit/room bundling",
+        "Reduces search frustration for hard-to-describe visual items"
+      ],
+      "metrics": ["Visual search capability: Full", "Image-based discovery: 15-30% of mobile searches", "Social-to-shop conversion: High"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Pilot visual search for fashion category", "Enable camera-based mobile search"],
+      "investmentRequired": "High",
+      "timeToValue": "5-8 months",
+      "prerequisites": ["Computer vision platform or API", "Product catalog with visual attributes", "Image processing infrastructure", "Mobile app or camera integration", "Visual similarity modeling"]
+    },
+    "icon": "camera",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-search-personalization-merchandising",
+    "type": "function",
+    "level": 4,
+    "label": "Search Personalization & Merchandising",
+    "description": "Unified search personalization with merchandising controls balancing customer relevance and business goals achieving 35-65% conversion improvement.",
+    "parentCapability": "capability-search-experience-optimization",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Search results ranked by text relevance only (ignores business goals). 2. Merchandiser wants to promote new collection but search algorithm doesn't comply. 3. No ability to boost/bury products in search results. 4. Clearance items appear above full-price (bad for margin). 5. Conflict between algorithmic relevance and business merchandising needs.",
+      "constraints": [
+        "Pure algorithmic ranking ignores business rules (margin, inventory, promotions)",
+        "Can't boost strategic products (new arrivals, high margin, exclusive)",
+        "Low-margin clearance items rank high due to popularity",
+        "No seasonal merchandising control (swimwear in winter)",
+        "Out-of-stock items appear prominently (poor experience)",
+        "Merchandiser and algorithm work against each other"
+      ],
+      "metrics": ["Merchandising control: None", "Business rule adherence: 0%", "Margin optimization: Poor"]
+    },
+    "agentic": {
+      "workflow": "1. Hybrid Ranking Agent balances multiple signals: personal relevance (user preferences, history), textual relevance (query match), business rules (margin, inventory, promotions, seasonality). 2. Merchandising Control allows: boosting/burying specific products or categories, seasonal campaigns and new arrival promotion, inventory-aware ranking (de-rank out-of-stock). 3. Margin Optimization favors higher-margin items when relevance similar. 4. A/B Testing validates business rule impact on conversion and revenue. 5. Dynamic Weighting adjusts signal importance by query and user.",
+      "agents": {
+        "orchestrator": "Search Experience Orchestration Agent",
+        "superAgents": ["Hybrid Ranking Agent", "Merchandising Control Agent"],
+        "utilityAgents": ["Search Platform", "Business Rules Engine", "Inventory System", "A/B Testing"]
+      },
+      "dataSources": [
+        "Customer behavioral data and preferences",
+        "Product catalog with business attributes (margin, inventory)",
+        "Merchandising rules and campaigns",
+        "Seasonal and promotional calendar",
+        "Search performance and conversion data",
+        "A/B test results for ranking strategies"
+      ],
+      "benefits": [
+        "35-65% conversion improvement through balanced relevance + business optimization",
+        "Merchandising control enables strategic product promotion",
+        "Margin optimization improves profitability 5-15% through smart ranking",
+        "Inventory-aware ranking prevents out-of-stock disappointment",
+        "Seasonal and campaign support without sacrificing relevance",
+        "A/B testing ensures business rules improve (not hurt) customer experience"
+      ],
+      "metrics": ["Merchandising control: Full", "Business rule adherence: Balanced", "Margin optimization: Optimized"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement margin-aware ranking", "Add inventory availability to search ranking"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Search platform with business rules capability", "Product catalog with margin and inventory data", "Merchandising workflow and tools", "A/B testing framework", "Hybrid ranking models"]
+    },
+    "icon": "sliders",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

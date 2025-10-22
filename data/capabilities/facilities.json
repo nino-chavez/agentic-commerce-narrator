@@ -1,0 +1,744 @@
+[
+  {
+    "id": "capability-facilities-maintenance",
+    "type": "capability",
+    "level": 3,
+    "label": "Facilities Management & Maintenance",
+    "description": "Transforms reactive break-fix maintenance into predictive asset management with significant downtime reduction, faster repairs, and cost savings through IoT monitoring, AI predictions, and automated work order management.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 8,
+    "keyFunctions": [
+      "Predictive Maintenance & IoT Monitoring",
+      "Intelligent Work Order Management",
+      "Mobile Technician Enablement",
+      "Parts Inventory & Procurement",
+      "Preventive Maintenance Scheduling",
+      "Asset Performance Analytics",
+      "Vendor Management",
+      "Equipment Lifecycle Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Reactive maintenance with manual work orders, paper forms, and low preventive maintenance completion resulting in unplanned downtime and high costs.",
+      "characteristics": [
+        "Equipment fails, then we fix (reactive)",
+        "Manual work order creation and assignment",
+        "No mobile access for technicians (paper-based)",
+        "Low preventive maintenance completion",
+        "Parts inventory not tracked (stockouts or excess)",
+        "Long mean time to repair",
+        "High unplanned downtime"
+      ],
+      "constraints": [
+        "Reactive maintenance (fix after failure)",
+        "Manual work order triage delays response",
+        "No asset performance data (which assets fail most?)",
+        "Parts stockouts delay repairs",
+        "Maintenance backlog invisible",
+        "Vendor performance not measured",
+        "High maintenance cost per sq ft"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-fac-001",
+          "metric": "Preventive Maintenance (PM) Completion Rate",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'IFMA Facility Performance Indicators 2024']"
+        },
+        {
+          "id": "bench-fac-002",
+          "metric": "Mean Time to Repair (MTTR)",
+          "value": "4-8 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Industry maintenance benchmarks']"
+        },
+        {
+          "id": "bench-fac-003",
+          "metric": "Unplanned Downtime",
+          "value": "20-30% of total downtime",
+          "source": "TBD: [SME to provide source, e.g., 'Reliability maintenance studies']"
+        },
+        {
+          "id": "bench-fac-004",
+          "metric": "Maintenance Cost per Square Foot",
+          "value": "$2-$4",
+          "source": "TBD: [SME to provide source, e.g., 'BOMA Operating Cost Benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Predictive maintenance with IoT sensors detecting anomalies before failure, automated work orders, and mobile technician tools achieving significant operational improvements.",
+      "characteristics": [
+        "IoT Sensor Monitoring Agent detects equipment anomalies",
+        "Predictive Maintenance Agent forecasts failure, creates work orders automatically",
+        "Work Order Routing Agent assigns to best-fit technician",
+        "Mobile Technician Agent provides troubleshooting guides and asset history",
+        "Parts Inventory Agent auto-orders when stock low",
+        "PM Scheduling Agent ensures high preventive maintenance completion",
+        "Asset Performance Agent analyzes failure patterns"
+      ],
+      "benefits": [
+        "Unplanned downtime significantly reduced through predictive maintenance",
+        "MTTR reduced through faster diagnosis and mobile access",
+        "PM completion increased through auto-scheduling",
+        "Maintenance costs reduced",
+        "Asset lifespan extended",
+        "Technician productivity increased"
+      ],
+      "projections": [
+        {
+          "metric": "Unplanned Downtime Reduction",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on IoT sensors detecting equipment anomalies before failure and enabling predictive maintenance interventions']",
+          "sourceBenchmark": "bench-fac-003"
+        },
+        {
+          "metric": "Mean Time to Repair (MTTR) Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mobile technician tools with troubleshooting guides, asset history, and automated parts ordering']",
+          "sourceBenchmark": "bench-fac-002"
+        },
+        {
+          "metric": "PM Completion Rate Improvement",
+          "value": "95%+ (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated scheduling agents that prevent PM work orders from being skipped or delayed']",
+          "sourceBenchmark": "bench-fac-001"
+        },
+        {
+          "metric": "Maintenance Cost Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on shift from reactive to predictive maintenance reducing emergency repairs and extending asset life']",
+          "sourceBenchmark": "bench-fac-004"
+        },
+        {
+          "metric": "Asset Lifespan Extension",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive maintenance preventing catastrophic failures and optimizing replacement timing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Technician Productivity Increase",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mobile tools eliminating trips to office for work orders, parts lists, and asset history']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Facilities Management Orchestration Agent",
+        "Predictive Maintenance & IoT Agent",
+        "Intelligent Work Order Management Agent",
+        "Mobile Technician Enablement Agent",
+        "Parts Inventory & Procurement Agent",
+        "Preventive Maintenance Scheduling Agent",
+        "Asset Performance & Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Mobile app for technicians (immediate productivity gain)",
+        "Auto-assignment of work orders (reduce manual coordination)",
+        "PM calendar automation (ensure PMs not skipped)"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Asset inventory (catalog all equipment)",
+        "Modern CMMS (or willingness to replace)",
+        "IoT-enabled equipment (or retrofit sensors)",
+        "Technician skills database",
+        "Executive sponsorship (CFO + COO)"
+      ]
+    },
+    "icon": "wrench",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-energy-management-sustainability",
+    "type": "capability",
+    "level": 3,
+    "label": "Energy Management & Sustainability",
+    "description": "Optimizes energy consumption and carbon footprint with significant cost savings and emission reductions through AI-powered HVAC/lighting control, demand response, and automated sustainability tracking.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Real-Time Energy Monitoring",
+      "HVAC Optimization & Control",
+      "Intelligent Lighting Control",
+      "Demand Response & Peak Shaving",
+      "Utility Bill Management & Validation",
+      "Sustainability & Carbon Tracking",
+      "Energy Project Prioritization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual utility bill tracking with fixed HVAC schedules and no real-time visibility resulting in substantial energy waste and manual sustainability reporting.",
+      "characteristics": [
+        "Utility bills reviewed monthly (too late to take action)",
+        "HVAC controlled by fixed schedules (on 6am, off 6pm)",
+        "Lighting controlled by manual switches",
+        "No real-time energy monitoring",
+        "Sustainability reporting manual (annual carbon footprint calculation)",
+        "High energy cost per sq ft (unoptimized)",
+        "Significant energy waste (lights/HVAC on unnecessarily)"
+      ],
+      "constraints": [
+        "No real-time energy visibility",
+        "HVAC and lighting run when buildings empty",
+        "No demand response capability",
+        "Utility bill errors not caught",
+        "No benchmarking (how do we compare?)",
+        "Sustainability reporting manual (weeks of work)",
+        "Energy projects not prioritized by ROI"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ener-001",
+          "metric": "Energy Cost per Square Foot",
+          "value": "$2-$4",
+          "source": "TBD: [SME to provide source, e.g., 'BOMA Energy Cost Benchmarks 2024']"
+        },
+        {
+          "id": "bench-ener-002",
+          "metric": "Energy Waste (Unnecessary HVAC/Lighting)",
+          "value": "20-30%",
+          "source": "TBD: [SME to provide source, e.g., 'EPA Energy Star Portfolio Manager data']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered energy optimization with real-time monitoring, occupancy-based HVAC/lighting control, and automated sustainability tracking achieving significant cost and emission reductions.",
+      "characteristics": [
+        "Energy Monitoring Agent tracks use in real-time by building/floor/equipment",
+        "HVAC Optimization Agent adjusts based on occupancy, weather, time",
+        "Lighting Control Agent dims/turns off when spaces unoccupied",
+        "Demand Response Agent reduces load during peak pricing",
+        "Utility Bill Validation Agent flags errors and anomalies",
+        "Sustainability Tracking Agent calculates carbon emissions automatically",
+        "Energy Project Prioritization Agent ranks initiatives by ROI"
+      ],
+      "benefits": [
+        "Energy costs reduced",
+        "Carbon emissions reduced",
+        "Energy waste reduced",
+        "Sustainability reporting automated (hours vs weeks)",
+        "Demand charges reduced",
+        "Utility bill errors caught"
+      ],
+      "projections": [
+        {
+          "metric": "Energy Cost Reduction",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered HVAC/lighting optimization responding to occupancy, weather, and time-of-use rates']",
+          "sourceBenchmark": "bench-ener-001"
+        },
+        {
+          "metric": "Carbon Emission Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on reduced energy consumption through optimization and demand response during peak carbon intensity periods']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Energy Waste Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on occupancy-based controls preventing HVAC and lighting from running in empty spaces']",
+          "sourceBenchmark": "bench-ener-002"
+        },
+        {
+          "metric": "Demand Charge Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on demand response agent reducing peak load during high-cost periods']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Energy Management & Sustainability Orchestration Agent",
+        "Real-Time Energy Monitoring Agent",
+        "HVAC Optimization & Control Agent",
+        "Intelligent Lighting Control Agent",
+        "Demand Response & Peak Shaving Agent",
+        "Utility Bill Management & Validation Agent",
+        "Sustainability & Carbon Tracking Agent",
+        "Energy Project Prioritization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Smart thermostat deployment (immediate savings)",
+        "Occupancy-based lighting (LED + sensors)",
+        "Utility bill validation (catch billing errors)"
+      ],
+      "investmentRequired": "Medium-High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Energy management platform",
+        "BMS/BAS (or willingness to install)",
+        "Smart meters (or utility AMI data access)",
+        "Energy baseline (understand current consumption)",
+        "Sustainability goals (net-zero target date)"
+      ]
+    },
+    "icon": "lightning-bolt",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-space-planning-utilization",
+    "type": "capability",
+    "level": 3,
+    "label": "Space Planning & Utilization",
+    "description": "Optimizes workplace space with significant real estate cost savings and improved occupancy through real-time tracking, hoteling management, and AI-powered space planning.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Real-Time Occupancy & Utilization Tracking",
+      "Hoteling & Hot-Desk Management",
+      "Conference Room Optimization",
+      "Space Planning & Forecasting",
+      "Move & Change Management",
+      "Space Analytics & Optimization",
+      "Workplace Experience & Wayfinding"
+    ],
+    "traditionalApproach": {
+      "description": "Fixed space allocation with low occupancy and no tracking resulting in wasted real estate spend and poor employee experience.",
+      "characteristics": [
+        "Office space allocation fixed by department",
+        "Low office occupancy (worse post-COVID)",
+        "Conference room booking via email (double-bookings common)",
+        "No space utilization tracking",
+        "Space planning based on headcount (1 desk per employee)",
+        "Move requests take weeks",
+        "High space cost per employee (unoptimized)"
+      ],
+      "constraints": [
+        "Office space underutilized",
+        "Conference rooms overbooked or sit empty",
+        "Assigned desks empty most of the time",
+        "No visibility into which spaces used when",
+        "Real estate costs high (paying for unused space)",
+        "Employee experience poor (can't find space)",
+        "Move management slow"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-spac-001",
+          "metric": "Office Occupancy Rate (Pre-COVID)",
+          "value": "40-60%",
+          "source": "TBD: [SME to provide source, e.g., 'JLL Workplace Utilization Study 2024']"
+        },
+        {
+          "id": "bench-spac-002",
+          "metric": "Office Occupancy Rate (Post-COVID)",
+          "value": "20-40%",
+          "source": "TBD: [SME to provide source, e.g., 'CBRE Office Utilization Report 2024']"
+        },
+        {
+          "id": "bench-spac-003",
+          "metric": "Move Request Cycle Time",
+          "value": "2-4 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Facilities management industry benchmarks']"
+        },
+        {
+          "id": "bench-spac-004",
+          "metric": "Space Cost per Employee",
+          "value": "$8K-$15K/year",
+          "source": "TBD: [SME to provide source, e.g., 'BOMA Real Estate Cost per Employee Benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Smart workplace management with real-time occupancy tracking, hoteling, and automated space planning achieving optimized occupancy and significant cost savings.",
+      "characteristics": [
+        "Occupancy Tracking Agent monitors space usage via sensors and badge data",
+        "Hoteling Management Agent enables desk/office reservation via app",
+        "Conference Room Optimization Agent auto-releases no-show bookings",
+        "Space Planning Agent forecasts needs based on headcount and utilization",
+        "Move Management Agent automates move requests and coordination",
+        "Space Analytics Agent identifies underutilized space",
+        "Workplace Experience Agent helps employees find available space"
+      ],
+      "benefits": [
+        "Office occupancy optimized",
+        "Real estate costs reduced (smaller footprint, subleases)",
+        "Conference room utilization improved",
+        "Employee experience improved (find space easily)",
+        "Space planning proactive (forecast 6-12 months ahead)",
+        "Move cycle time reduced"
+      ],
+      "projections": [
+        {
+          "metric": "Office Occupancy Optimization",
+          "value": "70-80% target (vs 40-60% traditional)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on hoteling and flexible seating enabled by real-time occupancy tracking and reservation system']",
+          "sourceBenchmark": "bench-spac-001"
+        },
+        {
+          "metric": "Real Estate Cost Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on reduced footprint needs from higher occupancy and ability to sublease underutilized space']",
+          "sourceBenchmark": "bench-spac-004"
+        },
+        {
+          "metric": "Conference Room Utilization Improvement",
+          "value": "50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on auto-release of no-show bookings and real-time availability visibility']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Move Cycle Time Reduction",
+          "value": "70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated move request workflow, coordination, and execution tracking']",
+          "sourceBenchmark": "bench-spac-003"
+        }
+      ],
+      "agents": [
+        "Workplace & Space Management Orchestration Agent",
+        "Real-Time Occupancy & Utilization Agent",
+        "Hoteling & Hot-Desk Management Agent",
+        "Conference Room Optimization Agent",
+        "Space Planning & Forecasting Agent",
+        "Move & Change Management Agent",
+        "Space Analytics & Optimization Agent",
+        "Workplace Experience & Wayfinding Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Conference room sensors (auto-release no-shows)",
+        "Hoteling app deployment (enable flexible seating)",
+        "Occupancy dashboard (understand current utilization)"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Workplace management platform",
+        "Occupancy sensors (or badge data access)",
+        "Digital floor plans",
+        "Flexible workspace policy (hoteling permitted)",
+        "Employee communication (change management)"
+      ]
+    },
+    "icon": "office-building",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-vendor-contractor-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Vendor & Contractor Management",
+    "description": "Optimizes vendor relationships with faster onboarding, reduced invoice disputes, and cost savings through automated sourcing, performance tracking, and contract management.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Vendor Sourcing & RFP Automation",
+      "Vendor Onboarding & Compliance",
+      "Vendor Contract Management",
+      "Vendor Work Order & Project Management",
+      "Vendor Invoice Validation & Payment",
+      "Insurance & Risk Compliance",
+      "Vendor Performance & Scorecard"
+    ],
+    "traditionalApproach": {
+      "description": "Manual vendor management with slow onboarding, no performance tracking, and frequent invoice disputes resulting in compliance risks and missed savings.",
+      "characteristics": [
+        "Vendor selection via informal RFP (email-based)",
+        "Contracts stored in filing cabinets or shared drives",
+        "Vendor performance not tracked systematically",
+        "Slow vendor onboarding",
+        "Frequent invoice disputes",
+        "Insurance certificates tracked in spreadsheet (low compliance)",
+        "No vendor spend analytics"
+      ],
+      "constraints": [
+        "No centralized vendor repository",
+        "Vendor performance not measured",
+        "Vendor risk not assessed",
+        "Invoice disputes common",
+        "Insurance certificates expire unnoticed",
+        "Vendor onboarding slow",
+        "No spend analytics"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-vend-001",
+          "metric": "Vendor Onboarding Duration",
+          "value": "2-4 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Procurement benchmarking studies']"
+        },
+        {
+          "id": "bench-vend-002",
+          "metric": "Invoice Dispute Rate",
+          "value": "10-15%",
+          "source": "TBD: [SME to provide source, e.g., 'AP invoice processing benchmarks']"
+        },
+        {
+          "id": "bench-vend-003",
+          "metric": "Insurance Certificate Compliance",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Risk management compliance studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered vendor management with automated onboarding, performance scorecards, and invoice validation achieving faster onboarding and cost savings.",
+      "characteristics": [
+        "Vendor Sourcing Agent automates RFP process",
+        "Vendor Onboarding Agent collects documents and validates",
+        "Contract Management Agent tracks terms and renewals",
+        "Work Order Management Agent assigns and tracks vendor work",
+        "Invoice Validation Agent matches to contract rates",
+        "Insurance Compliance Agent tracks certificates and renewals",
+        "Vendor Scorecard Agent measures quality, cost, timeliness"
+      ],
+      "benefits": [
+        "Vendor onboarding time reduced significantly",
+        "Invoice disputes reduced dramatically",
+        "Insurance compliance substantially improved",
+        "Vendor spend visibility: Real-time (vs annual)",
+        "Vendor performance measured: 100% of vendors",
+        "Vendor consolidation opportunities identified",
+        "Cost savings achieved"
+      ],
+      "projections": [
+        {
+          "metric": "Vendor Onboarding Time Reduction",
+          "value": "70% (to <1 week)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated document collection, validation, and approval workflows']",
+          "sourceBenchmark": "bench-vend-001"
+        },
+        {
+          "metric": "Invoice Dispute Reduction",
+          "value": "80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated invoice validation against contract rates and work orders']",
+          "sourceBenchmark": "bench-vend-002"
+        },
+        {
+          "metric": "Insurance Compliance Improvement",
+          "value": "98%+ (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated certificate tracking and renewal reminders']",
+          "sourceBenchmark": "bench-vend-003"
+        },
+        {
+          "metric": "Vendor Consolidation",
+          "value": "20-30% reduction",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on performance analytics identifying low-performing vendors and opportunities to consolidate spend']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Vendor Management Cost Savings",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on vendor consolidation, improved contract compliance, and performance-based negotiations']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Vendor & Contractor Management Orchestration Agent",
+        "Vendor Sourcing & RFP Agent",
+        "Vendor Onboarding & Compliance Agent",
+        "Vendor Contract Management Agent",
+        "Vendor Work Order & Project Management Agent",
+        "Vendor Invoice Validation & Payment Agent",
+        "Insurance & Risk Compliance Agent",
+        "Vendor Performance & Scorecard Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Vendor portal (self-service onboarding)",
+        "COI tracking and renewal reminders",
+        "Invoice validation against contracts"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Vendor management platform",
+        "Vendor inventory (catalog all vendors)",
+        "Contract digitization (scan paper contracts)",
+        "Integration with ERP/procurement",
+        "Performance criteria definition"
+      ]
+    },
+    "icon": "users",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-safety-security-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Safety & Security Management",
+    "description": "Enhances workplace safety and security with significant incident prevention, faster response, and AI video analytics through continuous monitoring, automated alerts, and predictive risk management.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["All"],
+    "businessModels": ["All"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Video Surveillance & Analytics",
+      "Incident Detection & Classification",
+      "Emergency Response & Notification",
+      "Access Control & Intrusion Detection",
+      "Safety Training & Certification",
+      "Safety Inspection & Hazard Management",
+      "Predictive Safety & Risk Analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Reactive security with manual patrols, paper incident reports, and periodic safety inspections resulting in delayed detection and preventable incidents.",
+      "characteristics": [
+        "Security guards patrol manually (paper logs)",
+        "Incident reports handwritten on paper forms",
+        "Video surveillance reviewed after incident (reactive)",
+        "Access control basic (badge readers, manual tracking)",
+        "Safety training annual (low completion)",
+        "Safety inspections periodic (checklist, paper-based)",
+        "Long incident response time",
+        "Slow video search time"
+      ],
+      "constraints": [
+        "Reactive security (incidents reviewed after the fact)",
+        "Manual patrols inefficient",
+        "Video footage retrieval slow",
+        "Access control exceptions not tracked",
+        "Safety training completion not enforced",
+        "Incident trends not analyzed",
+        "Emergency response ad-hoc"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-safe-001",
+          "metric": "Safety Training Completion Rate",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'EHS training completion benchmarks']"
+        },
+        {
+          "id": "bench-safe-002",
+          "metric": "Incident Response Time",
+          "value": "10-30 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'Security operations benchmarks']"
+        },
+        {
+          "id": "bench-safe-003",
+          "metric": "Video Search Time per Incident",
+          "value": "1-4 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Security operations video review studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered safety and security with 24/7 video analytics, real-time incident detection, and predictive risk management achieving significant incident prevention.",
+      "characteristics": [
+        "AI Video Analytics Agent monitors cameras 24/7",
+        "Incident Detection Agent identifies safety/security incidents in real-time",
+        "Emergency Response Agent notifies security and first responders",
+        "Access Control Agent monitors badge activity, flags tailgating",
+        "Safety Training Agent auto-enrolls and tracks completion",
+        "Safety Inspection Agent guides inspections, flags hazards",
+        "Predictive Safety Agent identifies high-risk conditions before incidents"
+      ],
+      "benefits": [
+        "Incident response time reduced dramatically",
+        "Video search time reduced significantly (AI finds footage)",
+        "Safety training completion substantially improved (auto-enrollment)",
+        "Incidents prevented through proactive detection",
+        "Access violations detected comprehensively",
+        "Security guard productivity increased"
+      ],
+      "projections": [
+        {
+          "metric": "Incident Response Time Reduction",
+          "value": "70% (to 3-10 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time AI detection and automated notification of security personnel and first responders']",
+          "sourceBenchmark": "bench-safe-002"
+        },
+        {
+          "metric": "Video Search Time Reduction",
+          "value": "90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI video analytics automatically identifying and tagging relevant footage by incident type, person, object']",
+          "sourceBenchmark": "bench-safe-003"
+        },
+        {
+          "metric": "Safety Training Completion Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated enrollment, tracking, and reminder workflows']",
+          "sourceBenchmark": "bench-safe-001"
+        },
+        {
+          "metric": "Incident Prevention Rate",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive safety analytics identifying high-risk conditions and proactive interventions before incidents occur']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Security Guard Productivity Increase",
+          "value": "+40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI handling routine monitoring, allowing guards to focus on response and high-value tasks']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Safety & Security Orchestration Agent",
+        "AI Video Surveillance & Analytics Agent",
+        "Incident Detection & Classification Agent",
+        "Emergency Response & Notification Agent",
+        "Access Control & Intrusion Detection Agent",
+        "Safety Training & Certification Agent",
+        "Safety Inspection & Hazard Management Agent",
+        "Predictive Safety & Risk Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "AI video analytics (detect incidents in real-time)",
+        "Mobile safety inspection app (digitize checklists)",
+        "Safety training tracking automation"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Video surveillance infrastructure (cameras, NVRs)",
+        "Access control system (badge readers)",
+        "Incident management platform",
+        "Privacy policy (video analytics, employee monitoring)",
+        "Security team training"
+      ]
+    },
+    "icon": "shield-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

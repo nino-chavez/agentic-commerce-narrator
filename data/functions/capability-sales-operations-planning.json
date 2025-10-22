@@ -1,0 +1,463 @@
+[
+  {
+    "id": "function-sop-process-orchestration",
+    "type": "function",
+    "level": 4,
+    "label": "S&OP Process Orchestration",
+    "description": "End-to-end S&OP workflow automation coordinating demand, supply, finance cycles achieving 60-75% cycle time reduction from 4-6 weeks to 1-2 weeks with 95%+ on-time plan delivery.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Monthly S&OP cycle starts week 1: demand planning team creates forecast in Excel, emails to supply chain team. 2. Week 2: supply team manually reviews capacity constraints, emails questions back to demand team, wait for responses. 3. Week 3-4: Finance team receives demand and supply plans separately, builds financial forecast in different Excel file, identifies misalignments. 4. Week 5: Multiple meetings to reconcile demand-supply-finance gaps, versions of Excel files flying via email (which version is correct?). 5. Week 6: Executive S&OP meeting reviews final plan (often delayed to week 7 due to incomplete data). 6. 4-6 week S&OP cycle with 30-40% late plan delivery, multiple manual handoffs, version control chaos.",
+      "constraints": [
+        "4-6 week S&OP cycle time (too slow for fast-changing markets)",
+        "Manual email-based handoffs between demand, supply, finance teams",
+        "Version control chaos (multiple Excel files, which is latest?)",
+        "30-40% late plan delivery (miss executive meeting deadlines)",
+        "Reconciliation meetings take days (back-and-forth via email)",
+        "No single source of truth (each team has different numbers)"
+      ],
+      "metrics": ["S&OP cycle time: 4-6 weeks", "On-time plan delivery: 60-70%", "Manual handoffs: 15-20", "Version control: Manual (Excel files)"]
+    },
+    "agentic": {
+      "workflow": "1. S&OP Orchestration Agent triggers monthly cycle automatically: sends notifications to demand, supply, finance teams with deadlines and data templates. 2. Agent monitors progress in real-time: 'Demand plan 85% complete (day 5), supply plan 60% complete (day 6), on track for day 10 deadline'. 3. Agent auto-integrates plans: pulls demand forecast from planning system, supply capacity from ERP, financial targets from FP&A system into unified S&OP platform. 4. Reconciliation Agent identifies gaps automatically: 'Demand-supply gap identified: March forecast 125K units, supply capacity 110K units, shortfall 15K units - recommend actions'. 5. Agent facilitates resolution: creates issue tickets, assigns owners, tracks resolution (capacity increase or demand reduction). 6. Executive Review Agent prepares dashboard: 'S&OP plan ready day 12 (vs day 35 manual), all gaps resolved, financial targets aligned'. 7. 60-75% cycle time reduction (4-6 weeks → 1-2 weeks) with 95%+ on-time delivery.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Workflow Automation Agent", "Reconciliation Agent", "Executive Review Agent"],
+        "utilityAgents": ["Demand Planning System", "Supply Planning System", "Financial Planning System", "Collaboration Platform", "Dashboard & Reporting"]
+      },
+      "dataSources": [
+        "Demand forecasts from demand planning system",
+        "Supply capacity and constraints from production/procurement",
+        "Financial targets and budgets from FP&A",
+        "Inventory positions and working capital metrics",
+        "Historical S&OP plan vs actual performance",
+        "Cross-functional team calendars and availability",
+        "Issue tracking and resolution status",
+        "Executive meeting schedules and approval workflows"
+      ],
+      "benefits": [
+        "60-75% S&OP cycle time reduction (4-6 weeks → 1-2 weeks)",
+        "95%+ on-time plan delivery vs 60-70% manual process",
+        "Automated handoffs eliminate email ping-pong (15-20 → 0)",
+        "Single source of truth (unified S&OP platform vs Excel chaos)",
+        "Real-time progress monitoring vs weekly status meetings",
+        "Automatic reconciliation identifies gaps vs manual detective work"
+      ],
+      "metrics": ["S&OP cycle time: 1-2 weeks", "On-time plan delivery: 95%+", "Manual handoffs: 0 (automated)", "Version control: Unified platform (single source)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy unified S&OP platform replacing Excel-based email workflows", "Automate demand-supply-finance plan integration from source systems", "Implement automated gap identification and alerting"],
+      "investmentRequired": "High",
+      "timeToValue": "12-18 months",
+      "prerequisites": ["Unified S&OP platform (Kinaxis, o9, SAP IBP, or similar)", "Integration with demand, supply, finance planning systems", "Workflow automation and notification capability", "Collaboration platform for cross-functional teams", "Executive dashboard for plan review and approval", "Change management for process adoption across functions"]
+    },
+    "icon": "refresh",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-consensus-demand-planning",
+    "type": "function",
+    "level": 4,
+    "label": "Consensus Demand Planning",
+    "description": "Collaborative forecasting with statistical baseline and cross-functional input achieving single consensus plan with 80-90% stakeholder alignment versus 40-60% conflicting forecasts.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Demand planning creates statistical forecast: 'September forecast 100K units based on historical trends'. 2. Sales team creates separate forecast: '120K units - we have big promotions planned'. 3. Marketing forecasts: '150K units - new ad campaign launching'. 4. Finance expects: '90K units - economic downturn impacts'. 5. S&OP meeting becomes debate: which forecast to use? Sales argues for 120K, Marketing 150K, Finance 90K, Planning 100K. 6. Compromise reached: average the numbers (115K), but nobody fully believes the plan. 7. 40-60% stakeholder alignment, multiple conflicting forecasts, no single source of truth.",
+      "constraints": [
+        "Multiple conflicting forecasts (sales, marketing, finance, planning)",
+        "40-60% stakeholder alignment (compromise vs consensus)",
+        "No structured process for incorporating qualitative inputs",
+        "Forecast overrides not documented (why did we change from 100K to 115K?)",
+        "Political negotiations vs data-driven decisions",
+        "Sales optimism bias (+20%) vs finance conservatism (-10%)"
+      ],
+      "metrics": ["Stakeholder alignment: 40-60%", "Forecast versions: 3-5 conflicting", "Override documentation: Poor", "Consensus time: 2-3 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Consensus Planning Agent creates statistical baseline forecast: '100K units September baseline from ML models'. 2. Agent solicits structured inputs from cross-functional teams: 'Sales: Promotions expected +15%, Marketing: Ad campaign +20%, Finance: Economic concerns -5%'. 3. Agent quantifies and documents each input: 'Sales promotion lift validated from historical data (15% reasonable), Marketing campaign lift based on similar past campaigns (20% aggressive, suggest 12%), Finance adjustment validated from economic indicators (5% conservative, suggest 3%)'. 4. Agent builds consensus forecast: '100K baseline × 1.15 promo × 1.12 marketing × 0.97 economic = 125K units with documented rationale for each adjustment'. 5. Agent presents recommendation with confidence intervals: '125K units consensus forecast (range 118K-132K) with 85% confidence, all stakeholder inputs incorporated and validated'. 6. 80-90% stakeholder alignment through structured, data-driven consensus vs 40-60% political compromise.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Consensus Planning Agent", "Stakeholder Input Agent", "Validation Agent"],
+        "utilityAgents": ["Statistical Forecasting Engine", "Historical Promotion Database", "Economic Indicators", "Collaboration Platform"]
+      },
+      "dataSources": [
+        "Statistical baseline forecast from demand planning models",
+        "Sales team promotional plans and expected lift",
+        "Marketing campaign calendar and historical lift data",
+        "Finance economic outlook and market indicators",
+        "Historical forecast overrides and accuracy",
+        "Product launch plans and new item introductions",
+        "Competitive intelligence and market share trends",
+        "Customer pipeline and pre-orders (B2B)"
+      ],
+      "benefits": [
+        "80-90% stakeholder alignment vs 40-60% compromise approach",
+        "Single consensus forecast vs 3-5 conflicting versions",
+        "Structured input process (quantified, validated, documented)",
+        "Data-driven adjustments vs political negotiations",
+        "Override documentation and rationale tracking",
+        "Confidence intervals provide uncertainty quantification"
+      ],
+      "metrics": ["Stakeholder alignment: 80-90%", "Forecast versions: 1 (consensus)", "Override documentation: Complete (all changes tracked)", "Consensus time: 3-5 days"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement structured input templates for sales, marketing, finance adjustments", "Deploy statistical baseline as starting point (not negotiable)", "Create override documentation and approval workflow"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Statistical baseline forecasting capability (ML models)", "Collaboration platform for stakeholder input collection", "Historical override and accuracy tracking database", "Validation rules for qualitative input quantification", "Approval workflow for consensus forecast sign-off", "Cross-functional S&OP team established"]
+    },
+    "icon": "user-group",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-capacity-planning-constraint-management",
+    "type": "function",
+    "level": 4,
+    "label": "Capacity Planning & Constraint Management",
+    "description": "Multi-constraint optimization balancing production, warehouse, transportation capacity achieving 20-30% throughput improvement and 95%+ service level versus constraint-driven stockouts.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Demand plan created: 150K units September across 500 SKUs, looks achievable. 2. Supply team reviews: 'Production line A can make 80K units/month maximum, line B 60K, total 140K - we're short 10K capacity'. 3. Warehouse team reviews: 'Wait, we only have 120K storage capacity in September due to seasonal inventory buildup - can't accept 150K'. 4. Transportation team: 'We can only ship 130K units with current trucking capacity'. 5. S&OP meeting discovers cascading constraints too late to resolve: production, warehouse, transportation all bottlenecks. 6. Compromise: cut demand to 115K (below all constraints), but creates stockouts on high-demand SKUs while low-demand SKUs over-produced. 7. Constraint-driven stockouts cause 85-90% service level vs 95%+ target.",
+      "constraints": [
+        "Constraint discovery reactive (find bottlenecks during S&OP meeting)",
+        "Single constraint focus (production) misses warehouse, transportation",
+        "Suboptimal product mix (high-demand SKUs stockout, low-demand overproduced)",
+        "85-90% service level due to constraint-driven stockouts",
+        "No optimization (cut all SKUs equally vs prioritize high-value)",
+        "Manual constraint modeling (can't simulate what-if scenarios)"
+      ],
+      "metrics": ["Service level: 85-90%", "Constraint modeling: Manual", "Throughput optimization: None", "Stockout rate: 15-20%"]
+    },
+    "agentic": {
+      "workflow": "1. Constraint Modeling Agent analyzes demand plan 150K units against multi-level constraints: production capacity 140K, warehouse 120K, transportation 130K. 2. Agent identifies binding constraint: 'Warehouse capacity 120K is tightest constraint (vs 140K production, 130K transport), recommend warehouse-constrained plan'. 3. Optimization Agent maximizes revenue within 120K constraint: 'Prioritize high-margin SKUs and fast-movers, reduce low-margin slow-movers, optimize product mix for $2.8M revenue (vs $2.4M equal-cut approach)'. 4. Agent tests what-if scenarios: 'If we add temporary warehouse space (+15K capacity), revenue increases to $3.1M, ROI 320% on $50K temp warehouse cost - recommend approval'. 5. Agent balances constraints: 'Shift production to line A (higher capacity) for prioritized SKUs, use line B for lower-priority, synchronize transportation schedule with warehouse outbound'. 6. 20-30% throughput improvement through optimization vs manual constraint cutting, 95%+ service level on priority SKUs.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Constraint Modeling Agent", "Optimization Agent", "Scenario Planning Agent"],
+        "utilityAgents": ["Linear Programming Solver", "Production Capacity Database", "Warehouse Management System", "Transportation Planning"]
+      },
+      "dataSources": [
+        "Production capacity by line, SKU, time period",
+        "Warehouse capacity and storage constraints by location",
+        "Transportation capacity (trucks, routes, frequency)",
+        "SKU profitability and margin data",
+        "Demand forecast by SKU and priority",
+        "Inventory levels and safety stock requirements",
+        "Lead times and production changeover times",
+        "Capital availability for constraint relief investments"
+      ],
+      "benefits": [
+        "20-30% throughput improvement through multi-constraint optimization",
+        "95%+ service level on priority SKUs vs 85-90% overall",
+        "Revenue maximization within constraints ($2.8M vs $2.4M equal-cut)",
+        "Proactive constraint identification (warehouse bottleneck found early)",
+        "What-if scenario testing (temporary warehouse ROI 320%)",
+        "Synchronized planning (production, warehouse, transport aligned)"
+      ],
+      "metrics": ["Service level: 95%+ (priority SKUs)", "Constraint modeling: Automated (multi-level)", "Throughput optimization: 20-30% improvement", "Stockout rate: 5-8% (vs 15-20%)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Model top 3 constraints (production, warehouse, transport) in planning system", "Implement SKU prioritization by margin for constraint allocation", "Deploy what-if scenario capability for constraint relief analysis"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Constraint data integration (production, warehouse, transport capacity)", "Optimization engine (linear programming, mixed integer programming)", "SKU profitability and prioritization data", "Scenario planning and what-if analysis capability", "Capital planning integration for constraint relief investments", "S&OP platform supporting multi-constraint modeling"]
+    },
+    "icon": "scale",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-financial-planning-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Financial Planning Integration",
+    "description": "Unified operational and financial planning with automatic P&L impact analysis achieving 95%+ plan-budget alignment versus 70-80% operational-finance disconnect.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. S&OP creates operational plan: 150K units September at $20/unit = $3M revenue. 2. Finance team creates separate budget: $3.5M revenue target for September based on annual plan. 3. S&OP meeting week 4: Finance discovers $500K gap between operational plan ($3M) and budget ($3.5M). 4. Emergency meeting: Can operations deliver $3.5M? Operations says no without additional marketing or promotions. 5. Compromise: Operations commits to $3.2M (stretch goal), Finance accepts $300K shortfall. 6. End of month actual: $3.1M revenue, miss both operational plan and budget, working capital tied up in wrong inventory. 7. 70-80% operational-financial alignment, late gap discovery, reactive resolution.",
+      "constraints": [
+        "Operational and financial planning disconnected (separate processes)",
+        "70-80% plan-budget alignment (frequent gaps discovered late)",
+        "Financial impact analysis manual (days to calculate P&L)",
+        "Inventory and working capital implications missed",
+        "Cost of goods sold (COGS) and margin not modeled in operational plan",
+        "Late gap discovery (week 4 of S&OP cycle)"
+      ],
+      "metrics": ["Plan-budget alignment: 70-80%", "Financial gap discovery: Week 4 (late)", "P&L impact analysis: Manual (3-5 days)", "Working capital planning: Separate process"]
+    },
+    "agentic": {
+      "workflow": "1. Financial Integration Agent pulls budget targets: '$3.5M revenue, $2.1M COGS, $1.4M gross profit target September'. 2. Agent analyzes operational plan financial impact: '150K units × $20 price = $3M revenue, 150K × $14 COGS = $2.1M COGS, $900K gross profit - $500K revenue gap, $500K profit gap'. 3. Agent identifies gap day 3 of S&OP cycle: 'Revenue shortfall $500K vs budget, recommend demand increase or price action'. 4. Scenario Agent tests options: 'Option A: Add 25K units demand (requires $200K marketing) = $3.5M revenue, $1.3M profit (accept marketing cost). Option B: Increase price 8% = $3.24M revenue, $1.14M profit (risk volume loss). Option C: Accept $500K shortfall'. 5. Agent calculates working capital impact: 'Option A requires additional $350K inventory investment (25K units), cash flow impact -$150K short-term, +$300K long-term'. 6. 95%+ plan-budget alignment through early gap detection and financial scenario analysis.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Financial Integration Agent", "P&L Impact Agent", "Scenario Agent"],
+        "utilityAgents": ["Financial Planning System (FP&A)", "Pricing Engine", "Cost Database", "Working Capital Calculator"]
+      },
+      "dataSources": [
+        "Annual budget and quarterly financial targets",
+        "Operational plan (units, prices, promotions)",
+        "SKU cost data (COGS, freight, handling)",
+        "Pricing and promotional discount structures",
+        "Inventory levels and carrying costs",
+        "Working capital requirements and cash flow",
+        "Historical plan vs actual financial performance",
+        "Market and competitive pricing intelligence"
+      ],
+      "benefits": [
+        "95%+ plan-budget alignment vs 70-80% disconnected planning",
+        "Early gap detection (day 3 vs week 4 of S&OP cycle)",
+        "Automatic P&L impact (instant vs 3-5 day manual analysis)",
+        "Working capital planning integrated (cash flow implications visible)",
+        "Scenario testing (marketing investment, pricing actions ROI)",
+        "COGS and margin visibility in operational planning"
+      ],
+      "metrics": ["Plan-budget alignment: 95%+", "Financial gap discovery: Day 3 (early)", "P&L impact analysis: Automated (instant)", "Working capital planning: Integrated"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate budget targets into S&OP platform for automatic gap detection", "Implement SKU cost database for COGS and margin calculation", "Deploy scenario analysis for financial gap resolution options"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Financial planning system (FP&A) integration with S&OP", "SKU cost database (COGS, freight, handling) updated regularly", "Pricing and promotional planning tools", "Working capital and cash flow modeling capability", "Scenario planning platform for financial what-if analysis", "Cross-functional collaboration between operations and finance teams"]
+    },
+    "icon": "currency-dollar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-scenario-planning-what-if-analysis",
+    "type": "function",
+    "level": 4,
+    "label": "Scenario Planning & What-If Analysis",
+    "description": "Rapid multi-scenario modeling testing 10-20 alternatives in hours versus days achieving 60-80% risk mitigation and resilient plan development.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. S&OP baseline plan created: 150K units September, assumes normal market conditions. 2. Executive asks: 'What if competitor launches major promotion and we lose 20% market share?'. 3. Demand planner spends 2 days rebuilding forecast in Excel with -20% demand assumption. 4. Supply planner takes another 2 days recalculating production, inventory, cost impacts. 5. Finance spends 1 day updating P&L with new scenario assumptions. 6. Total 5 days to analyze one scenario, can only test 2-3 scenarios per S&OP cycle. 7. Plan has no resilience testing (what if supplier fails, weather disrupts, demand spikes?).",
+      "constraints": [
+        "5 days to analyze one scenario (manual Excel rebuilding)",
+        "2-3 scenarios maximum per S&OP cycle (time constraints)",
+        "No systematic risk testing (supplier failure, weather, demand spikes)",
+        "Static plan (not stress-tested for resilience)",
+        "Sequential analysis (demand → supply → finance, can't run parallel)",
+        "Limited scenario documentation (hard to compare alternatives)"
+      ],
+      "metrics": ["Scenario analysis time: 5 days per scenario", "Scenarios tested: 2-3 per cycle", "Risk coverage: 20-30%", "Parallel analysis: No (sequential)"]
+    },
+    "agentic": {
+      "workflow": "1. Scenario Planning Agent creates baseline plan plus 10 risk scenarios automatically: competitive promotion, supplier failure, weather disruption, demand spike, cost inflation, new regulations, product recall, labor shortage, transportation strike, economic downturn. 2. Agent runs all scenarios in parallel (hours vs days): 'Scenario 5 (weather disruption): 30% demand increase for emergency supplies, supply chain delays +5 days, revenue opportunity +$400K, stockout risk 45% - recommend safety stock increase'. 3. Agent quantifies impact of each scenario: financial (revenue, margin, cash), operational (service level, inventory, capacity), risk (probability, severity). 4. Resilience Agent identifies plan vulnerabilities: 'Baseline plan has 3 critical vulnerabilities: 1) Single-sourced SKU exposed to supplier failure ($800K revenue risk), 2) No buffer capacity for demand spike (lose $600K opportunity), 3) Weather-sensitive logistics (15% delivery failure probability)'. 5. Mitigation Agent recommends actions: 'Add secondary supplier for SKU#123 ($50K cost, eliminate $800K risk), hold 10% safety capacity ($80K cost, capture $600K upside)'. 6. 60-80% risk mitigation through systematic scenario testing vs static plan.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Scenario Planning Agent", "Resilience Agent", "Mitigation Agent"],
+        "utilityAgents": ["Scenario Modeling Engine", "Risk Database", "Impact Calculator", "Optimization Solver"]
+      },
+      "dataSources": [
+        "Baseline S&OP plan (demand, supply, finance)",
+        "Risk scenarios and probability distributions",
+        "Historical disruption events and impacts",
+        "Supplier reliability and lead time data",
+        "Weather patterns and seasonal risks",
+        "Competitive intelligence and market dynamics",
+        "Cost structures and financial sensitivities",
+        "Mitigation options and investment requirements"
+      ],
+      "benefits": [
+        "10-20 scenarios tested vs 2-3 (5x scenario coverage)",
+        "Hours vs days scenario analysis (parallel processing)",
+        "60-80% risk mitigation through systematic vulnerability identification",
+        "Resilient plan development (stress-tested for disruptions)",
+        "Quantified risk-reward tradeoffs (mitigation cost vs revenue protection)",
+        "Documented scenario library for executive decision-making"
+      ],
+      "metrics": ["Scenario analysis time: Hours (parallel)", "Scenarios tested: 10-20 per cycle", "Risk coverage: 60-80%", "Parallel analysis: Yes (all scenarios)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy scenario modeling for top 3 risks (supplier failure, demand spike, weather)", "Implement parallel scenario execution vs sequential manual", "Create risk scenario library with historical disruption data"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Scenario modeling platform supporting parallel execution", "Integrated S&OP data (demand, supply, finance) for scenario input", "Risk database with probability and impact data", "Historical disruption events and outcomes", "Mitigation option library with costs and benefits", "Optimization engine for resilient plan development", "Executive decision support dashboards"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-executive-sop-review-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Executive S&OP Review Automation",
+    "description": "AI-generated executive summaries and exception-based reporting reducing meeting preparation from 3-5 days to hours and meeting duration 50-70% with decision-focused insights.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. S&OP analysts spend 3-5 days preparing 80-slide PowerPoint deck for executive review meeting. 2. Deck includes every detail: 500 SKU forecasts, production schedules, inventory positions, financial summaries. 3. 2-hour executive meeting: first 60 minutes presenting data ('Here's what happened last month, here's the plan'), only 30 minutes discussing decisions. 4. Executives ask: 'What are the top 3 issues I need to decide on?' - not clearly highlighted in deck. 5. Meeting adjourned with unclear action items, decisions deferred until next month. 6. 3-5 days preparation for 2-hour meeting with limited decision-making effectiveness.",
+      "constraints": [
+        "3-5 days executive deck preparation (80+ slides)",
+        "Data-heavy presentation (500 SKUs, no prioritization)",
+        "60 minutes presenting vs 30 minutes decision-making (inefficient)",
+        "Issues and decisions not clearly highlighted",
+        "Action items unclear, decisions deferred",
+        "Meeting fatigue (too much data, not enough insight)"
+      ],
+      "metrics": ["Prep time: 3-5 days", "Meeting duration: 2 hours", "Decision time: 30 minutes (25%)", "Slides: 80+"]
+    },
+    "agentic": {
+      "workflow": "1. Executive Summary Agent auto-generates 10-slide deck highlighting exceptions and decisions only: 'Top 3 issues requiring executive decision: 1) $500K revenue gap (options: marketing investment or accept shortfall), 2) Warehouse constraint (options: temp capacity or cut SKUs), 3) Supplier risk on SKU#123 (options: dual-source or accept stockout risk)'. 2. Agent uses exception-based reporting: only shows significant variances (>10% plan vs forecast, >$100K financial impact) vs every SKU detail. 3. Decision Support Agent frames each issue: 'Issue 1: Revenue gap $500K. Option A: Invest $200K marketing, 70% probability of closing gap, ROI 150%. Option B: Accept shortfall, reallocate resources to Q4. Recommendation: Option A based on ROI and year-end target criticality'. 4. Agent includes pre-reads: executives receive summary day before meeting (review in 15 minutes vs 2 hours). 5. Meeting reduced to 45-60 minutes: 15 minutes recap, 45 minutes decision-making (vs 60 min presentation, 30 min decisions). 6. 50-70% meeting efficiency improvement, 3-5 days → hours preparation time.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Executive Summary Agent", "Exception Reporting Agent", "Decision Support Agent"],
+        "utilityAgents": ["Natural Language Generation", "Data Visualization", "Reporting Platform", "Collaboration Tools"]
+      },
+      "dataSources": [
+        "S&OP plan with demand, supply, finance details",
+        "Plan vs forecast variances and exception thresholds",
+        "Financial impact analysis (revenue, margin, cash)",
+        "Decision options with costs, benefits, risks",
+        "Historical decision outcomes and effectiveness",
+        "Executive preferences and decision criteria",
+        "Action item tracking and status"
+      ],
+      "benefits": [
+        "3-5 days → hours executive deck preparation time",
+        "80+ slides → 10 slides focused on decisions only",
+        "50-70% meeting efficiency improvement (2 hours → 45-60 minutes)",
+        "Decision time 75%+ vs 25% (45 min decisions vs 15 min recap)",
+        "Exception-based reporting (only significant issues surfaced)",
+        "Pre-read distribution enables faster meeting decisions"
+      ],
+      "metrics": ["Prep time: Hours (automated)", "Meeting duration: 45-60 minutes", "Decision time: 45 minutes (75%+)", "Slides: 10 (exception-based)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy exception-based reporting with >10% variance or >$100K impact thresholds", "Implement AI-generated executive summary (top 3-5 decisions only)", "Create pre-read distribution workflow for 24-hour advance review"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Natural language generation capability for automated summaries", "Exception thresholds and variance rules defined", "Decision option framing and recommendation logic", "Executive dashboard and visualization tools", "Pre-read distribution and collaboration platform", "Action item tracking and follow-up system"]
+    },
+    "icon": "presentation-chart-bar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sop-performance-metrics-dashboards",
+    "type": "function",
+    "level": 4,
+    "label": "S&OP Performance Metrics & Dashboards",
+    "description": "Real-time S&OP KPI tracking with plan vs actual variance analysis achieving 90%+ plan adherence versus 70-75% through continuous performance visibility and corrective action triggering.",
+    "parentCapability": "capability-sales-operations-planning",
+    "applicableIndustries": ["Retail", "Grocery"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. S&OP plan approved: September forecast 150K units, 95% service level target, $3M revenue. 2. Month progresses: no real-time tracking of plan vs actual performance. 3. End of month: actual results compiled - 135K units (90% of plan), 88% service level (miss target), $2.7M revenue (90% of budget). 4. Post-month review: 'What happened? Why did we miss plan?'. 5. Root causes identified too late: demand forecast error, production delays, stockouts. 6. Next month S&OP: same issues repeat (no mid-month corrective action capability). 7. 70-75% plan adherence due to lack of real-time visibility and corrective action.",
+      "constraints": [
+        "End-of-month performance review (too late for corrective action)",
+        "70-75% plan adherence (frequent misses on targets)",
+        "No real-time plan vs actual tracking",
+        "Root cause analysis reactive (after month closes)",
+        "Corrective action delayed to next month",
+        "KPI visibility limited (monthly reports only)"
+      ],
+      "metrics": ["Plan adherence: 70-75%", "Performance visibility: Monthly (delayed)", "Corrective action timing: Next month (reactive)", "Dashboard updates: Monthly"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Monitoring Agent tracks plan vs actual daily: 'Day 10 of September - 48K units sold (vs 50K plan, -4% variance), 92% service level (vs 95% target, -3%), revenue $1.44M (vs $1.5M plan, -4%)'. 2. Agent identifies variances exceeding thresholds: 'SKU#789 service level 85% (vs 95% target, -10% breach) - stockout due to supplier delay'. 3. Alert Agent triggers corrective action: 'SKU#789 stockout alert - recommend expedite alternate supplier, estimated 3-day recovery, $5K expedite cost vs $25K lost revenue'. 4. Agent tracks corrective action effectiveness: 'SKU#789 expedited shipment received day 13, service level recovered to 94% day 15, total lost revenue $8K (vs $25K without action)'. 5. Monthly performance summary: 'September actual 148K units (99% of plan), 94% service level (vs 95% target), $2.96M revenue (99% of budget) - 90%+ plan adherence through real-time corrective action'. 6. Continuous improvement: agent learns from variances to improve next month's plan accuracy.",
+      "agents": {
+        "orchestrator": "S&OP Orchestration Agent",
+        "superAgents": ["Performance Monitoring Agent", "Variance Analysis Agent", "Alert Agent"],
+        "utilityAgents": ["Real-Time Data Integration", "Dashboard Platform", "Notification System", "Root Cause Analytics"]
+      },
+      "dataSources": [
+        "S&OP plan targets (demand, supply, service level, revenue)",
+        "Actual daily sales, shipments, production data",
+        "Service level performance by SKU and location",
+        "Financial actuals (revenue, COGS, margin)",
+        "Inventory positions and stockout incidents",
+        "Corrective action tracking and effectiveness",
+        "Variance thresholds and escalation rules",
+        "Historical plan vs actual trends"
+      ],
+      "benefits": [
+        "90%+ plan adherence vs 70-75% through real-time corrective action",
+        "Daily plan vs actual tracking vs end-of-month review",
+        "Automated variance alerts (>5% threshold triggers investigation)",
+        "Mid-month corrective action ($8K lost revenue vs $25K without intervention)",
+        "Root cause analytics identify recurring issues for plan improvement",
+        "Real-time dashboard visibility for all stakeholders"
+      ],
+      "metrics": ["Plan adherence: 90%+", "Performance visibility: Daily (real-time)", "Corrective action timing: Same day (proactive)", "Dashboard updates: Real-time"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time dashboard for top 5 S&OP KPIs (demand, service level, revenue)", "Implement automated variance alerts for >5% plan deviations", "Create corrective action workflow and tracking system"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Real-time data integration (sales, production, inventory, financials)", "Dashboard and visualization platform (Power BI, Tableau, Looker)", "Variance thresholds and alert rules configured", "Corrective action workflow and escalation procedures", "Root cause analytics capability for variance investigation", "Cross-functional access and collaboration on dashboards"]
+    },
+    "icon": "chart-bar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

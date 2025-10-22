@@ -1,0 +1,397 @@
+[
+  {
+    "id": "function-review-collection-syndication",
+    "type": "function",
+    "level": 4,
+    "label": "Review Collection & Syndication",
+    "description": "AI-optimized review collection with multi-channel syndication increasing review volume by 3-5x and achieving 25-35% submission rates through personalized timing.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Generic review request email sent 7 days after purchase to all customers. 2. Single generic message ('Tell us what you think') with no personalization. 3. Reviews collected only on brand website (not syndicated to Google, third-party platforms). 4. No follow-up if customer doesn't respond to first request. 5. Typical 5-10% review submission rate from email campaigns.",
+      "constraints": [
+        "Generic timing (7 days) doesn't account for product usage patterns",
+        "One-size-fits-all messaging doesn't resonate with diverse customers",
+        "Website-only reviews miss high-traffic third-party platforms (Google, Amazon)",
+        "No follow-up on initial request (miss engaged customers needing reminder)",
+        "5-10% submission rate means missing 90-95% of customer feedback",
+        "Can't prioritize happy customers vs at-risk for negative reviews"
+      ],
+      "metrics": ["Review volume: 5-10% of customers", "Submission rate: 5-10%", "Multi-channel presence: Website only"]
+    },
+    "agentic": {
+      "workflow": "1. Optimal Timing Agent personalizes review requests by product type: fast-moving goods (CPG, food) → 3-5 days, durable goods (appliances, electronics) → 14-30 days, services (travel, dining) → immediately post-experience. 2. Personalization Agent customizes messaging: reference specific product purchased, acknowledge customer tier (VIP vs first-time), adjust tone to customer sentiment signals. 3. Multi-Channel Syndication Agent distributes reviews to: brand website product pages, Google Business Profile, third-party platforms (Amazon, Trustpilot), social media showcase. 4. Follow-Up Agent sends reminder to non-responders after 5-7 days. 5. Negative Sentiment Detection routes dissatisfied customers to support before public review.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Optimal Timing Agent", "Personalization Agent", "Multi-Channel Syndication Agent"],
+        "utilityAgents": ["Email Marketing Platform", "Review Platform APIs", "Customer Data Platform", "Sentiment Analysis"]
+      },
+      "dataSources": [
+        "Purchase history and product usage patterns",
+        "Customer profile and tier data",
+        "Product review submission timelines",
+        "Customer sentiment signals from interactions",
+        "Review platform integrations and APIs",
+        "Historical submission rate by segment",
+        "Email engagement data (opens, clicks)",
+        "Third-party platform requirements"
+      ],
+      "benefits": [
+        "3-5x increase in review volume through optimization",
+        "25-35% submission rate vs 5-10% generic approach",
+        "Personalized timing increases relevance and response",
+        "Multi-channel syndication maximizes review visibility and SEO",
+        "Negative sentiment routing prevents public complaints",
+        "Follow-up reminders capture additional 30-40% of respondents"
+      ],
+      "metrics": ["Review volume: 25-35% of customers", "Submission rate: 25-35%", "Multi-channel presence: 4-6 platforms"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Personalize review request timing by product type", "Enable Google review syndication"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Review platform with API integrations", "Customer data and segmentation", "Email marketing automation", "Sentiment analysis capability", "Multi-platform syndication tools", "Purchase and product usage data"]
+    },
+    "icon": "star",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-review-response-automation",
+    "type": "function",
+    "level": 4,
+    "label": "Review Response Automation",
+    "description": "AI-generated review responses with sentiment-based routing reducing response time from 48+ hours to real-time while maintaining brand voice consistency across 100% of reviews.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Community manager manually monitors review platforms for new reviews. 2. Respond to only critical negative reviews (1-2 stars) due to time constraints. 3. Type each response from scratch taking 5-10 minutes per review. 4. Positive reviews go unanswered (show lack of appreciation). 5. Average response time 24-48 hours for negative reviews, never for positive ones.",
+      "constraints": [
+        "Manual monitoring doesn't scale (respond to <20% of reviews)",
+        "Only negative reviews addressed (positive customers ignored)",
+        "5-10 min per response limits capacity to 20-40 per day",
+        "24-48 hour response time shows lack of urgency",
+        "Brand voice inconsistent across different responders",
+        "Can't respond to volume spikes (busy seasons, viral reviews)"
+      ],
+      "metrics": ["Response rate: <20% of reviews", "Response time: 24-48 hours", "Coverage: Negative only"]
+    },
+    "agentic": {
+      "workflow": "1. Review Monitoring Agent tracks all incoming reviews across platforms in real-time. 2. Sentiment Routing Agent categorizes reviews: positive (4-5 stars) → appreciation response, neutral (3 stars) → engagement and improvement inquiry, negative (1-2 stars) → empathetic resolution offer, critical issues → immediate escalation to customer service. 3. Response Generation Agent creates brand-voice-aligned draft replies: thank positive reviewers with specific acknowledgment, address specific concerns in negative reviews, offer resolution pathways. 4. Human Review Agent sends drafts to manager for approval (optional by sentiment). 5. Auto-Publish Agent posts approved responses across platforms.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Review Monitoring Agent", "Sentiment Routing Agent", "Response Generation Agent"],
+        "utilityAgents": ["Review Platform APIs", "NLP Sentiment Analysis", "Brand Voice Model", "Customer Service Integration"]
+      },
+      "dataSources": [
+        "Review content from all platforms",
+        "Sentiment scores and emotion analysis",
+        "Brand voice guidelines and examples",
+        "Historical response library",
+        "Customer service issue database",
+        "Product and service information",
+        "Response approval workflows",
+        "Multi-platform API integrations"
+      ],
+      "benefits": [
+        "100% review response vs <20% manual capacity",
+        "Real-time response to positive reviews (show appreciation)",
+        "24/7 monitoring and response vs business hours only",
+        "Consistent brand voice through AI-generated templates",
+        "Critical issues escalated immediately to customer service",
+        "Response time reduced from 24-48 hours to minutes"
+      ],
+      "metrics": ["Response rate: 100% of reviews", "Response time: Real-time to 2 hours", "Coverage: All sentiment levels"]
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "Negative reviews or complex issues",
+      "policy": "Human review and approval of AI-generated response before posting"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated positive review thank-you responses", "Deploy sentiment routing"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Review platform integrations", "Sentiment analysis capability", "Brand voice AI model or templates", "Approval workflow for human review", "Customer service escalation routing", "Multi-platform API access"]
+    },
+    "icon": "message-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sentiment-analysis-insights",
+    "type": "function",
+    "level": 4,
+    "label": "Sentiment Analysis & Insights",
+    "description": "AI-powered NLP sentiment scoring with topic extraction and trend identification revealing actionable product insights and early warning of quality issues 70-90% faster.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Product manager manually reads sample of recent reviews (20-30 per product). 2. Manually categorize themes (quality issues, shipping problems, sizing concerns). 3. Create monthly summary report showing average star rating. 4. Quality issues discovered after dozens of negative reviews accumulated. 5. No systematic tracking of sentiment trends or emerging issues.",
+      "constraints": [
+        "Manual review of 20-30 samples misses broader patterns",
+        "Star ratings don't reveal why customers satisfied or dissatisfied",
+        "Monthly reporting too slow to catch emerging issues",
+        "Manual theme categorization inconsistent and time-consuming",
+        "Product quality problems not detected until significant negative reviews",
+        "Can't compare sentiment across products or time periods systematically"
+      ],
+      "metrics": ["Insight depth: Average star rating", "Issue detection: Reactive after accumulation", "Coverage: 20-30 reviews sampled"]
+    },
+    "agentic": {
+      "workflow": "1. Sentiment Scoring Agent analyzes all reviews with: overall sentiment (positive, neutral, negative), emotion detection (joy, frustration, disappointment), confidence scores. 2. Topic Extraction Agent identifies common themes: product quality and performance, shipping and packaging, customer service experience, value for money, specific features (size, color, durability). 3. Trend Analysis Agent detects: sentiment shifts over time, emerging issues (spike in complaints), seasonal patterns, competitive comparisons. 4. Insight Generation Agent surfaces actionable findings: products with declining sentiment, common friction points to address, features most praised or criticized. 5. Alert Agent notifies teams of critical trends.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Sentiment Scoring Agent", "Topic Extraction Agent", "Trend Analysis Agent"],
+        "utilityAgents": ["NLP Service", "Text Analytics", "BI Dashboard", "Alerting System"]
+      },
+      "dataSources": [
+        "All customer reviews across platforms",
+        "Historical review sentiment data",
+        "Product attributes and specifications",
+        "Competitive review benchmarks",
+        "Customer service issue logs",
+        "Product performance metrics",
+        "Time-series trend data",
+        "Topic taxonomy and categories"
+      ],
+      "benefits": [
+        "70-90% faster issue detection through real-time analysis",
+        "100% review coverage vs 20-30 sample-based insights",
+        "Topic extraction reveals specific product strengths and weaknesses",
+        "Trend detection identifies emerging issues before crisis",
+        "Actionable insights drive product improvements and messaging",
+        "Competitive benchmarking shows relative performance"
+      ],
+      "metrics": ["Insight depth: Topic-level sentiment & trends", "Issue detection: Proactive real-time alerts", "Coverage: 100% of reviews"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement sentiment scoring on all reviews", "Deploy topic extraction for common themes"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["NLP sentiment analysis service", "Topic modeling capability", "Historical review data", "BI and visualization tools", "Alert and notification system", "Product and competitive data integration"]
+    },
+    "icon": "trending-up",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-review-fraud-detection",
+    "type": "function",
+    "level": 4,
+    "label": "Review Fraud Detection",
+    "description": "AI-powered fake review identification with suspicious pattern detection achieving 95%+ detection accuracy and protecting brand integrity from fraudulent reviews.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Rely on review platform's basic fraud detection (IP address blocking). 2. Manually investigate suspicious reviews only when flagged by other customers. 3. Limited ability to detect incentivized or competitor-planted reviews. 4. No systematic pattern analysis across reviews. 5. Fake reviews inflate or deflate product ratings creating misleading impressions.",
+      "constraints": [
+        "Platform-only fraud detection catches obvious cases only (same IP)",
+        "Reactive investigation after customer reports (fake reviews visible for days/weeks)",
+        "Can't detect sophisticated fraud (review farms, incentivized reviews)",
+        "No pattern analysis across multiple reviews to identify campaigns",
+        "Competitor sabotage with fake negative reviews goes undetected",
+        "Fake positive reviews create false expectations and customer disappointment"
+      ],
+      "metrics": ["Fraud detection: <30% of fake reviews", "Detection time: Days to weeks", "Accuracy: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Fraud Detection Agent analyzes multiple signals: review velocity (sudden spike in reviews), reviewer history (new accounts, single review only), language patterns (generic non-specific language, copied text), sentiment extremes (all 5-star or 1-star), verified purchase status. 2. Pattern Analysis Agent identifies coordinated campaigns: multiple reviews from same network, similar language patterns, suspicious timing patterns. 3. Authenticity Scoring Agent rates each review's credibility. 4. Verification Agent flags suspicious reviews for investigation or removal. 5. Reputation Protection Agent monitors for competitor sabotage attempts.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Fraud Detection Agent", "Pattern Analysis Agent", "Authenticity Scoring Agent"],
+        "utilityAgents": ["ML Fraud Model", "Network Analysis", "NLP Text Analysis", "Verification System"]
+      },
+      "dataSources": [
+        "Review content and metadata",
+        "Reviewer account history and patterns",
+        "Purchase verification data",
+        "Review velocity and timing signals",
+        "Language and text similarity analysis",
+        "Network and IP address patterns",
+        "Historical fraud indicators",
+        "Competitor review patterns"
+      ],
+      "benefits": [
+        "95%+ fraud detection accuracy vs 60-70% manual",
+        "Real-time identification vs days/weeks delayed response",
+        "Sophisticated fraud detection (review farms, incentivized reviews)",
+        "Coordinated attack identification prevents brand sabotage",
+        "Authentic ratings improve customer trust and conversion",
+        "Reduced legal and reputation risk from fraudulent content"
+      ],
+      "metrics": ["Fraud detection: 95%+ of fake reviews", "Detection time: Real-time", "Accuracy: 95%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement review velocity monitoring", "Deploy language pattern analysis"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["ML fraud detection model", "Reviewer profile analysis", "Purchase verification system", "Pattern analysis and network detection", "Text similarity and NLP tools", "Historical fraud training data"]
+    },
+    "icon": "shield-alert",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-review-display-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Review Display Optimization",
+    "description": "AI-powered review presentation with verified badges, helpfulness voting, and intelligent sorting increasing conversion by 15-30% through improved trust and relevance.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Display reviews in chronological order (most recent first). 2. Show average star rating prominently. 3. No verification badges or trust indicators. 4. No helpfulness voting or review quality indicators. 5. Customers must scroll through dozens of reviews to find relevant ones for their needs.",
+      "constraints": [
+        "Chronological sorting doesn't surface most helpful reviews",
+        "Recent reviews may not be most relevant to customer's question",
+        "No trust signals (verified purchase) reduce review credibility",
+        "Can't filter or sort by specific attributes (size, use case)",
+        "Low-quality reviews mixed with high-quality detailed reviews",
+        "No social proof (helpfulness votes) to guide customers"
+      ],
+      "metrics": ["Review engagement: 20-30% read reviews", "Conversion impact: Minimal", "Trust indicators: None"]
+    },
+    "agentic": {
+      "workflow": "1. Smart Sorting Agent prioritizes review display: most helpful (based on votes), most relevant (to customer profile), verified purchases first, balanced sentiment (mix of ratings). 2. Trust Indicators Agent displays badges: verified purchase badge, early reviewer badge, detailed review badge (length/media). 3. Helpfulness Agent enables voting ('Was this helpful?') and learns from signals. 4. Filter & Search Agent allows sorting by: star rating, verified purchases only, specific attributes (size, color, use case), reviewer characteristics. 5. Summary Agent shows review highlights and common themes at top.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Smart Sorting Agent", "Trust Indicators Agent", "Helpfulness Agent"],
+        "utilityAgents": ["Ranking Algorithm", "Verification System", "Search Engine", "Analytics Tracking"]
+      },
+      "dataSources": [
+        "Review content and ratings",
+        "Helpfulness vote data",
+        "Purchase verification status",
+        "Customer profile and preferences",
+        "Review engagement metrics (reads, clicks)",
+        "Product attributes and features",
+        "Review quality signals (length, media, detail)",
+        "Sentiment and topic data"
+      ],
+      "benefits": [
+        "15-30% conversion increase from improved review presentation",
+        "Most helpful reviews surfaced first vs chronological noise",
+        "Verified purchase badges increase trust and credibility",
+        "Smart filtering helps customers find relevant reviews for their needs",
+        "Review summary saves time and increases engagement",
+        "Helpfulness voting creates social proof and quality signal"
+      ],
+      "metrics": ["Review engagement: 50-70% read reviews", "Conversion impact: +15-30%", "Trust indicators: Verified, badges, votes"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Add verified purchase badges", "Implement helpfulness voting"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Review platform with sorting capability", "Purchase verification integration", "Helpfulness voting system", "Filtering and search functionality", "Review quality scoring", "Analytics to measure engagement impact"]
+    },
+    "icon": "layout",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-qa-management",
+    "type": "function",
+    "level": 4,
+    "label": "Product Q&A Management",
+    "description": "AI-powered question routing to experts with answer quality validation and search integration achieving 85-95% question resolution rate and 70-80% faster response time.",
+    "parentCapability": "capability-reviews-ratings-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "brand",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer posts question on product page Q&A section. 2. Question visible to all website visitors hoping someone answers. 3. No routing to experts or existing customers who can answer. 4. 40-50% of questions go unanswered or receive poor quality responses. 5. Customer service team doesn't monitor Q&A (questions not escalated).",
+      "constraints": [
+        "No expert routing (rely on random visitors to answer)",
+        "40-50% of questions unanswered hurts conversion",
+        "Poor quality answers provide incorrect information",
+        "Duplicate questions asked repeatedly (no search integration)",
+        "Product specialists and customer service not engaged",
+        "Slow response time (days to weeks if answered at all)"
+      ],
+      "metrics": ["Answer rate: 50-60%", "Response time: Days to weeks", "Answer quality: Unvalidated"]
+    },
+    "agentic": {
+      "workflow": "1. Question Classification Agent categorizes questions: product specifications (route to product team), usage and how-to (route to existing owners), compatibility (route to technical support), availability and shipping (auto-answer from system). 2. Expert Routing Agent identifies best answerers: verified purchasers who used product, product specialists and support team, community members with relevant expertise. 3. Auto-Answer Agent responds instantly to: common questions (from FAQ knowledge base), specifications (from product data), availability and shipping (from systems). 4. Quality Validation Agent scores answers for accuracy and helpfulness. 5. Search Integration Agent surfaces existing Q&A to prevent duplicate questions.",
+      "agents": {
+        "orchestrator": "Reviews & Ratings Management Orchestration Agent",
+        "superAgents": ["Question Classification Agent", "Expert Routing Agent", "Quality Validation Agent"],
+        "utilityAgents": ["NLP Classification", "Knowledge Base", "Routing System", "Search Engine"]
+      },
+      "dataSources": [
+        "Customer questions on product pages",
+        "Product specifications and documentation",
+        "Verified purchaser data and profiles",
+        "Customer service knowledge base",
+        "Historical Q&A and answers",
+        "Expert and specialist identification",
+        "Answer quality scores",
+        "Product data and availability systems"
+      ],
+      "benefits": [
+        "85-95% question resolution rate vs 50-60% organic",
+        "70-80% faster response time through expert routing",
+        "Auto-answer handles 30-40% of questions instantly",
+        "Quality validation ensures accurate information",
+        "Search integration reduces duplicate questions 50-60%",
+        "Product page conversion improves 10-20% with answered questions"
+      ],
+      "metrics": ["Answer rate: 85-95%", "Response time: Hours (instant for common questions)", "Answer quality: AI-validated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement auto-answer for common questions from FAQ", "Route questions to verified purchasers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Q&A platform with routing capability", "Product knowledge base and specs", "Question classification (NLP)", "Expert and customer identification", "Answer quality scoring", "Search and duplicate detection"]
+    },
+    "icon": "help-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

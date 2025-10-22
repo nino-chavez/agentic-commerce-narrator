@@ -1,0 +1,601 @@
+[
+  {
+    "id": "function-mdm-customer-master-data",
+    "type": "function",
+    "level": 4,
+    "label": "Customer Master Data Management (MDM)",
+    "description": "Unified customer golden record across all systems with data quality rules, deduplication, and governance workflows for accurate customer 360 view.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Customer data fragmented across multiple systems (CRM, eCommerce, POS, ERP) with no single source of truth. Manual data entry creates duplicates and inconsistencies. Periodic batch data synchronization with weeks of lag. Data quality issues discovered reactively through customer complaints or failed transactions. No standardized data governance process.",
+      "constraints": [
+        "30-50% duplicate customer records across systems",
+        "Data accuracy: 70-85% (missing fields, outdated info)",
+        "Batch sync creates 7-30 day data lag",
+        "Manual deduplication (hundreds of hours per quarter)",
+        "Inconsistent customer experience due to data silos"
+      ],
+      "metrics": [
+        "Customer data accuracy: 70-85%",
+        "Duplicate rate: 30-50%",
+        "Time to resolve data issues: Days to weeks"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered MDM platform creates and maintains golden customer record by ingesting data from all source systems in real-time. Machine learning algorithms identify and merge duplicates using fuzzy matching, probabilistic matching, and behavioral patterns. Data quality rules automatically validate, standardize, and enrich customer data (address verification, email validation, phone formatting). Automated data governance workflows route data changes to stewards for approval. Survivorship rules determine which source system values take precedence for each attribute. Real-time synchronization pushes golden record updates to all consuming systems. AI-generated data quality scorecards identify systemic issues.",
+      "agents": {
+        "orchestrator": "Customer MDM Orchestrator",
+        "superAgents": [
+          "Duplicate Detection & Matching Agent",
+          "Data Quality & Enrichment Agent",
+          "Data Governance Workflow Agent",
+          "Survivorship Rule Agent"
+        ],
+        "utilityAgents": [
+          "Multi-System Integration Agent",
+          "Address Validation API Agent",
+          "Data Stewardship Portal Agent"
+        ]
+      },
+      "dataSources": [
+        "CRM customer records",
+        "eCommerce customer profiles",
+        "POS transaction data",
+        "ERP customer master",
+        "Marketing platforms",
+        "Customer service interactions",
+        "Third-party data enrichment services"
+      ],
+      "benefits": [
+        "95-99% customer data accuracy (vs 70-85%)",
+        "90-95% reduction in duplicates (2-5% vs 30-50%)",
+        "Real-time data synchronization (vs 7-30 day lag)",
+        "80-90% reduction in manual deduplication effort",
+        "15-25% improvement in marketing campaign ROI from accurate targeting"
+      ],
+      "metrics": [
+        "Customer data accuracy: 95-99%",
+        "Duplicate rate: 2-5%",
+        "Time to resolve data issues: Minutes to hours (automated)"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy ML duplicate detection for top customer segments (70% duplicate reduction)",
+        "Implement automated address validation (30% accuracy improvement)",
+        "Enable real-time CRM-to-eCommerce sync for VIP customers"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-18 months",
+      "prerequisites": [
+        "MDM platform or data hub",
+        "API connectivity to all source systems",
+        "Data governance framework and stewardship roles",
+        "Customer matching rules and survivorship logic"
+      ]
+    },
+    "icon": "user-check",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-product-master-data",
+    "type": "function",
+    "level": 4,
+    "label": "Product Master Data Management (Golden Record)",
+    "description": "Centralized product information with enriched attributes, digital assets, and multi-channel syndication for consistent product experience.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Product data managed in spreadsheets and disparate systems (PLM, ERP, PIM) with manual entry and updates. Inconsistent product descriptions, attributes, and images across channels. Manual syndication to eCommerce, marketplaces, and catalogs with copy-paste errors. Limited product data enrichment or quality validation. Category managers spend 40-60% time on data entry rather than merchandising.",
+      "constraints": [
+        "Product data completeness: 50-70% (missing attributes, images)",
+        "60-80% manual data entry effort",
+        "Channel inconsistencies in 20-40% of products",
+        "3-7 days to publish new products across channels",
+        "Limited SEO optimization or enrichment"
+      ],
+      "metrics": [
+        "Product data completeness: 50-70%",
+        "Time to market (new product): 3-7 days",
+        "Channel consistency: 60-80%"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered Product MDM (often integrated with PIM) serves as single source of truth for all product information. Machine learning enriches product data by analyzing product specs, competitor sites, and industry databases to auto-populate missing attributes. Computer vision analyzes product images to extract attributes (color, style, material) and generate SEO-optimized descriptions. Natural language generation creates channel-specific product copy (technical for B2B, lifestyle for B2C). Automated data quality rules validate completeness, accuracy, and consistency. Real-time syndication to all channels (eCommerce, marketplaces, print catalogs, in-store displays) with channel-specific attribute mapping. AI monitors data quality scores and flags products needing attention.",
+      "agents": {
+        "orchestrator": "Product MDM Orchestrator",
+        "superAgents": [
+          "Product Data Enrichment Agent",
+          "Image Analysis & Tagging Agent",
+          "Content Generation Agent",
+          "Multi-Channel Syndication Agent"
+        ],
+        "utilityAgents": [
+          "PLM/ERP Integration Agent",
+          "DAM Integration Agent",
+          "Marketplace API Agent",
+          "Data Quality Validation Agent"
+        ]
+      },
+      "dataSources": [
+        "ERP product master",
+        "PLM product specifications",
+        "Supplier product data",
+        "Digital asset management (DAM) images",
+        "Competitor product information",
+        "Industry product taxonomies",
+        "Customer search and purchase behavior"
+      ],
+      "benefits": [
+        "90-99% product data completeness (vs 50-70%)",
+        "70-85% reduction in manual data entry effort",
+        "95-100% channel consistency",
+        "80-90% faster time to market (hours vs 3-7 days)",
+        "15-30% increase in conversion from enriched content"
+      ],
+      "metrics": [
+        "Product data completeness: 90-99%",
+        "Time to market (new product): Hours to 1 day",
+        "Channel consistency: 95-100%"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI product description generation for top 20% SKUs (60% content creation time savings)",
+        "Implement automated attribute extraction from supplier data (40% completeness improvement)",
+        "Enable one-click syndication to primary eCommerce channel"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "PIM or Product MDM platform",
+        "Product taxonomy and attribute structure",
+        "Digital asset management system",
+        "API connectivity to channels (eCommerce, marketplaces)"
+      ]
+    },
+    "icon": "box",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-supplier-vendor-master",
+    "type": "function",
+    "level": 4,
+    "label": "Supplier & Vendor Master Data Management",
+    "description": "Centralized supplier information with risk assessment, performance tracking, and compliance validation for strategic sourcing.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Supplier data scattered across procurement, AP, and ERP systems with duplicate vendor records. Manual supplier onboarding with paper forms and email exchanges taking weeks. Limited supplier risk assessment (financial health, geopolitical, compliance). Inconsistent vendor classification and segmentation. No centralized view of supplier performance or spend analytics.",
+      "constraints": [
+        "Supplier onboarding: 2-6 weeks (manual paperwork)",
+        "20-40% duplicate vendor records",
+        "Limited risk visibility (annual manual reviews)",
+        "Inconsistent vendor data across business units",
+        "Reactive supplier risk management"
+      ],
+      "metrics": [
+        "Onboarding time: 2-6 weeks",
+        "Duplicate vendor rate: 20-40%",
+        "Risk assessment frequency: Annual"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered Supplier MDM creates golden vendor record integrating data from procurement, AP, quality, and external risk databases. Automated supplier onboarding portal with AI-guided workflows collects required information, validates compliance documents, and performs background checks. Machine learning continuously assesses supplier risk using financial data, news monitoring, geopolitical analysis, and ESG scores. Automated supplier segmentation classifies vendors by spend, criticality, and strategic value. Real-time supplier scorecarding tracks KPIs (quality, delivery, cost, sustainability). Predictive alerts identify at-risk suppliers before disruptions occur. Integration with supplier collaboration portals enables self-service data updates.",
+      "agents": {
+        "orchestrator": "Supplier MDM Orchestrator",
+        "superAgents": [
+          "Supplier Onboarding Agent",
+          "Risk Assessment Agent",
+          "Supplier Segmentation Agent",
+          "Performance Scorecarding Agent"
+        ],
+        "utilityAgents": [
+          "External Risk Data Agent (D&B, Bloomberg)",
+          "Compliance Validation Agent",
+          "Supplier Portal Agent",
+          "Duplicate Detection Agent"
+        ]
+      },
+      "dataSources": [
+        "ERP vendor master",
+        "Procurement transaction history",
+        "AP payment data",
+        "Quality inspection results",
+        "External credit risk databases (D&B, Moody's)",
+        "News and geopolitical risk feeds",
+        "Supplier self-service portal submissions"
+      ],
+      "benefits": [
+        "85-95% faster supplier onboarding (days vs 2-6 weeks)",
+        "90-95% reduction in duplicate vendors",
+        "Continuous risk monitoring (vs annual reviews)",
+        "100% supplier data consistency across business units",
+        "40-60% reduction in supply chain disruptions through early risk detection"
+      ],
+      "metrics": [
+        "Onboarding time: 2-5 days",
+        "Duplicate vendor rate: <5%",
+        "Risk assessment frequency: Continuous with weekly updates"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy supplier self-service onboarding portal (60% onboarding time reduction)",
+        "Implement automated duplicate vendor detection (80% duplicate elimination)",
+        "Enable continuous financial risk monitoring for critical suppliers"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Supplier MDM platform or module",
+        "Integration with ERP and procurement systems",
+        "External risk data subscriptions",
+        "Supplier collaboration portal"
+      ]
+    },
+    "icon": "building",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-location-site-master",
+    "type": "function",
+    "level": 4,
+    "label": "Location & Site Master Data Management",
+    "description": "Unified location hierarchy (stores, DCs, franchises) with attributes, operating hours, and capabilities for omnichannel fulfillment.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["Retail", "QSR", "Hospitality", "All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Location data maintained in separate systems (real estate, operations, IT, marketing) with no central registry. Manual spreadsheets track store attributes, operating hours, and capabilities. Changes to store information (hours, phone, services) require manual updates across 5-10 systems. Inaccurate location data causes customer frustration (wrong hours, incorrect services listed). No standardized location hierarchy or taxonomy.",
+      "constraints": [
+        "Location data accuracy: 70-80% (outdated hours, incorrect attributes)",
+        "3-7 days to propagate location changes across systems",
+        "Manual updates to 5-10 systems per location change",
+        "No centralized view of store capabilities for omnichannel routing",
+        "Customer complaints from inaccurate store information"
+      ],
+      "metrics": [
+        "Location data accuracy: 70-80%",
+        "Time to update location: 3-7 days",
+        "Systems requiring manual update: 5-10"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered Location MDM maintains golden record for all physical and virtual locations (stores, DCs, franchises, pop-ups, dark stores). Automated data ingestion from real estate, POS, workforce management, and IoT sensors keeps location attributes current. Machine learning validates and enriches location data using Google Maps, social media, and customer feedback to detect discrepancies (e.g., actual operating hours vs. listed hours). Real-time synchronization to all consuming systems (eCommerce, OMS, marketing, customer service). Location capability tagging (BOPIS, curbside, alterations, returns) enables intelligent omnichannel routing. Geospatial analytics optimize location attributes for search, mapping, and proximity calculations. Automated alerts notify operations of inconsistencies requiring correction.",
+      "agents": {
+        "orchestrator": "Location MDM Orchestrator",
+        "superAgents": [
+          "Location Data Validation Agent",
+          "Geospatial Enrichment Agent",
+          "Capability Tagging Agent",
+          "Multi-System Sync Agent"
+        ],
+        "utilityAgents": [
+          "Google Maps API Agent",
+          "POS Integration Agent",
+          "IoT Sensor Agent",
+          "Social Media Monitoring Agent"
+        ]
+      },
+      "dataSources": [
+        "Real estate management system",
+        "POS transaction data (hours of operation)",
+        "Workforce management schedules",
+        "IoT sensors (occupancy, status)",
+        "Google Maps and third-party geocoding",
+        "Customer feedback and social media",
+        "Store capability surveys"
+      ],
+      "benefits": [
+        "95-99% location data accuracy (vs 70-80%)",
+        "Real-time location updates (vs 3-7 days)",
+        "Automated synchronization to all systems (vs manual updates)",
+        "15-25% improvement in omnichannel fulfillment through accurate capability routing",
+        "40-60% reduction in customer complaints about store information"
+      ],
+      "metrics": [
+        "Location data accuracy: 95-99%",
+        "Time to update location: Real-time to hours",
+        "Systems requiring manual update: 0 (automated)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated Google Maps sync for addresses and hours (50% accuracy improvement)",
+        "Implement capability tagging for omnichannel services (BOPIS, curbside)",
+        "Enable real-time POS-to-website hours sync"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-8 months",
+      "prerequisites": [
+        "Location MDM platform or module",
+        "Integration with POS and WFM systems",
+        "Geocoding and mapping API access",
+        "Centralized location hierarchy definition"
+      ]
+    },
+    "icon": "map-pin",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-data-governance-workflows",
+    "type": "function",
+    "level": 4,
+    "label": "Data Governance Workflows & Stewardship",
+    "description": "Automated data governance processes with stewardship workflows, change approval, and audit trails for enterprise data quality.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Ad-hoc data governance with informal processes and email-based change requests. No clear data ownership or stewardship roles. Data changes made directly in source systems without approval workflows or audit trails. Limited visibility into who changed what data and when. Reactive data quality management when issues surface.",
+      "constraints": [
+        "No formal data change approval process",
+        "Limited audit trail (who/what/when changed)",
+        "Unclear data ownership and accountability",
+        "Data quality issues discovered reactively",
+        "Compliance risk from unaudited data changes"
+      ],
+      "metrics": [
+        "Data change approval rate: N/A (informal)",
+        "Audit trail coverage: 20-40%",
+        "Data governance maturity: Ad-hoc (Level 1)"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered data governance platform orchestrates end-to-end data stewardship workflows with role-based approval hierarchies. Machine learning automatically routes data change requests to appropriate data stewards based on data domain, criticality, and scope of change. Automated data quality validation pre-approves low-risk changes (e.g., adding missing email address) while flagging high-risk changes (e.g., merging customer records, changing product category) for human review. Complete audit trail captures all data changes with user identity, timestamp, before/after values, and business justification. AI-generated data lineage diagrams show impact of proposed changes across downstream systems. Predictive analytics identify data quality trends and recommend proactive stewardship actions. Workflow SLAs with automated escalations prevent bottlenecks.",
+      "agents": {
+        "orchestrator": "Data Governance Workflow Orchestrator",
+        "superAgents": [
+          "Change Request Routing Agent",
+          "Data Quality Validation Agent",
+          "Impact Analysis Agent",
+          "Audit Trail Agent"
+        ],
+        "utilityAgents": [
+          "Data Steward Portal Agent",
+          "Workflow Engine Agent",
+          "Notification Agent",
+          "Data Lineage Agent"
+        ]
+      },
+      "dataSources": [
+        "Master data change requests",
+        "Data ownership and stewardship roles (RACI)",
+        "Data quality rules and validation logic",
+        "Data lineage and system dependencies",
+        "Historical change audit logs",
+        "Workflow SLA definitions"
+      ],
+      "benefits": [
+        "100% data change approval coverage (vs informal/ad-hoc)",
+        "Complete audit trail for all master data changes",
+        "70-85% reduction in data governance cycle time through automation",
+        "50-70% of low-risk changes auto-approved (vs 0%)",
+        "Improved data governance maturity (Level 4-5)"
+      ],
+      "metrics": [
+        "Data change approval rate: 100%",
+        "Audit trail coverage: 100%",
+        "Data governance maturity: Managed/Optimized (Level 4-5)"
+      ],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Define data stewardship roles and responsibilities (RACI)",
+        "Implement automated change request routing for high-value data domains",
+        "Deploy self-service data quality dashboards for stewards"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Data governance framework and policies",
+        "Data stewardship roles defined and staffed",
+        "Workflow engine or BPM platform",
+        "MDM platform with governance module"
+      ]
+    },
+    "icon": "clipboard-check",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-data-lineage-impact",
+    "type": "function",
+    "level": 4,
+    "label": "Data Lineage & Impact Analysis",
+    "description": "Automated data lineage mapping with impact analysis for change management, compliance, and root cause investigation.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Manual documentation of data flows in spreadsheets or Visio diagrams that quickly become outdated. No systematic tracking of which systems consume which data elements. Impact analysis for system changes requires weeks of investigation through interviews and code reviews. Data quality issues require extensive manual tracing to identify root cause. Compliance reporting struggles to demonstrate data provenance.",
+      "constraints": [
+        "Data lineage documentation 6-12 months outdated",
+        "Impact analysis: 2-4 weeks per system change",
+        "Root cause analysis: Days to weeks of manual investigation",
+        "No automated lineage capture",
+        "Compliance risk from incomplete data provenance"
+      ],
+      "metrics": [
+        "Lineage accuracy: 50-70% (outdated documentation)",
+        "Impact analysis time: 2-4 weeks",
+        "Lineage coverage: 30-50% of data flows"
+      ]
+    },
+    "agentic": {
+      "workflow": "AI-powered data lineage platform automatically discovers and maps data flows across all systems by analyzing ETL jobs, API calls, database schemas, application code, and runtime queries. Machine learning continuously updates lineage as systems change. Interactive lineage visualizations show end-to-end data journeys from source to consumption (e.g., 'Customer email flows from CRM → MDM → Marketing Platform → Email Service'). Automated impact analysis immediately identifies all downstream systems and reports affected by proposed data changes. Natural language query interface enables business users to ask 'What systems use customer email?' and receive instant answers with visual lineage diagrams. Compliance reporting demonstrates complete data provenance for regulatory audits. Root cause analysis for data quality issues traces upstream to identify originating system.",
+      "agents": {
+        "orchestrator": "Data Lineage Orchestrator",
+        "superAgents": [
+          "Lineage Discovery Agent",
+          "Impact Analysis Agent",
+          "Lineage Visualization Agent",
+          "Root Cause Tracing Agent"
+        ],
+        "utilityAgents": [
+          "ETL Metadata Parser Agent",
+          "API Call Tracer Agent",
+          "Query Log Analyzer Agent",
+          "Natural Language Query Agent"
+        ]
+      },
+      "dataSources": [
+        "ETL job metadata and logs",
+        "API call logs and service mesh data",
+        "Database schemas and relationships",
+        "Application code repositories",
+        "Runtime query logs",
+        "Data integration platform metadata",
+        "Data catalog and glossary"
+      ],
+      "benefits": [
+        "95-99% lineage accuracy (automated discovery)",
+        "90-95% reduction in impact analysis time (minutes vs 2-4 weeks)",
+        "90-100% lineage coverage of critical data flows",
+        "70-85% faster root cause analysis for data quality issues",
+        "Automated compliance reporting with complete data provenance"
+      ],
+      "metrics": [
+        "Lineage accuracy: 95-99% (auto-updated)",
+        "Impact analysis time: Minutes to hours",
+        "Lineage coverage: 90-100%"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy automated lineage discovery for top 5 critical data domains (immediate visibility)",
+        "Implement impact analysis for upcoming system changes (90% time savings)",
+        "Enable self-service lineage visualization for data stewards"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "Data lineage platform or tool",
+        "Access to ETL, API, and query logs",
+        "Data catalog with business glossary",
+        "Integration with all major data systems"
+      ]
+    },
+    "icon": "sitemap",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-mdm-master-data-sync",
+    "type": "function",
+    "level": 4,
+    "label": "Master Data Synchronization & Distribution",
+    "description": "Real-time master data distribution to all consuming systems with conflict resolution, versioning, and subscription-based updates.",
+    "parentCapability": "capability-master-data-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B"],
+    "organizationalLevel": "enterprise",
+    "traditional": {
+      "workflow": "Batch file transfers or manual data exports from master data systems to consuming applications (nightly or weekly). Each consuming system maintains its own copy of master data that drifts out of sync. No versioning or conflict resolution when multiple systems update the same record. Failed synchronizations require manual intervention and troubleshooting. Consuming systems unaware of master data changes until next batch sync.",
+      "constraints": [
+        "Batch sync frequency: Nightly to weekly",
+        "Data lag in consuming systems: 1-7 days",
+        "Manual intervention for failed syncs",
+        "No conflict resolution (last write wins)",
+        "Consuming systems unaware of real-time changes"
+      ],
+      "metrics": [
+        "Sync frequency: Nightly to weekly",
+        "Sync success rate: 85-90%",
+        "Data freshness: 1-7 days old"
+      ]
+    },
+    "agentic": {
+      "workflow": "Event-driven master data synchronization architecture publishes master data changes to message bus in real-time. Consuming systems subscribe to relevant data domains (e.g., eCommerce subscribes to product and customer MDM). AI-powered conflict resolution automatically handles scenarios where multiple systems attempt to update same master record using priority rules, data quality scores, and business logic. Versioning system maintains history of all master data changes enabling point-in-time recovery. Failed synchronization attempts automatically retry with exponential backoff and alert data operations if persistent. Change data capture (CDC) minimizes data transfer volumes by sending only deltas. API-based synchronization enables consuming systems to query master data on-demand. Subscription management portal allows systems to self-service subscribe/unsubscribe from data feeds.",
+      "agents": {
+        "orchestrator": "Master Data Sync Orchestrator",
+        "superAgents": [
+          "Event Publishing Agent",
+          "Conflict Resolution Agent",
+          "Subscription Management Agent",
+          "Sync Monitoring Agent"
+        ],
+        "utilityAgents": [
+          "Message Bus Agent (Kafka, RabbitMQ)",
+          "CDC Agent",
+          "API Gateway Agent",
+          "Retry & Error Handling Agent"
+        ]
+      },
+      "dataSources": [
+        "MDM golden records (customer, product, supplier, location)",
+        "Change data capture (CDC) logs",
+        "Consuming system subscriptions and preferences",
+        "Conflict resolution rules and priorities",
+        "Data quality scores by source system",
+        "Sync error logs and monitoring metrics"
+      ],
+      "benefits": [
+        "Real-time sync (seconds vs 1-7 days lag)",
+        "99%+ sync success rate (vs 85-90%)",
+        "Automated conflict resolution (vs manual intervention)",
+        "100% data freshness in consuming systems",
+        "70-85% reduction in data synchronization issues"
+      ],
+      "metrics": [
+        "Sync frequency: Real-time (event-driven)",
+        "Sync success rate: 99%+",
+        "Data freshness: Real-time (seconds)"
+      ],
+      "implementationComplexity": "Very High"
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement real-time sync for critical data (customer, product) to top 3 consuming systems",
+        "Deploy automated conflict resolution rules (eliminate 80% manual interventions)",
+        "Enable API-based master data access for new applications"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "9-15 months",
+      "prerequisites": [
+        "MDM platform with event publishing capability",
+        "Message bus or streaming platform (Kafka, etc.)",
+        "API management platform",
+        "Consuming systems with API/event consumption capability"
+      ]
+    },
+    "icon": "arrows-rotate",
+    "color": "#6366F1",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

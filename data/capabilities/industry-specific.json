@@ -1,0 +1,902 @@
+[
+  {
+    "id": "capability-qsr-kitchen-operations",
+    "type": "capability",
+    "level": 3,
+    "label": "QSR Kitchen Operations & Production",
+    "description": "AI-powered kitchen management with demand forecasting, production scheduling, and quality monitoring achieving 25-40% improvement in kitchen efficiency.",
+    "parentDomain": "domain-operations",
+    "industries": [
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Demand-based production forecasting",
+      "Kitchen display system (KDS) optimization",
+      "Cook-to-order vs make-to-stock optimization",
+      "Equipment monitoring & maintenance",
+      "Food safety & temperature monitoring",
+      "Kitchen performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual production planning with paper tickets and reactive quality management",
+      "characteristics": [
+        "Manual production planning based on day-part averages",
+        "Paper tickets or basic KDS (FIFO ordering)",
+        "Fixed cook-to-order vs batch production rules",
+        "Reactive equipment maintenance (fix when broken)",
+        "Manual temperature logs on clipboards",
+        "Limited visibility into kitchen performance"
+      ],
+      "constraints": [
+        "Over/under production causes waste or stockouts",
+        "FIFO ticket sequencing creates bottlenecks",
+        "Fixed rules miss demand optimization opportunities",
+        "Manual temperature logs miss violations",
+        "No real-time performance visibility"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-qko-001",
+          "metric": "Equipment Downtime Cost (Traditional)",
+          "value": "$500-2000 per hour",
+          "source": "TBD: [SME to provide source, e.g., 'QSR equipment downtime cost benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven kitchen orchestration with predictive production and automated quality monitoring",
+      "characteristics": [
+        "AI forecasts demand by item, day-part, weather, events",
+        "Intelligent KDS routing based on station capacity and item complexity",
+        "Dynamic cook-to-order vs batch decisions based on demand",
+        "Predictive equipment maintenance prevents downtime",
+        "Automated temperature monitoring with IoT sensors",
+        "Real-time kitchen performance dashboards and alerts"
+      ],
+      "benefits": [
+        "Reduced food waste and faster ticket times",
+        "Equipment downtime reduction and food safety compliance",
+        "Improved labor productivity and real-time visibility"
+      ],
+      "agents": [
+        "Kitchen Operations Orchestrator",
+        "Production Forecast Agent",
+        "KDS Routing Agent",
+        "Equipment Monitoring Agent",
+        "Food Safety Agent",
+        "Kitchen Performance Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Food Waste Reduction",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI production forecasting preventing over/under production']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Ticket Time Improvement",
+          "value": "20-35% faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent KDS routing optimizing station capacity']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Equipment Downtime Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive maintenance preventing failures']",
+          "sourceBenchmark": "bench-qko-001"
+        },
+        {
+          "metric": "Food Safety Compliance",
+          "value": "99%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated temperature monitoring with IoT sensors']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Labor Productivity Improvement",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized production and real-time performance visibility']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy intelligent KDS with capacity-based routing",
+        "Implement automated temperature monitoring",
+        "Enable predictive production forecasting for top items"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Modern KDS platform",
+        "POS integration for demand data",
+        "IoT sensors for temperature monitoring",
+        "Equipment monitoring capability",
+        "Historical sales and production data"
+      ]
+    },
+    "icon": "fire",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-qsr-drive-thru-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "QSR Drive-Thru Optimization",
+    "description": "AI-powered drive-thru operations with predictive queuing, dynamic menu boards, and order accuracy optimization achieving 30-50% improvement in throughput.",
+    "parentDomain": "domain-customer-experience",
+    "industries": [
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Queue prediction & management",
+      "Dynamic menu board optimization",
+      "Order accuracy & confirmation",
+      "Drive-thru performance analytics",
+      "Customer wait time tracking"
+    ],
+    "traditionalApproach": {
+      "description": "Static menu boards with manual order-taking and limited queue management",
+      "characteristics": [
+        "Static menu boards (same for all customers, all times)",
+        "Manual order-taking via headset",
+        "No queue prediction or optimization",
+        "Manual order confirmation at window",
+        "Timer-based wait time tracking only",
+        "Limited performance visibility"
+      ],
+      "constraints": [
+        "Static menus miss personalization and upsell opportunities",
+        "Queue bottlenecks during peak times",
+        "Order errors discovered at window (delays)",
+        "Limited actionable insights on performance",
+        "No predictive queue management"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dto-001",
+          "metric": "Order Error Rate (Traditional)",
+          "value": "10-15%",
+          "source": "TBD: [SME to provide source, e.g., 'Drive-thru order accuracy benchmarks']"
+        },
+        {
+          "id": "bench-dto-002",
+          "metric": "Peak Queue Wait Time (Traditional)",
+          "value": "15-25 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'Drive-thru wait time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven drive-thru orchestration with dynamic content, predictive queuing, and order optimization",
+      "characteristics": [
+        "Dynamic menu boards personalized by time-of-day, weather, customer",
+        "AI-powered order taking with voice recognition",
+        "Predictive queue management with kitchen coordination",
+        "Visual order confirmation at board (not window)",
+        "Real-time wait time prediction and alerts",
+        "Continuous performance optimization"
+      ],
+      "benefits": [
+        "Improved drive-thru throughput and average ticket",
+        "Reduced order errors and wait times",
+        "Order confirmation prevents window delays",
+        "Real-time insights enable shift-level optimization"
+      ],
+      "agents": [
+        "Drive-Thru Orchestration Agent",
+        "Menu Board Optimization Agent",
+        "Voice Recognition Agent",
+        "Queue Prediction Agent",
+        "Order Accuracy Agent",
+        "Performance Analytics Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Drive-Thru Throughput Improvement",
+          "value": "30-50% (cars per hour)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI queuing and kitchen coordination']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Average Ticket Increase",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic menu personalization and upsell']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Order Error Reduction",
+          "value": "<3% (vs 10-15%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI voice recognition and visual confirmation']",
+          "sourceBenchmark": "bench-dto-001"
+        },
+        {
+          "metric": "Wait Time Reduction",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictive queuing and kitchen coordination']",
+          "sourceBenchmark": "bench-dto-002"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy dynamic menu boards with day-part optimization",
+        "Implement visual order confirmation at board",
+        "Enable real-time queue and wait time monitoring"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Digital menu board infrastructure",
+        "Voice recognition/AI ordering capability",
+        "Kitchen integration for queue coordination",
+        "Customer recognition (license plate, app, loyalty)",
+        "Real-time performance tracking"
+      ]
+    },
+    "icon": "shopping-cart",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-qsr-digital-ordering",
+    "type": "capability",
+    "level": 3,
+    "label": "QSR Digital Ordering & Mobile",
+    "description": "Multi-channel digital ordering with mobile app, kiosk, and web achieving 40-70% digital mix and 15-25% higher average tickets.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Mobile app ordering",
+      "In-store kiosk ordering",
+      "Web ordering",
+      "Curbside pickup",
+      "Order ahead & scheduling",
+      "Loyalty integration",
+      "Digital payment & wallet"
+    ],
+    "traditionalApproach": {
+      "description": "Counter-only ordering with limited digital channels and no order-ahead capability",
+      "characteristics": [
+        "Orders placed at counter or drive-thru",
+        "No mobile app or limited basic app",
+        "Manual kiosks (if any) with low adoption",
+        "No order-ahead or scheduling capability",
+        "Cash and card payment only",
+        "Loyalty via physical card or receipt code"
+      ],
+      "constraints": [
+        "No order-ahead causes lobby congestion",
+        "Staff time spent on order-taking vs fulfillment",
+        "Missed upsell opportunities at counter",
+        "Limited payment options",
+        "Low digital engagement and customer data"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-qdo-001",
+          "metric": "Traditional Ordering Mix",
+          "value": "95%+ counter/drive-thru, <5% digital",
+          "source": "TBD: [SME to provide source, e.g., 'QSR ordering channel benchmarks']"
+        },
+        {
+          "id": "bench-qdo-002",
+          "metric": "Counter Queue Wait Time (Traditional)",
+          "value": "5-15 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'QSR lobby wait time benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Omnichannel digital ordering with mobile-first experience and seamless fulfillment",
+      "characteristics": [
+        "Mobile app with order-ahead, favorites, personalization",
+        "Intuitive self-service kiosks with AI recommendations",
+        "Web ordering for catering and group orders",
+        "Curbside pickup with geofencing-based alerts",
+        "Digital wallet and one-click payment",
+        "Integrated loyalty and rewards"
+      ],
+      "benefits": [
+        "Increased digital ordering mix and average ticket",
+        "Reduced lobby wait times",
+        "Staff freed for food prep and service",
+        "Faster digital payments and rich customer data"
+      ],
+      "agents": [
+        "Digital Ordering Orchestrator",
+        "Mobile App Agent",
+        "Kiosk Ordering Agent",
+        "Curbside Coordination Agent",
+        "Payment Processing Agent",
+        "Loyalty Integration Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Digital Ordering Mix",
+          "value": "40-70% (vs <5%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mobile app and kiosk adoption']",
+          "sourceBenchmark": "bench-qdo-001"
+        },
+        {
+          "metric": "Average Ticket Increase",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on digital upsell and personalized recommendations']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Lobby Wait Time Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on order-ahead eliminating counter queues']",
+          "sourceBenchmark": "bench-qdo-002"
+        },
+        {
+          "metric": "Digital Payment Transaction Time Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on one-click payment vs cash/card processing']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Launch mobile app with order-ahead for top locations",
+        "Deploy self-service kiosks with AI recommendations",
+        "Enable curbside pickup with app-based check-in"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Mobile app development or platform",
+        "Kiosk hardware and software",
+        "POS integration for order routing",
+        "Payment gateway and digital wallet support",
+        "Kitchen integration for order management"
+      ]
+    },
+    "icon": "device-phone-mobile",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-qsr-delivery-aggregator-management",
+    "type": "capability",
+    "level": 3,
+    "label": "QSR Delivery & Aggregator Management",
+    "description": "Integrated delivery and aggregator platform management with menu synchronization and performance optimization achieving 25-40% improvement in delivery profitability.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "QSR"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Aggregator integration (DoorDash, UberEats, Grubhub)",
+      "Menu synchronization across platforms",
+      "Dynamic pricing & availability",
+      "Order routing & kitchen integration",
+      "Delivery performance tracking",
+      "Aggregator fee optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual aggregator management with separate tablets and menu inconsistencies",
+      "characteristics": [
+        "Separate tablet per aggregator (3-5 tablets in kitchen)",
+        "Manual menu updates on each platform",
+        "Static pricing (no surge or optimization)",
+        "Manual order entry into POS from tablets",
+        "Limited visibility into delivery performance",
+        "No fee negotiation or optimization"
+      ],
+      "constraints": [
+        "Multiple tablets create operational chaos",
+        "Menu inconsistencies confuse customers",
+        "Manual order entry delays and creates errors",
+        "Static pricing misses revenue optimization",
+        "No performance visibility to optimize operations"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-dam-001",
+          "metric": "Aggregator Fee Impact (Traditional)",
+          "value": "25-35% of revenue",
+          "source": "TBD: [SME to provide source, e.g., 'Delivery aggregator fee benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Unified aggregator management with automated menu sync, dynamic pricing, and performance optimization",
+      "characteristics": [
+        "Single platform integrates all aggregators",
+        "Automated menu synchronization (real-time item availability)",
+        "Dynamic pricing based on demand and kitchen capacity",
+        "Automated order routing to POS and KDS",
+        "Real-time delivery performance tracking and alerts",
+        "AI-powered fee negotiation and platform optimization"
+      ],
+      "benefits": [
+        "Single platform eliminates tablet chaos",
+        "Automated menu sync prevents out-of-stock disappointments",
+        "Dynamic pricing increases delivery revenue",
+        "Automated routing reduces order errors",
+        "Performance insights optimize operations",
+        "Fee optimization improves profitability"
+      ],
+      "agents": [
+        "Delivery Aggregator Orchestrator",
+        "Menu Sync Agent",
+        "Dynamic Pricing Agent",
+        "Order Routing Agent",
+        "Performance Tracking Agent",
+        "Fee Optimization Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Delivery Revenue Increase",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic pricing during high-demand periods']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Order Error Reduction",
+          "value": "80-90%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated order routing eliminating manual entry']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Delivery Profitability Improvement",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on fee optimization and revenue increase']",
+          "sourceBenchmark": "bench-dam-001"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement unified aggregator platform",
+        "Enable automated menu synchronization",
+        "Deploy dynamic pricing for high-demand periods"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Aggregator integration platform",
+        "POS and KDS integration",
+        "Menu management system",
+        "Real-time inventory visibility",
+        "Historical delivery performance data"
+      ]
+    },
+    "icon": "truck-fast",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-travel-booking-reservation",
+    "type": "capability",
+    "level": 3,
+    "label": "Travel Booking & Reservation Management",
+    "description": "AI-powered booking platform with intelligent search, dynamic packaging, and personalized recommendations achieving 30-50% improvement in conversion rates.",
+    "parentDomain": "domain-sales-commerce",
+    "industries": [
+      "Travel",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B"
+    ],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Intelligent search & discovery",
+      "Dynamic packaging (flight + hotel + car)",
+      "Real-time availability & pricing",
+      "Personalized recommendations",
+      "Group bookings & event management",
+      "Booking modification & cancellation",
+      "Multi-channel booking (web, mobile, call center)"
+    ],
+    "traditionalApproach": {
+      "description": "Basic search-and-book with limited personalization and manual dynamic packaging",
+      "characteristics": [
+        "Basic search (destination, dates only)",
+        "Manual dynamic packaging (search each component separately)",
+        "Batch pricing updates (daily or less)",
+        "Generic recommendations (most popular or cheapest)",
+        "Limited group booking capability",
+        "Phone-based modifications and cancellations",
+        "Siloed channels (web, mobile, call center separate)"
+      ],
+      "constraints": [
+        "Basic search misses customer intent and preferences",
+        "Stale pricing causes booking failures",
+        "Generic recommendations yield low conversion",
+        "Group bookings require manual coordination",
+        "Channel inconsistencies frustrate customers"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-tbr-001",
+          "metric": "Manual Packaging Time (Traditional)",
+          "value": "10-30 minutes per booking",
+          "source": "TBD: [SME to provide source, e.g., 'Travel booking process time benchmarks']"
+        },
+        {
+          "id": "bench-tbr-002",
+          "metric": "Phone-Based Change Cost (Traditional)",
+          "value": "$15-30 per call",
+          "source": "TBD: [SME to provide source, e.g., 'Travel call center cost benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered booking platform with intelligent search, automated packaging, and omnichannel experience",
+      "characteristics": [
+        "AI understands natural language search intent ('beach vacation for family with kids')",
+        "Automated dynamic packaging with bundled pricing",
+        "Real-time pricing and availability across all suppliers",
+        "Personalized recommendations based on preferences and behavior",
+        "Self-service group bookings with coordinator tools",
+        "Self-service modifications via app/web",
+        "Unified omnichannel experience with seamless hand-offs"
+      ],
+      "benefits": [
+        "Improved conversion through intelligent search",
+        "Increased average booking value from dynamic packaging",
+        "Real-time pricing prevents booking failures",
+        "Reduced group booking manual effort and call center costs",
+        "Enhanced omnichannel consistency"
+      ],
+      "agents": [
+        "Travel Booking Orchestrator",
+        "Intelligent Search Agent",
+        "Dynamic Packaging Agent",
+        "Personalization Agent",
+        "Group Booking Agent",
+        "Modification Management Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Conversion Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent search understanding intent and preferences']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Average Booking Value Increase",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated dynamic packaging with bundled pricing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Group Booking Manual Effort Reduction",
+          "value": "70-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service group booking tools']",
+          "sourceBenchmark": "bench-tbr-001"
+        },
+        {
+          "metric": "Call Center Cost Reduction",
+          "value": "60-75%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on self-service booking modifications via app/web']",
+          "sourceBenchmark": "bench-tbr-002"
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement AI-powered search with intent understanding",
+        "Deploy automated dynamic packaging",
+        "Enable self-service booking modifications"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Modern booking platform with API architecture",
+        "Supplier integrations (GDS, direct connects)",
+        "Customer Data Platform for personalization",
+        "Real-time pricing and availability capability",
+        "Mobile app and web platform"
+      ]
+    },
+    "icon": "paper-airplane",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-travel-ancillary-revenue",
+    "type": "capability",
+    "level": 3,
+    "label": "Travel Ancillary Revenue Optimization",
+    "description": "AI-powered ancillary merchandising with personalized offers and dynamic pricing achieving 25-40% increase in ancillary revenue per passenger.",
+    "parentDomain": "domain-merchandising",
+    "industries": [
+      "Travel",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Seat selection & upgrades",
+      "Baggage fees & add-ons",
+      "Travel insurance & protection",
+      "In-flight services & amenities",
+      "Destination experiences & activities",
+      "Ancillary performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Generic ancillary offers with fixed pricing and limited merchandising",
+      "characteristics": [
+        "Generic ancillary offers (same for all customers)",
+        "Fixed pricing (seat selection $20, baggage $30, etc.)",
+        "Limited merchandising (checkbox during booking)",
+        "No personalization or targeting",
+        "Post-booking ancillaries require phone call",
+        "Limited performance visibility"
+      ],
+      "constraints": [
+        "Fixed pricing leaves money on table",
+        "Checkbox merchandising easy to ignore",
+        "No targeting based on customer value or trip type",
+        "Phone-based post-booking adds friction and cost",
+        "Limited insights on ancillary performance"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-taro-001",
+          "metric": "Attachment Rate (Traditional)",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Travel ancillary attachment rate benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven ancillary merchandising with personalized offers, dynamic pricing, and omnichannel delivery",
+      "characteristics": [
+        "Personalized ancillary recommendations based on customer profile and trip",
+        "Dynamic pricing for seats, upgrades, and services",
+        "Visual merchandising with compelling imagery and urgency",
+        "Proactive post-booking offers via email and app",
+        "Bundled packages (seat + bag + insurance)",
+        "A/B testing and continuous optimization"
+      ],
+      "benefits": [
+        "Increased ancillary revenue per passenger and attachment rates",
+        "Revenue increase from dynamic pricing",
+        "Improved visual merchandising conversion",
+        "Additional post-booking revenue capture",
+        "Enhanced bundling value"
+      ],
+      "agents": [
+        "Ancillary Revenue Orchestrator",
+        "Personalization Agent",
+        "Dynamic Pricing Agent",
+        "Merchandising Agent",
+        "Post-Booking Offer Agent",
+        "A/B Testing Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Ancillary Revenue per Passenger Increase",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized offers and dynamic pricing']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Attachment Rate Improvement",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized recommendations matching customer profile and trip']",
+          "sourceBenchmark": "bench-taro-001"
+        },
+        {
+          "metric": "Dynamic Pricing Revenue Increase",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on willingness-to-pay optimization for seats and services']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Visual Merchandising Conversion Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on compelling imagery and urgency messaging']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Post-Booking Revenue Capture",
+          "value": "15-25% additional",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive post-booking offers via email and app']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement personalized seat recommendations",
+        "Deploy dynamic pricing for premium seats",
+        "Enable post-booking ancillary offers via app"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Ancillary merchandising platform",
+        "Customer Data Platform for personalization",
+        "Pricing optimization capability",
+        "Mobile app and email marketing integration",
+        "Historical ancillary purchase data"
+      ]
+    },
+    "icon": "briefcase",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-travel-itinerary-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Travel Itinerary & Trip Management",
+    "description": "AI-powered trip management with real-time updates, proactive disruption handling, and personalized recommendations achieving 40-70% reduction in customer service contacts.",
+    "parentDomain": "domain-customer-experience",
+    "industries": [
+      "Travel",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B"
+    ],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Unified itinerary management",
+      "Real-time trip tracking & updates",
+      "Proactive disruption management",
+      "Mobile trip assistant",
+      "Destination guides & recommendations",
+      "Trip sharing & collaboration"
+    ],
+    "traditionalApproach": {
+      "description": "Email confirmations with manual disruption management and limited trip visibility",
+      "characteristics": [
+        "Email confirmations for each booking component",
+        "Customers manually track flight status",
+        "Reactive disruption handling (customer calls airline)",
+        "Limited trip visibility (printouts or emails)",
+        "Generic destination guides (if any)",
+        "No trip sharing capability"
+      ],
+      "constraints": [
+        "Separate emails create disjointed trip view",
+        "Manual flight tracking time-consuming and error-prone",
+        "Reactive disruptions cause stress and missed connections",
+        "Limited mobile access frustrates travelers",
+        "Generic guides lack personalization",
+        "Group/family travelers can't coordinate"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "AI-powered unified trip management with proactive disruption handling and personalized assistance",
+      "characteristics": [
+        "Unified itinerary with all trip components in one place",
+        "Real-time flight tracking with automatic updates",
+        "Proactive disruption alerts and rebooking options",
+        "Mobile trip assistant with AI chatbot support",
+        "Personalized destination recommendations and activities",
+        "Trip sharing for groups and families with collaborative planning"
+      ],
+      "benefits": [
+        "Reduced customer service contacts",
+        "Fewer missed connections from proactive management",
+        "Improved traveler confidence and satisfaction",
+        "24/7 mobile assistant support without call center",
+        "Increased ancillary bookings from personalized recommendations",
+        "Enhanced group traveler experience"
+      ],
+      "agents": [
+        "Trip Management Orchestrator",
+        "Real-Time Tracking Agent",
+        "Disruption Management Agent",
+        "Mobile Assistant Agent",
+        "Personalization Agent",
+        "Collaboration Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Customer Service Contact Reduction",
+          "value": "40-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive disruption handling and mobile assistant reducing call volume']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Missed Connection Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive disruption alerts and rebooking options']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Ancillary Booking Increase",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized destination recommendations during trip']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy unified itinerary in mobile app",
+        "Implement real-time flight tracking and alerts",
+        "Enable proactive rebooking for disruptions"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Mobile app platform",
+        "Real-time data feeds (flight status, weather, etc.)",
+        "Disruption management capability",
+        "AI chatbot platform",
+        "Booking system integration"
+      ]
+    },
+    "icon": "map",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

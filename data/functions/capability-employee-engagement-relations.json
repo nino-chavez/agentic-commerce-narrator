@@ -1,0 +1,475 @@
+[
+  {
+    "id": "function-pulse-surveys-feedback-collection",
+    "type": "function",
+    "level": 4,
+    "label": "Pulse Surveys & Feedback Collection",
+    "description": "Weekly or biweekly pulse surveys with 3-5 rotating questions, intelligent question design to avoid survey fatigue, anonymous feedback channels, team-level and manager-level insights, and trend analysis to increase response rates from 50-60% to 75-85% and provide real-time engagement visibility.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR conducts annual engagement survey with 60-80 questions taking 20-30 minutes to complete. 2. HR sends mass email to all employees with survey link. 3. 50-60% of employees respond (rest ignore due to survey length and fatigue). 4. HR analyzes results over 4-6 weeks: reads comments manually, calculates engagement scores by department. 5. HR presents results to leadership in PowerPoint deck. 6. Action planning (sometimes): executives commit to addressing issues but follow-through inconsistent. 7. 364 days of blindness: no engagement data between annual surveys, issues fester undetected.",
+      "constraints": [
+        "Annual survey only: 364 days of blindness to employee sentiment",
+        "50-60% response rate: low participation due to survey length and fatigue",
+        "60-80 questions: 20-30 minute survey overwhelming for employees",
+        "4-6 week analysis lag: results delayed, issues continue while HR analyzes data",
+        "Stale data by the time results presented: employee sentiment changes during analysis period",
+        "Action planning inconsistent: surveys reveal issues but follow-through limited",
+        "No real-time alerts: HR discovers toxic manager or team crisis months after it started"
+      ],
+      "metrics": ["Survey frequency: Annual", "Response rate: 50-60%", "Survey length: 60-80 questions", "Analysis lag: 4-6 weeks"]
+    },
+    "agentic": {
+      "workflow": "1. Pulse Survey & Feedback Agent sends short pulse surveys weekly or biweekly: 3-5 questions taking 2-3 minutes to complete. 2. Agent rotates questions to avoid fatigue: Week 1 asks about manager effectiveness, Week 2 asks about workload, Week 3 asks about career development. 3. Agent personalizes survey by role/department: managers receive questions about leadership, individual contributors about growth opportunities. 4. Agent sends multi-channel invitations: email, SMS, Slack notification to maximize reach. 5. Agent analyzes responses in real-time: calculates engagement scores by team, manager, department. 6. Agent flags immediate concerns: 'Team X engagement score dropped 20 points this week. Investigate urgently.' 7. Agent provides trend analysis: 'Manager Y's team engagement has declined steadily for 8 weeks. Coaching recommended.' 8. Agent enables anonymous feedback: employees submit concerns without fear of retaliation.",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Pulse Survey & Feedback Agent", "Survey Design Agent"],
+        "utilityAgents": ["Survey Platform API Agent", "Email/SMS Gateway Agent", "Slack/Teams Integration Agent", "Response Analytics Agent", "Trend Analysis Engine Agent", "Alert & Notification Agent"]
+      },
+      "dataSources": [
+        "Employee contact information and communication preferences",
+        "Survey question library (rotating topics: manager, workload, culture, development)",
+        "Survey response data and engagement scores",
+        "Team, manager, and department organizational structure",
+        "Anonymous feedback submissions",
+        "Historical engagement trends and benchmarks",
+        "Alert thresholds for significant score changes"
+      ],
+      "benefits": [
+        "20-30 percentage point response rate improvement: 75-85% vs 50-60%",
+        "Real-time engagement visibility: weekly/biweekly pulse vs annual blindness",
+        "95% time savings for employees: 2-3 minutes vs 20-30 minute annual survey",
+        "Immediate issue detection: toxic managers, team crises identified within 1-2 weeks vs 6-12 months",
+        "Question rotation reduces fatigue: employees don't dread short pulse surveys",
+        "Trend analysis: track engagement trajectories over time, spot declining teams proactively",
+        "Multi-channel delivery increases reach: email + SMS + Slack vs email-only"
+      ],
+      "metrics": ["Response rate: 75-85% (+20-30 pts)", "Survey frequency: Weekly/biweekly (vs annual)", "Survey length: 3-5 questions (vs 60-80)", "Analysis lag: Real-time (vs 4-6 weeks)"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy weekly pulse survey pilot with 3-5 questions for one department", "Implement multi-channel survey delivery (email + SMS + Slack) to increase response rates", "Create real-time engagement dashboard for HR and executives showing pulse survey trends"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Engagement platform with pulse survey capability (Culture Amp, Glint, Peakon)", "Employee contact information (email, phone, Slack ID)", "Survey question library designed by HR or I/O psychologists", "Organizational structure data (teams, managers, departments)", "Executive buy-in on replacing annual survey with continuous pulse approach"]
+    },
+    "icon": "chat-alt-2",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-sentiment-text-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Sentiment & Text Analytics",
+    "description": "NLP-powered sentiment analysis of survey comments, exit interviews, Slack messages (opt-in), and feedback submissions with automated theme extraction, positive/negative sentiment scoring at 95%+ accuracy, and identification of emerging issues before they escalate.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR receives 500-2,000 open-ended comments from annual engagement survey. 2. HR analyst manually reads 10-20% of comments (can't read all due to time constraints). 3. Analyst subjectively categorizes comments: pay concerns, manager issues, culture problems, career development. 4. Analyst creates word cloud or manual categorization in Excel. 5. Many important insights missed: only small sample of comments reviewed, nuances lost in manual categorization. 6. No sentiment analysis: can't distinguish frustrated vs satisfied comments systematically. 7. Exit interview comments filed in folders, never analyzed for patterns.",
+      "constraints": [
+        "Manual comment reading: only 10-20% of comments reviewed (sample bias)",
+        "Subjective categorization: analyst interpretation varies, inconsistent themes",
+        "Time-intensive: 20-40 hours to manually review and categorize 500-2,000 comments",
+        "No sentiment scoring: can't quantify positive vs negative sentiment systematically",
+        "Exit interview insights lost: filed but never analyzed for patterns",
+        "Emerging issues missed: can't detect early warning signs from scattered comments",
+        "No cross-source analysis: survey comments analyzed separately from exit interviews, Slack messages"
+      ],
+      "metrics": ["Comments analyzed: 10-20%", "Analysis time: 20-40 hours", "Sentiment accuracy: Subjective", "Theme identification: Manual, inconsistent"]
+    },
+    "agentic": {
+      "workflow": "1. Sentiment & Text Analytics Agent ingests all text feedback from multiple sources: pulse survey comments, annual survey comments, exit interview responses, anonymous feedback submissions, Slack/Teams messages (opt-in with employee consent). 2. Agent uses NLP to analyze sentiment: scores each comment as positive (0.7-1.0), neutral (0.3-0.7), or negative (0-0.3) with 95%+ accuracy. 3. Agent extracts themes automatically: identifies recurring topics (pay concerns, manager issues, workload, culture, career development, work-life balance). 4. Agent quantifies theme prevalence: 'Pay concerns mentioned in 23% of comments (up from 12% last month)'. 5. Agent identifies emerging issues: 'New theme detected: return-to-office policy mentioned in 18% of this week's comments (negative sentiment)'. 6. Agent provides manager-specific insights: 'Manager Jane's team comments 75% negative sentiment focused on micromanagement and lack of autonomy'. 7. Agent generates actionable reports: 'Top 5 themes this quarter: 1) Pay equity concerns (28%), 2) Career development (22%), 3) Manager quality (18%), 4) Workload (16%), 5) Work-life balance (12%)'.",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Sentiment & Text Analytics Agent", "Theme Extraction Agent"],
+        "utilityAgents": ["NLP Engine Agent", "Sentiment Scoring Model Agent", "Theme Clustering Algorithm Agent", "Multi-source Data Integration Agent", "Manager-level Analytics Agent", "Trend Detection Agent"]
+      },
+      "dataSources": [
+        "Pulse survey open-ended comments",
+        "Annual engagement survey text responses",
+        "Exit interview feedback and reasons for leaving",
+        "Anonymous feedback submissions",
+        "Slack/Teams messages (opt-in with employee consent)",
+        "Employee assistance program (EAP) case notes (anonymized)",
+        "Pre-trained NLP models and sentiment lexicons",
+        "Theme taxonomy and keywords"
+      ],
+      "benefits": [
+        "100% comment analysis vs 10-20% manual sample: no insights missed",
+        "95%+ sentiment accuracy: NLP-powered vs subjective human judgment",
+        "95% time savings: automated analysis vs 20-40 hours manual review",
+        "Theme identification: automated, consistent, quantifiable vs subjective categorization",
+        "Emerging issue detection: identify new themes within 1-2 weeks vs months of delay",
+        "Manager-specific insights: pinpoint toxic managers through negative sentiment patterns",
+        "Cross-source integration: analyze survey + exit interviews + Slack for comprehensive view"
+      ],
+      "metrics": ["Comments analyzed: 100% (vs 10-20%)", "Sentiment accuracy: 95%+", "Analysis time: <1 hour (vs 20-40 hours)", "Theme detection: Automated, real-time"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy NLP sentiment analysis on pulse survey comments for immediate insights", "Analyze exit interview text to identify top reasons for attrition", "Create theme dashboard showing most common employee concerns and their prevalence"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["NLP engine or text analytics platform", "Text data sources (survey comments, exit interviews)", "Employee consent for communication analysis (Slack, Teams) if applicable", "Theme taxonomy definition or use pre-built models", "Privacy and data security review for text analysis"]
+    },
+    "icon": "document-search",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-manager-effectiveness-measurement",
+    "type": "function",
+    "level": 4,
+    "label": "Manager Effectiveness Measurement",
+    "description": "Quarterly manager scorecards with team engagement scores, attrition rates, performance distribution, and 360 feedback to identify high-performing and struggling managers with 70-80% response rates (vs 30-40% traditional) and personalized coaching recommendations.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR conducts annual upward feedback or 360 reviews for managers (once per year). 2. HR sends email to employees requesting upward feedback on their manager (5-10 questions). 3. 30-40% response rate: employees ignore survey, fear retaliation, or survey fatigue. 4. HR manually analyzes feedback, creates report for manager: 'Your team rated you 3.2/5 on communication, 3.8/5 on support'. 5. Manager receives feedback 6-8 weeks after survey closes. 6. No ongoing manager development: feedback given once per year, managers left to improve on their own. 7. Toxic managers discovered too late: mass team exodus before HR identifies manager quality issue.",
+      "constraints": [
+        "Annual upward feedback: 364 days of blindness to manager effectiveness",
+        "30-40% response rate: low participation, non-representative sample",
+        "6-8 week feedback lag: manager receives insights weeks after survey, can't act quickly",
+        "No coaching recommendations: manager gets scores but no guidance on how to improve",
+        "Toxic managers identified too late: high attrition occurs before manager quality flagged",
+        "Fear of retaliation: employees hesitant to give honest upward feedback",
+        "No trend analysis: can't track if manager improving or declining over time"
+      ],
+      "metrics": ["Upward feedback frequency: Annual", "Response rate: 30-40%", "Feedback lag: 6-8 weeks", "Coaching provided: Minimal"]
+    },
+    "agentic": {
+      "workflow": "1. Manager Effectiveness Agent creates quarterly manager scorecards with multiple data sources: team engagement scores from pulse surveys (does manager's team score higher or lower than company average?), attrition rate (what % of manager's team left in last year?), performance distribution (does manager differentiate high vs low performers in ratings?), 360 feedback from direct reports (quarterly micro-surveys: 3-5 questions about manager). 2. Agent calculates manager effectiveness score: 0-100 based on weighted composite (engagement 40%, attrition 30%, performance mgmt 20%, 360 feedback 10%). 3. Agent identifies high-performing managers: 'Manager Sarah scores 92/100—top 10% company-wide. Team engagement 85%, attrition 5%, strong coaching skills.' 4. Agent flags struggling managers: 'Manager Bob scores 45/100—bottom 20%. Team engagement 55% (vs 72% company avg), attrition 28% (vs 15% avg), poor feedback on communication.' 5. Agent generates personalized coaching recommendations: 'Bob: focus on 1-on-1 cadence (team wants more frequent check-ins), delegation skills (team feels micromanaged), career development (team wants growth opportunities).' 6. Agent enables trend tracking: 'Sarah's effectiveness score has improved from 78 to 92 over last 12 months—coaching is working.'",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Manager Effectiveness Agent", "Coaching Recommendation Agent"],
+        "utilityAgents": ["Engagement Data Integration Agent", "Attrition Tracking Agent", "Performance Rating Analysis Agent", "360 Feedback Platform Agent", "Manager Dashboard Agent", "Coaching Content Library Agent"]
+      },
+      "dataSources": [
+        "Pulse survey engagement scores by team",
+        "Attrition data (voluntary departures by manager)",
+        "Performance ratings and distribution by manager",
+        "360 feedback survey responses (quarterly micro-surveys)",
+        "Manager development programs and coaching completion",
+        "Organizational structure (manager-employee relationships)",
+        "Coaching recommendation library (best practices by competency gap)"
+      ],
+      "benefits": [
+        "40-50 percentage point response improvement: 70-80% vs 30-40% (quarterly micro-surveys less intimidating)",
+        "Quarterly insights vs annual: early detection of struggling managers before mass exodus",
+        "Multi-source data: engagement + attrition + performance + 360 = comprehensive view",
+        "Personalized coaching: manager gets specific recommendations on skills to develop, not generic feedback",
+        "High-performer identification: recognize and reward top managers, learn best practices",
+        "Trend analysis: track manager improvement over time, validate coaching effectiveness",
+        "Reduced attrition: proactive manager coaching prevents toxic culture and team departures"
+      ],
+      "metrics": ["Response rate: 70-80% (+40-50 pts)", "Feedback frequency: Quarterly (vs annual)", "Coaching recommendations: Personalized", "Manager development: Data-driven"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create quarterly manager scorecards combining engagement, attrition, and 360 feedback data", "Deploy quarterly manager effectiveness micro-surveys (3-5 questions) to increase response rates", "Generate personalized coaching recommendations based on manager scorecard gaps"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Engagement platform with team-level data", "Attrition tracking by manager in HRIS", "Performance management data by manager", "360 feedback platform or pulse survey capability", "Manager coaching content library or external coaching resources", "Executive sponsorship for manager accountability"]
+    },
+    "icon": "user-circle",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-employee-relations-case-management",
+    "type": "function",
+    "level": 4,
+    "label": "Employee Relations Case Management",
+    "description": "Centralized case intake and tracking for harassment complaints, discrimination allegations, grievances, and workplace conflicts with automated routing, SLA tracking, investigation workflow management, and predictive escalation to reduce resolution time from 30-60 days to 15-30 days.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee reports harassment or discrimination complaint via email to HR manager. 2. HR manager manually creates case file in Excel spreadsheet or shared folder. 3. HR manager assigns case to HR business partner or investigator via email. 4. Investigator schedules interviews with complainant, accused, and witnesses (manual email coordination). 5. Investigator documents interviews in Word document, stores in shared folder. 6. Case drags on: 30-60 days from complaint to resolution due to manual coordination. 7. No SLA tracking: cases miss deadlines, complainants frustrated by lack of updates. 8. Compliance risk: no centralized audit trail, documentation scattered across emails and files.",
+      "constraints": [
+        "Email-based case intake: cases reported inconsistently, some go unreported",
+        "Excel spreadsheet tracking: no centralized system, version control issues",
+        "Manual case assignment: HR manager decides who investigates (no routing rules)",
+        "30-60 day resolution time: manual interview coordination, documentation delays",
+        "No SLA tracking: cases miss legal/compliance deadlines (EEOC 180 days, state 300 days)",
+        "Scattered documentation: interview notes, evidence in shared folders, emails",
+        "Compliance audit risk: can't quickly produce case history or metrics for audits"
+      ],
+      "metrics": ["Case resolution time: 30-60 days", "SLA tracking: None", "Documentation: Scattered (emails, folders)", "Audit readiness: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Employee Relations Case Management Agent provides multiple case intake channels: web form, mobile app, email, phone hotline, anonymous tip line. 2. Agent automatically creates case record: assigns case ID, timestamps submission, routes to appropriate HR business partner based on case type (harassment → senior investigator, policy violation → manager HRBP). 3. Agent tracks case through investigation lifecycle: intake → assignment → interviews → evidence review → determination → resolution. 4. Agent monitors SLAs: tracks time since case opened, sends alerts 'Case #1234 opened 25 days ago, approaching 30-day SLA deadline'. 5. Agent predicts escalation risk: 'Case #1234 involves senior executive and retaliation allegations—high risk, escalate to VP HR and Legal immediately'. 6. Agent manages investigation workflow: sends interview invites, documents witness statements, organizes evidence, creates investigation timeline. 7. Agent generates audit trail: complete case history with timestamps, actions, and outcomes for legal/compliance reporting.",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Employee Relations Case Management Agent", "Escalation Agent"],
+        "utilityAgents": ["Case Intake Portal Agent", "Automated Routing Agent", "SLA Tracking & Alert Agent", "Investigation Workflow Agent", "Document Management Agent", "Compliance Reporting Agent"]
+      },
+      "dataSources": [
+        "Case intake forms and submissions",
+        "Case routing rules (case type → investigator assignment)",
+        "SLA deadlines (internal policies, legal requirements)",
+        "Employee organizational data (reporters, accused, witnesses)",
+        "Investigation interview notes and evidence",
+        "Case resolution outcomes and remediation actions",
+        "Compliance reporting requirements (EEOC, state agencies)",
+        "Legal hold and retention policies"
+      ],
+      "benefits": [
+        "50% faster resolution: 15-30 days vs 30-60 days through automated workflows",
+        "100% SLA tracking: no missed deadlines, compliance ensured",
+        "Centralized case management: all documentation in one system vs scattered emails/folders",
+        "Automated routing: cases assigned to right investigator based on rules vs manual judgment",
+        "Predictive escalation: high-risk cases flagged immediately for senior HR/legal review",
+        "Audit readiness: complete case history available in seconds for EEOC, DOL, or internal audits",
+        "Improved complainant experience: status updates, transparent process vs 'black hole'"
+      ],
+      "metrics": ["Resolution time: 15-30 days (-50%)", "SLA tracking: 100% (automated)", "Audit readiness: 100% (centralized records)", "Escalation detection: Proactive"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy centralized case intake portal (web form + mobile app) to replace email-based reporting", "Implement automated case routing based on case type and severity", "Enable SLA tracking with automated alerts for approaching deadlines"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Case management platform (ServiceNow, Salesforce, Workday Cases)", "Case routing rules and investigator assignments defined", "SLA deadlines documented (internal policies + legal requirements)", "Investigation workflow templates and interview guides", "Legal and compliance team involvement in system design", "Employee communication on new case intake channels"]
+    },
+    "icon": "clipboard-list",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-crisis-detection-early-warning",
+    "type": "function",
+    "level": 4,
+    "label": "Crisis Detection & Early Warning",
+    "description": "ML-powered early warning system that detects workplace crises 2-4 weeks in advance with 70-80% accuracy by analyzing engagement drops, absenteeism spikes, performance declines, and concerning language in feedback, enabling proactive intervention to prevent 60-80% of escalations.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR responds to crises reactively: mass team resignation, harassment lawsuit, workplace violence, employee suicide attempt. 2. HR learns about crisis after it occurs: employee quits and cites toxic manager, lawsuit filed, or worst-case scenario plays out. 3. No early warning signs detected: engagement data stale (annual survey), attrition patterns not monitored, no sentiment analysis. 4. Crisis response ad-hoc: HR scrambles to contain damage, conduct investigations, communicate with employees. 5. Post-crisis analysis: 'Warning signs were there—team engagement dropped 30 points 6 months ago, but we didn't know until now'. 6. Preventable crises occur: mass exodus, lawsuits, reputation damage could have been avoided with early intervention.",
+      "constraints": [
+        "Reactive crisis response: HR learns about issues after damage done",
+        "No early warning system: engagement, attrition, performance data not monitored for crisis signals",
+        "Annual survey blindness: toxic manager or team crisis festers for 6-12 months undetected",
+        "Missed intervention opportunities: could have coached manager, reassigned employees, or addressed issues early",
+        "High-cost consequences: lawsuits, attrition, reputation damage, employee harm",
+        "Ad-hoc response: no crisis playbook, HR reacts without preparation",
+        "Post-crisis regret: 'We should have seen the warning signs earlier'"
+      ],
+      "metrics": ["Crisis detection: Reactive (after occurrence)", "Early warning: None", "Preventable escalations: 60-80% missed", "Intervention success: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Crisis Detection & Intervention Agent continuously monitors multiple data sources for early warning signals: pulse survey engagement scores by team (sudden 20+ point drop?), absenteeism and sick leave patterns (spike in unplanned absences?), performance rating trends (entire team rated low by manager?), attrition (3+ resignations from same team in 1 month?), sentiment analysis (negative themes: burnout, harassment, retaliation?). 2. Agent detects concerning patterns using ML model trained on historical crises: 'Team X shows 5 crisis indicators: engagement down 25 points, 2 resignations this month, sentiment analysis shows harassment concerns, absenteeism up 40%. Predicted crisis probability: 78%.' 3. Agent sends early warning alerts 2-4 weeks before crisis: 'URGENT: Team X shows high crisis risk. Immediate investigation recommended.' 4. Agent triggers intervention workflow: assigns senior HR business partner to investigate, schedules listening sessions with team, places manager on coaching plan, escalates to VP HR and Legal. 5. Agent recommends interventions: 'Reassign toxic manager, conduct harassment investigation, offer employee assistance program (EAP) resources, communicate action plan to team'. 6. Agent tracks intervention outcomes: 'Crisis averted. Team X engagement stabilized, no additional resignations, employees report manager improvement.'",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Crisis Detection & Intervention Agent", "Early Warning Agent"],
+        "utilityAgents": ["Engagement Monitoring Agent", "Attrition Pattern Detection Agent", "Absenteeism Tracking Agent", "Performance Trend Analysis Agent", "Sentiment Analysis Agent (see Function 2)", "ML Crisis Prediction Model", "Intervention Workflow Agent"]
+      },
+      "dataSources": [
+        "Pulse survey engagement scores by team and manager",
+        "Attrition data (resignations, voluntary departures)",
+        "Absenteeism and sick leave patterns",
+        "Performance ratings and trends",
+        "Sentiment analysis from survey comments and feedback",
+        "Employee relations cases (harassment, discrimination complaints)",
+        "Historical crisis data for ML model training",
+        "Intervention effectiveness tracking"
+      ],
+      "benefits": [
+        "70-80% crisis prediction accuracy: ML identifies high-risk teams 2-4 weeks in advance",
+        "60-80% escalation prevention: proactive intervention stops crises before they occur",
+        "Early warning 2-4 weeks ahead: time to investigate and intervene vs reactive response",
+        "Multi-source detection: engagement + attrition + absenteeism + sentiment = comprehensive risk view",
+        "Intervention playbook: automated workflow ensures consistent, effective crisis response",
+        "Employee harm reduction: prevents workplace violence, harassment escalation, suicide attempts",
+        "Cost savings: avoid lawsuits ($100K-$5M), mass attrition, reputation damage"
+      ],
+      "metrics": ["Prediction accuracy: 70-80% (2-4 weeks ahead)", "Escalation prevention: 60-80%", "Early warning lead time: 2-4 weeks", "Crisis cost avoidance: $500K-$5M per incident"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy engagement monitoring alerts for teams with 20+ point score drops", "Track attrition patterns (3+ resignations from same team triggers alert)", "Integrate sentiment analysis to flag concerning themes (harassment, burnout, retaliation)"],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months (requires historical data for ML model training)",
+      "prerequisites": ["Historical crisis data for ML model training (3-5 years)", "Real-time engagement data from pulse surveys", "Attrition and absenteeism data integrated", "Sentiment analysis capability (see Function 2)", "Senior HR crisis response team defined", "Crisis intervention playbook and escalation protocols", "Executive sponsorship (CHRO, General Counsel, CEO) for proactive crisis management"]
+    },
+    "icon": "exclamation-triangle",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-recognition-programs-peer-appreciation",
+    "type": "function",
+    "level": 4,
+    "label": "Recognition Programs & Peer Appreciation",
+    "description": "Social recognition platform with real-time peer-to-peer kudos, manager spot awards, gamification with points and badges, social visibility across organization, and redeemable rewards to increase participation from 10-20% to 60-80% and strengthen culture.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Company holds annual awards ceremony recognizing top 5-10 employees (employee of the year, team of the year). 2. Nominations submitted by managers only (employees can't nominate peers). 3. Winners selected by executive committee behind closed doors. 4. Awards announced at annual company meeting: trophy, gift card, applause. 5. 10-20% participation: only award winners recognized, rest of employees receive no appreciation. 6. No peer-to-peer recognition: employees can't thank colleagues for everyday help. 7. Manager-driven only: some managers give frequent praise, others never recognize team.",
+      "constraints": [
+        "Annual awards only: 364 days without recognition for most employees",
+        "Manager-driven: no peer-to-peer appreciation, employees can't thank colleagues",
+        "Low participation: 10-20% (only award winners recognized)",
+        "Invisible contributions: everyday help, collaboration goes unnoticed",
+        "Opaque selection process: employees don't understand how winners chosen",
+        "Delayed gratification: recognition given months after achievement",
+        "Inconsistent manager behavior: some managers recognize frequently, others never do"
+      ],
+      "metrics": ["Participation rate: 10-20% (award winners only)", "Recognition frequency: Annual", "Peer-to-peer: None", "Cultural impact: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Recognition Program Agent provides social recognition platform: employees send peer-to-peer kudos via Slack, Teams, mobile app, or web portal. 2. Employees recognize colleagues in real-time: 'Kudos to @Sarah for helping me debug that production issue! You saved the day!' 3. Agent provides recognition templates aligned to company values: 'Innovation', 'Customer Obsession', 'Teamwork', 'Integrity'. 4. Agent enables manager spot awards: managers give instant awards ($25-$100 gift cards, extra PTO day, parking spot) for exceptional work. 5. Agent gamifies recognition: employees earn points for giving and receiving kudos, unlock badges ('Helpful Hero' for 50 kudos received, 'Super Supporter' for 100 kudos given). 6. Agent creates social visibility: recognition feed visible to entire company (or team), kudos displayed on profiles, top recognizers and receivers highlighted. 7. Agent enables redemption: employees redeem points for gift cards, company swag, donations to charity, extra PTO.",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Recognition Program Agent", "Social Recognition Agent"],
+        "utilityAgents": ["Slack/Teams Integration Agent", "Mobile App Agent", "Gamification Engine Agent", "Points & Rewards Tracking Agent", "Social Feed Agent", "Notification Service Agent"]
+      },
+      "dataSources": [
+        "Employee directory and organizational structure",
+        "Company values and recognition categories",
+        "Recognition events (kudos sent, received, spot awards)",
+        "Points balances and redemption history",
+        "Gamification badges and achievement tracking",
+        "Manager budget for spot awards",
+        "Rewards catalog (gift cards, swag, PTO)",
+        "Social recognition feed and visibility settings"
+      ],
+      "benefits": [
+        "40-60 percentage point participation improvement: 60-80% vs 10-20%",
+        "Real-time recognition vs annual awards: appreciation given immediately, not months later",
+        "Peer-to-peer culture: employees thank colleagues for everyday help, not just managers",
+        "Social visibility: recognition visible to organization, amplifying appreciation and cultural impact",
+        "Gamification drives engagement: points, badges make recognition fun and competitive",
+        "Cultural reinforcement: recognition aligned to company values strengthens desired behaviors",
+        "Retention impact: recognized employees 20-30% less likely to leave"
+      ],
+      "metrics": ["Participation: 60-80% (+40-60 pts)", "Recognition frequency: Real-time daily/weekly (vs annual)", "Peer-to-peer: Enabled", "Cultural impact: High"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy social recognition platform integrated with Slack or Teams for easy adoption", "Enable peer-to-peer kudos aligned to company values", "Create gamification leaderboards showing top recognizers and receivers to drive participation"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Recognition platform (Workhuman, Bonusly, Kudos, or custom)", "Integration with Slack, Teams, or email for easy access", "Company values and recognition categories defined", "Manager spot award budget allocated", "Rewards catalog (gift cards, swag, charity donations)", "Executive communication launching recognition program"]
+    },
+    "icon": "badge-check",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-action-planning-initiative-tracking",
+    "type": "function",
+    "level": 4,
+    "label": "Action Planning & Initiative Tracking",
+    "description": "Auto-generated action plans from engagement survey results with AI-recommended initiatives, progress tracking dashboards, accountability assignment to managers and executives, and outcome measurement to increase action plan completion from 20-30% to 60-80%.",
+    "parentCapability": "capability-employee-engagement-relations",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. HR presents engagement survey results to leadership team in PowerPoint: 'Engagement score is 65%, down from 70% last year. Top issues: pay, career development, manager quality'. 2. Leadership team discusses and commits to action plans: 'We will improve pay competitiveness, launch mentorship program, train managers.' 3. HR documents action plans in Word document or Excel spreadsheet. 4. Action plans filed and forgotten: no tracking, no accountability, no follow-up. 5. Next year's survey: same issues persist, employees frustrated that nothing changed. 6. 20-30% action plan completion rate: initiatives launched with fanfare but abandoned mid-year.",
+      "constraints": [
+        "PowerPoint-driven action planning: surveys reveal issues, action plans documented, but execution weak",
+        "No accountability: action plans assigned to 'HR' or 'Leadership Team' without clear owner",
+        "No progress tracking: initiatives launched but no dashboard showing completion status",
+        "20-30% completion rate: action plans forgotten amid other priorities",
+        "Employee cynicism: 'Why bother with survey? Nothing ever changes.'",
+        "No measurement: can't prove action plans improved engagement or business outcomes",
+        "Annual cycle: action plans created once per year, no mid-year adjustments"
+      ],
+      "metrics": ["Action plan completion: 20-30%", "Accountability: Low", "Progress tracking: None", "Employee trust: Low (cynicism)"]
+    },
+    "agentic": {
+      "workflow": "1. Action Planning Agent analyzes engagement survey results and auto-generates recommended action plans: 'Top issue: 45% of employees cite pay as concern. Recommended actions: conduct pay equity audit, benchmark salaries vs market, adjust below-market employees to 50th percentile. Estimated cost: $850K. Expected engagement lift: +8 points.' 2. Agent assigns accountability: 'Pay equity action plan owner: VP HR. Stakeholders: CFO, Compensation Director. Deadline: Q2 2025.' 3. Agent creates progress tracking dashboard: shows all action plans by status (not started, in progress, completed, abandoned), % complete, next milestones. 4. Agent sends automated reminders: 'Pay equity audit deadline approaching (30 days). 60% complete. Next step: finalize adjustment budget with CFO.' 5. Agent measures outcomes: 'Pay equity adjustments completed Q2. Subsequent pulse survey shows pay satisfaction increased from 45% to 68% (+23 pts). Action plan successful.' 6. Agent enables visible accountability: executive dashboard shows which leaders completing action plans vs dragging feet. 7. Agent learns from past initiatives: 'Mentorship program launched last year increased engagement +5 pts. Recommend expanding to all departments.'",
+      "agents": {
+        "orchestrator": "Employee Engagement & Relations Orchestration Agent",
+        "superAgents": ["Action Planning Agent", "Initiative Tracking Agent"],
+        "utilityAgents": ["Engagement Results Analysis Agent", "Recommendation Engine Agent", "Accountability Assignment Agent", "Progress Dashboard Agent", "Reminder & Notification Agent", "Outcome Measurement Agent"]
+      },
+      "dataSources": [
+        "Engagement survey results and top issues identified",
+        "Action plan library (best practices, initiatives, ROI estimates)",
+        "Action plan ownership and accountability assignments",
+        "Progress tracking data (milestones, completion %, status)",
+        "Engagement outcomes (did action plan improve scores?)",
+        "Budget and resource constraints",
+        "Executive dashboard views and reporting"
+      ],
+      "benefits": [
+        "60-80% action plan completion vs 20-30%: visible accountability drives execution",
+        "Auto-generated recommendations: agent suggests evidence-based initiatives, not guesswork",
+        "Clear accountability: action plans assigned to specific executives, not generic 'HR'",
+        "Progress tracking: real-time dashboard shows completion status, no hiding incomplete initiatives",
+        "Outcome measurement: prove which action plans work (engagement lift) vs ineffective",
+        "Employee trust: visible progress on action plans reduces cynicism, 'they're actually listening'",
+        "Learning loop: agent learns from past initiatives to recommend better action plans over time"
+      ],
+      "metrics": ["Completion rate: 60-80% (+40-50 pts)", "Accountability: High (visible dashboards)", "Progress tracking: Real-time", "Employee trust: Improved"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create action planning dashboard showing all initiatives, owners, and completion status", "Implement automated reminders for action plan owners when milestones approaching", "Measure outcomes by comparing engagement scores before and after action plan implementation"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Engagement platform with action planning module", "Action plan library or recommendation engine", "Accountability framework (assign owners, stakeholders, deadlines)", "Executive dashboard for visibility and accountability", "Budget and resources allocated for action plans", "Executive sponsorship (CHRO, CEO) for visible accountability"]
+    },
+    "icon": "clipboard-check",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

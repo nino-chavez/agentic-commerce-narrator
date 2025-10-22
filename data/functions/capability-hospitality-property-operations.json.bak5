@@ -1,0 +1,1131 @@
+{
+  "id": "capability-hospitality-property-operations",
+  "name": "Hospitality Property Operations",
+  "description": "AI-powered operational systems managing housekeeping, maintenance, inspections, energy optimization, amenity management, and staff scheduling for hospitality properties",
+  "category": "industry-specific",
+  "industryVertical": "hospitality",
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "maturity": "production-ready",
+    "benchmarkStatus": "proven-roi"
+  },
+  "functions": [
+    {
+      "id": "fn-hosp-ops-housekeeping-task",
+      "name": "Housekeeping Task Management",
+      "description": "AI-powered housekeeping orchestration managing room status tracking, task assignment optimization, quality inspections, and productivity analytics",
+      "traditional_workflow": "Housekeeping supervisors manually assign rooms to attendants based on floor sections, without considering task complexity or attendant workload. Room status updates are communicated via walkie-talkie or paper slips with delays and errors. Attendants clean rooms in sequential order without prioritization of VIP or early check-ins. Quality inspections are random spot checks covering 10-15% of rooms. Productivity tracking is manual, based on room counts without considering room conditions (checkout vs. stay-over) or special requests.",
+      "agentic_workflow": "Task assignment agents optimize room allocation to housekeeping staff based on room location, complexity (checkout vs. stay-over), attendant skills, and current workload. Priority agents dynamically adjust cleaning sequence based on arrival times, VIP status, and guest requests. Room status agents enable real-time updates via mobile devices, instantly informing front desk of room availability. Inspection agents use risk scoring to target quality checks on high-priority rooms and new staff. Productivity analytics agents track performance metrics in real-time, identifying efficiency opportunities and training needs.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Housekeeping Operations Orchestrator",
+          "role": "Manages end-to-end housekeeping operations from task assignment through quality assurance, optimizing efficiency and guest satisfaction",
+          "responsibilities": [
+            "Optimize task assignments across staff",
+            "Prioritize rooms based on arrivals and VIP status",
+            "Manage real-time room status tracking",
+            "Coordinate quality inspections and performance tracking"
+          ]
+        },
+        "super_agents": [
+          {
+            "name": "Task Assignment Agent",
+            "role": "Optimally assigns cleaning tasks to housekeeping staff based on workload, skills, location, and room complexity",
+            "capabilities": [
+              "Workload balancing across attendants",
+              "Location-based clustering to minimize travel",
+              "Task complexity consideration (checkout vs. stay-over)",
+              "Skill-based assignment for special requests"
+            ]
+          },
+          {
+            "name": "Priority Scheduling Agent",
+            "role": "Dynamically prioritizes room cleaning based on arrivals, VIP status, early check-ins, and operational needs",
+            "capabilities": [
+              "Arrival-driven prioritization",
+              "VIP room expediting",
+              "Early check-in request handling",
+              "Checkout time optimization"
+            ]
+          },
+          {
+            "name": "Room Status Agent",
+            "role": "Tracks real-time room status (dirty, cleaning, clean, inspected) with mobile updates from housekeeping staff",
+            "capabilities": [
+              "Real-time status updates via mobile devices",
+              "Automated front desk synchronization",
+              "Status change timestamp tracking",
+              "Exception flagging (long cleaning times, issues found)"
+            ]
+          },
+          {
+            "name": "Quality Inspection Agent",
+            "role": "Manages inspection scheduling, checklist compliance, defect tracking, and quality trend analysis",
+            "capabilities": [
+              "Risk-based inspection targeting",
+              "Digital inspection checklists",
+              "Photo documentation of issues",
+              "Quality trend analysis by attendant and room type"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Productivity Analytics Agent",
+            "role": "Tracks and analyzes housekeeping productivity, identifying efficiency opportunities"
+          },
+          {
+            "name": "Linen & Supply Agent",
+            "role": "Monitors linen and amenity inventory, triggering replenishment"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-quality-failures",
+          "name": "Quality Inspection Failure",
+          "trigger": "Room fails quality inspection with major defects or repeated issues",
+          "human_role": "Housekeeping Supervisor",
+          "decision_criteria": "Defect severity, re-clean requirements, staff coaching needs, guest impact",
+          "auto_proceed_conditions": "Rooms passing inspection or minor defects auto-logged for follow-up",
+          "escalation_path": "Executive Housekeeper for patterns of quality issues or serious defects"
+        ],
+        {
+          "gate_id": "gtg-workload-imbalance",
+          "name": "Extreme Workload Imbalance",
+          "trigger": "AI assignment creates workload variance >30% between attendants or overtime risk",
+          "human_role": "Housekeeping Supervisor",
+          "decision_criteria": "Staffing constraints, union rules, individual capabilities, fairness considerations",
+          "auto_proceed_conditions": "Balanced assignments within 15% variance and normal workload parameters",
+          "escalation_path": "Executive Housekeeper for staffing shortage issues"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Checkout list, arrival list, stay-over list, VIP flags, early check-in requests, room types",
+          "integration_pattern": "Real-time API, morning batch updates"
+        ],
+        {
+          "source": "Housekeeping Management System",
+          "data_elements": "Task assignments, room status, attendant locations, productivity data, inspection results",
+          "integration_pattern": "Real-time bidirectional sync"
+        ],
+        {
+          "source": "Mobile Devices",
+          "data_elements": "Room status updates, task completion, inspection photos, issue reporting, time tracking",
+          "integration_pattern": "Mobile app with offline capability"
+        ],
+        {
+          "source": "Staff Management",
+          "data_elements": "Attendant schedules, skills, languages, performance ratings, training records",
+          "integration_pattern": "Workforce management integration"
+        ],
+        {
+          "source": "Guest Service Requests",
+          "data_elements": "Special requests (extra amenities, hypoallergenic bedding), complaints, service requests",
+          "integration_pattern": "Service request system integration"
+        ],
+        {
+          "source": "Inventory Management",
+          "data_elements": "Linen counts, amenity stock levels, cleaning supply inventory",
+          "integration_pattern": "Inventory system, par level tracking"
+        ],
+        {
+          "source": "Quality Management",
+          "data_elements": "Inspection checklists, defect types, corrective actions, quality scores by attendant",
+          "integration_pattern": "Quality tracking database"
+        }
+      ],
+      "quantified_benefits": {
+        "room_cleaning_efficiency": "12-15 minutes average → 10-12 minutes with optimized assignment and prioritization",
+        "room_availability_speed": "30-60 minutes from clean to front desk notification → 2-5 minutes real-time",
+        "labor_utilization": "60-70% productive time → 85-90% with optimized task assignment",
+        "early_check_in_success": "40-50% → 75-85% with prioritized cleaning",
+        "quality_inspection_coverage": "10-15% random → 30-40% risk-based targeted inspections",
+        "guest_satisfaction": "80-85% housekeeping CSAT → 90-95% with faster, prioritized service"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy mobile devices for real-time room status updates (Week 1-2)",
+          "Implement basic task assignment with location clustering (Week 2-3)",
+          "Enable arrival-based priority cleaning (Week 3-4)"
+        ],
+        "investment_required": "Medium - Housekeeping management software, mobile devices for staff, PMS integration",
+        "time_to_value": "6-10 weeks for core automation, 12-16 weeks for advanced optimization and analytics",
+        "prerequisites": [
+          "Housekeeping management system or mobile solution",
+          "PMS integration for arrival/departure data",
+          "Mobile devices for housekeeping staff (smartphones or tablets)",
+          "Wi-Fi coverage throughout property",
+          "Digital inspection checklist development",
+          "Staff training on mobile tools and real-time communication",
+          "Change management for shift from paper-based to digital processes"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-maintenance-automation",
+      "name": "Maintenance Work Order Automation",
+      "description": "AI-powered maintenance system managing preventive maintenance scheduling, repair requests, vendor coordination, and asset lifecycle tracking",
+      "traditional_workflow": "Maintenance requests come via phone calls, paper slips, or radio messages with inconsistent details. Work orders are manually created and assigned based on technician availability without considering skills, parts availability, or priority. Preventive maintenance is scheduled on fixed calendars without considering actual equipment usage or condition. Vendor coordination for outsourced work requires phone calls and email follow-ups. Asset histories are incomplete, and recurring issues go undetected due to lack of centralized tracking.",
+      "agentic_workflow": "Work order agents automatically capture maintenance requests from multiple channels (guest app, staff reporting, IoT sensors) with structured details. Assignment agents optimize technician dispatch based on skills, location, workload, and parts availability. Predictive maintenance agents analyze equipment data to schedule maintenance based on actual condition rather than fixed intervals. Vendor coordination agents automate scheduling, scope communication, and completion verification for outsourced work. Analytics agents identify recurring issues and recommend root cause investigations or asset replacements.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Maintenance Operations Orchestrator",
+          "role": "Manages maintenance lifecycle from request through completion, coordinating technicians, vendors, parts, and asset management",
+          "responsibilities": [
+            "Route and prioritize work orders",
+            "Optimize technician assignments",
+            "Schedule preventive maintenance",
+            "Coordinate vendor services and track asset lifecycle"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Work Order Management Agent",
+            "role": "Captures, categorizes, and routes maintenance requests with priority scoring and SLA tracking",
+            "capabilities": [
+              "Multi-channel request capture (app, staff, IoT)",
+              "Automatic categorization and priority scoring",
+              "SLA management by issue type",
+              "Duplicate detection and consolidation"
+            ]
+          },
+          {
+            "name": "Technician Assignment Agent",
+            "role": "Optimally assigns work orders to technicians based on skills, location, workload, and parts availability",
+            "capabilities": [
+              "Skill-based routing (HVAC, plumbing, electrical)",
+              "Location-based assignment to minimize travel",
+              "Workload balancing",
+              "Parts availability checking before assignment"
+            ]
+          },
+          {
+            "name": "Predictive Maintenance Agent",
+            "role": "Analyzes equipment data and usage patterns to schedule condition-based preventive maintenance",
+            "capabilities": [
+              "Usage-based maintenance scheduling",
+              "Equipment health monitoring from IoT sensors",
+              "Failure prediction based on historical patterns",
+              "Maintenance window optimization to minimize guest impact"
+            ]
+          },
+          {
+            "name": "Vendor Coordination Agent",
+            "role": "Manages outsourced maintenance through automated scheduling, communication, and completion verification",
+            "capabilities": [
+              "Automated vendor selection based on specialization",
+              "Work scope communication and documentation",
+              "Schedule coordination and confirmation",
+              "Completion verification and quality tracking"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Parts Inventory Agent",
+            "role": "Tracks parts inventory, triggers reordering, links work orders to parts usage"
+          },
+          {
+            "name": "Asset Lifecycle Agent",
+            "role": "Maintains asset history, tracks total cost of ownership, recommends replacement timing"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-urgent-safety",
+          "name": "Urgent Safety or Guest-Impacting Issue",
+          "trigger": "Work order flagged as safety risk or seriously impacting guest experience",
+          "human_role": "Maintenance Supervisor or Chief Engineer",
+          "decision_criteria": "Safety severity, guest relocation needs, immediate response requirements, resource mobilization",
+          "auto_proceed_conditions": "Routine maintenance and minor repairs assigned automatically",
+          "escalation_path": "Duty Manager and General Manager for serious safety or property damage issues"
+        ],
+        {
+          "gate_id": "gtg-major-expenditure",
+          "name": "High-Cost Repair or Replacement",
+          "trigger": "Repair estimate exceeds threshold ($5,000+) or asset replacement recommended",
+          "human_role": "Chief Engineer",
+          "decision_criteria": "Repair vs. replace analysis, budget availability, guest impact, timing considerations",
+          "auto_proceed_conditions": "Routine repairs and preventive maintenance within budget parameters",
+          "escalation_path": "General Manager or Regional Operations for capital expenditure approvals >$25K"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Computerized Maintenance Management System (CMMS)",
+          "data_elements": "Work orders, preventive maintenance schedules, asset registry, maintenance history, technician assignments",
+          "integration_pattern": "Real-time bidirectional API"
+        ],
+        {
+          "source": "IoT Sensors & Building Management System",
+          "data_elements": "Equipment status, temperature sensors, vibration analysis, filter pressure, runtime hours",
+          "integration_pattern": "Real-time telemetry, threshold alerting"
+        ],
+        {
+          "source": "Guest Service Requests",
+          "data_elements": "Guest-reported maintenance issues (HVAC, plumbing, electrical, in-room issues)",
+          "integration_pattern": "Service request system integration"
+        ],
+        {
+          "source": "Mobile Maintenance App",
+          "data_elements": "Work order updates, technician locations, completion photos, time tracking, parts used",
+          "integration_pattern": "Mobile app with offline capability"
+        ],
+        {
+          "source": "Staff Management",
+          "data_elements": "Technician schedules, skills/certifications, performance metrics, training records",
+          "integration_pattern": "Workforce management system"
+        ],
+        {
+          "source": "Parts Inventory System",
+          "data_elements": "Parts stock levels, par levels, usage rates, reorder points, supplier information",
+          "integration_pattern": "Inventory management system"
+        ],
+        {
+          "source": "Vendor Management",
+          "data_elements": "Vendor contacts, specializations, contract terms, performance history, response times",
+          "integration_pattern": "Vendor database, contract management"
+        ],
+        {
+          "source": "Asset Management",
+          "data_elements": "Equipment registry, purchase dates, warranty information, depreciation, lifecycle stage",
+          "integration_pattern": "Asset tracking system"
+        }
+      ],
+      "quantified_benefits": {
+        "response_time": "30-60 minutes for urgent issues → 10-20 minutes with automated dispatch",
+        "technician_efficiency": "60-70% wrench time → 80-85% with optimized assignments and mobile tools",
+        "preventive_maintenance_effectiveness": "30-40% time-based → 60-70% condition-based reduces failures",
+        "guest_impact_reduction": "40-50% reduction in guest-facing equipment failures",
+        "maintenance_cost": "10-15% reduction through predictive maintenance and lifecycle optimization",
+        "asset_uptime": "90-92% → 96-98% with proactive monitoring and predictive interventions"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement digital work order capture from staff and guest apps (Week 1-2)",
+          "Deploy mobile maintenance app for technician updates (Week 2-3)",
+          "Enable basic skill-based work order assignment (Week 3-4)"
+        ],
+        "investment_required": "Medium-High - CMMS or upgrade, mobile devices, IoT sensors for critical equipment, integration development",
+        "time_to_value": "8-12 weeks for core work order automation, 6-12 months for predictive maintenance as data accumulates",
+        "prerequisites": [
+          "CMMS with API capabilities or modern replacement",
+          "Comprehensive asset inventory and history",
+          "Mobile devices for maintenance technicians",
+          "Critical equipment identification for IoT monitoring",
+          "Vendor database with contact and performance data",
+          "Parts inventory tracking system",
+          "Staff training on digital work order management",
+          "Integration with guest service request system"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-inspection-quality",
+      "name": "Property Inspection & Quality Control",
+      "description": "AI-powered inspection system managing automated inspection schedules, digital checklists, photo documentation, compliance tracking, and quality trend analysis",
+      "traditional_workflow": "Property inspections are conducted on ad-hoc schedules using paper checklists that vary by inspector. Results are inconsistent due to subjective interpretations and checklist variations. Issues found are communicated verbally or via email, often without photo documentation. There is no centralized tracking of recurring issues or trend analysis across time periods. Follow-up on corrective actions is manual and inconsistent. Brand standard audits rely on infrequent external visits without continuous compliance monitoring.",
+      "agentic_workflow": "Inspection scheduling agents create automated inspection cadences for all property areas (guest rooms, public spaces, BOH, exterior) with risk-based frequency. Digital checklist agents guide inspectors through standardized criteria with photo requirements and scoring guidance. Issue tracking agents automatically route defects to responsible departments with SLA tracking. Analytics agents identify recurring issues, trend patterns, and areas needing additional focus. Compliance agents monitor brand standard adherence continuously, flagging gaps before official audits. Predictive agents recommend proactive maintenance based on inspection trend data.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Quality Inspection Orchestrator",
+          "role": "Manages comprehensive property inspection program, coordinating schedules, compliance tracking, issue resolution, and continuous improvement",
+          "responsibilities": [
+            "Schedule inspections across all property areas",
+            "Ensure checklist compliance and documentation",
+            "Track issue resolution and corrective actions",
+            "Analyze trends and drive quality improvements"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Inspection Scheduling Agent",
+            "role": "Creates and manages inspection schedules based on risk, compliance requirements, and historical findings",
+            "capabilities": [
+              "Risk-based inspection frequency (high-traffic vs. low-traffic areas)",
+              "Compliance-driven scheduling (brand standards, health department)",
+              "Inspector assignment based on expertise",
+              "Schedule optimization to minimize operational disruption"
+            ]
+          },
+          {
+            "name": "Digital Checklist Agent",
+            "role": "Guides inspectors through standardized checklists with photo requirements and consistent scoring",
+            "capabilities": [
+              "Standardized inspection criteria by area type",
+              "Conditional questions based on responses",
+              "Photo documentation requirements",
+              "Offline capability with sync when connected"
+            ]
+          },
+          {
+            "name": "Issue Resolution Agent",
+            "role": "Routes inspection findings to responsible departments, tracks corrective actions, and monitors completion",
+            "capabilities": [
+              "Automatic routing to maintenance, housekeeping, F&B, etc.",
+              "SLA tracking by issue severity",
+              "Corrective action verification",
+              "Re-inspection triggering for major issues"
+            ]
+          },
+          {
+            "name": "Quality Analytics Agent",
+            "role": "Analyzes inspection data to identify trends, recurring issues, and improvement opportunities",
+            "capabilities": [
+              "Trend analysis by area, time period, inspector",
+              "Recurring issue pattern recognition",
+              "Departmental performance scoring",
+              "Predictive maintenance recommendations"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Brand Compliance Agent",
+            "role": "Monitors adherence to brand standards and flags gaps before official audits"
+          },
+          {
+            "name": "Reporting Agent",
+            "role": "Generates inspection summary reports for management and ownership"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-critical-defects",
+          "name": "Critical Safety or Brand Violation",
+          "trigger": "Inspection identifies critical safety issue or major brand standard violation",
+          "human_role": "Operations Manager or General Manager",
+          "decision_criteria": "Guest safety risk, brand compliance impact, immediate remediation needs, guest experience impact",
+          "auto_proceed_conditions": "Minor defects auto-routed to departments with standard SLAs",
+          "escalation_path": "General Manager for serious safety issues; Brand Leadership for major brand violations"
+        ],
+        {
+          "gate_id": "gtg-recurring-failures",
+          "name": "Recurring Quality Failures",
+          "trigger": "Analytics agent identifies same issues failing repeatedly in area or by department",
+          "human_role": "Department Head (Housekeeping, Maintenance, F&B)",
+          "decision_criteria": "Root cause investigation needs, training requirements, process changes, accountability",
+          "auto_proceed_conditions": "Isolated issues without patterns of recurrence",
+          "escalation_path": "Operations Manager for systemic quality failures requiring process overhaul"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Inspection Management System",
+          "data_elements": "Inspection schedules, checklist results, photos, scores, issue tracking, corrective actions",
+          "integration_pattern": "Centralized inspection database"
+        ],
+        {
+          "source": "Mobile Inspection App",
+          "data_elements": "Real-time inspection data entry, photo capture, offline sync, GPS location tagging",
+          "integration_pattern": "Mobile app with cloud sync"
+        ],
+        {
+          "source": "Work Order Systems",
+          "data_elements": "Maintenance and housekeeping work orders generated from inspection findings",
+          "integration_pattern": "Bidirectional integration for issue creation and resolution tracking"
+        ],
+        {
+          "source": "Brand Standards Database",
+          "data_elements": "Brand compliance checklists, scoring criteria, audit history, certification requirements",
+          "integration_pattern": "Brand system integration or manual maintenance"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Room inventory, public space listings, F&B outlets, amenity locations",
+          "integration_pattern": "Asset registry for inspection coverage"
+        ],
+        {
+          "source": "Guest Feedback",
+          "data_elements": "Quality-related complaints and compliments, survey responses, review mentions",
+          "integration_pattern": "Feedback correlation with inspection findings"
+        ],
+        {
+          "source": "Historical Inspection Data",
+          "data_elements": "3-5 years of inspection results for trend analysis and predictive modeling",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "inspection_consistency": "60-70% consistency with paper checklists → 95%+ with digital standardization",
+        "issue_documentation": "40-50% of issues with photos → 90%+ with required photo capture",
+        "corrective_action_completion": "70-75% → 95%+ with automated tracking and SLA management",
+        "brand_audit_scores": "5-10 point improvement in brand audit scores with continuous compliance monitoring",
+        "proactive_issue_resolution": "60-70% reactive → 50-60% proactive based on trend identification",
+        "inspection_efficiency": "20-30 minutes per room/area → 15-20 minutes with streamlined digital checklists"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy digital inspection checklists on tablets for housekeeping inspections (Week 1-2)",
+          "Implement photo documentation requirements for all issues (Week 2)",
+          "Enable automated work order creation from inspection findings (Week 3-4)"
+        ],
+        "investment_required": "Medium - Inspection management software, mobile devices (tablets) for inspectors, photo storage, integration",
+        "time_to_value": "6-10 weeks for digital inspection deployment, 12-16 weeks for analytics and trend identification",
+        "prerequisites": [
+          "Inspection management platform or CMMS with inspection module",
+          "Mobile devices (tablets or smartphones) for inspectors",
+          "Standardized inspection checklists and scoring criteria",
+          "Brand standards documentation (if applicable)",
+          "Integration with work order systems",
+          "Photo storage infrastructure (cloud or local)",
+          "Inspector training on digital tools and consistent scoring",
+          "Management commitment to data-driven quality improvement"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-energy-management",
+      "name": "Energy Management & Sustainability",
+      "description": "AI-powered energy optimization system managing HVAC, lighting, and utility consumption with occupancy-based controls, demand response, and sustainability reporting",
+      "traditional_workflow": "HVAC systems run on fixed schedules without considering actual occupancy or weather conditions. Lights in public areas and back-of-house run continuously or on timers regardless of usage. Guest rooms are heated/cooled even when unoccupied between checkout and next arrival. Energy consumption is monitored monthly via utility bills without granular insights or real-time optimization. Sustainability initiatives are manual efforts without data-driven targeting. Peak demand charges hit during high-occupancy periods without load management strategies.",
+      "agentic_workflow": "Occupancy agents integrate with PMS and mobile key systems to automatically adjust HVAC in vacant rooms, reducing energy waste while maintaining comfort for occupied spaces. Smart HVAC agents use weather forecasts and building thermal models to pre-condition spaces efficiently. Lighting agents use occupancy sensors and daylight harvesting to optimize illumination. Demand response agents manage peak load by coordinating equipment cycling and deferring non-critical loads. Analytics agents identify energy waste patterns and recommend targeted efficiency improvements. Sustainability reporting agents track carbon footprint and support ESG disclosure requirements.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Energy Management Orchestrator",
+          "role": "Manages building-wide energy optimization, coordinating HVAC, lighting, equipment controls, and sustainability tracking",
+          "responsibilities": [
+            "Optimize energy consumption across all systems",
+            "Balance comfort with efficiency",
+            "Manage demand response and peak load reduction",
+            "Track and report sustainability metrics"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Smart HVAC Agent",
+            "role": "Optimizes heating and cooling based on occupancy, weather, and comfort requirements",
+            "capabilities": [
+              "Occupancy-based setpoint adjustments",
+              "Weather-predictive pre-conditioning",
+              "Zone-level optimization",
+              "Checkout-to-arrival energy saving mode"
+            ]
+          },
+          {
+            "name": "Intelligent Lighting Agent",
+            "role": "Manages lighting based on occupancy, daylight availability, and operational schedules",
+            "capabilities": [
+              "Occupancy sensor integration",
+              "Daylight harvesting with dimming controls",
+              "Schedule-based automation for public spaces",
+              "Emergency and safety lighting override"
+            ]
+          },
+          {
+            "name": "Demand Response Agent",
+            "role": "Manages peak demand reduction through load coordination and deferral strategies",
+            "capabilities": [
+              "Peak demand prediction",
+              "Equipment cycling coordination",
+              "Non-critical load deferral (e.g., laundry, water heating)",
+              "Utility demand response program participation"
+            ]
+          },
+          {
+            "name": "Energy Analytics Agent",
+            "role": "Monitors consumption patterns, identifies waste, and recommends efficiency improvements",
+            "capabilities": [
+              "Real-time consumption monitoring by system",
+              "Anomaly detection (equipment malfunction, waste)",
+              "Efficiency opportunity identification",
+              "ROI modeling for energy projects"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Sustainability Reporting Agent",
+            "role": "Tracks carbon footprint, renewable energy usage, and ESG metrics"
+          },
+          {
+            "name": "Guest Comfort Agent",
+            "role": "Monitors and responds to guest temperature complaints, overriding efficiency for satisfaction"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-comfort-complaints",
+          "name": "Guest Comfort Complaint",
+          "trigger": "Guest reports room too hot, too cold, or requests temperature override beyond system parameters",
+          "human_role": "Engineering or Guest Services",
+          "decision_criteria": "Guest comfort priority, system capability, equipment status, efficiency impact",
+          "auto_proceed_conditions": "Automatic adjustments within normal comfort ranges",
+          "escalation_path": "Chief Engineer for equipment issues; GM for patterns indicating system inadequacy"
+        ],
+        {
+          "gate_id": "gtg-major-equipment-changes",
+          "name": "Major Equipment Control Strategy",
+          "trigger": "AI recommends significant changes to HVAC schedules or equipment operation affecting large areas",
+          "human_role": "Chief Engineer",
+          "decision_criteria": "Impact on guest comfort, operational risk, energy savings magnitude, equipment lifespan",
+          "auto_proceed_conditions": "Minor optimizations within tested parameters",
+          "escalation_path": "General Manager for strategies with potential guest experience risk"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Building Management System (BMS)",
+          "data_elements": "HVAC status, temperature sensors, equipment runtime, chiller/boiler performance, airflow",
+          "integration_pattern": "BACnet, Modbus, or proprietary protocols; real-time telemetry"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Room occupancy, checkout/arrival times, forecasted occupancy, guest temperature preferences",
+          "integration_pattern": "API integration for occupancy-based control"
+        ],
+        {
+          "source": "Mobile Key & IoT",
+          "data_elements": "Room entry/exit events, real-time occupancy detection, DND status",
+          "integration_pattern": "Event-driven triggers for HVAC adjustments"
+        ],
+        {
+          "source": "Utility Meters",
+          "data_elements": "Electric, gas, water consumption by interval (15-min or hourly), peak demand, power factor",
+          "integration_pattern": "Smart meter integration, utility data feeds"
+        ],
+        {
+          "source": "Weather Services",
+          "data_elements": "Temperature forecasts, humidity, solar radiation, wind for predictive HVAC control",
+          "integration_pattern": "Weather API, hourly updates"
+        ],
+        {
+          "source": "Lighting Control System",
+          "data_elements": "Fixture status, dimming levels, occupancy sensor data, schedule overrides",
+          "integration_pattern": "Lighting control protocol (DALI, DMX, or proprietary)"
+        ],
+        {
+          "source": "Equipment Monitors",
+          "data_elements": "Kitchen equipment, laundry, pool/spa heaters, elevators runtime and energy consumption",
+          "integration_pattern": "Sub-metering, equipment-level sensors"
+        ],
+        {
+          "source": "Sustainability Database",
+          "data_elements": "Carbon emission factors, renewable energy generation (if on-site), offset credits",
+          "integration_pattern": "Manual entry, utility renewable energy data"
+        }
+      ],
+      "quantified_benefits": {
+        "energy_cost_reduction": "15-25% reduction in HVAC and lighting costs through occupancy-based controls",
+        "peak_demand_reduction": "10-20% lower peak demand charges with coordinated load management",
+        "carbon_footprint": "20-30% reduction in carbon emissions supporting sustainability goals",
+        "guest_comfort_maintenance": "90-95% satisfaction with room temperature while achieving energy savings",
+        "equipment_lifespan": "10-15% extension through optimized runtime and reduced cycling",
+        "sustainability_reporting": "Automated ESG metrics vs. manual quarterly compilation"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement occupancy-based HVAC setbacks in vacant guest rooms (Week 1-4)",
+          "Deploy occupancy sensors in public restrooms and back-of-house areas (Week 2-4)",
+          "Enable basic weather-based HVAC pre-conditioning (Week 4-6)"
+        ],
+        "investment_required": "Medium-High - BMS upgrades, occupancy sensors, smart thermostats, sub-metering, integration development",
+        "time_to_value": "8-12 weeks for occupancy-based controls, 6-12 months for full optimization and demand response",
+        "prerequisites": [
+          "Building Management System with API capabilities or upgrade",
+          "PMS integration for occupancy data",
+          "Smart thermostats or HVAC control capability in guest rooms",
+          "Occupancy sensors for public spaces",
+          "Sub-metering for major energy loads (if not present)",
+          "Baseline energy consumption data (12+ months)",
+          "Engineering staff trained on optimized controls",
+          "Guest communication about sustainability initiatives",
+          "Comfort complaint response protocols"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-amenity-inventory",
+      "name": "Amenity & Inventory Management",
+      "description": "AI-powered amenity and inventory system managing pool, gym, restaurant capacity, tracking inventory levels, and automating replenishment for hospitality operations",
+      "traditional_workflow": "Amenity capacity (pool, gym, restaurant) is managed reactively without visibility into current usage or peak patterns. Guests encounter overcrowded facilities during peak times with no advance warning or alternative suggestions. Inventory for minibar, amenities, linens, and operating supplies is tracked manually via spreadsheets and physical counts. Replenishment orders are placed based on gut feel or when stockouts occur. Par levels are static without seasonal or occupancy-based adjustments. Waste and shrinkage go untracked.",
+      "agentic_workflow": "Capacity monitoring agents track real-time occupancy of pools, gyms, spas, and restaurants using sensors and booking systems, alerting guests to crowding via mobile app. Reservation agents enable amenity bookings (spa, restaurant, golf) with optimal time slot suggestions. Inventory agents track consumption patterns by item and automatically generate replenishment orders when levels drop below dynamic par levels. Demand forecasting agents adjust par levels based on occupancy forecasts and historical usage patterns. Analytics agents identify waste, shrinkage, and optimization opportunities across all inventory categories.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Amenity & Inventory Orchestrator",
+          "role": "Manages guest amenity experiences and operational inventory, coordinating capacity management, bookings, replenishment, and analytics",
+          "responsibilities": [
+            "Monitor and optimize amenity capacity utilization",
+            "Manage inventory levels and automated replenishment",
+            "Coordinate amenity bookings and guest communications",
+            "Track consumption patterns and identify optimization opportunities"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Amenity Capacity Agent",
+            "role": "Monitors real-time occupancy of pools, gyms, spas, restaurants and communicates capacity to guests",
+            "capabilities": [
+              "Real-time occupancy tracking via sensors or check-ins",
+              "Capacity threshold alerting",
+              "Guest notifications of crowding or availability",
+              "Peak hour identification and pattern analysis"
+            ]
+          },
+          {
+            "name": "Amenity Booking Agent",
+            "role": "Manages reservations for spa, dining, golf, activities with optimal time slot recommendations",
+            "capabilities": [
+              "Multi-amenity booking across property",
+              "Availability management and overbooking prevention",
+              "Reminder notifications and modification handling",
+              "Waitlist management for popular time slots"
+            ]
+          },
+          {
+            "name": "Inventory Tracking Agent",
+            "role": "Monitors inventory levels for minibar, amenities, linens, supplies with automated consumption tracking",
+            "capabilities": [
+              "Real-time stock level tracking",
+              "Consumption pattern analysis by item and location",
+              "Threshold alerting for low stock",
+              "Waste and shrinkage detection"
+            ]
+          },
+          {
+            "name": "Automated Replenishment Agent",
+            "role": "Generates purchase orders automatically based on consumption rates, occupancy forecasts, and lead times",
+            "capabilities": [
+              "Dynamic par level calculation",
+              "Occupancy-based demand forecasting",
+              "Automated PO generation to approved vendors",
+              "Lead time consideration and safety stock optimization"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Vendor Management Agent",
+            "role": "Tracks vendor performance, pricing, delivery reliability"
+          },
+          {
+            "name": "Cost Analytics Agent",
+            "role": "Monitors inventory costs, identifies savings opportunities, tracks budget variance"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-high-value-purchases",
+          "name": "High-Value Inventory Purchase",
+          "trigger": "Automated replenishment generates PO exceeding threshold ($5,000+) or unusual quantity variance",
+          "human_role": "Purchasing Manager or F&B Director",
+          "decision_criteria": "Budget availability, quantity justification, pricing review, vendor confirmation",
+          "auto_proceed_conditions": "Routine replenishment orders within normal parameters and budget",
+          "escalation_path": "General Manager for purchases >$25K or unusual spend patterns"
+        ],
+        {
+          "gate_id": "gtg-amenity-closures",
+          "name": "Amenity Closure or Restriction",
+          "trigger": "Capacity limits require closure or restrictions on popular amenities",
+          "human_role": "Operations Manager",
+          "decision_criteria": "Guest impact, safety requirements, alternative options, communication approach",
+          "auto_proceed_conditions": "Normal capacity management without closures",
+          "escalation_path": "General Manager for extended closures or major guest experience impacts"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Amenity Management Systems",
+          "data_elements": "Spa bookings, restaurant reservations, golf tee times, activity schedules, capacity limits",
+          "integration_pattern": "Booking system APIs, real-time availability"
+        ],
+        {
+          "source": "Occupancy Sensors & Check-Ins",
+          "data_elements": "Pool/gym occupancy counts, restaurant seating sensors, equipment usage tracking",
+          "integration_pattern": "IoT sensors, manual check-in systems"
+        ],
+        {
+          "source": "Inventory Management System",
+          "data_elements": "Stock levels by location, consumption rates, reorder points, par levels, vendor information",
+          "integration_pattern": "Inventory system, barcode scanning"
+        ],
+        {
+          "source": "Point of Sale Systems",
+          "data_elements": "Minibar consumption, in-room dining orders, retail sales, item-level transaction data",
+          "integration_pattern": "POS integration, automated posting"
+        ],
+        {
+          "source": "Property Management System",
+          "data_elements": "Occupancy forecasts, guest counts, room types, length of stay, arrival patterns",
+          "integration_pattern": "API for demand forecasting"
+        ],
+        {
+          "source": "Purchasing System",
+          "data_elements": "Purchase orders, vendor pricing, delivery schedules, invoice matching",
+          "integration_pattern": "Procurement system integration"
+        ],
+        {
+          "source": "Housekeeping Systems",
+          "data_elements": "Linen usage, amenity replenishment, cleaning supply consumption",
+          "integration_pattern": "Housekeeping management system"
+        ],
+        {
+          "source": "Historical Consumption Data",
+          "data_elements": "12-24 months of usage patterns by season, occupancy level, guest demographics",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "amenity_guest_satisfaction": "70-75% → 85-90% with real-time capacity info and booking optimization",
+        "inventory_carrying_cost": "15-25% reduction through dynamic par levels and just-in-time replenishment",
+        "stockout_prevention": "5-10% stockout rate → <1% with automated monitoring and replenishment",
+        "waste_reduction": "10-20% reduction in expired or obsolete inventory",
+        "purchasing_efficiency": "2-3 hours daily on manual ordering → 30 minutes review and approval",
+        "amenity_utilization": "10-15% improvement in off-peak usage through guest communication and incentives"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement real-time pool/gym occupancy display in mobile app (Week 2-4)",
+          "Deploy automated minibar and amenity inventory tracking (Week 3-5)",
+          "Enable basic automated replenishment for high-volume items (Week 4-6)"
+        ],
+        "investment_required": "Medium - Occupancy sensors, inventory management software, barcode scanners, integration development",
+        "time_to_value": "8-12 weeks for core amenity and inventory tracking, 12-16 weeks for full automation and optimization",
+        "prerequisites": [
+          "Inventory management system or PMS with inventory module",
+          "Amenity booking systems (spa, restaurant, activities)",
+          "Occupancy sensors or check-in systems for amenities",
+          "POS integration for consumption tracking",
+          "Vendor catalog with pricing and lead times",
+          "Historical usage data (12+ months) for forecasting",
+          "Clear par level definitions and replenishment policies",
+          "Staff training on digital inventory tools",
+          "Guest communication channels (app, signage) for capacity info"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-staff-scheduling",
+      "name": "Staff Scheduling & Labor Optimization",
+      "description": "AI-powered workforce management system optimizing staff schedules based on demand forecasting, skills matching, labor law compliance, and cost control",
+      "traditional_workflow": "Managers create weekly schedules manually using spreadsheets or basic software, spending 3-5 hours per week. Schedules are based on historical patterns without considering real-time booking pace or events. Shift assignments don't optimize for skills, leading to overstaffing in some areas and understaffing in others. Schedule changes require phone calls and text messages. Labor law compliance (breaks, overtime, rest periods) is manually tracked with frequent violations. Actual labor hours vs. forecast are reconciled weekly, making real-time cost control impossible.",
+      "agentic_workflow": "Demand forecasting agents predict staffing needs by department and hour based on bookings, historical patterns, events, and day-of-week. Schedule optimization agents create schedules that match staff skills to forecasted needs while minimizing labor costs and ensuring compliance. Shift coverage agents handle call-outs and time-off requests, automatically finding qualified replacements. Labor law compliance agents enforce break requirements, overtime limits, and rest periods automatically. Real-time agents monitor actual vs. forecasted demand, alerting managers when adjustments are needed.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Workforce Management Orchestrator",
+          "role": "Manages staff scheduling optimization, demand forecasting, compliance enforcement, and real-time labor cost control",
+          "responsibilities": [
+            "Forecast staffing needs by department and time period",
+            "Generate optimized schedules meeting operational and compliance needs",
+            "Manage schedule changes and shift coverage",
+            "Monitor and control labor costs in real-time"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Demand Forecasting Agent",
+            "role": "Predicts staffing requirements by department, day, and daypart based on occupancy and operational drivers",
+            "capabilities": [
+              "Occupancy-based demand modeling",
+              "Historical pattern analysis",
+              "Event impact forecasting",
+              "Seasonal and day-of-week adjustments"
+            ]
+          },
+          {
+            "name": "Schedule Optimization Agent",
+            "role": "Generates optimal schedules balancing labor costs, skills matching, employee preferences, and compliance",
+            "capabilities": [
+              "Shift optimization algorithms",
+              "Skills-based assignment",
+              "Employee preference consideration",
+              "Cost minimization within service standards"
+            ]
+          },
+          {
+            "name": "Compliance Enforcement Agent",
+            "role": "Ensures schedules comply with labor laws, union rules, and company policies automatically",
+            "capabilities": [
+              "Break requirement enforcement",
+              "Overtime limit monitoring",
+              "Rest period tracking",
+              "Minor work hour restrictions (if applicable)"
+            ]
+          },
+          {
+            "name": "Real-Time Adjustment Agent",
+            "role": "Monitors actual vs. forecasted demand and recommends staffing adjustments during operations",
+            "capabilities": [
+              "Real-time demand variance detection",
+              "Early release recommendations when overstaffed",
+              "Call-in suggestions when understaffed",
+              "Labor cost tracking against budget"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Shift Coverage Agent",
+            "role": "Handles call-outs and finds qualified replacements automatically"
+          },
+          {
+            "name": "Employee Communication Agent",
+            "role": "Notifies employees of schedules, changes, and shift opportunities via preferred channels"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-schedule-approval",
+          "name": "Weekly Schedule Approval",
+          "trigger": "AI-generated schedule ready for final review before publication",
+          "human_role": "Department Manager (Housekeeping, F&B, Front Desk)",
+          "decision_criteria": "Coverage adequacy, employee preferences, operational knowledge, special circumstances",
+          "auto_proceed_conditions": "Minor schedule adjustments or shift swaps within approved parameters",
+          "escalation_path": "Operations Manager for schedules with high overtime or understaffing risk"
+        ],
+        {
+          "gate_id": "gtg-labor-overages",
+          "name": "Labor Cost Overage",
+          "trigger": "Actual or forecasted labor hours exceed budget by >10% for the period",
+          "human_role": "Department Manager",
+          "decision_criteria": "Service level maintenance, occupancy justification, cost reduction options",
+          "auto_proceed_conditions": "Labor costs within 5% of budget with appropriate justification",
+          "escalation_path": "General Manager or Controller for significant cost overruns"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Occupancy forecasts, arrival/departure patterns, group bookings, historical occupancy",
+          "integration_pattern": "Daily forecast updates, historical data"
+        ],
+        {
+          "source": "Workforce Management System",
+          "data_elements": "Employee schedules, time clock data, availability, skills, certifications, labor rules",
+          "integration_pattern": "Real-time bidirectional sync"
+        ],
+        {
+          "source": "Point of Sale & Reservation Systems",
+          "data_elements": "Restaurant covers, spa appointments, event bookings, activity forecasts",
+          "integration_pattern": "Daily forecast extraction"
+        ],
+        {
+          "source": "Historical Labor Data",
+          "data_elements": "2-3 years of actual hours worked by department, position, daypart vs. occupancy levels",
+          "integration_pattern": "Data warehouse, predictive modeling"
+        ],
+        {
+          "source": "HR Information System",
+          "data_elements": "Employee profiles, pay rates, benefits, hire dates, certifications, restrictions",
+          "integration_pattern": "Employee master data sync"
+        ],
+        {
+          "source": "Labor Law & Policy Database",
+          "data_elements": "Break requirements, overtime rules, rest period laws, minor restrictions, union contracts",
+          "integration_pattern": "Rule engine configuration"
+        ],
+        {
+          "source": "Budgeting System",
+          "data_elements": "Labor budget by department and period, target labor cost percentages",
+          "integration_pattern": "Budget data import, variance tracking"
+        ],
+        {
+          "source": "Time & Attendance",
+          "data_elements": "Clock-in/out times, actual hours worked, overtime hours, absences",
+          "integration_pattern": "Real-time time clock integration"
+        }
+      ],
+      "quantified_benefits": {
+        "labor_cost_reduction": "5-12% through optimal scheduling and demand matching",
+        "schedule_creation_time": "3-5 hours weekly → 30-60 minutes review and approval",
+        "overtime_reduction": "25-40% reduction through proactive management and compliance",
+        "compliance_violations": "5-10 violations monthly → <1 with automated enforcement",
+        "employee_satisfaction": "10-15% improvement from schedule predictability and preference consideration",
+        "productivity": "8-12% improvement through skills-based assignment and optimal staffing levels"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Implement demand-based scheduling for highest-volume department (Week 1-4)",
+          "Deploy automated compliance checking for breaks and overtime (Week 2-3)",
+          "Enable employee self-service schedule access via mobile app (Week 3-4)"
+        ],
+        "investment_required": "Medium - Workforce management software, time clock integration, mobile app, forecasting model development",
+        "time_to_value": "8-12 weeks for automated scheduling, 12-16 weeks for optimization and compliance",
+        "prerequisites": [
+          "Workforce management system with optimization capabilities",
+          "2-3 years of historical labor and occupancy data",
+          "Clear labor standards by position and department",
+          "Labor law and policy documentation",
+          "Time clock system with real-time integration",
+          "Employee mobile access for schedule viewing",
+          "Manager training on demand-based scheduling",
+          "Change management for shift from manual to optimized scheduling"
+        ]
+      }
+    },
+    {
+      "id": "fn-hosp-ops-property-analytics",
+      "name": "Property Analytics & Performance",
+      "description": "AI-powered analytics platform providing real-time dashboards, operational KPIs, predictive insights, and performance benchmarking for hospitality property management",
+      "traditional_workflow": "Property performance is reviewed weekly or monthly through manually compiled reports pulling data from multiple systems. KPIs (occupancy, ADR, RevPAR, labor cost %, guest satisfaction) are presented in static spreadsheets without trend analysis or predictive insights. Department managers have limited visibility into cross-functional metrics. Root cause analysis for performance issues is time-consuming and subjective. Competitive benchmarking requires manual rate shopping and STR report review. Action items from reviews are tracked informally without accountability.",
+      "agentic_workflow": "Real-time dashboard agents aggregate data from all property systems, providing live KPI visibility to all management levels. Analytics agents identify anomalies, trends, and correlations automatically, alerting managers to issues requiring attention. Predictive agents forecast occupancy, revenue, and operational metrics with confidence intervals. Benchmarking agents compare performance to competitive set, brand averages, and historical performance. Insight agents use ML to identify root causes of performance variances and recommend data-driven actions. Action tracking agents monitor follow-through on improvement initiatives.",
+      "agent_architecture": {
+        "orchestrator": {
+          "name": "Property Analytics Orchestrator",
+          "role": "Manages comprehensive property performance monitoring, predictive forecasting, benchmarking, and continuous improvement tracking",
+          "responsibilities": [
+            "Aggregate data across all property systems",
+            "Monitor KPIs and detect anomalies in real-time",
+            "Generate predictive forecasts and insights",
+            "Track action items and improvement initiatives"
+          ]
+        ],
+        "super_agents": [
+          {
+            "name": "Real-Time Dashboard Agent",
+            "role": "Provides live visibility into operational and financial KPIs with role-based dashboards",
+            "capabilities": [
+              "Real-time data aggregation from multiple systems",
+              "Role-based dashboard customization",
+              "Drill-down capability to transaction detail",
+              "Mobile dashboard access"
+            ]
+          },
+          {
+            "name": "Anomaly Detection Agent",
+            "role": "Identifies unusual patterns, outliers, and performance issues requiring attention",
+            "capabilities": [
+              "Statistical anomaly detection",
+              "Threshold-based alerting",
+              "Trend change identification",
+              "Correlation analysis between metrics"
+            ]
+          },
+          {
+            "name": "Predictive Forecasting Agent",
+            "role": "Forecasts occupancy, revenue, and operational metrics with confidence intervals and scenario analysis",
+            "capabilities": [
+              "Multi-horizon forecasting (7, 30, 90 days)",
+              "Confidence interval estimation",
+              "Scenario modeling (best/worst case)",
+              "Forecast accuracy tracking and improvement"
+            ]
+          },
+          {
+            "name": "Benchmarking Agent",
+            "role": "Compares property performance to competitive set, brand standards, and historical baselines",
+            "capabilities": [
+              "Competitive set performance comparison",
+              "Brand average benchmarking",
+              "Historical performance trending",
+              "Market share analysis"
+            ]
+          }
+        ],
+        "utility_agents": [
+          {
+            "name": "Insight Generation Agent",
+            "role": "Uses ML to identify root causes and recommend data-driven improvement actions"
+          },
+          {
+            "name": "Action Tracking Agent",
+            "role": "Monitors follow-through on improvement initiatives and tracks impact"
+          }
+        ]
+      ],
+      "hitl_gates": [
+        {
+          "gate_id": "gtg-critical-alerts",
+          "name": "Critical Performance Alert",
+          "trigger": "Analytics agent detects significant performance issue (major revenue shortfall, guest satisfaction drop, cost overrun)",
+          "human_role": "General Manager",
+          "decision_criteria": "Issue severity, guest impact, financial materiality, corrective action urgency",
+          "auto_proceed_conditions": "Normal performance variance within expected ranges",
+          "escalation_path": "Regional Manager or Ownership for serious performance issues"
+        ],
+        {
+          "gate_id": "gtg-strategic-insights",
+          "name": "Strategic Insight Review",
+          "trigger": "AI identifies significant opportunity or risk requiring strategic decision (pricing strategy, market positioning, capital investment)",
+          "human_role": "General Manager and Leadership Team",
+          "decision_criteria": "Strategic alignment, investment requirements, competitive implications, risk/return",
+          "auto_proceed_conditions": "Tactical operational recommendations within approved parameters",
+          "escalation_path": "Ownership or Brand Leadership for major strategic pivots"
+        }
+      ],
+      "data_sources": [
+        {
+          "source": "Property Management System",
+          "data_elements": "Occupancy, ADR, RevPAR, room nights, segment mix, booking pace, denials, cancellations",
+          "integration_pattern": "Real-time API, nightly extracts"
+        ],
+        {
+          "source": "Point of Sale Systems",
+          "data_elements": "F&B revenue, covers, check averages, outlet performance, minibar revenue",
+          "integration_pattern": "Real-time transaction feeds, daily summaries"
+        ],
+        {
+          "source": "Revenue Management System",
+          "data_elements": "Rate recommendations, pickup reports, demand forecasts, competitive rates",
+          "integration_pattern": "Daily forecast updates, rate decisions"
+        ],
+        {
+          "source": "Labor Management",
+          "data_elements": "Actual labor hours, labor cost %, productivity metrics, overtime hours",
+          "integration_pattern": "Daily time and attendance data"
+        ],
+        {
+          "source": "Guest Feedback Systems",
+          "data_elements": "Survey scores, NPS, online reviews, complaint rates, satisfaction by attribute",
+          "integration_pattern": "Real-time feedback aggregation"
+        ],
+        {
+          "source": "Financial Systems",
+          "data_elements": "Actual vs. budget, P&L statements, department expenses, GOPPAR, flow-through",
+          "integration_pattern": "Monthly close data, daily flash reports"
+        ],
+        {
+          "source": "Competitive Intelligence",
+          "data_elements": "Competitive set rates and occupancy (STR), market positioning, rate parity",
+          "integration_pattern": "Weekly/monthly reports, daily rate scraping"
+        ],
+        {
+          "source": "Operational Systems",
+          "data_elements": "Maintenance work orders, energy consumption, inspection scores, service request volumes",
+          "integration_pattern": "Daily operational metrics"
+        ],
+        {
+          "source": "Historical Data Warehouse",
+          "data_elements": "3-5 years of performance data for trending and predictive modeling",
+          "integration_pattern": "Data warehouse, analytics platform"
+        }
+      ],
+      "quantified_benefits": {
+        "reporting_time_savings": "10-15 hours weekly on manual reporting → automated real-time dashboards",
+        "issue_detection_speed": "Weekly/monthly lag → real-time anomaly detection",
+        "forecast_accuracy": "70-75% manual forecasting → 85-95% with ML models",
+        "decision_quality": "20-30% improvement in data-driven decision outcomes vs. intuition-based",
+        "performance_improvement_speed": "Quarterly review cycles → continuous improvement with real-time insights",
+        "management_productivity": "30-40% time on data compilation → strategic analysis and action"
+      ],
+      "transformation_guidance": {
+        "quick_wins": [
+          "Deploy real-time revenue dashboard (occupancy, ADR, RevPAR) (Week 1-2)",
+          "Implement automated anomaly alerting for key KPIs (Week 2-3)",
+          "Enable mobile dashboard access for managers (Week 3-4)"
+        ],
+        "investment_required": "Medium-High - Business intelligence platform, data warehouse, integration development, visualization tools",
+        "time_to_value": "8-12 weeks for core dashboards and reporting, 16-24 weeks for predictive analytics and ML insights",
+        "prerequisites": [
+          "Business intelligence or analytics platform",
+          "Data warehouse with historical data (3+ years)",
+          "Integrations with all major operational systems",
+          "KPI definitions and target metrics established",
+          "Executive sponsorship for data-driven culture",
+          "Management training on dashboard usage and interpretation",
+          "Data governance and quality processes",
+          "Competitive benchmarking data sources (STR, rate shopping)"
+        ]
+      }
+    }
+  ]
+}

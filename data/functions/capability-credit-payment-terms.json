@@ -1,0 +1,483 @@
+[
+  {
+    "id": "function-ai-credit-scoring-underwriting",
+    "type": "function",
+    "level": 4,
+    "label": "AI Credit Scoring & Underwriting",
+    "description": "Machine learning-powered instant credit evaluation using 50+ data sources including credit bureaus, financial statements, payment history, and industry risk analysis for automated credit limit and payment terms decisions.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sales rep submits customer credit application with bank references, financials, trade references via email. 2. Credit analyst manually reviews application, pulls Dun & Bradstreet report ($50-100 per report). 3. Analyst calls 2-3 trade references to verify payment history (1-2 days waiting for callbacks). 4. Analyst reviews financial statements, calculates financial ratios manually in spreadsheet. 5. Credit manager approves or denies based on analyst recommendation (subjective judgment varies by manager). 6. Total cycle time: 3-5 business days.",
+      "constraints": [
+        "3-5 day credit decision cycle delays sales, customers buy from faster competitors",
+        "Manual analysis limited to 1-3 data sources (D&B report, references, financials)",
+        "Credit decisions inconsistent across analysts and managers (subjective criteria)",
+        "No real-time monitoring of customer financial health post-approval",
+        "High-risk customers approved due to incomplete data or analyst pressure from sales",
+        "Credit analyst capacity: 20-30 credit reviews per month maximum",
+        "Bureau data only (no bank account data, payment velocity, industry trends)"
+      ],
+      "metrics": ["Credit decision time: 3-5 days", "Data sources analyzed: 1-3", "Analyst capacity: 20-30 reviews/month", "Approval consistency: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. AI Credit Scoring Agent triggered automatically when sales rep submits credit application or creates quote. 2. Agent pulls data from 50+ sources in parallel: D&B credit report, Experian, Equifax, bank account data (Plaid), financial statement analysis, ERP payment history, industry risk scores, news sentiment. 3. ML model analyzes data in real-time, calculates credit score (0-100) and risk tier (A/B/C/D) in under 60 seconds. 4. Agent recommends credit limit and payment terms: A-tier gets Net 60, B-tier gets Net 30, C-tier gets Net 15, D-tier requires COD or prepayment. 5. Low-risk customers (score >70, A/B tier) auto-approved up to policy limits. 6. High-risk applications (score <40, D tier, bankruptcy history) flagged for manual credit manager review with full risk analysis and recommendation.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["AI Credit Scoring Agent", "Risk Analysis Agent"],
+        "utilityAgents": ["D&B Integration Agent", "Experian API Agent", "Bank Data Integration Agent (Plaid)", "ERP Payment History Agent", "Industry Risk Data Agent", "News Sentiment Agent"]
+      },
+      "dataSources": [
+        "Dun & Bradstreet credit reports and PAYDEX scores",
+        "Experian and Equifax commercial credit data",
+        "Bank account transaction data (Plaid/Finicity)",
+        "Customer payment history from ERP/AR system",
+        "Financial statements and public filings",
+        "Industry risk scores and benchmarks",
+        "News and sentiment analysis (bankruptcy, lawsuits, layoffs)",
+        "Trade references and payment patterns"
+      ],
+      "benefits": [
+        "95%+ faster credit decisions: <1 minute vs 3-5 days for low-risk customers",
+        "95%+ auto-approval rate for low-risk customers eliminates manual review bottleneck",
+        "50+ data sources vs 1-3 traditional provides comprehensive risk view",
+        "30-50% bad debt reduction through superior risk assessment and early warning signals",
+        "Consistent credit decisions (no analyst subjectivity or pressure from sales)",
+        "Credit analyst capacity increases 5-10x: focus on high-risk strategic accounts only",
+        "Real-time credit monitoring post-approval detects deteriorating financials immediately"
+      ],
+      "metrics": ["Credit decision time: <1 minute (auto-approved)", "Auto-approval rate: 95%+", "Data sources: 50+", "Bad debt reduction: 30-50%"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 5,
+      "threshold": "New customer credit applications >$100K or risk score <40 (D-tier)",
+      "policy": "Credit manager must review and approve any new customer with requested credit limit exceeding $100K or with high-risk indicators (bankruptcy history, score <40, industry distress)"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI credit scoring for new customer applications under $50K", "Auto-approve A/B tier customers based on ML model recommendations", "Integrate D&B and Experian APIs for automated data pulls"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months (ML model requires 12-24 months historical data for training)",
+      "prerequisites": ["Historical credit application and payment data (12-24 months minimum)", "D&B and Experian API subscriptions", "ERP/AR system integration for payment history", "Documented credit policy and approval thresholds"]
+    },
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-dynamic-credit-limit-management",
+    "type": "function",
+    "level": 4,
+    "label": "Dynamic Credit Limit Management",
+    "description": "Real-time credit limit adjustments based on continuous monitoring of customer financial health, payment behavior, credit utilization, and industry trends with automated increase and decrease recommendations.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Credit limits set at account opening based on initial credit review. 2. Limits remain static unless customer requests increase or account goes into collection. 3. Annual credit review for top 50-100 customers only (if time permits). 4. Most customer credit limits never reviewed after initial approval. 5. Credit increases requested by sales rep, require full manual re-review (3-5 days). 6. Credit decreases only happen reactively after payment defaults or financial distress discovered.",
+      "constraints": [
+        "15-25% of customers have outdated credit limits: should be higher (lost sales) or lower (risk exposure)",
+        "Annual reviews at best, most customers never reviewed again after initial approval",
+        "Sales lost when good customers hit outdated credit limits and can't place orders",
+        "Risk exposure increases when financially deteriorating customers retain high limits",
+        "Credit increase requests take 3-5 days manual review, customers may buy elsewhere",
+        "No proactive credit limit optimization based on customer growth or financial improvement",
+        "No seasonal limit adjustments despite predictable buying patterns"
+      ],
+      "metrics": ["Credit limit review frequency: Annual (top customers only)", "Limit accuracy: 75-85% (15-25% outdated)", "Credit increase cycle time: 3-5 days", "Proactive adjustments: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Credit Limit Optimization Agent continuously monitors customer financial health: quarterly earnings reports, D&B updates, news (M&A, layoffs, expansion), payment behavior trends. 2. Agent tracks credit utilization: alerts when customers approaching 90%+ of limit (sales at risk). 3. Agent calculates optimal credit limits based on: payment history, average order size, growth trends, industry benchmarks, risk score. 4. Agent proactively recommends increases: 'Customer ABC at 85% utilization, consistent on-time payment for 12 months, growing 20% YoY, suggest increasing limit from $100K to $150K'. 5. Agent proactively recommends decreases: 'Customer XYZ financials deteriorating, industry in distress, late payments increasing, reduce limit from $200K to $100K'. 6. Agent applies seasonal adjustments: increase limits during peak buying seasons, reduce during slow periods. 7. Agent enforces policy guardrails: maximum limit by risk tier, total portfolio exposure caps.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Credit Limit Optimization Agent", "Payment Behavior Analysis Agent"],
+        "utilityAgents": ["D&B Monitoring Agent", "Financial News Agent", "Credit Utilization Tracking Agent", "Invoice System API Agent", "Payment Gateway API Agent"]
+      },
+      "dataSources": [
+        "Customer payment history and trends from AR system",
+        "Credit utilization data (current balance vs limit)",
+        "D&B credit monitoring alerts and score changes",
+        "Financial statements and quarterly earnings (public companies)",
+        "News and events (M&A, layoffs, expansions, bankruptcy filings)",
+        "Average order size and purchase frequency trends",
+        "Industry risk scores and benchmarks",
+        "Seasonal buying patterns by customer and industry"
+      ],
+      "benefits": [
+        "95%+ credit limit accuracy: limits right-sized for current customer risk and opportunity",
+        "20-30% revenue capture from timely credit limit increases for growing customers",
+        "30-50% risk reduction from proactive limit decreases for deteriorating customers",
+        "Real-time monitoring vs annual/never reviews ensures limits reflect current state",
+        "Seasonal limit adjustments maximize sales during peak periods, reduce risk in slow periods",
+        "Credit increase requests approved in <1 hour vs 3-5 days (for qualifying customers)",
+        "Sales team alerted proactively when high-value customers approaching credit limits"
+      ],
+      "metrics": ["Limit accuracy: 95%+ (vs 75-85%)", "Proactive adjustments: 60-80% of changes", "Revenue capture: +20-30%", "Risk reduction: 30-50%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Monitor credit utilization for top 100 customers, proactively increase limits for 90%+ utilization", "Integrate D&B credit monitoring for real-time alerts on customer financial changes", "Implement seasonal limit adjustments for customers with predictable buying patterns"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Real-time credit utilization tracking (AR system integration)", "D&B credit monitoring subscription", "Historical payment and purchase data (12-24 months)", "Documented credit limit policies by risk tier"]
+    },
+    "icon": "adjustments",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-payment-terms-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Payment Terms Optimization",
+    "description": "ML-driven assignment of optimal payment terms (Net 15/30/60, COD, prepay) based on customer risk profile, payment history, competitive dynamics, and cash flow impact with dynamic discount testing.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Standard payment terms applied uniformly: Net 30 for most customers. 2. High-risk customers manually set to COD or prepayment. 3. Large strategic accounts negotiate Net 60 or Net 90 during contract discussions. 4. No personalization of terms based on customer-specific risk or behavior. 5. No dynamic discounts offered (2/10 Net 30 rarely used). 6. Payment terms remain static unless customer requests change or defaults occur.",
+      "constraints": [
+        "Fixed Net 30/60/90 terms don't reflect customer-specific risk profiles",
+        "High-risk customers get same terms as low-risk, increasing bad debt exposure",
+        "No early payment discounts offered despite working capital benefits",
+        "Competitive pressure forces longer terms (Net 60/90) even for risky customers",
+        "Terms set at contract signing, never optimized based on actual payment behavior",
+        "No testing of term variations to optimize for win rate vs cash flow",
+        "Sales reps negotiate terms ad-hoc without risk or cash flow considerations"
+      ],
+      "metrics": ["Payment terms personalization: 10-20% of customers", "Early payment discount usage: 5-10%", "DSO (Days Sales Outstanding): 45-65 days", "Terms optimization: None"]
+    },
+    "agentic": {
+      "workflow": "1. Payment Terms Optimization Agent assigns terms based on AI credit score and risk tier: A-tier (score 80-100) gets Net 60, B-tier (score 60-79) gets Net 30, C-tier (score 40-59) gets Net 15, D-tier (score <40) requires COD or prepayment. 2. Agent offers dynamic early payment discounts: 2/10 Net 30 (2% discount if paid in 10 days) to encourage faster cash collection. 3. Agent tests term variations via A/B testing: measures impact on quote conversion rate, payment compliance, and DSO. 4. Agent calculates optimal terms balancing competing objectives: working capital (prefer shorter terms), competitive win rate (longer terms win deals), bad debt risk (shorter terms reduce exposure). 5. Agent tracks term effectiveness by customer segment: which terms maximize conversion while minimizing DSO. 6. Agent recommends term adjustments based on payment behavior: customers consistently paying early qualify for longer terms, late payers get shorter terms or COD.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Payment Terms Optimization Agent", "Customer Segmentation Agent"],
+        "utilityAgents": ["Cash Flow Forecasting API Agent", "Industry Benchmark Data Agent", "A/B Testing Engine Agent", "Quote Conversion Tracking Agent", "Payment Compliance Monitoring Agent"]
+      },
+      "dataSources": [
+        "Customer credit scores and risk tiers",
+        "Historical payment behavior (on-time vs late, early payment patterns)",
+        "Quote-to-order conversion rates by payment terms",
+        "Industry benchmarks for payment terms",
+        "Cash flow forecasts and working capital targets",
+        "Competitive intelligence on payment terms",
+        "Customer feedback on payment preferences",
+        "Early payment discount take rates"
+      ],
+      "benefits": [
+        "15-25% DSO improvement through risk-appropriate term assignment and early payment discounts",
+        "10-20% win rate improvement for competitive deals (longer terms for low-risk customers)",
+        "30-50% bad debt reduction by restricting terms for high-risk customers",
+        "Cash flow optimization: faster collections from low-risk customers, protective terms for high-risk",
+        "Early payment discount adoption increases 3-5x (from 5-10% to 20-30%)",
+        "Dynamic term testing enables continuous optimization vs static one-size-fits-all approach",
+        "Customer satisfaction improved through personalized terms aligned with their risk profile"
+      ],
+      "metrics": ["DSO improvement: 15-25%", "Win rate lift: 10-20%", "Bad debt reduction: 30-50%", "Early payment discounts: 20-30% take rate"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement risk-based payment terms: A-tier Net 60, B-tier Net 30, C-tier Net 15, D-tier COD", "Offer 2/10 Net 30 early payment discounts to low-risk customers", "Track payment term effectiveness: conversion rates and DSO by term type"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Customer risk scoring in place", "Historical quote conversion and payment data", "Cash flow forecasting capability", "Pricing system integration to apply dynamic discounts"]
+    },
+    "icon": "calendar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-proactive-collections-management",
+    "type": "function",
+    "level": 4,
+    "label": "Proactive Collections Management",
+    "description": "Predictive ML models identify late payment risk 7-14 days before invoice due date with automated personalized outreach, payment plan recommendations, and escalating dunning workflows to reduce past-due accounts.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Invoices sent via email with payment terms (Net 30). 2. No proactive follow-up before due date. 3. AR aging report reviewed weekly: identifies accounts 30+ days past due. 4. Collections team makes phone calls to past-due accounts (30+ days late). 5. Escalating collection calls at 60 days, 90 days past due. 6. Accounts sent to collections agency or written off after 120-180 days. 7. Recovery rate: 50-70% for past-due accounts.",
+      "constraints": [
+        "Reactive collections: outreach starts 30+ days after missed payment",
+        "No prediction of which customers will pay late (surprises when payment doesn't arrive)",
+        "No proactive reminders before invoice due date",
+        "Collections team overwhelmed chasing accounts already 30-90 days overdue",
+        "Impersonal bulk reminder emails ignored by customers",
+        "Payment plans offered ad-hoc after accounts severely delinquent",
+        "40-60% of past-due accounts require significant manual collection effort"
+      ],
+      "metrics": ["Collections approach: Reactive (30+ days past due)", "Past-due account rate: 20-30%", "Collection recovery rate: 50-70%", "Collections team time: 80% chasing overdue accounts"]
+    },
+    "agentic": {
+      "workflow": "1. Proactive Collections Agent predicts late payment risk 7-14 days before invoice due date using ML model analyzing: past payment behavior, current financial health, seasonal patterns, invoice disputes, credit utilization. 2. Agent sends friendly proactive reminders: 'Invoice #12345 due in 5 days, click here to pay now or set up auto-pay'. 3. Agent personalizes outreach by customer risk profile: high-value strategic accounts get white-glove phone call, standard customers get email reminders, high-risk accounts get firm notices. 4. Agent escalates with dunning sequence: friendly reminder (due date -3 days), urgent notice (due date), firm notice (due date +7 days), phone call (due date +15 days), legal notice (due date +30 days). 5. Agent offers payment plans for customers in financial distress: installment options, partial payments to keep account current. 6. Agent tracks collection effectiveness: which messages drive payment, optimal reminder timing, response rates by customer segment.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Proactive Collections Agent", "Payment Prediction Agent"],
+        "utilityAgents": ["Email/SMS Gateway Agent", "Payment Gateway Integration Agent", "Customer Portal API Agent", "Dunning Workflow Engine Agent", "Collections Analytics Agent"]
+      },
+      "dataSources": [
+        "Customer payment history and patterns (on-time vs late, early payers)",
+        "Invoice data (amount, due date, age, dispute status)",
+        "Customer financial health indicators (credit score, D&B updates)",
+        "Credit utilization and available credit",
+        "Seasonal payment patterns by customer and industry",
+        "Communication history (reminders sent, responses)",
+        "Payment plan history and success rates",
+        "Collections outcomes (paid, disputed, written off)"
+      ],
+      "benefits": [
+        "40-60% reduction in past-due accounts through proactive reminders before due date",
+        "80-90% collection recovery rate vs 50-70% reactive approach",
+        "Collections team time shifts from chasing overdue to strategic account management",
+        "Customer relationships improved: proactive helpful reminders vs aggressive reactive dunning",
+        "Payment plans offered early prevent accounts from becoming severely delinquent",
+        "Predictive late payment alerts enable intervention 7-14 days early vs 30+ days reactive",
+        "Personalized collections approach improves response rates 2-3x vs bulk emails"
+      ],
+      "metrics": ["Past-due accounts: -40-60% reduction", "Recovery rate: 80-90% (vs 50-70%)", "Proactive reminders: 70-80% of invoices", "Collections team: 80% proactive vs reactive"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement automated payment reminders 5 days before invoice due date", "Deploy predictive late payment model for top 100 customers", "Offer one-click payment links in reminder emails"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Historical payment data (12-24 months for ML model training)", "Email/SMS communication platform", "Payment gateway integration for easy customer payment", "AR system integration for invoice and payment data"]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-portfolio-risk-monitoring-alerts",
+    "type": "function",
+    "level": 4,
+    "label": "Portfolio Risk Monitoring & Alerts",
+    "description": "Real-time executive dashboards tracking portfolio-level credit risk including concentration analysis, early warning indicators, industry exposure, and ML-powered forecasts of bad debt and DSO trends.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Credit manager reviews AR aging report monthly in Excel. 2. Identifies top 10 past-due accounts, discusses with collections team. 3. Quarterly presentation to CFO on credit metrics: total AR, DSO, bad debt write-offs. 4. No portfolio-level risk analysis (concentration risk, industry exposure). 5. Credit issues discovered reactively: major customer defaults come as surprise. 6. No early warning system: risks identified only after accounts already delinquent.",
+      "constraints": [
+        "Monthly AR aging review provides 30-day stale view of credit risk",
+        "No portfolio-level risk analysis: concentration risk, industry exposure, systemic issues",
+        "Major customer defaults discovered reactively with no advance warning",
+        "Credit metrics (DSO, bad debt) reported quarterly vs real-time executive visibility",
+        "No predictive analytics: can't forecast bad debt or DSO trends",
+        "Concentration risk unmanaged: single customer or industry failure cascades",
+        "Early warning indicators (payment slowness, credit score declines) not monitored systematically"
+      ],
+      "metrics": ["Portfolio visibility: Monthly AR aging reports", "Risk forecasting: None", "Early warning: Reactive only", "Executive dashboards: Quarterly presentations"]
+    },
+    "agentic": {
+      "workflow": "1. Risk Monitoring Agent generates real-time executive dashboard tracking: total credit exposure, AR aging, DSO trends, bad debt forecast, concentration risk (top 10 customers), industry exposure. 2. Agent monitors leading indicators continuously: increasing DSO, declining payment compliance, rising dispute rates, credit score deteriorations, industry distress signals. 3. Agent provides 60-90 day advance warning alerts: 'Manufacturing sector exposure up 15% this quarter, industry distress signals (3 major bankruptcies), recommend diversification'. 4. Agent performs stress testing: simulates impact of major customer defaults, economic downturns, industry shocks on portfolio. 5. Agent recommends risk mitigation actions: credit insurance for high-exposure accounts, factoring for cash flow, tighter terms for high-risk industry segments. 6. Agent generates executive summary: top risks, recommended actions, forecasted bad debt, DSO trajectory.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Risk Monitoring Agent", "Early Warning System Agent"],
+        "utilityAgents": ["Credit Bureau API Agent", "Industry News/Sentiment Feed Agent", "AR Analytics Agent", "Business Intelligence Platform Agent", "Stress Testing Engine Agent"]
+      },
+      "dataSources": [
+        "AR aging and credit exposure data by customer",
+        "Customer credit scores and D&B monitoring alerts",
+        "Payment trends (DSO, compliance rates, dispute volume)",
+        "Industry risk scores and distress indicators",
+        "News and events (bankruptcies, layoffs, M&A in key industries)",
+        "Concentration risk: top customers as % of total AR",
+        "Historical bad debt write-offs and patterns",
+        "Economic indicators and forecasts"
+      ],
+      "benefits": [
+        "Real-time portfolio risk visibility vs monthly/quarterly lag",
+        "60-90 day advance warning of credit issues vs reactive discovery after defaults",
+        "30-50% bad debt reduction through early intervention and risk mitigation",
+        "Concentration risk managed proactively (diversify before industry shocks)",
+        "Predictive DSO and bad debt forecasting enables CFO planning",
+        "Executive dashboards provide instant credit portfolio health visibility",
+        "Stress testing quantifies risk exposure under adverse scenarios"
+      ],
+      "metrics": ["Risk visibility: Real-time dashboards", "Early warning: 60-90 days advance", "Bad debt forecast accuracy: 80-90%", "Stress testing: Quarterly scenario analysis"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time AR dashboard for credit manager and CFO", "Implement concentration risk alerts (top 10 customers >40% of AR)", "Integrate D&B monitoring for automated credit score change alerts"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["AR data integration with BI platform", "D&B credit monitoring subscription", "Historical bad debt and payment data", "Executive sponsorship (CFO + credit manager alignment)"]
+    },
+    "icon": "shield-exclamation",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-risk-based-pricing-discounting",
+    "type": "function",
+    "level": 4,
+    "label": "Risk-Based Pricing & Discounting",
+    "description": "Dynamic pricing that adjusts base prices and discount levels based on customer credit risk profile, payment terms, and historical payment behavior to optimize for profitability after bad debt.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Standard pricing and discount tiers applied uniformly across customers. 2. Volume-based discounts: 5% for 1000+ units, 10% for 5000+ units. 3. No consideration of payment risk in pricing decisions. 4. High-risk customers pay same price as low-risk customers. 5. Bad debt costs absorbed uniformly across all customers (low-risk subsidize high-risk). 6. Sales reps negotiate discounts without visibility into customer payment history or risk profile.",
+      "constraints": [
+        "Standard discount tiers don't reflect customer-specific credit risk",
+        "High-risk customers get same pricing as low-risk, no premium for risk",
+        "Bad debt losses reduce profitability uniformly (5-10% of sales written off)",
+        "Low-risk customers with excellent payment history subsidize high-risk customers",
+        "Sales reps discount aggressively for risky customers without understanding cost",
+        "No testing of risk-adjusted pricing: don't know if high-risk customers accept premiums",
+        "Profitability analysis doesn't account for bad debt risk by customer segment"
+      ],
+      "metrics": ["Risk-based pricing: None (uniform pricing)", "Bad debt cost: 5-10% of sales", "Profitability by risk tier: Not measured", "Price premium for high-risk: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Risk-Based Pricing Agent calculates risk-adjusted pricing for each quote based on customer credit risk tier: A-tier (score 80-100) gets standard pricing, B-tier (score 60-79) gets +2-3% risk premium, C-tier (score 40-59) gets +5-8% premium, D-tier (score <40) gets +10-15% premium or requires insurance/surety bond. 2. Agent integrates with pricing engine: ensures quotes automatically include appropriate risk adjustment. 3. Agent tracks profitability by risk tier: ensures high-risk segments are profitable after accounting for bad debt. 4. Agent tests pricing sensitivity: measures demand elasticity (do high-risk customers accept higher prices or churn?). 5. Agent recommends insurance/surety bonds for ultra-high-risk customers: enables doing business vs declining (protects against default). 6. Agent balances objectives: maintain competitive pricing for low-risk customers, recover bad debt costs from high-risk customers.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Risk-Based Pricing Agent", "Discount Optimization Agent"],
+        "utilityAgents": ["Pricing Engine API Agent", "Profitability Analytics Agent", "Margin Calculator Agent", "Pricing Sensitivity Testing Agent", "Insurance/Surety Integration Agent"]
+      },
+      "dataSources": [
+        "Customer credit scores and risk tiers",
+        "Historical bad debt rates by risk tier",
+        "Customer profitability analysis (margin, volume, bad debt)",
+        "Pricing and discount data",
+        "Quote-to-order conversion rates by price level",
+        "Payment history and compliance rates",
+        "Competitive pricing benchmarks",
+        "Insurance/surety bond costs and availability"
+      ],
+      "benefits": [
+        "5-10% margin improvement by recovering bad debt costs from high-risk customers",
+        "Low-risk customers no longer subsidize high-risk (competitive pricing for best customers)",
+        "30-50% lower bad debt through risk-adjusted pricing disincentivizing high-risk business",
+        "Profitability by risk tier measurable and optimized",
+        "Insurance/surety bonds enable business with ultra-high-risk customers (vs declining)",
+        "Sales reps equipped with risk-adjusted pricing guidance (not blind to risk)",
+        "Dynamic pricing testing identifies optimal risk premiums by customer segment"
+      ],
+      "metrics": ["Margin improvement: 5-10%", "Bad debt reduction: 30-50%", "Risk-adjusted profitability: Measured by tier", "Price premium acceptance: 70-80% of high-risk customers"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement risk-tier pricing: +2-3% for B-tier, +5-8% for C-tier, +10-15% for D-tier", "Track profitability by risk tier (margin minus bad debt)", "Test price premium acceptance rates for high-risk customers"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Customer risk scoring system in place", "Pricing engine integration for risk-adjusted pricing", "Historical bad debt rates by customer segment", "Sales team training on risk-based pricing rationale"]
+    },
+    "icon": "tag",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-credit-analytics-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Credit Analytics & Reporting",
+    "description": "Executive dashboards and predictive analytics for credit portfolio performance including real-time DSO tracking, bad debt forecasting, payment trend analysis, and credit policy effectiveness metrics.",
+    "parentCapability": "capability-credit-payment-terms",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Credit manager pulls monthly AR aging report from ERP system into Excel. 2. Manually calculates DSO (Days Sales Outstanding) from AR balance and revenue. 3. Identifies past-due accounts and bad debt write-offs. 4. Creates monthly PowerPoint presentation for CFO with summary metrics. 5. Quarterly deep-dive analysis on credit performance trends. 6. Ad-hoc credit reports requested by executives require days of manual data compilation.",
+      "constraints": [
+        "Monthly AR aging reports provide 30-day stale view of credit performance",
+        "DSO calculated manually in Excel, subject to errors",
+        "No real-time credit metrics visibility for executives",
+        "Bad debt discovered reactively after write-offs (no predictive forecasting)",
+        "Credit policy effectiveness not measured (approval rates, bad debt by policy change)",
+        "Ad-hoc executive requests require days of manual analysis",
+        "No benchmarking against industry standards or peer companies"
+      ],
+      "metrics": ["Reporting frequency: Monthly (30-day lag)", "DSO visibility: Monthly calculation", "Bad debt forecasting: None", "Ad-hoc report turnaround: 3-5 days"]
+    },
+    "agentic": {
+      "workflow": "1. Credit Analytics Agent generates real-time executive dashboards tracking: current DSO with daily updates, AR aging by customer and risk tier, bad debt forecast (next 90 days), collection effectiveness (recovery rates, avg days to collect), payment trends (compliance rates, slowness indicators). 2. Agent provides predictive analytics: DSO trajectory forecast, bad debt estimate by quarter, impact of payment term changes. 3. Agent tracks credit policy effectiveness: approval rates, auto-approval vs manual review %, bad debt by policy rule, time-to-decision improvements. 4. Agent benchmarks performance: compares DSO, bad debt rates to industry standards and peer companies. 5. Agent generates self-service reports: executives filter by region, product line, customer segment, risk tier. 6. Agent identifies insights and anomalies: 'Net 60 customers pay on average 68 days, consider tightening terms' or 'Manufacturing sector DSO deteriorating 15%, investigate industry issues'.",
+      "agents": {
+        "orchestrator": "Credit & Payment Terms Orchestration Agent",
+        "superAgents": ["Credit Analytics Agent", "Forecasting Agent"],
+        "utilityAgents": ["BI Platform API Agent", "Data Warehouse Integration Agent", "DSO Calculator Agent", "Bad Debt Forecasting Model Agent", "Benchmarking Data Agent"]
+      },
+      "dataSources": [
+        "AR aging and payment data from ERP system",
+        "Invoice and payment transaction details",
+        "Customer credit scores and risk tiers",
+        "Credit policy rules and approval history",
+        "Bad debt write-off history",
+        "Industry benchmarks and peer company data",
+        "Economic indicators and forecasts",
+        "Collection activity and outcomes"
+      ],
+      "benefits": [
+        "Real-time DSO visibility vs monthly lag (executives see current performance daily)",
+        "Predictive DSO and bad debt forecasting enables proactive CFO planning",
+        "Self-service analytics eliminates 3-5 day wait for ad-hoc executive reports",
+        "Credit policy effectiveness measured and optimized (data-driven policy changes)",
+        "Benchmarking identifies performance gaps vs industry and peers",
+        "Anomaly detection surfaces insights (deteriorating segments, payment slowness)",
+        "Data-driven credit strategy vs gut-feel and reactive management"
+      ],
+      "metrics": ["Reporting: Real-time dashboards", "DSO visibility: Daily updates", "Bad debt forecasting: 90-day predictive", "Ad-hoc reports: Self-service instant"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time DSO dashboard for credit manager and CFO", "Implement predictive bad debt forecasting model", "Create self-service credit analytics portal for executives"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["AR data integration with BI platform (Tableau, Power BI)", "Historical AR, payment, and bad debt data (24+ months)", "Data warehouse or analytics platform", "Executive alignment on key credit KPIs"]
+    },
+    "icon": "chart-pie",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

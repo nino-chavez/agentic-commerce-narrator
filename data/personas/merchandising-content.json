@@ -1,0 +1,210 @@
+[
+  {
+    "id": "persona-content-experience-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "customer-facing",
+    "label": "Content Experience Director",
+    "title": "Content Experience Director",
+    "description": "Owns end-to-end content strategy, headless CMS operations, AI-powered content generation, and multi-channel content delivery responsible for engagement, SEO, and brand consistency.",
+    "responsibilities": [
+      "Define and execute content strategy across all channels",
+      "Manage headless CMS platform and content operations",
+      "Lead AI-powered content generation and personalization programs",
+      "Oversee content performance analytics and optimization",
+      "Ensure brand voice consistency across all content",
+      "Manage digital asset management (DAM) and content governance"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manual content creation taking 4-8 hours per piece",
+      "Generic content same for all website visitors",
+      "Weekly content updates requiring full site deployments",
+      "Spreadsheet-based content calendar and workflows",
+      "Manual DAM organization with 15-30 min asset search times"
+    ],
+    "agenticWorkflow": [
+      "AI content generation producing drafts in 30-60 minutes",
+      "1:1 personalized content delivered in <100ms via CDN",
+      "Real-time content updates without deployments",
+      "Automated content workflow with AI-powered approvals",
+      "AI auto-tagging enabling 2-5 min asset retrieval"
+    ],
+    "painPointsAddressed": [
+      "Manual content creation limits output to 20-40 pieces/month",
+      "One-size-fits-all content yields only 15-25% engagement",
+      "Deployment bottlenecks delay timely content (2-5 days)",
+      "Email approval workflows take 10-20 days",
+      "Asset search waste consumes 30% of creative team time"
+    ],
+    "kpis": [
+      "Content Production Volume (pieces/month)",
+      "Content Engagement Rate",
+      "Page Load Speed (<100ms target)",
+      "Content Approval Cycle Time",
+      "Asset Search & Retrieval Time",
+      "SEO Organic Traffic Growth"
+    ],
+    "icon": "document-text",
+    "color": "#EC4899",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-10-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-merchandising-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "merchandising",
+    "label": "Merchandising Director",
+    "title": "Merchandising Director / VP of Merchandising",
+    "description": "Oversees all merchandising operations including assortment planning, pricing strategy, promotional campaigns, and financial planning responsible for category profitability and inventory optimization.",
+    "responsibilities": [
+      "Lead merchandise financial planning (MFP) and OTB management",
+      "Define assortment strategy and optimize category mix",
+      "Set pricing and markdown strategy across all channels",
+      "Plan and execute promotional campaigns",
+      "Manage category performance and profitability",
+      "Oversee merchandising analytics and insights"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Annual MFP planning cycle taking 6-12 weeks",
+      "One-size-fits-all assortment across all stores",
+      "Manual pricing updates based on weekly competitive checks",
+      "Calendar-driven markdowns ignoring inventory reality",
+      "Monthly merchandising reports in spreadsheets"
+    ],
+    "agenticWorkflow": [
+      "Continuous rolling forecasts with 2-3 week planning cycles",
+      "Localized assortments optimized for 100+ store clusters",
+      "AI dynamic pricing with real-time competitive intelligence",
+      "Demand-driven markdowns maximizing revenue and clearance",
+      "Real-time merchandising dashboards with predictive insights"
+    ],
+    "painPointsAddressed": [
+      "Annual static plans become outdated within weeks",
+      "Generic assortments yield sub-optimal local performance",
+      "Manual pricing leaves 10-15% margin on table",
+      "Calendar markdowns cause 20-40% unnecessary margin erosion",
+      "Delayed reporting prevents agile decision-making"
+    ],
+    "kpis": [
+      "Gross Margin %",
+      "Inventory Turnover",
+      "Sell-Through Rate",
+      "Markdown % of Sales",
+      "Sales per Square Foot",
+      "Return on Inventory Investment (ROII)"
+    ],
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-10-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-product-catalog-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "merchandising",
+    "label": "Product Catalog Manager",
+    "title": "Product Information Manager / PIM Lead",
+    "description": "Manages product data quality, PIM platform operations, supplier onboarding, and multi-channel product syndication ensuring 95%+ product data accuracy across all channels.",
+    "responsibilities": [
+      "Oversee product information management (PIM) platform",
+      "Ensure product data quality and completeness",
+      "Manage supplier product data onboarding and enrichment",
+      "Coordinate multi-channel product syndication",
+      "Define and maintain product taxonomy and attributes",
+      "Lead product content localization for international markets"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Product data scattered across spreadsheets and systems",
+      "Manual product enrichment taking 2-4 hours per SKU",
+      "Email-based supplier data collection and manual entry",
+      "Manual product syndication to each channel separately",
+      "Quarterly product data quality audits"
+    ],
+    "agenticWorkflow": [
+      "Centralized PIM as single source of truth for all product data",
+      "AI enrichment completing products in 30-60 min vs 2-4 hrs",
+      "Automated supplier portal with AI data mapping",
+      "One-click syndication to 10+ channels simultaneously",
+      "Continuous AI-powered data quality monitoring with auto-correction"
+    ],
+    "painPointsAddressed": [
+      "Siloed product data causes 70-85% accuracy problems",
+      "Manual enrichment bottleneck limits new product launches",
+      "Email supplier data creates 2-4 week onboarding delays",
+      "Manual syndication errors cause channel inconsistencies",
+      "Quarterly audits discover issues too late"
+    ],
+    "kpis": [
+      "Product Data Accuracy %",
+      "Product Enrichment Time (hours per SKU)",
+      "New Product Time-to-Market",
+      "Supplier Onboarding Cycle Time",
+      "Product Syndication Accuracy %",
+      "Incomplete Product Records %"
+    ],
+    "icon": "tag",
+    "color": "#F59E0B",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-10-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-pricing-promotions-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "merchandising",
+    "label": "Pricing & Promotions Manager",
+    "title": "Pricing & Promotions Manager",
+    "description": "Manages pricing strategy, competitive intelligence, markdown optimization, and promotional campaign effectiveness responsible for margin optimization and promotional ROI.",
+    "responsibilities": [
+      "Define and execute pricing strategy across all channels",
+      "Monitor competitive pricing and market intelligence",
+      "Optimize markdown strategy and clearance performance",
+      "Plan and measure promotional campaign effectiveness",
+      "Manage price elasticity analysis and testing",
+      "Track pricing and promotional performance metrics"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Static cost-plus pricing rules set annually",
+      "Weekly manual competitive price checks (100-500 SKUs only)",
+      "Calendar-driven markdowns with fixed % discounts",
+      "Spreadsheet-based promotion planning and tracking",
+      "No incremental lift measurement (can't isolate promo impact)"
+    ],
+    "agenticWorkflow": [
+      "AI dynamic pricing optimized for demand elasticity and competition",
+      "Real-time competitive monitoring across 1000s of SKUs",
+      "AI markdown optimization maximizing revenue and inventory clearance",
+      "Automated promotion execution with multi-channel orchestration",
+      "Incremental lift measurement with control group analysis"
+    ],
+    "painPointsAddressed": [
+      "Static pricing leaves 10-15% margin opportunity on table",
+      "Limited competitive coverage misses pricing opportunities",
+      "Calendar markdowns ignore demand reality (unnecessary erosion)",
+      "Manual promotion setup delays campaigns and creates errors",
+      "No lift measurement prevents optimization of future campaigns"
+    ],
+    "kpis": [
+      "Gross Margin %",
+      "Price Realization vs. Target",
+      "Markdown % of Sales",
+      "Promotional ROI",
+      "Price Competitiveness Index",
+      "Promotional Lift (incremental sales)"
+    ],
+    "icon": "currency-dollar",
+    "color": "#EF4444",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-10-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

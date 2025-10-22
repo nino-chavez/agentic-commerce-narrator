@@ -1,0 +1,398 @@
+[
+  {
+    "id": "function-customer-lifetime-value-prediction",
+    "type": "function",
+    "level": 4,
+    "label": "Customer Lifetime Value Prediction",
+    "description": "ML-powered LTV forecasting with 80-85% accuracy enabling segmented customer investment strategies and 40-60% improvement in marketing ROI through predictive value-based targeting.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing team treats all customers equally: same email frequency, same promotion offers, same retention budget. 2. Analyst calculates historical LTV retrospectively: averages past customer revenue over lifetime (already churned customers only). 3. Analyst segments customers into 3 buckets: high value ($10K+ historical revenue), medium ($3K-$10K), low (<$3K). 4. Marketing allocates retention budget evenly across segments: $50/customer regardless of future potential. 5. High-value customer churns due to lack of personalized attention, low-value customer receives expensive retention offers (negative ROI). 6. Total customer profitability unclear (spend same on customers with $500 LTV vs $15K LTV). 7. Marketing ROI sub-optimal (40-50% of retention budget wasted on low-probability conversions).",
+      "constraints": [
+        "Historical LTV only (retrospective, can't predict future value)",
+        "Treats all customers equally (same marketing investment)",
+        "No predictive segmentation (can't identify high-potential customers early)",
+        "Retention budget allocated evenly (waste on low-LTV customers)",
+        "High-value customers churn due to lack of personalization",
+        "Marketing ROI 40-50% below potential"
+      ],
+      "metrics": ["LTV prediction: None (historical only)", "Targeting accuracy: 50-60%", "Marketing ROI: 3:1", "Retention effectiveness: 30-40%"]
+    },
+    "agentic": {
+      "workflow": "1. LTV Prediction Agent analyzes customer data: purchase history, demographics, behavior, engagement, product preferences, channel interactions. 2. Agent builds ML model predicting future LTV: 'Customer John Doe acquired 3 months ago, predicted 3-year LTV $12,500 (80% confidence), high propensity for premium products, responds well to personalized email'. 3. Agent segments customers by predicted LTV: Platinum ($15K+ predicted), Gold ($8K-$15K), Silver ($3K-$8K), Bronze (<$3K). 4. Agent recommends differentiated strategies: Platinum - dedicated account manager + VIP events + exclusive early access, Bronze - automated email campaigns only. 5. Marketing allocates retention budget by predicted LTV: $200/customer for Platinum (high ROI potential), $20/customer for Bronze. 6. Agent monitors LTV predictions vs actuals: 'Platinum segment performing at 85% of predicted LTV, Gold segment 90%, model accuracy 82% overall - recalibrate quarterly'. 7. 40-60% marketing ROI improvement through value-based targeting, retention budget optimized (spend where highest return).",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["LTV Prediction Agent", "Customer Segmentation Agent", "Investment Optimization Agent"],
+        "utilityAgents": ["ML Platform", "Customer Data Platform", "Campaign Automation", "ROI Calculator"]
+      },
+      "dataSources": [
+        "Customer transaction history (purchases, returns, revenue, frequency)",
+        "Demographic and firmographic data",
+        "Behavioral data (website visits, email engagement, product views)",
+        "Customer service interactions (cases, satisfaction scores)",
+        "Product preferences and category affinities",
+        "Channel preferences (email, SMS, direct mail response rates)",
+        "Churn indicators and retention factors",
+        "Historical LTV cohort data for model training"
+      ],
+      "benefits": [
+        "80-85% LTV prediction accuracy (vs no prediction capability)",
+        "40-60% marketing ROI improvement (value-based targeting)",
+        "Differentiated customer strategies (Platinum vs Bronze treatment)",
+        "Optimized retention budget (spend where highest return)",
+        "Early identification of high-value customers (invest in growth)",
+        "Quarterly model recalibration (accuracy improvement over time)"
+      ],
+      "metrics": ["LTV prediction: 80-85% accuracy", "Targeting accuracy: 85-90%", "Marketing ROI: 5:1-6:1", "Retention effectiveness: 60-75%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy LTV prediction model for active customer base segmentation", "Implement differentiated email campaign strategies by predicted LTV tier", "Enable marketing budget allocation by LTV segment with ROI tracking"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform for model development and deployment", "Customer data platform (CDP) with unified customer profiles", "Historical transaction data (24+ months) for model training", "Behavioral and engagement data integration", "Marketing automation platform for segmented campaigns", "ROI measurement framework", "Model monitoring and recalibration process"]
+    },
+    "icon": "currency-dollar",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-product-recommendation-engines",
+    "type": "function",
+    "level": 4,
+    "label": "Product Recommendation Engines",
+    "description": "Real-time personalized recommendations achieving 25-40% conversion lift and 35-50% average order value increase through collaborative filtering and deep learning models.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. E-commerce website shows same 'Top Sellers' to all visitors: bestselling 10 products regardless of customer preferences. 2. Merchandiser manually curates 'Customers Also Bought' lists: looks at transaction data, creates static product bundles (updated quarterly). 3. Customer viewing laptop sees generic recommendations: top-selling mouse, keyboard, laptop bag (many already own these items). 4. Recommendations not personalized: gamer sees same accessories as business professional, first-time visitor sees same as loyal customer. 5. Low conversion (5-8% of recommended products clicked), low incremental revenue ($10-15 per visitor). 6. Email campaigns show same 'You Might Like' products to all subscribers (mass blast approach). 7. 50-60% of customers ignore recommendations (not relevant to their needs or preferences).",
+      "constraints": [
+        "Static recommendations (same for all customers)",
+        "Manual curation (quarterly updates, stale data)",
+        "No personalization (gamer sees business accessories)",
+        "Low conversion 5-8% (recommendations not relevant)",
+        "Low incremental revenue $10-15 per visitor",
+        "60% customer ignore rate (recommendations perceived as spam)"
+      ],
+      "metrics": ["Recommendation conversion: 5-8%", "Incremental revenue per visitor: $10-15", "Personalization: None (static)", "Update frequency: Quarterly"]
+    },
+    "agentic": {
+      "workflow": "1. Customer views laptop, Recommendation Agent analyzes in real-time: customer history (viewed gaming peripherals), similar customer purchases (gamers bought RGB keyboard, gaming mouse, headset), current context (shopping cart has gaming laptop). 2. Agent generates personalized recommendations: 'Recommended for you: RGB Mechanical Keyboard ($120), 7.1 Gaming Headset ($80), Gaming Mouse Pad ($25) - 85% of customers like you purchased these items'. 3. Customer adds keyboard to cart, agent updates recommendations dynamically: 'Complete your setup: Monitor Arm Stand ($45), Cable Management Kit ($15), Desk Lamp ($30)'. 4. Agent optimizes for AOV increase: bundles products ($240 total), offers bundle discount: 'Buy all 3 items, save $20 (8% off)'. 5. Email campaign sends personalized recommendations: customer receives gaming accessories (not generic top sellers), subject line: 'Complete Your Gaming Setup - Items You'll Love'. 6. Agent tracks performance: recommendation conversion 28% (vs 5-8% baseline), incremental revenue $65 per visitor (vs $10-15), 35% AOV increase. 7. 25-40% conversion lift, 35-50% AOV increase through real-time personalization and collaborative filtering.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Recommendation Agent", "Personalization Agent", "Bundle Optimization Agent"],
+        "utilityAgents": ["ML Recommendation Engine", "Customer Profile API", "Real-Time Context", "A/B Testing Platform"]
+      },
+      "dataSources": [
+        "Customer purchase history and browsing behavior",
+        "Product catalog with attributes (category, price, features)",
+        "Collaborative filtering data (customers who bought X also bought Y)",
+        "Real-time session context (current cart, viewed products)",
+        "Customer preferences and explicit feedback (ratings, reviews)",
+        "Similar customer cohorts and lookalike profiles",
+        "Inventory availability and pricing",
+        "A/B test results and recommendation performance metrics"
+      ],
+      "benefits": [
+        "25-40% recommendation conversion lift (28% vs 5-8% baseline)",
+        "35-50% average order value increase ($65 vs $10-15 incremental)",
+        "Real-time personalization (gamer sees gaming accessories)",
+        "Dynamic recommendations (update based on cart changes)",
+        "Bundle optimization (cross-sell and upsell suggestions)",
+        "Email personalization (relevant products, not mass blast)"
+      ],
+      "metrics": ["Recommendation conversion: 25-35%", "Incremental revenue per visitor: $60-75", "Personalization: Real-time (1:1)", "Update frequency: Real-time"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy collaborative filtering for 'Customers Also Bought' recommendations", "Implement real-time recommendation widget on product detail pages", "Enable personalized email recommendations based on browsing and purchase history"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["ML recommendation platform (AWS Personalize, Google Recommendations AI, custom)", "Customer data platform with unified profiles and behavior tracking", "Real-time event streaming for session context", "Product catalog with rich attributes and metadata", "A/B testing platform for recommendation optimization", "Email/web personalization integration", "Inventory and pricing API for availability checks"]
+    },
+    "icon": "sparkles",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-next-best-action-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Next Best Action Optimization",
+    "description": "Real-time decision engine recommending optimal customer interactions achieving 50-70% improvement in campaign response rates and 40-60% reduction in customer contact fatigue.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Marketing runs 5 concurrent campaigns: email for product launch, SMS for flash sale, push notification for cart abandonment, direct mail for loyalty program, survey request. 2. Customer receives all 5 communications in same week (campaign teams don't coordinate): 'Buy new product', 'Flash sale 20% off', 'Complete your purchase', 'Join loyalty program', 'Take our survey'. 3. Customer overwhelmed by messages (contact fatigue), unsubscribes from email or marks as spam. 4. Sales rep calls customer for upsell opportunity, unaware customer just received 5 marketing messages and is annoyed. 5. No prioritization logic: all campaigns treated equally, highest-response opportunity unclear. 6. Campaign response rates decline over time: 8% → 5% → 3% as fatigue sets in. 7. Customer satisfaction drops (NPS -10 points) due to over-communication and irrelevant offers.",
+      "constraints": [
+        "No coordination across campaigns (5 messages in same week)",
+        "Contact fatigue (customer overwhelmed, unsubscribes)",
+        "No prioritization (which campaign most likely to convert unclear)",
+        "Sales/marketing misalignment (rep calls at wrong time)",
+        "Declining response rates (8% → 3% due to fatigue)",
+        "Customer satisfaction decline (NPS -10 points)"
+      ],
+      "metrics": ["Campaign response rate: 3-5% (declining)", "Contact frequency: 5+ per week (excessive)", "Unsubscribe rate: 8-12%", "Customer satisfaction: Low (NPS impact)"]
+    },
+    "agentic": {
+      "workflow": "1. Next Best Action Agent analyzes customer profile: John Doe has abandoned cart ($250 value), eligible for loyalty program, received product launch email yesterday (no open), survey pending. 2. Agent calculates propensity scores: Cart abandonment recovery 65% (high), loyalty program enrollment 20% (low), survey response 10% (very low), new product purchase 15% (medium). 3. Agent prioritizes by revenue potential: Cart abandonment = $250 revenue * 65% propensity = $162 expected value (highest), loyalty = $50 value * 20% = $10, survey = $0 value. 4. Agent recommends: 'Send cart abandonment reminder with 10% discount code via email (preferred channel), suppress all other campaigns for 48 hours to avoid fatigue'. 5. Email sent, customer converts (completes purchase), agent updates: 'Success - cart recovered $250, now suppress campaigns for 14 days (purchase cooldown period)'. 6. Sales rep sees agent recommendation: 'Do not contact - customer just made purchase, wait 30 days for upsell timing'. 7. 50-70% response rate improvement (12-15% vs 3-5%), 40-60% contact reduction (2 messages/month vs 5/week), customer satisfaction stable.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Next Best Action Agent", "Propensity Scoring Agent", "Contact Optimization Agent"],
+        "utilityAgents": ["ML Models", "Campaign Management API", "Customer Profile", "Revenue Calculator"]
+      },
+      "dataSources": [
+        "Customer profile and interaction history",
+        "Campaign eligibility rules and business logic",
+        "Propensity models for each action type (response likelihood)",
+        "Revenue potential by action (expected value calculation)",
+        "Contact history and frequency rules (fatigue management)",
+        "Channel preferences (email, SMS, push, direct mail)",
+        "Real-time customer state (cart, browsing, recent purchases)",
+        "Campaign performance data (historical response rates)"
+      ],
+      "benefits": [
+        "50-70% response rate improvement (12-15% vs 3-5%)",
+        "40-60% contact reduction (2/month vs 5/week, reduces fatigue)",
+        "Revenue-optimized prioritization ($162 expected value vs guessing)",
+        "Cross-channel coordination (marketing and sales aligned)",
+        "Fatigue management (suppress campaigns after action taken)",
+        "Customer satisfaction maintained (relevant, timely communications)"
+      ],
+      "metrics": ["Campaign response rate: 12-15% (optimized)", "Contact frequency: 2 per month (controlled)", "Unsubscribe rate: 2-3%", "Customer satisfaction: High (NPS stable)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy propensity scoring for top 3 campaign types (cart abandonment, upsell, renewal)", "Implement contact frequency rules to prevent over-messaging", "Enable revenue-based prioritization for competing campaigns"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform for propensity model development", "Customer data platform with unified interaction history", "Campaign management platform with API integration", "Business rules engine for eligibility and suppression logic", "Revenue attribution framework for expected value calculation", "Channel preference management", "Real-time decision engine for action recommendation"]
+    },
+    "icon": "lightning-bolt",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-propensity-modeling-churn-purchase-upsell",
+    "type": "function",
+    "level": 4,
+    "label": "Propensity Modeling (Churn, Purchase, Upsell)",
+    "description": "Multi-model ML framework predicting customer behaviors with 75-85% accuracy enabling proactive retention achieving 30-50% churn reduction and 25-40% upsell conversion improvement.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Customer success team discovers churn reactively: customer cancels subscription, calls to request account closure. 2. Team attempts win-back offer: '20% discount to stay', but customer already committed to competitor (too late). 3. Sales team identifies upsell opportunities manually: reviews all customer accounts quarterly, sends generic upgrade offers to entire base. 4. Low upsell conversion 3-5%: most customers not ready or interested, offers not targeted. 5. High-value customer churns unexpectedly: no warning signs detected, account seemed healthy last quarter. 6. Post-mortem analysis: customer engagement declining for 6 months (login frequency dropped 60%, support cases increased 3x) - signals missed. 7. Annual churn 25-30%, reactive retention (save <20% of at-risk customers), untargeted upsell (95% ignore offers).",
+      "constraints": [
+        "Reactive churn detection (customer already decided to leave)",
+        "Win-back success <20% (too late to save relationship)",
+        "Manual upsell targeting (quarterly review, generic offers)",
+        "Low upsell conversion 3-5% (not targeted or timed correctly)",
+        "Missed early warning signals (engagement decline, support issues)",
+        "Annual churn 25-30% (many preventable if caught early)"
+      ],
+      "metrics": ["Churn rate: 25-30% annually", "Churn prediction: None (reactive)", "Upsell conversion: 3-5%", "Retention success: <20%"]
+    },
+    "agentic": {
+      "workflow": "1. Propensity Modeling Agent monitors all customers continuously: login frequency, feature usage, support cases, payment patterns, engagement scores. 2. Agent detects early churn signals: 'Customer ABC Corp churn risk 75% (high) - login frequency dropped 60% over 90 days, support cases increased 3x, invoice payment delays increased from 15 to 45 days, contract renewal in 60 days'. 3. Agent triggers proactive retention workflow: assigns customer success manager, recommends retention offer: 'Offer 15% renewal discount + dedicated onboarding for underutilized premium features (detected only using 30% of paid capabilities)'. 4. CSM contacts customer 60 days before renewal (vs reactive cancellation call), addresses pain points, customer renews. 5. Agent identifies upsell opportunity: 'Customer XYZ Corp purchase propensity 80% for Premium tier - using 95% of current plan limits, frequent feature requests for Premium-only capabilities, budget approved (LinkedIn job post for analyst role - growth signal)'. 6. Sales rep receives targeted upsell alert, contacts customer at optimal timing, conversion success. 7. 30-50% churn reduction (15-18% annual churn vs 25-30%), 25-40% upsell conversion improvement (8-10% vs 3-5%).",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Propensity Modeling Agent", "Churn Prediction Agent", "Upsell Opportunity Agent"],
+        "utilityAgents": ["ML Platform", "Customer Health Score", "Engagement Analytics", "CRM Integration"]
+      },
+      "dataSources": [
+        "Customer engagement metrics (login frequency, feature usage, session duration)",
+        "Support interaction data (case volume, severity, resolution time)",
+        "Payment and billing patterns (invoice delays, payment method changes)",
+        "Product usage telemetry (feature adoption, capacity utilization)",
+        "Contract and renewal dates",
+        "External signals (LinkedIn growth indicators, competitor intelligence)",
+        "Historical churn and upsell patterns for model training",
+        "Customer health scores and risk indicators"
+      ],
+      "benefits": [
+        "30-50% churn reduction (15-18% vs 25-30% annual churn)",
+        "Proactive retention (60-90 day early warning vs reactive cancellation)",
+        "75-85% churn prediction accuracy (catch most at-risk customers)",
+        "25-40% upsell conversion improvement (8-10% vs 3-5%)",
+        "Targeted upsell timing (contact when propensity high)",
+        "Automated workflow triggers (CSM assigned, retention offers recommended)"
+      ],
+      "metrics": ["Churn rate: 15-18% annually", "Churn prediction: 75-85% accuracy", "Upsell conversion: 8-10%", "Retention success: 60-70%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy churn prediction model for subscription or contract customers", "Implement engagement scoring with early warning alerts for at-risk customers", "Enable upsell propensity scoring for sales team prioritization"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform for model development (churn, purchase, upsell models)", "Customer data platform with engagement and behavioral data", "Historical churn and conversion data (24+ months) for training", "Customer health scoring framework", "CRM integration for workflow triggers and alerts", "Retention playbook and offer framework", "Sales/CSM training on propensity score usage"]
+    },
+    "icon": "chart-pie",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-market-basket-analysis-association-rules",
+    "type": "function",
+    "level": 4,
+    "label": "Market Basket Analysis & Association Rules",
+    "description": "Automated affinity discovery with 80-90% rule accuracy enabling optimized product placement and bundling strategies achieving 20-35% cross-sell revenue increase.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["Retail", "Grocery", "All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Merchandiser analyzes product affinities manually: reviews transaction data in Excel, looks for common product pairs. 2. Merchandiser notices: 'Customers buying diapers often buy baby wipes too' (obvious association). 3. Merchandiser creates product placement strategy: positions baby wipes next to diapers in store layout. 4. Merchandiser misses non-obvious associations: 'Customers buying grills also buy chimney starter, but correlation not visible in manual analysis'. 5. Merchandiser creates promotional bundles based on intuition: 'Laptop + Mouse + Keyboard' (generic, low incremental conversion). 6. Limited analysis scope: manually reviews top 100 products, misses long-tail opportunities (98% of SKUs not analyzed). 7. Association rules updated annually (stale insights, seasonal patterns missed), cross-sell revenue opportunity 60-70% unrealized.",
+      "constraints": [
+        "Manual analysis (only obvious associations found)",
+        "Limited scope (top 100 products, 98% of SKUs ignored)",
+        "Annual updates (stale insights, miss seasonal changes)",
+        "Intuition-based bundles (low incremental conversion)",
+        "No statistical confidence (can't distinguish real patterns from noise)",
+        "60-70% cross-sell opportunity unrealized"
+      ],
+      "metrics": ["Association rules discovered: 20-30 (manual)", "SKU coverage: 2% (top 100 products)", "Update frequency: Annual", "Cross-sell revenue lift: 5-10%"]
+    },
+    "agentic": {
+      "workflow": "1. Market Basket Agent analyzes all transaction data: discovers 2,500 statistically significant product associations across entire catalog (100K+ SKUs). 2. Agent finds non-obvious patterns: 'Customers buying grills have 85% likelihood to purchase chimney starter within 7 days (vs 5% baseline), association strength 92% confidence, seasonal peak May-July'. 3. Agent recommends merchandising actions: 'Place chimney starters adjacent to grills, create bundle: Grill + Chimney Starter + Charcoal ($15 discount), expected 30% bundle take rate'. 4. Agent discovers time-based associations: 'Customers buying Halloween costumes purchase candy 3-5 days later (78% probability), recommend email trigger campaign: send candy promotion 3 days after costume purchase'. 5. Agent identifies complementary bundles: 'Laptop buyers purchasing gaming mouse (not generic office mouse) have 45% higher satisfaction scores and 2.5x lower return rate - recommend gaming accessories for gaming laptop SKUs specifically'. 6. Merchandiser implements recommendations, tracks results: bundle conversion 28%, cross-sell email campaign 18% response rate (vs 3% generic campaigns). 7. 20-35% cross-sell revenue increase through automated affinity discovery and optimized bundling.",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Market Basket Agent", "Association Rule Agent", "Bundle Optimization Agent"],
+        "utilityAgents": ["ML Platform", "Transaction Database", "Statistical Engine", "Merchandising API"]
+      },
+      "dataSources": [
+        "Transaction data with basket-level product purchases",
+        "Product catalog with attributes (category, price, features)",
+        "Temporal data (purchase timing, seasonal patterns)",
+        "Customer segments for affinity variation analysis",
+        "Store layout and placement constraints",
+        "Bundle and promotion performance history",
+        "Statistical confidence thresholds (support, confidence, lift metrics)",
+        "Inventory and margin data for bundle profitability"
+      ],
+      "benefits": [
+        "20-35% cross-sell revenue increase (optimized bundling and placement)",
+        "2,500 association rules discovered (vs 20-30 manual)",
+        "100% SKU coverage (long-tail opportunities captured)",
+        "80-90% rule accuracy (statistical confidence vs intuition)",
+        "Real-time updates (seasonal patterns detected automatically)",
+        "Time-based associations (email triggers 3-5 days after purchase)"
+      ],
+      "metrics": ["Association rules discovered: 2,500+ (automated)", "SKU coverage: 100% (entire catalog)", "Update frequency: Weekly (real-time)", "Cross-sell revenue lift: 20-35%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy market basket analysis for transaction data with top 1,000 SKUs", "Implement automated bundle recommendations based on affinity rules", "Enable triggered email campaigns for complementary product cross-sell"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["ML platform with association rule mining (Apriori, FP-Growth algorithms)", "Transaction database with basket-level detail", "Product catalog with complete metadata", "Statistical analysis tools for confidence and lift calculation", "Merchandising integration for placement and bundle execution", "Email/campaign automation for triggered cross-sell", "A/B testing framework for bundle optimization"]
+    },
+    "icon": "shopping-cart",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-time-series-forecasting-sales-demand-traffic",
+    "type": "function",
+    "level": 4,
+    "label": "Time Series Forecasting (Sales, Demand, Traffic)",
+    "description": "Multi-model forecasting ensemble achieving 80-90% accuracy with automated seasonality detection reducing forecast error by 40-60% and enabling proactive capacity planning.",
+    "parentCapability": "capability-predictive-analytics-ml",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. FP&A analyst creates quarterly sales forecast in Excel: takes last year Q4 sales, adjusts by YoY growth rate (+10%), manual spreadsheet. 2. Analyst ignores external factors: competitor launches, economic trends, weather patterns, promotional calendar. 3. Forecast accuracy 50-60% (essentially straight-line projection with growth adjustment). 4. Black Friday sales spike forecast way off: predicted $5M based on +10% growth, actual $8M (missed 60% of spike - promotional impact not modeled). 5. Inventory shortage results from under-forecast: stockouts on 20% of SKUs, lost sales $500K. 6. Next month over-corrects: increases forecast by 50%, over-orders inventory, clearance markdown required ($200K margin loss). 7. Forecast updated monthly (slow reaction to trends), simple linear model (misses seasonality, events, external factors).",
+      "constraints": [
+        "Simple linear forecasting (straight-line + growth rate)",
+        "50-60% accuracy (large forecast errors)",
+        "Ignores external factors (promotions, competition, weather, economy)",
+        "Monthly updates (slow reaction to trends)",
+        "Misses seasonality (Black Friday spike under-forecast)",
+        "Inventory imbalance (stockouts and overstock from forecast errors)"
+      ],
+      "metrics": ["Forecast accuracy: 50-60% (MAPE 40-50%)", "Update frequency: Monthly", "Model sophistication: Linear projection", "External factors: Not included"]
+    },
+    "agentic": {
+      "workflow": "1. Forecasting Agent builds ensemble model: combines ARIMA (trend/seasonality), Prophet (holidays/events), XGBoost (external factors), neural network (complex patterns). 2. Agent auto-detects seasonality: 'Daily sales show weekly pattern (weekend spike), monthly pattern (month-end surge), annual pattern (Q4 holiday spike), Black Friday 3x normal'. 3. Agent incorporates external data: 'Weather forecast: cold front approaching (heating products demand +20%), competitor promotion detected via price monitoring (Electronics demand -10%)'. 4. Agent generates probabilistic forecast: 'Next week sales: $1.2M most likely (50% confidence), range $1.0M-$1.4M (80% confidence interval), Black Friday: $7.5M-$9.0M (accounting for promotional calendar and historical spike patterns)'. 5. Agent updates forecast daily: new transaction data, weather updates, promotional changes incorporated automatically (vs monthly static forecast). 6. Inventory team receives forecast: orders aligned to predicted demand, 90% inventory accuracy (vs 60% manual), stockouts reduced 70%. 7. 40-60% forecast error reduction (80-90% accuracy vs 50-60%), proactive planning (daily updates catch trends early).",
+      "agents": {
+        "orchestrator": "Analytics Orchestration Agent",
+        "superAgents": ["Forecasting Agent", "Seasonality Detection Agent", "External Factor Integration Agent"],
+        "utilityAgents": ["ML Platform", "Time-Series Database", "Weather API", "Competitive Intelligence", "Promotional Calendar"]
+      },
+      "dataSources": [
+        "Historical sales/demand/traffic data (24+ months for seasonality)",
+        "Calendar data (holidays, events, promotional calendar)",
+        "External data (weather forecasts, economic indicators)",
+        "Competitive intelligence (price monitoring, promotion tracking)",
+        "Product attributes (new launches, discontinuations)",
+        "Inventory levels and constraints",
+        "Web analytics (traffic, conversion trends)",
+        "Multiple forecasting model outputs (ARIMA, Prophet, XGBoost, neural networks)"
+      ],
+      "benefits": [
+        "40-60% forecast error reduction (80-90% accuracy vs 50-60%)",
+        "Auto-detected seasonality (weekly, monthly, annual patterns)",
+        "External factors integrated (weather, competition, economy)",
+        "Daily updates (vs monthly, faster reaction to trends)",
+        "Probabilistic forecasts (confidence intervals, not point estimates)",
+        "70% stockout reduction through better demand prediction"
+      ],
+      "metrics": ["Forecast accuracy: 80-90% (MAPE 10-20%)", "Update frequency: Daily (real-time)", "Model sophistication: Ensemble (4+ models)", "External factors: Weather, competition, economy integrated"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy time-series forecasting for top 20% SKUs driving 80% revenue", "Implement automated seasonality detection for weekly and annual patterns", "Integrate promotional calendar for event-driven demand spikes"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["ML platform with time-series forecasting capabilities", "Historical data (24+ months) for pattern detection", "Time-series database for efficient querying", "External data feeds (weather, competitive pricing, economic indicators)", "Promotional calendar and event data", "Integration with inventory and supply chain planning systems", "Model monitoring and accuracy tracking framework"]
+    },
+    "icon": "trending-up",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

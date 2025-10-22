@@ -1,0 +1,308 @@
+[
+  {
+    "id": "persona-store-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Store Manager",
+    "label": "Store Manager",
+    "description": "Leads all store operations including sales, labor, compliance, cash management, and customer experience, responsible for P&L performance and team development at the unit level.",
+    "responsibilities": [
+      "Drive store sales and profitability",
+      "Manage store labor scheduling and performance",
+      "Ensure compliance with company and regulatory standards",
+      "Oversee cash management and banking operations",
+      "Lead team hiring, training, and development",
+      "Deliver exceptional customer experience"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Spend 3-6 hours per week manually creating labor schedules",
+      "Review paper task checklists daily (60-70% completion)",
+      "Manually count cash and reconcile (30-90 min/day)",
+      "React to compliance violations discovered during quarterly audits",
+      "Print and post corporate communications (40-60% read rate)"
+    ],
+    "agenticWorkflow": [
+      "Review AI-generated schedules in 30-60 min/week",
+      "Monitor real-time task completion dashboard (95-99% completion)",
+      "Smart safe auto-reconciles cash in 5-10 min/day",
+      "Receive real-time compliance alerts with guided remediation",
+      "Mobile app delivers targeted messages with 95%+ read tracking"
+    ],
+    "painPointsAddressed": [
+      "Labor costs reduced 10-20% through AI optimization",
+      "Task completion improved to 95-99% (vs 60-70%)",
+      "Cash management time reduced to 5-10 min (vs 30-90 min)",
+      "Compliance violations reduced 60-80%"
+    ],
+    "kpis": [
+      "Store Sales Growth",
+      "Labor Cost % of Sales",
+      "Task Completion Rate",
+      "Compliance Score",
+      "Cash Variance",
+      "Employee Turnover"
+    ],
+    "icon": "user-circle",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-assistant-store-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Assistant Store Manager",
+    "label": "Assistant Store Manager",
+    "description": "Supports store manager in daily operations including task execution, staff supervision, compliance monitoring, and operational excellence initiatives.",
+    "responsibilities": [
+      "Supervise daily store operations and staff",
+      "Ensure task completion and operational standards",
+      "Monitor compliance with policies and procedures",
+      "Assist with labor scheduling and coverage",
+      "Support cash management and banking operations",
+      "Handle customer escalations and service issues"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manually assign tasks to associates from paper checklists",
+      "Conduct periodic walk-throughs to check task completion",
+      "Cover cash register during rushes and breaks",
+      "Manually track compliance items in binder",
+      "Handle last-minute schedule changes via phone calls"
+    ],
+    "agenticWorkflow": [
+      "Review AI-assigned tasks and approve recommendations",
+      "Monitor real-time task dashboard for exceptions",
+      "Smart safes and POS provide instant cash variance alerts",
+      "Compliance app flags issues with photo-based verification",
+      "Self-service app handles most schedule swaps automatically"
+    ],
+    "painPointsAddressed": [
+      "Task oversight time reduced 50-60% (exception-based)",
+      "Cash handling simplified with auto-variance detection",
+      "Compliance monitoring continuous (vs periodic walk-throughs)",
+      "Schedule change coordination automated"
+    ],
+    "kpis": [
+      "Task Completion Rate",
+      "Compliance Score",
+      "Associate Productivity",
+      "Customer Satisfaction",
+      "Operational Execution Score",
+      "Schedule Adherence"
+    ],
+    "icon": "user",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-district-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "District Manager",
+    "label": "District Manager",
+    "description": "Oversees 8-15 store locations, responsible for sales performance, operational excellence, compliance, talent development, and driving corporate initiatives across the district.",
+    "responsibilities": [
+      "Drive sales and profitability across district stores",
+      "Ensure operational and compliance standards",
+      "Develop and coach store management teams",
+      "Conduct store audits and performance reviews",
+      "Implement corporate programs and initiatives",
+      "Manage district P&L and budget"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Spend 30-50% of time conducting manual store audits",
+      "Travel to each store for quarterly compliance checks (2-4 hours each)",
+      "Manually review task completion binders during visits",
+      "Discover compliance violations weeks after occurrence",
+      "Consolidate store performance data manually in spreadsheets"
+    ],
+    "agenticWorkflow": [
+      "Focus 70-80% of time on coaching vs audits (exception-based visits)",
+      "Real-time compliance dashboards show all stores continuously",
+      "AI flags stores at risk for proactive intervention",
+      "Receive instant alerts for critical violations",
+      "Automated performance dashboards across all stores"
+    ],
+    "painPointsAddressed": [
+      "Audit time reduced 70-85% (exception-based vs routine)",
+      "Compliance visibility real-time (vs quarterly snapshots)",
+      "Store performance data accessible instantly",
+      "Coaching time increased from 20-30% to 60-70%"
+    ],
+    "kpis": [
+      "District Comp Sales Growth",
+      "Average Store Compliance Score",
+      "Store Manager Development Rate",
+      "District Labor Cost %",
+      "Task Completion Across District",
+      "Employee Turnover Rate"
+    ],
+    "icon": "briefcase",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-loss-prevention-specialist",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Loss Prevention Specialist",
+    "label": "Loss Prevention Specialist",
+    "description": "Investigates shrink incidents, monitors video surveillance, conducts store audits, and implements theft prevention strategies to minimize inventory loss.",
+    "responsibilities": [
+      "Investigate theft and shrink incidents",
+      "Monitor video surveillance for suspicious activity",
+      "Conduct store LP audits and training",
+      "Build cases for prosecution of theft",
+      "Analyze shrink patterns and trends",
+      "Partner with law enforcement on ORC cases"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manually search 10-40 hours of video footage per investigation",
+      "Discover theft/fraud during annual physical inventory",
+      "Conduct quarterly LP audits at each assigned store",
+      "Manually track shrink data in spreadsheets",
+      "Reactive investigations (after losses already occurred)"
+    ],
+    "agenticWorkflow": [
+      "AI video analytics provides timestamped clips in 30 min - 2 hours",
+      "Real-time POS exception alerts flag suspicious transactions",
+      "Continuous monitoring detects incidents in minutes to hours",
+      "Automated shrink dashboards by store and category",
+      "Proactive intervention based on predictive risk models"
+    ],
+    "painPointsAddressed": [
+      "Investigation time reduced 85-95% (30 min - 2 hours vs 10-40 hours)",
+      "Detection time reduced to minutes/hours (vs 365 days)",
+      "Shrink reduced 30-50% (proactive vs reactive)",
+      "Internal theft detection improved 60-80%"
+    ],
+    "kpis": [
+      "Shrink Rate %",
+      "Case Resolution Time",
+      "Internal Theft Cases",
+      "Video Investigation Time",
+      "Theft Apprehensions",
+      "Recovery Amount"
+    ],
+    "icon": "shield-exclamation",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-regional-operations-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Regional Operations Director",
+    "label": "Regional Operations Director",
+    "description": "Leads operations for 50-150 stores across a region, responsible for sales, profitability, operational excellence, talent pipeline, and strategic initiatives execution.",
+    "responsibilities": [
+      "Drive regional sales and profitability goals",
+      "Ensure operational excellence and brand standards",
+      "Develop district manager and store leadership pipeline",
+      "Implement regional strategies and programs",
+      "Manage regional P&L and capital allocation",
+      "Partner with corporate on new initiatives"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Review district performance weekly in manual spreadsheets",
+      "Discover operational issues during quarterly business reviews",
+      "Talent development based on annual reviews only",
+      "Limited visibility into day-to-day store execution",
+      "Reactive problem-solving (after metrics decline)"
+    ],
+    "agenticWorkflow": [
+      "Real-time regional dashboards show all KPIs continuously",
+      "Predictive analytics flag stores at risk 2-4 weeks early",
+      "Continuous performance data informs talent decisions",
+      "Complete visibility into task, compliance, and labor execution",
+      "Proactive interventions prevent metric declines"
+    ],
+    "painPointsAddressed": [
+      "Regional performance visibility real-time (vs weekly/monthly)",
+      "Predictive insights enable proactive leadership",
+      "Data-driven talent decisions (continuous vs annual)",
+      "Operational excellence improved through transparency"
+    ],
+    "kpis": [
+      "Regional Comp Sales Growth",
+      "Regional Operating Margin",
+      "Average District Compliance Score",
+      "Leadership Development Rate",
+      "Regional Labor Cost %",
+      "Regional Employee Retention"
+    ],
+    "icon": "globe",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-store-operations-analyst",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Store Operations Analyst",
+    "label": "Store Operations Analyst",
+    "description": "Analyzes store performance data, identifies operational improvement opportunities, and supports corporate initiatives deployment across the store network.",
+    "responsibilities": [
+      "Analyze store operations data and trends",
+      "Identify best practices and improvement opportunities",
+      "Support corporate program rollouts",
+      "Create dashboards and performance reports",
+      "Conduct business case analysis for initiatives",
+      "Partner with IT on systems and tools"
+    ],
+    "applicableIndustries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "traditionalWorkflow": [
+      "Manually aggregate store data from multiple systems",
+      "Spend 60-70% of time on data wrangling vs analysis",
+      "Create weekly/monthly reports manually in Excel",
+      "Limited ability to identify patterns across stores",
+      "Reactive analysis (answer questions after asked)"
+    ],
+    "agenticWorkflow": [
+      "Automated data aggregation from all store systems",
+      "Spend 70-80% of time on insights vs data prep",
+      "Real-time dashboards auto-update continuously",
+      "AI pattern detection identifies opportunities proactively",
+      "Predictive analytics forecast outcomes before deployment"
+    ],
+    "painPointsAddressed": [
+      "Data prep time reduced 80-90% (automation)",
+      "Analysis time shifted to value-add insights",
+      "Pattern identification improved via AI",
+      "Proactive insights vs reactive reporting"
+    ],
+    "kpis": [
+      "Time to Insight",
+      "Dashboard Adoption Rate",
+      "Initiative ROI Accuracy",
+      "Best Practice Identification Rate",
+      "Cross-Store Learning Impact",
+      "System Integration Coverage"
+    ],
+    "icon": "chart-bar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

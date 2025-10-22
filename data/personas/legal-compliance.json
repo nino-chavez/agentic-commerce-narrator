@@ -1,0 +1,308 @@
+[
+  {
+    "id": "persona-general-counsel",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "General Counsel",
+    "label": "General Counsel",
+    "description": "Leads legal strategy, risk management, and compliance for the enterprise, responsible for contract management, litigation oversight, regulatory compliance, and corporate governance.",
+    "responsibilities": [
+      "Set legal strategy and manage legal department",
+      "Oversee contract negotiation and management",
+      "Manage litigation and regulatory compliance",
+      "Advise board and executive team on legal matters",
+      "Ensure corporate governance and ethics programs",
+      "Oversee intellectual property protection"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually review all contracts (10-30 hours per major contract)",
+      "Reactive litigation management (respond to lawsuits after filed)",
+      "Annual compliance audits with manual evidence gathering",
+      "Board meetings require 10-20 hours of manual prep",
+      "Vendor contracts managed in filing cabinets or shared drives"
+    ],
+    "agenticWorkflow": [
+      "AI contract review flags issues in minutes (vs hours/days)",
+      "Predictive litigation analytics forecast case outcomes",
+      "Continuous compliance monitoring with real-time alerts",
+      "Board packages auto-generated with relevant legal updates",
+      "Contract repository with AI search and obligation tracking"
+    ],
+    "painPointsAddressed": [
+      "Contract review time reduced 70% (AI pre-review)",
+      "Litigation risk reduced 30-50% (early warning systems)",
+      "Compliance violations detected real-time (vs annual audits)",
+      "Board prep time reduced 80%"
+    ],
+    "kpis": [
+      "Contract Review Time",
+      "Litigation Win Rate",
+      "Compliance Violation Rate",
+      "Contract Risk Score",
+      "Legal Spend",
+      "IP Protection Coverage"
+    ],
+    "icon": "scale",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-compliance-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Compliance Director",
+    "label": "Compliance Director",
+    "description": "Manages enterprise-wide compliance programs across regulatory domains including privacy (GDPR/CCPA), industry-specific regulations (PCI, HIPAA, SOX), and ethical standards.",
+    "responsibilities": [
+      "Design and implement compliance programs",
+      "Monitor regulatory changes and update policies",
+      "Conduct compliance training and awareness",
+      "Manage compliance audits and certifications",
+      "Investigate and remediate compliance violations",
+      "Report compliance status to board and regulators"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manual tracking of regulatory changes via newsletters",
+      "Annual compliance audits with manual evidence collection",
+      "Policy updates distributed via email (low read rates)",
+      "Training completion tracked in spreadsheets",
+      "Violations discovered months after occurrence"
+    ],
+    "agenticWorkflow": [
+      "AI monitors regulatory changes, auto-updates policy drafts",
+      "Continuous compliance monitoring with real-time scoring",
+      "Targeted training auto-assigned based on role and gaps",
+      "Automated evidence collection for audits and certifications",
+      "Real-time violation alerts with guided remediation"
+    ],
+    "painPointsAddressed": [
+      "Compliance violations reduced 60-80% (proactive monitoring)",
+      "Audit prep time reduced 70% (automated evidence)",
+      "Training completion improved to 95%+ (auto-assignment)",
+      "Regulatory change response time reduced 80%"
+    ],
+    "kpis": [
+      "Compliance Violation Rate",
+      "Audit Findings",
+      "Training Completion Rate",
+      "Time to Remediate Violations",
+      "Regulatory Fines",
+      "Certification Renewal Success Rate"
+    ],
+    "icon": "clipboard-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-contract-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Contract Manager",
+    "label": "Contract Manager",
+    "description": "Manages contract lifecycle from negotiation through renewal, ensuring favorable terms, obligation tracking, and risk mitigation across vendor, customer, and partner agreements.",
+    "responsibilities": [
+      "Negotiate and draft contracts",
+      "Track contract obligations and renewals",
+      "Manage contract repository and version control",
+      "Coordinate with legal, procurement, and business teams",
+      "Monitor contract compliance and performance",
+      "Analyze contract spend and optimization opportunities"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Contracts stored in filing cabinets or shared drives",
+      "Manual tracking of renewal dates in spreadsheets",
+      "Contract negotiation takes 2-6 months per major contract",
+      "Obligation tracking via manual review and calendars",
+      "Contract searches take hours (no centralized repository)"
+    ],
+    "agenticWorkflow": [
+      "AI contract repository with instant search and analytics",
+      "Auto-alerts for renewal dates 90/60/30 days in advance",
+      "AI-assisted negotiation with clause recommendations",
+      "Automated obligation extraction and tracking",
+      "Contract risk scoring and optimization recommendations"
+    ],
+    "painPointsAddressed": [
+      "Contract search time reduced 90% (AI repository)",
+      "Missed renewals reduced to near-zero (automated alerts)",
+      "Negotiation time reduced 40% (AI clause suggestions)",
+      "Obligation compliance improved to 95%+"
+    ],
+    "kpis": [
+      "Contract Cycle Time",
+      "Renewal Capture Rate",
+      "Missed Obligations",
+      "Contract Risk Score",
+      "Contract Spend Optimization",
+      "Vendor SLA Compliance"
+    ],
+    "icon": "document-text",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-privacy-officer",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Chief Privacy Officer (CPO)",
+    "label": "Chief Privacy Officer (CPO)",
+    "description": "Manages enterprise privacy programs ensuring compliance with GDPR, CCPA, and other data protection regulations, overseeing data subject rights, privacy impact assessments, and breach response.",
+    "responsibilities": [
+      "Design and implement privacy programs",
+      "Ensure compliance with GDPR, CCPA, and other privacy laws",
+      "Manage data subject access requests (DSARs)",
+      "Conduct privacy impact assessments (PIAs)",
+      "Oversee data breach response and notification",
+      "Train employees on privacy best practices"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manual DSAR processing takes 10-30 days per request",
+      "Privacy impact assessments conducted sporadically",
+      "Data inventory maintained in spreadsheets (always outdated)",
+      "Breach detection delayed by weeks/months",
+      "Privacy training annual with low completion rates"
+    ],
+    "agenticWorkflow": [
+      "Automated DSAR processing in 1-3 days (vs 10-30)",
+      "AI-powered PIAs triggered automatically for new projects",
+      "Real-time data inventory with automated classification",
+      "Breach detection and response within hours (vs weeks)",
+      "Continuous privacy training with role-based micro-learning"
+    ],
+    "painPointsAddressed": [
+      "DSAR response time reduced 80% (1-3 days vs 10-30)",
+      "Privacy violations reduced 70% (proactive monitoring)",
+      "PIA coverage increased to 100% of applicable projects",
+      "Breach detection time reduced 95% (real-time alerts)"
+    ],
+    "kpis": [
+      "DSAR Response Time",
+      "Privacy Violations",
+      "PIA Completion Rate",
+      "Breach Detection Time",
+      "Data Classification Coverage",
+      "Privacy Training Completion"
+    ],
+    "icon": "shield-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-ip-counsel",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Intellectual Property Counsel",
+    "label": "Intellectual Property Counsel",
+    "description": "Manages intellectual property portfolio including patents, trademarks, copyrights, and trade secrets, ensuring protection, enforcement, and strategic alignment with business objectives.",
+    "responsibilities": [
+      "Manage patent and trademark portfolio",
+      "Conduct IP due diligence for M&A and partnerships",
+      "Monitor and enforce IP rights against infringement",
+      "Negotiate IP licensing agreements",
+      "Advise on open source and third-party IP usage",
+      "Develop IP strategy aligned with business goals"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "IP portfolio tracked in spreadsheets with manual updates",
+      "Trademark searches conducted manually (days per search)",
+      "Infringement monitoring periodic (quarterly/annual)",
+      "Licensing agreement negotiation takes 3-12 months",
+      "Prior art searches labor-intensive (20-40 hours)"
+    ],
+    "agenticWorkflow": [
+      "AI IP portfolio management with automated tracking",
+      "Instant trademark searches with conflict analysis",
+      "Continuous infringement monitoring with real-time alerts",
+      "AI-assisted licensing with benchmark term suggestions",
+      "Automated prior art searches in minutes"
+    ],
+    "painPointsAddressed": [
+      "Trademark search time reduced 90% (instant vs days)",
+      "Infringement detection improved 80% (continuous monitoring)",
+      "Licensing negotiation time reduced 50% (AI benchmarks)",
+      "Prior art search time reduced 95% (automated)"
+    ],
+    "kpis": [
+      "IP Portfolio Size",
+      "Trademark Conflict Rate",
+      "Infringement Detection Time",
+      "Licensing Revenue",
+      "Patent Grant Rate",
+      "IP Protection Coverage"
+    ],
+    "icon": "light-bulb",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-litigation-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Litigation Manager",
+    "label": "Litigation Manager",
+    "description": "Manages litigation portfolio including lawsuits, disputes, and regulatory investigations, coordinating with outside counsel and implementing strategies to minimize legal exposure.",
+    "responsibilities": [
+      "Manage litigation portfolio and case strategy",
+      "Coordinate with outside counsel and expert witnesses",
+      "Oversee discovery and document production",
+      "Negotiate settlements and alternative dispute resolution",
+      "Monitor case budgets and legal spend",
+      "Analyze litigation trends and risk exposure"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Case tracking in spreadsheets with manual updates",
+      "Discovery document review manual (10-40 hours per case)",
+      "Outside counsel spend tracked reactively (budget overruns common)",
+      "Settlement analysis subjective (no predictive data)",
+      "Litigation trends identified annually (if at all)"
+    ],
+    "agenticWorkflow": [
+      "AI case management with automated status tracking",
+      "AI-powered document review (90% faster discovery)",
+      "Real-time legal spend tracking with budget alerts",
+      "Predictive analytics for settlement recommendations",
+      "Continuous trend analysis identifying risk patterns"
+    ],
+    "painPointsAddressed": [
+      "Discovery time reduced 80-90% (AI document review)",
+      "Legal spend reduced 30-50% (better matter management)",
+      "Settlement outcomes improved 20-40% (predictive analytics)",
+      "Risk exposure visibility real-time (vs annual)"
+    ],
+    "kpis": [
+      "Active Cases",
+      "Win/Loss Rate",
+      "Average Settlement Amount",
+      "Discovery Cost per Case",
+      "Outside Counsel Spend",
+      "Case Resolution Time"
+    ],
+    "icon": "gavel",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

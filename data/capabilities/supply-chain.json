@@ -1,0 +1,677 @@
+[
+  {
+    "id": "capability-sales-operations-planning",
+    "type": "capability",
+    "level": 3,
+    "label": "Sales & Operations Planning (S&OP)",
+    "description": "Enables continuous S&OP with integrated demand, supply, and financial planning plus instant scenario modeling and collaborative consensus.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 5,
+    "keyFunctions": [
+      "Demand Planning",
+      "Supply Planning",
+      "Financial Planning Integration",
+      "Scenario Modeling",
+      "Consensus Management"
+    ],
+    "traditionalApproach": {
+      "description": "Monthly S&OP meetings with disconnected planning tools and static plans",
+      "characteristics": [
+        "Monthly S&OP meetings (slide decks)",
+        "Disconnected planning tools (demand, supply, finance use separate systems)",
+        "Manual consensus process",
+        "Static plans (updated monthly)",
+        "Limited scenario modeling"
+      ],
+      "constraints": [
+        "Monthly cycles too slow for dynamic market conditions",
+        "Disconnected systems create reconciliation overhead",
+        "Manual consensus process takes weeks",
+        "Static plans become outdated quickly",
+        "Limited ability to test scenarios and contingencies",
+        "No integrated financial impact visibility"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Continuous S&OP with integrated planning, instant scenarios, and faster consensus",
+      "characteristics": [
+        "Consensus demand plan combines statistical, ML, and judgmental forecasts",
+        "Supply planning optimizes supply plan given demand and constraints",
+        "Financial planning translates plans to P&L impact automatically",
+        "Scenario agent simulates demand spikes, supplier failures, etc.",
+        "Consensus agent facilitates collaboration, resolves conflicts, tracks decisions",
+        "Continuous rolling S&OP process (weekly or real-time)"
+      ],
+      "benefits": [
+        "Continuous S&OP vs monthly batch cycles",
+        "Integrated planning eliminates reconciliation delays",
+        "Scenarios tested instantly vs days of analysis",
+        "Consensus reached faster (days vs weeks)",
+        "Financial impact visible in real-time",
+        "Forecast accuracy improvement"
+      ],
+      "agents": [
+        "S&OP Orchestration Agent",
+        "Demand Planning Agent",
+        "Supply Planning Agent",
+        "Financial Planning Agent",
+        "Scenario Agent",
+        "Consensus Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Forecast Accuracy Improvement",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous S&OP with integrated planning and ML forecasts']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy integrated S&OP platform for pilot category",
+        "Implement scenario modeling for top supply chain risks",
+        "Enable real-time financial impact dashboards"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": [
+        "Integrated S&OP platform (Anaplan, o9 Solutions, Kinaxis)",
+        "Clean demand, supply, and financial data",
+        "Forecasting and optimization models",
+        "Collaboration workflow tool",
+        "Cross-functional S&OP process definition"
+      ]
+    },
+    "icon": "chart-pie",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-supply-chain-control-tower",
+    "type": "capability",
+    "level": 3,
+    "label": "Supply Chain Control Tower",
+    "description": "Provides end-to-end supply chain visibility with real-time exception detection, impact analysis, and automated resolution coordination.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Multi-Tier Visibility",
+      "Exception Detection",
+      "Impact Analysis",
+      "Resolution Orchestration"
+    ],
+    "traditionalApproach": {
+      "description": "No end-to-end visibility with reactive issue discovery and manual coordination",
+      "characteristics": [
+        "No end-to-end visibility",
+        "Each party (suppliers, 3PLs, carriers) uses own system",
+        "Delays discovered reactively",
+        "Manual coordination when issues arise"
+      ],
+      "constraints": [
+        "Blind spots across supply chain partners",
+        "Reactive discovery of delays and issues",
+        "Manual status calls and email chasing",
+        "No downstream impact visibility",
+        "Slow response to exceptions (days to coordinate)",
+        "Limited visibility to Tier 2+ suppliers"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "End-to-end visibility with early exception detection, automated impact analysis, and coordinated resolutions",
+      "characteristics": [
+        "Multi-tier visibility tracks inventory, orders, shipments across all partners",
+        "Exception detection identifies delays, stock-outs, quality issues in real-time",
+        "Impact analysis calculates downstream effects (revenue, customer, operations)",
+        "Resolution orchestration coordinates responses (expedite, re-route, notify)",
+        "Integration with all supply chain systems (ERP, WMS, TMS, supplier portals)",
+        "Predictive alerts before issues occur"
+      ],
+      "benefits": [
+        "End-to-end visibility vs blind spots",
+        "Exceptions detected in real-time vs reactive discovery",
+        "Impact quantified automatically vs manual assessment",
+        "Resolutions coordinated automatically vs email chains",
+        "Faster exception resolution",
+        "Reduced expedited freight costs"
+      ],
+      "agents": [
+        "Supply Chain Visibility Orchestration Agent",
+        "Multi-Tier Visibility Agent",
+        "Exception Detection Agent",
+        "Impact Analysis Agent",
+        "Resolution Orchestration Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Exception Resolution Speed Improvement",
+          "value": "30-50% faster",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated coordination vs manual email chains']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Expedited Freight Cost Reduction",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on early exception detection enabling proactive alternatives']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy control tower for top 20% of SKUs by revenue",
+        "Implement exception alerts for critical shipments",
+        "Enable impact analysis for stock-out scenarios"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "6-12 months",
+      "prerequisites": [
+        "Supply chain visibility platform (FourKites, project44, BluJay)",
+        "EDI/API integration with suppliers, carriers, 3PLs",
+        "Real-time order and shipment tracking data",
+        "Alert and notification infrastructure",
+        "Defined exception handling workflows"
+      ]
+    },
+    "icon": "eye",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-network-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Network Optimization",
+    "description": "Continuously optimizes distribution network configuration with data-driven recommendations, scenario testing, and ROI quantification.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Demand Pattern Analysis",
+      "Cost Modeling",
+      "Scenario Testing",
+      "Network Recommendations"
+    ],
+    "traditionalApproach": {
+      "description": "Static DC network with manual analysis and gut-feel decisions",
+      "characteristics": [
+        "Static DC network (rarely changes)",
+        "Manual analysis for network changes",
+        "No continuous optimization",
+        "Decisions based on gut feel"
+      ],
+      "constraints": [
+        "Network changes only every 3-5 years",
+        "Manual analysis takes months (consultants required)",
+        "No continuous optimization as demand shifts",
+        "Gut-feel decisions without data-driven ROI",
+        "Suboptimal network configuration reduces margins",
+        "No agility to respond to market changes"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Network optimized continuously with data-driven recommendations, ROI quantified, and faster decisions",
+      "characteristics": [
+        "Demand pattern analysis identifies geographic demand shifts",
+        "Cost modeling calculates total landed cost (storage, transport, handling)",
+        "Scenario testing simulates network configurations (open DC, close DC, re-allocate)",
+        "Recommendation agent suggests network changes with quantified ROI",
+        "Continuous monitoring flags when network becomes suboptimal",
+        "Simulation-based what-if analysis"
+      ],
+      "benefits": [
+        "Continuous network optimization vs 3-5 year static cycles",
+        "Data-driven recommendations vs gut-feel decisions",
+        "ROI quantified before changes vs post-hoc justification",
+        "Decisions made in weeks vs months of analysis",
+        "Total landed cost reduction",
+        "Agility to respond to market shifts"
+      ],
+      "agents": [
+        "Network Optimization Orchestration Agent",
+        "Demand Pattern Agent",
+        "Cost Modeling Agent",
+        "Scenario Testing Agent",
+        "Recommendation Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Total Landed Cost Reduction",
+          "value": "5-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous network optimization vs static 3-5 year cycles']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy network design tool for annual planning cycle",
+        "Model total landed cost for top distribution lanes",
+        "Run scenario tests for top 3 network change options"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Network design tool (COUPA, LLamasoft, Llamasoft anyLogistix)",
+        "Optimization solver (commercial or open source)",
+        "Historical demand data by geography",
+        "Cost database (storage, transport, handling rates)",
+        "GIS mapping and distance calculation"
+      ]
+    },
+    "icon": "globe",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-allocation-replenishment-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Allocation & Replenishment Optimization",
+    "description": "Optimizes inventory allocation and replenishment with ML-driven demand forecasting, dynamic reorder points, and automated transfers.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Demand-Driven Allocation",
+      "Dynamic Replenishment",
+      "Transfer Optimization",
+      "Safety Stock Calculation"
+    ],
+    "traditionalApproach": {
+      "description": "Fixed allocation rules and static reorder points with common stock-outs and overstock",
+      "characteristics": [
+        "Allocation rules fixed (equal split, sales history)",
+        "Replenishment based on reorder points",
+        "No ML-based optimization",
+        "Stock-outs and overstock common"
+      ],
+      "constraints": [
+        "Fixed rules don't adapt to demand changes",
+        "Static reorder points cause stock-outs and overstock",
+        "No location-to-location transfer optimization",
+        "Manual safety stock calculations outdated quickly",
+        "Reactive replenishment vs predictive"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-aro-001",
+          "metric": "Stock-Out Rate (Traditional)",
+          "value": "5-10%",
+          "source": "TBD: [SME to provide source, e.g., 'Inventory availability benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Inventory where needed with reduced stock-outs and overstock through automated transfers",
+      "characteristics": [
+        "Demand-driven allocation directs inventory to highest-likelihood locations",
+        "Dynamic replenishment uses ML-driven reorder points (not static)",
+        "Transfer optimization automates store-to-store transfers",
+        "Safety stock agent calculates optimal safety stock per SKU/location",
+        "Continuous monitoring and adjustment",
+        "Integration with demand forecasting"
+      ],
+      "benefits": [
+        "Stock-out reduction vs traditional",
+        "Overstock reduction through optimization",
+        "Automated transfers vs manual rebalancing",
+        "Inventory positioned where demand occurs",
+        "Sales lift from improved availability",
+        "Inventory carrying cost reduction"
+      ],
+      "agents": [
+        "Allocation & Replenishment Orchestration Agent",
+        "Demand-Driven Allocation Agent",
+        "Dynamic Replenishment Agent",
+        "Transfer Optimization Agent",
+        "Safety Stock Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Stock-Out Reduction",
+          "value": "30-50% (vs 5-10% traditional rate)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML-driven allocation and dynamic reorder points']",
+          "sourceBenchmark": "bench-aro-001"
+        },
+        {
+          "metric": "Overstock Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on demand-driven allocation vs fixed rules']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Sales Lift from Improved Availability",
+          "value": "5-10%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on inventory positioned where demand occurs']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Carrying Cost Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized safety stock and reduced overstock']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy ML-based replenishment for top 20% of SKUs",
+        "Implement automated transfer recommendations for high-velocity items",
+        "Enable dynamic safety stock calculation for seasonal products"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Replenishment platform with ML capabilities",
+        "Demand forecasting system integration",
+        "Inventory visibility across locations",
+        "Transfer cost and lead time data",
+        "Historical sales and stock-out data for ML training"
+      ]
+    },
+    "icon": "refresh",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-supplier-collaboration-platform",
+    "type": "capability",
+    "level": 3,
+    "label": "Supplier Collaboration Platform",
+    "description": "Enables real-time supplier collaboration with shared forecasts, automated PO management, and performance monitoring.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Forecast Sharing",
+      "PO Management Automation",
+      "Performance Monitoring",
+      "Issue Resolution"
+    ],
+    "traditionalApproach": {
+      "description": "Email-based supplier communication with manual PO management and spreadsheet tracking",
+      "characteristics": [
+        "Email-based communication with suppliers",
+        "Manual PO management",
+        "No shared forecasts",
+        "Supplier performance tracked in spreadsheets"
+      ],
+      "constraints": [
+        "Email creates communication delays and errors",
+        "Manual PO management slow and error-prone",
+        "Suppliers have no visibility into demand forecast",
+        "Supplier performance issues discovered reactively",
+        "No systematic issue escalation or tracking",
+        "Limited collaboration on product development"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time collaboration with automated POs, forecast transparency, and visible performance",
+      "characteristics": [
+        "Forecast sharing provides rolling forecasts to suppliers securely",
+        "PO management automates generation, acknowledgment, changes",
+        "Performance monitoring tracks OTD, quality, responsiveness",
+        "Issue resolution escalates issues and tracks resolution",
+        "Supplier portal provides self-service access",
+        "Collaboration on new product development"
+      ],
+      "benefits": [
+        "Real-time collaboration vs email-based delays",
+        "Automated PO management vs manual processes",
+        "Forecast transparency improves supplier planning",
+        "Performance visible to drive accountability",
+        "Supplier on-time delivery improvement",
+        "Faster issue resolution (days vs weeks)"
+      ],
+      "agents": [
+        "Supplier Collaboration Orchestration Agent",
+        "Forecast Sharing Agent",
+        "PO Management Agent",
+        "Performance Monitoring Agent",
+        "Issue Resolution Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Supplier On-Time Delivery Improvement",
+          "value": "5-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on forecast transparency improving supplier planning']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy supplier portal for top 20 suppliers",
+        "Automate PO generation and acknowledgment via EDI/API",
+        "Share rolling 13-week forecast with strategic suppliers"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Supplier portal platform or custom build",
+        "EDI/API integration with suppliers",
+        "Demand forecast system for forecast sharing",
+        "Supplier performance KPIs defined",
+        "Supplier agreement to adopt collaborative tools"
+      ]
+    },
+    "icon": "users",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-cross-docking-flow-through",
+    "type": "capability",
+    "level": 3,
+    "label": "Cross-Docking & Flow-Through",
+    "description": "Increases cross-dock percentage by 40%+ with automated eligibility, dock scheduling, sortation, and throughput tracking.",
+    "parentDomain": "domain-supply-chain",
+    "industries": [
+      "Retail",
+      "Grocery",
+      "Travel",
+      "QSR",
+      "Hospitality"
+    ],
+    "businessModels": [
+      "B2C",
+      "B2B",
+      "Hybrid"
+    ],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Eligibility Determination",
+      "Dock Scheduling Optimization",
+      "Sortation Management",
+      "Performance Tracking"
+    ],
+    "traditionalApproach": {
+      "description": "Inventory stored in DCs for days/weeks with no cross-docking capability",
+      "characteristics": [
+        "Inventory stored in DCs for days/weeks",
+        "No cross-docking capability",
+        "High storage costs",
+        "Slow throughput"
+      ],
+      "constraints": [
+        "Inventory dwell time increases costs",
+        "No cross-docking reduces velocity",
+        "High storage costs for fast-moving items",
+        "Slow throughput limits DC capacity",
+        "Manual dock scheduling creates bottlenecks",
+        "No systematic eligibility determination"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Cross-dock percentage increased, dwell time reduced, throughput increased, storage costs down",
+      "characteristics": [
+        "Eligibility agent identifies SKUs suitable for cross-dock (fast movers, promotional)",
+        "Dock scheduling optimizes inbound/outbound dock assignments",
+        "Sortation agent directs received inventory to outbound staging",
+        "Performance agent tracks cross-dock %, dwell time, throughput",
+        "Integration with WMS, YMS, TMS",
+        "Automated flow-through decisions"
+      ],
+      "benefits": [
+        "Cross-dock percentage increase",
+        "Dwell time reduction",
+        "Throughput increase",
+        "Storage cost reduction",
+        "Faster delivery to stores/customers",
+        "Increased DC capacity without expansion"
+      ],
+      "agents": [
+        "Cross-Docking Orchestration Agent",
+        "Eligibility Agent",
+        "Dock Scheduling Agent",
+        "Sortation Agent",
+        "Performance Agent"
+      ],
+      "projections": [
+        {
+          "metric": "Cross-Dock Percentage Increase",
+          "value": "40%+",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated eligibility and optimized dock scheduling']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Dwell Time Reduction",
+          "value": "50-70%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on flow-through vs storage in DC']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Throughput Increase",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized sortation and dock scheduling']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Storage Cost Reduction",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on reduced dwell time for fast-moving items']",
+          "sourceBenchmark": null
+        }
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy cross-dock eligibility rules for top 100 SKUs",
+        "Implement dock scheduling optimization",
+        "Enable performance tracking dashboard for cross-dock KPIs"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Warehouse Management System (WMS) with cross-dock functionality",
+        "Yard Management System (YMS) for dock scheduling",
+        "Transportation Management System (TMS) integration",
+        "Inbound/outbound shipment visibility",
+        "DC layout supports cross-dock flow"
+      ]
+    },
+    "icon": "truck",
+    "color": "#06B6D4",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

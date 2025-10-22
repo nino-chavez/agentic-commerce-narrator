@@ -1,0 +1,514 @@
+[
+  {
+    "id": "capability-voice-commerce",
+    "type": "capability",
+    "level": 3,
+    "label": "Voice Commerce",
+    "description": "Enables full shopping experience via voice assistants with voice-optimized catalog, personalized recommendations, and secure voice payments.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Voice Intent Recognition",
+      "Voice Catalog Optimization",
+      "Voice Personalization",
+      "Voice Transaction Management"
+    ],
+    "traditionalApproach": {
+      "description": "No voice commerce capability with voice limited to FAQs resulting in missed opportunities with voice-first customers.",
+      "characteristics": [
+        "No voice commerce capability",
+        "Customers must use web/app for purchases",
+        "Voice limited to FAQs",
+        "No voice-optimized product catalog"
+      ],
+      "constraints": [
+        "No voice shopping convenience for customers",
+        "Missing voice-first demographic (smart speaker users)",
+        "Limited to text-based commerce only",
+        "No hands-free shopping option",
+        "Competitive disadvantage vs voice-enabled retailers",
+        "Product descriptions not optimized for voice interaction"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Full shopping experience via voice with voice-optimized catalog, personalized recommendations, and secure voice payments achieving incremental sales from voice channel.",
+      "characteristics": [
+        "Voice intent recognition understands shopping intents (search, add to cart, order status)",
+        "Voice catalog agent optimizes product descriptions for voice interaction",
+        "Voice personalization recommends products based on voice history and preferences",
+        "Voice transaction agent handles authentication and payment via voice",
+        "Multi-turn conversational shopping experience",
+        "Integration with Alexa Skills Kit and Google Actions"
+      ],
+      "benefits": [
+        "Full voice shopping vs no voice capability",
+        "Voice-optimized catalog for natural interactions",
+        "Personalized voice recommendations increase conversion",
+        "Secure voice payments reduce friction",
+        "Access to voice-first customer segment",
+        "Incremental sales from voice channel"
+      ],
+      "projections": [
+        {
+          "metric": "Incremental Sales from Voice Channel",
+          "value": "10-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on voice channel capturing previously untapped smart speaker user segment and enabling hands-free reordering']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Voice Commerce Orchestration Agent",
+        "Voice Intent Recognition Agent",
+        "Voice Catalog Agent",
+        "Voice Personalization Agent",
+        "Voice Transaction Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy Alexa Skill for product search and order status",
+        "Optimize top 100 product descriptions for voice",
+        "Enable voice payments for reorder workflows"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": [
+        "Alexa Skills Kit or Google Actions development",
+        "Voice platform integration (DialogFlow, Alexa Voice Service)",
+        "Product catalog API for voice access",
+        "Payment API with voice authentication support",
+        "Voice user experience design expertise"
+      ]
+    },
+    "icon": "microphone",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-conversational-ai-chatbot",
+    "type": "capability",
+    "level": 3,
+    "label": "Conversational AI Chatbot",
+    "description": "Delivers natural language understanding with high containment rate through deep learning NLU, multi-turn dialog, and transaction execution.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 5,
+    "keyFunctions": [
+      "NLU Intent Recognition",
+      "Dialog Management",
+      "Slot Filling",
+      "Action Execution",
+      "Human Handoff"
+    ],
+    "traditionalApproach": {
+      "description": "Rule-based chatbots with keyword matching and frequent human handoffs resulting in moderate containment rate and poor customer experience.",
+      "characteristics": [
+        "Rule-based chatbots (keyword matching)",
+        "Limited to FAQ answering",
+        "Frequent hand-offs to human agents",
+        "No learning from interactions",
+        "Separate bots for web, app, messaging"
+      ],
+      "constraints": [
+        "Keyword matching fails for natural language variations",
+        "Limited to simple FAQs, can't handle complex queries",
+        "Moderate containment rate requires frequent human escalation",
+        "No continuous learning from conversations",
+        "Channel silos require separate bot development",
+        "Poor customer experience from rigid interactions"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-chat-001",
+          "metric": "Chatbot Containment Rate (Rule-Based)",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Customer service chatbot effectiveness benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Natural language understanding with high containment rate, complex transactions via chat, and continuous learning.",
+      "characteristics": [
+        "Deep learning NLU (BERT, GPT) for intent recognition",
+        "Dialog management handles multi-turn conversations with context",
+        "Slot filling collects required information conversationally",
+        "Action execution completes transactions (orders, returns, changes)",
+        "Intelligent handoff escalates when bot confidence low",
+        "Continuous learning from interactions improves over time",
+        "Unified bot across web, app, messaging channels"
+      ],
+      "benefits": [
+        "High containment rate vs moderate rule-based",
+        "Natural language understanding vs keyword matching",
+        "Complex transactions completed vs FAQ-only",
+        "Continuous learning improves accuracy over time",
+        "Significant reduction in human agent volume",
+        "Unified experience across all channels"
+      ],
+      "projections": [
+        {
+          "metric": "Chatbot Containment Rate Improvement",
+          "value": "80%+ (vs 50-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on deep learning NLU handling natural language variations and complex multi-turn dialogs']",
+          "sourceBenchmark": "bench-chat-001"
+        },
+        {
+          "metric": "Human Agent Volume Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on higher containment rate resolving more customer inquiries without human escalation']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Conversational AI Orchestration Agent",
+        "NLU Intent Agent",
+        "Dialog Management Agent",
+        "Slot Filling Agent",
+        "Action Execution Agent",
+        "Human Handoff Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy conversational AI for top 10 customer intents",
+        "Implement dialog management for order tracking and returns",
+        "Enable intelligent handoff to human agents with context"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Conversational AI platform (Dialogflow, Rasa, or custom)",
+        "LLM API access (GPT-4, Claude, or similar)",
+        "CRM and order management system integration",
+        "Knowledge base for FAQ content",
+        "Historical chat transcripts for ML training"
+      ]
+    },
+    "icon": "chat",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-ai-shopping-assistant",
+    "type": "capability",
+    "level": 3,
+    "label": "AI Shopping Assistant",
+    "description": "Transforms product discovery with conversational guidance, visual search, style matching, and intelligent comparisons achieving significant conversion improvements.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "Hospitality"],
+    "businessModels": ["B2C", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Conversational Discovery",
+      "Visual Search",
+      "Style Matching",
+      "Product Comparison"
+    ],
+    "traditionalApproach": {
+      "description": "Keyword search only with generic recommendations and manual filtering resulting in high browse-to-purchase drop-off.",
+      "characteristics": [
+        "Keyword search only",
+        "Filters for narrowing (color, size, price)",
+        "Generic product recommendations",
+        "Customer must know what they want"
+      ],
+      "constraints": [
+        "Keyword search misses intent and context",
+        "Customers struggle with too many options",
+        "Generic recommendations not personalized",
+        "No visual search capability",
+        "Manual comparison across products",
+        "High browse-to-purchase drop-off"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Guided product discovery with visual search, personalized style recommendations, and intelligent comparisons achieving conversion rate and AOV improvements.",
+      "characteristics": [
+        "Conversational discovery asks clarifying questions to understand needs",
+        "Visual search enables image-based product search (upload photo, find similar)",
+        "Style matching learns customer preferences and suggests matches",
+        "Comparison agent compares products side-by-side and explains trade-offs",
+        "Guided navigation reduces decision fatigue",
+        "Contextual recommendations based on conversation"
+      ],
+      "benefits": [
+        "Guided discovery vs overwhelming keyword results",
+        "Visual search for inspiration-driven shopping",
+        "Personalized style recommendations increase relevance",
+        "Intelligent comparisons accelerate decisions",
+        "Conversion rate improvement",
+        "Average order value increase"
+      ],
+      "projections": [
+        {
+          "metric": "Conversion Rate Improvement",
+          "value": "20-35%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on guided discovery reducing decision fatigue and visual search enabling inspiration-driven purchases']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Average Order Value (AOV) Increase",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on personalized recommendations and intelligent comparison driving higher-value product selection']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "AI Shopping Assistant Orchestration Agent",
+        "Conversational Discovery Agent",
+        "Visual Search Agent",
+        "Style Matching Agent",
+        "Comparison Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy visual search for fashion and home goods categories",
+        "Implement conversational discovery for complex products",
+        "Enable style matching for repeat customers"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Conversational AI platform for discovery dialog",
+        "Visual search API (Google Cloud Vision, Clarifai, or custom)",
+        "Recommendation engine with style preference learning",
+        "Product catalog with rich attributes and images",
+        "Customer behavior data for personalization"
+      ]
+    },
+    "icon": "search",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-proactive-customer-engagement",
+    "type": "capability",
+    "level": 3,
+    "label": "Proactive Customer Engagement",
+    "description": "Delivers timely, relevant notifications with personalized messages, optimal channel selection, and reduced opt-out rates achieving significantly higher response rates.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Trigger Detection",
+      "Message Personalization",
+      "Channel Selection",
+      "Frequency Capping"
+    ],
+    "traditionalApproach": {
+      "description": "Batch campaign notifications with high opt-out rates and no personalization resulting in poor response rates.",
+      "characteristics": [
+        "Batch campaign notifications (same message to segment)",
+        "No in-the-moment triggers",
+        "High opt-out rates due to noise",
+        "No personalization"
+      ],
+      "constraints": [
+        "Batch campaigns lack timeliness and relevance",
+        "Generic messages don't resonate with individuals",
+        "No in-the-moment trigger-based engagement",
+        "High opt-out rates from over-messaging",
+        "No channel preference optimization",
+        "Poor response rates"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-eng-001",
+          "metric": "Batch Campaign Response Rate",
+          "value": "1-3%",
+          "source": "TBD: [SME to provide source, e.g., 'Email marketing response rate benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Timely, relevant notifications with personalized messages, optimal channel selection, and reduced opt-out rates achieving dramatically higher response rates.",
+      "characteristics": [
+        "Trigger detection identifies engagement moments (cart abandon, browse abandon, back-in-stock)",
+        "Message personalization crafts individualized messages per customer",
+        "Channel selection chooses optimal channel (push, email, SMS, in-app)",
+        "Frequency capping prevents over-messaging and respects preferences",
+        "Real-time trigger-based engagement",
+        "A/B testing of message variants"
+      ],
+      "benefits": [
+        "Timely notifications vs batch campaign delays",
+        "Personalized messages vs generic blasts",
+        "Optimal channel selection increases open rates",
+        "Reduced opt-out rates through intelligent frequency capping",
+        "Dramatically higher response rates vs batch campaigns",
+        "Significant cart recovery from abandon triggers"
+      ],
+      "projections": [
+        {
+          "metric": "Response Rate Improvement",
+          "value": "3-5x (vs 1-3% batch)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on trigger-based timing, personalized messaging, and optimal channel selection increasing relevance']",
+          "sourceBenchmark": "bench-eng-001"
+        },
+        {
+          "metric": "Cart Recovery Rate (Abandoned Cart)",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on timely cart abandonment triggers with personalized recovery messages and incentives']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Proactive Engagement Orchestration Agent",
+        "Trigger Detection Agent",
+        "Message Personalization Agent",
+        "Channel Selection Agent",
+        "Frequency Capping Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy cart abandonment trigger with personalized recovery messages",
+        "Implement back-in-stock notifications for waitlisted items",
+        "Enable channel preference learning from engagement data"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "Customer Data Platform with real-time event processing",
+        "Message router supporting multiple channels",
+        "Campaign automation platform",
+        "Analytics for engagement tracking",
+        "Customer preference management system"
+      ]
+    },
+    "icon": "bell",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-ai-knowledge-management",
+    "type": "capability",
+    "level": 3,
+    "label": "AI-Powered Knowledge Management",
+    "description": "Transforms knowledge base with semantic search, AI-generated answers, knowledge gap detection, and continuous improvement achieving significant support volume reduction.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Semantic Search",
+      "Answer Generation",
+      "Knowledge Gap Detection",
+      "Auto-Update"
+    ],
+    "traditionalApproach": {
+      "description": "Static FAQ pages with keyword search and manual updates resulting in poor self-service experience.",
+      "characteristics": [
+        "Static FAQ pages",
+        "Manual knowledge base updates",
+        "Search limited to keywords",
+        "No understanding of synonyms, context"
+      ],
+      "constraints": [
+        "Keyword search misses semantic intent",
+        "Manual updates lag behind product/policy changes",
+        "No synonym or context understanding",
+        "Knowledge gaps not identified systematically",
+        "Static content requires periodic review",
+        "Poor self-service experience drives support volume"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Semantic search with AI-generated answers, knowledge gaps identified, and continuous improvement achieving significant support volume reduction.",
+      "characteristics": [
+        "Semantic search uses vector embeddings to understand synonyms and context",
+        "Answer generation creates LLM-generated answers from knowledge base",
+        "Knowledge gap detection identifies unanswered questions for content creation",
+        "Auto-update agent suggests knowledge base updates from support interactions",
+        "Citations provided for generated answers",
+        "Continuous learning from search queries and feedback"
+      ],
+      "benefits": [
+        "Semantic search vs keyword matching",
+        "AI-generated answers with citations vs static FAQs",
+        "Knowledge gaps identified proactively vs reactive",
+        "Continuous improvement vs periodic manual updates",
+        "Significant reduction in support ticket volume",
+        "Substantial improvement in self-service success rate"
+      ],
+      "projections": [
+        {
+          "metric": "Support Ticket Volume Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on improved self-service success from semantic search and AI-generated answers deflecting support contacts']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Self-Service Success Rate Improvement",
+          "value": "2-3x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on semantic understanding and AI answer generation providing relevant answers to previously unsupported queries']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Knowledge Management Orchestration Agent",
+        "Semantic Search Agent",
+        "Answer Generation Agent",
+        "Knowledge Gap Detection Agent",
+        "Auto-Update Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy semantic search for existing knowledge base",
+        "Implement AI answer generation for top 50 queries",
+        "Enable knowledge gap detection from unanswered questions"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": [
+        "Vector database (Pinecone, Weaviate, or similar)",
+        "LLM API access (GPT-4, Claude, or similar)",
+        "Knowledge base CMS with API access",
+        "Analytics for search query tracking",
+        "Historical support interaction data"
+      ]
+    },
+    "icon": "book-open",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

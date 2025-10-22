@@ -1,0 +1,467 @@
+{
+  "capability": {
+    "id": "financial-performance-analytics",
+    "name": "Financial Performance Analytics",
+    "description": "Advanced financial intelligence including P&L analytics, working capital optimization, margin analysis, variance reporting, cash flow forecasting, and cost attribution",
+    "category": "Analytics & Data Management",
+    "subcategory": "Advanced Commerce Analytics",
+    "version": "1.0.0",
+    "lastUpdated": "2025-01-09T00:00:00Z",
+    "tier": "Advanced",
+    "industryVertical": "Retail & E-commerce",
+    "maturityLevel": "Transformative",
+    "priority": "High",
+    "icon": "chart-bar",
+    "color": "#F59E0B"
+  },
+  "functions": [
+    {
+      "id": "pl-analytics-by-dimension",
+      "name": "P&L Analytics by Channel/Product/Region",
+      "description": "Drillable profit trees, variance analysis, and trend identification across business dimensions to drive profitability improvement",
+      "traditionalWorkflow": "Finance teams manually consolidate P&L data from ERP systems into Excel, creating separate reports for different business dimensions (channel, product category, region). They use pivot tables and formulas to calculate revenue, costs, and profit but struggle to provide integrated multi-dimensional views. Variance analysis is limited to high-level aggregates, missing granular drivers of performance changes. The process is time-consuming (weeks to close each period), error-prone due to manual data manipulation, and provides limited drill-down capabilities for business users seeking to understand profit drivers.",
+      "agenticWorkflow": "A Financial Intelligence Orchestrator coordinates comprehensive multi-dimensional P&L analytics. A P&L Builder Agent automatically constructs profit trees at any level of granularity (channel, category, SKU, store, region, customer segment), integrating data from revenue, cost, and allocation systems. A Variance Analysis Agent identifies and explains differences vs. prior period, budget, or forecast, using AI to attribute variances to volume, price, mix, and cost factors. A Trend Detector applies statistical methods to identify significant trends and inflection points requiring attention. A Drill-Down Engine enables business users to self-service explore P&L performance, clicking through dimensions to understand profit drivers without finance team involvement.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Financial Intelligence Orchestrator",
+          "responsibilities": ["Coordinates multi-dimensional P&L analytics across organization", "Manages data pipelines from ERP, POS, and cost systems", "Prioritizes variance investigations by financial impact", "Integrates P&L insights with business planning and performance management"]
+        },
+        "superAgents": [
+          {
+            "agent": "P&L Builder Agent",
+            "responsibilities": ["Constructs profit trees at any dimensional level", "Integrates revenue, COGS, and operating expense data", "Handles complex cost allocations and eliminations", "Provides consistent P&L views across reporting hierarchies"]
+          },
+          {
+            "agent": "Variance Analysis Agent",
+            "responsibilities": ["Calculates variances vs. prior period, budget, forecast", "Attributes variances to volume, price, mix, cost factors", "Explains variance drivers using AI narrative generation", "Prioritizes variances by magnitude and significance"]
+          },
+          {
+            "agent": "Trend Detector Agent",
+            "responsibilities": ["Identifies significant trends using statistical methods", "Detects inflection points and acceleration/deceleration", "Flags anomalies requiring investigation", "Forecasts trend continuation vs. reversion"]
+          },
+          {
+            "agent": "Drill-Down Engine Agent",
+            "responsibilities": ["Enables self-service P&L exploration", "Supports drill-down across any dimension", "Maintains calculation consistency at all levels", "Provides contextual insights and benchmarks"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Allocation Engine",
+            "responsibilities": ["Applies consistent cost allocation methodologies", "Handles shared services and overhead distribution", "Supports multiple allocation approaches (revenue, headcount, activity)"]
+          },
+          {
+            "agent": "Benchmark Agent",
+            "responsibilities": ["Provides industry and peer profitability benchmarks", "Identifies performance gaps vs. best practices", "Tracks competitive positioning"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates interactive P&L dashboards", "Generates profit tree visualizations", "Produces executive financial reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "2-3 weeks for manual P&L close and analysis vs. daily automated P&L with real-time variance alerts",
+        "accuracyImprovement": "Manual Excel errors (5-10% error rate) vs. automated data integration with 99%+ accuracy",
+        "efficiency": "80% reduction in financial reporting time, business user self-service vs. finance team bottleneck",
+        "businessImpact": "2-5% margin improvement through better profit driver visibility, faster corrective actions, improved forecasting accuracy",
+        "decisionQuality": "Granular multi-dimensional profit insights vs. high-level aggregate reporting, AI-driven variance explanations vs. manual analysis"
+      },
+      "dataSources": [
+        "ERP revenue and cost data",
+        "Point-of-sale transaction data",
+        "Product cost and margin data",
+        "Operating expense budgets and actuals",
+        "Cost allocation rules and drivers",
+        "Organizational hierarchies (product, store, region)",
+        "Budget and forecast data",
+        "Prior period financials for comparison"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Automate monthly P&L reporting for top 3 business dimensions (channel, category, region); implement automated variance alerts for >10% changes; create executive P&L dashboard with drill-down capability.",
+        "investmentRequired": "Medium-High - requires ERP integration, financial data warehouse, analytics platform, BI tools. Typical investment $200K-$500K.",
+        "timeToValue": "4-6 months for automated multi-dimensional P&L, 9-12 months for full self-service analytics and AI-driven insights",
+        "prerequisites": "Clean ERP financial data, defined cost allocation methodologies, standardized reporting hierarchies, data governance for financial reporting"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Financial planning & analysis", "Management accounting", "Data engineering", "BI development", "Business intelligence"],
+        "complianceConsiderations": ["GAAP/IFRS financial reporting standards", "SOX controls for financial data integrity", "Audit trail and documentation requirements"],
+        "technologyStack": ["ERP systems (SAP, Oracle, NetSuite)", "Financial data warehouse", "BI platforms (Tableau, Power BI, Qlik)", "Analytics tools", "Cloud data platforms"]
+      }
+    },
+    {
+      "id": "working-capital-optimization",
+      "name": "Working Capital Optimization Analytics",
+      "description": "Cash conversion cycle analysis, inventory/AP/AR optimization to free up cash and improve liquidity",
+      "traditionalWorkflow": "Finance analysts manually calculate working capital metrics (days inventory outstanding, days sales outstanding, days payable outstanding) in Excel using period-end balance sheet data. They create static snapshots showing cash conversion cycle components but lack dynamic analysis of trends and drivers. Optimization recommendations are high-level and generic rather than specific and actionable. The analysis is performed quarterly or monthly, missing real-time opportunities to improve cash flow. Cross-functional alignment between finance, procurement, and operations on working capital improvement is limited.",
+      "agenticWorkflow": "A Working Capital Intelligence Orchestrator coordinates comprehensive cash conversion cycle analytics and optimization. A CCC Calculator tracks days inventory outstanding (DIO), days sales outstanding (DSO), and days payable outstanding (DPO) with daily granularity, identifying trends and variances. An Inventory Optimization Agent analyzes inventory levels by category and location, recommending right-sizing opportunities to reduce DIO without impacting service levels. An AR Accelerator identifies slow-paying customers and recommends collection actions to reduce DSO. An AP Optimizer balances early payment discounts against cash preservation to optimize DPO. A Scenario Modeler quantifies cash release potential from working capital improvement initiatives.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Working Capital Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end working capital analytics", "Manages data pipelines from ERP, inventory, and payment systems", "Prioritizes optimization opportunities by cash impact", "Drives cross-functional working capital improvement initiatives"]
+        },
+        "superAgents": [
+          {
+            "agent": "CCC Calculator Agent",
+            "responsibilities": ["Calculates DIO, DSO, DPO with daily granularity", "Tracks cash conversion cycle trends and variances", "Benchmarks working capital metrics vs. industry standards", "Identifies deterioration requiring intervention"]
+          },
+          {
+            "agent": "Inventory Optimization Agent",
+            "responsibilities": ["Analyzes inventory levels and turns by category", "Identifies excess inventory tying up cash", "Recommends inventory right-sizing opportunities", "Balances inventory reduction with service level maintenance"]
+          },
+          {
+            "agent": "AR Accelerator Agent",
+            "responsibilities": ["Tracks DSO by customer and segment", "Identifies slow-paying customers and overdue receivables", "Recommends collection actions and payment term changes", "Forecasts cash collections timeline"]
+          },
+          {
+            "agent": "AP Optimizer Agent",
+            "responsibilities": ["Analyzes DPO and payment timing opportunities", "Evaluates early payment discount economics", "Balances cash preservation with supplier relationships", "Optimizes payment schedules"]
+          },
+          {
+            "agent": "Scenario Modeler Agent",
+            "responsibilities": ["Quantifies cash release from working capital initiatives", "Models scenarios (inventory reduction, DSO improvement)", "Provides ROI analysis for improvement projects", "Tracks initiative implementation and cash impact"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Forecast Agent",
+            "responsibilities": ["Forecasts future working capital requirements", "Projects cash conversion cycle evolution", "Provides early warning of liquidity constraints"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates working capital dashboards", "Generates CCC trend charts and waterfalls", "Produces executive working capital reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Quarterly manual working capital analysis vs. daily automated monitoring with real-time optimization alerts",
+        "accuracyImprovement": "Period-end snapshots vs. dynamic daily tracking with predictive forecasting",
+        "efficiency": "85% reduction in working capital analysis time, automated monitoring vs. manual calculations",
+        "businessImpact": "10-25% reduction in cash conversion cycle, $millions in cash released from working capital optimization, improved liquidity and reduced borrowing costs",
+        "decisionQuality": "Specific actionable recommendations vs. generic improvement goals, cross-functional optimization vs. siloed metrics"
+      },
+      "dataSources": [
+        "Balance sheet data (inventory, AR, AP)",
+        "P&L data (revenue, COGS)",
+        "Inventory levels and turns by category",
+        "Customer payment terms and aging",
+        "Supplier payment terms and discounts",
+        "Daily cash flow data",
+        "Order and shipment data",
+        "Industry working capital benchmarks"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement daily working capital dashboard with DIO/DSO/DPO tracking; identify top 10 opportunities for cash release; establish monthly cross-functional working capital review; pilot AR acceleration with top slow-paying customers.",
+        "investmentRequired": "Medium - requires ERP integration, working capital analytics tools, forecasting models. Typical investment $150K-$300K.",
+        "timeToValue": "3-4 months for dashboards and opportunity identification, 6-9 months for optimization initiatives and cash release",
+        "prerequisites": "Clean ERP financial data, inventory management systems, accounts receivable and payable systems, defined working capital targets"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-9 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Treasury/cash management", "Financial planning & analysis", "Inventory management", "Credit management", "Data analysis"],
+        "complianceConsiderations": ["Revenue recognition standards (ASC 606)", "Inventory valuation methods", "Supplier payment terms compliance"],
+        "technologyStack": ["ERP systems", "Working capital management tools", "Treasury systems", "BI dashboards", "Forecasting platforms"]
+      }
+    },
+    {
+      "id": "margin-analysis-waterfall",
+      "name": "Margin Analysis & Waterfall Reporting",
+      "description": "Gross-to-net margin bridges, markdown/promotion impact quantification, and margin driver identification to protect and improve profitability",
+      "traditionalWorkflow": "Finance teams manually build margin waterfall reports in Excel, starting with gross margin and sequentially subtracting discounts, promotions, markdowns, returns, and other deductions to arrive at net margin. They struggle to allocate costs accurately to products and channels, often relying on averages and approximations. The analysis is static and backward-looking, performed monthly or quarterly, providing limited insight into future margin pressures. Identifying specific margin improvement opportunities requires extensive manual investigation, and tracking improvement initiatives is informal and inconsistent.",
+      "agenticWorkflow": "A Margin Intelligence Orchestrator coordinates comprehensive margin analysis and waterfall reporting across all business dimensions. A Gross Margin Analyzer calculates initial gross margin by product, channel, and customer, tracking COGS and initial markup. A Deduction Tracker precisely quantifies each margin deduction (trade promotions, markdowns, returns, allowances) and attributes them to specific drivers. A Waterfall Builder automatically constructs gross-to-net margin bridges at any level of granularity, showing sequential impact of each deduction. A Margin Opportunity Engine identifies specific actions to protect and improve margins (reduce waste, optimize promotions, minimize markdowns), and an Initiative Tracker monitors margin improvement project progress and results.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Margin Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end margin analytics and improvement", "Manages data from pricing, promotion, markdown, and returns systems", "Prioritizes margin opportunities by financial impact", "Drives margin improvement initiatives across organization"]
+        },
+        "superAgents": [
+          {
+            "agent": "Gross Margin Analyzer",
+            "responsibilities": ["Calculates initial gross margin by product and channel", "Tracks COGS and markup components", "Identifies gross margin trends and variances", "Benchmarks margins vs. targets and competition"]
+          },
+          {
+            "agent": "Deduction Tracker Agent",
+            "responsibilities": ["Quantifies each margin deduction (promotions, markdowns, returns)", "Attributes deductions to specific drivers and decisions", "Tracks deduction rates and trends", "Identifies unusual or excessive deductions"]
+          },
+          {
+            "agent": "Waterfall Builder Agent",
+            "responsibilities": ["Constructs automated gross-to-net margin waterfalls", "Provides waterfalls at any dimensional level", "Shows sequential impact of each margin component", "Enables drill-down to understand drivers"]
+          },
+          {
+            "agent": "Margin Opportunity Engine",
+            "responsibilities": ["Identifies specific margin improvement opportunities", "Recommends actions (reduce waste, optimize price/promo)", "Quantifies potential margin impact", "Prioritizes opportunities by feasibility and impact"]
+          },
+          {
+            "agent": "Initiative Tracker Agent",
+            "responsibilities": ["Monitors margin improvement project portfolio", "Tracks initiative progress and results", "Measures actual margin impact vs. projections", "Provides accountability for margin goals"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Predictive Margin Agent",
+            "responsibilities": ["Forecasts future margin trajectory", "Predicts impact of planned promotions and markdowns", "Provides early warning of margin pressures"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates margin waterfall visualizations", "Generates margin dashboards and scorecards", "Produces executive margin reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Monthly manual margin analysis vs. daily automated waterfall reporting with real-time deduction tracking",
+        "accuracyImprovement": "Approximate cost allocations vs. precise deduction attribution with 95%+ accuracy",
+        "efficiency": "85% reduction in margin reporting time, automated waterfall generation vs. manual Excel builds",
+        "businessImpact": "1-3% margin improvement through better deduction management and targeted initiatives, faster response to margin pressures",
+        "decisionQuality": "Granular margin driver insights vs. aggregate margin metrics, proactive opportunity identification vs. reactive problem-solving"
+      },
+      "dataSources": [
+        "Product cost and initial margin data",
+        "Promotional discount and funding data",
+        "Markdown and clearance data",
+        "Returns and allowance data",
+        "Freight and logistics costs",
+        "Sales and revenue data",
+        "Payment processing and transaction fees",
+        "Shrink and waste data"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated gross-to-net margin waterfalls for top categories; track promotion and markdown impact separately; create monthly margin scorecards; identify top 5 margin improvement opportunities.",
+        "investmentRequired": "Medium - requires pricing, promotion, and cost data integration, margin analytics tools, waterfall visualization. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for automated waterfall reporting, 6-9 months for margin opportunity identification and initiative tracking",
+        "prerequisites": "Detailed product cost data, promotion and markdown tracking, returns data, defined margin improvement goals and governance"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Financial planning & analysis", "Pricing analytics", "Merchandising", "Promotional analytics", "Data analysis"],
+        "complianceConsiderations": ["Revenue recognition and margin measurement consistency", "GAAP/IFRS compliance", "Transfer pricing for multi-entity organizations"],
+        "technologyStack": ["ERP/finance systems", "Pricing and promotion systems", "Markdown management tools", "BI platforms", "Analytics tools"]
+      }
+    },
+    {
+      "id": "budget-variance-analysis",
+      "name": "Budget vs Actual Variance Analysis",
+      "description": "Automated variance detection, root cause identification, and forecast refinement to improve planning accuracy and execution",
+      "traditionalWorkflow": "Finance teams manually compare actuals to budget in Excel, calculating dollar and percentage variances using formulas and pivot tables. They prepare variance commentary in Word documents, providing high-level explanations based on memory and anecdotal understanding. The process takes 1-2 weeks each month, delaying insights and business responses. Root cause analysis is superficial, often stopping at aggregate explanations (\"sales were below budget\") without drilling into drivers (volume vs. price vs. mix). Forecast updates are infrequent and disconnected from variance insights, leading to persistent forecast errors.",
+      "agenticWorkflow": "A Budget Intelligence Orchestrator coordinates automated variance analysis and forecast refinement. A Variance Detector continuously compares actuals to budget/forecast across all P&L line items and business dimensions, flagging significant variances based on materiality thresholds. A Root Cause Analyzer uses AI to investigate variance drivers, decomposing revenue variances into volume, price, and mix components, and cost variances into rate and efficiency factors. A Narrative Generator produces natural language explanations of variances automatically, saving finance teams hours of manual commentary writing. A Forecast Calibrator uses variance patterns to identify systematic forecast biases and recommends adjustments to improve future accuracy.",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Budget Intelligence Orchestrator",
+          "responsibilities": ["Coordinates automated variance analysis across organization", "Manages data from ERP, planning, and operational systems", "Prioritizes variance investigations by materiality", "Drives forecast accuracy improvement initiatives"]
+        },
+        "superAgents": [
+          {
+            "agent": "Variance Detector Agent",
+            "responsibilities": ["Compares actuals to budget/forecast continuously", "Flags material variances based on thresholds", "Tracks variance trends over time", "Provides variance alerts to responsible teams"]
+          },
+          {
+            "agent": "Root Cause Analyzer Agent",
+            "responsibilities": ["Decomposes variances into driver components", "Separates volume, price, mix, rate, efficiency factors", "Uses AI to identify non-obvious variance causes", "Provides diagnostic depth beyond surface explanations"]
+          },
+          {
+            "agent": "Narrative Generator Agent",
+            "responsibilities": ["Produces natural language variance commentary", "Generates insights automatically from data analysis", "Creates board-ready variance explanations", "Saves finance team manual writing time"]
+          },
+          {
+            "agent": "Forecast Calibrator Agent",
+            "responsibilities": ["Identifies systematic forecast biases from variance patterns", "Recommends forecast model and assumption adjustments", "Tracks forecast accuracy improvement over time", "Enables continuous planning refinement"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Benchmark Agent",
+            "responsibilities": ["Provides context on variance significance", "Compares variances to industry and peer patterns", "Identifies outlier performance"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates variance dashboards and scorecards", "Generates waterfall charts showing variance drivers", "Produces executive variance reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "1-2 weeks for manual variance analysis vs. real-time automated detection and explanation",
+        "accuracyImprovement": "Superficial variance explanations vs. AI-driven root cause analysis with 80-90% accuracy",
+        "efficiency": "90% reduction in variance analysis time, automated commentary generation vs. manual writing",
+        "businessImpact": "15-30% improvement in forecast accuracy through continuous calibration, faster corrective actions, better business performance management",
+        "decisionQuality": "Deep root cause understanding vs. surface-level aggregate explanations, systematic forecast improvement vs. static planning"
+      },
+      "dataSources": [
+        "Actual financial results from ERP",
+        "Budget and forecast data from planning systems",
+        "Operational metrics (volume, price, headcount)",
+        "Prior period actuals for trend analysis",
+        "Market and industry benchmark data",
+        "Variance commentary from prior periods",
+        "Forecast assumption documentation",
+        "Business context (promotions, product launches, etc.)"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement automated variance dashboards for top P&L line items with materiality-based alerts; pilot AI-generated variance commentary for 2-3 key metrics; establish weekly variance review cadence.",
+        "investmentRequired": "Medium - requires ERP and planning system integration, AI/NLP for commentary generation, analytics platform. Typical investment $150K-$350K.",
+        "timeToValue": "3-4 months for automated variance detection and dashboards, 6-9 months for AI commentary and forecast calibration",
+        "prerequisites": "Clean ERP actuals data, structured budget/forecast data, defined materiality thresholds, finance team process alignment"
+      },
+      "metadata": {
+        "complexity": "Medium-High",
+        "roiTimeframe": "4-8 months",
+        "integrationEffort": "Medium-High",
+        "skillsRequired": ["Financial planning & analysis", "Forecasting", "NLP/AI", "Data engineering", "Business intelligence"],
+        "complianceConsiderations": ["Financial reporting accuracy", "Disclosure requirements for public companies", "Audit documentation"],
+        "technologyStack": ["ERP systems", "Financial planning & analysis (FP&A) platforms", "BI tools", "NLP/AI platforms", "Data warehouse"]
+      }
+    },
+    {
+      "id": "cash-flow-forecasting",
+      "name": "Cash Flow Forecasting",
+      "description": "ML-powered cash flow predictions, scenario modeling, and liquidity risk alerts to ensure cash availability and optimize treasury operations",
+      "traditionalWorkflow": "Treasury teams manually build cash flow forecasts in Excel, linking revenue projections, payment terms, and expense timing using formulas and assumptions. They update forecasts weekly, but accuracy degrades rapidly as assumptions prove wrong. Scenario analysis is limited to 2-3 manually constructed scenarios (base, upside, downside) with crude adjustments. Liquidity risk assessment is subjective and reactive rather than predictive. The manual process provides limited visibility into cash drivers, making it difficult to influence outcomes proactively.",
+      "agenticWorkflow": "A Cash Flow Intelligence Orchestrator coordinates ML-powered cash forecasting and scenario analysis. A Cash Receipts Predictor uses ML models trained on historical customer payment patterns to forecast cash collections, accounting for customer payment behavior, seasonality, and terms. A Cash Disbursement Forecaster predicts payables timing based on supplier terms, payment schedules, and working capital strategies. A Scenario Engine generates hundreds of probabilistic scenarios considering variable business outcomes and external factors, providing confidence intervals for cash positions. A Liquidity Risk Analyzer identifies potential cash shortfalls proactively and recommends mitigation actions (adjust AP timing, draw credit lines, accelerate collections).",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Cash Flow Intelligence Orchestrator",
+          "responsibilities": ["Coordinates end-to-end cash flow forecasting", "Manages data from ERP, treasury, and operational systems", "Prioritizes liquidity risks and mitigation actions", "Integrates forecasts with treasury operations and financial planning"]
+        },
+        "superAgents": [
+          {
+            "agent": "Cash Receipts Predictor",
+            "responsibilities": ["Forecasts cash collections using ML on payment patterns", "Accounts for customer payment behavior and DSO", "Incorporates seasonality and business cycles", "Provides collection probability distributions"]
+          },
+          {
+            "agent": "Cash Disbursement Forecaster",
+            "responsibilities": ["Predicts payables timing based on terms and schedules", "Models discretionary spending and CapEx timing", "Accounts for working capital management strategies", "Provides disbursement confidence intervals"]
+          },
+          {
+            "agent": "Scenario Engine Agent",
+            "responsibilities": ["Generates probabilistic cash flow scenarios", "Models business outcome variability and external factors", "Provides P10/P50/P90 cash position forecasts", "Enables stress testing and what-if analysis"]
+          },
+          {
+            "agent": "Liquidity Risk Analyzer",
+            "responsibilities": ["Identifies potential cash shortfalls proactively", "Calculates minimum cash buffer requirements", "Recommends mitigation actions for liquidity risks", "Triggers alerts for treasury intervention"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "External Factor Agent",
+            "responsibilities": ["Incorporates economic indicators affecting cash", "Models impact of market volatility on collections", "Tracks external events (regulatory changes, tariffs)"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates cash flow forecast dashboards", "Generates scenario comparison visualizations", "Produces treasury management reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Weekly manual forecast updates vs. daily automated ML-powered forecasts with real-time scenario analysis",
+        "accuracyImprovement": "Simple spreadsheet assumptions vs. ML models with 70-85% forecast accuracy (vs. 50-60% manual)",
+        "efficiency": "85% reduction in forecast development time, automated updates vs. manual Excel maintenance",
+        "businessImpact": "Reduced borrowing costs through better cash positioning, avoidance of liquidity crises, optimized investment of excess cash, 10-20% improvement in forecast accuracy",
+        "decisionQuality": "Probabilistic scenario-based planning vs. single-point deterministic forecasts, proactive risk mitigation vs. reactive crisis management"
+      },
+      "dataSources": [
+        "Historical cash receipts and disbursements",
+        "Accounts receivable aging and payment patterns",
+        "Accounts payable schedules and terms",
+        "Sales and revenue forecasts",
+        "Operational expense budgets and timing",
+        "Capital expenditure plans",
+        "Debt service schedules and credit facility terms",
+        "Economic and market indicators"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Implement ML-powered cash collections forecasting for top customer segments; create 13-week rolling cash forecast with confidence intervals; establish daily cash position monitoring; pilot scenario analysis for quarterly planning.",
+        "investmentRequired": "Medium-High - requires treasury system integration, ML model development, scenario engine, historical data cleansing. Typical investment $200K-$450K.",
+        "timeToValue": "4-6 months for ML cash forecasting models, 9-12 months for full scenario engine and risk analytics",
+        "prerequisites": "2+ years of historical cash flow data, integrated treasury and ERP systems, defined cash management policies, data quality on payment terms and timing"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-12 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Treasury management", "Cash forecasting", "Data science/ML", "Financial modeling", "Risk management"],
+        "complianceConsiderations": ["Cash handling and control policies", "Banking covenant compliance", "Foreign exchange risk management"],
+        "technologyStack": ["Treasury management systems", "ML platforms (Python, R)", "Scenario modeling tools", "ERP systems", "BI dashboards"]
+      }
+    },
+    {
+      "id": "cost-attribution-allocation",
+      "name": "Cost Attribution & Allocation",
+      "description": "Activity-based costing, shared service allocation, and profitability by customer/product to understand true economics",
+      "traditionalWorkflow": "Finance teams allocate shared costs using crude methods (revenue-based, headcount-based) that poorly reflect actual resource consumption. They manually build allocation spreadsheets with complex formulas that are error-prone and difficult to maintain. Cost allocations are performed monthly or quarterly with significant delays, limiting their usefulness for operational decision-making. The lack of activity-based costing leads to cross-subsidization where some products or customers appear profitable while actually consuming disproportionate resources. True profitability insights are obscured, leading to suboptimal strategic decisions.",
+      "agenticWorkflow": "A Cost Intelligence Orchestrator coordinates sophisticated activity-based costing and allocation across the organization. A Cost Pool Identifier maps costs to activity pools based on resource consumption drivers rather than simplistic proxies. An Activity Tracer measures actual activity consumption by product, customer, channel, and order using operational data (transactions processed, service calls, shipments, returns). A Cost Allocator applies activity rates to assign costs accurately, revealing true product and customer profitability. A Profitability Analyzer synthesizes allocated costs with revenues to calculate comprehensive P&Ls by any dimension, and a Decision Support Engine uses true economics to guide strategic choices (pricing, customer focus, SKU rationalization).",
+      "agentArchitecture": {
+        "orchestrator": {
+          "agent": "Cost Intelligence Orchestrator",
+          "responsibilities": ["Coordinates activity-based costing across organization", "Manages data from ERP, operational, and activity systems", "Ensures allocation methodology consistency and defensibility", "Integrates cost insights with strategic decision-making"]
+        },
+        "superAgents": [
+          {
+            "agent": "Cost Pool Identifier",
+            "responsibilities": ["Maps costs to activity pools based on drivers", "Defines appropriate cost allocation bases", "Validates activity pool logic and completeness", "Maintains allocation methodology documentation"]
+          },
+          {
+            "agent": "Activity Tracer Agent",
+            "responsibilities": ["Measures actual activity consumption by product/customer", "Integrates operational data (transactions, shipments, calls)", "Calculates activity rates (cost per transaction, per call)", "Tracks activity volume trends"]
+          },
+          {
+            "agent": "Cost Allocator Agent",
+            "responsibilities": ["Applies activity rates to assign costs accurately", "Handles multiple allocation tiers (department, corporate)", "Provides cost attribution at any dimensional level", "Ensures allocation completeness and consistency"]
+          },
+          {
+            "agent": "Profitability Analyzer Agent",
+            "responsibilities": ["Calculates comprehensive P&Ls with allocated costs", "Reveals true product and customer profitability", "Identifies cross-subsidization and hidden losses", "Benchmarks profitability vs. targets and peers"]
+          },
+          {
+            "agent": "Decision Support Engine",
+            "responsibilities": ["Uses true economics to guide strategic decisions", "Recommends pricing, SKU rationalization, customer focus", "Models financial impact of strategic scenarios", "Provides ROI analysis for investments"]
+          }
+        ],
+        "utilityAgents": [
+          {
+            "agent": "Complexity Metrics Agent",
+            "responsibilities": ["Measures product/customer complexity as cost driver", "Quantifies cost of complexity", "Recommends simplification opportunities"]
+          },
+          {
+            "agent": "Visualization Agent",
+            "responsibilities": ["Creates profitability dashboards with allocated costs", "Generates activity rate and driver visualizations", "Produces ABC costing reports"]
+          }
+        ]
+      },
+      "benefits": {
+        "timeToInsight": "Quarterly manual allocations vs. monthly automated activity-based costing with near-real-time insights",
+        "accuracyImprovement": "Crude proxy-based allocations vs. activity-based costing with 70-90% better accuracy in true profitability",
+        "efficiency": "80% reduction in allocation effort, automated activity tracing vs. manual cost spreadsheets",
+        "businessImpact": "Discovery that 10-30% of products/customers are unprofitable, 15-25% margin improvement through strategic actions based on true economics, better pricing and resource allocation decisions",
+        "decisionQuality": "True activity-based profitability vs. distorted proxy allocations, strategic decisions grounded in real economics vs. hidden cross-subsidies"
+      },
+      "dataSources": [
+        "General ledger cost data by department and account",
+        "Activity volume data (transactions, orders, shipments, calls)",
+        "Product and customer revenue data",
+        "Operational system data (ERP, CRM, WMS, call center)",
+        "Headcount and capacity data",
+        "Process time and complexity metrics",
+        "Technology and facility utilization data",
+        "Shared service cost pools"
+      ],
+      "transformationGuidance": {
+        "quickWins": "Pilot activity-based costing on 1-2 shared service functions (customer service, fulfillment); identify major activity drivers and rates; calculate true profitability for top 20% of products/customers; identify clear unprofitable outliers for action.",
+        "investmentRequired": "Medium-High - requires activity data integration, ABC methodology design, profitability analytics tools, finance process change. Typical investment $200K-$500K.",
+        "timeToValue": "4-6 months for pilot ABC implementation and initial profitability insights, 9-15 months for enterprise-wide ABC and strategic decision support",
+        "prerequisites": "Operational data on activity volumes, defined cost allocation methodology and governance, cross-functional alignment on ABC approach, data quality on cost and activity drivers"
+      },
+      "metadata": {
+        "complexity": "High",
+        "roiTimeframe": "6-15 months",
+        "integrationEffort": "High",
+        "skillsRequired": ["Managerial accounting", "Activity-based costing", "Cost accounting", "Data integration", "Financial analysis", "Change management"],
+        "complianceConsiderations": ["Cost allocation method consistency for transfer pricing", "GAAP/IFRS implications", "Audit documentation of allocation methods"],
+        "technologyStack": ["ERP systems", "Activity-based costing software", "Operational data sources", "BI platforms", "Profitability analytics tools"]
+      }
+    }
+  ]
+}

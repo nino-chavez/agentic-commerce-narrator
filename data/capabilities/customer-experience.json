@@ -1,0 +1,599 @@
+[
+  {
+    "id": "capability-customer-journey-mapping",
+    "type": "capability",
+    "level": 3,
+    "label": "Customer Journey Mapping",
+    "description": "Automatically discovers and visualizes actual customer paths through behavioral data analysis, identifying friction points and prioritizing improvements by ROI.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Auto-Discovery of Customer Paths",
+      "Friction Detection & Analysis",
+      "Opportunity Scoring & Prioritization",
+      "Journey Visualization"
+    ],
+    "traditionalApproach": {
+      "description": "Quarterly workshops with static journey maps stored in PowerPoint",
+      "characteristics": [
+        "Quarterly workshops with cross-functional teams",
+        "Sticky notes and whiteboard diagrams",
+        "Static journey maps stored in PowerPoint",
+        "Limited to known/designed journeys",
+        "Manual updates when journeys change"
+      ],
+      "constraints": [
+        "Journey maps become outdated quickly",
+        "No visibility into actual customer behavior",
+        "Manual identification of friction points",
+        "Improvements not prioritized by impact",
+        "Disconnected from real-time customer data"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time journey maps auto-generated from behavior with ML-based friction detection and ROI-prioritized improvements",
+      "characteristics": [
+        "Continuous analysis of behavioral data identifies actual paths",
+        "ML-based friction detection at drop-off points and delays",
+        "Automated ROI scoring ranks improvements by impact",
+        "Real-time journey visualizations auto-generated from data",
+        "Proactive alerts when new friction patterns emerge"
+      ],
+      "benefits": [
+        "Real-time journey maps vs quarterly static snapshots",
+        "Discovers actual customer paths vs designed assumptions",
+        "Automated friction detection vs manual analysis",
+        "ROI-prioritized improvements vs gut-feel decisions",
+        "Continuous monitoring vs periodic updates"
+      ],
+      "projections": [],
+      "agents": [
+        "Journey Intelligence Orchestrator",
+        "Auto-Discovery Agent",
+        "Friction Detection Agent",
+        "Opportunity Scoring Agent",
+        "Journey Visualization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy auto-discovery for top 3 customer journeys (checkout, search, returns)",
+        "Implement friction detection on mobile checkout flow",
+        "Enable real-time journey dashboards for product and CX teams"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "Clickstream analytics infrastructure (Google Analytics 4, Adobe Analytics)",
+        "Session replay tool (Hotjar, FullStory, LogRocket)",
+        "Clean customer identifier across channels",
+        "Historical behavior data (3-6 months minimum)",
+        "Defined business metrics (conversion, satisfaction, revenue)"
+      ]
+    },
+    "icon": "map",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-omnichannel-orchestration",
+    "type": "capability",
+    "level": 3,
+    "label": "Omnichannel Orchestration",
+    "description": "Maintains seamless customer experience across channels with synchronized state, intelligent routing, and consistent personalization.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Context Handoff Management",
+      "Channel Routing Optimization",
+      "Unified Messaging Coordination",
+      "Cross-Channel Personalization"
+    ],
+    "traditionalApproach": {
+      "description": "Separate channel teams with no state synchronization or cross-channel awareness",
+      "characteristics": [
+        "Separate teams manage web, mobile, in-store experiences",
+        "Cart doesn't sync across channels",
+        "Customer must restart journey when switching channels",
+        "No awareness of cross-channel behavior"
+      ],
+      "constraints": [
+        "Customer frustration from repeated information entry",
+        "Lost carts when switching channels",
+        "Inconsistent personalization across channels",
+        "No visibility into customer's cross-channel journey",
+        "Fragmented customer data across channel silos"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-oco-001",
+          "metric": "Channel-Switch Abandonment Rate",
+          "value": "20-30%",
+          "source": "TBD: [SME to provide source, e.g., 'Cross-channel cart abandonment studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Seamless handoffs between channels with instant cart sync, unified messaging, and consistent personalization everywhere",
+      "characteristics": [
+        "Context handoff maintains cart, browsing history, preferences across channels",
+        "Intelligent routing directs customer to optimal channel for their need",
+        "Unified messaging coordinates email, SMS, push, in-app notifications",
+        "Cross-channel personalization ensures consistent experience",
+        "Real-time customer state synchronization (<1 second)"
+      ],
+      "benefits": [
+        "Seamless channel transitions vs fragmented experiences",
+        "Cart sync prevents abandonment",
+        "Customer never repeats information across channels",
+        "Consistent personalization everywhere vs channel-specific",
+        "Significant reduction in channel-switch abandonment"
+      ],
+      "projections": [
+        {
+          "metric": "Cart Sync Conversion Lift",
+          "value": "10-15%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on seamless cart preservation across channels eliminating re-entry friction']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Channel-Switch Abandonment Reduction",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on context handoff maintaining customer journey state across channels']",
+          "sourceBenchmark": "bench-oco-001"
+        }
+      ],
+      "agents": [
+        "Omnichannel Experience Orchestrator",
+        "Context Handoff Agent",
+        "Channel Routing Agent",
+        "Unified Messaging Agent",
+        "Cross-Channel Personalization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy cart sync between web and mobile app",
+        "Implement unified messaging for transactional notifications",
+        "Enable context handoff for top 3 customer journeys"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Customer Data Platform (CDP) or unified customer profile",
+        "Shared session management across channels",
+        "API-first architecture for channel integrations",
+        "Single customer identifier across all channels",
+        "Real-time event streaming infrastructure"
+      ]
+    },
+    "icon": "switch-horizontal",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-experience-testing-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Experience Testing & Optimization",
+    "description": "Accelerates experimentation with AI-designed tests, continuous statistical monitoring, and automated winner rollouts.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Test Design & Hypothesis Generation",
+      "Traffic Allocation Management",
+      "Bayesian Analysis & Monitoring",
+      "Winner Rollout Automation"
+    ],
+    "traditionalApproach": {
+      "description": "Manual A/B testing with weeks-long cycles and limited concurrent experiments",
+      "characteristics": [
+        "Manual A/B test design and implementation",
+        "Weeks to set up and run experiments",
+        "Limited test capacity (1-2 concurrent tests)",
+        "Statistical analysis in spreadsheets",
+        "No automated winner declaration"
+      ],
+      "constraints": [
+        "Long experiment cycles",
+        "Limited testing throughput constrains learning velocity",
+        "Manual statistical analysis introduces errors",
+        "No early stopping wastes traffic on losing variants",
+        "Manual rollouts risk configuration errors"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-eto-001",
+          "metric": "Experiment Cycle Time",
+          "value": "2-4 weeks setup + 2-4 weeks run",
+          "source": "TBD: [SME to provide source, e.g., 'A/B testing program benchmarks']"
+        },
+        {
+          "id": "bench-eto-002",
+          "metric": "Concurrent Test Capacity (Traditional)",
+          "value": "1-2 tests",
+          "source": "TBD: [SME to provide source, e.g., 'Manual A/B testing capacity limits']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Tests designed and launched in hours with 10+ concurrent experiments, auto-declared winners, and gradual rollouts",
+      "characteristics": [
+        "AI suggests test hypotheses from analytics insights",
+        "Multi-variate test design with automated traffic allocation",
+        "Continuous Bayesian monitoring with early stopping",
+        "Automated winner declaration when significance reached",
+        "Gradual rollout monitors for unexpected effects",
+        "10+ concurrent experiments without resource constraints"
+      ],
+      "benefits": [
+        "Tests launched rapidly vs weeks-long cycles",
+        "Multiple concurrent experiments vs limited capacity",
+        "Automated winner declaration vs manual analysis",
+        "Early stopping saves traffic",
+        "Gradual rollouts minimize risk of negative impact",
+        "Dramatic increase in learning velocity"
+      ],
+      "projections": [
+        {
+          "metric": "Test Launch Speed Improvement",
+          "value": "85-90% faster (hours vs weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-powered test design and automated implementation']",
+          "sourceBenchmark": "bench-eto-001"
+        },
+        {
+          "metric": "Concurrent Experiment Capacity",
+          "value": "10+ tests (vs 1-2)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated orchestration removing manual resource constraints']",
+          "sourceBenchmark": "bench-eto-002"
+        },
+        {
+          "metric": "Traffic Efficiency Gain",
+          "value": "20-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on early stopping reducing exposure to losing variants']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Learning Velocity Increase",
+          "value": "3-5x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on faster test cycles and higher concurrent experiment capacity']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Experimentation Orchestration Agent",
+        "Test Design Agent",
+        "Traffic Allocation Agent",
+        "Bayesian Analysis Agent",
+        "Rollout Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy feature flag platform for gradual rollouts",
+        "Implement Bayesian monitoring for top 3 experiments",
+        "Enable AI test hypothesis generation from analytics"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": [
+        "A/B testing platform (Optimizely, VWO, LaunchDarkly)",
+        "Statistical analysis engine or library",
+        "Feature flag infrastructure for gradual rollouts",
+        "Clean analytics data with defined success metrics",
+        "Sufficient traffic volume for statistical significance"
+      ]
+    },
+    "icon": "beaker",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-voice-of-customer-intelligence",
+    "type": "capability",
+    "level": 3,
+    "label": "Voice of Customer (VoC) Intelligence",
+    "description": "Aggregates and analyzes customer feedback from all sources with NLP-powered sentiment analysis, theme extraction, and impact quantification.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Multi-Source Sentiment Analysis",
+      "Theme Extraction & Categorization",
+      "Impact Quantification",
+      "Insight Distribution & Routing"
+    ],
+    "traditionalApproach": {
+      "description": "Manual analysis of disconnected feedback sources with monthly reporting",
+      "characteristics": [
+        "Survey responses analyzed manually",
+        "Support tickets categorized by agents",
+        "Reviews monitored via alerts",
+        "Insights shared in monthly reports",
+        "Disconnected from product roadmap"
+      ],
+      "constraints": [
+        "Weeks-long delay from feedback to insight",
+        "Manual theme identification misses patterns",
+        "No quantification of business impact",
+        "Insights not actionable or routed to owners",
+        "Feedback silos (surveys, reviews, support separate)",
+        "Limited to samples vs complete feedback corpus"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time sentiment tracking with automated theme detection, business impact quantification, and targeted insight distribution",
+      "characteristics": [
+        "NLP analyzes surveys, reviews, social, support tickets in real-time",
+        "Automated theme extraction identifies pain points and feature requests",
+        "Impact quantification connects themes to churn, NPS, revenue",
+        "Intelligent routing distributes insights to relevant teams and PMs",
+        "Unified feedback corpus across all sources"
+      ],
+      "benefits": [
+        "Real-time feedback analysis vs monthly batches",
+        "100% feedback corpus analyzed vs manual samples",
+        "Automated theme detection vs manual categorization",
+        "Quantified business impact vs qualitative reports",
+        "Insights routed to owners vs broadcast reports",
+        "Product roadmap informed by customer voice"
+      ],
+      "projections": [],
+      "agents": [
+        "VoC Intelligence Orchestrator",
+        "Sentiment Analysis Agent",
+        "Theme Extraction Agent",
+        "Impact Quantification Agent",
+        "Insight Distribution Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy NLP sentiment analysis for support tickets and reviews",
+        "Implement theme extraction for survey open-ended responses",
+        "Connect VoC themes to churn data for impact scoring"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": [
+        "Aggregated feedback sources (surveys, reviews, social, support)",
+        "NLP engine (cloud APIs or open source)",
+        "Customer success metrics (NPS, churn, satisfaction)",
+        "Product management workflow tool for insight routing",
+        "Historical feedback data for ML model training"
+      ]
+    },
+    "icon": "chat-alt-2",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-next-best-action",
+    "type": "capability",
+    "level": 3,
+    "label": "Next Best Action (NBA)",
+    "description": "Delivers real-time personalized recommendations across all channels using propensity models, offer optimization, and channel selection.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "Propensity Modeling",
+      "Offer Optimization",
+      "Channel Selection",
+      "Treatment Orchestration"
+    ],
+    "traditionalApproach": {
+      "description": "Generic segment-based campaigns with no real-time decisioning",
+      "characteristics": [
+        "Generic marketing campaigns to segments",
+        "Same offer to all customers in segment",
+        "No real-time decisioning",
+        "Limited to email/display channels"
+      ],
+      "constraints": [
+        "Segment-level targeting misses individual preferences",
+        "Batch campaigns lack timeliness and relevance",
+        "No cross-channel orchestration (email siloed from app)",
+        "Generic offers reduce response rates",
+        "No propensity-based prioritization"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Real-time personalized actions across all channels with propensity-driven targeting, optimized offers, and multi-touch orchestration",
+      "characteristics": [
+        "Propensity models predict likelihood for buy, churn, upsell per customer",
+        "Offer optimization selects best message/incentive per individual",
+        "Channel selection determines optimal channel and timing",
+        "Multi-touch orchestration coordinates campaigns across channels",
+        "Real-time decisioning at every customer touchpoint"
+      ],
+      "benefits": [
+        "Individual-level personalization vs segment averages",
+        "Real-time decisioning vs batch campaigns",
+        "Response rates dramatically increase through propensity targeting",
+        "Optimized offers maximize conversion and margin",
+        "Coordinated multi-touch campaigns vs siloed channels",
+        "Significant lift in campaign ROI"
+      ],
+      "projections": [
+        {
+          "metric": "Response Rate Improvement",
+          "value": "2-4x",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on propensity-driven individual targeting vs generic segment campaigns']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Campaign ROI Lift",
+          "value": "15-30%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimized offers and multi-touch orchestration']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Next Best Action Orchestrator",
+        "Propensity Modeling Agent",
+        "Offer Optimization Agent",
+        "Channel Selection Agent",
+        "Treatment Orchestration Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy propensity models for churn and upsell on top customer segment",
+        "Implement offer optimization for email campaigns",
+        "Enable channel selection (email vs SMS vs push) based on engagement"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "4-6 months",
+      "prerequisites": [
+        "Customer Data Platform with unified profiles",
+        "ML platform for propensity model training and serving",
+        "Marketing automation with API for real-time decisioning",
+        "Channel APIs (email, SMS, push, in-app)",
+        "Historical campaign response data for ML training"
+      ]
+    },
+    "icon": "lightning-bolt",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-customer-lifetime-value-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Customer Lifetime Value (CLV) Optimization",
+    "description": "Predicts individual customer value in real-time, identifies churn risk early, and orchestrates proactive retention and growth campaigns.",
+    "parentDomain": "domain-customer-experience",
+    "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 4,
+    "keyFunctions": [
+      "CLV Prediction",
+      "Churn Prediction",
+      "Win-Back Orchestration",
+      "Growth Opportunity Identification"
+    ],
+    "traditionalApproach": {
+      "description": "Historical CLV calculated annually with reactive churn management",
+      "characteristics": [
+        "Historical CLV calculated annually",
+        "Segment-level averages",
+        "Not used in real-time decisions",
+        "Reactive churn management"
+      ],
+      "constraints": [
+        "Annual CLV refresh too slow for operational use",
+        "Segment averages miss individual customer dynamics",
+        "Churn managed reactively after customer leaves",
+        "No proactive retention campaigns",
+        "Growth opportunities not identified systematically"
+      ],
+      "benchmarks": []
+    },
+    "agenticApproach": {
+      "description": "Individual CLV predicted in real-time with proactive churn prevention and automated growth campaigns",
+      "characteristics": [
+        "Real-time individual CLV forecasting updated continuously",
+        "Churn prediction identifies at-risk customers 30-60 days early",
+        "Automated win-back campaigns orchestrated for at-risk customers",
+        "Growth opportunity agent identifies upsell/cross-sell by customer",
+        "CLV-based decisioning in marketing, support, service"
+      ],
+      "benefits": [
+        "Real-time individual CLV vs annual segment averages",
+        "Proactive churn prevention vs reactive win-back",
+        "Early warning system vs post-churn detection",
+        "Automated retention campaigns vs manual outreach",
+        "Significant churn reduction through early intervention",
+        "Growth opportunities surfaced proactively"
+      ],
+      "projections": [
+        {
+          "metric": "Churn Early Warning Period",
+          "value": "30-60 days",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on ML models detecting behavioral signals before churn decision']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Churn Reduction",
+          "value": "20-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive intervention enabling retention before customer decides to leave']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "CLV Optimization Orchestrator",
+        "CLV Prediction Agent",
+        "Churn Prediction Agent",
+        "Win-Back Agent",
+        "Growth Opportunity Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy churn prediction model for subscription customers",
+        "Implement automated win-back campaigns for at-risk segment",
+        "Enable CLV scoring for customer service prioritization"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": [
+        "Historical customer transaction data (12-24 months)",
+        "Customer behavior data (engagement, support, channel activity)",
+        "ML platform for model training and real-time scoring",
+        "Campaign automation for retention workflows",
+        "Defined churn definition and business rules"
+      ]
+    },
+    "icon": "trending-up",
+    "color": "#EC4899",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

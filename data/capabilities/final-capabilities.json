@@ -1,0 +1,274 @@
+[
+  {
+    "id": "capability-order-fulfillment-orchestration",
+    "type": "capability",
+    "level": 3,
+    "label": "Order Fulfillment Orchestration",
+    "description": "AI-powered distributed order management with intelligent routing, real-time inventory promising, and exception handling achieving significant reduction in fulfillment costs.",
+    "parentDomain": "domain-supply-chain",
+    "industries": ["Retail", "Grocery", "QSR", "Travel", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Intelligent order routing & sourcing",
+      "Real-time inventory availability",
+      "Split shipment optimization",
+      "Fulfillment cost optimization",
+      "Order tracking & visibility",
+      "Exception management & resolution",
+      "Fulfillment performance analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual order routing with static fulfillment rules and limited visibility resulting in suboptimal costs and frequent stockouts.",
+      "characteristics": [
+        "Static routing rules (ship from closest DC)",
+        "No real-time inventory visibility across network",
+        "Manual split shipment decisions",
+        "Fixed fulfillment costs per channel",
+        "Limited order tracking (call center for status)",
+        "Reactive exception handling",
+        "Weekly fulfillment reports"
+      ],
+      "constraints": [
+        "Static routing yields suboptimal costs and delivery times",
+        "Inventory promises frequently fail (stockouts after order placed)",
+        "Split shipments increase costs substantially",
+        "No cost optimization in routing decisions",
+        "Poor tracking frustrates customers",
+        "Reactive exceptions delay resolution",
+        "Limited insights on fulfillment performance"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-ful-001",
+          "metric": "Inventory Promise Failure Rate",
+          "value": "15-25%",
+          "source": "TBD: [SME to provide source, e.g., 'Omnichannel fulfillment stockout studies']"
+        },
+        {
+          "id": "bench-ful-002",
+          "metric": "Split Shipment Cost Increase",
+          "value": "30-50%",
+          "source": "TBD: [SME to provide source, e.g., 'Multi-box fulfillment cost analysis']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered distributed order management with real-time optimization and intelligent routing achieving substantial cost savings and improved service.",
+      "characteristics": [
+        "AI routing considers inventory, cost, speed, carbon footprint",
+        "Real-time inventory promising across all fulfillment nodes",
+        "Intelligent split shipment minimization",
+        "Dynamic fulfillment cost optimization",
+        "Proactive order tracking with ETA predictions",
+        "Automated exception detection and resolution",
+        "Real-time fulfillment performance dashboards"
+      ],
+      "benefits": [
+        "Significant reduction in fulfillment costs",
+        "Real-time inventory promising prevents stockout orders",
+        "Split shipment optimization reduces multi-box orders",
+        "Cost optimization saves per order",
+        "Proactive tracking reduces customer service contacts",
+        "Automated exceptions prevent fulfillment issues",
+        "Real-time visibility enables agile operations"
+      ],
+      "projections": [
+        {
+          "metric": "Fulfillment Cost Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized routing balancing inventory availability, shipping costs, and delivery speed']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Inventory Promise Accuracy Improvement",
+          "value": "95%+ (vs 75-85%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time inventory visibility across all fulfillment nodes preventing stockout orders']",
+          "sourceBenchmark": "bench-ful-001"
+        },
+        {
+          "metric": "Split Shipment Reduction",
+          "value": "40-60% of multi-box orders",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on intelligent order splitting algorithm minimizing shipments while optimizing delivery speed']",
+          "sourceBenchmark": "bench-ful-002"
+        },
+        {
+          "metric": "Per-Order Cost Optimization",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic fulfillment cost optimization selecting lowest-cost node meeting delivery promise']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Customer Service Contact Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on proactive tracking notifications and accurate ETAs reducing customer inquiries']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Fulfillment Issue Prevention",
+          "value": "40-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated exception detection and resolution before issues impact customer']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Order Fulfillment Orchestrator",
+        "Intelligent Routing Agent",
+        "Inventory Promise Agent",
+        "Split Shipment Optimization Agent",
+        "Tracking Agent",
+        "Exception Management Agent",
+        "Fulfillment Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement real-time inventory visibility across network",
+        "Deploy intelligent order routing for ecommerce orders",
+        "Enable proactive order tracking and customer notifications"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": [
+        "Distributed Order Management (DOM) platform",
+        "Real-time inventory visibility across all nodes",
+        "Integration with WMS, TMS, and carrier systems",
+        "Historical order and fulfillment data",
+        "Defined fulfillment cost models by channel and node"
+      ]
+    },
+    "icon": "truck-fast",
+    "color": "#06B6D4",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-advanced-inventory-optimization",
+    "type": "capability",
+    "level": 3,
+    "label": "Advanced Inventory Optimization & AI Forecasting",
+    "description": "Machine learning-powered inventory optimization with probabilistic forecasting and reinforcement learning achieving significant reduction in safety stock while maintaining high service levels.",
+    "parentDomain": "domain-supply-chain",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B", "Hybrid"],
+    "functionCount": 6,
+    "keyFunctions": [
+      "Probabilistic demand forecasting",
+      "Reinforcement learning for replenishment",
+      "Multi-objective optimization (cost, service, sustainability)",
+      "Scenario simulation & what-if analysis",
+      "Supply chain digital twin",
+      "Autonomous inventory management"
+    ],
+    "traditionalApproach": {
+      "description": "Deterministic forecasting with rule-based replenishment and manual safety stock resulting in suboptimal service levels.",
+      "characteristics": [
+        "Point forecasts (single number prediction)",
+        "Fixed reorder points and order quantities",
+        "Safety stock = lead time × average demand",
+        "Single objective optimization (minimize cost only)",
+        "Manual scenario planning in spreadsheets",
+        "Human approvals for all replenishment decisions"
+      ],
+      "constraints": [
+        "Point forecasts ignore demand uncertainty",
+        "Fixed rules don't adapt to changing conditions",
+        "Uniform safety stock over/understocks items",
+        "Cost-only optimization misses service and sustainability",
+        "Manual scenarios limited and time-consuming",
+        "Human bottleneck limits replenishment agility"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-inv-001",
+          "metric": "Service Level (Traditional Deterministic)",
+          "value": "90-95%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail inventory service level benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Advanced ML-powered inventory optimization with autonomous decision-making achieving superior service levels with lower inventory.",
+      "characteristics": [
+        "Probabilistic forecasts quantify demand uncertainty",
+        "Reinforcement learning optimizes replenishment policies dynamically",
+        "Multi-objective optimization balances cost, service, and carbon",
+        "Automated scenario simulation for disruption planning",
+        "Digital twin models entire supply chain for testing",
+        "Autonomous replenishment with HITL gates for exceptions only"
+      ],
+      "benefits": [
+        "Significant reduction in safety stock through probabilistic forecasting",
+        "High service levels maintained",
+        "Reinforcement learning improves replenishment ROI",
+        "Multi-objective optimization reduces carbon footprint",
+        "Digital twin enables risk-free experimentation",
+        "Autonomous operations free planners for strategic work"
+      ],
+      "projections": [
+        {
+          "metric": "Safety Stock Reduction",
+          "value": "25-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on probabilistic forecasting quantifying demand uncertainty and right-sizing safety stock by SKU']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Service Level Improvement",
+          "value": "99%+ (vs 90-95%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on probabilistic forecasting optimizing inventory for target service level by SKU instead of uniform rule']",
+          "sourceBenchmark": "bench-inv-001"
+        },
+        {
+          "metric": "Replenishment ROI Improvement",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on reinforcement learning continuously adapting replenishment policies to optimize cost-service tradeoff']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Carbon Footprint Reduction",
+          "value": "15-25%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on multi-objective optimization balancing cost, service, and sustainability in replenishment decisions']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Advanced Inventory Optimization Orchestrator",
+        "Probabilistic Forecasting Agent",
+        "Reinforcement Learning Agent",
+        "Multi-Objective Optimization Agent",
+        "Simulation Agent",
+        "Digital Twin Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Implement probabilistic forecasting for A items",
+        "Deploy reinforcement learning for replenishment pilot",
+        "Enable multi-objective optimization (cost + service)"
+      ],
+      "investmentRequired": "Very High",
+      "timeToValue": "12-18 months",
+      "prerequisites": [
+        "Advanced AI/ML platform with reinforcement learning capability",
+        "Historical demand, supply, and inventory data (3+ years)",
+        "Real-time supply chain visibility",
+        "Digital twin modeling capability",
+        "Data science team with ML and operations research expertise"
+      ]
+    },
+    "icon": "cpu-chip",
+    "color": "#8B5CF6",
+    "createdAt": "2025-10-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

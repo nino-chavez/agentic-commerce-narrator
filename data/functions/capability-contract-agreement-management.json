@@ -1,0 +1,586 @@
+[
+  {
+    "id": "function-contract-generation-templating",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Generation & Templating",
+    "description": "Automated contract creation from smart templates that auto-populate from CRM opportunity data, past similar contracts, and customer-specific terms with multiple scenario generation.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Legal team receives contract request via email from sales rep. 2. Legal manually searches file share for appropriate template (if one exists). 3. Legal copies template and manually edits Word document with customer details. 4. Sales and legal collaborate via email over 5-10 revision cycles to customize terms. 5. Each revision requires manual find-replace for customer name, products, pricing.",
+      "constraints": [
+        "4-8 hours to create initial contract draft",
+        "No connection to CRM data requiring manual re-entry",
+        "Template selection inconsistent across legal team members",
+        "No ability to generate multiple contract scenarios",
+        "Version control chaos with email attachments",
+        "No learning from past successful contract structures"
+      ],
+      "metrics": ["Contract draft creation time: 4-8 hours", "Template reuse rate: 40-50%", "Manual data entry: 100%"]
+    },
+    "agentic": {
+      "workflow": "1. Contract Generation Agent triggered from approved quote or sales opportunity. 2. Agent selects optimal template based on customer type, deal structure, products/services. 3. Agent auto-populates from CRM opportunity: customer name, products, pricing, volumes, delivery terms. 4. Agent analyzes similar past contracts and suggests proven term structures. 5. Agent generates multiple contract scenarios (1-year vs 3-year, different volume tiers, payment terms options). 6. Agent maintains version control with complete change tracking.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Contract Generation Agent"],
+        "utilityAgents": ["CRM Integration Agent", "Quote Template Agent", "Document Assembly Agent", "Version Control Agent"]
+      },
+      "dataSources": [
+        "Contract template library with approved clauses",
+        "CRM opportunity and customer data",
+        "Quote data with pricing and product details",
+        "Historical contract database",
+        "Customer-specific negotiated terms",
+        "Product and service catalog"
+      ],
+      "benefits": [
+        "90% faster contract creation (30-60 minutes vs 4-8 hours)",
+        "100% CRM data accuracy through auto-population",
+        "Multiple scenarios generated instantly for customer choice",
+        "Consistent template selection based on deal parameters",
+        "Automated version control eliminates email confusion",
+        "Learning from past contracts improves future recommendations"
+      ],
+      "metrics": ["Contract creation time: 30-60 minutes", "Data accuracy: 100%", "Scenarios per contract: 2-3"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy template library with auto-selection rules", "Integrate CRM for auto-population of customer data"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Contract templates approved by legal and business", "CRM integration with opportunity data", "CLM platform with API access"]
+    },
+    "icon": "document-duplicate",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-intelligent-clause-library",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Clause Library Management",
+    "description": "AI-powered repository of pre-approved contract clauses with intelligent recommendations based on customer risk profile, deal size, industry requirements, and historical performance tracking.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Legal team maintains clause library in Word documents or SharePoint. 2. Sales/legal manually search for relevant clauses when customizing contracts. 3. No guidance on which clauses apply to specific customer situations. 4. Non-standard clauses created ad-hoc without tracking. 5. No measurement of which clauses lead to faster approvals or better outcomes.",
+      "constraints": [
+        "Clause library scattered across multiple systems and formats",
+        "No intelligent search or categorization of clauses",
+        "Sales teams use non-approved language without legal review",
+        "No tracking of clause performance or customer acceptance rates",
+        "Manual effort to find precedents for unusual situations",
+        "Inconsistent clause selection across deals"
+      ],
+      "metrics": ["Clause search time: 15-30 minutes", "Non-standard clause usage: 30%", "Clause performance tracking: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Intelligent Clause Library Agent maintains centralized repository of pre-approved clauses. 2. Agent recommends clauses based on customer risk profile (credit score, industry, deal size). 3. Agent flags when sales/legal propose non-standard language requiring review. 4. Agent tracks clause performance: which clauses lead to faster approvals, higher win rates, fewer disputes. 5. Agent continuously updates recommendations based on legal team feedback and win/loss data.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Intelligent Clause Library Agent"],
+        "utilityAgents": ["Risk Scoring Agent", "Clause Performance Analytics Agent", "Approval Tracking Agent", "Search & Recommendation Agent"]
+      },
+      "dataSources": [
+        "Pre-approved clause library with categories",
+        "Customer risk profiles and credit scores",
+        "Deal size and structure parameters",
+        "Historical contract approval data",
+        "Win/loss rates by clause type",
+        "Legal team feedback and updates"
+      ],
+      "benefits": [
+        "Instant clause search and recommendation (seconds vs 15-30 minutes)",
+        "95%+ clause approval rate through pre-approved library",
+        "Clause performance tracking enables continuous optimization",
+        "Risk-appropriate clauses reduce negotiation cycles",
+        "Non-standard language flagged immediately for legal review",
+        "Consistent clause usage across all contracts"
+      ],
+      "metrics": ["Clause search time: <10 seconds", "Pre-approved clause usage: 95%+", "Performance tracking: Real-time"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Centralize clause library in CLM platform", "Tag clauses by risk level and deal type"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Legal-approved clause library documented", "Risk criteria defined for clause selection", "CLM platform with clause management capabilities"]
+    },
+    "icon": "collection",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-redline-analysis-negotiation",
+    "type": "function",
+    "level": 4,
+    "label": "Redline Analysis & Negotiation Support",
+    "description": "NLP-powered analysis of customer contract redlines compared to company playbook, with automatic approval of acceptable changes and flagging of high-risk modifications for legal review.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer sends redlined contract via email or DocuSign. 2. Legal manually reviews every change line-by-line using Word track changes. 3. Legal consults playbook (if documented) to determine acceptable vs unacceptable changes. 4. Legal drafts counter-proposal or escalates to senior counsel for high-risk changes. 5. 2-4 weeks of back-and-forth negotiation via email. 6. No tracking of which redlines are commonly requested or successfully negotiated.",
+      "constraints": [
+        "100% manual review required for all contract changes",
+        "2-4 weeks negotiation cycles per redline iteration",
+        "Inconsistent application of company playbook across legal team",
+        "No risk scoring of proposed changes",
+        "Senior legal counsel time wasted on routine acceptable changes",
+        "No data on common customer objections or negotiation patterns"
+      ],
+      "metrics": ["Redline review time: 2-4 hours per iteration", "Negotiation cycles: 2-4 weeks", "Auto-approval rate: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Redline Analysis Agent receives customer redlines via CLM or email integration. 2. NLP compares customer changes to company playbook (acceptable vs unacceptable deviations). 3. Agent auto-approves minor wording changes and acceptable standard deviations. 4. Agent flags for legal review: liability caps, IP ownership, data privacy, non-standard payment terms. 5. Agent provides risk scoring: low risk (minor changes) to high risk (material business terms). 6. Agent learns from legal decisions to improve auto-approval accuracy over time.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Redline Analysis Agent"],
+        "utilityAgents": ["NLP Processing Agent", "Playbook Comparison Agent", "Risk Scoring Agent", "Legal Learning Agent"]
+      },
+      "dataSources": [
+        "Company negotiation playbook (acceptable vs unacceptable changes)",
+        "Customer redlined contract documents",
+        "Historical legal decisions on similar changes",
+        "Industry-standard contract language databases",
+        "Risk categorization rules",
+        "Legal team review feedback"
+      ],
+      "benefits": [
+        "70% faster redline review (30-60 minutes vs 2-4 hours)",
+        "40-50% auto-approval rate for low-risk acceptable changes",
+        "Consistent playbook application across all contracts",
+        "Legal time focused on high-risk strategic changes only",
+        "Risk scoring helps prioritize legal review queue",
+        "Continuous learning improves auto-approval accuracy"
+      ],
+      "metrics": ["Redline review time: 30-60 minutes", "Auto-approval rate: 40-50%", "Risk flagging accuracy: 90%+"]
+    },
+    "hitlGate": {
+      "step": 4,
+      "threshold": "Changes flagged as medium or high risk",
+      "policy": "Legal counsel must review any redlines affecting liability, IP, data privacy, or material business terms before acceptance"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Document negotiation playbook with acceptable deviations", "Deploy NLP for initial redline categorization"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Negotiation playbook documented and approved", "CLM platform with NLP capabilities", "Historical contract data for ML training"]
+    },
+    "icon": "pencil-alt",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-contract-approval-workflow",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Approval Workflow Routing",
+    "description": "Intelligent workflow engine that routes contracts for approval based on risk parameters with policy-based auto-approval, SLA enforcement, and bottleneck identification.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sales rep emails contract to sales manager for approval. 2. Sales manager forwards to legal for review. 3. Legal forwards to finance if deal >$500K or unusual payment terms. 4. Finance forwards to CFO if deal >$1M. 5. Each approver takes 1-3 days to respond. 6. No tracking of approval status or SLAs. 7. Contracts get lost in email chains requiring follow-up reminders.",
+      "constraints": [
+        "7-14 day approval cycle time with email routing",
+        "15-20% of contracts lost or delayed in approval process",
+        "No visibility into approval status for sales reps or customers",
+        "Approvers become bottlenecks when out-of-office with no delegation",
+        "Inconsistent approval criteria across different approvers",
+        "No auto-approval for low-risk standard contracts",
+        "Legal time wasted reviewing routine low-risk agreements"
+      ],
+      "metrics": ["Approval cycle time: 7-14 days", "Lost/delayed contracts: 15-20%", "Auto-approval rate: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Contract Approval Workflow Agent routes based on rules: deal size, discount %, non-standard terms, customer risk, strategic importance. 2. Agent auto-approves standard terms within policy (e.g., <$100K, >30% margin, standard payment terms). 3. Agent escalates exceptions: sales manager approval for >15% discount, legal review for non-standard clauses, CFO approval for deals >$1M, CEO approval for strategic accounts. 4. Agent enforces SLAs: auto-escalates if approver doesn't respond within 48 hours. 5. Agent tracks bottlenecks: identifies approvers causing delays, recommends policy adjustments.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Contract Approval Workflow Agent"],
+        "utilityAgents": ["Notification Agent", "Escalation Agent", "Mobile Approval Agent", "Approval Analytics Agent"]
+      },
+      "dataSources": [
+        "Approval policy rules and thresholds",
+        "User directory with approval hierarchies",
+        "Contract risk scoring data",
+        "Historical approval patterns and timelines",
+        "Approver availability calendars",
+        "Deal size and discount parameters"
+      ],
+      "benefits": [
+        "70-80% faster approvals (2-4 days vs 7-14 days)",
+        "30-40% auto-approval rate for low-risk standard contracts",
+        "100% approval tracking and visibility for sales teams",
+        "Zero lost contracts with automated escalation workflows",
+        "SLA enforcement improves approver responsiveness",
+        "Bottleneck identification enables process optimization"
+      ],
+      "metrics": ["Approval cycle time: 2-4 days", "Auto-approval rate: 30-40%", "Lost contracts: 0%"]
+    },
+    "hitlGate": {
+      "step": 2,
+      "threshold": "Contracts outside auto-approval policy parameters",
+      "policy": "Appropriate approvers (sales manager, legal, finance, executive) must review based on deal size, risk, and terms"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement auto-approval for standard low-value contracts", "Deploy mobile approval app for executives"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Documented approval policies and thresholds", "User directory with approval hierarchies", "CLM workflow automation platform"]
+    },
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-contract-repository-search",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Repository & Intelligent Search",
+    "description": "Centralized AI-powered contract repository with 100% coverage, intelligent search capabilities, automated metadata extraction, version control, and role-based access.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Signed contracts saved as PDF attachments in email. 2. Some contracts filed in SharePoint or network file shares. 3. To find a contract: search email, check file shares, ask colleagues. 4. No consistent folder structure or naming conventions. 5. No metadata captured (contract terms, expiration dates, pricing). 6. Multiple versions of same contract scattered across systems. 7. 15-45 minutes to locate a specific prior contract.",
+      "constraints": [
+        "70-80% of contracts stored in email/file shares (not searchable)",
+        "15-45 minutes to find a specific prior contract",
+        "No metadata extraction (must open and read each document)",
+        "No version control (unclear which is current version)",
+        "Repository coverage only 20-30% in centralized system",
+        "Cannot search by contract terms (pricing, volumes, expiration)",
+        "No role-based access control (security and compliance risk)"
+      ],
+      "metrics": ["Repository coverage: 20-30%", "Contract search time: 15-45 minutes", "Metadata completeness: 10-20%"]
+    },
+    "agentic": {
+      "workflow": "1. Contract Repository & Search Agent maintains central repository for all executed contracts (100% coverage). 2. AI-powered search: natural language queries like 'Find all contracts with 2% rebate tiers in the Midwest region'. 3. NLP metadata extraction: customer, products, pricing, volumes, rebates, SLAs, renewal dates extracted automatically. 4. Version control: tracks all amendments, addenda, renewals with complete change history. 5. Access control: role-based permissions for sales, legal, finance, executives. 6. Instant search results with relevance ranking and preview.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Contract Repository & Search Agent"],
+        "utilityAgents": ["NLP Metadata Extraction Agent", "Search & Query Agent", "Version Control Agent", "Access Control Agent", "Document Classification Agent"]
+      },
+      "dataSources": [
+        "All executed contract documents (PDFs, Word docs)",
+        "E-signature platforms (DocuSign, Adobe Sign)",
+        "CRM system for customer linkage",
+        "Historical contract amendments and addenda",
+        "User directory for access control",
+        "Pricing and product data for validation"
+      ],
+      "benefits": [
+        "100% repository coverage vs 20-30% traditional",
+        "Instant contract search (<10 seconds vs 15-45 minutes)",
+        "AI metadata extraction eliminates manual data entry",
+        "Version control provides complete contract history",
+        "Intelligent search finds contracts by business terms not just keywords",
+        "Role-based access ensures security and compliance"
+      ],
+      "metrics": ["Repository coverage: 100%", "Search time: <10 seconds", "Metadata completeness: 95%+"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Centralize all new contracts in CLM repository", "Deploy NLP metadata extraction for key terms"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months (new contracts immediate, legacy backfill 6-12 months)",
+      "prerequisites": ["CLM platform with search and metadata capabilities", "Historical contracts available for scanning/digitization", "Integration with e-signature platforms"]
+    },
+    "icon": "search",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-contract-compliance-monitoring",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Compliance Monitoring",
+    "description": "Proactive real-time monitoring of customer performance versus contract commitments with automated alerts for volume shortfalls, payment delays, and SLA violations.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Contract terms tracked manually in spreadsheets by pricing analyst. 2. Quarterly business reviews (QBRs) reveal customer performance vs commitments. 3. Volume shortfalls, payment issues, SLA violations discovered reactively. 4. By the time issues identified, customer already 6-12 months non-compliant. 5. No systematic tracking of rebate accruals or price increase enforcement. 6. Sales reps unaware of contract compliance status during customer interactions.",
+      "constraints": [
+        "Compliance tracked manually and infrequently (quarterly at best)",
+        "Issues discovered 6-12 months after they begin",
+        "No proactive alerts when customer falls short of commitments",
+        "5-10% revenue leakage from missed rebates and unenforced terms",
+        "Sales teams lack real-time compliance visibility",
+        "No systematic enforcement of contracted price increases",
+        "Customer disputes arise from lack of transparency"
+      ],
+      "metrics": ["Compliance monitoring: Quarterly manual reviews", "Issue detection lag: 6-12 months", "Revenue leakage: 5-10%"]
+    },
+    "agentic": {
+      "workflow": "1. Compliance Monitoring Agent tracks customer performance vs contract commitments in real-time. 2. Agent monitors: volume targets vs actual purchases, payment terms compliance, SLA adherence (delivery times, quality metrics). 3. Agent alerts when customers fall short: 'Customer XYZ 15% below volume tier, costing $50K in margin'. 4. Agent calculates financial impact of non-compliance and triggers corrective actions. 5. Agent recommends actions: renegotiate pricing, enforce penalties, offer make-up promotions, adjust future commitments. 6. Agent generates compliance reports for quarterly business reviews with full transaction detail.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Compliance Monitoring Agent"],
+        "utilityAgents": ["Transaction Tracking Agent", "SLA Monitoring Agent", "Rebate Accrual Agent", "Alert & Notification Agent", "Compliance Analytics Agent"]
+      },
+      "dataSources": [
+        "Contract terms: volume commitments, rebate tiers, pricing, SLAs",
+        "Customer transaction data from ERP/order management",
+        "Payment history from AR/billing systems",
+        "Delivery performance data from logistics",
+        "Quality metrics from customer support",
+        "Price increase schedules and enforcement"
+      ],
+      "benefits": [
+        "Real-time compliance monitoring vs quarterly manual reviews",
+        "Proactive alerts 30-60 days before compliance issues become material",
+        "3-7% revenue recovery from enforcing contract terms",
+        "Sales teams have real-time visibility for customer discussions",
+        "Systematic rebate accrual prevents financial surprises",
+        "Data-driven QBRs with complete compliance transparency"
+      ],
+      "metrics": ["Compliance monitoring: Real-time continuous", "Issue detection: 30-60 days proactive", "Revenue recovery: 3-7%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Track volume commitments for top 50 customers", "Automate rebate accrual calculations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Contract terms digitized with volume/pricing data", "Integration with ERP/order management for transactions", "AR system integration for payment tracking"]
+    },
+    "icon": "clipboard-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-renewal-churn-prediction",
+    "type": "function",
+    "level": 4,
+    "label": "Renewal Management & Churn Prediction",
+    "description": "ML-powered prediction of contract churn risk 90-180 days before expiration with automated renewal workflows and proactive retention recommendations.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Sales ops maintains spreadsheet of contract expiration dates. 2. Quarterly review identifies contracts expiring in next 90 days. 3. Sales ops emails sales reps to begin renewal discussions. 4. Many contracts auto-renew at old terms (missed opportunity to adjust). 5. 15-25% of contracts lapse or are lost due to inattention. 6. No prediction of which customers likely to churn or renew. 7. Reactive scramble when strategic customer gives notice of non-renewal.",
+      "constraints": [
+        "Renewal management reactive (quarterly spreadsheet reviews)",
+        "15-25% of contracts missed for proactive renewal or auto-renewed at outdated terms",
+        "No churn risk prediction (surprises when customers don't renew)",
+        "Lost opportunity to adjust pricing/terms during renewal",
+        "Sales reps notified too late to conduct strategic renewal discussions",
+        "No data on which factors drive renewal vs churn",
+        "Revenue at risk not quantified or prioritized"
+      ],
+      "metrics": ["Renewal capture rate: 75-85%", "Proactive renewal rate: 20-30%", "Churn prediction: 0%"]
+    },
+    "agentic": {
+      "workflow": "1. Renewal & Churn Prediction Agent monitors contract expiration dates and triggers renewal workflows 90-180 days early. 2. ML predicts churn risk based on: usage/purchase patterns, support tickets, payment history, competitive intelligence, engagement scores. 3. Agent scores renewal likelihood: high (90%+), medium (50-90%), low (<50%). 4. Agent recommends proactive actions for at-risk accounts: price adjustments, value-add services, executive engagement, retention offers. 5. Agent tracks renewal rates and identifies patterns: which contract terms, pricing models, or relationship factors drive retention. 6. Agent generates renewal forecasts and revenue-at-risk reports for executives.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Renewal & Churn Prediction Agent"],
+        "utilityAgents": ["ML Prediction Agent", "Usage Analytics Agent", "Competitive Intelligence Agent", "Renewal Workflow Agent", "Revenue Forecasting Agent"]
+      },
+      "dataSources": [
+        "Contract expiration dates and renewal terms",
+        "Customer purchase and usage patterns",
+        "Support ticket volume and sentiment",
+        "Payment history and credit standing",
+        "Competitive win/loss intelligence",
+        "Customer engagement scores and NPS",
+        "Historical renewal vs churn outcomes"
+      ],
+      "benefits": [
+        "95%+ renewal capture through proactive 90-180 day workflows",
+        "70-85% churn prediction accuracy enables targeted retention",
+        "Proactive renewal rate increases to 80-90% vs 20-30%",
+        "Price optimization during renewal vs auto-renew at old terms",
+        "Revenue-at-risk quantified and prioritized by account value",
+        "Continuous learning improves churn prediction over time"
+      ],
+      "metrics": ["Renewal capture rate: 95%+", "Churn prediction accuracy: 70-85%", "Proactive renewal rate: 80-90%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate renewal alerts 90 days before expiration", "Track customer usage patterns for renewal health"],
+      "investmentRequired": "Medium",
+      "timeToValue": "6-9 months (churn models require 12-24 months historical data)",
+      "prerequisites": ["Historical renewal/churn data for ML training", "Customer usage and engagement data", "CLM system with renewal workflow capabilities"]
+    },
+    "icon": "refresh",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-e-signature-integration",
+    "type": "function",
+    "level": 4,
+    "label": "E-Signature Integration & Execution",
+    "description": "Seamless integration with e-signature platforms for digital contract execution with audit trails, automated filing in CLM repository, and real-time status tracking.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Final contract exported from Word to PDF. 2. Contract emailed to customer for wet signature or manually uploaded to DocuSign. 3. Customer prints, signs, scans, and emails back (or uses DocuSign). 4. Sales rep receives signed contract via email. 5. Sales rep manually saves PDF to file share or CRM. 6. Sales rep emails signed contract to legal, finance, sales ops for their records. 7. 3-10 days from 'ready to sign' to fully executed with all parties having copies.",
+      "constraints": [
+        "3-10 day signature collection cycle time",
+        "Manual DocuSign uploads for each contract",
+        "Signed contracts scattered across email, not auto-filed",
+        "No automated notification to stakeholders when contract executed",
+        "Limited audit trail (who signed when, from where)",
+        "No integration with CLM repository (manual filing required)",
+        "Wet signature contracts create delays and lost documents"
+      ],
+      "metrics": ["Signature cycle time: 3-10 days", "Auto-filing rate: 0%", "Audit trail: Limited"]
+    },
+    "agentic": {
+      "workflow": "1. E-Signature Agent automatically sends contract via DocuSign/Adobe Sign from CLM platform. 2. Agent tracks signature status and sends reminders to unsigned parties. 3. Upon full execution, agent automatically files signed contract in CLM repository. 4. Agent updates CRM opportunity status to 'Contract Signed'. 5. Agent notifies all stakeholders (sales, legal, finance, ops) with signed contract link. 6. Agent captures complete audit trail: who signed, when, IP address, device, authentication method. 7. Agent triggers downstream processes: order entry, billing setup, customer onboarding.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["E-Signature Integration Agent"],
+        "utilityAgents": ["DocuSign API Agent", "Adobe Sign API Agent", "CLM Filing Agent", "CRM Update Agent", "Notification Agent", "Audit Trail Agent"]
+      },
+      "dataSources": [
+        "Contract documents ready for signature",
+        "Signer contact information and roles",
+        "E-signature platform (DocuSign, Adobe Sign)",
+        "CLM repository for auto-filing",
+        "CRM for opportunity status updates",
+        "Stakeholder notification lists"
+      ],
+      "benefits": [
+        "70% faster signature collection (1-3 days vs 3-10 days)",
+        "100% auto-filing in CLM repository (no manual saves)",
+        "Complete audit trail for compliance and legal defense",
+        "Automated stakeholder notifications eliminate manual emails",
+        "Real-time signature status tracking for sales teams",
+        "Downstream process triggers (billing, onboarding) without manual handoffs"
+      ],
+      "metrics": ["Signature cycle time: 1-3 days", "Auto-filing rate: 100%", "Audit trail: Complete and automated"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate DocuSign with CLM for auto-filing", "Automate stakeholder notifications on contract execution"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["E-signature platform (DocuSign, Adobe Sign)", "CLM platform with e-signature API integration", "Defined stakeholder notification rules"]
+    },
+    "icon": "pencil",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-contract-analytics-reporting",
+    "type": "function",
+    "level": 4,
+    "label": "Contract Analytics & Performance Reporting",
+    "description": "Executive dashboards and analytics for contract portfolio performance including value, expiration risk, compliance status, renewal forecasts, and negotiation effectiveness metrics.",
+    "parentCapability": "capability-contract-agreement-management",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2B"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Sales ops manually compiles contract data from spreadsheets and CLM system. 2. Monthly or quarterly reporting on: total contract value, expirations in next 90 days, major renewals. 3. Reports created in Excel and PowerPoint for executive review. 4. No real-time visibility into contract portfolio health. 5. No analytics on negotiation effectiveness (cycle times, win rates by term type). 6. Ad-hoc reporting requests require days of manual data compilation.",
+      "constraints": [
+        "Monthly/quarterly reporting lag vs real-time needs",
+        "Manual data compilation from multiple systems",
+        "No predictive analytics (renewal forecasts, risk trends)",
+        "Limited visibility into negotiation effectiveness",
+        "Ad-hoc reports require days of manual effort",
+        "Executives lack dashboard for contract portfolio health",
+        "No tracking of contract KPIs: cycle time, approval rates, compliance"
+      ],
+      "metrics": ["Reporting frequency: Monthly/quarterly", "Report creation time: 2-5 days", "Predictive analytics: None"]
+    },
+    "agentic": {
+      "workflow": "1. Contract Analytics Agent generates real-time executive dashboards. 2. Key metrics: total contract value, expirations (30/60/90 day view), renewal pipeline, revenue at risk. 3. Compliance analytics: customers meeting volume commitments, SLA performance, payment terms adherence. 4. Negotiation effectiveness: average cycle time by contract type, approval rates, clause acceptance rates, win/loss by terms. 5. Predictive analytics: renewal forecasts, churn risk by customer segment, revenue impact projections. 6. Self-service reporting: stakeholders can filter by region, product line, customer segment, contract type.",
+      "agents": {
+        "orchestrator": "Contract Lifecycle Orchestration Agent",
+        "superAgents": ["Contract Analytics & Reporting Agent"],
+        "utilityAgents": ["BI Dashboard Agent", "Predictive Analytics Agent", "Compliance Reporting Agent", "Performance Metrics Agent", "Self-Service Query Agent"]
+      },
+      "dataSources": [
+        "Contract repository with all executed agreements",
+        "Contract metadata (value, terms, expiration, products)",
+        "Compliance monitoring data (volumes, payments, SLAs)",
+        "Negotiation history (cycle times, redlines, approvals)",
+        "Renewal and churn outcomes",
+        "Customer transaction and performance data"
+      ],
+      "benefits": [
+        "Real-time executive dashboards vs monthly/quarterly lag",
+        "Self-service analytics eliminates manual report requests",
+        "Predictive renewal forecasts enable proactive resource planning",
+        "Negotiation effectiveness tracking drives process improvements",
+        "Compliance visibility enables revenue recovery actions",
+        "Data-driven contract strategy vs gut-feel decisions"
+      ],
+      "metrics": ["Reporting: Real-time dashboards", "Ad-hoc reports: Self-service instant", "Predictive analytics: Renewal forecasts, churn risk"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create executive dashboard for contract value and expirations", "Track negotiation cycle time by contract type"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["CLM repository with complete contract data", "BI tool integration (Tableau, Power BI)", "Defined contract KPIs and reporting requirements"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

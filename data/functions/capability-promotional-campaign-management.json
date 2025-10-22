@@ -1,0 +1,397 @@
+[
+  {
+    "id": "function-promotional-planning-calendar-management",
+    "type": "function",
+    "level": 4,
+    "label": "Promotional Planning & Calendar Management",
+    "description": "Dynamic promo planning with event-driven optimization achieving 1-2 week cycles versus 4-8 week static with 50-70% faster planning enabling responsive market adaptation and competitive agility.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates annual promotional calendar: plans major promotions 12 months in advance (Presidents Day, Memorial Day, July 4th, Back to School, Black Friday) in static spreadsheet. 2. Team sets promo dates and themes early: locks in promotional timing, products, and messaging 4-8 weeks before execution limiting flexibility to respond to market changes. 3. Planning cycle lengthy: holds weekly planning meetings over 4-8 weeks to align merchandising, marketing, operations, and creative teams requiring extensive coordination. 4. Static plans ignore market dynamics: cannot adapt to competitor promotions, weather changes, trending products, or inventory imbalances once plan locked. 5. Limited scenario analysis: manually evaluates 2-3 promotional scenarios (different products, discounts, timing) taking days per scenario with limited visibility into outcomes. 6. Calendar conflicts common: overlapping promotions on same products, channel conflicts (email vs in-store), or resource constraints (creative bandwidth) discovered late requiring last-minute changes. 7. 4-8 week planning cycles with static plans limit agility and responsiveness to market opportunities, competitive threats, and inventory challenges.",
+      "constraints": [
+        "4-8 week planning cycles limit flexibility and responsiveness to market changes",
+        "Annual promotional calendar set 12 months in advance locked into static plans",
+        "Manual coordination across teams (merchandising, marketing, ops) takes weeks",
+        "Static plans cannot adapt to competitors, weather, trends, or inventory shifts",
+        "Limited scenario analysis (2-3 scenarios evaluated manually over days)",
+        "Calendar conflicts discovered late requiring last-minute plan changes"
+      ],
+      "metrics": ["Planning cycle: 4-8 weeks", "Plan flexibility: Low (static annual calendar)", "Scenario analysis: Limited (2-3 scenarios)", "Market responsiveness: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Promotional Planning Agent analyzes promotional opportunities continuously: monitors inventory levels (excess stock requiring clearance), competitor promotions (matching or differentiating), seasonal trends (weather-driven demand) suggesting promotional opportunities in real-time. 2. Calendar Optimization Agent generates dynamic promotional plans: creates promotional calendar balancing business objectives (revenue, margin, inventory clearance) with constraints (creative capacity, channel conflicts, budget) updating plans as conditions change. 3. Agent evaluates promotional scenarios automatically: simulates 10-20 promotional alternatives (different products, discounts, timing, channels) in minutes showing predicted revenue, margin, and ROI for each vs manual days-per-scenario. 4. Agent detects calendar conflicts: identifies overlapping promotions, resource constraints, channel conflicts (email vs mobile vs in-store timing) recommending optimal resolution. 5. Agent adapts plans to market events: responds to competitor flash sale by recommending counter-promotion within 24-48 hours vs 4-8 week locked plans. 6. Agent coordinates cross-functional execution: notifies merchandising (prepare inventory), marketing (create campaigns), operations (staff stores) with task assignments and timelines vs manual coordination meetings. 7. 50-70% faster planning (1-2 week cycles vs 4-8 weeks) with event-driven optimization enabling responsive market adaptation, competitive agility, and opportunity capture.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Promotional Planning Agent", "Calendar Optimization Agent"],
+        "utilityAgents": ["Promotional Calendar System", "Demand Forecasting Engine", "Competitive Intelligence Platform", "Planning Dashboard"]
+      },
+      "dataSources": [
+        "Annual promotional calendar with planned campaigns and dates",
+        "Inventory levels and aging data identifying clearance opportunities",
+        "Competitive intelligence showing competitor promotions, timing, and offers",
+        "Seasonal and event data (weather, holidays, sports, cultural events)",
+        "Historical promotional performance by product, timing, discount, channel",
+        "Budget and resource constraints (creative capacity, marketing spend)",
+        "Cross-functional task dependencies and team availability"
+      ],
+      "benefits": [
+        "50-70% faster planning cycles (1-2 weeks vs 4-8 weeks)",
+        "Event-driven optimization responds to market conditions in 24-48 hours vs locked plans",
+        "10-20 scenario simulations in minutes vs 2-3 scenarios over days",
+        "Automated conflict detection prevents overlapping promotions and resource constraints",
+        "Market responsiveness captures opportunities (trending products, competitor gaps)",
+        "Cross-functional coordination automated reducing meeting overhead by 60-75%"
+      ],
+      "metrics": ["Planning cycle: 1-2 weeks", "Plan flexibility: High (event-driven)", "Scenario analysis: Extensive (10-20 scenarios)", "Market responsiveness: High"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy promotional calendar system with conflict detection and resource management", "Implement scenario simulation for promotional planning (ROI forecasting)", "Enable competitor monitoring for event-driven promotional responses"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Promotional calendar management system with API integration", "Demand forecasting engine for promotional lift prediction", "Competitive intelligence platform monitoring competitor offers", "Historical promotional performance database (2+ years)", "Scenario simulation engine with revenue, margin, inventory modeling", "Cross-functional workflow automation (task assignment, notifications)", "Planning dashboard showing promotional pipeline and resource utilization"]
+    },
+    "icon": "calendar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-offer-personalization-targeting",
+    "type": "function",
+    "level": 4,
+    "label": "Offer Personalization & Targeting",
+    "description": "1:1 personalized offers with ML segment targeting achieving 8-15% conversion rate versus 2-5% mass promotions with 3-10 point conversion improvement and 20-40% ROI increase through customer data platform integration and recommendation engines.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates mass promotions: sends same offer to all customers (e.g., '20% off entire store') without personalization or segmentation resulting in low relevance. 2. Team uses limited segmentation: occasionally segments by basic demographics (age, gender) or purchase history (recent buyers) but segments broad (100K-500K customers per segment). 3. Manual offer selection: marketer chooses promoted products based on inventory surplus or vendor co-op funds without customer preference consideration. 4. Batch campaign execution: sends promotional emails weekly to all segments simultaneously with no timing optimization or customer journey consideration. 5. Low conversion rates: mass promotions generate 2-5% conversion rate as offers irrelevant to most customers (e.g., baby products to customers without children). 6. Limited A/B testing: occasionally tests subject lines or creative but does not test offer personalization or product recommendations systematically. 7. 2-5% conversion rates with mass promotions result in low ROI, promotional fatigue, and missed revenue opportunities from lack of personalization.",
+      "constraints": [
+        "Mass promotions with same offer to all customers (no personalization)",
+        "Limited segmentation (basic demographics, broad segments of 100K-500K)",
+        "Manual offer selection ignores customer preferences and purchase patterns",
+        "Batch campaign execution with no timing optimization",
+        "2-5% conversion rate due to low relevance and personalization",
+        "Minimal A/B testing on offer personalization and product recommendations"
+      ],
+      "metrics": ["Conversion rate: 2-5%", "Personalization: None (mass offers)", "Segmentation: Basic (demographics)", "Campaign ROI: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Offer Personalization Agent analyzes individual customer profiles: ingests purchase history, browsing behavior, demographics, preferences generating customer-specific offer recommendations (e.g., 'Customer A: recommend 15% off running shoes based on recent category browsing'). 2. Customer Targeting Agent segments customers dynamically: uses ML clustering to identify micro-segments (lapsed customers, high-value loyalists, category enthusiasts) with 1,000-10,000 customers per segment vs 100K-500K broad segments. 3. Agent recommends personalized product offers: suggests products each customer most likely to purchase showing 'Customer A: 85% probability to buy Product X with 15% discount' vs mass product selection. 4. Agent optimizes offer timing: sends offers when customer most likely to engage based on historical patterns (e.g., 'Customer A typically shops Tuesday evenings, send offer 6pm Tuesday' vs batch weekly sends). 5. Agent tests offer variations: runs A/B tests on discount levels, product recommendations, messaging personalizing offers to maximize conversion within each micro-segment. 6. Agent tracks customer journey: coordinates offers across channels (email, mobile, in-store) ensuring consistent personalized experience vs siloed channel promotions. 7. 3-10 point conversion improvement (8-15% vs 2-5%) with 20-40% ROI increase through 1:1 personalization, ML segment targeting, and customer journey orchestration.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Offer Personalization Agent", "Customer Targeting Agent"],
+        "utilityAgents": ["Customer Data Platform (CDP)", "Recommendation Engine", "Offer Management System", "Marketing Automation Platform"]
+      },
+      "dataSources": [
+        "Customer purchase history (products, categories, frequency, recency, value)",
+        "Customer browsing behavior (product views, searches, cart adds)",
+        "Customer demographics (age, gender, location, household) and preferences",
+        "ML recommendation models predicting product affinity and purchase propensity",
+        "Customer micro-segmentation (lapsed, loyalist, category enthusiast, price-sensitive)",
+        "Historical campaign response data (opens, clicks, conversions) by customer",
+        "Real-time customer engagement signals (email opens, app usage, store visits)"
+      ],
+      "benefits": [
+        "3-10 point conversion rate improvement (8-15% vs 2-5%) through personalization",
+        "20-40% campaign ROI increase from relevant offers and targeted customers",
+        "1:1 personalization vs mass offers improving customer experience and relevance",
+        "ML micro-segmentation (1K-10K customers) vs broad segments (100K-500K)",
+        "Timing optimization delivers offers when customers most likely to engage",
+        "Cross-channel journey orchestration creates consistent personalized experiences"
+      ],
+      "metrics": ["Conversion rate: 8-15%", "Personalization: High (1:1 offers)", "Segmentation: Advanced (ML micro-segments)", "Campaign ROI: +20-40%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML recommendation engine for personalized product offers", "Implement customer micro-segmentation using purchase and behavioral data", "Enable A/B testing on offer personalization (discount levels, products, timing)"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Customer Data Platform (CDP) with unified customer profiles", "ML recommendation engine for product affinity and propensity modeling", "Offer management system for personalized offer creation and delivery", "Marketing automation platform with multi-channel orchestration", "Historical campaign response data (2+ years) for model training", "A/B testing infrastructure for offer experimentation", "Real-time customer engagement tracking (opens, clicks, purchases)"]
+    },
+    "icon": "users",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-cross-channel-campaign-orchestration",
+    "type": "function",
+    "level": 4,
+    "label": "Cross-Channel Campaign Orchestration",
+    "description": "Unified campaign orchestration with consistent omnichannel messaging achieving 25-40% campaign effectiveness improvement versus siloed channels through journey-based triggers and coordinated customer experiences.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Siloed channel teams plan campaigns independently: email team, mobile app team, in-store team create separate promotional campaigns with minimal coordination resulting in inconsistent messaging. 2. Email campaign promotes 20% off apparel: sends promotional email Monday morning to customer database. 3. Mobile app shows different offer: customer opens app seeing 'Buy 2 Get 1 Free shoes' creating confusion about which offer to use. 4. In-store signage third variation: store displays 'Extra 15% off clearance' with no reference to email or mobile offers causing customer frustration. 5. No customer journey consideration: campaigns triggered by batch schedules (weekly email blast) not customer behavior or journey stage (e.g., abandoned cart, post-purchase). 6. Limited cross-channel attribution: cannot track if email drove in-store purchase or mobile app influenced online conversion due to siloed analytics. 7. Siloed campaigns with inconsistent messaging result in customer confusion, missed opportunities, and 25-40% lower effectiveness vs unified orchestration.",
+      "constraints": [
+        "Siloed channel teams create separate campaigns with minimal coordination",
+        "Inconsistent messaging across email, mobile, in-store confuses customers",
+        "Batch campaign triggers (weekly email) ignore customer journey and behavior",
+        "No cross-channel attribution tracking customer path to purchase",
+        "Customer confusion from multiple conflicting offers across channels",
+        "25-40% campaign effectiveness gap from lack of orchestration"
+      ],
+      "metrics": ["Channel coordination: Low (siloed)", "Message consistency: Low (conflicting offers)", "Journey-based triggers: None (batch schedules)", "Campaign effectiveness: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Campaign Orchestration Agent creates unified campaigns: designs promotional campaign with consistent messaging, offers, and creative across all channels (email, mobile, in-store, social) vs siloed channel plans. 2. Channel Coordination Agent sequences touchpoints: orchestrates customer journey showing 'Step 1: Email teaser Thursday, Step 2: Mobile push Friday, Step 3: In-store signage Saturday' coordinating timing across channels. 3. Agent personalizes channel mix: selects optimal channel combination for each customer based on preferences and responsiveness (e.g., 'Customer A: email + mobile, Customer B: mobile only' vs batch to all channels). 4. Agent triggers campaigns based on customer behavior: sends abandoned cart reminder with promotional offer, post-purchase cross-sell, or re-engagement offer based on customer journey stage vs weekly batch sends. 5. Agent ensures message consistency: distributes same promotional offer details (discount %, products, exclusions, dates) to all channels preventing customer confusion from conflicting offers. 6. Agent tracks cross-channel attribution: measures customer journey across touchpoints showing 'Email view → Mobile app open → In-store purchase' attributing conversion across channels vs siloed analytics. 7. 25-40% campaign effectiveness improvement through unified orchestration, consistent messaging, journey-based triggers, and coordinated omnichannel experiences.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Campaign Orchestration Agent", "Channel Coordination Agent"],
+        "utilityAgents": ["Marketing Automation Platform", "Customer Data Platform (CDP)", "Email/SMS APIs", "In-Store Signage System"]
+      },
+      "dataSources": [
+        "Campaign assets and messaging (creative, copy, offers) shared across channels",
+        "Customer channel preferences and responsiveness data",
+        "Customer journey data tracking touchpoints across email, mobile, web, in-store",
+        "Real-time customer behavior triggers (cart abandon, purchase, browsing)",
+        "Cross-channel attribution models linking touchpoints to conversions",
+        "Channel-specific constraints (email send limits, mobile push frequency caps)",
+        "Unified promotional calendar coordinating all channel activities"
+      ],
+      "benefits": [
+        "25-40% campaign effectiveness improvement through unified orchestration",
+        "Consistent messaging across channels prevents customer confusion",
+        "Journey-based triggers (cart abandon, re-engagement) vs batch schedules improve relevance",
+        "Cross-channel attribution measures full customer journey and touchpoint contribution",
+        "Personalized channel mix optimizes customer engagement by preference",
+        "Coordinated timing sequences touchpoints for maximum impact vs random overlap"
+      ],
+      "metrics": ["Channel coordination: High (unified)", "Message consistency: High (synchronized)", "Journey-based triggers: Extensive (behavioral)", "Campaign effectiveness: +25-40%"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy marketing automation platform for cross-channel orchestration", "Implement unified campaign calendar coordinating email, mobile, in-store activities", "Enable journey-based campaign triggers (cart abandon, post-purchase, re-engagement)"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Marketing automation platform with multi-channel orchestration capabilities", "Customer Data Platform (CDP) for unified customer view and journey tracking", "Email, SMS, and mobile push API integrations", "In-store signage system integration for promotional coordination", "Cross-channel attribution modeling to measure touchpoint contribution", "Unified promotional asset repository (creative, copy, offers)", "Customer journey mapping showing optimal touchpoint sequences"]
+    },
+    "icon": "switch-horizontal",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-promotional-performance-analytics",
+    "type": "function",
+    "level": 4,
+    "label": "Promotional Performance Analytics",
+    "description": "Real-time dashboards with in-flight optimization achieving predictive ROI forecasting versus 2-4 week retrospective reports enabling mid-campaign adjustments and continuous performance improvement.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing analyst waits for campaign completion: promotion runs for 2 weeks but no analysis conducted until campaign ends missing opportunities for mid-campaign optimization. 2. Analyst manually exports data: downloads sales data, campaign metrics (opens, clicks), and costs from multiple systems (ecommerce, email platform, POS) taking 4-8 hours. 3. Analyst builds reports in spreadsheets: calculates metrics (conversion rate, revenue, ROI) creating PowerPoint presentation taking 2-3 days. 4. Retrospective analysis identifies issues: discovers 'Email conversion rate 1.5% vs 4% target' but campaign already ended so learnings only applied to future campaigns 3-6 months later. 5. Limited attribution: cannot determine which channels drove conversions (email vs mobile vs in-store) due to siloed tracking and lack of customer journey visibility. 6. No predictive insights: reports show what happened (retrospective) not what will happen or what actions to take for future campaigns. 7. 2-4 week post-campaign reports provide retrospective analysis with no in-flight optimization or predictive insights limiting campaign performance and ROI.",
+      "constraints": [
+        "Post-campaign analysis 2-4 weeks after completion (no in-flight optimization)",
+        "Manual data export from multiple systems taking 4-8 hours",
+        "Spreadsheet-based reporting taking 2-3 days to produce insights",
+        "Retrospective analysis only (what happened, not what to do next)",
+        "Limited attribution (cannot track cross-channel customer journeys)",
+        "Learnings applied 3-6 months later in next campaign cycle (slow learning loop)"
+      ],
+      "metrics": ["Analytics timing: 2-4 weeks post-campaign", "Optimization: None (retrospective only)", "Attribution: Limited (siloed channels)", "Insights: Descriptive (what happened)"]
+    },
+    "agentic": {
+      "workflow": "1. Performance Analytics Agent monitors campaigns in real-time: tracks promotional performance metrics (opens, clicks, conversions, revenue, ROI) updating dashboards hourly during campaign vs 2-4 week post-campaign reports. 2. Agent detects underperformance early: identifies 'Email conversion rate 1.5% vs 4% target after 24 hours' alerting marketing team to issue while campaign still running enabling mid-flight corrections. 3. ROI Prediction Agent forecasts campaign outcomes: predicts final campaign ROI based on early performance showing 'Current trajectory: 2.1x ROI vs 3.0x target, recommend increasing spend on mobile channel (4.5x ROI)'. 4. Agent recommends in-flight optimizations: suggests tactical adjustments during campaign ('Increase mobile push frequency 2x, reduce email sends by 30%, extend campaign 3 days to hit revenue target'). 5. Agent provides cross-channel attribution: tracks customer journeys showing 'Email view → Mobile app open → In-store purchase' quantifying each touchpoint's contribution to conversion vs siloed channel metrics. 6. Agent generates predictive insights: identifies patterns for future campaigns ('Campaigns targeting lapsed customers perform 40% better when sent Tuesday evenings with 20% discount vs 30% discount'). 7. Real-time dashboards with in-flight optimization and predictive ROI forecasting enable mid-campaign adjustments, continuous learning, and 15-30% campaign performance improvement vs retrospective analysis.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Performance Analytics Agent", "ROI Prediction Agent"],
+        "utilityAgents": ["Analytics Platform", "BI Dashboard", "Attribution Model", "Performance Database"]
+      },
+      "dataSources": [
+        "Real-time campaign metrics (opens, clicks, conversions, revenue) by channel",
+        "Customer journey data tracking touchpoints across email, mobile, web, in-store",
+        "Campaign costs by channel (creative, media, discounts) for ROI calculation",
+        "ML models predicting campaign outcomes based on early performance",
+        "Cross-channel attribution models quantifying touchpoint contribution",
+        "Historical campaign performance database (2+ years) for pattern recognition",
+        "Benchmark data (industry, historical) for performance comparison"
+      ],
+      "benefits": [
+        "Real-time vs retrospective analytics (hourly updates vs 2-4 week post-campaign)",
+        "In-flight optimization enables mid-campaign adjustments improving outcomes",
+        "Predictive ROI forecasting guides resource allocation and spend decisions",
+        "Cross-channel attribution quantifies each touchpoint's contribution",
+        "Early issue detection alerts team while campaign running (not after completion)",
+        "15-30% campaign performance improvement through continuous optimization"
+      ],
+      "metrics": ["Analytics timing: Real-time (hourly updates)", "Optimization: In-flight (mid-campaign adjustments)", "Attribution: Advanced (cross-channel journeys)", "Insights: Predictive (what will happen, what to do)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time campaign performance dashboard with hourly metric updates", "Implement cross-channel attribution modeling to track customer journeys", "Enable in-flight optimization alerts for underperforming campaigns"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Analytics platform with real-time data ingestion (hourly updates)", "BI dashboard with campaign performance visualizations", "Cross-channel attribution models (algorithmic or rule-based)", "ML models for campaign outcome prediction (ROI forecasting)", "Historical campaign performance database (2+ years)", "Integration with all campaign systems (email, mobile, web, in-store)", "Alerting system for underperformance and optimization opportunities"]
+    },
+    "icon": "chart-square-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-budget-allocation-spend-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Budget Allocation & Spend Optimization",
+    "description": "Dynamic budget reallocation with ML-powered spend optimization achieving 15-30% marketing efficiency improvement versus fixed allocations through performance-based shifts and optimal budget distribution.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team creates annual budget plan: allocates promotional budget to channels (email 30%, mobile 20%, social 25%, in-store 25%) based on prior year spend with limited flexibility. 2. Fixed allocations set quarterly: locks budget by channel for 3-month period regardless of channel performance or market conditions. 3. No performance-based reallocation: email generating 2.0x ROI and mobile generating 5.0x ROI but budget split remains fixed missing opportunity to shift spend to higher-performing channels. 4. Manual budget tracking: uses spreadsheets to track spend by channel with weekly updates resulting in delayed visibility into budget utilization and overspend risks. 5. Budget exhaustion: high-performing channels run out of budget mid-quarter while underperforming channels have unused budget but no mechanism to reallocate. 6. Limited optimization: occasionally shifts 5-10% of budget between channels at quarterly review but changes too infrequent to capitalize on real-time performance signals. 7. Fixed budget allocations with limited reallocation flexibility result in 15-30% marketing efficiency opportunity missed from sub-optimal spend distribution.",
+      "constraints": [
+        "Fixed quarterly budget allocations limit flexibility and reallocation",
+        "No performance-based reallocation (high-ROI channels constrained, low-ROI overfunded)",
+        "Manual budget tracking in spreadsheets with delayed visibility (weekly updates)",
+        "Budget exhaustion in high-performing channels mid-quarter with unused budget elsewhere",
+        "Quarterly reallocation too infrequent (cannot respond to weekly/monthly performance)",
+        "15-30% marketing efficiency opportunity missed from sub-optimal allocation"
+      ],
+      "metrics": ["Budget flexibility: Low (fixed quarterly)", "Reallocation frequency: Quarterly (manual)", "Optimization: Limited (prior year baseline)", "Marketing efficiency: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Budget Allocation Agent monitors campaign performance continuously: tracks ROI, conversion rates, customer acquisition costs by channel and campaign identifying optimization opportunities in real-time. 2. Agent identifies reallocation opportunities: detects 'Mobile channel achieving 5.0x ROI with budget 80% utilized while Email achieving 2.0x ROI with 50% utilization' recommending shift. 3. Spend Optimization Agent calculates optimal allocation: uses ML model to recommend budget distribution maximizing overall marketing ROI showing 'Shift $50K from Email to Mobile and $30K from Social to Email for +18% ROI improvement'. 4. Agent implements dynamic reallocation: automatically adjusts budgets weekly or monthly based on performance within guardrails (max 20% shift per period) vs quarterly manual changes. 5. Agent forecasts budget utilization: predicts 'Mobile budget will exhaust in 2 weeks based on current spend rate' alerting team to increase budget or pause campaigns proactively. 6. Agent tests budget scenarios: simulates alternative allocation strategies ('Increase Mobile 30% and reduce Social 20%') predicting impact on overall marketing efficiency before implementation. 7. 15-30% marketing efficiency improvement through dynamic budget reallocation, ML-powered spend optimization, and performance-based shifts vs fixed quarterly allocations.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Budget Allocation Agent", "Spend Optimization Agent"],
+        "utilityAgents": ["Campaign Performance Database", "Budget Management System", "ML Optimization Engine", "Spend Tracking Dashboard"]
+      },
+      "dataSources": [
+        "Campaign performance data (ROI, conversion, CAC) by channel and campaign",
+        "Budget utilization tracking (spend to date, remaining budget) by channel",
+        "ML models optimizing budget allocation for maximum ROI or other objectives",
+        "Budget constraints and guardrails (min/max per channel, reallocation limits)",
+        "Historical performance data showing channel effectiveness over time",
+        "Forecasting models predicting budget exhaustion and performance trajectories",
+        "Scenario simulation results comparing alternative allocation strategies"
+      ],
+      "benefits": [
+        "15-30% marketing efficiency improvement through optimal budget allocation",
+        "Dynamic reallocation shifts spend to high-performing channels weekly/monthly vs quarterly",
+        "ML optimization maximizes overall marketing ROI across channel portfolio",
+        "Performance-based shifts prevent high-ROI channel budget exhaustion",
+        "Proactive budget utilization forecasting prevents overspend or underspend",
+        "Scenario testing evaluates allocation strategies before implementation"
+      ],
+      "metrics": ["Budget flexibility: High (dynamic reallocation)", "Reallocation frequency: Weekly/monthly (automated)", "Optimization: High (ML-powered)", "Marketing efficiency: +15-30%"],
+      "implementationComplexity": "High"
+    },
+    "hitlGate": {
+      "step": 3,
+      "threshold": "Budget reallocations >20% or cross-department shifts require marketing director approval",
+      "policy": "Agent recommends budget optimizations and implements tactical reallocations within guardrails (<20% per period, within channel budgets) automatically but strategic shifts (cross-department, large reallocations, annual budget changes) require human approval. Agent provides impact analysis and ROI projections but human makes final decision on significant budget changes."
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML budget optimization model for channel allocation", "Implement automated budget utilization tracking and forecasting", "Enable weekly/monthly budget reallocation based on performance"],
+      "investmentRequired": "High",
+      "timeToValue": "9-12 months",
+      "prerequisites": ["Campaign performance database with ROI, conversion, CAC by channel", "Budget management system with real-time spend tracking", "ML optimization models for budget allocation (ROI maximization)", "Budget guardrails and constraints codified (min/max, reallocation limits)", "Historical performance data (2+ years) for model training", "Scenario simulation engine for testing allocation strategies", "Approval workflow for strategic budget shifts requiring human review"]
+    },
+    "icon": "cash",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-ab-testing-experimentation",
+    "type": "function",
+    "level": 4,
+    "label": "A/B Testing & Experimentation",
+    "description": "Continuous experimentation with AI-powered test design achieving 10x more tests and faster insights versus limited manual testing enabling data-driven optimization and systematic learning at scale.",
+    "parentCapability": "capability-promotional-campaign-management",
+    "applicableIndustries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Marketing team occasionally runs A/B tests: tests 2-3 experiments per quarter (subject line variants, creative variations) due to manual setup and analysis effort. 2. Manual test design: marketer defines test variants, sample sizes, duration based on gut feeling without statistical rigor resulting in underpowered tests or excessive runtime. 3. Limited test scope: tests only basic variations (subject line, image) missing opportunities to test offers, product recommendations, personalization, timing, or channel mix. 4. Weeks to results: waits 2-4 weeks for test completion and another 1-2 weeks for manual analysis before declaring winner and implementing learnings. 5. No systematic test prioritization: runs tests based on HiPPO (Highest Paid Person's Opinion) not data-driven prioritization of highest-impact opportunities. 6. Learnings not systematically applied: wins documented in presentations but not automatically applied to similar campaigns or customer segments missing scalable impact. 7. Limited testing (2-3 experiments quarterly) with weeks to results and gut-driven design results in slow learning loop and missed optimization opportunities.",
+      "constraints": [
+        "Limited testing frequency (2-3 experiments quarterly) due to manual effort",
+        "Manual test design without statistical rigor (underpowered or excessive runtime)",
+        "Test scope limited to basic variations (subject line, creative) not offers or strategy",
+        "2-4 week test duration plus 1-2 week analysis (6 weeks total to learnings)",
+        "HiPPO-driven test prioritization not data-driven impact assessment",
+        "Learnings not systematically applied to similar campaigns or segments"
+      ],
+      "metrics": ["Test frequency: 2-3 per quarter", "Test design: Manual (gut-driven)", "Time to insights: 4-6 weeks", "Learning application: Limited (manual)"]
+    },
+    "agentic": {
+      "workflow": "1. Experimentation Agent generates test hypotheses: analyzes campaign performance data identifying optimization opportunities ('Test: 20% vs 25% discount on Product A' or 'Test: Tuesday vs Thursday send timing') prioritized by predicted impact. 2. Test Design Agent configures experiments automatically: calculates statistically valid sample sizes, test duration, and traffic allocation ensuring tests adequately powered and completed efficiently vs manual guesswork. 3. Agent runs continuous experiments: executes 20-30+ tests simultaneously across campaigns (offers, personalization, timing, channels, creative) vs 2-3 quarterly manual tests achieving 10x testing velocity. 4. Agent monitors test progress in real-time: tracks statistical significance hourly declaring winners as soon as results conclusive (1-2 weeks typical) vs 4-6 week manual cycle. 5. Agent implements winning variations automatically: rolls out winning variant to full population immediately upon conclusion vs 1-2 week manual implementation lag. 6. Agent applies learnings systematically: identifies similar campaigns or customer segments automatically applying validated optimizations at scale (e.g., 'Tuesday send times increased conversions 15% across all lifestyle campaigns'). 7. 10x more tests with real-time insights (1-2 weeks vs 4-6 weeks) and AI-powered design enable systematic learning, data-driven optimization, and continuous campaign improvement.",
+      "agents": {
+        "orchestrator": "Promotional Campaign Orchestration Agent",
+        "superAgents": ["Experimentation Agent", "Test Design Agent"],
+        "utilityAgents": ["A/B Testing Platform (Optimizely, VWO)", "Statistical Analysis Engine", "Results Dashboard", "Learning Repository"]
+      },
+      "dataSources": [
+        "Campaign performance data identifying optimization opportunities",
+        "Statistical models calculating sample sizes, test duration, and power",
+        "A/B testing platform managing experiment configuration and traffic allocation",
+        "Real-time test results (conversions, engagement, revenue) by variant",
+        "Historical test results showing winning variants and lift achieved",
+        "Campaign similarity algorithms identifying where to apply learnings",
+        "Test prioritization model ranking experiments by predicted impact"
+      ],
+      "benefits": [
+        "10x more tests (20-30+ simultaneously vs 2-3 quarterly) enabling systematic learning",
+        "Real-time insights (1-2 weeks vs 4-6 weeks) accelerate optimization cycles",
+        "AI-powered test design ensures statistical validity and optimal duration",
+        "Automatic winner implementation eliminates 1-2 week manual rollout lag",
+        "Systematic learning application scales wins across similar campaigns/segments",
+        "Data-driven test prioritization focuses effort on highest-impact opportunities"
+      ],
+      "metrics": ["Test frequency: 20-30+ concurrent", "Test design: Automated (statistically rigorous)", "Time to insights: 1-2 weeks", "Learning application: Systematic (automated)"],
+      "implementationComplexity": "High"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy A/B testing platform for continuous experimentation", "Implement automated test design with statistical sample size calculation", "Enable systematic learning application across similar campaigns"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["A/B testing platform (Optimizely, VWO, Google Optimize) with API integration", "Statistical analysis engine for sample size, power, and significance calculation", "Campaign performance database for hypothesis generation", "Real-time test monitoring dashboard with early stopping rules", "Learning repository cataloging test results and winning variants", "Campaign similarity algorithms for identifying learning application opportunities", "Test prioritization model ranking experiments by predicted impact"]
+    },
+    "icon": "beaker",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

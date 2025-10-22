@@ -1,0 +1,457 @@
+[
+  {
+    "id": "function-points-accrual-redemption",
+    "type": "function",
+    "level": 4,
+    "label": "Points Accrual & Redemption",
+    "description": "Automated points tracking and intelligent redemption optimization delivering 25-40% higher value per point through AI-powered recommendations and dynamic pricing.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer earns points after each flight, hotel stay with 2-4 week posting delay. 2. Customer must log in to loyalty portal to check point balance manually. 3. Customer searches for award availability using clunky calendar tools. 4. No guidance on optimal redemption value (may use 50K points for $300 flight when could get $800 value). 5. Points expire without warning, customer loses accumulated value.",
+      "constraints": [
+        "2-4 week delay in points posting creates confusion",
+        "Manual balance checking with no proactive alerts",
+        "Award search tools difficult to use (limited by blackout dates)",
+        "Customer gets 0.5-0.8 cents per point vs optimal 1.5-2.5 cents",
+        "30-40% of earned points expire unused",
+        "No personalized redemption recommendations"
+      ],
+      "metrics": ["Points value realized: 0.5-0.8¢", "Points expiration: 30-40%", "Redemption satisfaction: 50-60%"]
+    },
+    "agentic": {
+      "workflow": "1. Points Tracking Agent auto-captures all earning activity in real-time across flights, hotels, partners. 2. Expiration Monitor alerts customer 90, 60, 30 days before points expire with easy extension options. 3. Redemption Optimization Agent analyzes customer travel patterns and suggests high-value redemptions: 'Use 35K points for $850 business class upgrade vs $600 economy award'. 4. Dynamic Award Pricing shows real-time point costs with historical trends ('Current: 25K points, Avg: 30K, Book now!'). 5. Partner Points Transfer Agent recommends optimal transfers to partner programs for 40-80% value increase.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Points Tracking Agent", "Expiration Monitor", "Redemption Optimization Agent", "Dynamic Award Pricing", "Partner Points Transfer Agent"],
+        "utilityAgents": ["Loyalty Platform", "Award Availability APIs", "Partner Network Integration", "Valuation Engine"]
+      },
+      "dataSources": [
+        "Real-time points earning from all sources",
+        "Award chart and redemption pricing",
+        "Historical redemption value data",
+        "Customer travel patterns and preferences",
+        "Partner program transfer ratios",
+        "Award seat availability calendars",
+        "Points expiration dates and policies",
+        "Comparative redemption value models"
+      ],
+      "benefits": [
+        "25-40% higher redemption value (1.5-2.5¢ vs 0.5-0.8¢ per point)",
+        "Real-time points posting vs 2-4 week delay",
+        "5-10% expiration rate vs 30-40% (proactive alerts)",
+        "Personalized recommendations maximize value",
+        "Partner transfer suggestions unlock premium redemptions",
+        "80-90% redemption satisfaction vs 50-60%"
+      ],
+      "metrics": ["Points value realized: 1.5-2.5¢", "Points expiration: 5-10%", "Redemption satisfaction: 80-90%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement expiration alerts 90 days before", "Add redemption value calculator showing cents per point"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Real-time loyalty platform", "Award availability API integration", "Valuation and optimization engine", "Partner network connectivity"]
+    },
+    "icon": "star",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-status-tier-management-benefits",
+    "type": "function",
+    "level": 4,
+    "label": "Status Tier Management & Benefits",
+    "description": "Proactive tier tracking with personalized challenges to achieve elite status increasing tier attainment by 30-50% and lifetime value through gamified progression.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer discovers tier progress only when logging into loyalty portal. 2. Customer reaches end of year 5,000 miles short of elite status with no awareness. 3. Customer doesn't understand benefits of each tier (Gold vs Platinum). 4. Status expires annually - customer must re-qualify from zero. 5. No personalized path to achieve next tier.",
+      "constraints": [
+        "Passive tracking - customer unaware of tier progress",
+        "30-40% of members fall 10-20% short of tier qualification",
+        "Benefits unclear - members don't understand value of upgrading",
+        "Annual reset frustrates customers close to qualification",
+        "No personalized challenges or accelerators",
+        "Missed revenue from customers who would book more if aware"
+      ],
+      "metrics": ["Tier attainment: 15-20%", "Member engagement: Low", "Status retention: 60-70%"]
+    },
+    "agentic": {
+      "workflow": "1. Tier Progress Agent sends real-time updates: 'You're 2,500 miles from Gold status (one round-trip to LA!)'. 2. Personalized Challenge Engine creates custom paths: 'Book hotel by month-end to earn 2x points toward Platinum'. 3. Benefits Explainer shows value of next tier: 'Gold members save avg $450/year in upgrades and lounge access'. 4. Double-Dip Optimizer suggests bookings that count toward multiple programs or promotions. 5. Status Extension Agent offers soft landing: retain status at 80% of threshold for one year (revenue protection).",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Tier Progress Agent", "Personalized Challenge Engine", "Benefits Explainer", "Double-Dip Optimizer", "Status Extension Agent"],
+        "utilityAgents": ["Loyalty Platform", "Gamification Engine", "Communication Service", "Benefits Calculator"]
+      },
+      "dataSources": [
+        "Member tier progress and earning history",
+        "Tier qualification thresholds and timelines",
+        "Benefit value by tier (lounge access, upgrades)",
+        "Personalized earning opportunities",
+        "Partner earning multipliers and promotions",
+        "Status extension and soft-landing policies",
+        "Member travel patterns and booking frequency",
+        "Competitive tier matching programs"
+      ],
+      "benefits": [
+        "30-50% increase in tier attainment through proactive engagement",
+        "Real-time progress tracking vs quarterly statements",
+        "Personalized challenges drive incremental bookings",
+        "Clear benefit communication increases tier aspirations",
+        "Status retention programs reduce churn 40-60%",
+        "Higher lifetime value from engaged tier members"
+      ],
+      "metrics": ["Tier attainment: 25-35%", "Member engagement: High", "Status retention: 85-95%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Send monthly tier progress emails with personalized paths", "Create Q4 tier challenge campaigns"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-4 months",
+      "prerequisites": ["Real-time loyalty tracking", "Gamification and challenge engine", "Benefits calculator", "Personalized communication platform"]
+    },
+    "icon": "badge-check",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-partner-loyalty-integration",
+    "type": "function",
+    "level": 4,
+    "label": "Partner Loyalty Integration",
+    "description": "Seamless earning and redemption across airline, hotel, and credit card partners with unified wallet delivering 40-60% increase in points earning velocity through ecosystem integration.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Customer has separate accounts: airline miles, hotel points, credit card points, car rental rewards. 2. Customer must manually enter loyalty numbers for each booking. 3. Customer can't combine points from different programs for redemptions. 4. Customer unaware of earning opportunities across partner network. 5. Points orphaned in low-value programs that customer rarely uses.",
+      "constraints": [
+        "Fragmented loyalty with 5-10 separate accounts",
+        "Forgot to enter loyalty number - missed earning 20-30% of time",
+        "Can't pool points across programs for big redemptions",
+        "Unaware of partner earning (e.g., earn airline miles at hotels)",
+        "Low-balance accounts with insufficient points to redeem",
+        "Complex transfer rules and ratios difficult to understand"
+      ],
+      "metrics": ["Partner earning capture: 60-70%", "Cross-program redemption: <5%", "Orphaned accounts: 40-50%"]
+    },
+    "agentic": {
+      "workflow": "1. Unified Wallet Agent aggregates all loyalty accounts in single dashboard: airline, hotel, credit card, dining, rental car. 2. Auto-Earning Agent automatically applies correct loyalty numbers at booking across all partners. 3. Points Pooling Engine shows combined purchasing power: '45K airline miles + 60K hotel points = 3 nights in Paris'. 4. Partner Opportunity Alert notifies of high-value earning: 'Stay at Hilton to earn 3x airline miles this month'. 5. Optimal Transfer Agent recommends best program transfers: 'Transfer 50K credit card points to airline for 60K miles (20% bonus)'.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Unified Wallet Agent", "Auto-Earning Agent", "Points Pooling Engine", "Partner Opportunity Alert", "Optimal Transfer Agent"],
+        "utilityAgents": ["Multi-Program Integration", "Partner APIs", "Transfer Engine", "Opportunity Detection"]
+      },
+      "dataSources": [
+        "Airline loyalty account and balance",
+        "Hotel loyalty programs and points",
+        "Credit card rewards balances",
+        "Car rental and dining program points",
+        "Partner earning rules and multipliers",
+        "Points transfer ratios and bonuses",
+        "Customer booking patterns across partners",
+        "Limited-time partner promotions"
+      ],
+      "benefits": [
+        "40-60% increase in points earning velocity through partner capture",
+        "95%+ earning capture vs 60-70% (auto-apply loyalty numbers)",
+        "Unified view enables strategic redemptions",
+        "Partner promotions increase earning 2-5x",
+        "Optimal transfers unlock premium redemptions",
+        "Zero orphaned accounts - all points have value"
+      ],
+      "metrics": ["Partner earning capture: 95%+", "Cross-program redemption: 30-40%", "Orphaned accounts: 0%"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate top 3 airline and hotel partners into single wallet", "Auto-apply loyalty numbers at checkout"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Partner API integrations", "Points aggregation platform", "Transfer and pooling engine", "Customer profile with all loyalty IDs"]
+    },
+    "icon": "link",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-personalized-rewards-offers",
+    "type": "function",
+    "level": 4,
+    "label": "Personalized Rewards & Offers",
+    "description": "AI-driven targeted offers and bonuses based on travel patterns delivering 3-5x engagement vs mass promotions and 20-30% incremental revenue.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Loyalty team creates quarterly mass promotion: 'Double miles on all flights in March!'. 2. Same offer sent to all members regardless of behavior. 3. Offer awards double points to customers who would have booked anyway (wasted margin). 4. Offer doesn't motivate infrequent travelers who don't fly in March. 5. 2-5% engagement rate with no incremental behavior change.",
+      "constraints": [
+        "Mass promotions create 60-80% waste (reward existing behavior)",
+        "Generic offers don't resonate with diverse member segments",
+        "2-5% engagement rate due to irrelevance",
+        "Quarterly cadence misses individual travel patterns",
+        "No incremental revenue - just rewarding planned bookings",
+        "Unable to measure true incrementality"
+      ],
+      "metrics": ["Offer engagement: 2-5%", "Incremental revenue: <5%", "Personalization: None"]
+    },
+    "agentic": {
+      "workflow": "1. Behavioral Analysis Agent segments members by patterns: business travelers, leisure families, deal-seekers, dormant members. 2. Propensity Model predicts booking likelihood by route, date, and offer sensitivity. 3. Offer Generation Agent creates 1:1 personalized offers: 'Book Chicago trip by Friday for 5K bonus points (you search this route monthly!)'. 4. A/B Test Engine validates incrementality: only send offers that drive new behavior. 5. Real-Time Delivery sends offers at moment of intent: abandoned search, competitive price-shop, upcoming travel need.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Behavioral Analysis Agent", "Propensity Model", "Offer Generation Agent", "A/B Test Engine"],
+        "utilityAgents": ["Customer Data Platform", "ML Platform", "Offer Management", "Real-Time Decisioning"]
+      },
+      "dataSources": [
+        "Member travel history and booking patterns",
+        "Search and browse behavior (routes, dates)",
+        "Offer response history and sensitivity",
+        "Propensity scores (booking, churn, tier upgrade)",
+        "Competitive shopping signals",
+        "Abandoned booking data",
+        "Seasonal and life event triggers",
+        "Margin and profitability by booking"
+      ],
+      "benefits": [
+        "8-15% engagement vs 2-5% (3-5x improvement)",
+        "20-30% incremental revenue from targeted stimulation",
+        "1:1 personalization vs mass segment offers",
+        "Real-time delivery at moment of intent",
+        "60-70% reduction in offer waste (no rewarding planned bookings)",
+        "Measurable incrementality through A/B testing"
+      ],
+      "metrics": ["Offer engagement: 8-15%", "Incremental revenue: 20-30%", "Personalization: 1:1 individual"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Create 5 behavioral segments with tailored monthly offers", "Implement abandoned search recovery offers"],
+      "investmentRequired": "High",
+      "timeToValue": "6-8 months",
+      "prerequisites": ["Customer Data Platform with behavioral data", "ML propensity modeling", "Real-time offer decisioning", "A/B testing infrastructure"]
+    },
+    "icon": "gift",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-gamification-challenges",
+    "type": "function",
+    "level": 4,
+    "label": "Gamification & Challenges",
+    "description": "Achievement badges and limited-time challenges driving engagement and 25-40% increase in booking frequency through competitive and social elements.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 1,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Loyalty program passively tracks miles and tier status. 2. No engagement between bookings - customer forgets about program. 3. No emotional connection or achievement recognition. 4. Loyalty communication limited to balance statements and promotions. 5. Program feels transactional, not experiential.",
+      "constraints": [
+        "Zero engagement between booking transactions",
+        "No emotional loyalty or brand affinity",
+        "Members view program as purely transactional",
+        "Younger travelers expect gamified experiences",
+        "No viral or social sharing components",
+        "Loyalty seen as 'fly and earn points' only"
+      ],
+      "metrics": ["Engagement frequency: 2-4x/year", "Social sharing: None", "Brand affinity: Low"]
+    },
+    "agentic": {
+      "workflow": "1. Gamification Engine creates achievement badges: 'Weekend Warrior' (5 weekend trips), 'Globe Trotter' (25 countries), 'Early Bird' (10 morning flights). 2. Challenge Agent offers limited-time missions: 'Book 3 flights in Q1 for 10K bonus points and exclusive badge'. 3. Leaderboard shows friendly competition with anonymized rankings or opt-in social sharing. 4. Surprise & Delight Agent rewards unexpected behaviors: 'You've stayed in 5 Hilton brands - here's Diversity Explorer badge + 5K points'. 5. Social Sharing enables badge showcase on social media with referral incentives.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Gamification Engine", "Challenge Agent", "Surprise & Delight Agent"],
+        "utilityAgents": ["Achievement Tracking", "Leaderboard Service", "Social Platform Integration", "Notification Service"]
+      },
+      "dataSources": [
+        "Member booking history and patterns",
+        "Achievement criteria and badge definitions",
+        "Challenge participation and completion",
+        "Leaderboard rankings and peer comparison",
+        "Social sharing activity",
+        "Member engagement metrics",
+        "Behavioral triggers for surprise rewards",
+        "Competitive benchmarks"
+      ],
+      "benefits": [
+        "25-40% increase in booking frequency from engaged members",
+        "6-12x annual engagement vs 2-4x traditional",
+        "Emotional loyalty and brand affinity",
+        "Viral social sharing drives 10-20% new member referrals",
+        "Younger demographic engagement (Gen Z/Millennial preference)",
+        "Differentiation from commodity loyalty programs"
+      ],
+      "metrics": ["Engagement frequency: 12-24x/year", "Social sharing: 10-15%", "Brand affinity: High"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Launch 5-10 achievement badges for milestone behaviors", "Create quarterly challenges with bonus points"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-5 months",
+      "prerequisites": ["Gamification platform or engine", "Achievement tracking system", "Social sharing integration", "Push notification capability"]
+    },
+    "icon": "trophy",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-elite-member-recognition-service",
+    "type": "function",
+    "level": 4,
+    "label": "Elite Member Recognition & Service",
+    "description": "Proactive VIP treatment and surprise upgrades for top-tier members delivering 50-70% increase in satisfaction and 3-5x higher lifetime value through personalized premium experiences.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Elite member boards flight and receives standard service (no recognition). 2. Gate agent doesn't proactively recognize status or offer benefits. 3. Upgrades processed algorithmically with no personalization. 4. Elite member frustrated by lack of differentiation vs regular customers. 5. High-value member churns to competitor offering better recognition.",
+      "constraints": [
+        "Inconsistent elite recognition across touchpoints",
+        "Algorithmic upgrades feel impersonal and random",
+        "No proactive service recovery for elite members",
+        "Staff unaware of member preferences and history",
+        "Elite members don't feel valued (same as non-elites)",
+        "20-30% elite churn due to lack of differentiation"
+      ],
+      "metrics": ["Elite satisfaction: 60-70%", "Elite churn: 20-30%", "Lifetime value: Baseline"]
+    },
+    "agentic": {
+      "workflow": "1. Elite Recognition Agent alerts staff when VIP checks in: 'Platinum member Jane Smith prefers aisle seat, champagne, traveling for daughter's graduation'. 2. Upgrade Optimization Agent prioritizes high-value members for complimentary upgrades based on lifetime value, recent travel, upcoming tier renewal. 3. Personalized Service Agent enables staff to deliver customized touches: favorite drink, newspaper preference, special occasion recognition. 4. Surprise & Delight Engine randomly awards unexpected perks: lounge access upgrade, free bag, priority boarding. 5. Elite Concierge provides white-glove support: dedicated phone line, proactive rebooking, service recovery.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Elite Recognition Agent", "Upgrade Optimization Agent", "Personalized Service Agent", "Surprise & Delight Engine"],
+        "utilityAgents": ["Customer Profile System", "Staff Mobile App", "Upgrade Inventory", "Service Recovery Platform"]
+      },
+      "dataSources": [
+        "Elite member profile and tier status",
+        "Travel preferences and past feedback",
+        "Lifetime value and booking history",
+        "Special occasions and life events",
+        "Upgrade inventory and availability",
+        "Service issue history and resolutions",
+        "Staff notes and interactions",
+        "Competitive status match data"
+      ],
+      "benefits": [
+        "50-70% increase in elite satisfaction scores",
+        "5-10% elite churn vs 20-30% traditional",
+        "3-5x higher lifetime value from retained elite members",
+        "Personalized recognition drives emotional loyalty",
+        "Proactive service recovery prevents defection",
+        "Viral word-of-mouth from exceptional experiences"
+      ],
+      "metrics": ["Elite satisfaction: 90-95%", "Elite churn: 5-10%", "Lifetime value: 3-5x baseline"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Equip gate agents with elite member profiles on mobile app", "Implement lifetime value-based upgrade priority"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Customer 360 profile system", "Staff mobile app with member data", "Upgrade inventory management", "Concierge service platform"]
+    },
+    "icon": "sparkles",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-loyalty-analytics-segmentation",
+    "type": "function",
+    "level": 4,
+    "label": "Loyalty Analytics & Segmentation",
+    "description": "Advanced member segmentation and churn prediction enabling 40-60% improvement in retention through targeted interventions and predictive lifetime value models.",
+    "parentCapability": "capability-travel-loyalty-rewards",
+    "applicableIndustries": ["Travel"],
+    "applicableModels": ["B2C"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "traditional": {
+      "workflow": "1. Loyalty analyst creates quarterly report showing member counts by tier. 2. Analysis limited to basic segments: tier status, booking frequency. 3. No predictive analytics - only retrospective reporting. 4. Can't identify at-risk members until they've churned. 5. One-size-fits-all retention campaigns sent to all lapsed members.",
+      "constraints": [
+        "Quarterly reporting means stale insights",
+        "Basic segmentation (tier only) misses nuanced behaviors",
+        "Reactive churn response after member already lost",
+        "No lifetime value prediction or prioritization",
+        "Mass retention campaigns waste budget on low-value members",
+        "Can't quantify ROI of loyalty investments"
+      ],
+      "metrics": ["Churn prediction: None", "Segmentation: Tier only", "Retention ROI: Unknown"]
+    },
+    "agentic": {
+      "workflow": "1. Advanced Segmentation Agent clusters members by 20+ behavioral dimensions: booking patterns, channel preferences, price sensitivity, product mix, engagement level. 2. Churn Prediction Model scores each member's 90-day defection risk using ML. 3. Lifetime Value Agent predicts 5-year CLV for resource prioritization. 4. Intervention Agent triggers targeted retention: at-risk high-value member gets concierge call, low-value member gets automated email. 5. Analytics Dashboard provides real-time loyalty health metrics and ROI measurement.",
+      "agents": {
+        "orchestrator": "Travel Loyalty Orchestration Agent",
+        "superAgents": ["Advanced Segmentation Agent", "Churn Prediction Model", "Lifetime Value Agent", "Intervention Agent"],
+        "utilityAgents": ["ML Platform", "Analytics Warehouse", "Campaign Automation", "BI Dashboard"]
+      },
+      "dataSources": [
+        "Complete member transaction history",
+        "Behavioral data (search, browse, engagement)",
+        "Tier progression and earning patterns",
+        "Redemption history and preferences",
+        "Channel interaction data",
+        "Competitive activity signals",
+        "Customer service interactions",
+        "External data (economic indicators, seasonality)"
+      ],
+      "benefits": [
+        "40-60% improvement in retention through predictive interventions",
+        "20+ behavioral segments vs tier-only",
+        "90-day churn prediction enables proactive action",
+        "3-5x ROI on retention spend through CLV prioritization",
+        "Real-time dashboards vs quarterly reports",
+        "Measurable loyalty program P&L and optimization"
+      ],
+      "metrics": ["Churn prediction: 90-day ML model", "Segmentation: 20+ dimensions", "Retention ROI: Measured 3-5x"]
+    },
+    "transformationGuidance": {
+      "quickWins": ["Build churn prediction model for top-tier members", "Create 10 behavioral segments with tailored strategies"],
+      "investmentRequired": "High",
+      "timeToValue": "6-9 months",
+      "prerequisites": ["Data warehouse with 2+ years history", "ML platform for modeling", "Advanced analytics capability", "Marketing automation platform"]
+    },
+    "icon": "chart-bar",
+    "color": "#3B82F6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

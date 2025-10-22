@@ -1,0 +1,543 @@
+[
+  {
+    "id": "function-job-requisition-description-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Job Requisition & Description Optimization",
+    "description": "AI-powered job description generation with bias-free language analysis, competitive compensation benchmarking, SEO optimization for job boards, and inclusive language recommendations to attract diverse qualified candidates.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Hiring manager submits job requisition via email or PDF form to recruiter. 2. Recruiter manually writes job description in Word document, copying from similar past roles. 3. Recruiter estimates compensation range based on gut feel or asks HR compensation team (3-5 days). 4. Job description reviewed by hiring manager, 2-3 revision cycles via email. 5. Final job description often contains biased language (rockstar, ninja, recent college graduate) that discourages diverse applicants. 6. Total time: 2-4 hours per job description, no SEO optimization for job board search.",
+      "constraints": [
+        "2-4 hours to create initial job description manually per position",
+        "Job descriptions contain unconscious bias language discouraging diverse candidates",
+        "Compensation ranges guessed or require days waiting for HR compensation analysis",
+        "No SEO optimization: job descriptions don't rank well in job board searches",
+        "Inconsistent job descriptions across similar roles (different recruiters write differently)",
+        "No analysis of which job descriptions attract highest quality applicants",
+        "Missing key skills or requirements due to manual writing errors"
+      ],
+      "metrics": ["JD creation time: 2-4 hours", "Bias language detected: 40-60%", "Comp data accuracy: 70-80%", "Qualified applicant rate: 20-30%"]
+    },
+    "agentic": {
+      "workflow": "1. Hiring manager submits job requisition via self-service portal with role title, key responsibilities, required skills. 2. Job Description Optimization Agent generates initial job description in seconds using: past successful job descriptions for similar roles, industry standard language, required vs preferred qualifications. 3. Agent analyzes description for biased language: flags gender-coded words (rockstar, ninja, aggressive), age-biased terms (recent graduate, digital native), cultural bias. 4. Agent recommends inclusive alternatives and reframes language to attract diverse candidates. 5. Agent pulls competitive compensation data from Glassdoor, Payscale, LinkedIn for role/location, recommends market-competitive range. 6. Agent optimizes description for SEO: includes keywords candidates search for on LinkedIn, Indeed, Google. 7. Agent generates multiple description variants for A/B testing on different job boards. 8. Hiring manager reviews AI-generated description, makes edits, approves in 15-30 minutes vs 2-4 hours.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Job Description Optimization Agent"],
+        "utilityAgents": ["Bias Detection Agent", "Compensation Benchmarking Agent", "SEO Optimization Agent", "ATS API Agent", "Job Board Integration Agent"]
+      },
+      "dataSources": [
+        "Historical job descriptions and performance data (applicant quality, time-to-fill)",
+        "Industry standard job description templates",
+        "Bias language databases (gender-coded words, age-related terms)",
+        "Market compensation data (Glassdoor, Payscale, LinkedIn Salary)",
+        "Job board SEO keywords and search trends",
+        "Diversity hiring best practices and inclusive language guides",
+        "Company-specific requirements and benefits"
+      ],
+      "benefits": [
+        "70% time savings: 15-30 minutes vs 2-4 hours to create job description",
+        "20-30% more qualified applicants through SEO optimization and compelling descriptions",
+        "Bias-free language increases diverse candidate applications 30-50%",
+        "Market-competitive compensation data ensures attractive offers (reduces declined offers)",
+        "Consistent high-quality job descriptions across all roles and recruiters",
+        "A/B testing identifies best-performing job description variants",
+        "Faster time-to-post: jobs go live same day vs 3-5 day approval cycles"
+      ],
+      "metrics": ["JD creation time: 15-30 minutes (-70%)", "Bias language: 0% (automated detection)", "Qualified applicants: +20-30%", "Diverse applicants: +30-50%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy AI job description generator for high-volume roles", "Implement bias language detection for all job postings", "Integrate compensation benchmarking data for market-competitive ranges"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Applicant Tracking System (ATS) with API access", "Historical job description and applicant data", "Market compensation data subscriptions (Glassdoor, Payscale)", "Hiring manager training on AI-generated descriptions"]
+    },
+    "icon": "document-text",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-multi-channel-sourcing-posting",
+    "type": "function",
+    "level": 4,
+    "label": "Multi-Channel Sourcing & Posting",
+    "description": "Automated job distribution to 50+ channels including major job boards, social media, professional networks, diversity-focused boards, and company careers site with personalized messaging and cross-posting optimization.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter manually logs into 3-5 major job boards (LinkedIn, Indeed, Glassdoor). 2. Recruiter copies and pastes job description into each job board posting form. 3. Recruiter manually configures posting settings (location, salary range, application method) per board. 4. Recruiter posts to company careers site via CMS. 5. Recruiter shares job posting link on LinkedIn and Twitter manually. 6. Total time: 1-2 hours per job to post across channels. 7. Limited reach: only 3-5 channels covered, no diversity-focused boards.",
+      "constraints": [
+        "Manual posting to 3-5 job boards takes 1-2 hours per job",
+        "Inconsistent job details across channels (copy/paste errors)",
+        "Limited channel coverage: miss specialized and diversity-focused job boards",
+        "No personalized messaging: same generic description across all channels",
+        "No tracking of which channels drive best candidates (source effectiveness unknown)",
+        "Jobs expire on some boards before recruiter notices and renews manually",
+        "No optimization: don't know which channels are worth paying for"
+      ],
+      "metrics": ["Posting time: 1-2 hours per job", "Channels covered: 3-5 boards", "Source tracking: Limited", "Candidate reach: 1-2K impressions"]
+    },
+    "agentic": {
+      "workflow": "1. Multi-Channel Posting Agent automatically distributes approved job posting to 50+ channels in parallel: major job boards (LinkedIn, Indeed, Glassdoor, Monster, ZipRecruiter), social media (LinkedIn, Twitter, Facebook), diversity boards (Jopwell, Fairygodboss, Hire Heroes), industry-specific boards, professional networks (IEEE, SHRM), university career centers. 2. Agent personalizes messaging per channel: LinkedIn emphasizes career growth, diversity boards highlight inclusion programs, university boards mention new grad programs. 3. Agent optimizes posting settings: ideal posting time, boosted vs organic, application routing. 4. Agent tracks source effectiveness: applicant volume, quality, time-to-hire by channel. 5. Agent auto-renews or refreshes postings approaching expiration on paid boards. 6. Agent provides recruiter dashboard: which channels driving best candidates, ROI per channel. 7. Agent recommends channel mix optimization: invest more in high-performing channels, pause low-performing ones.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Multi-Channel Posting Agent"],
+        "utilityAgents": ["LinkedIn Jobs API Agent", "Indeed API Agent", "Glassdoor API Agent", "Social Media API Agent (Twitter, Facebook)", "Diversity Job Board APIs", "University Career Center Integration Agent", "Channel Analytics Agent"]
+      },
+      "dataSources": [
+        "Approved job descriptions and requirements",
+        "Job board integrations and APIs",
+        "Historical channel performance data (applicant volume, quality, conversion rates)",
+        "Social media accounts and posting schedules",
+        "Diversity-focused job board lists",
+        "University career center partnerships",
+        "Channel pricing and ROI data"
+      ],
+      "benefits": [
+        "80% time savings: 10-15 minutes vs 1-2 hours to post across channels",
+        "2-3x candidate pipeline: 50+ channels vs 3-5 manual channels",
+        "Personalized messaging improves applicant quality 20-30%",
+        "Source tracking identifies best channels for investment optimization",
+        "Auto-renewals ensure jobs stay active on paid boards (no manual monitoring)",
+        "Diversity candidate reach increased 3-5x through specialized boards",
+        "Channel ROI analysis enables data-driven recruitment marketing budget"
+      ],
+      "metrics": ["Posting time: 10-15 minutes (-80%)", "Channels: 50+ (vs 3-5)", "Candidate reach: 5-10K impressions (+3-5x)", "Diversity reach: +3-5x"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate posting to top 10 job boards via API integrations", "Add diversity-focused boards to distribution list", "Track source effectiveness for ROI analysis"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["ATS with job board integration capabilities", "Job board API subscriptions and accounts", "Social media accounts configured for job posting", "Analytics platform to track source effectiveness"]
+    },
+    "icon": "speakerphone",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-resume-screening-matching",
+    "type": "function",
+    "level": 4,
+    "label": "Resume Screening & Matching",
+    "description": "NLP-powered resume parsing and semantic matching against job requirements with AI skills extraction, bias mitigation, quality scoring, and ranked candidate recommendations in seconds versus hours of manual review.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter receives 200-500 resumes for open position via email and ATS. 2. Recruiter manually reviews each resume: 5-10 minutes per resume to read experience, skills, education. 3. Recruiter makes subjective judgment: qualified vs not qualified based on gut feel and keyword spotting. 4. Recruiter shortlists 15-20 candidates for phone screens. 5. Manual review takes 17-80 hours for 200-500 resumes. 6. 50-60% screening accuracy: qualified candidates missed, unqualified candidates advanced due to resume writing quality vs actual skills.",
+      "constraints": [
+        "Manual review: 5-10 minutes per resume, 17-80 hours for 200-500 applicants",
+        "Recruiter capacity: 50 resumes per day maximum (burnout, errors at scale)",
+        "50-60% screening accuracy: qualified candidates missed in high-volume pools",
+        "Unconscious bias: candidates with prestigious schools, brand-name employers favored",
+        "Resume format bias: poorly formatted resumes rejected despite strong qualifications",
+        "No semantic matching: keyword spotting misses transferable skills (Java vs JavaScript)",
+        "Screening bottleneck: roles take 45-60 days to fill due to resume review delays"
+      ],
+      "metrics": ["Screening time: 5-10 min per resume", "Screening accuracy: 50-60%", "Recruiter capacity: 50 resumes/day", "Time-to-screen: 3-7 days"]
+    },
+    "agentic": {
+      "workflow": "1. Resume Screening & Matching Agent receives all applications from ATS in real-time. 2. Agent parses resumes using NLP: extracts skills, experience, education, certifications regardless of format. 3. Agent performs semantic matching: compares candidate profile to job requirements using ML model trained on successful hires. 4. Agent scores candidates 0-100: considers required skills, preferred qualifications, years of experience, education, career progression. 5. Agent detects and mitigates bias: anonymizes names, schools, employers during initial scoring to reduce unconscious bias. 6. Agent ranks all candidates: top 20% flagged for phone screen, middle 30% as backup, bottom 50% auto-rejected with personalized feedback. 7. Agent processes 500 resumes in 2-3 minutes vs 17-80 hours manual review. 8. Human recruiter reviews top-ranked candidates only (30-40% time savings) and validates AI recommendations.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Resume Screening & Matching Agent", "Skills Extraction Agent"],
+        "utilityAgents": ["NLP Parsing Agent", "Semantic Matching Engine", "Bias Detection & Mitigation Agent", "Candidate Scoring Model", "ATS API Agent", "Background Check Vendor API Agent"]
+      },
+      "dataSources": [
+        "Job requirements and preferred qualifications",
+        "Historical hiring data: successful vs unsuccessful candidates",
+        "Skills taxonomy and semantic relationships",
+        "Resume parsing and NLP models",
+        "Bias detection training data",
+        "Company-specific screening criteria and preferences",
+        "Candidate applications and resumes from ATS"
+      ],
+      "benefits": [
+        "90-95% time savings: 2-3 minutes vs 17-80 hours to screen 500 resumes",
+        "85-90% screening accuracy vs 50-60% manual (ML trained on successful hires)",
+        "30-40% improvement in quality-of-hire through data-driven matching",
+        "Bias reduced: anonymized screening and standardized criteria",
+        "Scalability: process 5,000 resumes as easily as 50 (no manual capacity constraint)",
+        "Faster time-to-screen: same day vs 3-7 days enables faster hiring cycles",
+        "Recruiter capacity increases 10-20x: focus on relationship-building vs manual screening"
+      ],
+      "metrics": ["Screening time: <1 second per resume (-99%)", "Accuracy: 85-90% (+30 pts)", "Time-to-screen: <1 hour vs 3-7 days", "Quality-of-hire: +30-40%"],
+      "implementationComplexity": "Medium"
+    },
+    "hitlGate": {
+      "step": 8,
+      "threshold": "Final interview stage and offer decisions",
+      "policy": "Human recruiters and hiring managers make final decisions on which candidates to interview and extend offers to; AI provides rankings and recommendations but humans have final authority"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy resume screening for high-volume roles (retail, customer service, operations)", "Train ML model on 12-24 months of successful hires", "Implement bias detection to anonymize candidate demographics during initial screening"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months (requires historical data for ML training)",
+      "prerequisites": ["ATS with API access", "Historical hiring data: successful vs unsuccessful candidates (12-24 months)", "Skills taxonomy definition", "Legal review of AI screening for bias and fairness compliance"]
+    },
+    "icon": "document-search",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-interview-scheduling-coordination",
+    "type": "function",
+    "level": 4,
+    "label": "Interview Scheduling & Coordination",
+    "description": "AI-powered interview scheduling with calendar integration, automatic room booking, video link generation, interview panel coordination, and intelligent candidate self-scheduling to reduce back-and-forth coordination.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter emails candidate to schedule phone screen: proposes 3-4 time slots. 2. Candidate responds with preferred time (1-2 day email lag). 3. Recruiter sends calendar invite with phone number or video link. 4. For onsite interviews: recruiter emails 4-6 interviewers proposing time slots. 5. 10-15 email exchanges to find time all interviewers available. 6. Recruiter manually books conference room, creates Zoom link. 7. Recruiter sends candidate interview schedule with names, times, video links. 8. Rescheduling requires repeating entire process. 9. Total coordination time: 2-3 days per candidate.",
+      "constraints": [
+        "10-15 email exchanges per interview to coordinate interviewer availability",
+        "2-3 days scheduling lag per candidate (email ping-pong delays)",
+        "Manual calendar checking: recruiter looks at each interviewer's calendar individually",
+        "Double-booking errors: conference rooms unavailable when candidate arrives",
+        "Rescheduling nightmare: canceling and rebooking 4-6 interviewers takes hours",
+        "Poor candidate experience: days of waiting for interview confirmation",
+        "Recruiter time: 30-40% spent on scheduling coordination vs strategic recruiting"
+      ],
+      "metrics": ["Scheduling time: 2-3 days per candidate", "Email exchanges: 10-15 per interview", "Recruiter time on scheduling: 30-40%", "Scheduling errors: 10-15%"]
+    },
+    "agentic": {
+      "workflow": "1. Interview Scheduling & Coordination Agent triggers after candidate passes resume screen. 2. Agent checks calendars of all required interviewers in parallel via Outlook/Google Calendar integration. 3. Agent identifies 3-5 optimal time slots when all interviewers available within candidate's preferred hours. 4. Agent sends candidate self-scheduling link: candidate picks preferred time slot (no recruiter email back-and-forth). 5. Agent automatically books conference room or generates Zoom/Teams video link. 6. Agent sends calendar invites to all interviewers with candidate profile, resume, interview questions. 7. Agent sends automated reminders 24 hours and 1 hour before interview. 8. If candidate requests reschedule: agent finds new time and updates all parties automatically. 9. Total scheduling time: <1 hour vs 2-3 days.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Interview Scheduling & Coordination Agent"],
+        "utilityAgents": ["Calendar Integration Agent (Outlook, Google)", "Room Booking Agent", "Video Link Generation Agent (Zoom, Teams)", "Interview Panel Coordination Agent", "Reminder & Notification Agent", "Candidate Self-Scheduling Agent"]
+      },
+      "dataSources": [
+        "Interviewer calendars (Outlook, Google Calendar)",
+        "Conference room availability systems",
+        "Video interview platform (Zoom, Teams) for link generation",
+        "Interview panel requirements by role and stage",
+        "Candidate availability preferences",
+        "Time zone handling for remote interviews",
+        "Interview feedback and scoring templates"
+      ],
+      "benefits": [
+        "85-90% time savings: <1 hour vs 2-3 days to schedule interviews",
+        "Zero email ping-pong: candidate self-selects from available times",
+        "Interviewer coordination automated: finds mutual availability across 4-6 interviewers instantly",
+        "Scheduling errors eliminated: no double-bookings, automatic room reservations",
+        "Candidate experience improved: interview confirmed within hours vs days",
+        "Rescheduling handled automatically: agent finds new time and updates all parties",
+        "Recruiter time freed: 30-40% time savings enables 2-3x more candidate volume"
+      ],
+      "metrics": ["Scheduling time: <1 hour (-85-90%)", "Email exchanges: 0-1 (self-scheduling)", "Scheduling errors: 0% (automated)", "Candidate experience NPS: +25 pts"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy candidate self-scheduling for phone screens (fastest ROI)", "Integrate calendar systems (Outlook, Google) for automated availability checking", "Automate video link generation (Zoom, Teams) for remote interviews"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["ATS integration", "Calendar system APIs (Outlook, Google Calendar)", "Video interview platform (Zoom, Teams)", "Conference room booking system integration", "Interview panel templates defined by role"]
+    },
+    "icon": "calendar",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-candidate-experience-engagement",
+    "type": "function",
+    "level": 4,
+    "label": "Candidate Experience & Engagement",
+    "description": "Personalized candidate communication throughout hiring process with automated status updates, chatbot Q&A, nurture campaigns for passive candidates, and feedback collection to improve candidate Net Promoter Score.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Candidate applies for job, receives generic auto-reply email: 'Thank you for applying'. 2. Candidate waits 2-4 weeks with no updates: resumes go into 'black hole'. 3. Recruiter manually emails top candidates to schedule interviews (others receive no updates). 4. Candidates ghost interviews due to lack of engagement or accepting other offers. 5. Rejected candidates receive generic 'not moving forward' email or no notification at all. 6. No systematic feedback collection from candidates on experience.",
+      "constraints": [
+        "Batch communications: generic messages not personalized to candidate or role",
+        "Black hole experience: candidates apply and hear nothing for weeks or months",
+        "Low engagement: no proactive updates, candidates lose interest and accept other offers",
+        "Poor rejection experience: generic 'not moving forward' emails (or ghosted completely)",
+        "No candidate feedback: don't know where hiring process frustrates candidates",
+        "Passive candidate nurture: manual email lists, infrequent outreach, generic messaging",
+        "Brand damage: poor candidate experience harms employer brand and Glassdoor reviews"
+      ],
+      "metrics": ["Candidate NPS: 30-40 (poor experience)", "Status update frequency: Every 2-4 weeks", "Candidate ghosting rate: 20-30%", "Feedback collection rate: 5-10%"]
+    },
+    "agentic": {
+      "workflow": "1. Candidate Experience Agent sends personalized welcome email upon application: mentions specific role, company benefits, hiring process overview. 2. Agent provides weekly status updates: 'Your application is under review by our hiring team' or 'We're scheduling interviews for next week'. 3. Agent offers chatbot for candidate questions: 'When will I hear back?', 'What is the salary range?', 'What are the benefits?'. 4. Agent nurtures passive candidates not currently interviewing: monthly newsletter with company news, relevant job openings, career tips. 5. Agent collects feedback at each stage: after application, after interviews, after rejection/offer. 6. Agent personalizes messaging by candidate profile: new grads get info on training programs, experienced candidates hear about leadership opportunities. 7. Agent triggers retention messages: if candidate stalls or shows signs of losing interest, escalates to recruiter for personal outreach.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Candidate Experience Agent", "Communication Agent"],
+        "utilityAgents": ["Email/SMS Gateway Agent", "Chatbot Platform Agent", "Feedback Collection Agent", "Nurture Campaign Agent", "Personalization Engine Agent", "NPS Tracking Agent"]
+      },
+      "dataSources": [
+        "Candidate application and profile data",
+        "Application status and interview stage",
+        "Interview feedback and hiring decisions",
+        "Candidate engagement data (email opens, clicks, chatbot interactions)",
+        "Candidate feedback and NPS scores",
+        "Company benefits, culture, and career development programs",
+        "Role-specific information and requirements"
+      ],
+      "benefits": [
+        "20-30 point candidate NPS improvement: 55-70 NPS vs 30-40 traditional",
+        "15-25% offer acceptance lift through better engagement and relationship building",
+        "50-60% reduction in candidate ghosting: proactive updates keep candidates engaged",
+        "Passive candidate pipeline activated: nurture campaigns convert 10-20% to applicants over time",
+        "Employer brand improved: positive candidate experience drives Glassdoor reviews and referrals",
+        "Feedback-driven process improvement: identify and fix candidate pain points",
+        "Recruiter time saved: chatbot handles 60-70% of candidate inquiries automatically"
+      ],
+      "metrics": ["Candidate NPS: 55-70 (+20-30 pts)", "Ghosting rate: 5-10% (-60-70%)", "Offer acceptance: +15-25%", "Chatbot inquiry deflection: 60-70%"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy weekly candidate status update emails", "Implement chatbot for common candidate questions (salary, timeline, benefits)", "Collect feedback from all candidates post-interview and post-decision"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["ATS integration for candidate status data", "Email/SMS communication platform", "Chatbot platform with NLP capabilities", "Feedback collection tool (SurveyMonkey, Qualtrics)", "Candidate NPS tracking"]
+    },
+    "icon": "user-group",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-diversity-inclusion-sourcing",
+    "type": "function",
+    "level": 4,
+    "label": "Diversity & Inclusion Sourcing",
+    "description": "AI-powered diverse candidate pipeline development with bias detection in job descriptions, diverse interview panel requirements, targeted sourcing from underrepresented communities, and diversity analytics throughout hiring funnel.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter posts jobs to mainstream job boards (LinkedIn, Indeed). 2. Applicant pool reflects limited diversity due to narrow sourcing channels. 3. Unconscious bias in resume review favors candidates from prestigious schools and brand-name employers. 4. Interview panels not diverse: mostly homogeneous interviewers. 5. Diversity tracked manually in spreadsheets: reported quarterly after-the-fact. 6. Diversity goals set but no proactive tactics to achieve them.",
+      "constraints": [
+        "Limited sourcing from diversity-focused channels and communities",
+        "Job descriptions contain biased language discouraging diverse applicants",
+        "Unconscious bias in screening: resumes from diverse candidates rejected at higher rates",
+        "Homogeneous interview panels perpetuate bias and culture fit concerns",
+        "Diversity metrics tracked quarterly: too late to adjust hiring tactics mid-cycle",
+        "No visibility into where diverse candidates drop out of funnel",
+        "Diversity initiatives reactive: post-hoc reporting vs proactive sourcing"
+      ],
+      "metrics": ["Diverse candidate pipeline: 15-25% of applicants", "Diversity by stage: Not tracked", "Diverse interview panels: 20-30%", "Diversity goal attainment: 40-60%"]
+    },
+    "agentic": {
+      "workflow": "1. Diversity & Inclusion Agent flags biased language in job descriptions: gender-coded words, age-biased terms, cultural assumptions. 2. Agent posts jobs to diversity-focused boards: Jopwell (Black professionals), Fairygodboss (women), Hire Heroes (veterans), OutProfessionals (LGBTQ+), university diversity career centers. 3. Agent ensures diverse interview panels: requires at least 1-2 diverse interviewers for all candidate interviews. 4. Agent tracks diversity metrics throughout funnel: application, resume screen, phone screen, interview, offer, accept by gender, race, veteran status. 5. Agent identifies drop-off points: 'Women apply at 40% rate but only 25% advance past phone screen—investigate bias'. 6. Agent targets sourcing: uses LinkedIn Recruiter filters for diverse candidates, attends diversity recruiting events, partners with diversity-focused organizations. 7. Agent generates real-time diversity dashboard: executives see diversity by role, stage, and team.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Diversity & Inclusion Agent", "Bias Detection Agent"],
+        "utilityAgents": ["Diversity Job Board API Agent", "LinkedIn Diversity Sourcing Agent", "Interview Panel Coordination Agent", "Diversity Analytics Platform Agent", "Bias Language Detection Agent", "Funnel Analysis Agent"]
+      },
+      "dataSources": [
+        "Applicant demographics (self-reported via EEOC forms)",
+        "Job description language and bias detection rules",
+        "Diversity-focused job boards and sourcing channels",
+        "Interview panel composition data",
+        "Hiring funnel metrics by stage and demographics",
+        "Diversity recruiting event calendars",
+        "Employee Resource Group (ERG) partnerships"
+      ],
+      "benefits": [
+        "30-50% diverse candidate pipeline growth through targeted sourcing",
+        "Bias-free job descriptions increase diverse applicants 20-30%",
+        "Diverse interview panels reduce unconscious bias and improve hiring decisions",
+        "Real-time diversity analytics enable proactive adjustments mid-hiring-cycle",
+        "Funnel drop-off analysis identifies and fixes bias at specific stages",
+        "Diversity goal attainment increases to 80-90% from 40-60%",
+        "Employer brand strengthened: commitment to diversity visible and measurable"
+      ],
+      "metrics": ["Diverse pipeline: 40-60% (+30-50%)", "Diversity goal attainment: 80-90% (+30 pts)", "Diverse interview panels: 90%+ (+60 pts)", "Funnel drop-off visibility: Real-time"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Post all jobs to diversity-focused boards (Jopwell, Fairygodboss, Hire Heroes)", "Implement bias detection in job descriptions", "Require diverse interview panels (1-2 diverse interviewers minimum)"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Diversity job board partnerships and accounts", "Bias detection tools for job descriptions", "Diversity analytics platform or ATS diversity reporting", "Interview panel diversity requirements defined", "Executive sponsorship for diversity goals"]
+    },
+    "icon": "user-circle",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-reference-background-checks",
+    "type": "function",
+    "level": 4,
+    "label": "Reference & Background Checks",
+    "description": "Automated reference request workflows and background check vendor coordination with real-time status tracking, compliance verification, red flag detection, and faster turnaround for offer contingencies.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter manually emails candidate requesting 3 references. 2. Candidate provides reference contact information. 3. Recruiter calls each reference, leaves voicemails, waits for callbacks (3-5 days). 4. Recruiter completes reference conversations, documents feedback in ATS notes. 5. Background check: recruiter emails vendor to initiate check, forwards candidate consent form. 6. Background check vendor takes 5-7 days to complete criminal, employment, education verification. 7. Recruiter manually follows up with vendor for status updates. 8. Total reference and background check time: 7-14 days.",
+      "constraints": [
+        "Manual outreach: recruiter calls references, leaves voicemails, waits for callbacks (3-5 days)",
+        "Reference check coverage: 60-70% completion rate (some references never respond)",
+        "Background check coordination: manual emails to vendor, no real-time status visibility",
+        "Delays in offer extensions: 7-14 days waiting for references and background checks",
+        "No standardized reference questions: inconsistent feedback quality",
+        "Compliance risk: I-9 verification and right-to-work documentation manual",
+        "Candidate frustration: waiting weeks for offer while references and background checks complete"
+      ],
+      "metrics": ["Reference check time: 3-7 days", "Reference completion rate: 60-70%", "Background check time: 5-7 days", "Total pre-offer delay: 7-14 days"]
+    },
+    "agentic": {
+      "workflow": "1. Reference & Background Check Agent automatically requests references from candidate via email/SMS with self-service form to submit reference contacts. 2. Agent sends automated reference request emails to references: standardized questions, online form completion, reminders after 48 hours. 3. Agent tracks reference responses: notifies recruiter when all references complete, flags any negative feedback. 4. Agent initiates background check with vendor API: sends candidate information, consent form, required checks (criminal, employment, education). 5. Agent monitors background check status in real-time: provides recruiter dashboard with progress by check type. 6. Agent flags red flags immediately: criminal records, employment discrepancies, education falsifications. 7. Agent completes I-9 and right-to-work verification: E-Verify integration for automated compliance. 8. Total time: 1-3 days vs 7-14 days with 100% completion rate.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Reference & Background Check Agent"],
+        "utilityAgents": ["Reference Request Automation Agent", "Background Check Vendor API Agent (Sterling, HireRight, Checkr)", "Compliance Verification Agent (I-9, E-Verify)", "Red Flag Detection Agent", "Status Tracking Dashboard Agent", "Reference Platform API Agent"]
+      },
+      "dataSources": [
+        "Candidate reference contact information",
+        "Reference questionnaire templates (standardized questions)",
+        "Background check vendor systems (Sterling, HireRight, Checkr)",
+        "Criminal records databases",
+        "Employment and education verification sources",
+        "I-9 and E-Verify compliance systems",
+        "Red flag detection rules and thresholds"
+      ],
+      "benefits": [
+        "60-70% faster reference and background checks: 1-3 days vs 7-14 days",
+        "100% completion rate: automated reminders and follow-ups vs 60-70% manual",
+        "Real-time status visibility: recruiter dashboard shows progress vs manual email follow-ups",
+        "Red flag detection: immediate alerts on criminal records, employment gaps, education discrepancies",
+        "Compliance automated: I-9, E-Verify, right-to-work verification integrated",
+        "Standardized reference questions: consistent feedback quality across all candidates",
+        "Candidate experience: faster offer process reduces candidate drop-off"
+      ],
+      "metrics": ["Reference check time: 1-2 days (-60-70%)", "Completion rate: 100% (+30 pts)", "Background check time: 1-3 days (-60-70%)", "Red flag detection: Real-time"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Automate reference request emails with standardized questionnaire", "Integrate background check vendor API for real-time status tracking", "Implement E-Verify for automated I-9 compliance"],
+      "investmentRequired": "Low",
+      "timeToValue": "1-2 months",
+      "prerequisites": ["Background check vendor with API (Sterling, HireRight, Checkr)", "Reference platform or email automation", "E-Verify account for I-9 compliance", "ATS integration for candidate data"]
+    },
+    "icon": "shield-check",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-offer-management-onboarding-handoff",
+    "type": "function",
+    "level": 4,
+    "label": "Offer Management & Onboarding Handoff",
+    "description": "Dynamic offer letter generation with compensation modeling, equity calculations, benefits comparison, e-signature integration, and seamless handoff to HRIS onboarding workflow with 100% accuracy.",
+    "parentCapability": "capability-talent-acquisition-recruiting",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Recruiter manually creates offer letter in Word template: copies candidate name, title, salary, start date. 2. Recruiter manually calculates compensation: base salary, bonus %, equity shares/options using Excel spreadsheet. 3. Recruiter emails offer letter PDF to candidate. 4. Candidate accepts via email or signs paper copy. 5. Recruiter manually enters new hire data into HRIS (Workday, ADP) for onboarding. 6. Errors frequent: wrong salary, incorrect equity calculation, missing benefits information. 7. Offer-to-onboarding handoff: 3-5 days of manual data entry and verification.",
+      "constraints": [
+        "Manual offer letter creation: copy/paste errors in candidate name, title, compensation",
+        "Compensation calculations in Excel: equity valuation, bonus %, vesting schedules prone to errors",
+        "No dynamic compensation modeling: can't show candidate scenarios (higher base vs more equity)",
+        "Offer letter review bottleneck: legal/HR approval adds 2-3 days",
+        "Manual HRIS data entry: new hire information entered twice (offer letter + HRIS)",
+        "10-15% offer letter errors: wrong numbers, missing benefits, incorrect start dates",
+        "Poor candidate experience: static PDF offers vs interactive compensation breakdowns"
+      ],
+      "metrics": ["Offer creation time: 1-2 hours", "Offer accuracy: 85-90% (10-15% errors)", "HRIS data entry time: 30-60 minutes", "Offer-to-onboarding handoff: 3-5 days"]
+    },
+    "agentic": {
+      "workflow": "1. Offer Management Agent generates offer letter automatically from approved compensation data: candidate name, title, manager, department, start date pre-populated from ATS. 2. Agent calculates total compensation package: base salary, bonus %, equity (shares/options with vesting schedule), benefits value. 3. Agent generates multiple offer scenarios for negotiation: 'Option A: $120K base + 5K RSUs' vs 'Option B: $115K base + 8K RSUs'. 4. Agent integrates with e-signature platform (DocuSign, Adobe Sign): sends offer letter for digital signature. 5. Agent tracks offer status: sent, viewed, accepted, declined with real-time notifications to recruiter. 6. Upon acceptance: agent automatically creates new hire record in HRIS (Workday, ADP, BambooHR) with 100% data accuracy (no re-entry). 7. Agent triggers onboarding workflow: IT provisioning, manager notification, first-day schedule.",
+      "agents": {
+        "orchestrator": "Talent Acquisition Orchestration Agent",
+        "superAgents": ["Offer Management Agent", "Compensation Planning Agent"],
+        "utilityAgents": ["Offer Letter Generation Agent", "Compensation Calculator Agent", "E-Signature Integration Agent (DocuSign, Adobe Sign)", "HRIS API Agent (Workday, ADP)", "Onboarding Workflow Agent", "Offer Analytics Agent"]
+      },
+      "dataSources": [
+        "Candidate data from ATS (name, contact, role, hiring manager)",
+        "Approved compensation data (salary, bonus, equity)",
+        "Offer letter templates (by role, level, location)",
+        "Equity grant guidelines and vesting schedules",
+        "Benefits information and value calculations",
+        "E-signature platform (DocuSign, Adobe Sign)",
+        "HRIS system for new hire record creation"
+      ],
+      "benefits": [
+        "75-85% time savings: 15-20 minutes vs 1-2 hours to create offer letter",
+        "100% offer accuracy: automated data population eliminates copy/paste errors",
+        "Dynamic compensation modeling: show candidates multiple offer scenarios for negotiation",
+        "E-signature integration: digital signing vs paper/PDF emails (faster, better experience)",
+        "Seamless HRIS handoff: 100% data accuracy, no manual re-entry (eliminates 30-60 min data entry)",
+        "Faster offer-to-start: 1 day vs 3-5 days through automated workflows",
+        "Offer analytics: track time-to-accept, decline reasons, compensation benchmarking"
+      ],
+      "metrics": ["Offer creation time: 15-20 minutes (-75-85%)", "Offer accuracy: 100% (vs 85-90%)", "HRIS data entry: 0 minutes (automated)", "Offer-to-start: 1 day vs 3-5 days"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate e-signature platform (DocuSign, Adobe Sign) for digital offer signing", "Automate HRIS new hire record creation from accepted offers", "Deploy compensation calculator for equity and bonus calculations"],
+      "investmentRequired": "Medium",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["E-signature platform (DocuSign, Adobe Sign)", "HRIS with API (Workday, ADP, BambooHR)", "Offer letter templates approved by legal", "Compensation guidelines and equity policies documented", "ATS integration for candidate data"]
+    },
+    "icon": "document-duplicate",
+    "color": "#8B5CF6",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

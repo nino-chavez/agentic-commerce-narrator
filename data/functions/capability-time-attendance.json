@@ -1,0 +1,408 @@
+[
+  {
+    "id": "function-intelligent-time-capture-validation",
+    "type": "function",
+    "level": 4,
+    "label": "Intelligent Time Capture & Validation",
+    "description": "Biometric time tracking with facial recognition or fingerprint authentication, mobile GPS check-in for field workers, automated anomaly detection for missed punches and unusual hours, and real-time validation to reduce time theft and errors from 3-5% to less than 0.5%.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employees punch paper time cards or use PIN-based punch clocks at start and end of shifts. 2. Supervisor collects time cards weekly and manually reviews for errors. 3. Supervisor identifies missed punches and asks employees to recall hours worked (memory-based estimates). 4. Time theft common: buddy punching (coworker clocks in for absent employee), manual time card tampering, rounding up hours worked. 5. Supervisor manually calculates total hours on timesheet, signs approval. 6. Payroll admin manually enters hours from timesheets into payroll system. 7. Errors frequent: 3-5% of time records have mistakes (wrong hours, missed punches, buddy punching).",
+      "constraints": [
+        "Buddy punching: employees clock in for absent coworkers (time theft)",
+        "PIN-based clocks: easily shared, no identity verification",
+        "Paper time cards: tampering, illegible handwriting, lost cards",
+        "Manual missed punch resolution: employees estimate hours from memory (inaccurate)",
+        "3-5% error rate: wrong hours, missed punches, calculation mistakes",
+        "No real-time anomaly detection: errors discovered days later during supervisor review",
+        "Field workers: no time tracking for remote/mobile workers (honor system)"
+      ],
+      "metrics": ["Time capture error rate: 3-5%", "Buddy punching incidents: 2-5% of punches", "Missed punch rate: 8-12%", "Time theft cost: 2-4% of payroll"]
+    },
+    "agentic": {
+      "workflow": "1. Intelligent Time Capture Agent deploys biometric time clocks (facial recognition or fingerprint) at all physical locations: employees verify identity when clocking in/out. 2. Mobile app with GPS geofencing for field workers: employees check in via smartphone app when they arrive at customer site or work location within defined geofence. 3. Office workers: agent auto-punches based on computer login time (configurable, opt-in). 4. Agent detects anomalies in real-time: missed clock-out (employee clocked in but forgot to clock out), unusual hours (employee clocked in at 2am on Sunday), duplicate punches. 5. Agent sends notifications to employee and supervisor for anomaly resolution: 'You clocked in at 8:05am but missed clock-out. What time did you leave?' 6. Agent validates time records: checks against scheduled shifts, overtime thresholds, break requirements. 7. Biometric verification eliminates buddy punching (can't clock in for someone else).",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["Intelligent Time Capture Agent", "Anomaly Detection Agent"],
+        "utilityAgents": ["Biometric Time Clock Hardware Integration Agent", "Mobile App API Agent", "GPS Geofencing Service Agent", "Computer Login Tracking Agent", "Anomaly Alert & Notification Agent", "Time Validation Engine Agent"]
+      },
+      "dataSources": [
+        "Biometric time clock punch data (facial recognition, fingerprint)",
+        "Mobile app GPS check-in data for field workers",
+        "Employee work schedules and shift assignments",
+        "Overtime thresholds and break requirements by location",
+        "Computer login/logout timestamps (for office workers)",
+        "Anomaly detection rules (missed punches, unusual hours)",
+        "Employee and supervisor contact information for alerts"
+      ],
+      "benefits": [
+        "85-90% error reduction: <0.5% error rate vs 3-5% traditional",
+        "Buddy punching elimination: biometric verification prevents time theft (100% identity verification)",
+        "70% reduction in missed punches: 2-4% vs 8-12% due to real-time alerts",
+        "Time theft cost reduction: eliminates 2-4% of payroll losses from buddy punching and rounding",
+        "Field worker time tracking: GPS geofencing enables accurate mobile worker time capture",
+        "Real-time anomaly detection: issues flagged immediately vs days later during supervisor review",
+        "Office worker convenience: auto-punch based on computer login (no manual clock in/out)"
+      ],
+      "metrics": ["Error rate: <0.5% (-85-90%)", "Buddy punching: 0% (biometric verification)", "Missed punches: 2-4% (-70%)", "Time theft cost: 0% (eliminated)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy biometric time clocks in high-risk locations (stores, warehouses) to eliminate buddy punching", "Implement mobile GPS check-in for field service workers and sales reps", "Enable real-time anomaly alerts for missed clock-outs and unusual hours"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Biometric time clock hardware (facial recognition or fingerprint readers)", "Mobile app with GPS geofencing capabilities", "Time & attendance platform with API for biometric integration", "Employee privacy policy and consent for biometric data collection", "IT infrastructure for biometric data storage and security"]
+    },
+    "icon": "fingerprint",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-overtime-management-compliance",
+    "type": "function",
+    "level": 4,
+    "label": "Overtime Management & Compliance",
+    "description": "Proactive overtime tracking with real-time alerts when employees approach 40 hours, automatic manager notifications requiring approval before overtime is incurred, FLSA compliance monitoring for meal breaks and rest periods, and predictive forecasting to reduce unexpected overtime costs by 20-30%.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employees work hours throughout week with no real-time overtime visibility. 2. Supervisor discovers overtime after timesheet submission at end of week: 'This employee worked 48 hours this week—8 hours of overtime I didn't authorize'. 3. Supervisor can't retroactively prevent overtime (already worked). 4. Payroll processes overtime pay (time-and-a-half) with no prior approval. 5. Finance team surprised by overtime costs: 15-25% higher labor costs than budgeted. 6. FLSA compliance violations frequent: employees miss legally required meal breaks (30 min every 5 hours), don't get rest periods (10 min every 4 hours), or work off-the-clock. 7. Compliance violations result in Department of Labor fines and back pay.",
+      "constraints": [
+        "Reactive overtime tracking: discovered after hours already worked (can't prevent)",
+        "No real-time alerts: supervisors unaware employees approaching 40 hours",
+        "15-25% unexpected overtime costs: no proactive management or forecasting",
+        "FLSA compliance violations: 10-15% of employees miss required meal breaks",
+        "No overtime approval workflow: employees work overtime without manager authorization",
+        "Off-the-clock work: employees respond to emails/calls outside scheduled hours (unpaid, illegal for non-exempt)",
+        "Multi-state complexity: different labor laws by state (CA requires daily overtime, meal breaks differ)"
+      ],
+      "metrics": ["Unexpected overtime: 15-25% of labor budget", "FLSA violations: 10-15% of employees", "Overtime approval: 0% (no workflow)", "DOL fines risk: High"]
+    },
+    "agentic": {
+      "workflow": "1. Overtime Management & Compliance Agent monitors employee hours in real-time throughout workweek. 2. Agent triggers alert when employee reaches 35 hours worked: sends notification to supervisor 'Employee Jane Doe approaching overtime (35 hours worked). Approve OT or adjust schedule to avoid?' 3. Supervisor receives proactive alert and decides: approve overtime if needed for business coverage, or adjust schedule to avoid overtime costs. 4. If supervisor approves: employee authorized to continue working overtime. If not approved: employee clocked out at 40 hours automatically. 5. Agent monitors FLSA compliance: alerts employee at 5 hour mark 'You must take 30-minute meal break now to comply with labor law', tracks break taken. 6. Agent predicts overtime based on schedule and historical patterns: 'Forecast: this department will incur $12K in overtime this month based on current scheduling. Adjust schedules to reduce?' 7. Agent generates compliance reports: tracks meal breaks, rest periods, off-the-clock work, overtime by employee and department.",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["Overtime Management & Compliance Agent", "Predictive Analytics Agent"],
+        "utilityAgents": ["Time & Attendance System API Agent", "Manager Alert & Notification Agent", "Approval Workflow Agent", "FLSA Compliance Rules Engine Agent", "Labor Law Database (state-specific) Agent", "Overtime Forecasting Model Agent"]
+      },
+      "dataSources": [
+        "Real-time employee time punch data",
+        "Employee schedules and shift assignments",
+        "Overtime approval policies and thresholds",
+        "FLSA compliance requirements (federal and state-specific)",
+        "Meal break and rest period rules by location",
+        "Historical overtime patterns and trends",
+        "Labor budget and cost targets",
+        "Payroll rates and overtime multipliers"
+      ],
+      "benefits": [
+        "20-30% overtime cost reduction: proactive alerts prevent unplanned overtime",
+        "100% overtime approval: all overtime pre-authorized by manager vs 0% traditional",
+        "80-95% FLSA violation reduction: automated meal break and rest period enforcement",
+        "Proactive vs reactive: supervisors manage overtime before it happens, not after",
+        "Predictive forecasting: anticipate overtime costs 2-4 weeks in advance for budgeting",
+        "Multi-state compliance: agent enforces state-specific labor laws automatically (CA, NY, etc.)",
+        "DOL fine avoidance: continuous compliance monitoring eliminates audit risk"
+      ],
+      "metrics": ["Overtime costs: -20-30% through proactive management", "Overtime approval: 100% (vs 0%)", "FLSA violations: 0.5-3% (-80-95%)", "DOL fines: $0 (risk eliminated)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Implement overtime alerts at 35-hour threshold for manager approval", "Deploy automated meal break reminders at 5-hour intervals for FLSA compliance", "Create overtime forecasting dashboard showing projected OT costs by department"],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": ["Time & attendance platform with real-time data and API", "Manager notification system (email, SMS, mobile app)", "FLSA compliance rule engine or legal database", "State-specific labor law requirements documented", "Overtime approval workflow defined and communicated to managers"]
+    },
+    "icon": "exclamation-circle",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-pto-leave-management",
+    "type": "function",
+    "level": 4,
+    "label": "PTO & Leave Management",
+    "description": "Self-service PTO request portal with intelligent auto-approval based on coverage rules, real-time accrual calculations, blackout date enforcement, FMLA and leave of absence tracking, and integration with payroll for accurate PTO payouts to save managers and HR 80-90% of time.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Employee emails manager requesting PTO: 'Can I take vacation Dec 20-29?' 2. Manager manually checks team calendar to see if coverage available, responds via email (1-2 day lag). 3. Manager approves or denies via email. 4. Employee manually updates personal calendar and HR spreadsheet with PTO dates. 5. HR tracks PTO accruals in separate Excel spreadsheet: manually calculates accrual based on tenure (2 weeks for 0-5 years, 3 weeks for 5-10 years). 6. Accrual errors common: employees take more PTO than accrued, or HR miscalculates accrual amounts. 7. PTO payout at termination: HR manually calculates unused PTO balance for final paycheck (errors frequent).",
+      "constraints": [
+        "Email-based requests: 1-2 day approval lag, no centralized tracking",
+        "Manual coverage checking: manager looks at team calendar, misses conflicts",
+        "No blackout date enforcement: employees request PTO during peak season (discouraged but not blocked)",
+        "PTO accrual tracking in spreadsheets: manual calculations error-prone",
+        "Real-time balance unavailable: employees don't know current PTO balance before requesting",
+        "FMLA leave tracking: manual spreadsheets, compliance risk (miss 12-week limit tracking)",
+        "PTO policy errors: employees take PTO they haven't accrued (negative balances)"
+      ],
+      "metrics": ["PTO request approval time: 1-2 days", "Accrual errors: 5-10%", "Manager time: 2-3 hours per month", "HR time: 5-10 hours per month"]
+    },
+    "agentic": {
+      "workflow": "1. Employee submits PTO request via self-service portal or mobile app: selects dates, PTO type (vacation, sick, personal). 2. PTO & Leave Management Agent validates request in real-time: checks employee's accrued PTO balance (enough PTO available?), verifies blackout dates (company policy blocks PTO during peak season like retail holidays), checks team coverage requirements (minimum staffing levels met?). 3. Agent auto-approves request if all rules met: sends confirmation to employee and updates calendar. If rules not met: routes to manager for manual review. 4. Agent calculates PTO accrual automatically: tracks accrual rate by tenure, anniversary date, part-time vs full-time. 5. Agent provides real-time PTO balance visibility: employee sees current accrued balance before requesting. 6. Agent tracks FMLA and leave of absence: monitors 12-week FMLA limit, intermittent leave tracking, return-to-work dates. 7. Agent integrates with payroll: sends PTO hours to payroll system for accurate paychecks and termination payouts.",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["PTO & Leave Management Agent", "Policy Engine Agent"],
+        "utilityAgents": ["Self-Service Portal Agent", "PTO Accrual Calculator Agent", "Coverage & Staffing Rules Agent", "Blackout Date Enforcement Agent", "FMLA Tracking Agent", "Payroll System API Agent"]
+      },
+      "dataSources": [
+        "Employee PTO accrual balances and history",
+        "PTO policies (accrual rates, blackout dates, coverage rules)",
+        "Employee tenure and anniversary dates",
+        "Team schedules and staffing requirements",
+        "FMLA leave eligibility and usage tracking",
+        "Leave of absence types and durations",
+        "Payroll system for PTO hour integration",
+        "Manager approval workflows and exceptions"
+      ],
+      "benefits": [
+        "80-90% time savings for managers and HR: auto-approval vs email-based manual process",
+        "Same-day PTO approvals: instant vs 1-2 day email lag",
+        "95%+ policy compliance: automated enforcement of accrual limits, blackout dates, coverage rules",
+        "100% accrual accuracy: automated calculations vs 5-10% manual errors",
+        "Real-time PTO balance visibility: employees see current balance before requesting",
+        "FMLA compliance: automated 12-week tracking eliminates compliance risk",
+        "Payroll integration: accurate PTO payouts and termination calculations"
+      ],
+      "metrics": ["Approval time: <1 hour instant (vs 1-2 days)", "Accrual errors: 0% (automated)", "Manager time: -80-90%", "HR time: -80-90%"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy employee self-service PTO request portal for instant submissions", "Implement auto-approval for requests meeting all policy rules (accrual balance, coverage, blackout dates)", "Enable real-time PTO balance visibility for employees"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-4 months",
+      "prerequisites": ["Time & attendance platform with PTO management module", "PTO policies documented (accrual rates, blackout dates, coverage requirements)", "Employee self-service portal or mobile app", "Payroll system integration for PTO hour submission", "Manager training on exception-based approval workflows"]
+    },
+    "icon": "calendar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-workforce-scheduling-optimization",
+    "type": "function",
+    "level": 4,
+    "label": "Workforce Scheduling & Optimization",
+    "description": "ML-powered demand forecasting and automated shift scheduling that matches labor supply to customer demand, considers employee preferences and availability, enables self-service shift swaps, and reduces labor costs by 15-25% while improving schedule creation efficiency by 20-30%.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Store/department manager creates weekly employee schedules manually in Excel or paper. 2. Manager estimates staffing needs based on gut feel or last year's schedule (no demand forecasting). 3. Manager calls or texts employees individually to offer available shifts (10-15 hours of coordination). 4. Employees request shift changes via text/call to manager: 'Can someone cover my Saturday shift?' 5. Manager manually finds replacement, coordinates swap via phone/text. 6. Frequent over-staffing or under-staffing: too many employees during slow periods, too few during peak. 7. Labor inefficiency results in 15-25% excess labor costs or customer service issues from inadequate coverage.",
+      "constraints": [
+        "Manual schedule creation: 8-15 hours per week per manager",
+        "No demand forecasting: staffing based on gut feel, not data-driven predictions",
+        "Over-staffing during slow periods: labor costs 15-25% higher than optimal",
+        "Under-staffing during peak periods: customer service suffers, long wait times",
+        "Shift coordination via phone/text: 3-5 hours per week managing shift swaps and call-outs",
+        "Employee preferences ignored: schedules created without considering availability or preferences (dissatisfaction)",
+        "Last-minute schedule changes: employees notified day-before or same-day (work-life balance issues)"
+      ],
+      "metrics": ["Schedule creation time: 8-15 hours per week", "Labor efficiency: 75-85% (15-25% waste)", "Employee satisfaction: 2.8/5", "Same-day schedule changes: 15-25%"]
+    },
+    "agentic": {
+      "workflow": "1. Workforce Scheduling Agent forecasts labor demand using ML model: analyzes historical sales data, weather forecasts, events calendars, holidays to predict customer traffic and required staffing levels for next 2-4 weeks. 2. Agent generates optimized schedule automatically: matches labor supply (employee availability, skills, preferences) to demand forecast. Prioritizes employee preferences (prefers Mon-Wed-Fri shifts, can't work before 10am due to childcare). 3. Agent enforces scheduling rules: minimum rest between shifts (8-12 hours), maximum consecutive days (5-6), overtime avoidance, employee skill requirements (need 1 manager + 2 cashiers + 1 stocker per shift). 4. Agent publishes schedule 2 weeks in advance (predictable vs last-minute). 5. Employees use self-service mobile app to request shift swaps: 'Can anyone cover my Tuesday 3-11pm shift?' Agent finds qualified replacement, facilitates swap approval. 6. Agent monitors real-time staffing vs demand: if customer traffic spikes, agent sends alert 'Need 1 additional cashier for next 2 hours. Who's available?' 7. Agent optimizes labor costs: reduces over-staffing 15-25%.",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["Workforce Scheduling Agent", "Demand Forecasting Agent"],
+        "utilityAgents": ["ML Demand Forecasting Model Agent", "Sales/Traffic Forecasting API Agent", "Employee Preference & Availability Agent", "Scheduling Optimization Engine Agent", "Shift Swap Coordination Agent", "Real-time Staffing Alert Agent"]
+      },
+      "dataSources": [
+        "Historical sales and customer traffic data",
+        "Weather forecasts and event calendars",
+        "Employee availability, preferences, and skills",
+        "Scheduling rules (min rest, max consecutive days, overtime limits)",
+        "Labor budget and cost targets",
+        "Real-time point-of-sale and customer traffic data",
+        "Employee time-off requests and PTO schedules",
+        "Skill requirements by role and shift"
+      ],
+      "benefits": [
+        "15-25% labor cost reduction: ML demand forecasting eliminates over-staffing",
+        "20-30% schedule creation time savings: automated vs manual (8-15 hours to 2-4 hours per week)",
+        "Improved customer service: adequate staffing during peak periods reduces wait times",
+        "Employee satisfaction improvement: 4.0/5 vs 2.8/5 due to preference consideration and predictable schedules",
+        "2-week advance notice: predictable schedules vs last-minute changes (work-life balance)",
+        "Self-service shift swaps: employees manage changes, reducing manager coordination time 60-70%",
+        "Real-time staffing adjustments: respond to unexpected demand spikes immediately"
+      ],
+      "metrics": ["Labor efficiency: 92-98% (+15-25%)", "Schedule creation time: 2-4 hours (-70%)", "Employee satisfaction: 4.0/5 (+1.2 pts)", "Advance notice: 2 weeks (vs 1-2 days)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy ML demand forecasting for pilot locations to predict staffing needs", "Implement employee self-service shift swap portal to reduce manager coordination time", "Enable 2-week advance scheduling to improve employee work-life balance"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Historical sales or customer traffic data (12-24 months for ML training)", "Workforce scheduling platform with optimization engine", "Employee mobile app for self-service shift management", "Employee preference and availability data collection", "Manager buy-in and training on ML-generated schedules"]
+    },
+    "icon": "user-group",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-labor-analytics-forecasting",
+    "type": "function",
+    "level": 4,
+    "label": "Labor Analytics & Forecasting",
+    "description": "Predictive labor demand modeling with ML forecasts 2-4 weeks ahead at 85-90% accuracy, real-time labor cost dashboards by department and location, productivity metrics, and labor optimization recommendations to reduce costs by 10-20% through proactive staffing decisions.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Finance team exports payroll data monthly to analyze labor costs in Excel. 2. Analyst manually calculates labor cost as % of revenue by department: 'Store A labor cost is 25% of revenue, Store B is 32%'. 3. Analysis is backward-looking only: shows what happened last month, no predictive forecasting. 4. No visibility into labor productivity: don't know if employees productive or idle. 5. No real-time labor cost tracking: labor cost overruns discovered weeks later during monthly financial close. 6. Staffing decisions reactive: hire more people after customer service suffers, cut hours after labor costs spike (too late).",
+      "constraints": [
+        "Backward-looking only: historical analysis, no predictive forecasting",
+        "Monthly reporting lag: labor cost issues discovered 3-4 weeks after the fact",
+        "No real-time visibility: managers don't know current labor costs during scheduling",
+        "Limited granularity: labor costs by department only, not by project, shift, or employee",
+        "No productivity metrics: can't identify inefficient labor utilization",
+        "Reactive staffing: adjust headcount after problems emerge, not proactively",
+        "Manual analysis in Excel: 10-20 hours per month of analyst time"
+      ],
+      "metrics": ["Reporting lag: 3-4 weeks", "Forecasting capability: None", "Analysis time: 10-20 hours per month", "Labor cost visibility: Monthly only"]
+    },
+    "agentic": {
+      "workflow": "1. Labor Analytics & Forecasting Agent continuously monitors labor costs in real-time: tracks hours worked, payroll costs, labor cost as % of revenue by department, location, shift, project. 2. Agent provides manager dashboard: 'Your department labor cost is $125K this month (85% of budget). You have $22K remaining for rest of month.' 3. Agent forecasts labor demand 2-4 weeks ahead using ML model: analyzes historical staffing patterns, seasonality, business growth plans, upcoming events. Predicts: 'Store A will need 15% more labor hours next month due to holiday season. Start hiring 3 additional employees now.' 4. Agent calculates labor productivity metrics: revenue per labor hour, transactions per employee, idle time %. Identifies inefficiencies: 'Store B has 20% idle time during weekday afternoons. Reduce staffing from 5 to 4 employees during that shift.' 5. Agent recommends labor optimization: 'Shifting 2 employees from low-traffic Tuesday to high-traffic Saturday would improve productivity 12% and reduce labor cost $8K per month.' 6. Agent benchmarks across locations: 'Store A labor efficiency is 92% vs company average 85%. What best practices can be replicated?'",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["Labor Analytics & Forecasting Agent", "Predictive Demand Agent"],
+        "utilityAgents": ["Real-time Labor Cost Dashboard Agent", "ML Demand Forecasting Model Agent", "Productivity Metrics Calculator Agent", "Benchmarking & Comparison Agent", "Optimization Recommendation Engine Agent", "People Analytics Platform API Agent"]
+      },
+      "dataSources": [
+        "Real-time time & attendance data (hours worked, overtime)",
+        "Payroll costs and labor rates by employee",
+        "Revenue and sales data by location, department, shift",
+        "Historical staffing patterns and seasonality trends",
+        "Business growth plans and upcoming events",
+        "Productivity metrics (transactions, revenue per labor hour)",
+        "Benchmarking data across locations or departments",
+        "Labor budget and cost targets"
+      ],
+      "benefits": [
+        "10-20% labor cost optimization through predictive forecasting and proactive adjustments",
+        "Real-time visibility vs 3-4 week lag: managers make staffing decisions based on current data",
+        "85-90% forecasting accuracy: ML predicts labor needs 2-4 weeks ahead",
+        "Productivity insights: identify inefficiencies (idle time, overstaffing) and optimize",
+        "Proactive staffing decisions: hire or adjust schedules before issues emerge, not after",
+        "Benchmarking enables best practice sharing across locations or teams",
+        "95% time savings: automated dashboards vs 10-20 hours monthly Excel analysis"
+      ],
+      "metrics": ["Labor cost optimization: 10-20%", "Forecast accuracy: 85-90% (2-4 weeks ahead)", "Reporting lag: Real-time (vs 3-4 weeks)", "Analysis time: Automated (vs 10-20 hours/month)"],
+      "implementationComplexity": "Medium"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Deploy real-time labor cost dashboard for managers showing daily labor cost vs budget", "Implement ML demand forecasting model for pilot department or location", "Create productivity metrics report showing revenue per labor hour and idle time by shift"],
+      "investmentRequired": "Medium",
+      "timeToValue": "4-6 months",
+      "prerequisites": ["Time & attendance platform with real-time data API", "Payroll and labor cost data integration", "Revenue or sales data for productivity metrics", "Historical staffing data (12-24 months) for ML model training", "People analytics platform or business intelligence dashboard", "Manager training on data-driven staffing decisions"]
+    },
+    "icon": "chart-bar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "function-payroll-integration-validation",
+    "type": "function",
+    "level": 4,
+    "label": "Payroll Integration & Validation",
+    "description": "Real-time synchronization between time & attendance and payroll systems with automated validation of hours, rates, and deductions, error detection before payroll processing, and same-day payroll submission to reduce errors from 1-3% to less than 0.2% and processing time from 2-3 days to same-day.",
+    "parentCapability": "capability-time-attendance",
+    "applicableIndustries": ["All"],
+    "applicableModels": ["B2C", "B2B", "Hybrid"],
+    "organizationalLevel": "enterprise",
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 4
+    },
+    "traditional": {
+      "workflow": "1. Supervisor approves employee timesheets weekly (paper or email). 2. Payroll admin manually exports time data from time & attendance system to Excel. 3. Payroll admin manually enters hours from Excel into payroll system employee by employee (200-2,000 employees = 4-16 hours of data entry). 4. Payroll admin reconciles time data against expected hours: identifies discrepancies (wrong hours, missing employees, incorrect pay rates). 5. Payroll admin manually corrects errors via email/phone with supervisors (1-2 days back-and-forth). 6. Errors frequent: 1-3% of paychecks have wrong hours, pay rates, or deductions. 7. Total payroll processing time: 2-3 days from timesheet approval to payroll submission.",
+      "constraints": [
+        "Manual data entry: 4-16 hours to transfer time data from T&A system to payroll",
+        "2-3 day processing lag: time from timesheet approval to payroll submission",
+        "1-3% payroll error rate: wrong hours, pay rates, deductions",
+        "Manual reconciliation: payroll admin reviews hundreds of timesheets for errors",
+        "Correction delays: email/phone back-and-forth with supervisors adds 1-2 days",
+        "No real-time validation: errors discovered during payroll processing, not when timesheets submitted",
+        "Employee frustration: incorrect paychecks require manual off-cycle corrections"
+      ],
+      "metrics": ["Data entry time: 4-16 hours", "Processing lag: 2-3 days", "Payroll error rate: 1-3%", "Off-cycle corrections: 5-10 per pay period"]
+    },
+    "agentic": {
+      "workflow": "1. Payroll Integration Agent syncs time & attendance data to payroll system in real-time: as supervisors approve timesheets, hours automatically flow to payroll (no manual data entry). 2. Agent validates time data before payroll processing: checks employee hours against expected ranges (40 hours for full-time, 20 hours for part-time), verifies pay rates match employee records, validates overtime calculations (time-and-a-half for hours over 40), confirms deductions (benefits, taxes, garnishments). 3. Agent detects errors immediately: 'Employee Jane Doe timesheet shows 80 hours worked (expected 40). Review required.' 4. Agent sends error notifications to supervisor and payroll admin: 'Timesheet error detected for Jane Doe. Resolve before payroll processing.' 5. Supervisor corrects error in time & attendance system: correction automatically syncs to payroll. 6. Agent generates payroll validation report: '1,850 employees processed, 3 errors flagged and resolved, payroll ready for submission.' 7. Total processing time: same-day vs 2-3 days. Error rate: <0.2% vs 1-3%.",
+      "agents": {
+        "orchestrator": "Time & Attendance Orchestration Agent",
+        "superAgents": ["Payroll Integration Agent", "Validation Engine Agent"],
+        "utilityAgents": ["Time & Attendance API Agent", "Payroll System API Agent", "Error Detection Engine Agent", "Data Reconciliation Agent", "Notification & Alert Agent", "Off-Cycle Payroll Correction Agent"]
+      },
+      "dataSources": [
+        "Time & attendance data (approved timesheets, hours worked, overtime)",
+        "Payroll system employee records (pay rates, deductions, tax withholdings)",
+        "Expected hours by employee (full-time 40 hours, part-time variable)",
+        "Overtime calculation rules (time-and-a-half, double-time)",
+        "Benefits deductions and contribution rates",
+        "Error detection thresholds and validation rules",
+        "Payroll processing schedules and deadlines"
+      ],
+      "benefits": [
+        "85-95% error reduction: <0.2% vs 1-3% through automated validation",
+        "90%+ time savings: same-day vs 2-3 day processing (automated vs manual data entry)",
+        "100% data entry elimination: real-time sync vs 4-16 hours manual entry",
+        "Proactive error detection: errors flagged before payroll processing, not after paychecks issued",
+        "Employee satisfaction: accurate paychecks, zero off-cycle corrections",
+        "Payroll admin productivity: focus on exceptions only vs reviewing every timesheet",
+        "Real-time payroll cost visibility: labor costs known immediately, not days later"
+      ],
+      "metrics": ["Error rate: <0.2% (-85-95%)", "Processing time: Same-day (vs 2-3 days)", "Data entry: 0 hours (vs 4-16 hours)", "Off-cycle corrections: 0-1 per period (-90%)"],
+      "implementationComplexity": "Low"
+    },
+    "transformationGuidance": {
+      "quickWins": ["Integrate time & attendance system with payroll system via API for real-time data sync", "Implement automated validation rules to detect errors before payroll processing", "Eliminate manual data entry by enabling automatic timesheet-to-payroll flow"],
+      "investmentRequired": "Low",
+      "timeToValue": "2-3 months",
+      "prerequisites": ["Time & attendance platform with API", "Payroll system with API (ADP, Payscale, Workday, etc.)", "Error detection rules and validation thresholds defined", "Supervisor training on correcting errors flagged by validation agent", "Payroll admin training on exception-based review vs manual review of all timesheets"]
+    },
+    "icon": "currency-dollar",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

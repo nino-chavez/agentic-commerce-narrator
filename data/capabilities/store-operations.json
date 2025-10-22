@@ -1,0 +1,950 @@
+[
+  {
+    "id": "capability-store-task-management",
+    "type": "capability",
+    "level": 3,
+    "label": "Store Task Management",
+    "description": "Transforms manual paper checklists into AI-powered task orchestration with high completion rates, real-time visibility, and photo verification significantly reducing manager audit time.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C", "B2B"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Task Library Curation",
+      "Dynamic Task Assignment",
+      "Task Prioritization",
+      "Guided Execution with Photo Verification",
+      "AI Photo Verification",
+      "Task Completion Analytics",
+      "Exception Management"
+    ],
+    "traditionalApproach": {
+      "description": "Paper checklists with low completion rates, no real-time visibility, and long detection delays resulting in compliance gaps and brand inconsistency.",
+      "characteristics": [
+        "District Manager creates paper task lists, emails to stores",
+        "Store Manager prints checklists, posts in back room",
+        "Associates manually check off tasks (often batch-signed)",
+        "Monthly DM visits to spot-check random completed tasks",
+        "Incomplete tasks discovered weeks later during audits",
+        "No accountability (can't determine who completed)",
+        "Low unmeasured task completion rate"
+      ],
+      "constraints": [
+        "No real-time visibility (zero insight until manual audits)",
+        "Completion rate opacity (typical but unmeasured)",
+        "No accountability (who assigned, completed, when)",
+        "Reactive problem solving (issues found weeks later)",
+        "DMs spend significant time manually checking checklists",
+        "No prioritization logic (all tasks equal)",
+        "Version control issues (outdated task lists)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-task-001",
+          "metric": "Task Completion Rate (Paper-Based)",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail store operations benchmarking study']"
+        },
+        {
+          "id": "bench-task-002",
+          "metric": "Issue Detection Time",
+          "value": "2-8 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Store audit cycle timing analysis']"
+        },
+        {
+          "id": "bench-task-003",
+          "metric": "District Manager Audit Time",
+          "value": "20-30% of time",
+          "source": "TBD: [SME to provide source, e.g., 'District manager time allocation study']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Mobile task app with AI prioritization, auto-assignment, photo verification, and real-time dashboards achieving high completion and same-day issue detection.",
+      "characteristics": [
+        "Task Library Curation Agent maintains master repository",
+        "Dynamic Assignment Agent auto-assigns based on certifications and schedule",
+        "Real-time mobile app delivers prioritized task lists",
+        "Guided Execution Agent provides step-by-step instructions",
+        "AI Photo Verification Agent validates completion photos",
+        "Exception Management Agent escalates missed/incomplete tasks",
+        "Continuous Learning Agent identifies improvement opportunities"
+      ],
+      "benefits": [
+        "High task completion rate with real-time tracking",
+        "Real-time visibility of all tasks with timestamps and photos",
+        "Issue detection dramatically faster",
+        "Manager audit time reduced significantly (auto-verification)",
+        "Task execution efficiency improved (optimized sequencing)",
+        "Proactive intervention with early warning"
+      ],
+      "projections": [
+        {
+          "metric": "Task Completion Rate Improvement",
+          "value": "95-99% (vs 60-70%, +35% improvement)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mobile app notifications, automated assignment, and photo verification requirements']",
+          "sourceBenchmark": "bench-task-001"
+        },
+        {
+          "metric": "Issue Detection Time Reduction",
+          "value": "75% faster (same-day vs 2-8 weeks)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time photo submission and AI verification alerting managers instantly']",
+          "sourceBenchmark": "bench-task-002"
+        },
+        {
+          "metric": "Manager Audit Time Reduction",
+          "value": "50-60%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated photo verification eliminating manual checklist reviews']",
+          "sourceBenchmark": "bench-task-003"
+        },
+        {
+          "metric": "Task Execution Efficiency Improvement",
+          "value": "30-40%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized task sequencing and guided step-by-step instructions']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Store Task Orchestration Agent",
+        "Task Library Curation Agent",
+        "Dynamic Task Assignment Agent",
+        "Task Prioritization Agent",
+        "Guided Execution Agent",
+        "AI Photo Verification Agent",
+        "Task Completion Analytics Agent",
+        "Exception Management Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy mobile task app at pilot stores (5-10 locations)",
+        "Digitize top 50 highest-priority tasks",
+        "Enable real-time completion dashboards"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Store-level mobile connectivity (Wi-Fi or cellular)",
+        "Mobile devices for associates (tablets or smartphones)",
+        "Digital task library (start with top 50-100 tasks)",
+        "Integration with labor management system",
+        "Photo storage infrastructure (cloud-based)"
+      ]
+    },
+    "icon": "clipboard-list",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-banking-cash-reconciliation",
+    "type": "capability",
+    "level": 3,
+    "label": "Store Banking & Cash Reconciliation",
+    "description": "Automates cash management with smart safes achieving dramatic reduction in counting time, fewer variances, and instant detection through real-time tracking and AI reconciliation.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Smart Cash Counting",
+      "Real-Time Variance Detection",
+      "Dynamic Till Management",
+      "Intelligent Reconciliation",
+      "Armored Car Optimization",
+      "Change Order Forecasting",
+      "Cash Visibility & Analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Manual cash counting taking significant daily time with substantial monthly variances and detection delays resulting in security risks and labor waste.",
+      "characteristics": [
+        "Manager manually counts safe and creates register tills",
+        "End-of-day manual counting of all registers and safe",
+        "Manual reconciliation comparing cash to POS sales",
+        "Armored car fixed schedule (2-3x/week regardless of volume)",
+        "Change orders based on rough estimates (frequent shortages)",
+        "Significant cash variances per store per month",
+        "Long daily cash management time"
+      ],
+      "constraints": [
+        "Time-intensive daily cash management",
+        "Manual counting errors leading to variances",
+        "Delayed variance detection",
+        "Security risk (large cash volumes held for fixed pickups)",
+        "Suboptimal armored car (fixed schedules)",
+        "No real-time corporate visibility into cash positions",
+        "Low change order accuracy"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-cash-001",
+          "metric": "Daily Cash Management Time",
+          "value": "30-90 minutes",
+          "source": "TBD: [SME to provide source, e.g., 'Retail cash handling time study']"
+        },
+        {
+          "id": "bench-cash-002",
+          "metric": "Cash Variances per Store per Month",
+          "value": "$50-$200",
+          "source": "TBD: [SME to provide source, e.g., 'Retail cash variance benchmarks']"
+        },
+        {
+          "id": "bench-cash-003",
+          "metric": "Variance Detection Delay",
+          "value": "8-24 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Cash reconciliation timing analysis']"
+        },
+        {
+          "id": "bench-cash-004",
+          "metric": "Cash-on-Hand (Days of Sales)",
+          "value": "3-7 days",
+          "source": "TBD: [SME to provide source, e.g., 'Retail treasury management study']"
+        },
+        {
+          "id": "bench-cash-005",
+          "metric": "Change Order Accuracy",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Cash management operational metrics']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Smart safe automation with real-time tracking, AI variance detection, and dynamic armored car scheduling achieving minimal daily cash management time and low monthly variances.",
+      "characteristics": [
+        "Smart Cash Counting Agent tracks all cash movements automatically",
+        "Real-Time Variance Detection Agent flags discrepancies during shift",
+        "Dynamic Till Management Agent calculates optimal till amounts",
+        "Intelligent Reconciliation Agent auto-reconciles POS with smart safe",
+        "Armored Car Optimization Agent adjusts pickup frequency dynamically",
+        "Change Order Forecasting Agent predicts denomination needs",
+        "Cash Visibility Agent provides real-time treasury dashboard"
+      ],
+      "benefits": [
+        "Manual counting time dramatically reduced",
+        "Cash variances significantly reduced",
+        "Variance detection instant and real-time during shift",
+        "Cash-on-hand optimized",
+        "Armored car cost lower (optimized schedule)",
+        "Change order accuracy substantially improved"
+      ],
+      "projections": [
+        {
+          "metric": "Manual Counting Time Reduction",
+          "value": "90-95% (to 5-10 min from 30-90 min)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on smart safe automatic counting and reconciliation eliminating manual cash handling']",
+          "sourceBenchmark": "bench-cash-001"
+        },
+        {
+          "metric": "Cash Variance Reduction",
+          "value": "80-90% (to $5-$20 from $50-$200)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated counting eliminating human error and real-time variance detection']",
+          "sourceBenchmark": "bench-cash-002"
+        },
+        {
+          "metric": "Cash-on-Hand Reduction",
+          "value": "50-70% (to 1-2 days from 3-7 days)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on dynamic armored car scheduling optimizing pickup frequency']",
+          "sourceBenchmark": "bench-cash-004"
+        },
+        {
+          "metric": "Armored Car Cost Reduction",
+          "value": "30-50%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI-optimized pickup schedules matching cash volume instead of fixed frequency']",
+          "sourceBenchmark": null
+        },
+        {
+          "metric": "Change Order Accuracy Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI forecasting of denomination needs using historical sales patterns']",
+          "sourceBenchmark": "bench-cash-005"
+        }
+      ],
+      "agents": [
+        "Store Banking Orchestration Agent",
+        "Smart Cash Counting Agent",
+        "Real-Time Variance Detection Agent",
+        "Dynamic Till Management Agent",
+        "Intelligent Reconciliation Agent",
+        "Armored Car Optimization Agent",
+        "Change Order Forecasting Agent",
+        "Cash Visibility & Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy smart safes at top 10-20 highest-volume/variance stores",
+        "Integrate POS Z-report automation with smart safe counts",
+        "Enable real-time cash position dashboards"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Store-level internet connectivity",
+        "POS system integration for sales data",
+        "Armored car service relationship for dynamic scheduling",
+        "Corporate treasury system integration"
+      ]
+    },
+    "icon": "currency-dollar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-shrink-loss-prevention",
+    "type": "capability",
+    "level": 3,
+    "label": "Shrink & Loss Prevention",
+    "description": "Reduces inventory loss through AI video analytics, real-time exception detection, and continuous monitoring achieving significantly lower shrink rates.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Video Analytics for Theft Detection",
+      "POS Exception Detection",
+      "Inventory Accuracy Management",
+      "Shrink Pattern Analysis",
+      "Case Management & Investigation",
+      "Organized Retail Crime (ORC) Detection",
+      "Vendor Fraud Detection"
+    ],
+    "traditionalApproach": {
+      "description": "Annual physical inventory with high shrink rates and long detection delays resulting in substantial annual retail loss and untraceable theft.",
+      "characteristics": [
+        "Annual physical inventory (close store, count all products)",
+        "Shrink calculation once per year (book - physical = shrink)",
+        "Reactive investigation (LP reviews high-shrink categories)",
+        "Manual video review (long hours per case)",
+        "Quarterly shrink reviews (no monthly visibility)",
+        "High shrink rate as percentage of sales",
+        "Annual detection with long delay"
+      ],
+      "constraints": [
+        "Annual detection (shrink only measured once per year)",
+        "Untraceable (can't pinpoint when/where loss occurred)",
+        "Reactive (all investigations after the fact)",
+        "Labor-intensive video review",
+        "Limited coverage (can't monitor all areas all the time)",
+        "No predictive capability",
+        "Missed internal theft cases"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-shrink-001",
+          "metric": "Shrink Rate (% of Sales)",
+          "value": "1.5-3.0%",
+          "source": "TBD: [SME to provide source, e.g., 'NRF National Retail Security Survey 2024']"
+        },
+        {
+          "id": "bench-shrink-002",
+          "metric": "Video Review Time per Case",
+          "value": "10-40 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Loss prevention investigation time benchmarks']"
+        },
+        {
+          "id": "bench-shrink-003",
+          "metric": "Internal Theft Detection Rate",
+          "value": "30-40%",
+          "source": "TBD: [SME to provide source, e.g., 'LP internal theft detection studies']"
+        },
+        {
+          "id": "bench-shrink-004",
+          "metric": "Case Resolution Time",
+          "value": "2-6 months",
+          "source": "TBD: [SME to provide source, e.g., 'LP case management studies']"
+        },
+        {
+          "id": "bench-shrink-005",
+          "metric": "Inventory Accuracy",
+          "value": "85-92%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail inventory accuracy benchmarks']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-powered continuous monitoring with real-time theft detection, automated investigations, and predictive analytics achieving significantly lower shrink rates and rapid detection.",
+      "characteristics": [
+        "AI Video Analytics Agent monitors cameras 24/7 for suspicious behavior",
+        "POS Exception Detection Agent flags anomalies instantly",
+        "Inventory Accuracy Agent manages perpetual inventory via cycle counts",
+        "Shrink Pattern Analysis Agent identifies high-risk stores and categories",
+        "Case Management Agent auto-creates investigations with evidence",
+        "ORC Detection Agent identifies professional theft rings",
+        "Vendor Fraud Detection Agent monitors receiving processes"
+      ],
+      "benefits": [
+        "Shrink reduction to lower percentage of sales",
+        "Detection timing drastically reduced (minutes to hours)",
+        "Video review time significantly reduced",
+        "Internal theft detection substantially improved",
+        "Case resolution time much faster",
+        "Inventory accuracy improved significantly"
+      ],
+      "projections": [
+        {
+          "metric": "Shrink Rate Reduction",
+          "value": "30-50% (to 0.7-1.5% from 1.5-3.0%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI video analytics detecting theft in real-time and enabling immediate intervention']",
+          "sourceBenchmark": "bench-shrink-001"
+        },
+        {
+          "metric": "Video Review Time Reduction",
+          "value": "85-95% (to 30 min - 2 hours from 10-40 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI automatically identifying and tagging relevant video footage by incident']",
+          "sourceBenchmark": "bench-shrink-002"
+        },
+        {
+          "metric": "Internal Theft Detection Improvement",
+          "value": "60-80% (vs 30-40%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on POS exception detection and employee behavior analytics identifying internal theft patterns']",
+          "sourceBenchmark": "bench-shrink-003"
+        },
+        {
+          "metric": "Case Resolution Time Reduction",
+          "value": "2-4 weeks (vs 2-6 months)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated evidence collection and investigation workflows']",
+          "sourceBenchmark": "bench-shrink-004"
+        },
+        {
+          "metric": "Inventory Accuracy Improvement",
+          "value": "98-99% (vs 85-92%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on perpetual inventory management with AI-guided cycle counting']",
+          "sourceBenchmark": "bench-shrink-005"
+        }
+      ],
+      "agents": [
+        "Loss Prevention Orchestration Agent",
+        "AI Video Analytics Agent",
+        "POS Exception Detection Agent",
+        "Inventory Accuracy Agent",
+        "Shrink Pattern Analysis Agent",
+        "Case Management Agent",
+        "Organized Retail Crime Detection Agent",
+        "Vendor Fraud Detection Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy AI video analytics at top 10-20 highest-shrink stores",
+        "Enable POS exception reporting for voids, refunds, discounts",
+        "Implement cycle counting for top 100 highest-shrink SKUs"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-9 months",
+      "prerequisites": [
+        "Store-level video surveillance (minimum 4-8 cameras)",
+        "HD camera infrastructure (1080p+) for AI analytics",
+        "POS integration for real-time transaction data",
+        "Inventory management system integration",
+        "LP team trained on AI-assisted investigations"
+      ]
+    },
+    "icon": "shield-exclamation",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-compliance-audits",
+    "type": "capability",
+    "level": 3,
+    "label": "In-Store Compliance & Audits",
+    "description": "Enables continuous compliance monitoring with near-complete coverage, real-time violation detection, and significantly fewer violations through AI photo verification and automated corrective actions.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Compliance Photo Verification",
+      "Dynamic Audit Scheduling",
+      "Compliance Scoring & Analytics",
+      "Corrective Action Management",
+      "Regulatory Compliance Monitoring",
+      "Predictive Compliance Risk",
+      "Audit Management & Reporting"
+    ],
+    "traditionalApproach": {
+      "description": "Quarterly/annual audits detecting limited violations weeks after occurrence with multi-day report delays and no verification of corrective actions.",
+      "characteristics": [
+        "Quarterly/annual audits by DMs or third-party auditors",
+        "Paper checklist walkthroughs (100-300 line items)",
+        "Manual scoring and narrative report (post-visit)",
+        "Report delivery days after audit",
+        "Corrective actions not verified until next audit (months later)",
+        "Long audit frequency intervals",
+        "Low violation detection rate"
+      ],
+      "constraints": [
+        "Infrequent audits (violations exist months undetected)",
+        "Snapshot in time (minimal coverage)",
+        "Delayed reporting (days between audit and report)",
+        "No verification (corrective actions not checked for months)",
+        "Inconsistent scoring (manual, varies by auditor)",
+        "DMs spend significant time on audits vs coaching",
+        "Reactive (all violations after the fact)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-comp-001",
+          "metric": "Audit Frequency",
+          "value": "90-365 days",
+          "source": "TBD: [SME to provide source, e.g., 'Retail audit cycle benchmarks']"
+        },
+        {
+          "id": "bench-comp-002",
+          "metric": "Violation Detection Rate",
+          "value": "30-50%",
+          "source": "TBD: [SME to provide source, e.g., 'Store compliance audit effectiveness studies']"
+        },
+        {
+          "id": "bench-comp-003",
+          "metric": "Report Delivery Time",
+          "value": "3-7 days after audit",
+          "source": "TBD: [SME to provide source, e.g., 'Audit report turnaround benchmarks']"
+        },
+        {
+          "id": "bench-comp-004",
+          "metric": "Corrective Action Verification Time",
+          "value": "3-12 months",
+          "source": "TBD: [SME to provide source, e.g., 'Audit follow-up cycle studies']"
+        },
+        {
+          "id": "bench-comp-005",
+          "metric": "District Manager Audit Time",
+          "value": "30-50% of time",
+          "source": "TBD: [SME to provide source, e.g., 'DM time allocation studies']"
+        },
+        {
+          "id": "bench-comp-006",
+          "metric": "Scoring Consistency",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Inter-auditor reliability studies']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Continuous compliance monitoring via daily photo checks with AI auto-scoring achieving near-complete coverage, real-time alerts, and rapid remediation.",
+      "characteristics": [
+        "AI Compliance Photo Verification Agent validates photos against standards",
+        "Dynamic Audit Scheduling Agent prioritizes stores by risk",
+        "Compliance Scoring & Analytics Agent tracks real-time scores",
+        "Corrective Action Management Agent auto-generates and tracks actions",
+        "Regulatory Compliance Monitoring Agent updates with regulation changes",
+        "Predictive Compliance Risk Agent flags stores at risk",
+        "Audit Management Agent digitizes and automates reporting"
+      ],
+      "benefits": [
+        "Compliance coverage near-complete and continuous",
+        "Violation detection instant and real-time",
+        "Violations reduced significantly (proactive monitoring)",
+        "Remediation time drastically reduced",
+        "DM audit time significantly reduced (exception-based)",
+        "Scoring consistency substantially improved (AI auto-scoring)"
+      ],
+      "projections": [
+        {
+          "metric": "Compliance Coverage Improvement",
+          "value": "99% (continuous daily vs quarterly/annual)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on daily photo submission requirements covering all compliance standards']",
+          "sourceBenchmark": "bench-comp-001"
+        },
+        {
+          "metric": "Violation Reduction",
+          "value": "60-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on continuous monitoring enabling proactive correction before violations escalate']",
+          "sourceBenchmark": "bench-comp-002"
+        },
+        {
+          "metric": "Remediation Time Reduction",
+          "value": "1-3 days (vs 3-12 months)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on real-time violation alerts triggering immediate corrective action workflows']",
+          "sourceBenchmark": "bench-comp-004"
+        },
+        {
+          "metric": "DM Audit Time Reduction",
+          "value": "To 10-20% (vs 30-50%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on exception-based auditing focusing only on flagged issues']",
+          "sourceBenchmark": "bench-comp-005"
+        },
+        {
+          "metric": "Scoring Consistency Improvement",
+          "value": "95%+ (vs 70-80%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI auto-scoring eliminating subjective manual variation']",
+          "sourceBenchmark": "bench-comp-006"
+        }
+      ],
+      "agents": [
+        "Store Compliance Orchestration Agent",
+        "AI Compliance Photo Verification Agent",
+        "Dynamic Audit Scheduling Agent",
+        "Compliance Scoring & Analytics Agent",
+        "Corrective Action Management Agent",
+        "Regulatory Compliance Monitoring Agent",
+        "Predictive Compliance Risk Agent",
+        "Audit Management & Reporting Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy mobile compliance app at pilot stores (10-20 locations)",
+        "Enable AI photo verification for food safety and facility safety",
+        "Build real-time compliance dashboards"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Store-level mobile connectivity",
+        "Mobile devices for associates",
+        "Digitized compliance checklists (top 50-100 standards)",
+        "Manager training on continuous monitoring",
+        "Integration with regulatory databases (optional for Phase 1)"
+      ]
+    },
+    "icon": "clipboard-check",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-labor-scheduling",
+    "type": "capability",
+    "level": 3,
+    "label": "Store Labor Scheduling",
+    "description": "Optimizes frontline workforce with high forecast accuracy, significant labor cost reduction, and improved schedule adherence through AI demand forecasting and auto-scheduling.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "AI Labor Demand Forecasting",
+      "Intelligent Scheduling",
+      "Associate Self-Service",
+      "Real-Time Schedule Optimization",
+      "Time & Attendance Automation",
+      "Labor Compliance Enforcement",
+      "Labor Analytics & Optimization"
+    ],
+    "traditionalApproach": {
+      "description": "Manual scheduling with moderate forecast accuracy, substantial labor waste, and moderate schedule adherence resulting in over/understaffing and associate dissatisfaction.",
+      "characteristics": [
+        "Store Manager manually builds schedules in Excel/paper",
+        "Schedules posted 3-7 days in advance (often late)",
+        "Associates call/text manager for shift swaps",
+        "Manual time clocks with paper timesheets",
+        "Manager manually approves timesheets for payroll",
+        "High labor cost as percentage of sales",
+        "Moderate forecast accuracy"
+      ],
+      "constraints": [
+        "Inaccurate forecasts (under/overstaffing)",
+        "Static schedules (built weekly, no intraday adjustments)",
+        "Manager time-intensive scheduling",
+        "Low schedule adherence (callouts, no-shows)",
+        "Associate dissatisfaction (last-minute changes, unpredictable hours)",
+        "Compliance risk (manual scheduling violates labor laws)",
+        "No optimization (scheduling based on templates)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-labor-001",
+          "metric": "Labor Demand Forecast Accuracy",
+          "value": "70-80%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail labor forecasting accuracy benchmarks']"
+        },
+        {
+          "id": "bench-labor-002",
+          "metric": "Labor Cost as % of Sales",
+          "value": "32-50%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail labor cost benchmarks']"
+        },
+        {
+          "id": "bench-labor-003",
+          "metric": "Schedule Adherence Rate",
+          "value": "80-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Store scheduling compliance studies']"
+        },
+        {
+          "id": "bench-labor-004",
+          "metric": "Manager Scheduling Time per Week",
+          "value": "3-6 hours",
+          "source": "TBD: [SME to provide source, e.g., 'Store manager time allocation studies']"
+        },
+        {
+          "id": "bench-labor-005",
+          "metric": "Labor Law Compliance Rate",
+          "value": "70-90%",
+          "source": "TBD: [SME to provide source, e.g., 'Labor law compliance audit results']"
+        },
+        {
+          "id": "bench-labor-006",
+          "metric": "Associate Job Satisfaction",
+          "value": "60-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Retail employee satisfaction surveys']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "AI-driven labor optimization with high forecast accuracy, auto-scheduling, real-time adjustments, and associate self-service achieving significant labor cost reduction.",
+      "characteristics": [
+        "AI Labor Demand Forecasting Agent predicts sales/traffic by 15-min intervals",
+        "Intelligent Scheduling Agent auto-generates optimized schedules",
+        "Associate Self-Service Agent enables shift swaps and time-off requests",
+        "Real-Time Schedule Optimization Agent adjusts for actual demand",
+        "Time & Attendance Agent automates clock-in/out and breaks",
+        "Labor Compliance Agent enforces labor laws automatically",
+        "Labor Analytics Agent tracks KPIs and optimization opportunities"
+      ],
+      "benefits": [
+        "Forecast accuracy substantially improved",
+        "Labor cost reduced significantly (optimized scheduling)",
+        "Schedule adherence improved",
+        "Manager scheduling time drastically reduced",
+        "Labor law compliance near-perfect",
+        "Associate satisfaction improved"
+      ],
+      "projections": [
+        {
+          "metric": "Forecast Accuracy Improvement",
+          "value": "95%+ (vs 70-80%, +20-30% improvement)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on AI analyzing historical sales, weather, events, and traffic patterns']",
+          "sourceBenchmark": "bench-labor-001"
+        },
+        {
+          "metric": "Labor Cost Reduction",
+          "value": "10-20%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on optimal staffing levels matching demand and eliminating over/understaffing']",
+          "sourceBenchmark": "bench-labor-002"
+        },
+        {
+          "metric": "Schedule Adherence Improvement",
+          "value": "95%+ (vs 80-90%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on associate self-service enabling flexible shift management and reducing no-shows']",
+          "sourceBenchmark": "bench-labor-003"
+        },
+        {
+          "metric": "Manager Scheduling Time Reduction",
+          "value": "To 30-60 min/week (vs 3-6 hours)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated schedule generation requiring only review and approval']",
+          "sourceBenchmark": "bench-labor-004"
+        },
+        {
+          "metric": "Labor Law Compliance Improvement",
+          "value": "99% (vs 70-90%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on automated enforcement of break rules, overtime limits, and shift restrictions']",
+          "sourceBenchmark": "bench-labor-005"
+        },
+        {
+          "metric": "Associate Satisfaction Improvement",
+          "value": "80-90% (vs 60-70%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on predictable schedules and self-service shift management flexibility']",
+          "sourceBenchmark": "bench-labor-006"
+        }
+      ],
+      "agents": [
+        "Store Labor Orchestration Agent",
+        "AI Labor Demand Forecasting Agent",
+        "Intelligent Scheduling Agent",
+        "Associate Self-Service Agent",
+        "Real-Time Schedule Optimization Agent",
+        "Time & Attendance Agent",
+        "Labor Compliance Agent",
+        "Labor Analytics & Optimization Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy labor management system at pilot stores (10-20 locations)",
+        "Enable associate self-service mobile app",
+        "Implement automated compliance checks"
+      ],
+      "investmentRequired": "High",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "POS integration for sales data (demand forecasting)",
+        "Employee master data in HR system",
+        "Associate mobile device access (BYOD or store-provided)",
+        "Manager training on AI forecasting",
+        "Legal review of labor law compliance rules"
+      ]
+    },
+    "icon": "calendar",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  },
+  {
+    "id": "capability-store-communications-execution",
+    "type": "capability",
+    "level": 3,
+    "label": "Store Communications & Execution",
+    "description": "Ensures corporate message delivery with high read rates and execution compliance through targeted communications, read receipts, and photo-based verification.",
+    "parentDomain": "domain-enterprise-support",
+    "industries": ["Retail", "Grocery", "QSR", "Hospitality"],
+    "businessModels": ["B2C"],
+    "functionCount": 7,
+    "keyFunctions": [
+      "Intelligent Message Authoring",
+      "Segmentation & Targeting",
+      "Multi-Channel Delivery",
+      "Task & Execution Management",
+      "Feedback & Q&A",
+      "Compliance Verification",
+      "Communications Analytics"
+    ],
+    "traditionalApproach": {
+      "description": "Mass email communications with low read rates, no execution verification, and long non-compliance detection delays resulting in inconsistent implementation.",
+      "characteristics": [
+        "Corporate sends mass emails to all store managers",
+        "Managers maybe read emails, print/post in back room",
+        "Associates may or may not see posted messages",
+        "Corporate assumes stores will implement (no verification)",
+        "DMs discover non-compliance during visits (weeks/months later)",
+        "Low manager message open rate",
+        "Very low associate message visibility",
+        "Unmeasured execution compliance"
+      ],
+      "constraints": [
+        "Low read rates for managers and associates",
+        "No execution verification",
+        "Information overload (many emails per day per store)",
+        "Inconsistent implementation (each store interprets differently)",
+        "Delayed feedback (corporate learns of issues during audits weeks later)",
+        "One-size-fits-all (mass communications not targeted)",
+        "No accountability (can't determine who received/read/acted)"
+      ],
+      "benchmarks": [
+        {
+          "id": "bench-comm-001",
+          "metric": "Manager Message Open Rate",
+          "value": "40-60%",
+          "source": "TBD: [SME to provide source, e.g., 'Corporate email engagement studies']"
+        },
+        {
+          "id": "bench-comm-002",
+          "metric": "Associate Message Visibility",
+          "value": "10-30%",
+          "source": "TBD: [SME to provide source, e.g., 'Store communications effectiveness studies']"
+        },
+        {
+          "id": "bench-comm-003",
+          "metric": "Execution Compliance Rate",
+          "value": "50-70%",
+          "source": "TBD: [SME to provide source, e.g., 'Corporate directive implementation audits']"
+        },
+        {
+          "id": "bench-comm-004",
+          "metric": "Non-Compliance Detection Time",
+          "value": "2-8 weeks",
+          "source": "TBD: [SME to provide source, e.g., 'Store audit cycle timing']"
+        }
+      ]
+    },
+    "agenticApproach": {
+      "description": "Targeted mobile communications with read receipts, task assignments, and photo verification achieving high read rates and execution compliance.",
+      "characteristics": [
+        "Intelligent Message Authoring Agent assists in writing clear, concise messages",
+        "Segmentation & Targeting Agent routes to relevant audiences only",
+        "Multi-Channel Delivery Agent sends via mobile push, SMS, app, email",
+        "Task & Execution Management Agent auto-creates tasks from action items",
+        "Feedback & Q&A Agent provides in-app feedback mechanisms",
+        "Compliance Verification Agent monitors execution of critical messages",
+        "Communications Analytics Agent tracks read rates and completion"
+      ],
+      "benefits": [
+        "Message read rates substantially improved for managers and associates",
+        "Execution compliance measured in real-time",
+        "Non-compliance detection same-day",
+        "Corporate follow-up time significantly reduced",
+        "Store satisfaction improved (fewer irrelevant messages, clearer instructions)",
+        "Closed-loop feedback (corporate learns what works)"
+      ],
+      "projections": [
+        {
+          "metric": "Manager Read Rate Improvement",
+          "value": "95%+ (vs 40-60%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on mobile push notifications and required acknowledgement workflows']",
+          "sourceBenchmark": "bench-comm-001"
+        },
+        {
+          "metric": "Associate Read Rate Improvement",
+          "value": "85-95% (vs 10-30%)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on direct mobile delivery to associates instead of posted notices']",
+          "sourceBenchmark": "bench-comm-002"
+        },
+        {
+          "metric": "Execution Compliance Improvement",
+          "value": "90%+ measured real-time (vs 50-70% estimated)",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on task workflows with photo verification requirements']",
+          "sourceBenchmark": "bench-comm-003"
+        },
+        {
+          "metric": "Corporate Follow-Up Time Reduction",
+          "value": "70-80%",
+          "basis": "TBD: [SME to provide logical basis, e.g., 'Based on elimination of re-sending messages and clarification emails']",
+          "sourceBenchmark": null
+        }
+      ],
+      "agents": [
+        "Store Communications Orchestration Agent",
+        "Intelligent Message Authoring Agent",
+        "Segmentation & Targeting Agent",
+        "Multi-Channel Delivery Agent",
+        "Task & Execution Management Agent",
+        "Feedback & Q&A Agent",
+        "Compliance Verification Agent",
+        "Communications Analytics Agent"
+      ]
+    },
+    "maturityIndicators": {
+      "traditional": 2,
+      "agentic": 5
+    },
+    "transformationGuidance": {
+      "quickWins": [
+        "Deploy mobile communications app at pilot stores (20-50 locations)",
+        "Convert top 10 critical messages to task-based format",
+        "Enable feedback mechanisms for Q&A"
+      ],
+      "investmentRequired": "Medium",
+      "timeToValue": "3-6 months",
+      "prerequisites": [
+        "Store-level mobile connectivity",
+        "Mobile devices for all associates",
+        "Store segmentation data (format, size, region)",
+        "Integration with task management system",
+        "Manager training on reviewing feedback"
+      ]
+    },
+    "icon": "chat-alt-2",
+    "color": "#10B981",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-21T00:00:00Z",
+    "version": "2.0.0"
+  }
+]

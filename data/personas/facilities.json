@@ -1,0 +1,257 @@
+[
+  {
+    "id": "persona-facilities-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Facilities Director",
+    "label": "Facilities Director",
+    "description": "Leads enterprise facilities strategy and operations including maintenance, energy management, space planning, vendor relationships, and safety/security across all corporate and site locations.",
+    "responsibilities": [
+      "Set facilities strategy and standards",
+      "Oversee maintenance, energy, and space management",
+      "Manage facilities budget and vendor relationships",
+      "Ensure workplace safety and security",
+      "Drive sustainability initiatives",
+      "Report facilities performance to leadership"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "React to equipment failures after downtime occurs",
+      "Review energy bills monthly (too late to optimize)",
+      "Annual space planning based on headcount only",
+      "Vendor performance reviews annual (if at all)",
+      "Quarterly safety audits with manual reporting"
+    ],
+    "agenticWorkflow": [
+      "Predictive maintenance prevents 40-60% of equipment failures",
+      "Real-time energy dashboards enable immediate optimization",
+      "Continuous space utilization tracking informs proactive planning",
+      "Vendor scorecards updated real-time with performance data",
+      "Continuous safety monitoring with instant incident alerts"
+    ],
+    "painPointsAddressed": [
+      "Unplanned downtime reduced 40-60%",
+      "Energy costs reduced 15-30%",
+      "Real estate costs reduced 20-40%",
+      "Vendor costs reduced 10-20%"
+    ],
+    "kpis": [
+      "Unplanned Downtime %",
+      "Energy Cost per Sq Ft",
+      "Space Utilization %",
+      "Maintenance Cost per Sq Ft",
+      "Safety Incident Rate",
+      "Vendor Cost Savings"
+    ],
+    "icon": "office-building",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-facilities-operations-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Facilities Operations Manager",
+    "label": "Facilities Operations Manager",
+    "description": "Manages day-to-day facilities operations including work order management, preventive maintenance, vendor coordination, and ensuring asset availability and performance.",
+    "responsibilities": [
+      "Oversee work order management and technician dispatch",
+      "Ensure preventive maintenance completion",
+      "Coordinate vendor work and performance",
+      "Monitor asset performance and reliability",
+      "Manage facilities operations budget",
+      "Drive continuous improvement initiatives"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Manually assign work orders to technicians",
+      "Track PM completion in spreadsheets (60-70% completion)",
+      "Call vendors to schedule repairs (delayed response)",
+      "Review work order backlog weekly (500-2,000 open tickets)",
+      "Investigate equipment failures reactively"
+    ],
+    "agenticWorkflow": [
+      "AI auto-assigns work orders based on skills and proximity",
+      "PM scheduling automated with 95%+ completion tracking",
+      "Vendor work orders auto-created and tracked",
+      "Real-time work order dashboard shows backlog trends",
+      "Predictive maintenance identifies failures before they occur"
+    ],
+    "painPointsAddressed": [
+      "MTTR reduced 30-50% (faster repairs)",
+      "PM completion improved to 95%+ (vs 60-70%)",
+      "Maintenance costs reduced 15-25%",
+      "Technician productivity increased 25-40%"
+    ],
+    "kpis": [
+      "Mean Time to Repair (MTTR)",
+      "PM Completion Rate",
+      "Work Order Backlog",
+      "Technician Productivity",
+      "Asset Availability %",
+      "Maintenance Cost Variance"
+    ],
+    "icon": "wrench",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-energy-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Energy & Sustainability Manager",
+    "label": "Energy & Sustainability Manager",
+    "description": "Manages energy consumption, utility costs, and sustainability programs to reduce carbon footprint and achieve net-zero goals while optimizing operational expenses.",
+    "responsibilities": [
+      "Monitor and optimize energy consumption",
+      "Manage utility accounts and bill validation",
+      "Drive sustainability and carbon reduction initiatives",
+      "Implement energy efficiency projects",
+      "Track progress to net-zero commitments",
+      "Report sustainability metrics to stakeholders"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Review utility bills monthly in spreadsheets",
+      "Calculate carbon footprint annually in Excel",
+      "Identify energy projects sporadically",
+      "No real-time energy visibility",
+      "Sustainability reporting manual (weeks of work)"
+    ],
+    "agenticWorkflow": [
+      "Real-time energy monitoring by building and equipment",
+      "Automated carbon calculations updated continuously",
+      "AI prioritizes energy projects by ROI and carbon impact",
+      "HVAC and lighting optimized automatically based on occupancy",
+      "Sustainability reports auto-generated monthly"
+    ],
+    "painPointsAddressed": [
+      "Energy costs reduced 15-30%",
+      "Carbon emissions reduced 20-40%",
+      "Sustainability reporting time reduced 90%",
+      "Energy waste reduced 60-80%"
+    ],
+    "kpis": [
+      "Energy Cost per Sq Ft",
+      "Carbon Emissions (Scope 1, 2, 3)",
+      "Energy Waste %",
+      "Sustainability Reporting Time",
+      "Energy Project ROI",
+      "Progress to Net-Zero %"
+    ],
+    "icon": "lightning-bolt",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-workplace-services-director",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Workplace Services Director",
+    "label": "Workplace Services Director",
+    "description": "Manages workplace experience including space planning, hoteling, conference room management, and amenities to optimize real estate costs and employee satisfaction.",
+    "responsibilities": [
+      "Oversee space planning and allocation",
+      "Manage hoteling and flexible workspace programs",
+      "Optimize conference room utilization",
+      "Coordinate moves and space reconfigurations",
+      "Enhance workplace experience and amenities",
+      "Track and optimize real estate costs"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Space allocation fixed by department (no flexibility)",
+      "Conference room bookings via email (double-bookings)",
+      "Move requests take 2-4 weeks to process",
+      "No occupancy tracking (unknown utilization)",
+      "Space planning reactive (add space when out of room)"
+    ],
+    "agenticWorkflow": [
+      "Real-time occupancy tracking informs space decisions",
+      "Hoteling app enables flexible desk/office reservations",
+      "Conference room auto-releases no-shows",
+      "Move requests auto-coordinated with IT and facilities",
+      "Space forecasting predicts needs 6-12 months ahead"
+    ],
+    "painPointsAddressed": [
+      "Office occupancy improved to 70-80% (vs 40-60%)",
+      "Real estate costs reduced 20-40%",
+      "Conference room utilization improved 50%",
+      "Move cycle time reduced 70%"
+    ],
+    "kpis": [
+      "Office Occupancy %",
+      "Real Estate Cost per Employee",
+      "Conference Room Utilization",
+      "Space Cost per Sq Ft",
+      "Move Cycle Time",
+      "Employee Workplace Satisfaction"
+    ],
+    "icon": "office-building",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  },
+  {
+    "id": "persona-safety-security-manager",
+    "type": "persona",
+    "level": 5,
+    "roleType": "enterprise-support",
+    "title": "Safety & Security Manager",
+    "label": "Safety & Security Manager",
+    "description": "Manages workplace safety programs and physical security operations to protect employees, assets, and facilities from incidents, threats, and regulatory violations.",
+    "responsibilities": [
+      "Oversee physical security operations (guards, cameras, access)",
+      "Manage workplace safety programs and compliance",
+      "Coordinate emergency response and incident management",
+      "Conduct safety training and inspections",
+      "Track and investigate safety incidents",
+      "Report safety and security metrics to leadership"
+    ],
+    "applicableIndustries": ["All"],
+    "traditionalWorkflow": [
+      "Security guards patrol manually with paper logs",
+      "Video footage reviewed after incidents (1-4 hours search)",
+      "Safety inspections periodic (quarterly/annual)",
+      "Incident reports handwritten on paper",
+      "Safety training annual with 70-80% completion"
+    ],
+    "agenticWorkflow": [
+      "AI video analytics monitors all cameras 24/7",
+      "Incidents detected and alerted in real-time (3-10 min response)",
+      "Digital safety inspections with photo verification",
+      "Incident reports auto-generated with video evidence",
+      "Safety training auto-assigned with 95%+ completion tracking"
+    ],
+    "painPointsAddressed": [
+      "Incident response time reduced 70% (3-10 min vs 10-30 min)",
+      "Video search time reduced 90% (AI finds footage)",
+      "Incidents prevented 30-50% (proactive detection)",
+      "Safety training completion improved to 95%+"
+    ],
+    "kpis": [
+      "Incident Response Time",
+      "Safety Incident Rate",
+      "Safety Training Completion %",
+      "Video Search Time",
+      "Access Violations Detected",
+      "Security Guard Productivity"
+    ],
+    "icon": "shield-check",
+    "color": "#F59E0B",
+    "createdAt": "2025-01-09T00:00:00Z",
+    "updatedAt": "2025-01-09T00:00:00Z",
+    "version": "1.0.0"
+  }
+]

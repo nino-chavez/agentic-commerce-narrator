@@ -1,0 +1,244 @@
+# Agentic Commerce Narrator - Implementer Role Definitions
+# Version: 3.0.0
+# Focus: Data Modeling & Knowledge Graph
+
+roles:
+  # Data Engineer: Schema design, data modeling, graph structure
+  data-engineer:
+    description: "Designs and maintains data schemas, structures, and the knowledge graph model"
+
+    responsibility_areas:
+      - "Data schema design and modifications"
+      - "JSON structure definitions"
+      - "TypeScript type definitions for data"
+      - "Graph hierarchy (7-level node structure)"
+      - "Edge relationship definitions"
+      - "Data manifest management"
+      - "Compiled graph data generation"
+      - "Data utility functions"
+
+    not_responsible_for:
+      - "Content writing (benchmarks, projections)"
+      - "Data validation rules (validator's job)"
+      - "Documentation writing"
+
+    standards_references:
+      - ".agent-os/config.yml#data_model"
+      - "docs/data/graph-structure.md"
+      - "data/manifest.json"
+
+    tools:
+      - "Read"
+      - "Write"
+      - "Edit"
+      - "Grep"
+      - "Glob"
+
+    validation_requirements:
+      - "JSON syntax valid"
+      - "TypeScript types match data structure"
+      - "Schema version consistency (2.0.0)"
+      - "Graph integrity maintained"
+      - "All node IDs unique"
+      - "All edge references valid"
+
+    examples:
+      good:
+        - "Adding new node type to 7-level hierarchy"
+        - "Defining edge relationship schema"
+        - "Creating TypeScript types for capability structure"
+        - "Updating data manifest with new node counts"
+      bad:
+        - "Writing benchmark content for capabilities"
+        - "Creating data validation rules"
+        - "Writing documentation"
+
+  # Content Writer: Benchmarks, projections, descriptions
+  content-writer:
+    description: "Creates and refines content for capabilities, agents, functions, and personas"
+
+    responsibility_areas:
+      - "Capability benchmarks and projections"
+      - "Agent descriptions and characteristics"
+      - "Function definitions and workflows"
+      - "Persona profiles and use cases"
+      - "Industry context and examples"
+      - "Domain descriptions"
+      - "Concept definitions"
+      - "Content quality and consistency"
+
+    not_responsible_for:
+      - "Data schema design"
+      - "Graph structure modifications"
+      - "TypeScript type definitions"
+
+    standards_references:
+      - ".agent-os/config.yml#content_standards"
+      - "docs/data/capability-structure.md"
+      - "docs/data/benchmark-projection-model.md"
+
+    tools:
+      - "Read"
+      - "Write"
+      - "Edit"
+      - "Grep"
+      - "Glob"
+
+    validation_requirements:
+      - "Professional, clear language"
+      - "Quantifiable metrics where possible"
+      - "Credible sources for benchmarks"
+      - "Logical projections based on benchmarks"
+      - "Industry-specific context preserved"
+      - "Consistent terminology"
+
+    examples:
+      good:
+        - "Adding benchmarks to capability JSON files"
+        - "Writing agent descriptions with clear roles"
+        - "Creating persona profiles with realistic use cases"
+        - "Refining projection rationales with data sources"
+      bad:
+        - "Changing JSON schema structure"
+        - "Modifying edge relationship types"
+        - "Creating new node types in hierarchy"
+
+  # Data Validator: Quality checks, validation rules, integrity
+  data-validator:
+    description: "Ensures data quality, integrity, and compliance with standards"
+
+    responsibility_areas:
+      - "JSON syntax validation"
+      - "Schema compliance verification"
+      - "Graph integrity checks"
+      - "Edge relationship validation"
+      - "Node ID uniqueness verification"
+      - "Data quality audits"
+      - "Version consistency checks"
+      - "Source citation verification"
+
+    not_responsible_for:
+      - "Writing content"
+      - "Designing schemas"
+      - "Graph architecture decisions"
+
+    standards_references:
+      - ".agent-os/config.yml#data_model"
+      - ".agent-os/config.yml#quality"
+      - "data/manifest.json"
+
+    tools:
+      - "Read"
+      - "Bash (validation commands)"
+      - "Grep"
+      - "Glob"
+
+    validation_requirements:
+      - "All validations documented"
+      - "Clear error messages"
+      - "Actionable remediation steps"
+      - "Validation coverage comprehensive"
+
+    examples:
+      good:
+        - "Verifying all capability files are version 2.0.0"
+        - "Checking edge references point to existing nodes"
+        - "Validating JSON syntax across all data files"
+        - "Auditing benchmark sources for credibility"
+      bad:
+        - "Writing new capability content"
+        - "Redesigning graph structure"
+        - "Creating new data schemas"
+
+  # Graph Architect: Relationships, hierarchy, optimization
+  graph-architect:
+    description: "Designs graph relationships, optimizes structure, and ensures efficient traversal"
+
+    responsibility_areas:
+      - "Graph relationship design"
+      - "Edge type definitions"
+      - "Hierarchy optimization"
+      - "Graph traversal patterns"
+      - "Query optimization strategies"
+      - "Graph compilation coordination"
+      - "Performance optimization"
+      - "Scalability planning"
+
+    not_responsible_for:
+      - "Content creation"
+      - "Individual node data"
+      - "Validation rules"
+
+    standards_references:
+      - ".agent-os/config.yml#data_model"
+      - "docs/data/graph-structure.md"
+      - "data/edges/"
+
+    tools:
+      - "Read"
+      - "Write"
+      - "Edit"
+      - "Grep"
+      - "Glob"
+
+    validation_requirements:
+      - "Graph relationships logically sound"
+      - "Edge types clearly defined"
+      - "No circular dependencies (unless intentional)"
+      - "Graph compilable and traversable"
+      - "Performance targets met"
+
+    examples:
+      good:
+        - "Designing edge types for new relationship patterns"
+        - "Optimizing graph structure for common queries"
+        - "Creating hierarchy rules for new node levels"
+        - "Defining traversal patterns for visualization"
+      bad:
+        - "Writing benchmark content"
+        - "Creating individual capability files"
+        - "Implementing validation logic"
+
+# Role Selection Guide
+role_selection:
+  data_schema_work:
+    - "schema changes"
+    - "type definitions"
+    - "manifest updates"
+    - "graph structure"
+    use_role: "data-engineer"
+
+  content_work:
+    - "benchmarks"
+    - "projections"
+    - "descriptions"
+    - "use cases"
+    use_role: "content-writer"
+
+  validation_work:
+    - "quality checks"
+    - "integrity verification"
+    - "error detection"
+    use_role: "data-validator"
+
+  graph_design_work:
+    - "relationships"
+    - "edge types"
+    - "hierarchy"
+    - "optimization"
+    use_role: "graph-architect"
+
+# Workflow Integration
+workflow_integration:
+  fast_mode:
+    recommended_roles:
+      - "content-writer (simple content updates)"
+      - "data-engineer (single file schema updates)"
+    skip_verification: true
+
+  careful_mode:
+    recommended_roles:
+      - "graph-architect (relationship design)"
+      - "data-engineer (large schema changes)"
+      - "data-validator (comprehensive checks)"
+    verification: "comprehensive"

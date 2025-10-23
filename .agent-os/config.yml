@@ -1,102 +1,257 @@
-# Agent OS Configuration for Agentic Commerce Narrator
+# Agentic Commerce Narrator - Agent-OS Configuration
 # Version: 3.0.0
-# Last Updated: 2025-10-21
+# Last Updated: 2025-10-22
 
+# Project Profile
 version: "3.0.0"
-
-# Project Configuration
 project:
-  name: "agentic-commerce-narrator"
-  type: "web-fullstack"
-  description: "Knowledge graph visualization platform for enterprise digital transformation - Traditional vs Agentic commerce models"
+  name: "Agentic Commerce Narrator"
+  type: "data-knowledge-graph"
+  profile: "small"  # Focused data modeling project
+  description: "Knowledge graph dataset for Traditional vs Agentic commerce transformation"
 
 # Technology Stack
 tech_stack:
-  framework: "React 18"
-  language: "TypeScript"
-  styling: "Tailwind CSS v4"
-  visualization: "ReactFlow, D3.js patterns, Framer Motion"
-  testing: "jest"
-  build: "vite"
-  lint: "eslint"
+  primary_focus: "Data Modeling & Content Creation"
+  data_format: "JSON (143 files)"
+  structure: "Knowledge Graph (1,426 nodes across 7 levels)"
 
-# Workflow Modes (Simplified)
+  # Future tech stack (when visualization built)
+  future:
+    framework: "React 18"
+    language: "TypeScript"
+    styling: "Tailwind CSS v4"
+    visualization: "ReactFlow, D3.js, Framer Motion"
+    testing: "jest"
+    build: "vite"
+
+# Workflow Mode Configuration
 workflow:
-  default_mode: "fast"    # Use fast mode for 95% of work
+  # Two-mode system (simpler for data-focused work)
+  default_mode: "fast"
 
-  fast_mode:
-    validations: ["lint", "type-check", "build"]
-    manual_reviews: []    # No manual reviews
-    token_budget: 1000
-    time_estimate: "5-15 minutes"
+  modes:
+    # Fast Mode: 95% of data modeling work
+    fast:
+      description: "Quick data file updates, content enrichment, simple validations"
+      token_budget: 1000
+      time_estimate: "5-15 minutes"
+      verification: "self-check"
+      delegation: false
+      documentation: "minimal"
+      use_cases:
+        - "Update JSON data files (capabilities, agents, personas)"
+        - "Add benchmarks and projections to capabilities"
+        - "Fix data validation errors"
+        - "Update documentation"
+        - "Content refinement and copy editing"
+      validations:
+        - "lint"
+        - "type-check"
+        - "data-validation"
 
-  careful_mode:
-    validations: ["lint", "type-check", "unit-tests", "integration-tests", "build"]
-    manual_reviews: ["architecture", "performance"]  # Only when triggered
-    token_budget: 5000
-    time_estimate: "30-60 minutes"
+    # Careful Mode: 5% of complex work
+    careful:
+      description: "Complex data model changes, graph structure modifications"
+      token_budget: 5000
+      time_estimate: "30-60 minutes"
+      verification: "comprehensive"
+      delegation: "conditional"
+      documentation: "comprehensive"
+      use_cases:
+        - "Graph data model changes (7-level hierarchy)"
+        - "Edge relationship modifications"
+        - "Data schema updates"
+        - "Large-scale data migrations"
+        - "Performance-critical data structures"
+      validations:
+        - "lint"
+        - "type-check"
+        - "data-validation"
+        - "schema-validation"
+        - "graph-integrity-check"
+      required_reviews:
+        - "data-architect (for schema changes)"
+        - "content-strategist (for large content updates)"
 
-# Quality Gates (Automated First)
-quality_gates:
-  always_automated:
-    - "linting"
-    - "type_checking"
-    - "build_verification"
+# Context Management (Data-Focused)
+context:
+  total_budget: 60000  # Smaller than web apps (30% of 200k window)
 
-  conditional_manual:
-    - trigger: "graph|data-model|types"
-      review: "architecture_review"
-      reason: "Graph data model is critical - 1,426 nodes across 7 levels"
-    - trigger: "performance|reactflow|visualization"
-      review: "performance_review"
-      reason: "Visualization performance with large datasets"
-    - trigger: "nlp|search|filters"
-      review: "architecture_review"
-      reason: "Core search/filter functionality"
+  tiers:
+    # Tier 1: Data Schema & Structure (load once)
+    core:
+      budget: 20000
+      load_frequency: "once"
+      includes:
+        - "README.md"
+        - "data/manifest.json"
+        - "data/types/**"
+        - "data/utils/**"
+        - ".agent-os/config.yml"
 
-# Agent Model (Simplified)
-agents:
-  primary: "single_agent"  # One agent handles most work
-  specialists:             # Called only for specific domains
-    - "architecture"       # For graph data model changes
-    - "performance"        # For visualization optimizations
-    - "ux-ui"             # For diagram and component UX
+    # Tier 2: Domain Context (load per data area)
+    domain:
+      budget: 25000
+      load_frequency: "per_data_area"
+      examples:
+        capabilities:
+          - "data/capabilities/*.json"
+          - "docs/data/capability-structure.md"
+        agents:
+          - "data/agents/*.json"
+          - "docs/data/agent-types.md"
+        graph:
+          - "data/edges/*.json"
+          - "docs/data/graph-structure.md"
+
+    # Tier 3: Task-Specific (load per file)
+    task:
+      budget: 15000
+      load_frequency: "per_file"
+      includes:
+        - "Specific JSON file being edited"
+        - "Related validation rules"
+        - "Similar data examples"
+
+# Quality Gates
+quality:
+  # Pre-flight checks
+  pre_flight:
+    - "git status clean or approved"
+    - "data validation passing (if exists)"
+
+  # Post-flight checks
+  post_flight:
+    required:
+      - "JSON syntax validation"
+      - "data schema validation"
+      - "graph integrity check"
+    conditional:
+      careful_mode:
+        - "full graph compilation test"
+        - "edge relationship validation"
+
+  # Auto-rollback triggers
+  rollback_on:
+    - "JSON syntax errors"
+    - "Schema validation failures"
+    - "Graph integrity violations"
+    - "Data corruption detected"
+
+# Traceability
+traceability:
+  # Audit logging
+  audit_logs:
+    enabled: true
+    directory: ".agent-os/audit-logs"
+    format: "YYYY-MM-DD-task-description.md"
+    required_sections:
+      - "Primary Request and Intent"
+      - "Workflow Mode Selected"
+      - "Data Files Modified"
+      - "Validation Results"
+      - "Token Usage"
+
+  # Evidence-based status
+  status_tracking:
+    enabled: true
+    format: "evidence-based"
+    include:
+      - "File paths modified"
+      - "Validation passing status"
+      - "Git commit hashes"
+      - "Node counts and statistics"
+
+  # Decision records
+  decision_records:
+    enabled: true
+    directory: "docs/decisions"
+    format: "ADR-NNN-[decision-name].md"
+    trigger:
+      - "Data model schema changes"
+      - "Graph structure modifications"
+      - "Content strategy decisions"
+
+# Data-Specific Configuration
+data_model:
+  # Node hierarchy (7 levels)
+  hierarchy:
+    - "industry"
+    - "domain"
+    - "capability"
+    - "function"
+    - "persona"
+    - "agent"
+    - "concept"
+
+  # Edge types
+  edge_types:
+    - "has_capability"
+    - "performs_function"
+    - "serves_persona"
+    - "uses_agent"
+    - "relates_to_concept"
+
+  # Critical data integrity rules
+  integrity_rules:
+    - "All nodes must have unique IDs"
+    - "All edges must reference existing nodes"
+    - "Capability version must be 2.0.0"
+    - "Benchmarks and projections must have sources"
+    - "Domain-to-layer mappings must be preserved"
 
 # Project-Specific Considerations
 project_specific:
+  # Current focus: Data modeling and enrichment
+  current_phase: "data_enrichment"
+
   critical_files:
-    - "data/types/graph.ts"           # 7-level node hierarchy
-    - "data/utils/applyFilters.ts"    # Core filtering logic
-    - "data/services/nlpService.ts"   # Natural language processing
-    - "data/components/CapabilityExplorer/"  # Master component
+    - "data/manifest.json"
+    - "data/capabilities/*.json (20 files)"
+    - "data/functions/*.json (~100 files)"
+    - "data/agents/*.json (~60 files)"
+    - "data/edges/*.json"
+    - "data/compiled-graph-data.ts"
 
-  data_integrity:
-    - "Maintain type safety across 7-level node hierarchy"
-    - "Preserve domain-to-layer mappings"
-    - "Validate edge relationships (5 types)"
-    - "Ensure backward compatibility for shareable URLs"
+  data_quality_standards:
+    - "All capabilities at version 2.0.0"
+    - "253 benchmarks with sources"
+    - "475 projections with rationale"
+    - "Consistent naming conventions"
+    - "Complete metadata (description, tags, relationships)"
 
-  performance_targets:
-    - "Graph rendering: < 2s for 1,426 nodes"
-    - "Filter operations: < 100ms"
-    - "Lazy loading for view components"
-    - "Bundle size: < 5MB (with pre-compiled data)"
+  content_standards:
+    - "Professional, clear language"
+    - "Quantifiable metrics where possible"
+    - "Credible sources for benchmarks"
+    - "Logical projections based on benchmarks"
+    - "Industry-specific context preserved"
 
-# Token Optimization
-token_optimization:
-  batch_operations: true
-  caching: true
-  fail_fast: true
-  max_redundant_reviews: 0
+# Emergency Controls
+emergency:
+  halt_commands:
+    - "/stop"
+    - "/status"
+    - "/continue"
+    - "/rollback"
 
-# Success Metrics (Streamlined)
+  auto_stop:
+    - "JSON syntax errors (blocking)"
+    - "Schema validation failures"
+    - "Graph integrity violations"
+    - "Large-scale data corruption detected"
+
+# Performance Metrics
 metrics:
-  efficiency:
-    token_cost_per_task: "< 1000"
-    feedback_time: "< 10 minutes"
-    false_positives: "< 5%"
+  track:
+    - "Token usage per task"
+    - "Time per data file update"
+    - "Validation pass/fail rates"
+    - "Data quality improvements"
 
-  quality:
-    type_safety: "100%"
-    build_success: "> 95%"
-    resolution_time: "< 2 hours"
+  targets:
+    fast_mode_speed: "5-15 min per file"
+    token_savings: "70-80% vs baseline"
+    data_quality: "100% schema compliance"
+    validation_pass_rate: ">95%"

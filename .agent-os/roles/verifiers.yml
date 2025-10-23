@@ -1,0 +1,152 @@
+# Agentic Commerce Narrator - Verifier Role Definitions
+# Version: 3.0.0
+# Purpose: Data quality assurance and validation
+
+roles:
+  # Data Quality Verifier: Schema and content validation
+  data-quality-verifier:
+    description: "Verifies data quality, schema compliance, and content standards"
+
+    verification_areas:
+      schema:
+        - "JSON syntax validity"
+        - "Schema version consistency (2.0.0)"
+        - "Required fields present"
+        - "Data types correct"
+        - "Structure compliance"
+
+      content:
+        - "Professional language quality"
+        - "Quantifiable metrics present"
+        - "Source citations credible"
+        - "Logical consistency"
+        - "Industry context accuracy"
+
+      metadata:
+        - "Node IDs unique and valid"
+        - "Tags appropriate and consistent"
+        - "Descriptions complete"
+        - "Relationships documented"
+
+    validation_checklist:
+      data_files:
+        - [ ] "JSON syntax valid (no parsing errors)"
+        - [ ] "Schema version is 2.0.0"
+        - [ ] "All required fields present"
+        - [ ] "Node IDs unique across dataset"
+        - [ ] "No orphaned references"
+
+      content_quality:
+        - [ ] "Professional, clear language"
+        - [ ] "Benchmarks have credible sources"
+        - [ ] "Projections logically derived from benchmarks"
+        - [ ] "Quantifiable metrics where applicable"
+        - [ ] "Industry context preserved"
+
+    standards_references:
+      - ".agent-os/config.yml#data_quality_standards"
+      - ".agent-os/config.yml#content_standards"
+
+    tools:
+      - "Read"
+      - "Bash (JSON validation)"
+      - "Grep"
+      - "Glob"
+
+    auto_invocation_triggers:
+      - "Capability file modified"
+      - "Agent or persona data updated"
+      - "Large content changes"
+      - "Schema version change"
+
+  # Graph Integrity Verifier: Relationship and structure validation
+  graph-integrity-verifier:
+    description: "Verifies graph relationships, hierarchy, and structural integrity"
+
+    verification_areas:
+      relationships:
+        - "All edges reference existing nodes"
+        - "Edge types valid and consistent"
+        - "Bidirectional relationships correct"
+        - "No dangling references"
+
+      hierarchy:
+        - "7-level hierarchy preserved"
+        - "Parent-child relationships valid"
+        - "Domain-to-layer mappings correct"
+        - "No circular dependencies (unless intentional)"
+
+      compilation:
+        - "Graph compiles successfully"
+        - "No missing nodes in compiled output"
+        - "Edge references resolve correctly"
+        - "Performance within targets"
+
+    validation_checklist:
+      graph_structure:
+        - [ ] "All edges reference existing nodes"
+        - [ ] "Edge types from defined set"
+        - [ ] "7-level hierarchy intact"
+        - [ ] "No orphaned nodes"
+        - [ ] "Graph compiles without errors"
+
+      performance:
+        - [ ] "Node count matches manifest"
+        - [ ] "Edge count validated"
+        - [ ] "Compilation time < 10s"
+        - [ ] "Output size reasonable"
+
+    standards_references:
+      - ".agent-os/config.yml#data_model"
+      - "data/manifest.json"
+      - "docs/data/graph-structure.md"
+
+    tools:
+      - "Read"
+      - "Bash (compilation test)"
+      - "Grep"
+      - "Glob"
+
+    auto_invocation_triggers:
+      - "Edge file modified"
+      - "New node added to hierarchy"
+      - "Graph structure change"
+      - "Manifest updated"
+
+# Verification Workflow
+verification_workflow:
+  # Fast Mode: Self-verification only
+  fast_mode:
+    verification: "self-check"
+    verifiers_invoked: []
+    validation_steps:
+      - "JSON syntax check"
+      - "Basic schema validation"
+
+  # Careful Mode: Comprehensive verification
+  careful_mode:
+    verification: "comprehensive"
+    verifiers_invoked:
+      - "data-quality-verifier"
+      - "graph-integrity-verifier"
+    validation_steps:
+      - "JSON syntax validation"
+      - "Schema compliance check"
+      - "Content quality review"
+      - "Graph integrity verification"
+      - "Compilation test"
+
+# Auto-Rollback Criteria
+auto_rollback:
+  triggers:
+    - "JSON syntax errors"
+    - "Schema validation failures"
+    - "Graph integrity violations"
+    - "Orphaned node references"
+    - "Compilation failures"
+
+  process:
+    - "Halt execution immediately"
+    - "Revert all data file changes"
+    - "Report validation failure details"
+    - "Request human guidance"

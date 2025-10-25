@@ -1,0 +1,448 @@
+/**
+ * Design Tokens - CSS Custom Properties
+ *
+ * Source: docs/design/VISUAL_DESIGN_SYSTEM.md
+ * Version: 1.0.0
+ *
+ * All design values are defined here as CSS custom properties
+ * for maximum flexibility and theme support.
+ */
+
+@layer base {
+  :root {
+    /* ========================================
+       COLOR SYSTEM
+       ======================================== */
+
+    /* Traditional Approach (Cook) - Neutral/Process-Driven */
+    --traditional-50: 249 250 251;    /* #f9fafb */
+    --traditional-100: 243 244 246;   /* #f3f4f6 */
+    --traditional-200: 229 231 235;   /* #e5e7eb */
+    --traditional-300: 209 213 219;   /* #d1d5db */
+    --traditional-400: 156 163 175;   /* #9ca3af */
+    --traditional-500: 107 114 128;   /* #6b7280 */
+    --traditional-600: 75 85 99;      /* #4b5563 */
+    --traditional-700: 55 65 81;      /* #374151 */
+    --traditional-800: 31 41 55;      /* #1f2937 */
+    --traditional-900: 17 24 39;      /* #111827 */
+
+    /* Agentic Approach (Chef) - Progressive/Autonomous */
+    --agentic-50: 239 246 255;   /* #eff6ff */
+    --agentic-100: 219 234 254;  /* #dbeafe */
+    --agentic-200: 191 219 254;  /* #bfdbfe */
+    --agentic-300: 147 197 253;  /* #93c5fd */
+    --agentic-400: 96 165 250;   /* #60a5fa */
+    --agentic-500: 59 130 246;   /* #3b82f6 */
+    --agentic-600: 37 99 235;    /* #2563eb */
+    --agentic-700: 29 78 216;    /* #1d4ed8 */
+    --agentic-800: 30 64 175;    /* #1e40af */
+    --agentic-900: 30 58 138;    /* #1e3a8a */
+
+    /* Functional Colors */
+    --success-50: 209 250 229;
+    --success-100: 167 243 208;
+    --success-500: 16 185 129;
+    --success-900: 6 95 70;
+
+    --warning-50: 254 243 199;
+    --warning-100: 253 230 138;
+    --warning-500: 245 158 11;
+    --warning-900: 120 53 15;
+
+    --error-50: 254 226 226;
+    --error-100: 254 202 202;
+    --error-500: 239 68 68;
+    --error-900: 127 29 29;
+
+    --info-50: 239 246 255;
+    --info-100: 219 234 254;
+    --info-500: 59 130 246;
+    --info-900: 30 58 138;
+
+    /* Semantic Data Visualization Colors (Analytics/Dashboards) */
+    --semantic-success: 16 185 129;    /* #10B981 - Growth, positive trends */
+    --semantic-warning: 245 158 11;    /* #F59E0B - Opportunities, caution */
+    --semantic-error: 239 68 68;       /* #EF4444 - Decline, issues */
+    --semantic-info: 59 130 246;       /* #3B82F6 - Neutral, informational */
+    --semantic-neutral: 107 114 128;   /* #6B7280 - Baseline, no change */
+
+    /* ========================================
+       BACKGROUND & SURFACE LAYERS
+       ======================================== */
+
+    /* Light Theme (Default) */
+    --bg-page: hsl(210 20% 96%);     /* Page background (deepest) */
+    --bg-dark: hsl(210 20% 92%);     /* Secondary containers */
+    --bg: hsl(210 20% 98%);          /* Primary cards & content */
+    --bg-light: hsl(0 0% 100%);      /* Elevated interactive elements */
+
+    /* Text Colors */
+    --text-primary: hsl(210 20% 12%);
+    --text-secondary: hsl(210 10% 40%);
+    --text-muted: hsl(210 10% 60%);
+
+    /* ========================================
+       TYPOGRAPHY
+       ======================================== */
+
+    /* Font Families */
+    --font-family-base: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Source Code Pro', monospace;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+
+    /* Line Heights */
+    --leading-tight: 1.2;
+    --leading-normal: 1.5;
+    --leading-loose: 1.75;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /* Metric-Specific Typography (Dashboard/Analytics) */
+    --text-metric-2xl: 3rem;      /* 48px - Large dashboard numbers */
+    --text-metric-xl: 2.25rem;    /* 36px - Standard metrics */
+    --text-metric-lg: 1.5rem;     /* 24px - Small metrics */
+    --text-metric-md: 1.125rem;   /* 18px - Metric labels */
+
+    /* Prose Max-Widths (Content Readability) */
+    --prose-width-blog: 65ch;      /* Blog posts, standard reading */
+    --prose-width-editorial: 80ch; /* Editorial content, wider format */
+    --prose-width-narrow: 50ch;    /* Captions, sidebars */
+
+    /* ========================================
+       SPACING SCALE
+       ======================================== */
+
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+    --space-24: 6rem;     /* 96px */
+
+    /* ========================================
+       SHADOW SYSTEM (Two-Shadow Technique)
+       ======================================== */
+
+    /* Elevation Scale */
+    --shadow-none: none;
+
+    --shadow-sm:
+      inset 0 1px 0 hsl(0 0% 100% / 0.4),
+      0 1px 2px hsl(0 0% 0% / 0.06);
+
+    --shadow-md:
+      inset 0 1px 0 hsl(0 0% 100% / 0.5),
+      0 2px 4px hsl(0 0% 0% / 0.08),
+      0 4px 8px hsl(0 0% 0% / 0.06);
+
+    --shadow-lg:
+      inset 0 1px 0 hsl(0 0% 100% / 0.6),
+      0 6px 12px hsl(0 0% 0% / 0.10),
+      0 12px 24px hsl(0 0% 0% / 0.12);
+
+    --shadow-xl:
+      inset 0 2px 0 hsl(0 0% 100% / 0.7),
+      0 12px 24px hsl(0 0% 0% / 0.12),
+      0 24px 48px hsl(0 0% 0% / 0.16);
+
+    /* Recessed/Sunken Effect */
+    --shadow-inset:
+      inset 0 2px 4px hsl(0 0% 0% / 0.12),
+      inset 0 -2px 3px hsl(0 0% 100% / 0.40);
+
+    /* ========================================
+       BORDER RADIUS
+       ======================================== */
+
+    --radius-sm: 0.375rem;   /* 6px */
+    --radius-md: 0.5rem;     /* 8px */
+    --radius-lg: 0.75rem;    /* 12px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-2xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+
+    /* ========================================
+       ANIMATION & MOTION
+       ======================================== */
+
+    /* Named Duration System (Athletic/Responsive) */
+    --duration-flash: 0.06s;       /* 60ms - Instant feedback */
+    --duration-reaction: 0.12s;    /* 120ms - Quick response */
+    --duration-quick-snap: 0.09s;  /* 90ms - Micro-interactions */
+    --duration-transition: 0.16s;  /* 160ms - Standard transitions */
+    --duration-sequence: 0.22s;    /* 220ms - Sequential animations */
+    --duration-flow: 0.3s;         /* 300ms - Smooth movements */
+    --duration-power: 0.4s;        /* 400ms - Dramatic effects */
+
+    /* Legacy Durations (Preserved for Compatibility) */
+    --duration-fast: 0.15s;
+    --duration-normal: 0.25s;
+    --duration-slow: 0.4s;
+
+    /* Named Easing Functions (Athletic System) */
+    --athletic-snap: cubic-bezier(0.4, 0, 0.2, 1);      /* Quick, responsive */
+    --athletic-flow: cubic-bezier(0.25, 0.1, 0.25, 1);  /* Smooth, natural */
+    --athletic-power: cubic-bezier(0.4, 0, 0.6, 1);     /* Powerful, decisive */
+    --athletic-sprint: cubic-bezier(0.55, 0, 0.1, 1);   /* Fast exit */
+    --athletic-glide: cubic-bezier(0.25, 0, 0.75, 1);   /* Graceful movement */
+    --modern-ease: cubic-bezier(0.16, 1, 0.3, 1);       /* Contemporary smooth */
+
+    /* Legacy Easing Functions (Preserved for Compatibility) */
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Staggered Animation Delays */
+    --stagger-delay-base: 0.05s;   /* Base delay between items */
+    --stagger-delay-fast: 0.03s;   /* Faster stagger */
+    --stagger-delay-slow: 0.08s;   /* Slower, more dramatic stagger */
+
+    /* ========================================
+       ICONOGRAPHY
+       ======================================== */
+
+    --icon-xs: 14px;
+    --icon-sm: 16px;
+    --icon-md: 20px;
+    --icon-lg: 24px;
+    --icon-xl: 32px;
+
+    /* ========================================
+       BREAKPOINTS (For reference in JS)
+       ======================================== */
+
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1536px;
+  }
+
+  /* ========================================
+     DARK THEME
+     ======================================== */
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Background & Surface Layers */
+      --bg-page: hsl(210 20% 8%);
+      --bg-dark: hsl(210 20% 12%);
+      --bg: hsl(210 20% 16%);
+      --bg-light: hsl(210 20% 20%);
+
+      /* Text Colors */
+      --text-primary: hsl(210 20% 94%);
+      --text-secondary: hsl(210 10% 70%);
+      --text-muted: hsl(210 10% 50%);
+
+      /* Shadows adjusted for dark mode */
+      --shadow-sm:
+        inset 0 1px 0 hsl(0 0% 100% / 0.1),
+        0 1px 2px hsl(0 0% 0% / 0.4);
+
+      --shadow-md:
+        inset 0 1px 0 hsl(0 0% 100% / 0.1),
+        0 2px 4px hsl(0 0% 0% / 0.5),
+        0 4px 8px hsl(0 0% 0% / 0.4);
+
+      --shadow-lg:
+        inset 0 1px 0 hsl(0 0% 100% / 0.1),
+        0 6px 12px hsl(0 0% 0% / 0.6),
+        0 12px 24px hsl(0 0% 0% / 0.5);
+
+      --shadow-xl:
+        inset 0 2px 0 hsl(0 0% 100% / 0.1),
+        0 12px 24px hsl(0 0% 0% / 0.7),
+        0 24px 48px hsl(0 0% 0% / 0.6);
+
+      --shadow-inset:
+        inset 0 2px 4px hsl(0 0% 0% / 0.5),
+        inset 0 -2px 3px hsl(0 0% 100% / 0.05);
+    }
+  }
+
+  /* Explicit dark mode class for manual toggling */
+  .dark {
+    --bg-page: hsl(210 20% 8%);
+    --bg-dark: hsl(210 20% 12%);
+    --bg: hsl(210 20% 16%);
+    --bg-light: hsl(210 20% 20%);
+
+    --text-primary: hsl(210 20% 94%);
+    --text-secondary: hsl(210 10% 70%);
+    --text-muted: hsl(210 10% 50%);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+@layer utilities {
+  /* Shadow Utilities */
+  .shadow-sm-elevated {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-md-elevated {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-lg-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-xl-elevated {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .shadow-inset-recessed {
+    box-shadow: var(--shadow-inset);
+  }
+
+  /* Interactive State Utilities */
+  .interactive-lift {
+    transition:
+      transform var(--duration-normal) var(--ease-out),
+      box-shadow var(--duration-normal) var(--ease-out);
+  }
+
+  .interactive-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .interactive-lift:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Focus Ring (Accessibility) */
+  .focus-ring {
+    outline: none;
+    transition: box-shadow var(--duration-fast) var(--ease-out);
+  }
+
+  .focus-ring:focus-visible {
+    box-shadow:
+      0 0 0 3px rgb(var(--agentic-100)),
+      0 0 0 5px rgb(var(--agentic-500) / 0.5);
+  }
+
+  /* Metric Typography Utilities */
+  .text-metric-2xl {
+    font-size: var(--text-metric-2xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-metric-xl {
+    font-size: var(--text-metric-xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .text-metric-lg {
+    font-size: var(--text-metric-lg);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Prose Width Utilities */
+  .prose-blog {
+    max-width: var(--prose-width-blog);
+  }
+
+  .prose-editorial {
+    max-width: var(--prose-width-editorial);
+  }
+
+  .prose-narrow {
+    max-width: var(--prose-width-narrow);
+  }
+
+  /* Semantic Color Utilities */
+  .text-semantic-success {
+    color: rgb(var(--semantic-success));
+  }
+
+  .text-semantic-warning {
+    color: rgb(var(--semantic-warning));
+  }
+
+  .text-semantic-error {
+    color: rgb(var(--semantic-error));
+  }
+
+  .text-semantic-info {
+    color: rgb(var(--semantic-info));
+  }
+
+  .bg-semantic-success {
+    background-color: rgb(var(--semantic-success));
+  }
+
+  .bg-semantic-warning {
+    background-color: rgb(var(--semantic-warning));
+  }
+
+  .bg-semantic-error {
+    background-color: rgb(var(--semantic-error));
+  }
+
+  .bg-semantic-info {
+    background-color: rgb(var(--semantic-info));
+  }
+
+  /* Staggered Animation Utilities */
+  .stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: stagger-fade-in var(--duration-flow) var(--athletic-flow) forwards;
+  }
+
+  @keyframes stagger-fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    .stagger-item {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    .interactive-lift:hover {
+      transform: none;
+    }
+  }
+}

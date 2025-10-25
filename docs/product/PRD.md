@@ -19,7 +19,7 @@ The **Commerce Transformation Navigator** is a **Narrative Cockpit** — a dynam
 **Core Concept: Narrative Cockpit vs. Data Explorer**
 
 - **Data Explorer (Anti-Pattern):** Exposes the full database (1,292 nodes), asks "What do you want to find?", creates decision fatigue, surfaces noise.
-- **Narrative Cockpit (Our Approach):** Exposes the story (Library vs. Librarian transformation), asks "What part of the story do you want to tell?", hides complexity, surfaces signal.
+- **Narrative Cockpit (Our Approach):** Exposes the story (Cook vs. Chef transformation), asks "What part of the story do you want to tell?", hides complexity, surfaces signal.
 
 ### User Problem
 
@@ -241,7 +241,7 @@ These principles are **non-negotiable architectural constraints** that define th
 
 **Implementation Requirements:**
 - **Navigation Structure:** Literal 1:1 mapping to data hierarchy
-  - Top Level: Concept context (Library vs. Librarian theme)
+  - Top Level: Concept context (Cook vs. Chef theme)
   - Level 1: 10 Domains as primary navigation
   - Level 2: Capabilities nested under domains
   - Level 3+: Functions/Agents/Personas as contextual panels
@@ -541,8 +541,8 @@ The primary content area displaying the A-vs-B comparison.
 
 **Acceptance Criteria:**
 - [ ] Content pane displays two-column layout (50/50 split)
-- [ ] Left column: Traditional approach (labeled "The Library Model")
-- [ ] Right column: Agentic approach (labeled "The Librarian Model")
+- [ ] Left column: Traditional approach (labeled "The Cook Model")
+- [ ] Right column: Agentic approach (labeled "The Chef Model")
 - [ ] Traditional column shows:
   - `traditionalApproach.description` (2-3 paragraphs)
   - `traditionalApproach.painPoints` (bulleted list)
@@ -1130,9 +1130,9 @@ Re-render Components
 
 **Persona:** A stakeholder role (e.g., "CMO," "CTO") with specific responsibilities and concerns.
 
-**Traditional Approach:** The "Library Model" — manual, reactive, rule-based operations.
+**Traditional Approach:** The "Cook Model" — manual, reactive, rule-based operations.
 
-**Agentic Approach:** The "Librarian Model" — autonomous, proactive, AI-driven operations.
+**Agentic Approach:** The "Chef Model" — autonomous, proactive, AI-driven operations.
 
 **Signal:** The A-vs-B comparison (Traditional vs. Agentic) showing transformation value.
 

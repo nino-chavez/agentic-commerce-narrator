@@ -1,16 +1,9 @@
 # Product Mission: Commerce Transformation Navigator
 
-**Version:** 1.1.0
-**Date:** 2025-01-24
-**Status:** Active Mission Document
-**Previous Version:** [v1.0.0 (Archived)](./archive/PRODUCT_MISSION_v1.0.0_OUTDATED.md)
-
-**Major Changes in v1.1.0:**
-- ✅ Corrected tech stack: React → **SvelteKit 2.x + Svelte 5**
-- ✅ Updated terminology: "Cart" → **"Storyboard"** (professional narrative framing)
-- ✅ Scope clarification: Desktop-only (1280px minimum, tablet support future phase)
-- ✅ Professional design system: Lucide SVG icons (no emojis)
-- ✅ Added gaps identified in mission-to-implementation audit
+**Version:** 1.0.0
+**Date:** 2025-10-21
+**Status:** Foundation Document
+**Next Phase:** Product Requirements Document (PRD)
 
 ---
 
@@ -59,9 +52,9 @@ A consultant walks into a room with a Retail CMO and their team. Within seconds,
 2. Navigate to "Customer Experience & Marketing" → See relevant capabilities
 3. Click "Personalization & Recommendations" → A crisp A-vs-B comparison appears
 4. Client asks, "How does that work?" → Switch to Functions tab, show agent workflow
-5. Client is convinced → **Add frame to Storyboard**
+5. Client is convinced → Add to Presentation Cart
 6. Repeat 5-8 times across domains
-7. Enter **Storyboard Presentation Mode** → Walk through saved comparisons
+7. Enter full-screen Presentation Mode → Walk through saved comparisons
 8. Client requests changes → Live filter adjustments, narrative reshapes instantly
 9. Share URL → Entire customized view is bookmarked for follow-up
 
@@ -93,7 +86,7 @@ These four principles are non-negotiable. They define the product's DNA.
 - **Navigation Structure:** Literal mapping to data hierarchy
   - Level 1: Concept (Cook vs. Chef) → Context/Theme
   - Level 2: Domain (10 domains) → Primary navigation
-  - Level 3: Capability (~125 capabilities) → Nested under domains
+  - Level 3: Capability (~90 capabilities) → Nested under domains
   - Level 4+: Function/Persona/Agent → Contextual panels
 - **No Abstract Modes:** No "Browse," "Visualize," "Wizard" modes
 - **One Path:** Concept → Domain → Capability → Comparison (with context on demand)
@@ -106,7 +99,7 @@ These four principles are non-negotiable. They define the product's DNA.
 
 **Implementation Requirements:**
 - **Initial Load:** Show only 10 domains (Level 2)
-- **First Interaction:** Expand domain → Show capabilities
+- **First Interaction:** Expand domain → Show ~9 capabilities
 - **Second Interaction:** Click capability → Show comparison + context tabs
 - **On-Demand Depth:** Functions, agents, personas behind tabs/accordions
 - **Never Show:** Full graph, all nodes, relationship visualization as primary interface
@@ -119,9 +112,9 @@ These four principles are non-negotiable. They define the product's DNA.
 
 **Implementation Requirements:**
 - **Global Controls (Cockpit):**
-  - Full-text Search (Cmd+K): Instant answers to client questions
-  - Context Filters: Industry + Persona = tailored narrative
-  - Storyboard: Build presentation flow in real-time
+  - NLP Search: Instant answers to client questions
+  - Context Filters: Industry + Persona = tailored cabin
+  - Presentation Cart: Build flight plan in real-time
 - **Responsive Navigation:** All interactions < 200ms
 - **Shareable State:** URL captures entire view configuration
 - **Presentation Mode:** Full-screen, distraction-free delivery
@@ -139,55 +132,58 @@ These four principles are non-negotiable. They define the product's DNA.
 ┌─────────────────────────────────────────────────────────────┐
 │                   APPLICATION SHELL                          │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐      │
-│  │ Search       │  │   Filters    │  │  Storyboard  │      │
-│  │ (Cmd+K)      │  │ Retail + CMO │  │  [5 frames]  │      │
+│  │ NLP Search   │  │   Filters    │  │  Pres. Cart  │      │
+│  │ "inventory"  │  │ Retail + CMO │  │  [5 items]   │      │
 │  └──────────────┘  └──────────────┘  └──────────────┘      │
 └─────────────────────────────────────────────────────────────┘
 ┌─────────────────────────────────────────────────────────────┐
-│                      MAIN VIEW                               │
+│                      MAIN VIEW (3-PANE)                      │
 │  ┌─────────────┐  ┌──────────────────┐  ┌───────────────┐  │
+│  │  PANE 1:    │  │    PANE 2:       │  │   PANE 3:     │  │
 │  │ NAVIGATION  │  │   CONTENT        │  │   CONTEXT     │  │
 │  │             │  │                  │  │               │  │
 │  │ Domains     │  │ ┌──────────────┐ │  │ ┌───────────┐ │  │
 │  │ ├─ CX Mktg  │  │ │ Traditional  │ │  │ │Functions  │ │  │
-│  │ ├─ Sales    │  │ │ (Cook)       │ │  │ ├─ Func 1  │ │  │
+│  │ ├─ Sales    │  │ │ (Cook)    │ │  │ ├─ Func 1  │ │  │
 │  │ ├─ Supply*  │  │ │              │ │  │ ├─ Func 2  │ │  │
 │  │   ├─Cap 1   │  │ │ Pain Points  │ │  │ └─ Func 3  │ │  │
-│  │   ├─Cap 2*  │  │ │ Benchmarks   │ │  │             │  │
+│  │   ├─Cap 2*  │  │ │ ...          │ │  │             │  │
 │  │   └─Cap 3   │  │ └──────────────┘ │  │ ┌───────────┐ │  │
 │  │ ├─ Payments │  │                  │  │ │Agents     │ │  │
 │  │ └─ ...      │  │ ┌──────────────┐ │  │ ├─ Agent 1 │ │  │
 │  │             │  │ │  Agentic     │ │  │ ├─ Agent 2 │ │  │
-│  │             │  │ │ (Chef)       │ │  │ └─ Agent 3 │ │  │
+│  │             │  │ │ (Chef)  │ │  │ └─ Agent 3 │ │  │
 │  │             │  │ │              │ │  │             │  │
 │  │             │  │ │ Benefits     │  │  │ ┌───────────┐ │  │
-│  │             │  │ │ Projections  │ │  │ │Personas   │ │  │
+│  │             │  │ │ Metrics      │ │  │ │Personas   │ │  │
 │  │             │  │ └──────────────┘ │  │ └───────────┘ │  │
 │  └─────────────┘  └──────────────────┘  └───────────────┘  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Progressive Loading Model
+### Data Flow Architecture
+
+**Progressive Loading Model (Performance Optimization):**
 
 ```
 Initial Load
   ↓
 Fetch: domains.json (10 items, ~5KB)
   ↓
-Populate: Navigation with 10 domains
+Populate: Pane 1 with 10 domains
   ↓
 User Action: Click "Payments & Finance"
   ↓
 Fetch: payments.json (~50KB)
   ↓
-Populate: Navigation with capabilities under Payments
+Populate: Pane 1 with capabilities under Payments
   ↓
 User Action: Click "Buy Now, Pay Later"
   ↓
 No Fetch: Data already in payments.json
   ↓
-Populate: Content (A-vs-B comparison)
-Populate: Context (Functions/Agents/Personas)
+Populate: Pane 2 (A-vs-B comparison)
+Populate: Pane 3 (Functions/Agents/Personas)
 ```
 
 **Why This Architecture:**
@@ -205,7 +201,7 @@ Populate: Context (Functions/Agents/Personas)
 **User Efficiency:**
 - Time to first insight: < 10 seconds
 - Context switch time (change industry/persona): < 2 seconds
-- Time to build 8-frame storyboard: < 5 minutes
+- Time to build 8-slide presentation cart: < 5 minutes
 - Client question response time: < 5 seconds (via search/navigation)
 
 **System Performance:**
@@ -217,13 +213,25 @@ Populate: Context (Functions/Agents/Personas)
 **Narrative Quality:**
 - Consultant can answer 95% of client questions without leaving the tool
 - Capability comparisons are self-explanatory (no external documentation needed)
-- Storyboard produces coherent narrative arc
+- Presentation cart produces coherent narrative arc
 
 **Technical Quality:**
 - 100% TypeScript type safety
 - Zero runtime errors in production
 - URL state fully serializable (100% shareable links)
 - Works offline after initial domain load
+
+### Secondary Success Metrics
+
+**Adoption:**
+- Consultant training time: < 30 minutes
+- Repeat usage rate: > 80% (weekly active consultants)
+- Shared URLs clicked: > 60% of generated links
+
+**Business Impact:**
+- Average deal size influenced: Track via shared URLs in proposals
+- Time saved vs. PowerPoint creation: > 70% reduction
+- Client engagement score: Qualitative feedback
 
 ---
 
@@ -232,51 +240,51 @@ Populate: Context (Functions/Agents/Personas)
 ### In Scope (v1.0)
 
 **Core Application Shell:**
-- Global full-text search (Cmd+K) across all node properties
-- Context filters: Industry + Persona
-- Storyboard with add/remove/reorder
-- URL state management (filters, selected capability, storyboard)
+- Global NLP search across all node properties
+- Context filters: Industry + Persona (at minimum)
+- Presentation cart with add/remove/reorder
+- URL state management (filters, selected capability, cart)
 
-**Main View:**
-- Navigation: Domain/Capability hierarchy
-- Content: A-vs-B comparison view (Traditional vs. Agentic)
-- Context: Tabbed panels (Functions, Agents, Personas)
+**Main View (3-Pane Layout):**
+- Pane 1: Domain navigation with capability expansion
+- Pane 2: A-vs-B comparison view (Traditional vs. Agentic)
+- Pane 3: Tabbed context (Functions, Agents, Personas)
 
 **Progressive Data Loading:**
 - domains.json initial load
 - Domain-specific JSON files on-demand
 - Client-side filtering and search
 
-**Storyboard Presentation Mode:**
+**Presentation Mode:**
 - Full-screen capability comparison walkthrough
-- Navigate through storyboard frames sequentially
-- Keyboard controls (←/→ arrows, Escape)
+- Navigate through cart items sequentially
 - Exit to normal view
 
 **Visual Design:**
-- Desktop-only layout (1280px minimum width)
+- Responsive layout (desktop primary, tablet secondary)
 - Dark mode support
-- Professional consultant aesthetic (Lucide SVG icons, minimal, high-contrast)
+- Professional consultant aesthetic (minimal, high-contrast)
 
 ### Out of Scope (Future Phases)
 
 **Not in v1.0:**
 - Graph visualization (contradicts Progressive Disclosure principle)
 - Multi-user collaboration / commenting
-- PowerPoint/PDF export automation
+- PowerPoint/PDF export automation (cart is the MVP)
 - Custom branding/white-labeling
 - Analytics dashboard for consultants
 - CRM integration
 - Offline-first PWA (cache only, not full offline)
-- Tablet/mobile-responsive layout (desktop 1280px+ only)
+- Mobile-responsive layout (desktop/tablet only)
 - User authentication (public tool)
+- "Wizard" mode (contradicts Narrative IS Navigation principle)
 
 **Explicitly Rejected:**
 - "Browse all capabilities" view
 - Relationship graph explorer
 - Node-centric detail pages
 - Admin panel for data editing
-- Complex filtering UI beyond Industry + Persona
+- Complex filtering UI (keep filters minimal)
 
 ---
 
@@ -299,52 +307,66 @@ Populate: Context (Functions/Agents/Personas)
 2. Navigate to relevant business capabilities without overwhelming client
 3. Show clear before/after comparison (Traditional vs. Agentic)
 4. Answer drill-down questions about implementation details
-5. Build a custom storyboard flow in real-time
+5. Build a custom presentation flow in real-time
 6. Share the exact view with colleagues and clients
 
 **Success Looks Like:**
 - Walks into client meeting with just a URL
 - Adapts narrative based on client reactions
 - Answers unexpected questions without "let me get back to you"
-- Leaves with actionable next steps captured in storyboard
+- Leaves with actionable next steps captured in cart
 
----
+### Secondary User: The Client Stakeholder
 
-## Technical Architecture
+**Profile:**
+- Role: CMO, CTO, COO, VP of Operations, etc.
+- Experience: Domain expert, not technology expert
+- Context: Evaluating digital transformation ROI
+- Pain Points:
+  - Technology presentations are too technical
+  - Hard to see business value in AI/automation
+  - Need to understand what changes for their team
+  - Skeptical of vendor pitches
 
-### Tech Stack
+**Jobs to Be Done:**
+1. Understand what their team does today (Traditional)
+2. See what changes with agentic approach
+3. Understand why it's better (benefits, metrics)
+4. Validate applicability to their specific industry
+5. Get answers to "how does it work" questions
+6. Take next steps with confidence
 
-**Framework & Runtime:**
-- **SvelteKit 2.x** - Full-stack meta-framework with SSR, file-based routing, progressive enhancement
-- **Svelte 5** - Component framework with Runes reactive system ($state, $derived, $effect)
-- **TypeScript 5.x** - Strict mode type safety
-- **Vite 7.x** - Build tool and dev server
+**Success Looks Like:**
+- Sees themselves in the "persona" context
+- Recognizes their industry in the examples
+- Understands the transformation without jargon
+- Asks thoughtful follow-up questions
+- Commits to next phase (POC, pilot, etc.)
 
-**Data Management:**
-- **TanStack Svelte Query** - Async state management, caching, progressive loading
-- **Zod 4.x** - Runtime type validation for fetched JSON
-- **FlexSearch 0.8** - Client-side full-text search engine
+### Stakeholder: The Solution Architect
 
-**Styling:**
-- **Tailwind CSS v4** - Utility-first CSS with custom Traditional/Agentic color palettes
-- **Lucide Svelte** - Professional SVG icon library (monochrome, stroke-based)
+**Profile:**
+- Role: Technical lead designing implementation
+- Experience: Deep technical expertise
+- Context: Translates business vision to technical reality
+- Need from Tool:
+  - Deep dive into Functions (task-level workflows)
+  - Understand Agent orchestration patterns
+  - See technical implementation complexity
+  - Reference data model for architecture docs
 
-**State Management:**
-- **Svelte 5 Runes** - Reactive state ($state, $derived)
-- **URL Query Parameters** - Single source of truth for shareable state
-- **localStorage** - Optional storyboard persistence (non-critical enhancement)
+**Jobs to Be Done:**
+1. Understand agent workflows at function level
+2. Map capabilities to technical architecture
+3. Identify integration points and data sources
+4. Validate feasibility of transformation
+5. Estimate implementation complexity
 
-**Deployment:**
-- **Static Site Generation (SSG)** - No backend required
-- **Progressive Data Loading** - domains.json → domain-specific files
-- **Offline-Resilient** - Service worker caching after first load
-
-**Why This Stack:**
-- ✅ **Mission Alignment:** Fast initial load (< 1s) via SSR + static deployment
-- ✅ **Progressive Disclosure:** TanStack Query enables lazy domain loading
-- ✅ **Shareable State:** URL params natively supported in SvelteKit
-- ✅ **Professional UX:** Svelte 5 Runes provide fine-grained reactivity
-- ✅ **Type Safety:** TypeScript + Zod catch errors at compile time and runtime
+**Success Looks Like:**
+- Can drill into Functions and Agents tabs
+- Sees clear workflow differences (Traditional vs. Agentic)
+- Understands orchestration patterns
+- Can export/share technical details with team
 
 ---
 
@@ -361,8 +383,8 @@ Populate: Context (Functions/Agents/Personas)
 **2. Comparison is King:**
 - Side-by-side layout enforced
 - Visual differentiation (color, iconography)
-- Traditional = baseline (left, neutral colors)
-- Agentic = improvement (right, highlighted colors)
+- Traditional = baseline (left, neutral)
+- Agentic = improvement (right, highlighted)
 - Metrics emphasized (10x, 90% reduction, etc.)
 
 **3. Progressive Revelation:**
@@ -371,11 +393,11 @@ Populate: Context (Functions/Agents/Personas)
 - Hover states for additional context
 - No "wall of text" views
 
-**4. Professional Design System:**
-- Typography: System font stack (optimal performance)
-- Icons: Lucide SVG (monochrome, 24px, stroke-width 2)
-- Color: Muted base, strategic accent (Traditional/Agentic palettes)
-- No Emojis: Enterprise professional aesthetic
+**4. Consultant-Grade Polish:**
+- Typography: Professional sans-serif (Inter, System UI)
+- Color: Muted base, strategic accent (brand blue/green)
+- Icons: Consistent library (Heroicons)
+- Animations: Subtle, purposeful (Framer Motion)
 
 ### Interaction Design Principles
 
@@ -393,16 +415,73 @@ Populate: Context (Functions/Agents/Personas)
 
 **3. Forgiving and Recoverable:**
 - No destructive actions
-- Easy undo (clear storyboard, reset filters)
-- Persistent storyboard state (survives refresh)
+- Easy undo (clear cart, reset filters)
+- Persistent cart state (survives refresh)
 - Shareable URLs as "save state"
 
 **4. Keyboard + Mouse Optimized:**
-- Cmd+K global search
 - Arrow keys for navigation
 - Enter to select
 - Escape to close/reset
 - Tab order logical
+
+---
+
+## Technical Constraints
+
+### Must-Have Technical Requirements
+
+**Performance:**
+- Initial load: < 1 second (domains.json + shell)
+- Domain load: < 500ms (single JSON fetch)
+- Client-side operations: < 100ms
+- Memory footprint: < 50MB per domain loaded
+
+**Compatibility:**
+- Modern browsers (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+- Desktop: 1280px minimum width
+- Tablet: 768px minimum width
+- No mobile support required (v1.0)
+
+**Data Integrity:**
+- TypeScript strict mode
+- Runtime type validation for fetched JSON
+- Graceful degradation for missing data fields
+- Error boundaries for component failures
+
+**State Management:**
+- URL as single source of truth
+- localStorage for cart persistence (optional enhancement)
+- No external state management library required
+- Serializable state (JSON-compatible)
+
+### Technical Architecture Decisions
+
+**Framework:**
+- React 18+ (existing codebase)
+- TypeScript (existing codebase)
+- Vite (existing build system)
+
+**Styling:**
+- Tailwind CSS v4 (existing)
+- No CSS-in-JS libraries
+- Component-scoped styles preferred
+
+**Data Management:**
+- Static JSON files (no backend API)
+- Client-side filtering via `applyFilters.ts` utility
+- No GraphQL, no REST API
+- Progressive loading via dynamic imports
+
+**State:**
+- URL query parameters for view state
+- React Context for global UI state (theme, cart)
+- No Redux, Zustand, or MobX
+
+**Type Safety:**
+- Existing `data/types/graph.ts` as source of truth
+- Type guards for runtime validation
+- No `any` or type assertions
 
 ---
 
@@ -417,10 +496,41 @@ Populate: Context (Functions/Agents/Personas)
 - No manual reviews for UI components
 
 **When to Use Careful Mode:**
-- Changes to data model (graph.ts types)
-- Changes to core filtering logic (applyFilters.ts)
+- Changes to `data/types/graph.ts` (data model)
+- Changes to `applyFilters.ts` (core filtering logic)
 - New data loading architecture (progressive loading)
 - Performance-critical optimizations
+
+### Implementation Phases
+
+**Phase 1: Foundation (Careful Mode)**
+- Define progressive loading data structure
+- Update `graphDataLoader.ts` for domain-based loading
+- Create URL state management utility
+- Architecture review required
+
+**Phase 2: Application Shell (Fast Mode)**
+- Global NLP search component
+- Context filters (Industry, Persona)
+- Presentation cart UI
+- URL state integration
+
+**Phase 3: Main View (Fast Mode)**
+- Pane 1: Domain/Capability navigation
+- Pane 2: A-vs-B comparison view
+- Pane 3: Tabbed context (Functions/Agents/Personas)
+- Progressive disclosure interactions
+
+**Phase 4: Presentation Mode (Fast Mode)**
+- Full-screen mode
+- Cart walkthrough navigation
+- Keyboard controls
+
+**Phase 5: Polish & Performance (Careful Mode)**
+- Performance optimization
+- Accessibility audit
+- Cross-browser testing
+- Final architecture review
 
 ---
 
@@ -441,10 +551,62 @@ Populate: Context (Functions/Agents/Personas)
 - **Workflow:** Careful Mode with performance review
 
 **3. URL State Serialization**
-- **Risk:** State loss, unshareable URLs, browser history issues
+- **Risk:** State loss, unshareble URLs, browser history issues
 - **Impact:** Users lose work, can't share views
 - **Mitigation:** Extensive testing, URL length limits, fallback to defaults
 - **Workflow:** Fast Mode with thorough testing
+
+### Medium-Risk Areas (Fast Mode with Testing)
+
+**4. Filter Logic Complexity**
+- **Risk:** Incorrect filtering, missing results
+- **Impact:** Users see wrong data
+- **Mitigation:** Unit tests for `applyFilters.ts`, edge case testing
+
+**5. Search Performance**
+- **Risk:** Slow search on large datasets
+- **Impact:** Poor user experience
+- **Mitigation:** Debouncing, memoization, search index optimization
+
+### Low-Risk Areas (Fast Mode)
+
+**6. UI Component Development**
+- **Risk:** Visual bugs, layout issues
+- **Impact:** Aesthetic issues, not functional
+- **Mitigation:** Visual regression testing, cross-browser checks
+
+**7. Presentation Cart**
+- **Risk:** Cart bugs, ordering issues
+- **Impact:** Minor UX annoyance
+- **Mitigation:** localStorage persistence, clear UI feedback
+
+---
+
+## Next Steps
+
+### Immediate Actions
+
+1. **Review and Approve Mission:** Stakeholder alignment on principles and scope
+2. **Generate PRD:** Detailed product requirements document (next prompt)
+3. **Technical Spike:** Validate progressive loading architecture
+4. **Design Mockups:** High-fidelity designs for 3-pane layout
+
+### Before Starting Development
+
+- [ ] Mission document approved
+- [ ] PRD completed and reviewed
+- [ ] Progressive loading data structure validated
+- [ ] URL state management utility designed
+- [ ] Visual design mockups approved
+- [ ] Type definitions updated for new structure
+
+### Development Readiness Checklist
+
+- [ ] Agent OS workflow configured (`.agent-os/config.yml`)
+- [ ] Risk assessment completed for Phase 1
+- [ ] Careful Mode triggers documented
+- [ ] Success criteria measurable
+- [ ] Stakeholder communication plan established
 
 ---
 
@@ -464,28 +626,16 @@ Populate: Context (Functions/Agents/Personas)
 
 **Progressive Disclosure:** UI pattern that reveals complexity incrementally, only upon explicit user action.
 
-**Storyboard:** A collection mechanism for building custom presentation flows by sequencing capability frames. Borrowed from film/presentation industry (Miro, Figma).
-
-**Frame:** A single capability comparison added to the storyboard. Represents one "beat" in the transformation narrative.
+**Presentation Cart:** A collection mechanism for building custom slide decks by selecting capabilities during navigation.
 
 **Context Filters:** Global filters (Industry, Persona) that tailor the entire application to specific client contexts.
 
 ---
 
-## Document History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2025-10-21 | Initial mission document | Product Team |
-| 1.1.0 | 2025-01-24 | Tech stack correction (React → SvelteKit), Terminology update (Cart → Storyboard), Desktop-only scope, Professional design system | Mission-to-Implementation Task Force |
-
----
-
-**Document Status:** Active Mission Document
-**Next Phase:** Implementation Plan Alignment & Gap Closure
+**Document Status:** Ready for PRD generation upon stakeholder approval.
 
 **Approval Required From:**
-- ✅ Product Owner: Vision alignment
-- ✅ Technical Lead: Feasibility validation (SvelteKit stack confirmed)
-- ✅ UX Designer: Storyboard interaction model approved
-- ⏳ Consultant Stakeholder: User needs validation (pending)
+- Product Owner: Vision alignment
+- Technical Lead: Feasibility validation
+- UX Designer: Interaction model review
+- Consultant Stakeholder: User needs validation

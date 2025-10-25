@@ -16,7 +16,7 @@ A comprehensive knowledge graph dataset documenting the transformation from trad
 ├── /personas/         12 user role definitions
 ├── /agents/           ~60 agent definitions (orchestrator, super, utility)
 ├── /industries/       5 industry contexts (Retail, Grocery, Travel, QSR, Hospitality)
-├── /concepts/         Operating model concepts (Library vs Librarian)
+├── /concepts/         Operating model concepts (Cook vs Chef)
 └── /edges/            Graph relationships between nodes
 ```
 

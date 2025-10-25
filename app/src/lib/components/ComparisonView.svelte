@@ -36,9 +36,33 @@
 			);
 		}
 
-		// Filter by persona (check if businessModels match persona context)
-		// For now, we'll show all capabilities if persona is selected
-		// This can be enhanced with more specific persona-to-capability mapping
+		// Filter by persona (check businessModels)
+		// Persona filter works by matching business models in capability data
+		// Each persona is associated with certain business contexts (B2B, B2C, D2C, etc.)
+		if (uiState.selectedPersona) {
+			// Map personas to expected business model patterns
+			const personaBusinessModelMap: Record<string, string[]> = {
+				'CMO': ['B2C', 'D2C', 'B2B'],
+				'CTO': ['B2B', 'B2C', 'D2C'],
+				'COO': ['B2B', 'B2C', 'Omnichannel'],
+				'CFO': ['B2B', 'B2C', 'D2C'],
+				'CEO': ['B2B', 'B2C', 'D2C', 'Omnichannel'],
+				'VP-Operations': ['B2B', 'B2C', 'Omnichannel'],
+				'VP-Supply-Chain': ['B2B', 'B2C', 'Omnichannel'],
+				'VP-Merchandising': ['B2C', 'Omnichannel'],
+				'VP-Sales': ['B2B', 'B2C', 'D2C'],
+				'VP-Customer-Experience': ['B2C', 'D2C', 'Omnichannel']
+			};
+
+			const relevantModels = personaBusinessModelMap[uiState.selectedPersona] || [];
+
+			// If persona has associated business models, filter by them
+			if (relevantModels.length > 0) {
+				capabilities = capabilities.filter((cap) =>
+					cap.businessModels.some((model: string) => relevantModels.includes(model))
+				);
+			}
+		}
 
 		return capabilities;
 	});
@@ -63,12 +87,19 @@
 			<!-- Capability Selection Grid -->
 			<div>
 				<div class="flex items-center justify-between mb-4">
-					<h3 class="text-lg font-semibold text-traditional-800">
-						Select a Capability from {domainName}
-					</h3>
-					{#if uiState.hasActiveFilters}
-						<div class="text-sm text-traditional-600">
-							Showing {filteredCapabilities.length} of {capabilitiesQuery.data?.length || 0} capabilities
+					<div class="flex items-center gap-3">
+						<h3 class="text-lg font-semibold text-traditional-800">
+							Select a Capability from {domainName}
+						</h3>
+						{#if uiState.hasActiveFilters}
+							<div class="px-3 py-1 bg-agentic-100 text-agentic-700 text-xs font-medium rounded-full border border-agentic-300">
+								{filteredCapabilities.length} of {capabilitiesQuery.data?.length || 0} capabilities
+							</div>
+						{/if}
+					</div>
+					{#if !uiState.hasActiveFilters && capabilitiesQuery.data}
+						<div class="text-sm text-traditional-500">
+							{capabilitiesQuery.data.length} capabilities
 						</div>
 					{/if}
 				</div>

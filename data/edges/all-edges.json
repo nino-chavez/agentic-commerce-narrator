@@ -1,80 +1,80 @@
 [
   {
-    "id": "edge-structural-concept-librarian-domain-customer-experience",
+    "id": "edge-structural-concept-chef-domain-customer-experience",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-customer-experience",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-sales-commerce",
+    "id": "edge-structural-concept-chef-domain-sales-commerce",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-sales-commerce",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-merchandising-product",
+    "id": "edge-structural-concept-chef-domain-merchandising-product",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-merchandising-product",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-supply-chain",
+    "id": "edge-structural-concept-chef-domain-supply-chain",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-supply-chain",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-payments-finance",
+    "id": "edge-structural-concept-chef-domain-payments-finance",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-payments-finance",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-data-analytics",
+    "id": "edge-structural-concept-chef-domain-data-analytics",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-data-analytics",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-technology-platform",
+    "id": "edge-structural-concept-chef-domain-technology-platform",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-technology-platform",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-human-capital",
+    "id": "edge-structural-concept-chef-domain-human-capital",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-human-capital",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-enterprise-support",
+    "id": "edge-structural-concept-chef-domain-enterprise-support",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-enterprise-support",
     "relationship": "contains",
     "label": "contains"
   },
   {
-    "id": "edge-structural-concept-librarian-domain-governance-risk",
+    "id": "edge-structural-concept-chef-domain-governance-risk",
     "type": "structural",
-    "source": "concept-librarian",
+    "source": "concept-chef",
     "target": "domain-governance-risk",
     "relationship": "contains",
     "label": "contains"

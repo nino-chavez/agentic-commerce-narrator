@@ -7,7 +7,7 @@
     "description": "Capabilities driving customer acquisition, engagement, personalization, and loyalty across digital and physical channels.",
     "icon": "users",
     "color": "#EC4899",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 8,
     "keyMetrics": [
@@ -29,7 +29,7 @@
     "description": "Capabilities enabling omnichannel selling, quote-to-cash, pricing, promotions, and revenue optimization.",
     "icon": "shopping-cart",
     "color": "#F59E0B",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 9,
     "keyMetrics": [
@@ -51,7 +51,7 @@
     "description": "Capabilities for product planning, assortment optimization, pricing strategy, and category management.",
     "icon": "tag",
     "color": "#8B5CF6",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 7,
     "keyMetrics": [
@@ -73,7 +73,7 @@
     "description": "Capabilities for demand forecasting, inventory optimization, fulfillment, and logistics network management.",
     "icon": "truck",
     "color": "#06B6D4",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 8,
     "keyMetrics": [
@@ -95,7 +95,7 @@
     "description": "Capabilities for payment processing, fraud prevention, financial planning, accounting, and revenue management.",
     "icon": "credit-card",
     "color": "#10B981",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 9,
     "keyMetrics": [
@@ -117,7 +117,7 @@
     "description": "Capabilities for data platform engineering, advanced analytics, AI/ML operations, and insights delivery.",
     "icon": "chart-bar",
     "color": "#6366F1",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 6,
     "keyMetrics": [
@@ -139,7 +139,7 @@
     "description": "Capabilities for platform engineering, cloud infrastructure, integration, API management, and IT operations.",
     "icon": "server",
     "color": "#64748B",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 12,
     "keyMetrics": [
@@ -161,7 +161,7 @@
     "description": "Enterprise capabilities for talent acquisition, workforce management, learning & development, and performance management.",
     "icon": "academic-cap",
     "color": "#EF4444",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 9,
     "keyMetrics": [
@@ -183,7 +183,7 @@
     "description": "Enterprise capabilities for finance & accounting, legal & compliance, facilities management, and site operations.",
     "icon": "building-office",
     "color": "#F97316",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 13,
     "keyMetrics": [
@@ -205,7 +205,7 @@
     "description": "Cross-functional capabilities for risk management, regulatory compliance, cybersecurity, and ethical AI governance.",
     "icon": "shield-check",
     "color": "#DC2626",
-    "parentConcept": "concept-librarian",
+    "parentConcept": "concept-chef",
     "industries": ["Retail", "Grocery", "Travel", "QSR", "Hospitality"],
     "capabilityCount": 6,
     "keyMetrics": [

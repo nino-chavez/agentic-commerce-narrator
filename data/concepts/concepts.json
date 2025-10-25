@@ -1,27 +1,27 @@
 [
   {
-    "id": "concept-library",
+    "id": "concept-cook",
     "type": "concept",
     "level": 1,
-    "label": "Library Model (Traditional Commerce)",
-    "description": "Traditional commerce operating model where systems store data and humans perform all analysis, decision-making, and orchestration. Characterized by manual workflows, human bottlenecks, and reactive processes.",
-    "icon": "book-open",
+    "label": "Cook Model (Traditional Commerce)",
+    "description": "Traditional commerce operating model where humans follow predefined recipes (processes) to execute tasks one-by-one. Like a cook preparing dishes sequentially from written recipes, characterized by manual workflows, human bottlenecks, and reactive order fulfillment.",
+    "icon": "user",
     "color": "#64748B",
     "characteristics": [
-      "Humans analyze data and make all decisions",
-      "Systems are passive repositories (databases, files, reports)",
-      "Reactive workflows triggered by human actions",
-      "Sequential processing with human handoffs",
-      "Manual orchestration across systems",
-      "Knowledge resides in employee expertise",
-      "Scaling requires proportional headcount growth"
+      "Humans follow process recipes step-by-step",
+      "Systems are passive ingredients and recipe books (databases, procedures)",
+      "Reactive workflows triggered by incoming orders (customer actions)",
+      "Sequential preparation with station handoffs",
+      "Manual coordination across the kitchen (systems)",
+      "Knowledge resides in cook expertise and training",
+      "Scaling requires hiring more cooks (proportional headcount growth)"
     ],
     "limitations": [
-      "Human cognitive limits (7±2 items working memory)",
-      "Processing speed bottlenecks (hours/days for complex analysis)",
-      "Availability constraints (business hours, vacations, turnover)",
-      "Consistency issues (tribal knowledge, training gaps)",
-      "Scalability ceiling (diminishing returns with headcount)",
+      "Human cognitive limits (can only prep 7±2 dishes at once)",
+      "Processing speed bottlenecks (hours/days to complete orders)",
+      "Availability constraints (shift hours, sick days, turnover)",
+      "Consistency issues (every cook interprets recipe differently)",
+      "Scalability ceiling (kitchen gets crowded, diminishing returns)",
       "High operational cost (labor = 20-35% of revenue)"
     ],
     "typicalMetrics": {
@@ -34,33 +34,33 @@
     },
     "industries": ["All"],
     "createdAt": "2025-01-09T00:00:00Z",
-    "updatedAt": "2025-01-09T00:00:00Z",
-    "version": "1.0.0"
+    "updatedAt": "2025-01-22T00:00:00Z",
+    "version": "2.0.0"
   },
   {
-    "id": "concept-librarian",
+    "id": "concept-chef",
     "type": "concept",
     "level": 1,
-    "label": "Librarian Model (Agentic Commerce)",
-    "description": "AI-native commerce operating model where autonomous agents perform analysis, make recommendations/decisions, and orchestrate workflows with human oversight. Characterized by proactive intelligence, agent collaboration, and continuous optimization.",
+    "label": "Chef Model (Agentic Commerce)",
+    "description": "AI-native commerce operating model where autonomous agents orchestrate the entire operation like a head chef managing a professional kitchen. Characterized by proactive coordination, parallel execution across stations, and continuous adaptation to real-time conditions.",
     "icon": "cpu-chip",
     "color": "#3B82F6",
     "characteristics": [
-      "AI agents analyze data and recommend/execute decisions",
-      "Systems are intelligent actors (agents, orchestrators, super-agents)",
-      "Proactive workflows triggered by patterns, thresholds, predictions",
-      "Parallel processing with agent collaboration",
-      "Autonomous orchestration with human-in-the-loop governance",
-      "Knowledge encoded in models, patterns, and policies",
-      "Scaling through agent replication and capability expansion"
+      "AI agents orchestrate workflows across all stations (capabilities)",
+      "Systems are intelligent actors (sous chefs, line cooks, expeditors = agents)",
+      "Proactive mise en place triggered by forecasts and patterns",
+      "Parallel processing with station coordination",
+      "Autonomous orchestration with human head chef governance",
+      "Knowledge encoded in systems, standards, and playbooks",
+      "Scaling through station replication and menu expansion"
     ],
     "capabilities": [
-      "Sub-second decision latency (real-time optimization)",
-      "24/7 availability (continuous monitoring and response)",
-      "Consistent execution (policy-driven, reproducible)",
-      "Unlimited parallel processing (agent concurrency)",
-      "Learning and adaptation (pattern recognition, optimization)",
-      "Proactive intervention (predict and prevent issues)"
+      "Sub-second coordination (real-time kitchen orchestration)",
+      "24/7 operations (continuous service, no breaks needed)",
+      "Consistent execution (every dish to specification, reproducible)",
+      "Unlimited parallel processing (all stations operating simultaneously)",
+      "Learning and adaptation (optimize based on feedback, seasonality)",
+      "Proactive prep and inventory management (predict and prevent stockouts)"
     ],
     "typicalMetrics": {
       "decisionLatency": "Milliseconds to seconds",
@@ -72,8 +72,8 @@
     },
     "industries": ["All"],
     "createdAt": "2025-01-09T00:00:00Z",
-    "updatedAt": "2025-01-09T00:00:00Z",
-    "version": "1.0.0"
+    "updatedAt": "2025-01-22T00:00:00Z",
+    "version": "2.0.0"
   },
   {
     "id": "concept-transformation",

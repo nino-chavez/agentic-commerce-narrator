@@ -27,13 +27,15 @@
 	// Load agents for this capability
 	const agentsQuery = createQuery(() => ({
 		queryKey: ['agents', capability.id],
-		queryFn: () => getAgentsForCapability(capability.id)
+		queryFn: () => getAgentsForCapability(capability.id),
+		staleTime: 5 * 60 * 1000 // 5 minutes - agents don't change frequently
 	}));
 
 	// Load personas for this capability's domain
 	const personasQuery = createQuery(() => ({
 		queryKey: ['personas', capability.parentDomain],
-		queryFn: () => loadDomainPersonas(capability.parentDomain)
+		queryFn: () => loadDomainPersonas(capability.parentDomain),
+		staleTime: 5 * 60 * 1000 // 5 minutes - personas don't change frequently
 	}));
 
 	// Group agents by role

@@ -19,7 +19,8 @@
 	// Load domains index
 	const domainsQuery = createQuery(() => ({
 		queryKey: ['domains'],
-		queryFn: loadDomainsIndex
+		queryFn: loadDomainsIndex,
+		staleTime: Infinity // Domain list never changes during a session
 	}));
 
 	// Sync URL state to UI state on mount and page changes

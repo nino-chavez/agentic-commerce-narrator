@@ -19,7 +19,8 @@
 	const capabilitiesQuery = createQuery(() => ({
 		queryKey: ['capabilities', domainId],
 		queryFn: () => loadDomainCapabilities(domainId),
-		enabled: !!domainId
+		enabled: !!domainId,
+		staleTime: 10 * 60 * 1000 // 10 minutes - capability data is static
 	}));
 
 	// Filter capabilities based on active filters

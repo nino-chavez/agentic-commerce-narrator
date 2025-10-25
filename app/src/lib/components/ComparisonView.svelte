@@ -174,12 +174,22 @@
 				<div class="flex-1 overflow-y-auto">
 					<!-- Header -->
 					<div class="mb-6">
-						<button
-							onclick={() => uiState.selectCapability(null)}
-							class="text-sm text-agentic-600 hover:text-agentic-700 mb-2"
-						>
-							← Back to Capabilities
-						</button>
+						<div class="flex items-center justify-between mb-2">
+							<button
+								onclick={() => uiState.selectCapability(null)}
+								class="text-sm text-agentic-600 hover:text-agentic-700"
+							>
+								← Back to Capabilities
+							</button>
+							{#if uiState.hasActiveFilters}
+								<div class="flex items-center gap-2 px-2.5 py-1 bg-amber-50 border border-amber-200 rounded-md">
+									<svg class="w-3 h-3 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+									</svg>
+									<span class="text-xs text-amber-700 font-medium">Viewing filtered capability</span>
+								</div>
+							{/if}
+						</div>
 						<h3 class="text-2xl font-bold text-traditional-900 mb-2">
 							{selectedCapability.label}
 						</h3>

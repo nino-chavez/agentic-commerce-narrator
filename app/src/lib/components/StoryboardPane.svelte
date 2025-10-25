@@ -178,9 +178,7 @@
 			<!-- Primary Action: Present -->
 			<button
 				class="w-full flex items-center justify-center gap-2 px-4 py-3 bg-agentic-600 text-white rounded-lg hover:bg-agentic-700 active:bg-agentic-800 font-medium text-sm transition-colors"
-				onclick={() => {
-					/* TODO: Implement presentation mode */
-				}}
+				onclick={() => uiState.enterPresentation()}
 			>
 				<Play size={16} />
 				<span>Present ({uiState.frameCount} frames)</span>

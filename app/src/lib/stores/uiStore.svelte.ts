@@ -46,6 +46,10 @@ class UIState {
 	storyboardOpen = $state(false);
 	storyboardFrames = $state<StoryboardFrame[]>([]);
 
+	// Presentation Mode
+	presentationMode = $state(false);
+	currentFrameIndex = $state(0);
+
 	// Derived state
 	hasSelection = $derived(this.selectedDomainId !== null || this.selectedCapabilityId !== null);
 	hasActiveFilters = $derived(this.selectedIndustry !== '' || this.selectedPersona !== '');
@@ -189,6 +193,60 @@ class UIState {
 			...frame,
 			frameNumber: index + 1
 		}));
+	}
+
+	// Presentation Mode methods
+	/**
+	 * Enter presentation mode and start from first frame.
+	 * Closes storyboard pane if open.
+	 */
+	enterPresentation() {
+		if (this.storyboardFrames.length === 0) return;
+		this.presentationMode = true;
+		this.currentFrameIndex = 0;
+		this.storyboardOpen = false;
+	}
+
+	/**
+	 * Exit presentation mode.
+	 */
+	exitPresentation() {
+		this.presentationMode = false;
+		this.currentFrameIndex = 0;
+	}
+
+	/**
+	 * Navigate to next frame in presentation.
+	 */
+	nextFrame() {
+		if (this.currentFrameIndex < this.storyboardFrames.length - 1) {
+			this.currentFrameIndex++;
+		}
+	}
+
+	/**
+	 * Navigate to previous frame in presentation.
+	 */
+	previousFrame() {
+		if (this.currentFrameIndex > 0) {
+			this.currentFrameIndex--;
+		}
+	}
+
+	/**
+	 * Jump to specific frame index.
+	 */
+	goToFrame(index: number) {
+		if (index >= 0 && index < this.storyboardFrames.length) {
+			this.currentFrameIndex = index;
+		}
+	}
+
+	/**
+	 * Get current frame being presented.
+	 */
+	get currentFrame(): StoryboardFrame | null {
+		return this.storyboardFrames[this.currentFrameIndex] || null;
 	}
 }
 

@@ -11,6 +11,7 @@
 	import ContextFilters from '$lib/components/ContextFilters.svelte';
 	import StoryboardIcon from '$lib/components/StoryboardIcon.svelte';
 	import StoryboardPane from '$lib/components/StoryboardPane.svelte';
+	import PresentationMode from '$lib/components/PresentationMode.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Badge from '$lib/components/ui/Badge.svelte';
@@ -163,3 +164,6 @@
 
 <!-- Storyboard Pane -->
 <StoryboardPane />
+
+<!-- Presentation Mode -->
+<PresentationMode />

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
 	import { createQuery } from '@tanstack/svelte-query';
 	import { X, ChevronLeft, ChevronRight, Hash } from 'lucide-svelte';
 	import { uiState } from '$lib/stores/uiStore.svelte';
@@ -68,7 +69,9 @@
 				<Hash size={20} class="text-gray-600" />
 				<span class="text-sm font-mono text-gray-700">{frameProgress}</span>
 				<span class="text-sm text-gray-500">•</span>
-				<h1 class="text-lg font-semibold text-gray-900">{uiState.currentFrame.label}</h1>
+				{#key uiState.currentFrameIndex}
+					<h1 class="text-lg font-semibold text-gray-900" in:fade={{ duration: 200 }}>{uiState.currentFrame.label}</h1>
+				{/key}
 			</div>
 
 			<button
@@ -83,12 +86,13 @@
 		<!-- Main content area -->
 		<main class="flex-1 overflow-y-auto p-8">
 			{#if currentCapability}
-				<div class="max-w-7xl mx-auto">
-					<!-- Capability description -->
-					<p class="text-traditional-600 mb-8 text-lg">{currentCapability.description}</p>
+				{#key uiState.currentFrameIndex}
+					<div class="max-w-7xl mx-auto" in:fly={{ x: 200, duration: 250 }} out:fly={{ x: -200, duration: 250 }}>
+						<!-- Capability description -->
+						<p class="text-traditional-600 mb-8 text-lg">{currentCapability.description}</p>
 
-					<!-- Side-by-side comparison -->
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+						<!-- Side-by-side comparison -->
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 						<!-- Traditional Approach -->
 						<div>
 							<div class="mb-6">
@@ -138,6 +142,7 @@
 						</div>
 					</div>
 				</div>
+			{/key}
 			{:else}
 				<div class="flex items-center justify-center h-full">
 					<p class="text-gray-500">Loading capability data...</p>

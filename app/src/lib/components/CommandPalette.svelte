@@ -88,7 +88,10 @@
 	>
 		<div
 			class="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 overflow-hidden"
+			role="dialog"
+			aria-labelledby="command-palette-title"
 			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
 		>
 			<!-- Header -->
 			<div class="p-4 border-b border-traditional-200">

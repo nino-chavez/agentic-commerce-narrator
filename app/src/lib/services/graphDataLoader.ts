@@ -71,6 +71,40 @@ const DomainSchema = z.object({
 
 const DomainsIndexSchema = z.array(DomainSchema);
 
+const AgentSchema = z.object({
+	id: z.string(),
+	type: z.string(),
+	level: z.number(),
+	label: z.string(),
+	role: z.string(), // "orchestrator", "super", "utility"
+	icon: z.string().optional(),
+	color: z.string().optional(),
+	supportingCapabilities: z.array(z.string()),
+	description: z.string().optional(),
+	patterns: z.object({
+		primary: z.string()
+	}).optional(),
+	createdAt: z.string().optional(),
+	updatedAt: z.string().optional(),
+	version: z.string().optional()
+});
+
+const PersonaSchema = z.object({
+	id: z.string(),
+	type: z.string(),
+	level: z.number(),
+	roleType: z.string(),
+	label: z.string(),
+	title: z.string(),
+	description: z.string(),
+	responsibilities: z.array(z.string()),
+	applicableIndustries: z.array(z.string()),
+	traditionalWorkflow: z.array(z.string()),
+	agenticWorkflow: z.array(z.string()),
+	painPointsAddressed: z.array(z.string()),
+	kpis: z.array(z.string()).optional()
+});
+
 // ============================================================================
 // Types
 // ============================================================================
@@ -81,6 +115,8 @@ export type TraditionalApproach = z.infer<typeof TraditionalApproachSchema>;
 export type AgenticApproach = z.infer<typeof AgenticApproachSchema>;
 export type Capability = z.infer<typeof CapabilitySchema>;
 export type Domain = z.infer<typeof DomainSchema>;
+export type Agent = z.infer<typeof AgentSchema>;
+export type Persona = z.infer<typeof PersonaSchema>;
 export type DomainsIndex = Domain[]; // Array of domains
 
 // ============================================================================
@@ -164,4 +200,63 @@ export async function getCapabilityById(capabilityId: string): Promise<Capabilit
 export async function getDomainById(domainId: string): Promise<Domain | null> {
 	const domainsIndex = await loadDomainsIndex();
 	return domainsIndex.find((domain) => domain.id === domainId) || null;
+}
+
+/**
+ * Load all agents
+ */
+export async function loadAllAgents(): Promise<Agent[]> {
+	const response = await fetch('/data/agents/all-agents.json');
+	if (!response.ok) {
+		throw new Error(`Failed to load agents: ${response.statusText}`);
+	}
+	const data = await response.json();
+	if (!Array.isArray(data)) {
+		throw new Error(`Invalid agents file format: expected array, got ${typeof data}`);
+	}
+	return data.map((agent: unknown) => AgentSchema.parse(agent));
+}
+
+/**
+ * Get agents for a specific capability
+ */
+export async function getAgentsForCapability(capabilityId: string): Promise<Agent[]> {
+	const agents = await loadAllAgents();
+	return agents.filter((agent) => agent.supportingCapabilities.includes(capabilityId));
+}
+
+// Domain-to-Persona File Mapping
+const DOMAIN_PERSONA_MAP: Record<string, string> = {
+	'domain-customer-experience': 'customer-experience.json',
+	'domain-sales-commerce': 'b2b-commerce.json',
+	'domain-merchandising-product': 'merchandising-content.json',
+	'domain-supply-chain': 'supply-chain.json',
+	'domain-payments-finance': 'payments-finance.json',
+	'domain-data-analytics': 'data-analytics.json',
+	'domain-technology-platform': 'it-operations.json',
+	'domain-human-capital': 'enterprise-hr.json',
+	'domain-enterprise-support': 'facilities.json',
+	'domain-governance-risk': 'legal-compliance.json'
+};
+
+/**
+ * Load personas for a specific domain
+ */
+export async function loadDomainPersonas(domainId: string): Promise<Persona[]> {
+	const personaFileName = DOMAIN_PERSONA_MAP[domainId];
+	if (!personaFileName) {
+		throw new Error(`Unknown domain ID: ${domainId}`);
+	}
+
+	const response = await fetch(`/data/personas/${personaFileName}`);
+	if (!response.ok) {
+		throw new Error(`Failed to load personas for ${domainId}: ${response.statusText}`);
+	}
+
+	const data = await response.json();
+	if (!Array.isArray(data)) {
+		throw new Error(`Invalid persona file format for ${domainId}: expected array, got ${typeof data}`);
+	}
+
+	return data.map((persona: unknown) => PersonaSchema.parse(persona));
 }

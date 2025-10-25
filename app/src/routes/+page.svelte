@@ -15,6 +15,7 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 	import Badge from '$lib/components/ui/Badge.svelte';
+	import Breadcrumbs from '$lib/components/ui/Breadcrumbs.svelte';
 
 	// Load domains index
 	const domainsQuery = createQuery(() => ({
@@ -48,6 +49,32 @@
 			persona: uiState.selectedPersona || undefined,
 			storyboard: uiState.storyboardFrames.length > 0 ? uiState.storyboardFrames : undefined
 		}, true);
+	});
+
+	// Build breadcrumb navigation
+	const breadcrumbItems = $derived(() => {
+		const items = [
+			{
+				label: 'Home',
+				onClick: () => uiState.clearSelection(),
+				isActive: !uiState.selectedDomainId
+			}
+		];
+
+		if (uiState.selectedDomainId && domainsQuery.data) {
+			const domain = domainsQuery.data.find((d) => d.id === uiState.selectedDomainId);
+			if (domain) {
+				items.push({
+					label: domain.label,
+					onClick: () => uiState.clearCapability(),
+					isActive: !uiState.selectedCapabilityId
+				});
+			}
+		}
+
+		// Capability name will be added by ComparisonView
+
+		return items;
 	});
 
 	// Keyboard shortcut for command palette (Cmd+K / Ctrl+K)
@@ -93,9 +120,13 @@
 			</div>
 		</div>
 
-		<!-- Bottom Row: Context Filters -->
-		<div class="flex items-center">
+		<!-- Bottom Row: Context Filters and Breadcrumbs -->
+		<div class="flex items-center justify-between">
 			<ContextFilters />
+
+			{#if breadcrumbItems().length > 1}
+				<Breadcrumbs items={breadcrumbItems()} />
+			{/if}
 		</div>
 	</header>
 
@@ -152,6 +183,7 @@
 						<ComparisonView
 							domainId={uiState.selectedDomainId}
 							domainName={domainsQuery.data.find((d) => d.id === uiState.selectedDomainId)?.label || ''}
+							breadcrumbItems={breadcrumbItems()}
 						/>
 					</div>
 				{/if}

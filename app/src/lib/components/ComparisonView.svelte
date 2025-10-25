@@ -7,13 +7,21 @@
 	import BenchmarkCard from './BenchmarkCard.svelte';
 	import ProjectionCard from './ProjectionCard.svelte';
 	import ContextPane from './ContextPane.svelte';
+	import Breadcrumbs from './ui/Breadcrumbs.svelte';
+
+	interface BreadcrumbItem {
+		label: string;
+		onClick?: () => void;
+		isActive?: boolean;
+	}
 
 	interface Props {
 		domainId: string;
 		domainName: string;
+		breadcrumbItems: BreadcrumbItem[];
 	}
 
-	let { domainId, domainName }: Props = $props();
+	let { domainId, domainName, breadcrumbItems }: Props = $props();
 
 	// Load capabilities for the selected domain
 	const capabilitiesQuery = createQuery(() => ({
@@ -71,6 +79,18 @@
 	const selectedCapability = $derived(
 		filteredCapabilities.find((cap) => cap.id === uiState.selectedCapabilityId)
 	);
+
+	// Build complete breadcrumbs including capability if selected
+	const completeBreadcrumbs = $derived.by(() => {
+		const crumbs = [...breadcrumbItems];
+		if (selectedCapability) {
+			crumbs.push({
+				label: selectedCapability.name,
+				isActive: true
+			});
+		}
+		return crumbs;
+	});
 </script>
 
 <div>
@@ -172,6 +192,11 @@
 			<div class="flex gap-6 h-[calc(100vh-250px)]">
 				<!-- Main Comparison Area -->
 				<div class="flex-1 overflow-y-auto">
+					<!-- Breadcrumbs -->
+					<div class="mb-4">
+						<Breadcrumbs items={completeBreadcrumbs} />
+					</div>
+
 					<!-- Header -->
 					<div class="mb-6">
 						<div class="flex items-center justify-between mb-2">

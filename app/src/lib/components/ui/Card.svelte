@@ -23,13 +23,13 @@
 	const shadowStyles = elevated ? 'shadow-md-elevated' : 'shadow-sm';
 
 	const hoverStyles = interactive
-		? 'hover:shadow-md hover:-translate-y-0.5 cursor-pointer'
+		? 'hover:shadow-lg hover:-translate-y-1 hover:scale-[1.02] cursor-pointer'
 		: '';
 
 	const borderHoverStyles = {
-		traditional: interactive ? 'hover:border-traditional-400' : '',
-		agentic: interactive ? 'hover:border-agentic-400' : '',
-		neutral: interactive ? 'hover:border-traditional-300' : ''
+		traditional: interactive ? 'hover:border-traditional-500' : '',
+		agentic: interactive ? 'hover:border-agentic-500' : '',
+		neutral: interactive ? 'hover:border-agentic-300 hover:bg-gray-50' : ''
 	};
 
 	const cardClasses = `${baseStyles} ${variantStyles[variant]} ${shadowStyles} ${hoverStyles} ${borderHoverStyles[variant]} ${className}`.trim();

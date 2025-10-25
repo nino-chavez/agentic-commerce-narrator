@@ -78,6 +78,10 @@ class UIState {
 		this.selectedCapabilityId = capabilityId;
 	}
 
+	clearCapability() {
+		this.selectedCapabilityId = null;
+	}
+
 	clearSelection() {
 		this.selectedDomainId = null;
 		this.selectedCapabilityId = null;

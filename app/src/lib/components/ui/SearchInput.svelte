@@ -80,9 +80,11 @@
 			{value}
 			{placeholder}
 			oninput={handleInput}
-			class="w-full pl-10 pr-10 py-2 text-sm border border-traditional-300 rounded-lg
-				focus:outline-none focus:ring-2 focus:ring-agentic-500 focus:border-transparent
-				transition-shadow"
+			class="w-full pl-10 pr-10 py-2.5 text-sm border-2 border-traditional-300 rounded-lg
+				bg-white placeholder:text-traditional-500 text-traditional-900
+				hover:border-traditional-400
+				focus:outline-none focus:ring-2 focus:ring-agentic-500 focus:border-agentic-500
+				transition-all duration-150"
 		/>
 
 		<!-- Clear Button -->

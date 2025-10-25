@@ -103,12 +103,24 @@
 		{:else if activeTab === 'agents'}
 			<!-- Agents Tab -->
 			{#if agentsQuery.isLoading}
-				<div class="flex items-center justify-center py-8">
+				<div class="flex flex-col items-center justify-center py-8 gap-2">
+					<div class="animate-spin h-5 w-5 border-2 border-traditional-300 border-t-agentic-600 rounded-full"></div>
 					<div class="text-sm text-traditional-500">Loading agents...</div>
 				</div>
 			{:else if agentsQuery.error}
-				<div class="text-center py-8 text-red-600 text-sm">
-					Error loading agents: {agentsQuery.error.message}
+				<div class="flex flex-col items-center justify-center py-8 text-center px-4">
+					<div class="text-red-600 text-sm font-medium mb-2">
+						Failed to load agents
+					</div>
+					<div class="text-xs text-traditional-600 mb-3">
+						{agentsQuery.error.message}
+					</div>
+					<button
+						onclick={() => agentsQuery.refetch()}
+						class="text-xs text-agentic-600 hover:text-agentic-700 underline"
+					>
+						Try again
+					</button>
 				</div>
 			{:else if agentsQuery.data}
 				{#key capability.id}
@@ -123,8 +135,13 @@
 						</div>
 
 						{#if agentsQuery.data.length === 0}
-							<div class="text-center py-8 text-traditional-500 text-sm">
-								No agents defined for this capability
+							<div class="flex flex-col items-center justify-center py-8 text-center px-4">
+								<div class="text-traditional-500 text-sm mb-2">
+									No agents defined yet
+								</div>
+								<div class="text-xs text-traditional-400">
+									This capability hasn't been mapped to agents yet. Agent mapping is in progress.
+								</div>
 							</div>
 						{:else}
 							<div class="space-y-3">
@@ -197,12 +214,24 @@
 		{:else if activeTab === 'personas'}
 			<!-- Personas Tab -->
 			{#if personasQuery.isLoading}
-				<div class="flex items-center justify-center py-8">
+				<div class="flex flex-col items-center justify-center py-8 gap-2">
+					<div class="animate-spin h-5 w-5 border-2 border-traditional-300 border-t-agentic-600 rounded-full"></div>
 					<div class="text-sm text-traditional-500">Loading personas...</div>
 				</div>
 			{:else if personasQuery.error}
-				<div class="text-center py-8 text-red-600 text-sm">
-					Error loading personas: {personasQuery.error.message}
+				<div class="flex flex-col items-center justify-center py-8 text-center px-4">
+					<div class="text-red-600 text-sm font-medium mb-2">
+						Failed to load personas
+					</div>
+					<div class="text-xs text-traditional-600 mb-3">
+						{personasQuery.error.message}
+					</div>
+					<button
+						onclick={() => personasQuery.refetch()}
+						class="text-xs text-agentic-600 hover:text-agentic-700 underline"
+					>
+						Try again
+					</button>
 				</div>
 			{:else if personasQuery.data}
 				{#key capability.id}
@@ -217,8 +246,13 @@
 						</div>
 
 						{#if personasQuery.data.length === 0}
-							<div class="text-center py-8 text-traditional-500 text-sm">
-								No personas defined for this domain
+							<div class="flex flex-col items-center justify-center py-8 text-center px-4">
+								<div class="text-traditional-500 text-sm mb-2">
+									No personas defined yet
+								</div>
+								<div class="text-xs text-traditional-400">
+									Persona definitions for this domain are being developed.
+								</div>
 							</div>
 						{:else}
 							<div class="space-y-2">

@@ -95,11 +95,11 @@
 		>
 			<!-- Header -->
 			<div class="p-4 border-b border-traditional-200">
-				<h3 id="command-palette-title" class="text-lg font-semibold mb-3">Search Navigator</h3>
+				<h3 id="command-palette-title" class="text-lg font-semibold mb-3">Quick Search</h3>
 				<input
 					bind:this={inputElement}
 					type="text"
-					placeholder="Search capabilities, benchmarks, projections..."
+					placeholder="Search by capability, metric, or keyword..."
 					value={query}
 					oninput={handleInput}
 					onkeydown={handleKeydown}
@@ -148,7 +148,7 @@
 					</ul>
 				{:else}
 					<div class="p-8 text-center text-traditional-500">
-						Start typing to search across all capabilities, benchmarks, and projections
+						Type to search all capabilities, metrics, and transformations
 					</div>
 				{/if}
 			</div>

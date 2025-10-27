@@ -8,6 +8,7 @@
 	import ProjectionCard from './ProjectionCard.svelte';
 	import ContextPane from './ContextPane.svelte';
 	import Breadcrumbs from './ui/Breadcrumbs.svelte';
+	import CollapsibleList from './ui/CollapsibleList.svelte';
 
 	interface BreadcrumbItem {
 		label: string;
@@ -85,7 +86,7 @@
 		const crumbs = [...breadcrumbItems];
 		if (selectedCapability) {
 			crumbs.push({
-				label: selectedCapability.name,
+				label: selectedCapability.label,
 				isActive: true
 			});
 		}
@@ -287,12 +288,12 @@
 										{selectedCapability.traditionalApproach.description}
 									</p>
 									<div class="mb-3">
-										<span class="text-xs font-semibold text-traditional-700">Constraints:</span>
-										<ul class="mt-1 space-y-1">
-											{#each selectedCapability.traditionalApproach.constraints as constraint}
-												<li class="text-xs text-traditional-600">• {constraint}</li>
-											{/each}
-										</ul>
+										<CollapsibleList
+											items={selectedCapability.traditionalApproach.constraints}
+											label="Constraints:"
+											bulletColor="text-traditional-700"
+											maxVisibleItems={3}
+										/>
 									</div>
 								</div>
 								<div class="space-y-3">
@@ -312,12 +313,12 @@
 										{selectedCapability.agenticApproach.description}
 									</p>
 									<div class="mb-3">
-										<span class="text-xs font-semibold text-agentic-700">Benefits:</span>
-										<ul class="mt-1 space-y-1">
-											{#each selectedCapability.agenticApproach.benefits as benefit}
-												<li class="text-xs text-agentic-600">• {benefit}</li>
-											{/each}
-										</ul>
+										<CollapsibleList
+											items={selectedCapability.agenticApproach.benefits}
+											label="Benefits:"
+											bulletColor="text-agentic-700"
+											maxVisibleItems={3}
+										/>
 									</div>
 								</div>
 								<div class="space-y-3">
@@ -337,12 +338,12 @@
 								{selectedCapability.traditionalApproach.description}
 							</p>
 							<div class="mb-4">
-								<span class="text-xs font-semibold text-traditional-700">Constraints:</span>
-								<ul class="mt-1 space-y-1">
-									{#each selectedCapability.traditionalApproach.constraints as constraint}
-										<li class="text-xs text-traditional-600">• {constraint}</li>
-									{/each}
-								</ul>
+								<CollapsibleList
+									items={selectedCapability.traditionalApproach.constraints}
+									label="Constraints:"
+									bulletColor="text-traditional-700"
+									maxVisibleItems={3}
+								/>
 							</div>
 							<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 								{#each selectedCapability.traditionalApproach.benchmarks as benchmark}
@@ -359,12 +360,12 @@
 								{selectedCapability.agenticApproach.description}
 							</p>
 							<div class="mb-4">
-								<span class="text-xs font-semibold text-agentic-700">Benefits:</span>
-								<ul class="mt-1 space-y-1">
-									{#each selectedCapability.agenticApproach.benefits as benefit}
-										<li class="text-xs text-agentic-600">• {benefit}</li>
-									{/each}
-								</ul>
+								<CollapsibleList
+									items={selectedCapability.agenticApproach.benefits}
+									label="Benefits:"
+									bulletColor="text-agentic-700"
+									maxVisibleItems={3}
+								/>
 							</div>
 							<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 								{#each selectedCapability.agenticApproach.projections as projection}
@@ -382,12 +383,12 @@
 								{selectedCapability.agenticApproach.description}
 							</p>
 							<div class="mb-4">
-								<span class="text-xs font-semibold text-agentic-700">Benefits:</span>
-								<ul class="mt-1 space-y-1">
-									{#each selectedCapability.agenticApproach.benefits as benefit}
-										<li class="text-xs text-agentic-600">• {benefit}</li>
-									{/each}
-								</ul>
+								<CollapsibleList
+									items={selectedCapability.agenticApproach.benefits}
+									label="Benefits:"
+									bulletColor="text-agentic-700"
+									maxVisibleItems={3}
+								/>
 							</div>
 							<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 								{#each selectedCapability.agenticApproach.projections as projection}
@@ -404,12 +405,12 @@
 								{selectedCapability.traditionalApproach.description}
 							</p>
 							<div class="mb-4">
-								<span class="text-xs font-semibold text-traditional-700">Constraints:</span>
-								<ul class="mt-1 space-y-1">
-									{#each selectedCapability.traditionalApproach.constraints as constraint}
-										<li class="text-xs text-traditional-600">• {constraint}</li>
-									{/each}
-								</ul>
+								<CollapsibleList
+									items={selectedCapability.traditionalApproach.constraints}
+									label="Constraints:"
+									bulletColor="text-traditional-700"
+									maxVisibleItems={3}
+								/>
 							</div>
 							<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
 								{#each selectedCapability.traditionalApproach.benchmarks as benchmark}

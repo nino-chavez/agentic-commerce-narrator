@@ -112,7 +112,7 @@
 <div bind:this={containerRef} class="relative w-full max-w-md">
 	<SearchInput
 		bind:value={searchQuery}
-		placeholder="Search capabilities, benchmarks, projections..."
+		placeholder="Search by capability, metric, or keyword..."
 		onSearch={handleSearch}
 		onClear={handleClear}
 		debounceMs={150}

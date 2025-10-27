@@ -120,6 +120,10 @@ quality:
   pre_flight:
     - "git status clean or approved"
     - "data validation passing (if exists)"
+    - "✅ Mission alignment verified (.agent-os/instructions/compliance/mission-alignment.md)"
+    - "✅ PRD scope verified (.agent-os/instructions/compliance/mission-alignment.md)"
+    - "✅ Roadmap milestone verified (.agent-os/instructions/compliance/roadmap-compliance.md)"
+    - "✅ Design system patterns identified (for UI work) (.agent-os/instructions/compliance/design-system.md)"
 
   # Post-flight checks
   post_flight:
@@ -127,10 +131,15 @@ quality:
       - "JSON syntax validation"
       - "data schema validation"
       - "graph integrity check"
+      - "✅ Mission principle cited in commit message"
+      - "✅ PRD user goal cited in commit (if applicable)"
+      - "✅ Roadmap milestone/phase cited in commit"
+      - "✅ Design system compliance verified (for UI work)"
     conditional:
       careful_mode:
         - "full graph compilation test"
         - "edge relationship validation"
+        - "comprehensive compliance review"
 
   # Auto-rollback triggers
   rollback_on:
@@ -138,6 +147,97 @@ quality:
     - "Schema validation failures"
     - "Graph integrity violations"
     - "Data corruption detected"
+    - "Mission principle violations (see compliance/mission-alignment.md)"
+    - "Out of scope features (see PRD Explicitly Rejected section)"
+    - "Out of roadmap milestone (see compliance/roadmap-compliance.md)"
+    - "Design system violations (for UI work) (see compliance/design-system.md)"
+
+# Compliance Framework (MANDATORY)
+compliance:
+  enabled: true
+  version: "1.0.0"
+
+  # Mission & PRD alignment
+  mission_alignment:
+    enabled: true
+    document: "docs/product/PRODUCT_MISSION.md"
+    instructions: ".agent-os/instructions/compliance/mission-alignment.md"
+    required_sections:
+      - "Four Foundational Principles"
+      - "Success Criteria"
+      - "Explicitly Rejected Features"
+    validation:
+      - "Feature aligns with at least one foundational principle"
+      - "Feature NOT in 'Explicitly Rejected' list"
+      - "Implementation meets success criteria metrics"
+
+  prd_alignment:
+    enabled: true
+    document: "docs/product/PRD.md"
+    instructions: ".agent-os/instructions/compliance/mission-alignment.md"
+    required_validation:
+      - "Feature maps to primary user persona goal"
+      - "Feature in 'In Scope (v1.0)' section"
+      - "Feature NOT in 'Out of Scope' or 'Explicitly Rejected'"
+      - "Supports 'Narrative Cockpit' vision (not 'Data Explorer')"
+
+  design_system:
+    enabled: true
+    document: "docs/design/VISUAL_DESIGN_SYSTEM.md"
+    instructions: ".agent-os/instructions/compliance/design-system.md"
+    required_for:
+      - "All UI components"
+      - "All styling changes"
+      - "New pages/routes"
+      - "Component library additions"
+    validation:
+      - "Colors from defined Traditional/Agentic palette"
+      - "Typography scale followed"
+      - "Component patterns used (Cards, Buttons, etc.)"
+      - "Icons from Lucide library (no emojis)"
+      - "Accessibility: WCAG AAA (7:1 contrast)"
+      - "Performance: animations < 200ms"
+
+  roadmap_alignment:
+    enabled: true
+    document: "docs/product/IMPLEMENTATION_ROADMAP.md"
+    instructions: ".agent-os/instructions/compliance/roadmap-compliance.md"
+    enforce:
+      - "Work only on current milestone tasks"
+      - "Respect phase dependencies"
+      - "Update milestone status on completion"
+      - "No future milestone features implemented early"
+    current_milestone:
+      name: "Milestone 1: The Core Narrative (MVP)"
+      status: "In Progress"
+      phases:
+        - "Phase 1.1: Data Architecture Foundation"
+        - "Phase 1.2: Navigation Hierarchy"
+        - "Phase 1.3: Application Shell"
+        - "Phase 1.4: Comparison View"
+
+  # Auto-rejection enforcement
+  auto_reject:
+    enabled: true
+    triggers:
+      mission_violations:
+        - "Graph visualization as primary interface"
+        - "Browse all capabilities view"
+        - "Node-centric detail pages"
+        - "Custom navigation modes (Browse, Visualize, Wizard)"
+        - "Full graph exposure on load"
+
+      design_violations:
+        - "Random hex colors (not from design system)"
+        - "Emojis in UI (enterprise aesthetic)"
+        - "Custom font imports"
+        - "Contrast ratios < 7:1"
+        - "Inline styles (not using Tailwind)"
+
+      scope_violations:
+        - "Milestone 2+ features (Storyboard, Presentation mode)"
+        - "Out of scope features (Graph viz, Multi-user, Export, etc.)"
+        - "Future phase features implemented early"
 
 # Traceability
 traceability:

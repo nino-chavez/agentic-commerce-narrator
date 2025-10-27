@@ -50,6 +50,171 @@ context:
     task: 15000     # Individual file being edited
 ```
 
+## Compliance Framework (MANDATORY)
+
+**Version:** 1.0.0
+**Status:** ENFORCED - All work must comply
+
+### Overview
+
+ALL development work must align with these foundational documents. Non-compliance triggers auto-rollback.
+
+### Strategic Documents (MUST READ Before Starting Work)
+
+**Product Strategy:**
+1. **Product Mission** (`docs/product/PRODUCT_MISSION.md`)
+   - Defines "Narrative Cockpit" vision vs "Data Explorer" anti-pattern
+   - Four foundational principles (non-negotiable)
+   - Success criteria (performance requirements)
+   - Anti-patterns that MUST BE AVOIDED
+
+2. **PRD** (`docs/product/PRD.md`)
+   - Primary user persona: The Consultant / Pilot
+   - User goals and jobs-to-be-done
+   - In Scope vs Out of Scope
+   - Explicitly Rejected features
+
+3. **Implementation Roadmap** (`docs/product/IMPLEMENTATION_ROADMAP.md`)
+   - Current milestone: Milestone 1 (The Core Narrative MVP)
+   - Phase-specific deliverables
+   - Dependencies and blockers
+
+**Design Standards:**
+4. **Visual Design System** (`docs/design/VISUAL_DESIGN_SYSTEM.md`)
+   - Traditional/Agentic color palettes
+   - Typography scale and component patterns
+   - Accessibility requirements (WCAG AAA)
+   - Performance standards (< 200ms interactions)
+
+5. **UX Strategy** (`docs/design/UX_STRATEGY.md`)
+   - User journeys and interaction patterns
+   - Information architecture
+   - Navigation hierarchy
+
+### Compliance Instructions (Detailed Checklists)
+
+**For ALL work, consult:**
+- `.agent-os/instructions/compliance/mission-alignment.md` - Mission & PRD validation
+- `.agent-os/instructions/compliance/design-system.md` - Design system enforcement (UI work)
+- `.agent-os/instructions/compliance/roadmap-compliance.md` - Milestone scope tracking
+
+### Pre-Implementation Validation (REQUIRED)
+
+**Before writing ANY code:**
+
+#### Mission & PRD Alignment
+- [ ] Read relevant section of PRODUCT_MISSION.md
+- [ ] Verify feature aligns with at least ONE foundational principle
+- [ ] Check feature is NOT in "Explicitly Rejected" list
+- [ ] Confirm feature maps to user goal in PRD
+
+#### Roadmap Scope
+- [ ] Task is part of current milestone deliverables
+- [ ] All dependencies from previous phases complete
+- [ ] Not implementing future milestone features early
+
+#### Design System (For UI Work)
+- [ ] Reviewed VISUAL_DESIGN_SYSTEM.md
+- [ ] Identified color selections (Traditional/Agentic palette)
+- [ ] Identified typography scale and component patterns
+- [ ] Planned accessibility compliance (7:1 contrast, keyboard nav)
+
+### Post-Implementation Validation (REQUIRED)
+
+**After completing work:**
+
+#### Documentation in Commit Message
+```
+feat(Phase X.Y): [Feature description]
+
+Implements PRD User Goal: "[Cite specific user goal]"
+Aligns with Mission Principle: "[Cite principle name]"
+Design System: [Color/typography selections made]
+Performance: [Metric] (target: [target value])
+Milestone: [Milestone name] - [Phase name] ([Status])
+
+🤖 Generated with Claude Code
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+#### Validation Checklist
+- [ ] Mission principle cited in commit
+- [ ] PRD user goal referenced
+- [ ] Roadmap milestone/phase documented
+- [ ] Design system compliance verified (if UI work)
+- [ ] Performance meets success criteria
+
+### Auto-Rejection Triggers (Will Cause Rollback)
+
+#### ❌ Mission Principle Violations
+- Graph visualization as primary interface
+- "Browse all capabilities" view
+- Node-centric detail pages
+- Custom navigation modes (Browse, Visualize, Wizard)
+- Full graph exposed on initial load
+
+#### ❌ Design System Violations (UI Work)
+- Random hex colors (not from design system)
+- Emojis in professional UI
+- Custom font imports
+- Contrast ratios < 7:1 (WCAG AAA)
+- Inline styles (must use Tailwind)
+
+#### ❌ Scope Violations
+- Out of Scope features from PRD
+- Future milestone features (Storyboard before Milestone 2)
+- Explicitly Rejected features
+
+### Four Foundational Principles (Quick Reference)
+
+1. **Signal Over Noise**
+   - 80% of UI for Traditional vs Agentic comparison
+   - No graph explorers, node views, or relationship interfaces
+
+2. **The Narrative IS the Navigation**
+   - Follow data hierarchy: Concept → Domain → Capability
+   - No abstract modes (Browse, Visualize, Wizard)
+
+3. **Progressive Disclosure is Mandatory**
+   - Hide 1,292-node graph complexity
+   - Initial load shows only 10 domains
+   - Functions/agents/personas behind tabs only
+
+4. **The Consultant is the "Pilot"**
+   - Global controls: Search (Cmd+K), Filters, Storyboard
+   - All interactions < 200ms
+   - URL state 100% shareable
+
+### Success Criteria (Performance Requirements)
+
+**User Efficiency:**
+- Time to first insight: < 10 seconds
+- Context switch time: < 2 seconds
+- Build 8-frame storyboard: < 5 minutes
+- Answer client question: < 5 seconds
+
+**System Performance:**
+- Initial page load: < 1 second
+- Domain data fetch: < 500ms
+- UI interaction latency: < 200ms
+- Presentation mode transition: < 300ms
+
+### Compliance Enforcement
+
+**Fast Mode:**
+- Self-check using compliance checklists
+- Document principle/goal in commit message
+- Auto-rollback on violations
+
+**Careful Mode:**
+- Comprehensive compliance review required
+- Pre-implementation approval needed
+- Detailed audit log documentation
+
+**See:** `.agent-os/config.yml` compliance section for full auto-rejection trigger list
+
+---
+
 ## Project Structure
 
 **Why `/app` directory?**

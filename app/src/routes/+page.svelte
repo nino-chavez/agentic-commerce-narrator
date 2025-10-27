@@ -98,10 +98,10 @@
 		<div class="flex items-center justify-between gap-6 mb-4">
 			<div class="flex-shrink-0">
 				<h1 class="text-2xl font-bold text-traditional-900">
-					Commerce Transformation Navigator
+					Agentic Commerce Navigator
 				</h1>
 				<p class="text-sm text-traditional-600 mt-1">
-					Traditional Operating Models → Agentic Commerce
+					Compare traditional vs. AI-native operating models
 				</p>
 			</div>
 
@@ -112,10 +112,22 @@
 
 			<div class="flex items-center gap-2">
 				<StoryboardIcon />
-				<Button variant="secondary" size="sm" onclick={() => uiState.openCommandPalette()}>
+				<Button
+					variant="secondary"
+					size="sm"
+					onclick={() => uiState.openCommandPalette()}
+					class="group relative"
+				>
 					<span class="flex items-center gap-2">
-						<kbd class="px-2 py-1 text-xs bg-traditional-200 rounded">⌘K</kbd>
+						<kbd class="px-2 py-1 text-xs bg-traditional-200 rounded group-hover:bg-traditional-300 transition-colors">⌘K</kbd>
 					</span>
+					<span class="sr-only">Open command palette</span>
+					<div
+						class="absolute bottom-full right-0 mb-2 px-2 py-1 bg-traditional-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap"
+						role="tooltip"
+					>
+						Quick Search (⌘K)
+					</div>
 				</Button>
 			</div>
 		</div>
@@ -146,7 +158,7 @@
 					<!-- Domain Selection View -->
 					<div>
 						<h2 class="text-xl font-semibold text-traditional-800 mb-4">
-							Select a Domain to Begin
+							Choose a Business Domain
 						</h2>
 						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 							{#each domainsQuery.data as domain, index}

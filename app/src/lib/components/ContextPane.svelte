@@ -69,21 +69,16 @@
 			<!-- Functions Tab -->
 			{#key capability.id}
 				<div in:fade={{ duration: 200 }}>
-					<div class="mb-5">
-						<div class="flex items-center gap-2 mb-2.5">
-							<Badge variant="agentic" size="sm">
-								{capability.keyFunctions.length} Key Functions
-							</Badge>
-						</div>
+					<div class="mb-6">
 						<p class="text-sm text-traditional-600 leading-relaxed">
 							Core workflows and tasks within this capability
 						</p>
 					</div>
 
-					<div class="space-y-3">
+					<div class="space-y-4">
 						{#each capability.keyFunctions as func}
-							<div class="p-4 bg-white border border-traditional-200 rounded-lg hover:border-agentic-300 hover:shadow-sm transition-all">
-								<div class="font-semibold text-sm text-traditional-900 mb-2">
+							<div class="p-5 bg-white border-2 border-traditional-200 rounded-lg hover:border-agentic-400 hover:shadow-md transition-all">
+								<div class="font-semibold text-traditional-900 mb-2">
 									{func}
 								</div>
 								<div class="text-xs text-traditional-500">
@@ -125,12 +120,7 @@
 			{:else if agentsQuery.data}
 				{#key capability.id}
 					<div in:fade={{ duration: 200 }}>
-						<div class="mb-5">
-							<div class="flex items-center gap-2 mb-2.5">
-								<Badge variant="agentic" size="sm">
-									{agentsQuery.data.length} Agents
-								</Badge>
-							</div>
+						<div class="mb-6">
 							<p class="text-sm text-traditional-600 leading-relaxed">
 								AI agents automating this capability
 							</p>
@@ -156,9 +146,9 @@
 												{agentsByRole.orchestrator.length}
 											</span>
 										</div>
-										<div class="space-y-2.5">
+										<div class="space-y-3">
 											{#each agentsByRole.orchestrator as agent}
-												<div class="p-4 bg-purple-50 border border-purple-200 rounded-lg hover:border-purple-300 hover:shadow-sm transition-all">
+												<div class="p-4 bg-purple-50 border-2 border-purple-200 rounded-lg hover:border-purple-400 hover:shadow-sm transition-all">
 													<div class="font-medium text-sm text-purple-900">
 														{agent.label}
 													</div>
@@ -182,9 +172,9 @@
 												{agentsByRole.super.length}
 											</span>
 										</div>
-										<div class="space-y-2.5">
+										<div class="space-y-3">
 											{#each agentsByRole.super as agent}
-												<div class="p-4 bg-green-50 border border-green-200 rounded-lg hover:border-green-300 hover:shadow-sm transition-all">
+												<div class="p-4 bg-green-50 border-2 border-green-200 rounded-lg hover:border-green-400 hover:shadow-sm transition-all">
 													<div class="font-medium text-sm text-green-900">
 														{agent.label}
 													</div>
@@ -210,7 +200,7 @@
 										</div>
 										<div class="grid grid-cols-2 gap-2.5">
 											{#each agentsByRole.utility as agent}
-												<div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-900 font-medium hover:border-blue-300 hover:shadow-sm transition-all">
+												<div class="p-3 bg-blue-50 border-2 border-blue-200 rounded-lg text-sm text-blue-900 font-medium hover:border-blue-300 hover:shadow-sm transition-all">
 													{agent.label}
 												</div>
 											{/each}
@@ -270,7 +260,7 @@
 						{:else}
 							<div class="space-y-3">
 								{#each personasQuery.data as persona}
-									<div class="p-4 bg-white border border-traditional-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all">
+									<div class="p-4 bg-white border-2 border-traditional-200 rounded-lg hover:border-blue-400 hover:shadow-sm transition-all">
 										<div class="font-semibold text-sm text-traditional-900 mb-2">
 											{persona.title}
 										</div>

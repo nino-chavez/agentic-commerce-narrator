@@ -8,7 +8,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -27,7 +27,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -47,7 +47,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -67,7 +67,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -87,7 +87,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -108,7 +108,7 @@
     "color": "#3B82F6",
     "supportingCapabilities": [
       "capability-demand-forecasting-sensing",
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -128,7 +128,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-sales-operations-planning-s-op"
+      "capability-sales-operations-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -727,7 +727,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -746,7 +746,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -765,7 +765,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -784,7 +784,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -803,7 +803,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -822,7 +822,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-buy-now-pay-later-bnpl"
+      "capability-buy-now-pay-later"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -841,7 +841,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -860,7 +860,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -879,7 +879,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -898,7 +898,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -917,7 +917,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -936,7 +936,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-cryptocurrency-digital-wallet-payments"
+      "capability-cryptocurrency-digital-wallet"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1073,7 +1073,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1092,7 +1092,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1111,7 +1111,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1130,7 +1130,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1149,7 +1149,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1168,7 +1168,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-subscription-billing-recurring-payments"
+      "capability-subscription-billing-recurring"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -1503,8 +1503,8 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
-      "capability-price-management-optimization",
+      "capability-assortment-planning",
+      "capability-pricing-markdown-management",
       "capability-revenue-management-dynamic-pricing-hotels"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -1562,7 +1562,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management",
+      "capability-advanced-inventory-optimization",
       "capability-revenue-management-dynamic-pricing-hotels"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -1702,7 +1702,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
+      "capability-assortment-planning",
       "capability-revenue-management-dynamic-pricing-hotels"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -1760,7 +1760,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management",
+      "capability-advanced-inventory-optimization",
       "capability-revenue-management-dynamic-pricing-hotels"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -2030,11 +2030,11 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai",
+      "capability-qsr-drive-thru-optimization",
       "capability-guest-experience-personalization-crm",
       "capability-housekeeping-operations-optimization",
-      "capability-labor-scheduling-management-qsr-specific",
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-store-labor-scheduling",
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2091,7 +2091,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling",
+      "capability-clienteling",
       "capability-guest-experience-personalization-crm"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -2112,7 +2112,7 @@
     "color": "#3B82F6",
     "supportingCapabilities": [
       "capability-guest-experience-personalization-crm",
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2188,11 +2188,11 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai",
+      "capability-qsr-drive-thru-optimization",
       "capability-guest-experience-personalization-crm",
       "capability-housekeeping-operations-optimization",
-      "capability-labor-scheduling-management-qsr-specific",
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-store-labor-scheduling",
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2249,7 +2249,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling",
+      "capability-clienteling",
       "capability-guest-experience-personalization-crm"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -2270,7 +2270,7 @@
     "color": "#6B7280",
     "supportingCapabilities": [
       "capability-guest-experience-personalization-crm",
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2480,7 +2480,7 @@
     "color": "#3B82F6",
     "supportingCapabilities": [
       "capability-housekeeping-operations-optimization",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2500,7 +2500,7 @@
     "color": "#3B82F6",
     "supportingCapabilities": [
       "capability-housekeeping-operations-optimization",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2636,7 +2636,7 @@
     "color": "#6B7280",
     "supportingCapabilities": [
       "capability-housekeeping-operations-optimization",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2656,7 +2656,7 @@
     "color": "#6B7280",
     "supportingCapabilities": [
       "capability-housekeeping-operations-optimization",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -2906,7 +2906,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management",
+      "capability-advanced-inventory-optimization",
       "capability-revenue-management-dynamic-pricing"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -2964,9 +2964,9 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
+      "capability-assortment-planning",
       "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
-      "capability-labor-scheduling-management-qsr-specific",
+      "capability-store-labor-scheduling",
       "capability-revenue-management-dynamic-pricing"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -3082,7 +3082,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management",
+      "capability-advanced-inventory-optimization",
       "capability-revenue-management-dynamic-pricing"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -3140,9 +3140,9 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
+      "capability-assortment-planning",
       "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
-      "capability-labor-scheduling-management-qsr-specific",
+      "capability-store-labor-scheduling",
       "capability-revenue-management-dynamic-pricing"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
@@ -3219,7 +3219,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3238,7 +3238,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3257,7 +3257,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3277,7 +3277,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3296,7 +3296,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3315,7 +3315,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3334,7 +3334,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3353,7 +3353,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3372,7 +3372,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3391,7 +3391,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3410,7 +3410,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3429,7 +3429,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3448,7 +3448,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3467,7 +3467,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3486,7 +3486,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3505,7 +3505,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3524,7 +3524,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3543,7 +3543,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3562,7 +3562,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3581,7 +3581,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3600,7 +3600,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3619,7 +3619,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3638,7 +3638,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3657,7 +3657,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-inventory-distribution-channel-management"
+      "capability-advanced-inventory-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3676,7 +3676,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3695,7 +3695,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3715,7 +3715,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3734,7 +3734,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3753,7 +3753,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3772,7 +3772,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3791,7 +3791,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3810,7 +3810,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3829,7 +3829,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3848,7 +3848,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3867,7 +3867,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3886,7 +3886,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3905,7 +3905,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3924,7 +3924,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3943,7 +3943,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3962,7 +3962,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -3981,7 +3981,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4000,7 +4000,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4019,7 +4019,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4038,7 +4038,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4057,7 +4057,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4076,7 +4076,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4095,7 +4095,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4114,7 +4114,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4133,7 +4133,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4152,7 +4152,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-loyalty-program-management-optimization"
+      "capability-loyalty-program-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4363,7 +4363,7 @@
     "color": "#3B82F6",
     "supportingCapabilities": [
       "capability-crew-scheduling-optimization-airlines-cruise-lines",
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4554,7 +4554,7 @@
     "color": "#6B7280",
     "supportingCapabilities": [
       "capability-crew-scheduling-optimization-airlines-cruise-lines",
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4706,7 +4706,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4725,7 +4725,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4745,7 +4745,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4765,7 +4765,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4784,7 +4784,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4804,7 +4804,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4824,7 +4824,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4844,7 +4844,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4863,14 +4863,14 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
-      "capability-automated-replenishment-center-store",
-      "capability-clienteling-personal-styling",
-      "capability-drive-thru-optimization-voice-ai",
+      "capability-assortment-planning",
+      "capability-allocation-replenishment-optimization",
+      "capability-clienteling",
+      "capability-qsr-drive-thru-optimization",
       "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
-      "capability-kitchen-production-management-kds",
-      "capability-labor-scheduling-management-qsr-specific",
-      "capability-price-management-optimization"
+      "capability-qsr-kitchen-operations",
+      "capability-store-labor-scheduling",
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4889,7 +4889,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4908,7 +4908,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4927,7 +4927,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4946,7 +4946,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4965,7 +4965,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -4984,7 +4984,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5003,7 +5003,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5022,14 +5022,14 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization",
-      "capability-automated-replenishment-center-store",
-      "capability-clienteling-personal-styling",
-      "capability-drive-thru-optimization-voice-ai",
+      "capability-assortment-planning",
+      "capability-allocation-replenishment-optimization",
+      "capability-clienteling",
+      "capability-qsr-drive-thru-optimization",
       "capability-fresh-department-management-produce-meat-seafood-bakery-deli",
-      "capability-kitchen-production-management-kds",
-      "capability-labor-scheduling-management-qsr-specific",
-      "capability-price-management-optimization"
+      "capability-qsr-kitchen-operations",
+      "capability-store-labor-scheduling",
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5048,7 +5048,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5067,7 +5067,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5086,7 +5086,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5105,7 +5105,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5124,7 +5124,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5143,7 +5143,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5162,7 +5162,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-assortment-planning-optimization"
+      "capability-assortment-planning"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5718,7 +5718,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5737,7 +5737,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5756,7 +5756,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5775,7 +5775,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5794,7 +5794,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5813,7 +5813,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5832,7 +5832,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5851,7 +5851,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5870,7 +5870,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5889,7 +5889,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5908,7 +5908,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5927,7 +5927,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5946,7 +5946,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5965,7 +5965,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -5984,7 +5984,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6003,7 +6003,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6022,7 +6022,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6041,7 +6041,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6060,7 +6060,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6079,7 +6079,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6098,7 +6098,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6117,7 +6117,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6136,7 +6136,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6155,7 +6155,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-clienteling-personal-styling"
+      "capability-clienteling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6174,7 +6174,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6193,7 +6193,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6212,8 +6212,8 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds",
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-qsr-kitchen-operations",
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6233,7 +6233,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6252,7 +6252,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6271,7 +6271,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6290,7 +6290,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6309,7 +6309,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6328,7 +6328,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6347,8 +6347,8 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds",
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-qsr-kitchen-operations",
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6367,7 +6367,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6386,7 +6386,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6405,7 +6405,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6424,7 +6424,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6443,7 +6443,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6462,7 +6462,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6481,7 +6481,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6500,7 +6500,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6519,8 +6519,8 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds",
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-qsr-kitchen-operations",
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6539,7 +6539,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6558,7 +6558,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6577,7 +6577,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6596,7 +6596,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6615,7 +6615,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6634,7 +6634,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -6653,7 +6653,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-omnichannel-order-fulfillment-bopis-ship-from-store-curbside"
+      "capability-order-fulfillment-orchestration"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7092,7 +7092,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7111,7 +7111,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7131,7 +7131,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7150,7 +7150,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7169,7 +7169,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7188,7 +7188,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7208,7 +7208,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7227,7 +7227,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7246,7 +7246,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7265,7 +7265,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7284,7 +7284,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7303,7 +7303,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7322,7 +7322,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7341,7 +7341,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7360,7 +7360,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7379,7 +7379,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7398,7 +7398,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7417,7 +7417,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7436,7 +7436,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7455,7 +7455,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7474,7 +7474,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7493,7 +7493,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7512,7 +7512,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7531,7 +7531,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7550,7 +7550,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -7569,7 +7569,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-automated-replenishment-center-store"
+      "capability-allocation-replenishment-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8025,7 +8025,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8044,7 +8044,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8063,7 +8063,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8083,7 +8083,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8102,7 +8102,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8121,7 +8121,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8140,7 +8140,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8159,7 +8159,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8178,7 +8178,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8198,7 +8198,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8217,7 +8217,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8236,7 +8236,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8256,7 +8256,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8275,7 +8275,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8294,7 +8294,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8313,7 +8313,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8332,7 +8332,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8351,7 +8351,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8371,7 +8371,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8390,7 +8390,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8409,7 +8409,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8429,7 +8429,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8448,7 +8448,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8467,7 +8467,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8486,7 +8486,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-price-management-optimization"
+      "capability-pricing-markdown-management"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8505,7 +8505,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8524,7 +8524,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8543,7 +8543,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8562,7 +8562,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8581,7 +8581,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8600,7 +8600,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-voice-commerce-alexa-google-assistant"
+      "capability-voice-commerce"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8752,7 +8752,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8771,7 +8771,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8790,7 +8790,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8809,7 +8809,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8828,7 +8828,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8847,7 +8847,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-ai-shopping-assistant-product-discovery"
+      "capability-ai-shopping-assistant"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8866,7 +8866,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8885,7 +8885,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8904,7 +8904,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8923,8 +8923,8 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-next-best-action-nba",
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-next-best-action",
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8943,7 +8943,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -8962,7 +8962,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-proactive-customer-engagement-push-notifications-in-app-messaging"
+      "capability-proactive-customer-engagement"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9096,7 +9096,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9115,7 +9115,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9134,7 +9134,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9153,7 +9153,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9172,7 +9172,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9191,7 +9191,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9210,7 +9210,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9229,7 +9229,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9248,8 +9248,8 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-drive-thru-optimization",
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9268,7 +9268,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9287,7 +9287,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9306,7 +9306,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9325,7 +9325,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9344,7 +9344,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9363,7 +9363,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9382,7 +9382,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9401,8 +9401,8 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai",
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-drive-thru-optimization",
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9421,7 +9421,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9440,7 +9440,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9459,7 +9459,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9478,7 +9478,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9497,7 +9497,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9516,7 +9516,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9535,7 +9535,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-drive-thru-optimization-voice-ai"
+      "capability-qsr-drive-thru-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9554,7 +9554,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9573,7 +9573,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9592,7 +9592,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9611,7 +9611,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9630,7 +9630,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9649,7 +9649,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9668,7 +9668,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9687,7 +9687,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9706,7 +9706,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9725,7 +9725,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9744,7 +9744,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9763,7 +9763,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9782,7 +9782,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9801,7 +9801,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9820,7 +9820,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9839,7 +9839,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9858,7 +9858,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-kitchen-production-management-kds"
+      "capability-qsr-kitchen-operations"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9877,7 +9877,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9896,7 +9896,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9916,7 +9916,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9935,7 +9935,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9954,7 +9954,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9973,7 +9973,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -9992,7 +9992,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10012,7 +10012,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10031,7 +10031,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10050,7 +10050,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10069,7 +10069,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10088,7 +10088,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10107,7 +10107,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10126,7 +10126,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10145,7 +10145,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10164,7 +10164,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10183,7 +10183,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10202,7 +10202,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10221,7 +10221,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10240,7 +10240,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-labor-scheduling-management-qsr-specific"
+      "capability-store-labor-scheduling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10605,7 +10605,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10624,7 +10624,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10643,7 +10643,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10662,7 +10662,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10681,7 +10681,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10700,7 +10700,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-voice-of-customer-voc-intelligence"
+      "capability-voice-of-customer-intelligence"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10719,7 +10719,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-next-best-action-nba"
+      "capability-next-best-action"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10738,7 +10738,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-next-best-action-nba"
+      "capability-next-best-action"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10758,7 +10758,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-next-best-action-nba"
+      "capability-next-best-action"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10778,7 +10778,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-next-best-action-nba"
+      "capability-next-best-action"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10797,7 +10797,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-next-best-action-nba"
+      "capability-next-best-action"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10817,7 +10817,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10837,7 +10837,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10857,7 +10857,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10877,7 +10877,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10896,7 +10896,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -10915,7 +10915,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-customer-lifetime-value-clv-optimization"
+      "capability-customer-lifetime-value-optimization"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11050,7 +11050,7 @@
     "icon": "sitemap",
     "color": "#8B5CF6",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11069,7 +11069,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11088,7 +11088,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11107,7 +11107,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11127,7 +11127,7 @@
     "icon": "robot",
     "color": "#3B82F6",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",
@@ -11146,7 +11146,7 @@
     "icon": "wrench",
     "color": "#6B7280",
     "supportingCapabilities": [
-      "capability-attribution-modeling"
+      "capability-marketing-attribution-modeling"
     ],
     "createdAt": "2025-01-09T00:00:00Z",
     "updatedAt": "2025-01-09T00:00:00Z",

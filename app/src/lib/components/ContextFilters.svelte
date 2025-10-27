@@ -37,7 +37,7 @@
 <div class="flex items-center gap-3">
 	<div class="flex items-center gap-2">
 		<FilterDropdown
-			label="Industry"
+			label="Industry Context"
 			options={industryOptions}
 			bind:selected={uiState.selectedIndustry}
 			onSelect={handleIndustryChange}
@@ -45,11 +45,11 @@
 		/>
 
 		<FilterDropdown
-			label="Persona"
+			label="Role Perspective"
 			options={personaOptions}
 			bind:selected={uiState.selectedPersona}
 			onSelect={handlePersonaChange}
-			placeholder="All Personas"
+			placeholder="All Roles"
 		/>
 	</div>
 

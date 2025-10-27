@@ -15,8 +15,8 @@
 	const baseStyles = 'rounded-lg p-6 border transition-all duration-200';
 
 	const variantStyles = {
-		traditional: 'bg-traditional-50 border-traditional-300',
-		agentic: 'bg-agentic-50 border-agentic-300',
+		traditional: 'bg-traditional-100 border-traditional-300',
+		agentic: 'bg-agentic-100 border-agentic-300',
 		neutral: 'bg-white border-traditional-200'
 	};
 
